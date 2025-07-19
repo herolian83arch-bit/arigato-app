@@ -1,0 +1,13 @@
+{
+  "name": "arigato-app",
+  "version": "1.0.0",
+  "description": "Multi-language gratitude messages app for visitors to Japan",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 3000",
+    "dev": "npx http-server -p 3000"
+  },
+  "keywords": ["japan", "gratitude", "multilingual", "travel"],
+  "author": "",
+  "license": "MIT"
+} 
