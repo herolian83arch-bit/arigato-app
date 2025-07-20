@@ -6,6 +6,7 @@ let languageData = {};
 
 // Initialize the app
 document.addEventListener('DOMContentLoaded', function() {
+  console.log('App initializing...');
   setLanguage('en');
   selectScene('airport');
   showMessage(2);
@@ -15,10 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
 function setLanguage(lang) {
   currentLanguage = lang;
   
-  fetch(`locales/${lang}.json`)
+  // Add error handling and fallback
+  fetch(`/locales/${lang}.json`)
     .then(response => {
       if (!response.ok) {
-        throw new Error("Language file not found");
+        throw new Error(`Language file not found: ${response.status}`);
       }
       return response.json();
     })
@@ -26,9 +28,15 @@ function setLanguage(lang) {
       languageData = data;
       updateUI();
       updateLanguageButtons();
+      console.log(`Language loaded: ${lang}`);
     })
     .catch(error => {
       console.error("Error loading language file:", error);
+      // Fallback to English if language file fails to load
+      if (lang !== 'en') {
+        console.log("Falling back to English");
+        setLanguage('en');
+      }
     });
 }
 
@@ -73,6 +81,7 @@ function updateSceneButtons() {
 
 // Select scene function
 function selectScene(scene) {
+  console.log(`Scene selected: ${scene}`);
   currentScene = scene;
   currentMessageIndex = 1;
   updateUI();
@@ -82,9 +91,14 @@ function selectScene(scene) {
 // Update messages for current scene
 function updateMessages() {
   const sceneData = languageData.scenes?.[currentScene];
-  if (!sceneData) return;
+  if (!sceneData) {
+    console.warn(`Scene data not found for: ${currentScene}`);
+    return;
+  }
   
   const messages = sceneData.messages;
+  console.log(`Updating messages for scene: ${currentScene}`, messages);
+  
   for (let i = 1; i <= 3; i++) {
     const messageElement = document.getElementById(`message-text-${i}`);
     if (messageElement && messages[i - 1]) {
