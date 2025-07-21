@@ -7,17 +7,17 @@ let languageData = {};
 // Initialize the app
 document.addEventListener('DOMContentLoaded', function() {
   console.log('App initializing...');
-  setLanguage('en');
-  selectScene('airport');
-  showMessage(2);
+  setLanguage('en', function() {
+    selectScene('airport');
+    showMessage(2);
+  });
 });
 
 // Language switching function
-function setLanguage(lang) {
+function setLanguage(lang, callback) {
   currentLanguage = lang;
-  
-  // Add error handling and fallback
-  fetch(`/locales/${lang}.json`)
+  // Add error handling and fallback, and cache buster
+  fetch(`/locales/${lang}.json?cb=${Date.now()}`)
     .then(response => {
       if (!response.ok) {
         throw new Error(`Language file not found: ${response.status}`);
@@ -29,13 +29,14 @@ function setLanguage(lang) {
       updateUI();
       updateLanguageButtons();
       console.log(`Language loaded: ${lang}`);
+      if (typeof callback === 'function') callback();
     })
     .catch(error => {
       console.error("Error loading language file:", error);
       // Fallback to English if language file fails to load
       if (lang !== 'en') {
         console.log("Falling back to English");
-        setLanguage('en');
+        setLanguage('en', callback);
       }
     });
 }
