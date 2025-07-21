@@ -26,6 +26,7 @@ function setLanguage(lang, callback) {
     })
     .then(data => {
       languageData = data;
+      console.log('Loaded languageData:', languageData);
       updateUI();
       updateLanguageButtons();
       console.log(`Language loaded: ${lang}`);
