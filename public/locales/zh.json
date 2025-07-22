@@ -1,0 +1,18 @@
+{
+  "scenes": {
+    "airport": {
+      "messages": [
+        {
+          "text": "非常感谢您帮我拿行李。",
+          "romaji": "Nimotsu wo tetsudatte kurete arigatou gozaimasu!",
+          "ja": "荷物を手伝ってくれてありがとうございます！"
+        },
+        {
+          "text": "非常感谢您对我的语言障碍的耐心。",
+          "romaji": "Kotoba ga tsūjinakute mo shinsetsu ni shite kurete kansha shimasu.",
+          "ja": "言葉が通じなくても親切にしてくれて感謝します。"
+        }
+      ]
+    }
+  }
+} 

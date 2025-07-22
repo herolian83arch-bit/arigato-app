@@ -1,0 +1,73 @@
+body {
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+  margin: 0;
+}
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+}
+header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.language-switcher {
+  margin-top: 16px;
+}
+.lang-btn {
+  background: #f7fafc;
+  border: 2px solid #e2e8f0;
+  color: #4a5568;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 4px;
+  transition: all 0.2s;
+}
+.lang-btn:hover {
+  background: #e2e8f0;
+}
+#scene-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.message-card {
+  background: #f7f7fa;
+  border-radius: 10px;
+  padding: 18px 14px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(102,126,234,0.07);
+}
+.message-text {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+.romaji-text {
+  font-size: 0.98rem;
+  color: #764ba2;
+  margin-bottom: 8px;
+}
+.speak-btn {
+  background: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.speak-btn:hover {
+  background: #764ba2;
+} 
