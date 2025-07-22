@@ -1,0 +1,46 @@
+{
+  "app_title": "Arigato App",
+  "subtitle": "Express your gratitude in Japan",
+  "scenes": {
+    "airport": {
+      "title": "At the Airport",
+      "messages": [
+        "Thank you so much for your help with my luggage. You made my arrival in Japan so much easier!",
+        "I really appreciate your patience with my language barrier. Thank you for being so kind!",
+        "Thank you for guiding me through the airport. Your assistance was invaluable!"
+      ]
+    },
+    "hotel": {
+      "title": "At the Hotel",
+      "messages": [
+        "Thank you for the wonderful hospitality!",
+        "I appreciate your help with my reservation.",
+        "Thank you for making my stay comfortable!"
+      ]
+    },
+    "restaurant": {
+      "title": "At the Restaurant",
+      "messages": [
+        "Thank you for the delicious meal!",
+        "I appreciate your recommendations.",
+        "Thank you for your excellent service!"
+      ]
+    },
+    "transportation": {
+      "title": "On Transportation",
+      "messages": [
+        "Thank you for helping me find my way!",
+        "I appreciate your assistance with directions.",
+        "Thank you for your patience during my trip!"
+      ]
+    },
+    "shopping": {
+      "title": "While Shopping",
+      "messages": [
+        "Thank you for your help with my purchase!",
+        "I appreciate your assistance in finding what I needed.",
+        "Thank you for your excellent customer service!"
+      ]
+    }
+  }
+} 
