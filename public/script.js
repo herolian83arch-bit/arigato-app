@@ -17,8 +17,26 @@ function loadLanguage(lang) {
     .then(res => res.json())
     .then(data => {
       languageData = data;
+      renderSceneSwitcher();
       renderScene();
     });
+}
+
+function renderSceneSwitcher() {
+  const switcherDiv = document.getElementById('scene-switcher');
+  switcherDiv.innerHTML = '';
+  if (!languageData.scenes) return;
+  Object.keys(languageData.scenes).forEach(sceneKey => {
+    const btn = document.createElement('button');
+    btn.className = 'scene-btn' + (sceneKey === currentScene ? ' active' : '');
+    btn.textContent = sceneKey;
+    btn.onclick = () => {
+      currentScene = sceneKey;
+      renderSceneSwitcher();
+      renderScene();
+    };
+    switcherDiv.appendChild(btn);
+  });
 }
 
 function renderScene() {
