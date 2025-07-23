@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service</title>
+  <style>
+    body {
+      font-family: 'Noto Sans JP', 'Inter', sans-serif;
+      background: #f7f7fa;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 700px;
+      margin: 32px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 24px 18px;
+    }
+    h1 {
+      font-size: 1.6rem;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    h2 {
+      font-size: 1.1rem;
+      margin-top: 28px;
+      margin-bottom: 10px;
+      color: #764ba2;
+    }
+    p, li {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 12px 4vw;
+      }
+      h1 {
+        font-size: 1.2rem;
+      }
+      h2 {
+        font-size: 1rem;
+      }
+      p, li {
+        font-size: 0.98rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Terms of Service</h1>
+    <section>
+      <h2>1. Introduction</h2>
+      <p>These Terms of Service ("Terms") set forth the conditions for using Arigato App ("the App"). By using this app, you agree to these Terms.</p>
+    </section>
+    <section>
+      <h2>2. Terms of Use</h2>
+      <p>This app is intended to help visitors to Japan learn Japanese expressions of gratitude. It is free for personal use.</p>
+    </section>
+    <section>
+      <h2>3. Prohibited Actions</h2>
+      <ul>
+        <li>Unauthorized reproduction, copying, or redistribution of the app's content</li>
+        <li>Acts that violate laws or public order and morals</li>
+        <li>Acts that interfere with the operation of the app</li>
+      </ul>
+    </section>
+    <section>
+      <h2>4. Disclaimer</h2>
+      <p>The content of this app is not guaranteed to be accurate or safe. The operator assumes no responsibility for any damages resulting from use.</p>
+    </section>
+    <section>
+      <h2>5. Copyright</h2>
+      <p>All text, images, and programs in this app are the property of the operator or rightful owners. Unauthorized use or reproduction is prohibited.</p>
+    </section>
+    <section>
+      <h2>6. Changes to Terms</h2>
+      <p>The operator may change these Terms as necessary. Changes take effect when posted on this page.</p>
+    </section>
+    <section>
+      <h2>7. Contact</h2>
+      <p>Contact: <span id="email"></span></p>
+      <script>
+        const user = "herolian83arch";
+        const domain = "gmail.com";
+        document.getElementById("email").innerHTML = `<a href="mailto:${user}@${domain}">${user}@${domain}</a>`;
+      </script>
+    </section>
+  </div>
+</body>
+</html> 
