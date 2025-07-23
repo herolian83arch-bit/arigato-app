@@ -1,6 +1,7 @@
 let currentLang = 'en';
 let currentScene = 'airport';
 let languageData = {};
+let speechSpeed = 1.0;
 
 document.addEventListener('DOMContentLoaded', () => {
   loadLanguage(currentLang);
@@ -10,6 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
       loadLanguage(currentLang);
     };
   });
+
+  // スピードスライダーのイベント
+  const speedSlider = document.getElementById('speechSpeed');
+  const speedValue = document.getElementById('speedValue');
+  if (speedSlider && speedValue) {
+    speedSlider.addEventListener('input', function() {
+      speechSpeed = parseFloat(this.value);
+      speedValue.textContent = `${speechSpeed.toFixed(2)}x`;
+    });
+  }
 });
 
 function loadLanguage(lang) {
@@ -61,5 +72,6 @@ function renderScene() {
 window.playJapaneseSpeech = function(japaneseText) {
   const utter = new SpeechSynthesisUtterance(japaneseText);
   utter.lang = 'ja-JP';
+  utter.rate = speechSpeed;
   speechSynthesis.speak(utter);
 }; 
