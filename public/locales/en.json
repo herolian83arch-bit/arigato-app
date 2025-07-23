@@ -2,16 +2,28 @@
   "scenes": {
     "airport": {
       "messages": [
-        {
-          "text": "Thank you so much for your help with my luggage.",
-          "romaji": "Nimotsu wo tetsudatte kurete arigatou gozaimasu!",
-          "ja": "荷物を手伝ってくれてありがとうございます！"
-        },
-        {
-          "text": "I really appreciate your patience with my language barrier.",
-          "romaji": "Kotoba ga tsūjinakute mo shinsetsu ni shite kurete kansha shimasu.",
-          "ja": "言葉が通じなくても親切にしてくれて感謝します。"
-        }
+        { "text": "Thank you so much for your help with my luggage.", "romaji": "Nimotsu wo tetsudatte kurete arigatou gozaimasu!", "ja": "荷物を手伝ってくれてありがとうございます！" },
+        { "text": "I really appreciate your patience with my language barrier.", "romaji": "Kotoba ga tsūjinakute mo shinsetsu ni shite kurete kansha shimasu.", "ja": "言葉が通じなくても親切にしてくれて感謝します。" }
+      ]
+    },
+    "hotel": {
+      "messages": [
+        { "text": "Thank you for your hospitality.", "romaji": "Subarashii omotenashi wo arigatou gozaimasu!", "ja": "素晴らしいおもてなしをありがとうございます！" }
+      ]
+    },
+    "restaurant": {
+      "messages": [
+        { "text": "Thank you for the delicious meal.", "romaji": "Oishii shokuji wo arigatou gozaimasu!", "ja": "美味しい食事をありがとうございます！" }
+      ]
+    },
+    "shopping": {
+      "messages": [
+        { "text": "Thank you for your help with my purchase.", "romaji": "Kaimono wo tetsudatte kurete arigatou gozaimasu!", "ja": "買い物を手伝ってくれてありがとうございます！" }
+      ]
+    },
+    "transportation": {
+      "messages": [
+        { "text": "Thank you for helping me find my way.", "romaji": "Michi wo oshiete kurete arigatou gozaimasu!", "ja": "道を教えてくれてありがとうございます！" }
       ]
     }
   }
