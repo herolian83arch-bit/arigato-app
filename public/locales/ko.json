@@ -2,8 +2,22 @@
   "scenes": {
     "airport": {
       "messages": [
-        { "text": "짐을 도와주셔서 정말 감사합니다!", "romaji": "Nimotsu wo tetsudatte kurete arigatou gozaimasu!", "ja": "荷物を手伝ってくれてありがとうございます！" },
-        { "text": "언어 장벽에도 불구하고 친절하게 대해주셔서 감사합니다!", "romaji": "Kotoba ga tsūjinakute mo shinsetsu ni shite kurete kansha shimasu.", "ja": "言葉が通じなくても親切にしてくれて感謝します。" }
+        { "romaji": "KOKORO GA <b>JINWARI</b> SHIMASHITA.", "text": "마음이 따뜻하게 감동받았습니다.", "note": "(\"일본에 오신 것을 환영합니다\"라는 말을 들었을 때 정말 환영받는 느낌이 들어 감동이었습니다.)", "ja": "心がじんわりしました。" },
+        { "romaji": "KOKORO GA <b>HOTTO</b> SHIMASHITA.", "text": "마음이 놓였습니다.", "note": "(작은 친절이 저를 안전하고 배려받는 느낌으로 만들어주었습니다.)", "ja": "心がほっとしました。" },
+        { "romaji": "KOKORO GA <b>KYUN TO</b> SHIMASHITA.", "text": "마음이 두근거렸습니다.", "note": "(이런 친절을 기대하지 못했는데 정말 감동이었습니다.)", "ja": "心がキュンとしました。" },
+        { "romaji": "KOKORO GA IYASARE MASHITA.", "text": "마음이 치유되었습니다.", "note": "(\"고생하셨습니다\"라는 말을 듣고 피로가 사라졌습니다.)", "ja": "心が癒されました。" },
+        { "romaji": "KOKORO KARA KANSHA SHIMASHITA.", "text": "진심으로 감사했습니다.", "note": "(혼란스러운 순간에 도움을 받아 정말 큰 의미가 있었습니다.)", "ja": "心から感謝しました。" },
+        { "romaji": "KOKORO GA <b>JIWAAN TO</b> SHIMASHITA.", "text": "마음이 깊이 감동받았습니다.", "note": "(부드럽고 전문적인 태도가 조용하지만 오래 남는 인상을 주었습니다.)", "ja": "心がじわ〜んとしました。" },
+        { "romaji": "KOKORO GA <b>URUTTO</b> SHIMASHITA.", "text": "마음이 울컥했습니다.", "note": "(간단한 일본어 한마디가 정말 환영받는 느낌을 주었습니다.)", "ja": "心がうるっとしました。" },
+        { "romaji": "KOKORO GA <b>FUWATTO</b> NAGOMIMASHITA.", "text": "마음이 편안해졌습니다.", "note": "(공항의 부드러운 음악이 완전히 긴장을 풀어주었습니다.)", "ja": "心がふわっと和みました。" },
+        { "romaji": "KOKORO GA <b>WAKUWAKU</b> SHIMASHITA.", "text": "마음이 설렜습니다.", "note": "(환영 표지판을 보고 모험이 현실로 느껴졌습니다!)", "ja": "心がワクワクしました。" },
+        { "romaji": "KOKORO GA ATATAKAKU NARIMASHITA.", "text": "마음이 따뜻해졌습니다.", "note": "(직원의 미소에 바로 안심할 수 있었습니다.)", "ja": "心が温かくなりました。" },
+        { "romaji": "KOKORO GA <b>POKAPOKA</b> SHIMASHITA.", "text": "마음이 포근하고 편안해졌습니다.", "note": "(여러 언어로 된 표지판을 보고 배려를 느꼈습니다.)", "ja": "心がぽかぽかしました。" },
+        { "romaji": "KOKORO GA <b>JIIN TO</b> SHIMASHITA.", "text": "마음이 뭉클해졌습니다.", "note": "(가족을 다정하게 도와주는 모습을 보고 정말 감동받았습니다.)", "ja": "心がじーんとしました。" },
+        { "romaji": "KOKORO GA <b>UTTORI</b> SHIMASHITA.", "text": "마음이 황홀해졌습니다.", "note": "(공항의 디자인과 조명이 너무 아름다워서 시선을 뗄 수 없었습니다.)", "ja": "心がうっとりしました。" },
+        { "romaji": "KOKORO GA HAZUMI MASHITA.", "text": "마음이 들떴습니다.", "note": "(문 밖의 일본 풍경을 보고 모든 것이 현실로 느껴졌습니다.)", "ja": "心が弾みました。" },
+        { "romaji": "KOKORO GA HODOKE MASHITA.", "text": "마음이 풀렸습니다.", "note": "(친절한 태도 덕분에 불안이 사라졌습니다.)", "ja": "心がほどけました。" },
+        { "romaji": "KOKORO GA <b>TOKIMEKI</b> MASHITA.", "text": "마음이 두근두근 설렜습니다.", "note": "(도장의 순간이 여행의 시작을 알렸고, 이곳에 있다는 설렘을 느꼈습니다.)", "ja": "心がときめきました。" }
       ]
     },
     "hotel": {
