@@ -92,7 +92,7 @@ function renderScene() {
           renderScene();
         };
       });
-    } else if (currentLang === 'en' && currentScene === 'airport') {
+    } else if ((currentLang === 'en' || currentLang === 'zh') && currentScene === 'airport') {
       scene.messages.forEach((msg, idx) => {
         const favKey = `${currentLang}-${currentScene}-${idx}`;
         const isFav = !!favorites[favKey];
