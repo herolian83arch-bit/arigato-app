@@ -50,23 +50,47 @@ function renderSceneSwitcher() {
   });
 }
 
+function getFavorites() {
+  try {
+    return JSON.parse(localStorage.getItem('favorites') || '{}');
+  } catch {
+    return {};
+  }
+}
+function setFavorites(favs) {
+  localStorage.setItem('favorites', JSON.stringify(favs));
+}
+
 function renderScene() {
   const scene = languageData.scenes[currentScene];
   document.getElementById('scene-title').textContent = scene ? currentScene : '';
   const messagesDiv = document.getElementById('messages');
   messagesDiv.innerHTML = '';
   if (scene) {
-    // 日本語のみの場合、番号付きで表示、<b>タグ反映
+    const favorites = getFavorites();
     if (currentLang === 'ja') {
       scene.messages.forEach((msg, idx) => {
+        const favKey = `${currentLang}-${currentScene}-${idx}`;
+        const isFav = !!favorites[favKey];
         const card = document.createElement('div');
         card.className = 'message-card';
         card.innerHTML = `
           <span style="font-weight:bold;margin-right:8px;">${idx + 1}.</span>
+          <span class="favorite-star" data-key="${favKey}" style="cursor:pointer;font-size:1.3em;color:${isFav ? 'gold' : '#bbb'};user-select:none;">${isFav ? '★' : '☆'}</span>
           <span class="message-text" style="display:inline-block;">${msg.text}</span>
           <button class="speak-btn" style="margin-left:12px;" onclick="playJapaneseSpeech('${msg.text.replace(/<[^>]+>/g, '')}')">🔊</button>
         `;
         messagesDiv.appendChild(card);
+      });
+      // ★クリックイベント付与
+      messagesDiv.querySelectorAll('.favorite-star').forEach(star => {
+        star.onclick = function() {
+          const key = this.getAttribute('data-key');
+          const favs = getFavorites();
+          favs[key] = !favs[key];
+          setFavorites(favs);
+          renderScene();
+        };
       });
     } else {
       scene.messages.forEach((msg, idx) => {
