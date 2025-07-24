@@ -2,22 +2,22 @@
   "scenes": {
     "airport": {
       "messages": [
-        { "romaji": "KOKORO GA <b>JINWARI</b> SHIMASHITA.", "text": "My heart was gently warmed.", "note": "(I felt so welcomed when they said 'Welcome to Japan' — it really touched me.)", "ja": "心がじんわりしました。" },
+        { "romaji": "KOKORO GA <b>JINWARI</b> SHIMASHITA.", "text": "My heart was gently warmed.", "note": "(I felt so welcomed when they said \"Welcome to Japan\" — it really touched me.)", "ja": "心がじんわりしました。" },
         { "romaji": "KOKORO GA <b>HOTTO</b> SHIMASHITA.", "text": "I felt relieved in my heart.", "note": "(That small gesture of kindness made me feel safe and cared for.)", "ja": "心がほっとしました。" },
-        { "romaji": "KOKORO GA <b>KYUN TO</b> SHIMASHITA.", "text": "My heart skipped a beat.", "note": "(I didn’t expect such kindness — it really moved me.)", "ja": "心がキュンとしました。" },
-        { "romaji": "KOKORO GA IYASARE MASHITA.", "text": "My heart felt healed.", "note": "(Just hearing 'You must be tired' melted my fatigue away.)", "ja": "心が癒されました。" },
-        { "romaji": "KOKORO KARA KANSHA SHIMASHITA.", "text": "I truly felt grateful.", "note": "(Their help meant so much in that moment of confusion.)", "ja": "心から感謝しました。" },
+        { "romaji": "KOKORO GA <b>KYUN TO</b> SHIMASHITA.", "text": "My heart skipped a beat.", "note": "(I didn’t expect such care — it really struck me in a good way.)", "ja": "心がキュンとしました。" },
+        { "romaji": "KOKORO GA IYASARE MASHITA.", "text": "My heart felt healed.", "note": "(That gentle phrase lifted away both stress and fatigue.)", "ja": "心が癒されました。" },
+        { "romaji": "KOKORO KARA KANSHA SHIMASHITA.", "text": "I truly felt grateful.", "note": "(Their quick help in that moment truly meant a lot to me.)", "ja": "心から感謝しました。" },
         { "romaji": "KOKORO GA <b>JIWAAN TO</b> SHIMASHITA.", "text": "My heart was deeply touched.", "note": "(Their gentle professionalism left a quiet but lasting impression.)", "ja": "心がじわ〜んとしました。" },
-        { "romaji": "KOKORO GA <b>URUTTO</b> SHIMASHITA.", "text": "My heart welled up with emotion.", "note": "(That simple word, in Japanese, made me feel truly welcomed.)", "ja": "心がうるっとしました。" },
+        { "romaji": "KOKORO GA <b>URUTTO</b> SHIMASHITA.", "text": "My heart welled up with emotion.", "note": "(Just hearing “Welcome” in Japanese brought tears to my eyes.)", "ja": "心がうるっとしました。" },
         { "romaji": "KOKORO GA <b>FUWATTO</b> NAGOMIMASHITA.", "text": "My heart felt calm and light.", "note": "(The soft airport music helped me relax completely.)", "ja": "心がふわっと和みました。" },
-        { "romaji": "KOKORO GA <b>WAKUWAKU</b> SHIMASHITA.", "text": "My heart buzzed with excitement.", "note": "(Seeing that welcome sign made the adventure feel real!)", "ja": "心がワクワクしました。" },
+        { "romaji": "KOKORO GA <b>WAKUWAKU</b> SHIMASHITA.", "text": "My heart buzzed with excitement.", "note": "(That welcome sign made my whole body feel the start of the journey.)", "ja": "心がワクワクしました。" },
         { "romaji": "KOKORO GA ATATAKAKU NARIMASHITA.", "text": "My heart felt warm.", "note": "(That smile from the staff made me feel instantly at ease.)", "ja": "心が温かくなりました。" },
-        { "romaji": "KOKORO GA <b>POKAPOKA</b> SHIMASHITA.", "text": "My heart felt cozy and comforted.", "note": "(Just seeing signs in multiple languages showed they cared.)", "ja": "心がぽかぽかしました。" },
-        { "romaji": "KOKORO GA <b>JIIN TO</b> SHIMASHITA.", "text": "My heart was moved.", "note": "(Watching how gently they helped a family really touched me.)", "ja": "心がじーんとしました。" },
-        { "romaji": "KOKORO GA <b>UTTORI</b> SHIMASHITA.", "text": "My heart was enchanted.", "note": "(The design and lighting were so beautiful I couldn’t look away.)", "ja": "心がうっとりしました。" },
-        { "romaji": "KOKORO GA HAZUMI MASHITA.", "text": "My heart bounced with joy.", "note": "(Seeing Japan outside that door made it all feel real.)", "ja": "心が弾みました。" },
+        { "romaji": "KOKORO GA <b>POKAPOKA</b> SHIMASHITA.", "text": "My heart felt cozy and comforted.", "note": "(The multilingual signs made me feel truly considered.)", "ja": "心がぽかぽかしました。" },
+        { "romaji": "KOKORO GA <b>JIIN TO</b> SHIMASHITA.", "text": "My heart was moved.", "note": "(The way the staff spoke gently to children really stayed with me.)", "ja": "心がじーんとしました。" },
+        { "romaji": "KOKORO GA <b>UTTORI</b> SHIMASHITA.", "text": "My heart was enchanted.", "note": "(The graceful design and lighting made me forget where I was.)", "ja": "心がうっとりしました。" },
+        { "romaji": "KOKORO GA HAZUMI MASHITA.", "text": "My heart bounced with joy.", "note": "(Seeing the real world outside the airport made it all hit me.)", "ja": "心が弾みました。" },
         { "romaji": "KOKORO GA HODOKE MASHITA.", "text": "My heart relaxed.", "note": "(Their kind attitude helped me let go of my anxiety.)", "ja": "心がほどけました。" },
-        { "romaji": "KOKORO GA <b>TOKIMEKI</b> MASHITA.", "text": "My heart fluttered with excitement.", "note": "(That stamp marked the beginning, and I could feel the thrill of being here.)", "ja": "心がときめきました。" }
+        { "romaji": "KOKORO GA <b>TOKIMEKI</b> MASHITA.", "text": "My heart fluttered with excitement.", "note": "(When someone helped an elderly traveler with their suitcase and smiled, I felt a rush of warmth and admiration.)", "ja": "心がときめきました。" }
       ]
     },
     "hotel": {
