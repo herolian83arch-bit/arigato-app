@@ -56,16 +56,30 @@ function renderScene() {
   const messagesDiv = document.getElementById('messages');
   messagesDiv.innerHTML = '';
   if (scene) {
-    scene.messages.forEach((msg, idx) => {
-      const card = document.createElement('div');
-      card.className = 'message-card';
-      card.innerHTML = `
-        <p class="message-text">${msg.text}</p>
-        <p class="romaji-text">${msg.romaji || ''}</p>
-        <button class="speak-btn" onclick="playJapaneseSpeech('${msg.ja}')">🔊</button>
-      `;
-      messagesDiv.appendChild(card);
-    });
+    // 日本語のみの場合、番号付きで表示、<b>タグ反映
+    if (currentLang === 'ja') {
+      scene.messages.forEach((msg, idx) => {
+        const card = document.createElement('div');
+        card.className = 'message-card';
+        card.innerHTML = `
+          <span style="font-weight:bold;margin-right:8px;">${idx + 1}.</span>
+          <span class="message-text" style="display:inline-block;">${msg.text}</span>
+          <button class="speak-btn" style="margin-left:12px;" onclick="playJapaneseSpeech('${msg.text.replace(/<[^>]+>/g, '')}')">🔊</button>
+        `;
+        messagesDiv.appendChild(card);
+      });
+    } else {
+      scene.messages.forEach((msg, idx) => {
+        const card = document.createElement('div');
+        card.className = 'message-card';
+        card.innerHTML = `
+          <p class="message-text">${msg.text}</p>
+          <p class="romaji-text">${msg.romaji || ''}</p>
+          <button class="speak-btn" onclick="playJapaneseSpeech('${msg.ja}')">🔊</button>
+        `;
+        messagesDiv.appendChild(card);
+      });
+    }
   }
 }
 
