@@ -1,0 +1,84 @@
+// check-locales.js
+// 多言語jsonの構造・件数・キー一致を自動チェック
+
+const fs = require('fs');
+const path = require('path');
+
+const LOCALES_DIR = path.join(__dirname, 'public', 'locales');
+const REQUIRED_KEYS = ['romaji', 'text', 'note', 'ja'];
+
+function readJson(file) {
+  return JSON.parse(fs.readFileSync(file, 'utf8'));
+}
+
+function getLocaleFiles() {
+  return fs.readdirSync(LOCALES_DIR)
+    .filter(f => f.endsWith('.json'))
+    .map(f => path.join(LOCALES_DIR, f));
+}
+
+function checkKeys(obj, keys) {
+  return keys.every(k => Object.prototype.hasOwnProperty.call(obj, k));
+}
+
+function main() {
+  const files = getLocaleFiles();
+  const all = files.map(f => ({ name: path.basename(f, '.json'), data: readJson(f) }));
+
+  // 1. シーン名の一致
+  const sceneSets = all.map(l => new Set(Object.keys(l.data.scenes)));
+  const baseScenes = Array.from(sceneSets[0]);
+  let ok = true;
+
+  all.forEach((l, idx) => {
+    const scenes = Object.keys(l.data.scenes);
+    if (scenes.length !== baseScenes.length || !baseScenes.every(s => scenes.includes(s))) {
+      console.error(`[ERROR] ${l.name}: シーン名が他言語と一致しません:`, scenes);
+      ok = false;
+    }
+  });
+
+  // 2. 各sceneのmessages件数・順番・キー一致
+  baseScenes.forEach(scene => {
+    // 各言語のmessages配列
+    const messagesArr = all.map(l => ({
+      name: l.name,
+      arr: (l.data.scenes[scene] && l.data.scenes[scene].messages) || []
+    }));
+    const baseLen = messagesArr[0].arr.length;
+    // 件数
+    messagesArr.forEach(({ name, arr }) => {
+      if (arr.length !== baseLen) {
+        console.error(`[ERROR] ${name}/${scene}: messages件数が他言語と一致しません (${arr.length}件, 基準:${baseLen}件)`);
+        ok = false;
+      }
+    });
+    // 順番・キー
+    for (let i = 0; i < baseLen; i++) {
+      const baseKeys = Object.keys(messagesArr[0].arr[i] || {});
+      messagesArr.forEach(({ name, arr }) => {
+        const msg = arr[i] || {};
+        const keys = Object.keys(msg);
+        // 必須キー
+        if (!checkKeys(msg, REQUIRED_KEYS)) {
+          console.error(`[ERROR] ${name}/${scene}[${i + 1}]: 必須キーが不足しています:`, keys);
+          ok = false;
+        }
+        // 余分なキー
+        if (keys.some(k => !REQUIRED_KEYS.includes(k))) {
+          console.error(`[ERROR] ${name}/${scene}[${i + 1}]: 不要なキーがあります:`, keys);
+          ok = false;
+        }
+      });
+    }
+  });
+
+  if (ok) {
+    console.log('✅ 全てのlocalesファイルは構造・件数・キーが一致しています。');
+  } else {
+    console.error('❌ 不一致があります。上記エラーを修正してください。');
+    process.exit(1);
+  }
+}
+
+main();
