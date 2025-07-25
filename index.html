@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arigato App</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1 id="app-title">Arigato App</h1>
+      <p id="app-subtitle">Express your gratitude in Japan</p>
+      
+      <!-- Language Switcher -->
+      <div class="language-switcher">
+        <button class="lang-btn active" onclick="setLanguage('en')" data-lang="en">EN</button>
+        <button class="lang-btn" onclick="setLanguage('ja')" data-lang="ja">JA</button>
+        <button class="lang-btn" onclick="setLanguage('zh')" data-lang="zh">ZH</button>
+        <button class="lang-btn" onclick="setLanguage('ko')" data-lang="ko">KO</button>
+      </div>
+    </header>
+
+    <!-- Scene Selector -->
+    <div class="scene-selector">
+      <h2>Choose a situation:</h2>
+      <div class="scene-buttons">
+        <button class="scene-btn active" onclick="selectScene('airport')" data-scene="airport">
+          <span class="scene-icon">✈️</span>
+          <span class="scene-text">Airport</span>
+        </button>
+        <button class="scene-btn" onclick="selectScene('hotel')" data-scene="hotel">
+          <span class="scene-icon">🏨</span>
+          <span class="scene-text">Hotel</span>
+        </button>
+        <button class="scene-btn" onclick="selectScene('restaurant')" data-scene="restaurant">
+          <span class="scene-icon">🍜</span>
+          <span class="scene-text">Restaurant</span>
+        </button>
+        <button class="scene-btn" onclick="selectScene('transportation')" data-scene="transportation">
+          <span class="scene-icon">🚇</span>
+          <span class="scene-text">Transportation</span>
+        </button>
+        <button class="scene-btn" onclick="selectScene('shopping')" data-scene="shopping">
+          <span class="scene-icon">🛍️</span>
+          <span class="scene-text">Shopping</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Message Display -->
+    <div class="message-section">
+      <h3 id="scene-title">At the Airport</h3>
+      <div class="message-container">
+        <div class="message-card active" id="message-1">
+          <p id="message-text-1">Thank you so much for your help with my luggage. You made my arrival in Japan so much easier!</p>
+          <button class="copy-btn" onclick="copyMessage(1)">📋 Copy</button>
+        </div>
+        <div class="message-card" id="message-2">
+          <p id="message-text-2">I really appreciate your patience with my language barrier. Thank you for being so kind!</p>
+          <button class="copy-btn" onclick="copyMessage(2)">📋 Copy</button>
+        </div>
+        <div class="message-card" id="message-3">
+          <p id="message-text-3">Thank you for guiding me through the airport. Your assistance was invaluable!</p>
+          <button class="copy-btn" onclick="copyMessage(3)">📋 Copy</button>
+        </div>
+      </div>
+      
+      <!-- Message Navigation -->
+      <div class="message-nav">
+        <button class="nav-btn" onclick="showMessage(1)">1</button>
+        <button class="nav-btn active" onclick="showMessage(2)">2</button>
+        <button class="nav-btn" onclick="showMessage(3)">3</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Made with ❤️ for visitors to Japan</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> 
