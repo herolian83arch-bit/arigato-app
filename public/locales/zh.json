@@ -22,7 +22,26 @@
     },
     "hotel": {
       "messages": [
-        { "text": "感谢您的热情款待。", "romaji": "Subarashii omotenashi wo arigatou gozaimasu!", "ja": "素晴らしいおもてなしをありがとうございます！" }
+        { "romaji": "<b>WAKUWAKU</b> SHINAGARA CHEKKUIN WO MUKAEMASHITA", "text": "带着兴奋办理入住。", "note": "（贴心的引导让我对旅程更加期待。）", "ja": "ワクワクしながらチェックインを迎えました" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>HOKKORI</b> SHIMASHITA.", "text": "谢谢您，让我感到温暖和安心。", "note": "（前台微笑着迎接我，让我很放松。）", "ja": "ありがとうございます。ほっこりしました。" },
+        { "romaji": "OHEYA NO KAORI GA KIMOCHI II DESU NE. ARIGATOU GOZAIMASU", "text": "房间的香气让人心情愉快，谢谢您。", "note": "（我很喜欢房间的香味。）", "ja": "お部屋の香りが気持ちいいですね。ありがとうございます" },
+        { "romaji": "OHEYA NO SEIKETSUKAN NI, KOKORO GA HARE MASHITA", "text": "房间的整洁让我心情舒畅。", "note": "（感受到工作人员细致的清扫。）", "ja": "お部屋の清潔感に、心が晴れました" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>PIKAPIKA</b> NI SHITE KUDASATTE KANGEKI DESU.", "text": "谢谢您，房间一尘不染让我很感动。", "note": "（感觉像新房一样干净。）", "ja": "ありがとうございます。ピカピカにしてくださって感激です。" },
+        { "romaji": "ARIGATOU GOZAIMASU. KOMAKAI KIKUBARI GA URESHIKATTA DESU.", "text": "谢谢您，细致的关怀让我很开心。", "note": "（便签、加湿器、明信片都很贴心。）", "ja": "ありがとうございます。細かな気配りが嬉しかったです。" },
+        { "romaji": "NAGAME NI <b>UTTORI</b> SHIMASHITA", "text": "美丽的景色让我陶醉。", "note": "（打开窗户仿佛走进了一幅画。）", "ja": "眺めにうっとりしました" },
+        { "romaji": "EGAO NI <b>HOKKORI</b> SHIMASHITA.", "text": "您的微笑让我感到温暖。", "note": "（比起言语，微笑更能传递善意。）", "ja": "笑顔にほっこりしました。" },
+        { "romaji": "OKOKOROBARI, HONTOU NI ARIGATOU GOZAIMASU.", "text": "非常感谢您的贴心照顾。", "note": "（您的关怀总能提前想到我的需求。）", "ja": "お心配り、本当にありがとうございます。" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>URUURU</b> KICHAIMASHITA.", "text": "谢谢您，让我感动得快要流泪。", "note": "（礼宾部送给我一张留言卡作为纪念。）", "ja": "ありがとうございます。うるうるきちゃいました。" },
+        { "romaji": "KOKORO MADE <b>POKAPOKA</b> NI NARIMASHITA. ARIGATOU GOZAIMASU", "text": "谢谢您，泡澡让我从心底感到温暖。", "note": "（身心都得到了放松。）", "ja": "心までぽかぽかになりました。ありがとうございます" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>TOROTORO</b> NI TOKESOU DESU.", "text": "谢谢您，温泉让我完全放松。", "note": "（温泉融化了我的压力。）", "ja": "ありがとうございます。とろとろにとけそうです。" },
+        { "romaji": "ORYOURI NO HITOSARA HITOSARA NI <b>WAKUWAKU</b> GA TSUMATTE IMASHITA", "text": "每一道菜都充满了期待和喜悦。", "note": "（摆盘和味道都很有故事感。）", "ja": "お料理のひと皿ひと皿にワクワクが詰まっていました" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>DOKIDOKI</b> GA TOMARIMASEN.", "text": "谢谢您，让我充满了期待。", "note": "（菜品和菜单都让我很激动。）", "ja": "ありがとうございます。ドキドキが止まりません。" },
+        { "romaji": "SHEFU NO OMOI GA TSUTAWARU RYOURI NI, WATASHI NO KOKORO GA JINWARI ATATAMARIMASHITA", "text": "主厨的用心通过料理传递出来，温暖了我的心。", "note": "（不仅仅是一顿饭，更感受到用心和时间。）", "ja": "シェフの想いが伝わる料理に、心がじんわり温まりました" },
+        { "romaji": "OFUTON GA <b>FUKAFUKA</b> DE, TSUTSUMARERU YOU NA ANSHIN-KAN DESHITA", "text": "蓬松的被褥让我安心入睡。", "note": "（旅途的疲惫一扫而空。）", "ja": "お布団がふかふかで、包まれるような安心感でした" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>HOWAHOWA</b> SHIAWASE KIBUN DESU.", "text": "谢谢您，让我感到幸福和温馨。", "note": "（被褥让我有被包裹的幸福感。）", "ja": "ありがとうございます。ほわほわ幸せ気分です。" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>FUWAFUWA</b> YUMEGOKOCHI DESHITA.", "text": "谢谢您，睡得像做梦一样。", "note": "（床铺很舒服，夜晚很安静。）", "ja": "ありがとうございます。ふわふわ夢ごこちでした。" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>TSUYATSUYA</b> GOHAN, SAIKOU DESHITA.", "text": "谢谢您，晶莹剔透的米饭太棒了。", "note": "（早餐的米饭饱满又美味。）", "ja": "ありがとうございます。つやつやご飯、最高でした。" },
+        { "romaji": "ARIGATOU GOZAIMASU. MATA KIMASU.", "text": "谢谢您，我一定会再来。", "note": "（工作人员微笑着挥手说“欢迎再来”。）", "ja": "ありがとうございます。また来ます。" }
       ]
     },
     "restaurant": {
