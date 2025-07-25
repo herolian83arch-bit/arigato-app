@@ -22,7 +22,26 @@
     },
     "hotel": {
       "messages": [
-        { "text": "Thank you for your hospitality.", "romaji": "Subarashii omotenashi wo arigatou gozaimasu!", "ja": "素晴らしいおもてなしをありがとうございます！" }
+        { "romaji": "<b>WAKUWAKU</b> SHINAGARA CHEKKUIN WO MUKAEMASHITA", "text": "I checked in with excitement.", "note": "(The kind guidance made me even more excited for the trip.)" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>HOKKORI</b> SHIMASHITA.", "text": "Thank you. I felt warm and comforted.", "note": "(The front desk staff welcomed me with a smile.)" },
+        { "romaji": "OHEYA NO KAORI GA KIMOCHI II DESU NE. ARIGATOU GOZAIMASU", "text": "The room smells wonderful. Thank you.", "note": "(I really liked the fragrance of the room.)" },
+        { "romaji": "OHEYA NO SEIKETSUKAN NI, KOKORO GA HARE MASHITA", "text": "The cleanliness of the room lifted my mood.", "note": "(I felt warmth from the staff's careful cleaning.)" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>PIKAPIKA</b> NI SHITE KUDASATTE KANGEKI DESU.", "text": "Thank you. Everything was perfectly clean and shiny.", "note": "(It felt like a brand-new room.)" },
+        { "romaji": "ARIGATOU GOZAIMASU. KOMAKAI KIKUBARI GA URESHIKATTA DESU.", "text": "Thank you. I appreciated the thoughtful details.", "note": "(The memo, humidifier, and postcards were a nice touch.)" },
+        { "romaji": "NAGAME NI <b>UTTORI</b> SHIMASHITA", "text": "I was enchanted by the beautiful view.", "note": "(Opening the window felt like stepping into a painting.)" },
+        { "romaji": "EGAO NI <b>HOKKORI</b> SHIMASHITA.", "text": "Your smile made me feel warm inside.", "note": "(Kindness was conveyed more through your smile than words.)" },
+        { "romaji": "OKOKOROBARI, HONTOU NI ARIGATOU GOZAIMASU.", "text": "Thank you very much for your thoughtful care.", "note": "(Your attention anticipated my needs.)" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>URUURU</b> KICHAIMASHITA.", "text": "Thank you. I was deeply touched.", "note": "(The concierge gave me a message card as a keepsake.)" },
+        { "romaji": "KOKORO MADE <b>POKAPOKA</b> NI NARIMASHITA. ARIGATOU GOZAIMASU", "text": "Thank you. The bath warmed me to the core.", "note": "(It made me feel relaxed both physically and emotionally.)" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>TOROTORO</b> NI TOKESOU DESU.", "text": "Thank you. I felt completely relaxed.", "note": "(The hot spring melted away my stress.)" },
+        { "romaji": "ORYOURI NO HITOSARA HITOSARA NI <b>WAKUWAKU</b> GA TSUMATTE IMASHITA", "text": "Each dish brought joy and excitement.", "note": "(The presentation and flavor told a story.)" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>DOKIDOKI</b> GA TOMARIMASEN.", "text": "Thank you. I was filled with excitement.", "note": "(I was thrilled by the dishes and the menu.)" },
+        { "romaji": "SHEFU NO OMOI GA TSUTAWARU RYOURI NI, WATASHI NO KOKORO GA JINWARI ATATAMARIMASHITA", "text": "The chef’s heart came through in the food, and it gently warmed my own.", "note": "(It wasn’t just a meal — I felt the care and time poured into it.)" },
+        { "romaji": "OFUTON GA <b>FUKAFUKA</b> DE, TSUTSUMARERU YOU NA ANSHIN-KAN DESHITA", "text": "The fluffy bedding gave me peace of mind.", "note": "(My travel fatigue disappeared as I rested.)" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>HOWAHOWA</b> SHIAWASE KIBUN DESU.", "text": "Thank you. I felt cozy and happy.", "note": "(The bedding made me feel wrapped in comfort.)" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>FUWAFUWA</b> YUMEGOKOCHI DESHITA.", "text": "Thank you. I slept like a dream.", "note": "(The bed was so comfortable and the night so quiet.)" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>TSUYATSUYA</b> GOHAN, SAIKOU DESHITA.", "text": "Thank you. The glossy rice was perfect.", "note": "(The rice at breakfast was plump and delicious.)" },
+        { "romaji": "ARIGATOU GOZAIMASU. MATA KIMASU.", "text": "Thank you. I’ll be back again.", "note": "(The staff smiled and waved, saying 'See you again.')" }
       ]
     },
     "restaurant": {
