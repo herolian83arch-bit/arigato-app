@@ -30,7 +30,7 @@
         { "romaji": "ARIGATOU GOZAIMASU. KOMAKAI KIKUBARI GA URESHIKATTA DESU.", "text": "谢谢您，细致的关怀让我很开心。", "note": "（便签、加湿器、明信片都很贴心。）", "ja": "ありがとうございます。細かな気配りが嬉しかったです。" },
         { "romaji": "NAGAME NI <b>UTTORI</b> SHIMASHITA", "text": "美丽的景色让我陶醉。", "note": "（打开窗户仿佛走进了一幅画。）", "ja": "眺めにうっとりしました" },
         { "romaji": "EGAO NI <b>HOKKORI</b> SHIMASHITA.", "text": "您的微笑让我感到温暖。", "note": "（比起言语，微笑更能传递善意。）", "ja": "笑顔にほっこりしました。" },
-        { "romaji": "OKOKOROBARI, HONTOU NI ARIGATOU GOZAIMASU.", "text": "非常感谢您的贴心照顾。", "note": "（您的关怀总能提前想到我的需求。）", "ja": "お心配り、本当にありがとうございます。" },
+        { "romaji": "OKOKOROKUBARI, HONTOU NI ARIGATOU GOZAIMASU.", "text": "非常感谢您的贴心照顾。", "note": "（您的关怀总能提前想到我的需求。）", "ja": "お心配り、本当にありがとうございます。" },
         { "romaji": "ARIGATOU GOZAIMASU. <b>URUURU</b> KICHAIMASHITA.", "text": "谢谢您，让我感动得快要流泪。", "note": "（礼宾部送给我一张留言卡作为纪念。）", "ja": "ありがとうございます。うるうるきちゃいました。" },
         { "romaji": "KOKORO MADE <b>POKAPOKA</b> NI NARIMASHITA. ARIGATOU GOZAIMASU", "text": "谢谢您，泡澡让我从心底感到温暖。", "note": "（身心都得到了放松。）", "ja": "心までぽかぽかになりました。ありがとうございます" },
         { "romaji": "ARIGATOU GOZAIMASU. <b>TOROTORO</b> NI TOKESOU DESU.", "text": "谢谢您，温泉让我完全放松。", "note": "（温泉融化了我的压力。）", "ja": "ありがとうございます。とろとろにとけそうです。" },
