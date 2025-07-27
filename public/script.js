@@ -237,7 +237,7 @@ function renderScene() {
         card.innerHTML = `
           <span style="font-weight:bold;margin-right:8px;">${msg.number || (idx + 1)}.</span>
           <span class="favorite-star" data-key="${favKey}" style="cursor:pointer;font-size:1.3em;color:${isFav ? 'gold' : '#bbb'};user-select:none;">${isFav ? '★' : '☆'}</span>
-          <span class="romaji-text" style="display:inline-block;">${msg.romaji}</span>
+          <span class="romaji-text" style="display:inline-block;">${msg.romaji.replace(/^★\s*/, '')}</span>
           <button class="speak-btn" style="margin-left:12px;" onclick="playJapaneseSpeech('${msg.audioText || ''}')">🔊</button>
           <div class="ko-text" style="margin-top:4px;">${msg.text}</div>
           <div class="note-text" style="font-size:0.95em;color:#666;margin-top:2px;">${msg.note || ''}</div>
