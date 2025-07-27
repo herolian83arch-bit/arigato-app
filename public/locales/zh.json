@@ -2,13 +2,13 @@
   "scenes": {
     "airport": {
       "messages": [
-        { "romaji": "KOKORO GA <b>JINWARI</b> SHIMASHITA.", "text": "我的内心被温暖地触动了。", "note": "（当他们说“欢迎来到日本”时，我感到非常受欢迎，真的很感动。）", "ja": "心がじんわりしました。" },
+        { "romaji": "KOKORO GA <b>JINWARI</b> SHIMASHITA.", "text": "我的内心被温暖地触动了。", "note": "（当他们说\"欢迎来到日本\"时，我感到非常受欢迎，真的很感动。）", "ja": "心がじんわりしました。" },
         { "romaji": "KOKORO GA <b>HOTTO</b> SHIMASHITA.", "text": "我的内心感到宽慰。", "note": "（那个小小的善意举动让我感到安全和被关心。）", "ja": "心がほっとしました。" },
         { "romaji": "KOKORO GA <b>KYUN TO</b> SHIMASHITA.", "text": "我的心怦然一动。", "note": "（没想到会遇到这样的关怀，真的让我很感动。）", "ja": "心がキュンとしました。" },
         { "romaji": "KOKORO GA IYASARE MASHITA.", "text": "我的内心得到了治愈。", "note": "（那句温柔的话语一扫我的压力和疲惫。）", "ja": "心が癒されました。" },
         { "romaji": "KOKORO KARA KANSHA SHIMASHITA.", "text": "我由衷地感激。", "note": "（他们在那一刻的迅速帮助对我意义重大。）", "ja": "心から感謝しました。" },
         { "romaji": "KOKORO GA <b>JIWAAN TO</b> SHIMASHITA.", "text": "我的内心被深深打动。", "note": "（他们温柔而专业的态度留下了安静却持久的印象。）", "ja": "心がじわ〜んとしました。" },
-        { "romaji": "KOKORO GA <b>URUTTO</b> SHIMASHITA.", "text": "我的内心充满了感动。", "note": "（仅仅听到日语的“欢迎”就让我热泪盈眶。）", "ja": "心がうるっとしました。" },
+        { "romaji": "KOKORO GA <b>URUTTO</b> SHIMASHITA.", "text": "我的内心充满了感动。", "note": "（仅仅听到日语的\"欢迎\"就让我热泪盈眶。）", "ja": "心がうるっとしました。" },
         { "romaji": "KOKORO GA <b>FUWATTO</b> NAGOMIMASHITA.", "text": "我的心变得轻松平静。", "note": "（机场柔和的音乐让我完全放松下来。）", "ja": "心がふわっと和みました。" },
         { "romaji": "KOKORO GA <b>WAKUWAKU</b> SHIMASHITA.", "text": "我的心充满了兴奋。", "note": "（那个欢迎标语让我全身都感受到旅程的开始。）", "ja": "心がワクワクしました。" },
         { "romaji": "KOKORO GA ATATAKAKU NARIMASHITA.", "text": "我的内心感到温暖。", "note": "（工作人员的微笑让我立刻安心下来。）", "ja": "心が温かくなりました。" },
@@ -41,7 +41,7 @@
         { "romaji": "ARIGATOU GOZAIMASU. <b>HOWAHOWA</b> SHIAWASE KIBUN DESU.", "text": "谢谢您，让我感到幸福和温馨。", "note": "（被褥让我有被包裹的幸福感。）", "ja": "ありがとうございます。ほわほわ幸せ気分です。" },
         { "romaji": "ARIGATOU GOZAIMASU. <b>FUWAFUWA</b> YUMEGOKOCHI DESHITA.", "text": "谢谢您，睡得像做梦一样。", "note": "（床铺很舒服，夜晚很安静。）", "ja": "ありがとうございます。ふわふわ夢ごこちでした。" },
         { "romaji": "ARIGATOU GOZAIMASU. <b>TSUYATSUYA</b> GOHAN, SAIKOU DESHITA.", "text": "谢谢您，晶莹剔透的米饭太棒了。", "note": "（早餐的米饭饱满又美味。）", "ja": "ありがとうございます。つやつやご飯、最高でした。" },
-        { "romaji": "ARIGATOU GOZAIMASU. MATA KIMASU.", "text": "谢谢您，我一定会再来。", "note": "（工作人员微笑着挥手说“欢迎再来”。）", "ja": "ありがとうございます。また来ます。" }
+        { "romaji": "ARIGATOU GOZAIMASU. MATA KIMASU.", "text": "谢谢您，我一定会再来。", "note": "（工作人员微笑着挥手说\"欢迎再来\"。）", "ja": "ありがとうございます。また来ます。" }
       ]
     },
     "restaurant": {
@@ -51,7 +51,40 @@
     },
     "shopping": {
       "messages": [
-        { "text": "感谢您帮我购物。", "romaji": "Kaimono wo tetsudatte kurete arigatou gozaimasu!", "ja": "買い物を手伝ってくれてありがとうございます！" }
+        { "number": "1", "romaji": "OSHIGUZU NI DEATTE, KOKORO GA <b>KYUNKYUN</b> SHIMASHITA", "text": "遇到心仪的周边商品时，我的心怦怦直跳。", "note": "（仿佛走进了梦幻世界。）", "isFavorite": false, "audioText": "推しグッズに出会えて、心が《キュンキュン》しました。" },
+        { "number": "2", "romaji": "KAGAMI NO NAKA NO JIBUN NI, KOKORO GA <b>TOKIMEKI</b> MASHITA", "text": "看到镜中的自己时，我的心怦然心动。", "note": "（没想到和服会这么适合我…）", "isFavorite": false, "audioText": "鏡の中の自分に、心が《ときめき》ました。" },
+        { "number": "3", "romaji": "KORE, MITA SHUNKAN NI KOKORO GA <b>PIN TO</b> SHIMASHITA", "text": "看到这个的瞬间，我的心一下子就明白了。", "note": "（就是那种\"就是它了！\"的感觉。）", "isFavorite": false, "audioText": "これ、見た瞬間に心が《ピンと》きました！" },
+        { "number": "4", "romaji": "KAGAMI DE MITARA, KOKORO NO NAKA DE KOREDA TTE SAKEBIMASHITA", "text": "在镜子里看到时，我在心里大喊\"就是这个！\"。", "note": "（试衣服时的感受。）", "isFavorite": false, "audioText": "鏡で見たら、心の中でこれだ！って叫びました。" },
+        { "number": "5", "romaji": "KOKORO GA <b>TOKIMEKU</b> DEAI DESU NE", "text": "这真是让人心动的邂逅呢。", "note": "（分享小喜悦的完美时刻。）", "isFavorite": false, "audioText": "心が《ときめく》出会いですね。" },
+        { "number": "6", "romaji": "KORE, MITA SHUNKAN NI KOKORO GA <b>TOKIMEKI</b> MASHITA", "text": "看到它的瞬间，我的心怦然一动。", "note": "（感觉像是一生一次的相遇。）", "isFavorite": false, "audioText": "これ、見た瞬間に心が《ときめき》しました。" },
+        { "number": "7", "romaji": "KONNA GARA, HAJIMETE MIMASHITA. KOKORO GA <b>WAKUWAKU</b> SHIMASU", "text": "这样的花纹我还是第一次见。让我心跳加速！", "note": "（适合传统工艺品或和服图案。）", "isFavorite": false, "audioText": "こんな柄、初めて見ました。心が《ワクワク》します！" },
+        { "number": "8", "romaji": "SAWATTA SHUNKAN NI, KOKORO GA <b>PITATTO</b> KIMARI MASHITA", "text": "触摸的瞬间，我的心一下子就决定了。", "note": "（直觉引导快速决定的时候。）", "isFavorite": false, "audioText": "触った瞬間に、心が《ピタッと》決まりました！" },
+        { "number": "9", "romaji": "TAKUSAN ATTE MAYOU KEDO, KOKORO GA ICHIBAN UGUITA NO WA KORE DESU", "text": "虽然有很多选择让我犹豫，但最打动我心的还是这个。", "note": "（比较多个选项后的决定。）", "isFavorite": false, "audioText": "たくさんあって迷うけど、心が一番《動いた》のはこれです。" },
+        { "number": "10", "romaji": "KOKORO GA KOREDA YO TTE ITTERU KI GA SHIMASU", "text": "我感觉我的心在说\"就是这个！\"。", "note": "（当你跟随直觉而不是逻辑的时候。）", "isFavorite": false, "audioText": "心がこれだよ！って言ってる気がします（笑）" },
+        { "number": "11", "romaji": "YASASHII TEZAWARI NI, KOKORO GA <b>HOKKORI</b> SHIMASHITA", "text": "温柔的触感让我的心感到温暖。", "note": "（和纸的温柔触感带来了安慰。）", "isFavorite": false, "audioText": "やさしい手ざわりに、心が《ほっこり》しました。" },
+        { "number": "12", "romaji": "KONO TEZAWARI... KOKORO GA <b>JINWARI</b> OCHITSUKIMASU", "text": "这个触感…让我的心深深平静下来。", "note": "（适合和风商品、布料或陶器。）", "isFavorite": false, "audioText": "この手ざわり…心が《じんわり》落ち着きます。" },
+        { "number": "13", "romaji": "KAORI DAKE DE, KOKORO GA <b>HOGURE</b> MASHITA", "text": "仅仅香气就让我的心放松了。", "note": "（适合香薰油、肥皂或美食体验。）", "isFavorite": false, "audioText": "香りだけで、心が《ほぐれ》ました。" },
+        { "number": "14", "romaji": "NANDAKA, KOKORO GA <b>HOTTO</b> SHIMASHITA", "text": "不知为什么，我的心就感到安心了。", "note": "（日本物品的温柔真的体现出来了。）", "isFavorite": false, "audioText": "なんだか、心が《ほっと》しました。" },
+        { "number": "15", "romaji": "KORE WO MITETARA, KOKORO GA <b>SUU TTO</b> SHIZUKA NI NARIMASHITA", "text": "看着这个，我的心变得安静祥和。", "note": "（传统日本设计的宁静之美。）", "isFavorite": false, "audioText": "これを見てたら、心が《スーッと》静かになりました。" },
+        { "number": "16", "romaji": "KONO IROAI, KOKORO NI <b>SHIMIMASU</b>", "text": "这个配色，深深触动了我的心。", "note": "（当你看到精致的传统配色时。）", "isFavorite": false, "audioText": "この色合い、心に《しみます》…！" },
+        { "number": "17", "romaji": "TE NI TORA SHUNKAN, KOKORO GA <b>HONWAKA</b> SHIMASHITA", "text": "拿在手里的瞬间，我的心感到温暖而模糊。", "note": "（柔软材料和温柔设计的魅力。）", "isFavorite": false, "audioText": "手に取った瞬間、心が《ほんわか》しました。" },
+        { "number": "18", "romaji": "KORE WO MISETARA, KAZOKU MO KOKORO GA <b>NAGOMU</b> TO OMOIMASU", "text": "如果给他们看这个，我想家人的心也会得到抚慰。", "note": "（当为所爱的人购买时。）", "isFavorite": false, "audioText": "これを見せたら、家族も心が《和む》と思います。" },
+        { "number": "19", "romaji": "KONO IRO, KOKORO NI <b>SHIKKURI</b> KIMASU", "text": "这个颜色，在我心里感觉很合适。", "note": "（试衣服或选择物品时。）", "isFavorite": false, "audioText": "この色、心に《しっくり》きます。" },
+        { "number": "20", "romaji": "SORE, WATASHI MO DAISUKI DESU. KOKORO GA <b>WAKUWAKU</b> SHIMASU YO NE", "text": "那个我也很喜欢！让我的心很兴奋，对吧？", "note": "（与某人建立联系的愉快方式。）", "isFavorite": false, "audioText": "それ、私も大好きです！心が《ワクワク》しますよね。" },
+        { "number": "21", "romaji": "A, KORE... KOKORO NI <b>GUTTO</b> SHIMASHITA. NAYAMIMASU NE", "text": "啊，这个…深深打动了我的心。我很纠结呢！", "note": "（当你愉快地犹豫不决时。）", "isFavorite": false, "audioText": "あ、これ…心に《グッと》きました。悩みますね〜！" },
+        { "number": "22", "romaji": "ERANDE IRU JIKAN MO, KOKORO GA <b>MITASARE</b> TE IKIMASU", "text": "即使是选择的时间，也让我的心得到满足。", "note": "（享受购物本身的过程。）", "isFavorite": false, "audioText": "選んでいる時間も、心が《満たされ》ていきます。" },
+        { "number": "23", "romaji": "DORE MO SUTEKI DE... KOKORO GA <b>YUREMAKUTTE</b> MASU", "text": "每个都很棒…我的心摇摆不定！", "note": "（表达难以选择的愉快方式。）", "isFavorite": false, "audioText": "どれも素敵で…心が《揺れまくって》ます（笑）" },
+        { "number": "24", "romaji": "KONO DEZAIN, KOKORO NI <b>NOKORI</b> MASU NE", "text": "这个设计，真的会留在我的心里。", "note": "（能带回家一件艺术品的印象真是太好了。）", "isFavorite": false, "audioText": "このデザイン、心に《残り》ますね。" },
+        { "number": "25", "romaji": "KORE, KOKORO NI <b>ZUTTO NOKORI</b> SOU DESU", "text": "这个，感觉会在我心里留存很久。", "note": "（看起来像是你会永远记住的东西。）", "isFavorite": false, "audioText": "これ、心に《ずっと残り》そうです。" },
+        { "number": "26", "romaji": "A, KONO KANSOU... KOKORO NO OKU NI <b>HIBIKI</b> MASHITA", "text": "啊，这种感觉…深深触动了我的内心。", "note": "（当你被意外的东西感动时。）", "isFavorite": false, "audioText": "あ、この感覚…心の奥に《響き》ました。" },
+        { "number": "27", "romaji": "TABI NO NAKA DE, KOKORO GA ICHIBAN <b>UGUITA</b> SHUNKAN KAMOSHIREMASEN", "text": "这可能是我的旅程中心最受触动的瞬间。", "note": "（真正难忘的购物时刻。）", "isFavorite": false, "audioText": "旅の中で、心が《いちばん動いた》瞬間かもしれません。" },
+        { "number": "28", "romaji": "KONO DEAI, KOKORO NI <b>SHIKKARI KIZAMARE</b> MASHITA", "text": "这次邂逅，深深铭刻在我的心里。", "note": "（对最终选择的真诚心意。）", "isFavorite": false, "audioText": "この出会い、心に《しっかり刻まれ》ました。" },
+        { "number": "29", "romaji": "KORE, OMIYAGE NI SHITARA, KITTO DAREKA NO KOKORO MO <b>HOKKORI</b> SHIMASU YO NE", "text": "如果把这个作为礼物，肯定也会温暖某人的心。", "note": "（想象收礼人的喜悦。）", "isFavorite": false, "audioText": "これ、お土産にしたら、きっと誰かの心も《ほっこり》しますよね。" },
+        { "number": "30", "romaji": "JITSU WA KOU IU NO, DAISUKI NAN DESU. KOKORO NO <b>TSUBO NI HAIRI</b> MASHITA", "text": "其实我很喜欢这种东西。正好击中我心的要害。", "note": "（与喜欢的东西的命运相遇。）", "isFavorite": false, "audioText": "実はこういうの、大好きなんです。心の《ツボに入り》ました。" },
+        { "number": "31", "romaji": "KORE WA, KOKORO NO <b>GOHOUBI</b> NI SHIMASU", "text": "这个，我要作为心灵的奖励！", "note": "（为自己找到完美礼物的时候。）", "isFavorite": false, "audioText": "これは、心の《ごほうび》にします！" },
+        { "number": "32", "romaji": "ARIGATOU NO KIMOCHI WO, KORE DE <b>TSUUTAE</b> TAI DESU", "text": "我想用这个来表达\"谢谢\"的心情。", "note": "（表达感谢的礼物。）", "isFavorite": false, "audioText": "ありがとうの気持ちを、これで《伝えたい》です。" },
+        { "number": "33", "romaji": "KOU IU DEAI GA ARU KARA, TABI GA <b>SUKI</b> NAN DESU", "text": "正因为有这样的邂逅，我才喜欢旅行。", "note": "（当产品背后的体验很重要时。）", "isFavorite": false, "audioText": "こういう出会いがあるから、旅が《好き》なんです。" },
+        { "number": "34", "romaji": "MASA NI KOKORO WO <b>KUSUGURU</b> TTE KOU IU KOTO DESU NE", "text": "这正是什么叫\"撩动心弦\"呢。", "note": "（当设计或包装瞬间吸引你时。）", "isFavorite": false, "audioText": "まさに心を《くすぐる》ってこういうことですね。" }
       ]
     },
     "transportation": {
