@@ -51,7 +51,40 @@
     },
     "shopping": {
       "messages": [
-        { "text": "買い物を手伝ってくれてありがとうございます！" }
+        { "number": "1", "romaji": "Oshiguzu ni deatte, kokoro ga kyunkyun shimashita", "text": "推しグッズに出会えて、心が《キュンキュン》しました。", "note": "（まるで夢の国に来た気分です）" },
+        { "number": "2", "romaji": "Kagami no naka no jibun ni, kokoro ga tokimekimashita", "text": "鏡の中の自分に、心が《ときめき》ました。", "note": "（着物って、思ったより似合ってるかも…）" },
+        { "number": "3", "romaji": "Kore, mita shunkan ni kokoro ga pin to shimashita", "text": "これ、見た瞬間に心が《ピンと》きました！", "note": "（ときめきを伝える一言）" },
+        { "number": "4", "romaji": "Kagami de mitara, kokoro no naka de koreda tte sakebimashita", "text": "鏡で見たら、心の中でこれだ！って叫びました。", "note": "（アパレル試着時の感情の共有）" },
+        { "number": "5", "romaji": "Kokoro ga tokimeku deai desu ne", "text": "心が《ときめく》出会いですね。", "note": "（感動を分かち合う締めの一言）" },
+        { "number": "6", "romaji": "Kore, mita shunkan ni kokoro ga tokimekimashita", "text": "これ、見た瞬間に心が《ときめき》しました。", "note": "（一期一会の出会いに感動）" },
+        { "number": "7", "romaji": "Konna gara, hajimete mimashita. Kokoro ga wakuwaku shimasu", "text": "こんな柄、初めて見ました。心が《ワクワク》します！", "note": "（伝統工芸品や着物の文様などに）" },
+        { "number": "8", "romaji": "Sawatta shunkan ni, kokoro ga pitatto kimari mashita", "text": "触った瞬間に、心が《ピタッと》決まりました！", "note": "（直感で即決したときに）" },
+        { "number": "9", "romaji": "Takusan atte mayou kedo, kokoro ga ichiban uguita no wa kore desu", "text": "たくさんあって迷うけど、心が一番《動いた》のはこれです。", "note": "（比較の末の決断）" },
+        { "number": "10", "romaji": "Kokoro ga koreda yo tte itteru ki ga shimasu", "text": "心がこれだよ！って言ってる気がします（笑）", "note": "（理屈ではなく感覚で選んだとき）" },
+        { "number": "11", "romaji": "Yasashii tezawari ni, kokoro ga hokkori shimashita", "text": "やさしい手ざわりに、心が《ほっこり》しました。", "note": "（和紙のぬくもりに癒されました）" },
+        { "number": "12", "romaji": "Kono tezawari... kokoro ga jinwari ochitsukimasu", "text": "この手ざわり…心が《じんわり》落ち着きます。", "note": "（和雑貨・布製品・陶器などに）" },
+        { "number": "13", "romaji": "Kaori dake de, kokoro ga hoguremashita", "text": "香りだけで、心が《ほぐれ》ました。", "note": "（アロマ・石けん・食品などの香り体験）" },
+        { "number": "14", "romaji": "Nandaka, kokoro ga hotto shimashita", "text": "なんだか、心が《ほっと》しました。", "note": "（日本のものの優しさ・やわらかさに触れたとき）" },
+        { "number": "15", "romaji": "Kore wo mitetara, kokoro ga suu tto shizuka ni narimashita", "text": "これを見てたら、心が《スーッと》静かになりました。", "note": "（和の美しさや落ち着きに触れたとき）" },
+        { "number": "16", "romaji": "Kono iroai, kokoro ni shimimasu", "text": "この色合い、心に《しみます》…！", "note": "（渋めの和柄や繊細な作品に出会ったとき）" },
+        { "number": "17", "romaji": "Te ni tora shunkan, kokoro ga honwaka shimashita", "text": "手に取った瞬間、心が《ほんわか》しました。", "note": "（優しい素材や表情のある雑貨に）" },
+        { "number": "18", "romaji": "Kore wo misetara, kazoku mo kokoro ga nagomu to omoimasu", "text": "これを見せたら、家族も心が《和む》と思います。", "note": "（誰かを想う視点）" },
+        { "number": "19", "romaji": "Kono iro, kokoro ni shikkuri kimasu", "text": "この色、心に《しっくり》きます。", "note": "（服や雑貨を試すときに）" },
+        { "number": "20", "romaji": "Sore, watashi mo daisuki desu. Kokoro ga wakuwaku shimasu yo ne", "text": "それ、私も大好きです！心が《ワクワク》しますよね。", "note": "（共感で距離が縮まる一言）" },
+        { "number": "21", "romaji": "A, kore... kokoro ni gutto shimashita. Nayamimasu ne", "text": "あ、これ…心に《グッと》きました。悩みますね〜！", "note": "（迷いも楽しむ雰囲気づくり）" },
+        { "number": "22", "romaji": "Erande iru jikan mo, kokoro ga mitasarete ikimasu", "text": "選んでいる時間も、心が《満たされ》ていきます。", "note": "（ショッピングそのものの楽しさ）" },
+        { "number": "23", "romaji": "Dore mo suteki de... kokoro ga yuremakutte masu", "text": "どれも素敵で…心が《揺れまくって》ます（笑）", "note": "（迷っているけど楽しい気持ち）" },
+        { "number": "24", "romaji": "Kono dezain, kokoro ni nokori masu ne", "text": "このデザイン、心に《残り》ますね。", "note": "（アートの余韻を持ち帰れるのが嬉しいです）" },
+        { "number": "25", "romaji": "Kore, kokoro ni zutto nokori soudesu", "text": "これ、心に《ずっと残り》そうです。", "note": "（思い出として記憶に残る予感）" },
+        { "number": "26", "romaji": "A, kono kansou... kokoro no oku ni hibiki mashita", "text": "あ、この感覚…心の奥に《響き》ました。", "note": "（予想外の感動との出会い）" },
+        { "number": "27", "romaji": "Tabi no naka de, kokoro ga ichiban uguita shunkan kamoshiremasen", "text": "旅の中で、心が《いちばん動いた》瞬間かもしれません。", "note": "（思い出になる買い物）" },
+        { "number": "28", "romaji": "Kono deai, kokoro ni shikkari kizamare mashita", "text": "この出会い、心に《しっかり刻まれ》ました。", "note": "（最後に選んだ一品に気持ちを込めて）" },
+        { "number": "29", "romaji": "Kore, omiyage ni shitara, kitto dareka no kokoro mo hokkori shimasu yo ne", "text": "これ、お土産にしたら、きっと誰かの心も《ほっこり》しますよね。", "note": "（人に贈る想像で心が温まる）" },
+        { "number": "30", "romaji": "Jitsu wa kou iu no, daisuki nan desu. Kokoro no tsubo ni hairi mashita", "text": "実はこういうの、大好きなんです。心の《ツボに入り》ました。", "note": "（好きなものとの運命の出会い）" },
+        { "number": "31", "romaji": "Kore wa, kokoro no gohoubi ni shimasu", "text": "これは、心の《ごほうび》にします！", "note": "（自分への旅のご褒美を見つけたとき）" },
+        { "number": "32", "romaji": "Arigatou no kimochi wo, kore de tsutaetai desu", "text": "ありがとうの気持ちを、これで《伝えたい》です。", "note": "（贈り物としての買い物）" },
+        { "number": "33", "romaji": "Kou iu deai ga aru kara, tabi ga suki nan desu", "text": "こういう出会いがあるから、旅が《好き》なんです。", "note": "（商品の奥にある体験への感謝）" },
+        { "number": "34", "romaji": "Masa ni kokoro wo kusuguru tte kou iu koto desu ne", "text": "まさに心を《くすぐる》ってこういうことですね。", "note": "（デザインやパッケージに）" }
       ]
     },
     "transportation": {
@@ -59,7 +92,6 @@
         { "text": "道を教えてくれてありがとうございます！" }
       ]
     }
-  }
-} {
+  },
   "ありがとう": "ありがとう！"
-}
+} 
