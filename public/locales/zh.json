@@ -2,51 +2,51 @@
   "scenes": {
     "airport": {
       "messages": [
-        { "romaji": "KOKORO GA <b>JINWARI</b> SHIMASHITA.", "text": "我的内心被温暖地触动了。", "note": "（当他们说\"欢迎来到日本\"时，我感到非常受欢迎，真的很感动。）", "ja": "心がじんわりしました。" },
-        { "romaji": "KOKORO GA <b>HOTTO</b> SHIMASHITA.", "text": "我的内心感到宽慰。", "note": "（那个小小的善意举动让我感到安全和被关心。）", "ja": "心がほっとしました。" },
-        { "romaji": "KOKORO GA <b>KYUN TO</b> SHIMASHITA.", "text": "我的心怦然一动。", "note": "（没想到会遇到这样的关怀，真的让我很感动。）", "ja": "心がキュンとしました。" },
-        { "romaji": "KOKORO GA IYASARE MASHITA.", "text": "我的内心得到了治愈。", "note": "（那句温柔的话语一扫我的压力和疲惫。）", "ja": "心が癒されました。" },
-        { "romaji": "KOKORO KARA KANSHA SHIMASHITA.", "text": "我由衷地感激。", "note": "（他们在那一刻的迅速帮助对我意义重大。）", "ja": "心から感謝しました。" },
-        { "romaji": "KOKORO GA <b>JIWAAN TO</b> SHIMASHITA.", "text": "我的内心被深深打动。", "note": "（他们温柔而专业的态度留下了安静却持久的印象。）", "ja": "心がじわ〜んとしました。" },
-        { "romaji": "KOKORO GA <b>URUTTO</b> SHIMASHITA.", "text": "我的内心充满了感动。", "note": "（仅仅听到日语的\"欢迎\"就让我热泪盈眶。）", "ja": "心がうるっとしました。" },
-        { "romaji": "KOKORO GA <b>FUWATTO</b> NAGOMIMASHITA.", "text": "我的心变得轻松平静。", "note": "（机场柔和的音乐让我完全放松下来。）", "ja": "心がふわっと和みました。" },
-        { "romaji": "KOKORO GA <b>WAKUWAKU</b> SHIMASHITA.", "text": "我的心充满了兴奋。", "note": "（那个欢迎标语让我全身都感受到旅程的开始。）", "ja": "心がワクワクしました。" },
-        { "romaji": "KOKORO GA ATATAKAKU NARIMASHITA.", "text": "我的内心感到温暖。", "note": "（工作人员的微笑让我立刻安心下来。）", "ja": "心が温かくなりました。" },
-        { "romaji": "KOKORO GA <b>POKAPOKA</b> SHIMASHITA.", "text": "我的心感到温暖舒适。", "note": "（多语言标识让我感受到被真正关心。）", "ja": "心がぽかぽかしました。" },
-        { "romaji": "KOKORO GA <b>JIIN TO</b> SHIMASHITA.", "text": "我的心被感动了。", "note": "（工作人员温柔地与孩子说话的样子让我印象深刻。）", "ja": "心がじーんとしました。" },
-        { "romaji": "KOKORO GA <b>UTTORI</b> SHIMASHITA.", "text": "我的心被迷住了。", "note": "（优雅的设计和灯光让我忘记了身在何处。）", "ja": "心がうっとりしました。" },
-        { "romaji": "KOKORO GA HAZUMI MASHITA.", "text": "我的心雀跃起来。", "note": "（看到机场外的真实世界让我真正感受到一切的到来。）", "ja": "心が弾みました。" },
-        { "romaji": "KOKORO GA HODOKE MASHITA.", "text": "我的心放松了。", "note": "（他们的亲切态度让我放下了焦虑。）", "ja": "心がほどけました。" },
-        { "romaji": "KOKORO GA <b>TOKIMEKI</b> MASHITA.", "text": "我的心怦然心动。", "note": "（当有人帮助一位老人提行李并微笑时，我感到一阵温暖和敬佩。）", "ja": "心がときめきました。" }
+        { "number": "1", "romaji": "KOKORO GA <b>JINWARI</b> SHIMASHITA.", "text": "我的内心被温暖地触动了。", "note": "（当他们说\"欢迎来到日本\"时，我感到非常受欢迎，真的很感动。）", "ja": "心がじんわりしました。", "isFavorite": false },
+        { "number": "2", "romaji": "KOKORO GA <b>HOTTO</b> SHIMASHITA.", "text": "我的内心感到宽慰。", "note": "（那个小小的善意举动让我感到安全和被关心。）", "ja": "心がほっとしました。", "isFavorite": false },
+        { "number": "3", "romaji": "KOKORO GA <b>KYUN TO</b> SHIMASHITA.", "text": "我的心怦然一动。", "note": "（没想到会遇到这样的关怀，真的让我很感动。）", "ja": "心がキュンとしました。", "isFavorite": false },
+        { "number": "4", "romaji": "KOKORO GA IYASARE MASHITA.", "text": "我的内心得到了治愈。", "note": "（那句温柔的话语一扫我的压力和疲惫。）", "ja": "心が癒されました。", "isFavorite": false },
+        { "number": "5", "romaji": "KOKORO KARA KANSHA SHIMASHITA.", "text": "我由衷地感激。", "note": "（他们在那一刻的迅速帮助对我意义重大。）", "ja": "心から感謝しました。", "isFavorite": false },
+        { "number": "6", "romaji": "KOKORO GA <b>JIWAAN TO</b> SHIMASHITA.", "text": "我的内心被深深打动。", "note": "（他们温柔而专业的态度留下了安静却持久的印象。）", "ja": "心がじわ〜んとしました。", "isFavorite": false },
+        { "number": "7", "romaji": "KOKORO GA <b>URUTTO</b> SHIMASHITA.", "text": "我的内心充满了感动。", "note": "（仅仅听到日语的\"欢迎\"就让我热泪盈眶。）", "ja": "心がうるっとしました。", "isFavorite": false },
+        { "number": "8", "romaji": "KOKORO GA <b>FUWATTO</b> NAGOMIMASHITA.", "text": "我的心变得轻松平静。", "note": "（机场柔和的音乐让我完全放松下来。）", "ja": "心がふわっと和みました。", "isFavorite": false },
+        { "number": "9", "romaji": "KOKORO GA <b>WAKUWAKU</b> SHIMASHITA.", "text": "我的心充满了兴奋。", "note": "（那个欢迎标语让我全身都感受到旅程的开始。）", "ja": "心がワクワクしました。", "isFavorite": false },
+        { "number": "10", "romaji": "KOKORO GA ATATAKAKU NARIMASHITA.", "text": "我的内心感到温暖。", "note": "（工作人员的微笑让我立刻安心下来。）", "ja": "心が温かくなりました。", "isFavorite": false },
+        { "number": "11", "romaji": "KOKORO GA <b>POKAPOKA</b> SHIMASHITA.", "text": "我的心感到温暖舒适。", "note": "（多语言标识让我感受到被真正关心。）", "ja": "心がぽかぽかしました。", "isFavorite": false },
+        { "number": "12", "romaji": "KOKORO GA <b>JIIN TO</b> SHIMASHITA.", "text": "我的心被感动了。", "note": "（工作人员温柔地与孩子说话的样子让我印象深刻。）", "ja": "心がじーんとしました。", "isFavorite": false },
+        { "number": "13", "romaji": "KOKORO GA <b>UTTORI</b> SHIMASHITA.", "text": "我的心被迷住了。", "note": "（优雅的设计和灯光让我忘记了身在何处。）", "ja": "心がうっとりしました。", "isFavorite": false },
+        { "number": "14", "romaji": "KOKORO GA HAZUMI MASHITA.", "text": "我的心雀跃起来。", "note": "（看到机场外的真实世界让我真正感受到一切的到来。）", "ja": "心が弾みました。", "isFavorite": false },
+        { "number": "15", "romaji": "KOKORO GA HODOKE MASHITA.", "text": "我的心放松了。", "note": "（他们的亲切态度让我放下了焦虑。）", "ja": "心がほどけました。", "isFavorite": false },
+        { "number": "16", "romaji": "KOKORO GA <b>TOKIMEKI</b> MASHITA.", "text": "我的心怦然心动。", "note": "（当有人帮助一位老人提行李并微笑时，我感到一阵温暖和敬佩。）", "ja": "心がときめきました。", "isFavorite": false }
       ]
     },
     "hotel": {
       "messages": [
-        { "romaji": "<b>WAKUWAKU</b> SHINAGARA CHEKKUIN WO MUKAEMASHITA", "text": "带着兴奋办理入住。", "note": "（贴心的引导让我对旅程更加期待。）", "ja": "ワクワクしながらチェックインを迎えました" },
-        { "romaji": "ARIGATOU GOZAIMASU. <b>HOKKORI</b> SHIMASHITA.", "text": "谢谢您，让我感到温暖和安心。", "note": "（前台微笑着迎接我，让我很放松。）", "ja": "ありがとうございます。ほっこりしました。" },
-        { "romaji": "OHEYA NO KAORI GA KIMOCHI II DESU NE. ARIGATOU GOZAIMASU", "text": "房间的香气让人心情愉快，谢谢您。", "note": "（我很喜欢房间的香味。）", "ja": "お部屋の香りが気持ちいいですね。ありがとうございます" },
-        { "romaji": "OHEYA NO SEIKETSUKAN NI, KOKORO GA HARE MASHITA", "text": "房间的整洁让我心情舒畅。", "note": "（感受到工作人员细致的清扫。）", "ja": "お部屋の清潔感に、心が晴れました" },
-        { "romaji": "ARIGATOU GOZAIMASU. <b>PIKAPIKA</b> NI SHITE KUDASATTE KANGEKI DESU.", "text": "谢谢您，房间一尘不染让我很感动。", "note": "（感觉像新房一样干净。）", "ja": "ありがとうございます。ピカピカにしてくださって感激です。" },
-        { "romaji": "ARIGATOU GOZAIMASU. KOMAKAI KIKUBARI GA URESHIKATTA DESU.", "text": "谢谢您，细致的关怀让我很开心。", "note": "（便签、加湿器、明信片都很贴心。）", "ja": "ありがとうございます。細かな気配りが嬉しかったです。" },
-        { "romaji": "NAGAME NI <b>UTTORI</b> SHIMASHITA", "text": "美丽的景色让我陶醉。", "note": "（打开窗户仿佛走进了一幅画。）", "ja": "眺めにうっとりしました" },
-        { "romaji": "EGAO NI <b>HOKKORI</b> SHIMASHITA.", "text": "您的微笑让我感到温暖。", "note": "（比起言语，微笑更能传递善意。）", "ja": "笑顔にほっこりしました。" },
-        { "romaji": "OKOKOROKUBARI, HONTOU NI ARIGATOU GOZAIMASU.", "text": "非常感谢您的贴心照顾。", "note": "（您的关怀总能提前想到我的需求。）", "ja": "お心配り、本当にありがとうございます。" },
-        { "romaji": "ARIGATOU GOZAIMASU. <b>URUURU</b> KICHAIMASHITA.", "text": "谢谢您，让我感动得快要流泪。", "note": "（礼宾部送给我一张留言卡作为纪念。）", "ja": "ありがとうございます。うるうるきちゃいました。" },
-        { "romaji": "KOKORO MADE <b>POKAPOKA</b> NI NARIMASHITA. ARIGATOU GOZAIMASU", "text": "谢谢您，泡澡让我从心底感到温暖。", "note": "（身心都得到了放松。）", "ja": "心までぽかぽかになりました。ありがとうございます" },
-        { "romaji": "ARIGATOU GOZAIMASU. <b>TOROTORO</b> NI TOKESOU DESU.", "text": "谢谢您，温泉让我完全放松。", "note": "（温泉融化了我的压力。）", "ja": "ありがとうございます。とろとろにとけそうです。" },
-        { "romaji": "ORYOURI NO HITOSARA HITOSARA NI <b>WAKUWAKU</b> GA TSUMATTE IMASHITA", "text": "每一道菜都充满了期待和喜悦。", "note": "（摆盘和味道都很有故事感。）", "ja": "お料理のひと皿ひと皿にワクワクが詰まっていました" },
-        { "romaji": "ARIGATOU GOZAIMASU. <b>DOKIDOKI</b> GA TOMARIMASEN.", "text": "谢谢您，让我充满了期待。", "note": "（菜品和菜单都让我很激动。）", "ja": "ありがとうございます。ドキドキが止まりません。" },
-        { "romaji": "SHEFU NO OMOI GA TSUTAWARU RYOURI NI, WATASHI NO KOKORO GA JINWARI ATATAMARIMASHITA", "text": "主厨的用心通过料理传递出来，温暖了我的心。", "note": "（不仅仅是一顿饭，更感受到用心和时间。）", "ja": "シェフの想いが伝わる料理に、心がじんわり温まりました" },
-        { "romaji": "OFUTON GA <b>FUKAFUKA</b> DE, TSUTSUMARERU YOU NA ANSHIN-KAN DESHITA", "text": "蓬松的被褥让我安心入睡。", "note": "（旅途的疲惫一扫而空。）", "ja": "お布団がふかふかで、包まれるような安心感でした" },
-        { "romaji": "ARIGATOU GOZAIMASU. <b>HOWAHOWA</b> SHIAWASE KIBUN DESU.", "text": "谢谢您，让我感到幸福和温馨。", "note": "（被褥让我有被包裹的幸福感。）", "ja": "ありがとうございます。ほわほわ幸せ気分です。" },
-        { "romaji": "ARIGATOU GOZAIMASU. <b>FUWAFUWA</b> YUMEGOKOCHI DESHITA.", "text": "谢谢您，睡得像做梦一样。", "note": "（床铺很舒服，夜晚很安静。）", "ja": "ありがとうございます。ふわふわ夢ごこちでした。" },
-        { "romaji": "ARIGATOU GOZAIMASU. <b>TSUYATSUYA</b> GOHAN, SAIKOU DESHITA.", "text": "谢谢您，晶莹剔透的米饭太棒了。", "note": "（早餐的米饭饱满又美味。）", "ja": "ありがとうございます。つやつやご飯、最高でした。" },
-        { "romaji": "ARIGATOU GOZAIMASU. MATA KIMASU.", "text": "谢谢您，我一定会再来。", "note": "（工作人员微笑着挥手说\"欢迎再来\"。）", "ja": "ありがとうございます。また来ます。" }
+        { "number": "1", "romaji": "<b>WAKUWAKU</b> SHINAGARA CHEKKUIN WO MUKAEMASHITA", "text": "带着兴奋办理入住。", "note": "（贴心的引导让我对旅程更加期待。）", "ja": "ワクワクしながらチェックインを迎えました", "isFavorite": false },
+        { "number": "2", "romaji": "ARIGATOU GOZAIMASU. <b>HOKKORI</b> SHIMASHITA.", "text": "谢谢您，让我感到温暖和安心。", "note": "（前台微笑着迎接我，让我很放松。）", "ja": "ありがとうございます。ほっこりしました。", "isFavorite": false },
+        { "number": "3", "romaji": "OHEYA NO KAORI GA KIMOCHI II DESU NE. ARIGATOU GOZAIMASU", "text": "房间的香气让人心情愉快，谢谢您。", "note": "（我很喜欢房间的香味。）", "ja": "お部屋の香りが気持ちいいですね。ありがとうございます", "isFavorite": false },
+        { "number": "4", "romaji": "OHEYA NO SEIKETSUKAN NI, KOKORO GA HARE MASHITA", "text": "房间的整洁让我心情舒畅。", "note": "（感受到工作人员细致的清扫。）", "ja": "お部屋の清潔感に、心が晴れました", "isFavorite": false },
+        { "number": "5", "romaji": "ARIGATOU GOZAIMASU. <b>PIKAPIKA</b> NI SHITE KUDASATTE KANGEKI DESU.", "text": "谢谢您，房间一尘不染让我很感动。", "note": "（感觉像新房一样干净。）", "ja": "ありがとうございます。ピカピカにしてくださって感激です。", "isFavorite": false },
+        { "number": "6", "romaji": "ARIGATOU GOZAIMASU. KOMAKAI KIKUBARI GA URESHIKATTA DESU.", "text": "谢谢您，细致的关怀让我很开心。", "note": "（便签、加湿器、明信片都很贴心。）", "ja": "ありがとうございます。細かな気配りが嬉しかったです。", "isFavorite": false },
+        { "number": "7", "romaji": "NAGAME NI <b>UTTORI</b> SHIMASHITA", "text": "美丽的景色让我陶醉。", "note": "（打开窗户仿佛走进了一幅画。）", "ja": "眺めにうっとりしました", "isFavorite": false },
+        { "number": "8", "romaji": "EGAO NI <b>HOKKORI</b> SHIMASHITA.", "text": "您的微笑让我感到温暖。", "note": "（比起言语，微笑更能传递善意。）", "ja": "笑顔にほっこりしました。", "isFavorite": false },
+        { "number": "9", "romaji": "OKOKOROKUBARI, HONTOU NI ARIGATOU GOZAIMASU.", "text": "非常感谢您的贴心照顾。", "note": "（您的关怀总能提前想到我的需求。）", "ja": "お心配り、本当にありがとうございます。", "isFavorite": false },
+        { "number": "10", "romaji": "ARIGATOU GOZAIMASU. <b>URUURU</b> KICHAIMASHITA.", "text": "谢谢您，让我感动得快要流泪。", "note": "（礼宾部送给我一张留言卡作为纪念。）", "ja": "ありがとうございます。うるうるきちゃいました。", "isFavorite": false },
+        { "number": "11", "romaji": "KOKORO MADE <b>POKAPOKA</b> NI NARIMASHITA. ARIGATOU GOZAIMASU", "text": "谢谢您，泡澡让我从心底感到温暖。", "note": "（身心都得到了放松。）", "ja": "心までぽかぽかになりました。ありがとうございます", "isFavorite": false },
+        { "number": "12", "romaji": "ARIGATOU GOZAIMASU. <b>TOROTORO</b> NI TOKESOU DESU.", "text": "谢谢您，温泉让我完全放松。", "note": "（温泉融化了我的压力。）", "ja": "ありがとうございます。とろとろにとけそうです。", "isFavorite": false },
+        { "number": "13", "romaji": "ORYOURI NO HITOSARA HITOSARA NI <b>WAKUWAKU</b> GA TSUMATTE IMASHITA", "text": "每一道菜都充满了期待和喜悦。", "note": "（摆盘和味道都很有故事感。）", "ja": "お料理のひと皿ひと皿にワクワクが詰まっていました", "isFavorite": false },
+        { "number": "14", "romaji": "ARIGATOU GOZAIMASU. <b>DOKIDOKI</b> GA TOMARIMASEN.", "text": "谢谢您，让我充满了期待。", "note": "（菜品和菜单都让我很激动。）", "ja": "ありがとうございます。ドキドキが止まりません。", "isFavorite": false },
+        { "number": "15", "romaji": "SHEFU NO OMOI GA TSUTAWARU RYOURI NI, WATASHI NO KOKORO GA JINWARI ATATAMARIMASHITA", "text": "主厨的用心通过料理传递出来，温暖了我的心。", "note": "（不仅仅是一顿饭，更感受到用心和时间。）", "ja": "シェフの想いが伝わる料理に、心がじんわり温まりました", "isFavorite": false },
+        { "number": "16", "romaji": "OFUTON GA <b>FUKAFUKA</b> DE, TSUTSUMARERU YOU NA ANSHIN-KAN DESHITA", "text": "蓬松的被褥让我安心入睡。", "note": "（旅途的疲惫一扫而空。）", "ja": "お布団がふかふかで、包まれるような安心感でした", "isFavorite": false },
+        { "number": "17", "romaji": "ARIGATOU GOZAIMASU. <b>HOWAHOWA</b> SHIAWASE KIBUN DESU.", "text": "谢谢您，让我感到幸福和温馨。", "note": "（被褥让我有被包裹的幸福感。）", "ja": "ありがとうございます。ほわほわ幸せ気分です。", "isFavorite": false },
+        { "number": "18", "romaji": "ARIGATOU GOZAIMASU. <b>FUWAFUWA</b> YUMEGOKOCHI DESHITA.", "text": "谢谢您，睡得像做梦一样。", "note": "（床铺很舒服，夜晚很安静。）", "ja": "ありがとうございます。ふわふわ夢ごこちでした。", "isFavorite": false },
+        { "number": "19", "romaji": "ARIGATOU GOZAIMASU. <b>TSUYATSUYA</b> GOHAN, SAIKOU DESHITA.", "text": "谢谢您，晶莹剔透的米饭太棒了。", "note": "（早餐的米饭饱满又美味。）", "ja": "ありがとうございます。つやつやご飯、最高でした。", "isFavorite": false },
+        { "number": "20", "romaji": "ARIGATOU GOZAIMASU. MATA KIMASU.", "text": "谢谢您，我一定会再来。", "note": "（工作人员微笑着挥手说\"欢迎再来\"。）", "ja": "ありがとうございます。また来ます。", "isFavorite": false }
       ]
     },
     "restaurant": {
       "messages": [
-        { "text": "感谢您的美味佳肴。", "romaji": "Oishii shokuji wo arigatou gozaimasu!", "ja": "美味しい食事をありがとうございます！" }
+        { "number": "1", "text": "感谢您的美味佳肴。", "romaji": "Oishii shokuji wo arigatou gozaimasu!", "ja": "美味しい食事をありがとうございます！", "isFavorite": false }
       ]
     },
     "shopping": {
@@ -89,7 +89,7 @@
     },
     "transportation": {
       "messages": [
-        { "text": "感谢您为我指路。", "romaji": "Michi wo oshiete kurete arigatou gozaimasu!", "ja": "道を教えてくれてありがとうございます！" }
+        { "number": "1", "text": "感谢您为我指路。", "romaji": "Michi wo oshiete kurete arigatou gozaimasu!", "ja": "道を教えてくれてありがとうございます！", "isFavorite": false }
       ]
     }
   }
