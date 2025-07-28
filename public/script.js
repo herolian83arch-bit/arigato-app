@@ -255,6 +255,33 @@ function renderScene() {
           renderScene();
         };
       });
+    } else if (currentLang === 'ko' && currentScene === 'shopping') {
+      // KO/shopping専用の表示ロジック
+      scene.messages.forEach((msg, idx) => {
+        const favKey = `${currentLang}-${currentScene}-${idx}`;
+        const isFav = !!favorites[favKey];
+        const card = document.createElement('div');
+        card.className = 'message-card';
+        card.innerHTML = `
+          <span style="font-weight:bold;margin-right:8px;">${msg.number || (idx + 1)}.</span>
+          <span class="favorite-star" data-key="${favKey}" style="cursor:pointer;font-size:1.3em;color:${isFav ? 'gold' : '#bbb'};user-select:none;">${isFav ? '★' : '☆'}</span>
+          <span class="romaji-text" style="display:inline-block;">${msg.romaji}</span>
+          <button class="speak-btn" style="margin-left:12px;" onclick="playJapaneseSpeech('${msg.audioText || ''}')">🔊</button>
+          <div class="ko-text" style="margin-top:4px;">${msg.text}</div>
+          <div class="note-text" style="font-size:0.95em;color:#666;margin-top:2px;">${msg.note || ''}</div>
+        `;
+        messagesDiv.appendChild(card);
+      });
+      // ★クリックイベント付与
+      messagesDiv.querySelectorAll('.favorite-star').forEach(star => {
+        star.onclick = function() {
+          const key = this.getAttribute('data-key');
+          const favs = getFavorites();
+          favs[key] = !favs[key];
+          setFavorites(favs);
+          renderScene();
+        };
+      });
     } else if (currentLang === 'zh' && currentScene === 'airport') {
       // ZH/airport専用の表示ロジック
       scene.messages.forEach((msg, idx) => {
@@ -363,7 +390,7 @@ function renderScene() {
           renderScene();
         };
       });
-      
+
       // KO/hotel専用の表示ロジック
       scene.messages.forEach((msg, idx) => {
         const favKey = `${currentLang}-${currentScene}-${idx}`;
