@@ -79,6 +79,7 @@ function renderScene() {
           <span class="favorite-star" data-key="${favKey}" style="cursor:pointer;font-size:1.3em;color:${isFav ? 'gold' : '#bbb'};user-select:none;">${isFav ? '★' : '☆'}</span>
           <span class="message-text" style="display:inline-block;">${msg.text}</span>
           <button class="speak-btn" style="margin-left:12px;" onclick="playJapaneseSpeech('${msg.text.replace(/<[^>]+>/g, '')}')">🔊</button>
+          <div class="note-text" style="font-size:0.95em;color:#666;margin-top:2px;">${msg.note || ''}</div>
         `;
         messagesDiv.appendChild(card);
       });
