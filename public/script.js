@@ -37,7 +37,10 @@ function renderSceneSwitcher() {
   const switcherDiv = document.getElementById('scene-switcher');
   switcherDiv.innerHTML = '';
   if (!languageData.scenes) return;
-  Object.keys(languageData.scenes).forEach(sceneKey => {
+  // 並び順を明示的に指定
+  const sceneOrder = ['airport', 'hotel', 'restaurant', 'shopping', 'transportation'];
+  sceneOrder.forEach(sceneKey => {
+    if (!languageData.scenes[sceneKey]) return;
     const btn = document.createElement('button');
     btn.className = 'scene-btn' + (sceneKey === currentScene ? ' active' : '');
     btn.textContent = sceneKey;
