@@ -2,23 +2,135 @@
   "scenes": {
     "airport": {
       "messages": [
-        { "text": "心が<b>じんわり</b>しました。" },
-        { "text": "心が<b>ほっと</b>しました。" },
-        { "text": "心が<b>キュンと</b>しました。" },
-        { "text": "心が癒されました。" },
-        { "text": "心から感謝しました。" },
-        { "text": "心が<b>じわ〜んと</b>しました。" },
-        { "text": "心が<b>うるっと</b>しました。" },
-        { "text": "心が<b>ふわっと</b>和みました。" },
-        { "text": "心が<b>ワクワク</b>しました。" },
-        { "text": "心が温かくなりました。" },
-        { "text": "心が<b>ぽかぽか</b>しました。" },
-        { "text": "心が<b>じーんと</b>しました。" },
-        { "text": "心が<b>うっとり</b>しました。" },
-        { "text": "心が弾みました。" },
-        { "text": "心がほどけました。" },
-        { "text": "心が<b>ときめき</b>ました。" }
-      ]
+          {
+            "number": "1",
+            "romaji": "Kokoro ga jinwari shimashita.",
+            "text": "心が<b>じんわり</b>しました。",
+            "note": "（「日本へようこそ」と言われて、本当に歓迎されていると感じました）",
+            "ja": "心がじんわりしました。",
+            "isFavorite": false
+          },
+          {
+            "number": "2",
+            "romaji": "Kokoro ga hotto shimashita.",
+            "text": "心が<b>ほっと</b>しました。",
+            "note": "（小さな親切が、安心と気遣いを感じさせてくれました）",
+            "ja": "心がほっとしました。",
+            "isFavorite": false
+          },
+          {
+            "number": "3",
+            "romaji": "Kokoro ga kyun to shimashita.",
+            "text": "心が<b>キュンと</b>しました。",
+            "note": "（こんな気遣いは期待していなかったので、本当に良い意味で感動しました）",
+            "ja": "心がキュンとしました。",
+            "isFavorite": false
+          },
+          {
+            "number": "4",
+            "romaji": "Kokoro ga iyasare mashita.",
+            "text": "心が癒されました。",
+            "note": "（長旅の疲れが一気に取れた気がしました）",
+            "ja": "心が癒されました。",
+            "isFavorite": false
+          },
+          {
+            "number": "5",
+            "romaji": "Kokoro kara kansha shimashita.",
+            "text": "心から感謝しました。",
+            "note": "（親切な対応に心から感謝しました）",
+            "ja": "心から感謝しました。",
+            "isFavorite": false
+          },
+          {
+            "number": "6",
+            "romaji": "Kokoro ga jiwan to shimashita.",
+            "text": "心が<b>じわ～んと</b>しました。",
+            "note": "（温かい言葉に胸が熱くなりました）",
+            "ja": "心がじわ～んとしました。",
+            "isFavorite": false
+          },
+          {
+            "number": "7",
+            "romaji": "Kokoro ga uruuru shimashita.",
+            "text": "心が<b>うるうる</b>しました。",
+            "note": "（感動して涙が出そうになりました）",
+            "ja": "心がうるうるしました。",
+            "isFavorite": false
+          },
+          {
+            "number": "8",
+            "romaji": "Kokoro ga fuwatto nagomimashita.",
+            "text": "心が<b>ふわっと</b>和みました。",
+            "note": "（優しい雰囲気に癒されました）",
+            "ja": "心がふわっと和みました。",
+            "isFavorite": false
+          },
+          {
+            "number": "9",
+            "romaji": "Kokoro ga wakuwaku shimashita.",
+            "text": "心が<b>ワクワク</b>しました。",
+            "note": "（新しい体験に胸が高鳴りました）",
+            "ja": "心がワクワクしました。",
+            "isFavorite": false
+          },
+          {
+            "number": "10",
+            "romaji": "Kokoro ga atatakaku narimashita.",
+            "text": "心が温かくなりました。",
+            "note": "（人の優しさに触れて心が温まりました）",
+            "ja": "心が温かくなりました。",
+            "isFavorite": false
+          },
+          {
+            "number": "11",
+            "romaji": "Kokoro ga pokapoka shimashita.",
+            "text": "心が<b>ぽかぽか</b>しました。",
+            "note": "（ほっとする瞬間でした）",
+            "ja": "心がぽかぽかしました。",
+            "isFavorite": false
+          },
+          {
+            "number": "12",
+            "romaji": "Kokoro ga jiin to shimashita.",
+            "text": "心が<b>じーんと</b>しました。",
+            "note": "（感動で胸がいっぱいになりました）",
+            "ja": "心がじーんとしました。",
+            "isFavorite": false
+          },
+          {
+            "number": "13",
+            "romaji": "Kokoro ga hotto shimashita.",
+            "text": "心が<b>ほっと</b>しました。",
+            "note": "（安心感に包まれました）",
+            "ja": "心がほっとしました。",
+            "isFavorite": false
+          },
+          {
+            "number": "14",
+            "romaji": "Kokoro ga hazumi mashita.",
+            "text": "心が弾みました。",
+            "note": "（期待で胸が弾みました）",
+            "ja": "心が弾みました。",
+            "isFavorite": false
+          },
+          {
+            "number": "15",
+            "romaji": "Kokoro ga hodokemashita.",
+            "text": "心がほどけました。",
+            "note": "（緊張がほぐれました）",
+            "ja": "心がほどけました。",
+            "isFavorite": false
+          },
+          {
+            "number": "16",
+            "romaji": "Kokoro ga tokimeki mashita.",
+            "text": "心が<b>ときめき</b>ました。",
+            "note": "（新しい出会いに心がときめきました）",
+            "ja": "心がときめきました。",
+            "isFavorite": false
+          }
+        ] 
     },
     "hotel": {
       "messages": [
