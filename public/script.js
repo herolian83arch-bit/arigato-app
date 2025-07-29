@@ -96,18 +96,6 @@ function renderScene() {
     });
   }
 }
-// お気に入り機能の管理
-let favorites = JSON.parse(localStorage.getItem('favorites')) || {};
-
-// メッセージカードのクリックイベント
-document.addEventListener('click', function(e) {
-  if (e.target.classList.contains('favorite-star')) {
-    const key = e.target.getAttribute('data-key');
-    favorites[key] = !favorites[key];
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-    renderScene();
-  }
-});
 window.playJapaneseSpeech = function(japaneseText) {
   const utter = new SpeechSynthesisUtterance(japaneseText);
   utter.lang = 'ja-JP';
