@@ -215,8 +215,12 @@ function renderScene() {
       card.innerHTML = `
         <span style="font-weight:bold;margin-right:8px;">${msg.number || idx + 1}.</span>
         <span class="favorite-star" data-key="${favKey}" style="cursor:pointer;font-size:1.3em;color:${isFav ? 'gold' : '#bbb'};user-select:none;">${isFav ? '★' : '☆'}</span>
-        <span class="message-text" style="display:inline-block;">${msg.text || ''}</span>
+        <div class="message-content" style="display:inline-block;">
+          <div class="message-text" style="font-weight:bold;margin-bottom:4px;">${msg.text || ''}</div>
+          <div class="romaji-text" style="font-size:0.9em;color:#666;margin-bottom:4px;">${msg.romaji || ''}</div>
+        </div>
         <button class="speak-btn" style="margin-left:12px;" onclick="playJapaneseSpeech('${(msg.text || '').replace(/<[^>]+>/g, '')}')">🔊</button>
+        <button class="romaji-speak-btn" style="margin-left:8px;" onclick="playRomajiSpeech('${(msg.romaji || '').replace(/<[^>]+>/g, '')}')">🎤</button>
         <div class="note-text" style="font-size:0.95em;color:#666;margin-top:2px;">${msg.note || ''}</div>
       `;
       messagesDiv.appendChild(card);
