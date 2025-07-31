@@ -241,7 +241,110 @@
     },
     "transportation": {
       "messages": [
-        { "text": "道を教えてくれてありがとうございます！" }
+        {
+          "number": "1",
+          "romaji": "KIPPU KOUNYUU O OTETSUDIAI ITADAKI ARIGATOU GOZAIMASU",
+          "text": "切符購入をお手伝いいただきありがとうございます",
+          "note": "（外国語が通じにくい中、窓口や駅員さんのサポートで安心できたシーン）",
+          "ja": "切符購入をお手伝いいただきありがとうございます",
+          "isFavorite": false
+        },
+        {
+          "number": "2",
+          "romaji": "EIGO ANNAI O MITSUKETE KURETE TASUKARIMASHITA",
+          "text": "英語案内を見つけてくれて助かりました",
+          "note": "（案内表示が小さかったり、翻訳が不明瞭な中での感謝）",
+          "ja": "英語案内を見つけてくれて助かりました",
+          "isFavorite": false
+        },
+        {
+          "number": "3",
+          "romaji": "TEINEI NI OSHIETE KURETE, HONTŌ NI KOKOROZUYOKATTA DESU",
+          "text": "丁寧に教えてくれて、本当に心強かったです",
+          "note": "（地方や初乗車で困った時に現地の人が助けてくれた状況）",
+          "ja": "丁寧に教えてくれて、本当に心強かったです",
+          "isFavorite": false
+        },
+        {
+          "number": "4",
+          "romaji": "MICHI ANNAI SHITE KURETE ARIGATOU",
+          "text": "道案内してくれてありがとう",
+          "note": "（英語や翻訳アプリでやりとりを助けてもらった瞬間）",
+          "ja": "道案内してくれてありがとう",
+          "isFavorite": false
+        },
+        {
+          "number": "5",
+          "romaji": "KONZATSU JŌKYŌ O OSHIETE KURETE KANSHA SHITEIMASU",
+          "text": "混雑状況を教えてくれて感謝しています",
+          "note": "（時間帯や道路状況が分かりにくい中での助言）",
+          "ja": "混雑状況を教えてくれて感謝しています",
+          "isFavorite": false
+        },
+        {
+          "number": "6",
+          "romaji": "KŌSHA BOTAN O OSU TAIMINGU O OSHIETE KURETE ARIGATOU GOZAIMASHITA",
+          "text": "降車ボタンを押すタイミングを教えてくれてありがとうございました",
+          "note": "（バス車内で降り方がわからず困っているところ）",
+          "ja": "降車ボタンを押すタイミングを教えてくれてありがとうございました",
+          "isFavorite": false
+        },
+        {
+          "number": "7",
+          "romaji": "NORIKA E ANNAI O SHINSETSU NI SETSUMEI SHITE KURETE, HONTŌ NI SUKUWAREMASHITA",
+          "text": "乗換案内を親切に説明してくれて、本当に救われました",
+          "note": "（駅で目的地に行く複雑なルートを案内してもらった場面）",
+          "ja": "乗換案内を親切に説明してくれて、本当に救われました",
+          "isFavorite": false
+        },
+        {
+          "number": "8",
+          "romaji": "SEKI O YUZUTTE KURETE ARIGATOU GOZAIMASU",
+          "text": "席を譲ってくれてありがとうございます",
+          "note": "（お年寄りや体調の悪い人への、優しい行動）",
+          "ja": "席を譲ってくれてありがとうございます",
+          "isFavorite": false
+        },
+        {
+          "number": "9",
+          "romaji": "KŌTSŪ RŪRU O SETSUMEI SHITE KURETE ARIGATOU GOZAIMASU",
+          "text": "交通ルールを説明してくれてありがとうございます",
+          "note": "（特に右側通行とは逆の習慣に戸惑う訪日客への配慮）",
+          "ja": "交通ルールを説明してくれてありがとうございます",
+          "isFavorite": false
+        },
+        {
+          "number": "10",
+          "romaji": "EGAO DE ANNAI SHITE KURETE URESHIKATTA DESU",
+          "text": "笑顔で案内してくれて嬉しかったです",
+          "note": "（笑顔で教えてくれて、不安が和らいだとき）",
+          "ja": "笑顔で案内してくれて嬉しかったです",
+          "isFavorite": false
+        },
+        {
+          "number": "11",
+          "romaji": "ISSHO NI SHIRABETE KURETE, HONTŌ NI ARIGATOU",
+          "text": "一緒に調べてくれて、本当にありがとう",
+          "note": "（スマホで一緒に調べてくれた地元の方へ）",
+          "ja": "一緒に調べてくれて、本当にありがとう",
+          "isFavorite": false
+        },
+        {
+          "number": "12",
+          "romaji": "ANNAI SHITE KURETE KANSHA SHITEIMASU",
+          "text": "案内してくれて感謝しています",
+          "note": "（表示やアナウンスが理解しづらい路線で、近くの人が助けてくれた状況）",
+          "ja": "案内してくれて感謝しています",
+          "isFavorite": false
+        },
+        {
+          "number": "13",
+          "romaji": "ANSHIN SHITE NOREMASHITA. ARIGATOU GOZAIMASHITA",
+          "text": "安心して乗れました。ありがとうございました",
+          "note": "（路線を丁寧に教えてくれた状況）",
+          "ja": "安心して乗れました。ありがとうございました",
+          "isFavorite": false
+        }
       ]
     }
   },

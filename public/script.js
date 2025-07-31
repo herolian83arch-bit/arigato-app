@@ -2,9 +2,12 @@ let currentLang = 'en';
 let currentScene = 'airport';
 let languageData = {};
 let speechSpeed = 1.0;
+let isPremiumUser = false; // プレミアム機能フラグ
 
 document.addEventListener('DOMContentLoaded', () => {
   loadLanguage(currentLang);
+  checkPremiumStatus(); // プレミアム状態をチェック
+  
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.onclick = () => {
       currentLang = btn.dataset.lang;
@@ -22,6 +25,75 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// プレミアム機能のチェック
+function checkPremiumStatus() {
+  const premiumStatus = localStorage.getItem('premiumStatus');
+  isPremiumUser = premiumStatus === 'active';
+  updatePremiumUI();
+}
+
+// プレミアムUIの更新
+function updatePremiumUI() {
+  const premiumBtn = document.getElementById('premium-btn');
+  if (premiumBtn) {
+    if (isPremiumUser) {
+      premiumBtn.textContent = 'Premium Active';
+      premiumBtn.style.backgroundColor = '#4CAF50';
+      premiumBtn.disabled = true;
+    } else {
+      premiumBtn.textContent = 'Upgrade to Premium';
+      premiumBtn.style.backgroundColor = '#FF9800';
+      premiumBtn.disabled = false;
+    }
+  }
+}
+
+// プレミアム機能の購入
+async function purchasePremium() {
+  try {
+    const response = await fetch('/api/payment/create-payment-intent', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        amount: 999, // $9.99
+        currency: 'usd',
+        description: 'Arigato App Premium Subscription'
+      })
+    });
+
+    const { clientSecret } = await response.json();
+    
+    // Stripe Elementsを使用して決済処理
+    const stripe = Stripe(process.env.STRIPE_PUBLISHABLE_KEY);
+    const elements = stripe.elements();
+    
+    const card = elements.create('card');
+    card.mount('#card-element');
+    
+    const result = await stripe.confirmCardPayment(clientSecret, {
+      payment_method: {
+        card: card,
+      }
+    });
+
+    if (result.error) {
+      console.error('Payment failed:', result.error);
+      alert('Payment failed: ' + result.error.message);
+    } else {
+      // 支払い成功
+      localStorage.setItem('premiumStatus', 'active');
+      isPremiumUser = true;
+      updatePremiumUI();
+      alert('Premium upgrade successful!');
+    }
+  } catch (error) {
+    console.error('Payment error:', error);
+    alert('Payment error: ' + error.message);
+  }
+}
 
 function loadLanguage(lang) {
   fetch(`locales/${lang}.json`)

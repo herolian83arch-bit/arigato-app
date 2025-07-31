@@ -9,6 +9,9 @@
     "build": "echo 'Static site - no build required'",
     "vercel-build": "echo 'Static site - no build required'"
   },
+  "dependencies": {
+    "stripe": "^12.0.0"
+  },
   "keywords": ["japan", "gratitude", "multilingual", "travel", "static-site"],
   "author": "",
   "license": "MIT"
