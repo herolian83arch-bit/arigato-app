@@ -75,6 +75,7 @@ function showPaymentModal() {
               color: '#9e2146',
             },
           },
+          hidePostalCode: true, // 郵便番号フィールドを隠す
         });
   card.mount('#card-element');
 }
@@ -110,8 +111,14 @@ async function processPayment() {
           payment_method: {
             card: elements.getElement('card'),
             billing_details: {
+              name: 'Test User',
+              email: 'test@example.com',
               address: {
-                postal_code: '00000' // デフォルト郵便番号
+                line1: '123 Test Street',
+                city: 'Test City',
+                state: 'Test State',
+                postal_code: '12345',
+                country: 'US'
               }
             }
           }
