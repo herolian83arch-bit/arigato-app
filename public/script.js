@@ -56,29 +56,37 @@ function showPaymentModal() {
   const modal = document.getElementById('payment-modal');
   modal.style.display = 'block';
   
-  // Stripe Elementsを初期化
+    // Stripe Elementsを初期化
   if (!stripe) {
     // 環境変数から取得するか、デフォルト値を使用
-    const publishableKey = process.env.STRIPE_PUBLISHABLE_KEY || 'pk_test_51Rqnq0GTOkSKzYXiZXCVB7TvlrUIEhxdqMgygXFqfHAjjuvpPsyISiFUjy9b23SVdQulMuVURfyPKp4RNfr8VqX4001KQiW6cr';
+    const publishableKey = 'pk_test_51Rqnq0GTOkSKzYXiZXCVB7TvlrUIEhxdqMgygXFqfHAjjuvpPsyISiFUjy9b23SVdQulMuVURfyPKp4RNfr8VqX4001KQiW6cr';
     stripe = Stripe(publishableKey);
     elements = stripe.elements();
   }
+
+  // 既存のカード要素をクリア
+  const cardElement = document.getElementById('card-element');
+  if (cardElement) {
+    cardElement.innerHTML = '';
+  }
+
+  const card = elements.create('card', {
+    style: {
+      base: {
+        fontSize: '16px',
+        color: '#424770',
+        '::placeholder': {
+          color: '#aab7c4',
+        },
+      },
+      invalid: {
+        color: '#9e2146',
+      },
+    },
+    hidePostalCode: true, // 郵便番号フィールドを隠す
+  });
   
-          const card = elements.create('card', {
-          style: {
-            base: {
-              fontSize: '16px',
-              color: '#424770',
-              '::placeholder': {
-                color: '#aab7c4',
-              },
-            },
-            invalid: {
-              color: '#9e2146',
-            },
-          },
-          hidePostalCode: true, // 郵便番号フィールドを隠す
-        });
+  // カード要素をマウント
   card.mount('#card-element');
 }
 
