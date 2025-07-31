@@ -59,7 +59,7 @@ function showPaymentModal() {
     // Stripe Elementsを初期化
   if (!stripe) {
     // 環境変数から取得するか、デフォルト値を使用
-    const publishableKey = 'pk_test_51Rqnq0GTOkSKzYXiZXCVB7TvlrUIEhxdqMgygXFqfHAjjuvpPsyISiFUjy9b23SVdQulMuVURfyPKp4RNfr8VqX4001KQiW6cr';
+    const publishableKey = 'pk_test_51H5Xq0GTOkSKzYXiZXCVB7TvlrUIEhxdqMgygXFqfHAjjuvpPsyISiFUjy9b23SVdQulMuVURfyPKp4RNfr8VqX4001KQiW6cr';
     stripe = Stripe(publishableKey);
     elements = stripe.elements();
   }
