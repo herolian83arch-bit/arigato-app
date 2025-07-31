@@ -62,7 +62,20 @@ function showPaymentModal() {
     elements = stripe.elements();
   }
   
-  const card = elements.create('card');
+          const card = elements.create('card', {
+          style: {
+            base: {
+              fontSize: '16px',
+              color: '#424770',
+              '::placeholder': {
+                color: '#aab7c4',
+              },
+            },
+            invalid: {
+              color: '#9e2146',
+            },
+          },
+        });
   card.mount('#card-element');
 }
 
@@ -93,11 +106,16 @@ async function processPayment() {
 
     const { clientSecret } = await response.json();
     
-    const result = await stripe.confirmCardPayment(clientSecret, {
-      payment_method: {
-        card: elements.getElement('card'),
-      }
-    });
+            const result = await stripe.confirmCardPayment(clientSecret, {
+          payment_method: {
+            card: elements.getElement('card'),
+            billing_details: {
+              address: {
+                postal_code: '00000' // デフォルト郵便番号
+              }
+            }
+          }
+        });
 
     if (result.error) {
       console.error('Payment failed:', result.error);
