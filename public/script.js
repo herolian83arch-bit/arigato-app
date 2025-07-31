@@ -58,7 +58,7 @@ function showPaymentModal() {
   
   // Stripe Elementsを初期化
   if (!stripe) {
-    stripe = Stripe('pk_test_xxxxxxxxxxxxxxxxxxxxx'); // 実際のキーに置き換え
+    stripe = Stripe('pk_test_51Rqnq0GTOkS...'); // 実際のキーに置き換え
     elements = stripe.elements();
   }
   
