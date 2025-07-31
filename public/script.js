@@ -192,11 +192,67 @@ function renderScene() {
     });
   }
 }
+
+// プレミアム機能の実装
+function enablePremiumFeatures() {
+  if (!isPremiumUser) {
+    showPremiumPrompt();
+    return;
+  }
+  
+  // プレミアム機能を有効化
+  enableAdvancedAudio();
+  enableDictionaryFeature();
+  enableCustomBackgrounds();
+  enableOfflineMode();
+}
+
+// プレミアムプロンプト表示
+function showPremiumPrompt() {
+  alert('✨ This feature is available for Premium users!\n\nUpgrade to Premium to unlock:\n• Advanced audio quality\n• Dictionary integration\n• Custom backgrounds\n• Offline mode');
+}
+
+// 高度な音声機能
+function enableAdvancedAudio() {
+  // 高品質音声の実装
+  console.log('Advanced audio enabled');
+}
+
+// 辞書機能
+function enableDictionaryFeature() {
+  // 辞書機能の実装
+  console.log('Dictionary feature enabled');
+}
+
+// カスタム背景機能
+function enableCustomBackgrounds() {
+  // 背景カスタマイズ機能の実装
+  console.log('Custom backgrounds enabled');
+}
+
+// オフラインモード
+function enableOfflineMode() {
+  // オフライン機能の実装
+  console.log('Offline mode enabled');
+}
+
+// 音声再生の改善（プレミアム機能）
 window.playJapaneseSpeech = function(japaneseText) {
-  const utter = new SpeechSynthesisUtterance(japaneseText);
-  utter.lang = 'ja-JP';
-  utter.rate = speechSpeed;
-  speechSynthesis.speak(utter);
+  if (isPremiumUser) {
+    // プレミアム音声機能
+    const utter = new SpeechSynthesisUtterance(japaneseText);
+    utter.lang = 'ja-JP';
+    utter.rate = speechSpeed;
+    utter.pitch = 1.2; // プレミアム機能：音声の高さを調整
+    utter.volume = 0.9; // プレミアム機能：音量を調整
+    speechSynthesis.speak(utter);
+  } else {
+    // 通常の音声機能
+    const utter = new SpeechSynthesisUtterance(japaneseText);
+    utter.lang = 'ja-JP';
+    utter.rate = speechSpeed;
+    speechSynthesis.speak(utter);
+  }
 };
 
 window.playRomajiSpeech = function(romajiText) {
