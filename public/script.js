@@ -220,7 +220,6 @@ function renderScene() {
           <div class="romaji-text" style="font-size:0.9em;color:#666;margin-bottom:4px;">${msg.romaji || ''}</div>
         </div>
         <button class="speak-btn" style="margin-left:12px;" onclick="playJapaneseSpeech('${(msg.text || '').replace(/<[^>]+>/g, '')}')">🔊</button>
-        <button class="romaji-speak-btn" style="margin-left:8px;" onclick="playRomajiSpeech('${(msg.romaji || '').replace(/<[^>]+>/g, '')}')">🎤</button>
         <div class="note-text" style="font-size:0.95em;color:#666;margin-top:2px;">${msg.note || ''}</div>
       `;
       messagesDiv.appendChild(card);
