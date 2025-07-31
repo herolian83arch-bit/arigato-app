@@ -129,7 +129,110 @@
     },
     "transportation": {
       "messages": [
-        { "text": "Thank you for helping me find my way.", "romaji": "Michi wo oshiete kurete arigatou gozaimasu!", "ja": "道を教えてくれてありがとうございます！" }
+        {
+          "number": "1",
+          "romaji": "KIPPU KOUNYUU O OTETSUDIAI ITADAKI ARIGATOU GOZAIMASU",
+          "text": "Thank you for helping me buy a ticket.",
+          "note": "(It was reassuring to get support from the staff despite the language barrier.)",
+          "ja": "Thank you for helping me buy a ticket.",
+          "isFavorite": false
+        },
+        {
+          "number": "2",
+          "romaji": "EIGO ANNAI O MITSUKETE KURETE TASUKARIMASHITA",
+          "text": "I really appreciated you finding the English guide for me.",
+          "note": "(It was hard to understand the signage, so that meant a lot.)",
+          "ja": "I really appreciated you finding the English guide for me.",
+          "isFavorite": false
+        },
+        {
+          "number": "3",
+          "romaji": "TEINEI NI OSHIETE KURETE, HONTŌ NI KOKOROZUYOKATTA DESU",
+          "text": "Your clear explanation gave me such peace of mind.",
+          "note": "(I was lost in a new place, and your help was everything.)",
+          "ja": "Your clear explanation gave me such peace of mind.",
+          "isFavorite": false
+        },
+        {
+          "number": "4",
+          "romaji": "MICHI ANNAI SHITE KURETE ARIGATOU",
+          "text": "Thank you for guiding me.",
+          "note": "(I really appreciated your help with the directions, even with just gestures.)",
+          "ja": "Thank you for guiding me.",
+          "isFavorite": false
+        },
+        {
+          "number": "5",
+          "romaji": "KONZATSU JŌKYŌ O OSHIETE KURETE KANSHA SHITEIMASU",
+          "text": "Thanks for telling me about the traffic situation.",
+          "note": "(Your advice helped me avoid confusion during rush hour.)",
+          "ja": "Thanks for telling me about the traffic situation.",
+          "isFavorite": false
+        },
+        {
+          "number": "6",
+          "romaji": "KŌSHA BOTAN O OSU TAIMINGU O OSHIETE KURETE ARIGATOU GOZAIMASHITA",
+          "text": "Thank you for showing me when to press the stop button.",
+          "note": "(I wasn't sure how to get off the bus—it really helped.)",
+          "ja": "Thank you for showing me when to press the stop button.",
+          "isFavorite": false
+        },
+        {
+          "number": "7",
+          "romaji": "NORIKA E ANNAI O SHINSETSU NI SETSUMEI SHITE KURETE, HONTŌ NI SUKUWAREMASHITA",
+          "text": "I was so grateful for your kind help with the train transfer.",
+          "note": "(Navigating the system felt overwhelming, but you saved me.)",
+          "ja": "I was so grateful for your kind help with the train transfer.",
+          "isFavorite": false
+        },
+        {
+          "number": "8",
+          "romaji": "SEKI O YUZUTTE KURETE ARIGATOU GOZAIMASU",
+          "text": "Thank you for offering your seat.",
+          "note": "(It was a small gesture, but it warmed my heart.)",
+          "ja": "Thank you for offering your seat.",
+          "isFavorite": false
+        },
+        {
+          "number": "9",
+          "romaji": "KŌTSŪ RŪRU O SETSUMEI SHITE KURETE ARIGATOU GOZAIMASU",
+          "text": "Thanks for explaining the traffic rules.",
+          "note": "(Driving on the opposite side was new for me—your help made it easier.)",
+          "ja": "Thanks for explaining the traffic rules.",
+          "isFavorite": false
+        },
+        {
+          "number": "10",
+          "romaji": "EGAO DE ANNAI SHITE KURETE URESHIKATTA DESU",
+          "text": "Your smile while helping me really made my day.",
+          "note": "(That kind gesture eased my anxiety right away.)",
+          "ja": "Your smile while helping me really made my day.",
+          "isFavorite": false
+        },
+        {
+          "number": "11",
+          "romaji": "ISSHO NI SHIRABETE KURETE, HONTŌ NI ARIGATOU",
+          "text": "Thank you for looking it up with me.",
+          "note": "(Searching together made me feel less alone and more welcomed.)",
+          "ja": "Thank you for looking it up with me.",
+          "isFavorite": false
+        },
+        {
+          "number": "12",
+          "romaji": "ANNAI SHITE KURETE KANSHA SHITEIMASU",
+          "text": "Thank you for helping me find my way.",
+          "note": "(Your guidance made the confusing signs so much easier to understand.)",
+          "ja": "Thank you for helping me find my way.",
+          "isFavorite": false
+        },
+        {
+          "number": "13",
+          "romaji": "ANSHIN SHITE NOREMASHITA. ARIGATOU GOZAIMASHITA",
+          "text": "Thanks to you, I could ride with peace of mind.",
+          "note": "(Your calm explanation helped me feel safe and at ease.)",
+          "ja": "Thanks to you, I could ride with peace of mind.",
+          "isFavorite": false
+        }
       ]
     }
   }
