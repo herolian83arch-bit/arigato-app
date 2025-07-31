@@ -3,6 +3,8 @@ let currentScene = 'airport';
 let languageData = {};
 let speechSpeed = 1.0;
 let isPremiumUser = false; // プレミアム機能フラグ
+let stripe = null;
+let elements = null;
 
 document.addEventListener('DOMContentLoaded', () => {
   loadLanguage(currentLang);
@@ -49,8 +51,33 @@ function updatePremiumUI() {
   }
 }
 
-// プレミアム機能の購入
-async function purchasePremium() {
+// 決済モーダルを表示
+function showPaymentModal() {
+  const modal = document.getElementById('payment-modal');
+  modal.style.display = 'block';
+  
+  // Stripe Elementsを初期化
+  if (!stripe) {
+    stripe = Stripe('pk_test_xxxxxxxxxxxxxxxxxxxxx'); // 実際のキーに置き換え
+    elements = stripe.elements();
+  }
+  
+  const card = elements.create('card');
+  card.mount('#card-element');
+}
+
+// 決済モーダルを閉じる
+function closePaymentModal() {
+  const modal = document.getElementById('payment-modal');
+  modal.style.display = 'none';
+}
+
+// 決済処理
+async function processPayment() {
+  const payButton = document.getElementById('pay-button');
+  payButton.disabled = true;
+  payButton.textContent = 'Processing...';
+  
   try {
     const response = await fetch('/api/payment/create-payment-intent', {
       method: 'POST',
@@ -66,16 +93,9 @@ async function purchasePremium() {
 
     const { clientSecret } = await response.json();
     
-    // Stripe Elementsを使用して決済処理
-    const stripe = Stripe(process.env.STRIPE_PUBLISHABLE_KEY);
-    const elements = stripe.elements();
-    
-    const card = elements.create('card');
-    card.mount('#card-element');
-    
     const result = await stripe.confirmCardPayment(clientSecret, {
       payment_method: {
-        card: card,
+        card: elements.getElement('card'),
       }
     });
 
@@ -87,11 +107,15 @@ async function purchasePremium() {
       localStorage.setItem('premiumStatus', 'active');
       isPremiumUser = true;
       updatePremiumUI();
-      alert('Premium upgrade successful!');
+      closePaymentModal();
+      alert('Premium upgrade successful! 🎉');
     }
   } catch (error) {
     console.error('Payment error:', error);
     alert('Payment error: ' + error.message);
+  } finally {
+    payButton.disabled = false;
+    payButton.textContent = 'Pay $9.99';
   }
 }
 
