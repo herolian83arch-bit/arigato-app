@@ -1,6 +1,7 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 module.exports = async (req, res) => {
+  // Force new deployment - API endpoint fix
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
