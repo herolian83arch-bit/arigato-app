@@ -79,7 +79,7 @@ async function processPayment() {
   payButton.textContent = 'Processing...';
   
   try {
-    const response = await fetch('/api/payment/create-payment-intent', {
+    const response = await fetch('/api/payment/create-payment-intent.js', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
