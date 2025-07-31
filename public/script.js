@@ -58,7 +58,7 @@ function showPaymentModal() {
   
   // Stripe Elementsを初期化
   if (!stripe) {
-    stripe = Stripe('pk_test_51Rqnq0GTOkS...'); // 実際のキーに置き換え
+    stripe = Stripe('pk_test_51Rqnq0GTOkSKzYXiZXCVB7TvlrUIEhxdqMgygXFqfHAjjuvpPsyISiFUjy9b23SVdQulMuVURfyPKp4RNfr8VqX4001KQiW6cr');
     elements = stripe.elements();
   }
   
