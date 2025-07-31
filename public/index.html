@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Arigato App Perfect</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
   <div class="container">
@@ -14,7 +15,7 @@
         <button class="lang-btn" data-lang="ja">JA</button>
         <button class="lang-btn" data-lang="zh">ZH</button>
         <button class="lang-btn" data-lang="ko">KO</button>
-        <button id="premium-btn" class="premium-btn" onclick="purchasePremium()">Upgrade to Premium</button>
+        <button id="premium-btn" class="premium-btn" onclick="showPaymentModal()">Upgrade to Premium</button>
       </div>
     </header>
     <main>
@@ -28,6 +29,24 @@
       <div id="messages"></div>
     </main>
   </div>
+  
+  <!-- 決済モーダル -->
+  <div id="payment-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close" onclick="closePaymentModal()">&times;</span>
+      <h2>Upgrade to Premium</h2>
+      <p>Get access to premium features:</p>
+      <ul>
+        <li>✨ Advanced language features</li>
+        <li>🎵 Enhanced audio quality</li>
+        <li>📚 Dictionary integration</li>
+        <li>🖼️ Custom backgrounds</li>
+      </ul>
+      <div id="card-element" style="margin: 20px 0; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></div>
+      <button id="pay-button" onclick="processPayment()" style="background: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Pay $9.99</button>
+    </div>
+  </div>
+  
   <footer class="footer">
     <button class="footer-btn" onclick="window.open('terms-en.html','_blank')">Terms of Service</button>
     <button class="footer-btn" onclick="window.open('privacy-en.html','_blank')">Privacy Policy</button>
