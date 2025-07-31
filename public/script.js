@@ -105,7 +105,13 @@ async function processPayment() {
       })
     });
 
-    const { clientSecret } = await response.json();
+    const responseData = await response.json();
+    
+    if (!responseData.clientSecret) {
+      throw new Error('No client secret received from server');
+    }
+    
+    const { clientSecret } = responseData;
     
             const result = await stripe.confirmCardPayment(clientSecret, {
           payment_method: {

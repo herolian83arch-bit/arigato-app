@@ -22,6 +22,10 @@ module.exports = async (req, res) => {
       clientSecret: paymentIntent.client_secret,
     });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    console.error('Payment Intent creation error:', error);
+    res.status(500).json({ 
+      error: error.message,
+      details: 'Server-side payment processing error'
+    });
   }
 }; 
