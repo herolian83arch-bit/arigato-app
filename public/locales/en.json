@@ -22,26 +22,26 @@
     },
     "hotel": {
       "messages": [
-        { "romaji": "<b>WAKUWAKU</b> SHINAGARA CHEKKUIN WO MUKAEMASHITA", "text": "I checked in with excitement.", "note": "(The kind guidance made me even more excited for the trip.)" },
-        { "romaji": "ARIGATOU GOZAIMASU. <b>HOKKORI</b> SHIMASHITA.", "text": "Thank you. I felt warm and comforted.", "note": "(The front desk staff welcomed me with a smile.)" },
-        { "romaji": "OHEYA NO KAORI GA KIMOCHI II DESU NE. ARIGATOU GOZAIMASU", "text": "The room smells wonderful. Thank you.", "note": "(I really liked the fragrance of the room.)" },
-        { "romaji": "OHEYA NO SEIKETSUKAN NI, KOKORO GA HARE MASHITA", "text": "The cleanliness of the room lifted my mood.", "note": "(I felt warmth from the staff's careful cleaning.)" },
-        { "romaji": "ARIGATOU GOZAIMASU. <b>PIKAPIKA</b> NI SHITE KUDASATTE KANGEKI DESU.", "text": "Thank you. Everything was perfectly clean and shiny.", "note": "(It felt like a brand-new room.)" },
-        { "romaji": "ARIGATOU GOZAIMASU. KOMAKAI KIKUBARI GA URESHIKATTA DESU.", "text": "Thank you. I appreciated the thoughtful details.", "note": "(The memo, humidifier, and postcards were a nice touch.)" },
-        { "romaji": "NAGAME NI <b>UTTORI</b> SHIMASHITA", "text": "I was enchanted by the beautiful view.", "note": "(Opening the window felt like stepping into a painting.)" },
-        { "romaji": "EGAO NI <b>HOKKORI</b> SHIMASHITA.", "text": "Your smile made me feel warm inside.", "note": "(Kindness was conveyed more through your smile than words.)" },
-        { "romaji": "OKOKOROKUBARI, HONTOU NI ARIGATOU GOZAIMASU.", "text": "Thank you very much for your thoughtful care.", "note": "(Your attention anticipated my needs.)" },
-        { "romaji": "ARIGATOU GOZAIMASU. <b>URUURU</b> KICHAIMASHITA.", "text": "Thank you. I was deeply touched.", "note": "(The concierge gave me a message card as a keepsake.)" },
-        { "romaji": "KOKORO MADE <b>POKAPOKA</b> NI NARIMASHITA. ARIGATOU GOZAIMASU", "text": "Thank you. The bath warmed me to the core.", "note": "(It made me feel relaxed both physically and emotionally.)" },
-        { "romaji": "ARIGATOU GOZAIMASU. <b>TOROTORO</b> NI TOKESOU DESU.", "text": "Thank you. I felt completely relaxed.", "note": "(The hot spring melted away my stress.)" },
-        { "romaji": "ORYOURI NO HITOSARA HITOSARA NI <b>WAKUWAKU</b> GA TSUMATTE IMASHITA", "text": "Each dish brought joy and excitement.", "note": "(The presentation and flavor told a story.)" },
-        { "romaji": "ARIGATOU GOZAIMASU. <b>DOKIDOKI</b> GA TOMARIMASEN.", "text": "Thank you. I was filled with excitement.", "note": "(I was thrilled by the dishes and the menu.)" },
-        { "romaji": "SHEFU NO OMOI GA TSUTAWARU RYOURI NI, WATASHI NO KOKORO GA JINWARI ATATAMARIMASHITA", "text": "The chef's heart came through in the food, and it gently warmed my own.", "note": "(It wasn't just a meal — I felt the care and time poured into it.)" },
-        { "romaji": "OFUTON GA <b>FUKAFUKA</b> DE, TSUTSUMARERU YOU NA ANSHIN-KAN DESHITA", "text": "The fluffy bedding gave me peace of mind.", "note": "(My travel fatigue disappeared as I rested.)" },
-        { "romaji": "ARIGATOU GOZAIMASU. <b>HOWAHOWA</b> SHIAWASE KIBUN DESU.", "text": "Thank you. I felt cozy and happy.", "note": "(The bedding made me feel wrapped in comfort.)" },
-        { "romaji": "ARIGATOU GOZAIMASU. <b>FUWAFUWA</b> YUMEGOKOCHI DESHITA.", "text": "Thank you. I slept like a dream.", "note": "(The bed was so comfortable and the night so quiet.)" },
-        { "romaji": "ARIGATOU GOZAIMASU. <b>TSUYATSUYA</b> GOHAN, SAIKOU DESHITA.", "text": "Thank you. The glossy rice was perfect.", "note": "(The rice at breakfast was plump and delicious.)" },
-        { "romaji": "ARIGATOU GOZAIMASU. MATA KIMASU.", "text": "Thank you. I'll be back again.", "note": "(The staff smiled and waved, saying 'See you again.')" }
+        { "romaji": "<b>WAKUWAKU</b> SHINAGARA CHEKKUIN WO MUKAEMASHITA", "text": "I checked in with excitement.", "note": "(The kind guidance made me even more excited for the trip.)", "ja": "《ワクワク》しながらチェックインを迎えました" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>HOKKORI</b> SHIMASHITA.", "text": "Thank you. I felt warm and comforted.", "note": "(The front desk staff welcomed me with a smile.)", "ja": "ありがとうございます。《ほっこり》しました。" },
+        { "romaji": "OHEYA NO KAORI GA KIMOCHI II DESU NE. ARIGATOU GOZAIMASU", "text": "The room smells wonderful. Thank you.", "note": "(I really liked the fragrance of the room.)", "ja": "お部屋の香りが気持ちいいですね。ありがとうございます" },
+        { "romaji": "OHEYA NO SEIKETSUKAN NI, KOKORO GA HARE MASHITA", "text": "The cleanliness of the room lifted my mood.", "note": "(I felt warmth from the staff's careful cleaning.)", "ja": "お部屋の清潔感に、心が晴れました" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>PIKAPIKA</b> NI SHITE KUDASATTE KANGEKI DESU.", "text": "Thank you. Everything was perfectly clean and shiny.", "note": "(It felt like a brand-new room.)", "ja": "ありがとうございます。《ピカピカ》にしてくださって感激です。" },
+        { "romaji": "ARIGATOU GOZAIMASU. KOMAKAI KIKUBARI GA URESHIKATTA DESU.", "text": "Thank you. I appreciated the thoughtful details.", "note": "(The memo, humidifier, and postcards were a nice touch.)", "ja": "ありがとうございます。細かな気配りが嬉しかったです。" },
+        { "romaji": "NAGAME NI <b>UTTORI</b> SHIMASHITA", "text": "I was enchanted by the beautiful view.", "note": "(Opening the window felt like stepping into a painting.)", "ja": "眺めに《うっとり》しました" },
+        { "romaji": "EGAO NI <b>HOKKORI</b> SHIMASHITA.", "text": "Your smile made me feel warm inside.", "note": "(Kindness was conveyed more through your smile than words.)", "ja": "笑顔に《ほっこり》しました。" },
+        { "romaji": "OKOKOROKUBARI, HONTOU NI ARIGATOU GOZAIMASU.", "text": "Thank you very much for your thoughtful care.", "note": "(Your attention anticipated my needs.)", "ja": "お心配り、本当にありがとうございます。" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>URUURU</b> KICHAIMASHITA.", "text": "Thank you. I was deeply touched.", "note": "(The concierge gave me a message card as a keepsake.)", "ja": "ありがとうございます。《うるうる》きちゃいました。" },
+        { "romaji": "KOKORO MADE <b>POKAPOKA</b> NI NARIMASHITA. ARIGATOU GOZAIMASU", "text": "Thank you. The bath warmed me to the core.", "note": "(It made me feel relaxed both physically and emotionally.)", "ja": "心まで《ぽかぽか》になりました。ありがとうございます" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>TOROTORO</b> NI TOKESOU DESU.", "text": "Thank you. I felt completely relaxed.", "note": "(The hot spring melted away my stress.)", "ja": "ありがとうございます。《とろとろ》にとけそうです。" },
+        { "romaji": "ORYOURI NO HITOSARA HITOSARA NI <b>WAKUWAKU</b> GA TSUMATTE IMASHITA", "text": "Each dish brought joy and excitement.", "note": "(The presentation and flavor told a story.)", "ja": "お料理のひと皿ひと皿に《ワクワク》が詰まっていました" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>DOKIDOKI</b> GA TOMARIMASEN.", "text": "Thank you. I was filled with excitement.", "note": "(I was thrilled by the dishes and the menu.)", "ja": "ありがとうございます。《ドキドキ》が止まりません。" },
+        { "romaji": "SHEFU NO OMOI GA TSUTAWARU RYOURI NI, WATASHI NO KOKORO GA JINWARI ATATAMARIMASHITA", "text": "The chef's heart came through in the food, and it gently warmed my own.", "note": "(It wasn't just a meal — I felt the care and time poured into it.)", "ja": "シェフの想いが伝わる料理に、心がじんわり温まりました" },
+        { "romaji": "OFUTON GA <b>FUKAFUKA</b> DE, TSUTSUMARERU YOU NA ANSHIN-KAN DESHITA", "text": "The fluffy bedding gave me peace of mind.", "note": "(My travel fatigue disappeared as I rested.)", "ja": "お布団が《ふかふか》で、包まれるような安心感でした" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>HOWAHOWA</b> SHIAWASE KIBUN DESU.", "text": "Thank you. I felt cozy and happy.", "note": "(The bedding made me feel wrapped in comfort.)", "ja": "ありがとうございます。《ほわほわ》幸せ気分です。" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>FUWAFUWA</b> YUMEGOKOCHI DESHITA.", "text": "Thank you. I slept like a dream.", "note": "(The bed was so comfortable and the night so quiet.)", "ja": "ありがとうございます。《ふわふわ》夢ごこちでした。" },
+        { "romaji": "ARIGATOU GOZAIMASU. <b>TSUYATSUYA</b> GOHAN, SAIKOU DESHITA.", "text": "Thank you. The glossy rice was perfect.", "note": "(The rice at breakfast was plump and delicious.)", "ja": "ありがとうございます。《つやつや》ご飯、最高でした。" },
+        { "romaji": "ARIGATOU GOZAIMASU. MATA KIMASU.", "text": "Thank you. I'll be back again.", "note": "(The staff smiled and waved, saying 'See you again.')", "ja": "ありがとうございます。また来ます。" }
       ]
     },
     "restaurant": {
@@ -134,7 +134,7 @@
           "romaji": "KIPPU KOUNYUU O OTETSUDIAI ITADAKI ARIGATOU GOZAIMASU",
           "text": "Thank you for helping me buy a ticket.",
           "note": "(It was reassuring to get support from the staff despite the language barrier.)",
-          "ja": "Thank you for helping me buy a ticket.",
+          "ja": "切符購入をお手伝いいただきありがとうございます",
           "isFavorite": false
         },
         {
@@ -142,7 +142,7 @@
           "romaji": "EIGO ANNAI O MITSUKETE KURETE TASUKARIMASHITA",
           "text": "I really appreciated you finding the English guide for me.",
           "note": "(It was hard to understand the signage, so that meant a lot.)",
-          "ja": "I really appreciated you finding the English guide for me.",
+          "ja": "英語案内を見つけてくれて助かりました",
           "isFavorite": false
         },
         {
@@ -150,7 +150,7 @@
           "romaji": "TEINEI NI OSHIETE KURETE, HONTŌ NI KOKOROZUYOKATTA DESU",
           "text": "Your clear explanation gave me such peace of mind.",
           "note": "(I was lost in a new place, and your help was everything.)",
-          "ja": "Your clear explanation gave me such peace of mind.",
+          "ja": "丁寧に教えてくれて、本当に心強かったです",
           "isFavorite": false
         },
         {
@@ -158,7 +158,7 @@
           "romaji": "MICHI ANNAI SHITE KURETE ARIGATOU",
           "text": "Thank you for guiding me.",
           "note": "(I really appreciated your help with the directions, even with just gestures.)",
-          "ja": "Thank you for guiding me.",
+          "ja": "道案内してくれてありがとう",
           "isFavorite": false
         },
         {
@@ -166,7 +166,7 @@
           "romaji": "KONZATSU JŌKYŌ O OSHIETE KURETE KANSHA SHITEIMASU",
           "text": "Thanks for telling me about the traffic situation.",
           "note": "(Your advice helped me avoid confusion during rush hour.)",
-          "ja": "Thanks for telling me about the traffic situation.",
+          "ja": "混雑状況を教えてくれて感謝しています",
           "isFavorite": false
         },
         {
@@ -174,7 +174,7 @@
           "romaji": "KŌSHA BOTAN O OSU TAIMINGU O OSHIETE KURETE ARIGATOU GOZAIMASHITA",
           "text": "Thank you for showing me when to press the stop button.",
           "note": "(I wasn't sure how to get off the bus—it really helped.)",
-          "ja": "Thank you for showing me when to press the stop button.",
+          "ja": "降車ボタンを押すタイミングを教えてくれてありがとうございました",
           "isFavorite": false
         },
         {
@@ -182,7 +182,7 @@
           "romaji": "NORIKA E ANNAI O SHINSETSU NI SETSUMEI SHITE KURETE, HONTŌ NI SUKUWAREMASHITA",
           "text": "I was so grateful for your kind help with the train transfer.",
           "note": "(Navigating the system felt overwhelming, but you saved me.)",
-          "ja": "I was so grateful for your kind help with the train transfer.",
+          "ja": "乗換案内を親切に説明してくれて、本当に救われました",
           "isFavorite": false
         },
         {
@@ -190,7 +190,7 @@
           "romaji": "SEKI O YUZUTTE KURETE ARIGATOU GOZAIMASU",
           "text": "Thank you for offering your seat.",
           "note": "(It was a small gesture, but it warmed my heart.)",
-          "ja": "Thank you for offering your seat.",
+          "ja": "席を譲ってくれてありがとうございます",
           "isFavorite": false
         },
         {
@@ -198,7 +198,7 @@
           "romaji": "KŌTSŪ RŪRU O SETSUMEI SHITE KURETE ARIGATOU GOZAIMASU",
           "text": "Thanks for explaining the traffic rules.",
           "note": "(Driving on the opposite side was new for me—your help made it easier.)",
-          "ja": "Thanks for explaining the traffic rules.",
+          "ja": "交通ルールを説明してくれてありがとうございます",
           "isFavorite": false
         },
         {
@@ -206,7 +206,7 @@
           "romaji": "EGAO DE ANNAI SHITE KURETE URESHIKATTA DESU",
           "text": "Your smile while helping me really made my day.",
           "note": "(That kind gesture eased my anxiety right away.)",
-          "ja": "Your smile while helping me really made my day.",
+          "ja": "笑顔で案内してくれて嬉しかったです",
           "isFavorite": false
         },
         {
@@ -214,7 +214,7 @@
           "romaji": "ISSHO NI SHIRABETE KURETE, HONTŌ NI ARIGATOU",
           "text": "Thank you for looking it up with me.",
           "note": "(Searching together made me feel less alone and more welcomed.)",
-          "ja": "Thank you for looking it up with me.",
+          "ja": "一緒に調べてくれて、本当にありがとう",
           "isFavorite": false
         },
         {
@@ -222,7 +222,7 @@
           "romaji": "ANNAI SHITE KURETE KANSHA SHITEIMASU",
           "text": "Thank you for helping me find my way.",
           "note": "(Your guidance made the confusing signs so much easier to understand.)",
-          "ja": "Thank you for helping me find my way.",
+          "ja": "案内してくれて感謝しています",
           "isFavorite": false
         },
         {
@@ -230,7 +230,7 @@
           "romaji": "ANSHIN SHITE NOREMASHITA. ARIGATOU GOZAIMASHITA",
           "text": "Thanks to you, I could ride with peace of mind.",
           "note": "(Your calm explanation helped me feel safe and at ease.)",
-          "ja": "Thanks to you, I could ride with peace of mind.",
+          "ja": "安心して乗れました。ありがとうございました",
           "isFavorite": false
         }
       ]
