@@ -3,7 +3,7 @@
  * 美しいエラーハンドリングとレスポンス形式で実装
  */
 
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   // CORS設定
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -27,7 +27,6 @@ export default async function handler(req, res) {
   try {
     // 環境変数の確認
     const apiKey = process.env.GOOGLE_TRANSLATE_API_KEY;
-    
     if (!apiKey) {
       console.error('GOOGLE_TRANSLATE_API_KEY is not configured');
       return res.status(500).json({

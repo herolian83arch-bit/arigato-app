@@ -3,7 +3,7 @@
  * APIルートの動作確認用
  */
 
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   // CORS設定
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
