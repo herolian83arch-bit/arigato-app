@@ -7,6 +7,20 @@ let stripe = null;
 let elements = null;
 let onomatopoeiaData = []; // オノマトペデータ
 
+// サポートされている言語の定義
+const supportedLanguages = {
+  'en': 'English',
+  'ja': '日本語',
+  'zh': '中文',
+  'ko': '한국어',
+  'pt': 'Português',
+  'es': 'Español',
+  'fr': 'Français',
+  'de': 'Deutsch',
+  'it': 'Italiano',
+  'ru': 'Русский'
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   loadLanguage(currentLang);
   checkPremiumStatus(); // プレミアム状態をチェック
@@ -29,6 +43,80 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// 動的翻訳機能
+async function translateText(text, targetLang) {
+  try {
+    const response = await fetch(`/api/translate`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        text: text,
+        target: targetLang
+      })
+    });
+    
+    if (!response.ok) {
+      throw new Error('Translation failed');
+    }
+    
+    const data = await response.json();
+    return data.translatedText;
+  } catch (error) {
+    console.error('Translation error:', error);
+    return text; // 翻訳に失敗した場合は元のテキストを返す
+  }
+}
+
+// 言語データを読み込み（動的翻訳対応）
+async function loadLanguage(lang) {
+  try {
+    // 基本言語（en, ja, zh, ko）は静的JSONから読み込み
+    if (['en', 'ja', 'zh', 'ko'].includes(lang)) {
+      const response = await fetch(`locales/${lang}.json`);
+      languageData = await response.json();
+    } else {
+      // その他の言語は動的翻訳を使用
+      const baseResponse = await fetch('locales/en.json');
+      const baseData = await baseResponse.json();
+      
+      // 動的翻訳で言語データを生成
+      languageData = await translateLanguageData(baseData, lang);
+    }
+    
+    renderSceneSwitcher();
+    renderScene();
+  } catch (error) {
+    console.error('Language loading error:', error);
+  }
+}
+
+// 言語データ全体を翻訳
+async function translateLanguageData(baseData, targetLang) {
+  const translatedData = {
+    scenes: {}
+  };
+  
+  for (const [sceneKey, sceneData] of Object.entries(baseData.scenes)) {
+    translatedData.scenes[sceneKey] = {
+      title: await translateText(sceneData.title, targetLang),
+      messages: []
+    };
+    
+    for (const message of sceneData.messages) {
+      const translatedMessage = {
+        ...message,
+        text: await translateText(message.text, targetLang),
+        note: await translateText(message.note, targetLang)
+      };
+      translatedData.scenes[sceneKey].messages.push(translatedMessage);
+    }
+  }
+  
+  return translatedData;
+}
 
 // オノマトペデータを読み込み
 async function loadOnomatopoeiaData() {
@@ -117,7 +205,7 @@ function showOnomatopoeiaScenes() {
 }
 
 // オノマトペシーンの詳細を表示
-function showOnomatopoeiaScene(scene) {
+async function showOnomatopoeiaScene(scene) {
   const scenesContainer = document.getElementById('onomatopoeia-scenes');
   const contentContainer = document.getElementById('onomatopoeia-content');
   const examplesContainer = document.getElementById('onomatopoeia-examples');
@@ -128,13 +216,23 @@ function showOnomatopoeiaScene(scene) {
   const sceneItems = onomatopoeiaData.filter(item => item.scene === scene);
   
   let html = `<h3>${scene}</h3>`;
-  sceneItems.forEach(item => {
+  
+  for (const item of sceneItems) {
+    // 動的翻訳でオノマトペの翻訳を取得
+    let translatedMain = item.main;
+    let translatedDescription = item.description.ja;
+    
+    if (currentLang !== 'ja' && currentLang !== 'en') {
+      translatedMain = await translateText(item.main, currentLang);
+      translatedDescription = await translateText(item.description.ja, currentLang);
+    }
+    
     html += `
       <div class="onomatopoeia-item">
         <div class="item-number">${item.id}</div>
-        <div class="item-main">${item.main}</div>
+        <div class="item-main">${translatedMain}</div>
         <div class="item-romaji">${item.romaji}</div>
-        <div class="item-description">${item.description.ja}</div>
+        <div class="item-description">${translatedDescription}</div>
         <div class="item-translations">
           <div class="translation-item">
             <span class="lang-label">EN:</span>
@@ -151,7 +249,7 @@ function showOnomatopoeiaScene(scene) {
         </div>
       </div>
     `;
-  });
+  }
   
   examplesContainer.innerHTML = html;
 }
@@ -263,16 +361,6 @@ async function processPayment() {
     payButton.disabled = false;
     payButton.textContent = 'Pay $9.99';
   }
-}
-
-function loadLanguage(lang) {
-  fetch(`locales/${lang}.json`)
-    .then(res => res.json())
-    .then(data => {
-      languageData = data;
-      renderSceneSwitcher();
-      renderScene();
-    });
 }
 
 function renderSceneSwitcher() {
