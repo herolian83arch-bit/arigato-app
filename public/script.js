@@ -5,10 +5,12 @@ let speechSpeed = 1.0;
 let isPremiumUser = false; // プレミアム機能フラグ
 let stripe = null;
 let elements = null;
+let onomatopoeiaData = []; // オノマトペデータ
 
 document.addEventListener('DOMContentLoaded', () => {
   loadLanguage(currentLang);
   checkPremiumStatus(); // プレミアム状態をチェック
+  loadOnomatopoeiaData(); // オノマトペデータを読み込み
   
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.onclick = () => {
@@ -28,6 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// オノマトペデータを読み込み
+async function loadOnomatopoeiaData() {
+  try {
+    const response = await fetch('locales/onomatopoeia-premium.json');
+    onomatopoeiaData = await response.json();
+  } catch (error) {
+    console.error('オノマトペデータの読み込みに失敗:', error);
+  }
+}
+
 // プレミアム機能のチェック
 function checkPremiumStatus() {
   const premiumStatus = localStorage.getItem('premiumStatus');
@@ -42,13 +54,106 @@ function updatePremiumUI() {
     if (isPremiumUser) {
       premiumBtn.textContent = 'Premium Active';
       premiumBtn.style.backgroundColor = '#4CAF50';
-      premiumBtn.disabled = true;
+      premiumBtn.disabled = false;
+      premiumBtn.onclick = showOnomatopoeiaModal; // オノマトペ辞典を表示
     } else {
       premiumBtn.textContent = 'Upgrade to Premium';
       premiumBtn.style.backgroundColor = '#FF9800';
       premiumBtn.disabled = false;
+      premiumBtn.onclick = showPaymentModal;
     }
   }
+}
+
+// オノマトペ辞典モーダルを表示
+function showOnomatopoeiaModal() {
+  if (!isPremiumUser) {
+    showPaymentModal();
+    return;
+  }
+  
+  const modal = document.getElementById('onomatopoeia-modal');
+  modal.style.display = 'block';
+  showOnomatopoeiaScenes();
+}
+
+// オノマトペ辞典モーダルを閉じる
+function closeOnomatopoeiaModal() {
+  const modal = document.getElementById('onomatopoeia-modal');
+  modal.style.display = 'none';
+}
+
+// オノマトペシーン一覧を表示
+function showOnomatopoeiaScenes() {
+  const scenesContainer = document.getElementById('onomatopoeia-scenes');
+  const contentContainer = document.getElementById('onomatopoeia-content');
+  
+  scenesContainer.style.display = 'block';
+  contentContainer.style.display = 'none';
+  
+  // シーンをグループ化
+  const sceneGroups = {};
+  onomatopoeiaData.forEach(item => {
+    if (!sceneGroups[item.scene]) {
+      sceneGroups[item.scene] = [];
+    }
+    sceneGroups[item.scene].push(item);
+  });
+  
+  let html = '<div class="scene-grid">';
+  Object.keys(sceneGroups).forEach(scene => {
+    const count = sceneGroups[scene].length;
+    html += `
+      <div class="scene-card" onclick="showOnomatopoeiaScene('${scene}')">
+        <div class="scene-icon">📚</div>
+        <div class="scene-title">${scene}</div>
+        <div class="scene-count">${count}例文</div>
+      </div>
+    `;
+  });
+  html += '</div>';
+  
+  scenesContainer.innerHTML = html;
+}
+
+// オノマトペシーンの詳細を表示
+function showOnomatopoeiaScene(scene) {
+  const scenesContainer = document.getElementById('onomatopoeia-scenes');
+  const contentContainer = document.getElementById('onomatopoeia-content');
+  const examplesContainer = document.getElementById('onomatopoeia-examples');
+  
+  scenesContainer.style.display = 'none';
+  contentContainer.style.display = 'block';
+  
+  const sceneItems = onomatopoeiaData.filter(item => item.scene === scene);
+  
+  let html = `<h3>${scene}</h3>`;
+  sceneItems.forEach(item => {
+    html += `
+      <div class="onomatopoeia-item">
+        <div class="item-number">${item.id}</div>
+        <div class="item-main">${item.main}</div>
+        <div class="item-romaji">${item.romaji}</div>
+        <div class="item-description">${item.description.ja}</div>
+        <div class="item-translations">
+          <div class="translation-item">
+            <span class="lang-label">EN:</span>
+            <span class="translation-text">${item.translation.en || 'Coming soon...'}</span>
+          </div>
+          <div class="translation-item">
+            <span class="lang-label">中文:</span>
+            <span class="translation-text">${item.translation.zh || '即将推出...'}</span>
+          </div>
+          <div class="translation-item">
+            <span class="lang-label">한국어:</span>
+            <span class="translation-text">${item.translation.ko || '곧 출시...'}</span>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+  
+  examplesContainer.innerHTML = html;
 }
 
 // 決済モーダルを表示

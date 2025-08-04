@@ -102,18 +102,16 @@ header {
   height: 100%;
   background-color: rgba(0,0,0,0.5);
 }
-
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 5% auto;
   padding: 20px;
-  border: 1px solid #888;
+  border-radius: 10px;
   width: 80%;
   max-width: 500px;
-  border-radius: 8px;
-  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
 }
-
 .close {
   color: #aaa;
   float: right;
@@ -121,34 +119,130 @@ header {
   font-weight: bold;
   cursor: pointer;
 }
-
 .close:hover,
 .close:focus {
-  color: black;
+  color: #000;
   text-decoration: none;
-  cursor: pointer;
 }
-
-/* プレミアムボタンスタイル */
 .premium-btn {
   background: #FF9800;
   color: white;
   border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
+  padding: 10px 20px;
+  border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s;
-  margin-left: 8px;
+  transition: background 0.3s;
 }
-
 .premium-btn:hover {
   background: #F57C00;
-  transform: translateY(-1px);
+}
+.premium-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
 }
 
-.premium-btn:disabled {
-  background: #4CAF50;
-  cursor: not-allowed;
-  transform: none;
+/* オノマトペ辞典スタイル */
+.scene-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+.scene-card {
+  background: #f7f7fa;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+.scene-card:hover {
+  background: #e8f4fd;
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+.scene-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+.scene-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: #333;
+}
+.scene-count {
+  font-size: 0.9rem;
+  color: #666;
+}
+.back-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background 0.3s;
+}
+.back-btn:hover {
+  background: #764ba2;
+}
+.onomatopoeia-item {
+  background: #f7f7fa;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  border-left: 4px solid #667eea;
+}
+.item-number {
+  font-size: 0.9rem;
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.item-main {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+.item-romaji {
+  font-size: 1rem;
+  color: #764ba2;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+.item-description {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+.item-translations {
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+}
+.translation-item {
+  display: flex;
+  margin-bottom: 8px;
+  align-items: center;
+}
+.translation-item:last-child {
+  margin-bottom: 0;
+}
+.lang-label {
+  font-weight: 600;
+  color: #667eea;
+  min-width: 60px;
+  font-size: 0.9rem;
+}
+.translation-text {
+  color: #333;
+  font-size: 0.95rem;
 } 
