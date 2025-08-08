@@ -121,8 +121,9 @@ async function translateLanguageData(baseData, targetLang) {
 // オノマトペデータを読み込み
 async function loadOnomatopoeiaData() {
   try {
-    const response = await fetch('locales/onomatopoeia-premium.json');
+    const response = await fetch('locales/onomatopoeia-premium-615.json');
     onomatopoeiaData = await response.json();
+    console.log(`オノマトペデータ読み込み完了: ${onomatopoeiaData.length}件`);
   } catch (error) {
     console.error('オノマトペデータの読み込みに失敗:', error);
   }
