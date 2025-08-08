@@ -227,9 +227,18 @@ async function showOnomatopoeiaScene(scene) {
       translatedDescription = await translateText(item.description.ja, currentLang);
     }
     
+    // オノマトペ用のお気に入りキーを作成
+    const favKey = `onomatopoeia-${currentLang}-${item.id}`;
+    const favorites = getFavorites();
+    const isFav = !!favorites[favKey];
+    
     html += `
       <div class="onomatopoeia-item">
-        <div class="item-number">${item.id}</div>
+        <div class="item-header">
+          <div class="item-number">${item.id}</div>
+          <span class="favorite-star" data-key="${favKey}" style="cursor:pointer;font-size:1.3em;color:${isFav ? 'gold' : '#bbb'};user-select:none;margin-left:auto;">${isFav ? '★' : '☆'}</span>
+          <button class="speak-btn" style="margin-left:8px;" onclick="playJapaneseSpeech('${item.main.replace(/<[^>]+>/g, '').replace(/《|》/g, '').replace(/'/g, "\\'")}')">🔊</button>
+        </div>
         <div class="item-main">${translatedMain}</div>
         <div class="item-romaji">${item.romaji}</div>
         <div class="item-description">${translatedDescription}</div>
@@ -252,6 +261,20 @@ async function showOnomatopoeiaScene(scene) {
   }
   
   examplesContainer.innerHTML = html;
+  
+  // オノマトペ辞典のお気に入りクリックイベント
+  examplesContainer.querySelectorAll('.favorite-star').forEach(star => {
+    star.onclick = function() {
+      const key = this.getAttribute('data-key');
+      const favs = getFavorites();
+      favs[key] = !favs[key];
+      setFavorites(favs);
+      
+      // 星の表示を即座に更新
+      this.style.color = favs[key] ? 'gold' : '#bbb';
+      this.textContent = favs[key] ? '★' : '☆';
+    };
+  });
 }
 
 // 決済モーダルを表示
