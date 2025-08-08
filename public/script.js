@@ -155,7 +155,7 @@ function updatePremiumUI() {
 }
 
 // オノマトペ辞典モーダルを表示
-function showOnomatopoeiaModal() {
+async function showOnomatopoeiaModal() {
   if (!isPremiumUser) {
     showPaymentModal();
     return;
@@ -163,6 +163,13 @@ function showOnomatopoeiaModal() {
   
   const modal = document.getElementById('onomatopoeia-modal');
   modal.style.display = 'block';
+  
+  // データが読み込まれていない場合は再読み込み
+  if (!onomatopoeiaData || onomatopoeiaData.length === 0) {
+    console.log('オノマトペデータを再読み込み中...');
+    await loadOnomatopoeiaData();
+  }
+  
   showOnomatopoeiaScenes();
 }
 
@@ -179,6 +186,18 @@ function showOnomatopoeiaScenes() {
   
   scenesContainer.style.display = 'block';
   contentContainer.style.display = 'none';
+  
+  // デバッグ用ログ
+  console.log('オノマトペデータ状況:', {
+    dataLength: onomatopoeiaData.length,
+    sampleData: onomatopoeiaData.slice(0, 2)
+  });
+  
+  // データが空の場合の処理
+  if (!onomatopoeiaData || onomatopoeiaData.length === 0) {
+    scenesContainer.innerHTML = '<p style="text-align: center; color: #666; padding: 20px;">データを読み込み中...</p>';
+    return;
+  }
   
   // シーンをグループ化
   const sceneGroups = {};
