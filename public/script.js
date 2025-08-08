@@ -121,11 +121,37 @@ async function translateLanguageData(baseData, targetLang) {
 // オノマトペデータを読み込み
 async function loadOnomatopoeiaData() {
   try {
+    console.log('オノマトペデータの読み込みを開始...');
     const response = await fetch('locales/onomatopoeia-premium-615.json');
-    onomatopoeiaData = await response.json();
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const text = await response.text();
+    console.log('レスポンステキスト長:', text.length);
+    
+    onomatopoeiaData = JSON.parse(text);
     console.log(`オノマトペデータ読み込み完了: ${onomatopoeiaData.length}件`);
+    
+    // データ読み込み後にシーンを再表示
+    if (document.getElementById('onomatopoeia-modal').style.display === 'block') {
+      showOnomatopoeiaScenes();
+    }
   } catch (error) {
     console.error('オノマトペデータの読み込みに失敗:', error);
+    
+    // エラー時は代替メッセージを表示
+    const scenesContainer = document.getElementById('onomatopoeia-scenes');
+    if (scenesContainer) {
+      scenesContainer.innerHTML = `
+        <div style="text-align: center; padding: 20px; color: #666;">
+          <p>データの読み込みに失敗しました。</p>
+          <p>エラー: ${error.message}</p>
+          <button onclick="loadOnomatopoeiaData()" style="padding: 10px 20px; margin-top: 10px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer;">再試行</button>
+        </div>
+      `;
+    }
   }
 }
 
@@ -195,7 +221,33 @@ function showOnomatopoeiaScenes() {
   
   // データが空の場合の処理
   if (!onomatopoeiaData || onomatopoeiaData.length === 0) {
-    scenesContainer.innerHTML = '<p style="text-align: center; color: #666; padding: 20px;">データを読み込み中...</p>';
+    scenesContainer.innerHTML = `
+      <div style="text-align: center; color: #666; padding: 20px;">
+        <p>データを読み込み中...</p>
+        <div style="margin-top: 15px;">
+          <div style="display: inline-block; width: 20px; height: 20px; border: 3px solid #f3f3f3; border-top: 3px solid #667eea; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+        </div>
+        <style>
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        </style>
+      </div>
+    `;
+    
+    // 10秒後にタイムアウト処理
+    setTimeout(() => {
+      if (!onomatopoeiaData || onomatopoeiaData.length === 0) {
+        scenesContainer.innerHTML = `
+          <div style="text-align: center; padding: 20px; color: #666;">
+            <p>データの読み込みがタイムアウトしました。</p>
+            <button onclick="loadOnomatopoeiaData()" style="padding: 10px 20px; margin-top: 10px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer;">再試行</button>
+          </div>
+        `;
+      }
+    }, 10000);
+    
     return;
   }
   
