@@ -148,7 +148,7 @@ async function loadOnomatopoeiaData() {
         <div style="text-align: center; padding: 20px; color: #666;">
           <p>データの読み込みに失敗しました。</p>
           <p>エラー: ${error.message}</p>
-          <button onclick="loadOnomatopoeiaData()" style="padding: 10px 20px; margin-top: 10px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer;">再試行</button>
+          <button onclick="loadOnomatopoeiaData()" style="padding: 10px 20px; margin-top: 10px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">再試行</button>
         </div>
       `;
     }
@@ -242,7 +242,7 @@ function showOnomatopoeiaScenes() {
         scenesContainer.innerHTML = `
           <div style="text-align: center; padding: 20px; color: #666;">
             <p>データの読み込みがタイムアウトしました。</p>
-            <button onclick="loadOnomatopoeiaData()" style="padding: 10px 20px; margin-top: 10px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer;">再試行</button>
+            <button onclick="loadOnomatopoeiaData()" style="padding: 10px 20px; margin-top: 10px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">再試行</button>
           </div>
         `;
       }
