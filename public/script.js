@@ -123,14 +123,21 @@ async function loadOnomatopoeiaData() {
   try {
     console.log('オノマトペデータの読み込みを開始...');
     
-    // まず小さなファイルで試し、失敗したら大きなファイルを試す
+    // まず40シーン版、次にテストファイル、最後に完全版を試す
     let response;
     try {
-      response = await fetch('locales/onomatopoeia-test.json');
-      if (!response.ok) throw new Error('Test file not found');
-    } catch (testError) {
-      console.log('テストファイルが見つからないため、完全版を読み込み中...');
-      response = await fetch('locales/onomatopoeia-premium-615.json');
+      response = await fetch('locales/onomatopoeia-all-scenes.json');
+      if (!response.ok) throw new Error('All scenes file not found');
+      console.log('40シーン版ファイルを読み込み中...');
+    } catch (allScenesError) {
+      try {
+        response = await fetch('locales/onomatopoeia-test.json');
+        if (!response.ok) throw new Error('Test file not found');
+        console.log('テストファイルを読み込み中...');
+      } catch (testError) {
+        console.log('完全版を読み込み中...');
+        response = await fetch('locales/onomatopoeia-premium-615.json');
+      }
     }
     
     if (!response.ok) {

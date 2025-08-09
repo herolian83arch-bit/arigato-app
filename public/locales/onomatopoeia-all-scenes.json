@@ -1,0 +1,1442 @@
+[
+  {
+    "id": 421,
+    "sceneId": 29,
+    "scene": "読書・知的な時間",
+    "main": "ページを《パラリ》とめくる音が静かに響きました。",
+    "romaji": "PEEJI WO 《PARARI》 TO MEKURU OTO GA SHIZUKA NI HIBIKIMASHITA",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《パラリ》は紙が一枚、ゆっくりとめくられる音で、落ち着いた読書の始まりを伝えます。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 422,
+    "sceneId": 29,
+    "scene": "読書・知的な時間",
+    "main": "万年筆が《カリカリ》と紙の上を走りました。",
+    "romaji": "MANNENHITSU GA 《KARIKARI》 TO KAMI NO UE WO HASHIRIMASHITA",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《カリカリ》はペン先が細かく動く音で、集中した書きものの時間を表します。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 601,
+    "sceneId": 1,
+    "scene": "スイーツ・カフェ",
+    "main": "《ふわふわ》のシフォンケーキが、口の中でやさしくとけていきました。",
+    "romaji": "**FUWAFUWA** no shifon kēki ga, kuchi no naka de yasashiku tokete ikimashita.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ふわふわ》は、柔らかく軽やかな感触や質感を表すオノマトペです。特にスイーツや布、雰囲気のやさしさを伝える時に使われます。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 602,
+    "sceneId": 1,
+    "scene": "スイーツ・カフェ",
+    "main": "クリームが《とろ〜り》ととけて、口いっぱいに幸せが広がりました。",
+    "romaji": "Kurīmu ga **TORO~RI** to tokete, kuchi ippai ni shiawase ga hirogarimashita.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《とろ〜り》は、液体や柔らかいものがゆっくりと溶けたり流れたりする様子を表します。なめらかさや贅沢さを印象づけます。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 616,
+    "sceneId": 2,
+    "scene": "ショッピング",
+    "main": "《キュンキュン》するほど可愛い雑貨に出会ってしまいました。",
+    "romaji": "**KYUNKYUN** suru hodo kawaii zakka ni deaette shimaimashita.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《キュンキュン》は、心がときめくような強い感情を連続的に感じたときに使われます。恋愛や感動、衝動買いにもぴったりです。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 617,
+    "sceneId": 2,
+    "scene": "ショッピング",
+    "main": "鏡の前で着てみたら、《ピン》ときたんです、この一着。",
+    "romaji": "Kagami no mae de kite mitara, **PIN** to kitan desu, kono ichaku.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ピン》は、直感的に「これだ」と感じた瞬間に使われる表現で、決断やひらめきの強さを伝えます。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 631,
+    "sceneId": 3,
+    "scene": "交通・駅",
+    "main": "切符売り場の前で《オロオロ》してしまいました。",
+    "romaji": "Kippu uriba no mae de **OROORO** shite shimaimashita.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《オロオロ》は、どうしていいか分からず戸惑っている様子を表します。異国の駅での不安や混乱にもぴったりです。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 632,
+    "sceneId": 3,
+    "scene": "交通・駅",
+    "main": "時刻表を見て、《ソワソワ》してしまいました。",
+    "romaji": "Jikokuhyō o mite, **SOWASOWA** shite shimaimashita.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ソワソワ》は、落ち着かず不安や期待が入り混じった心理状態を表現します。電車の待ち時間や乗り換え時などに使えます。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 646,
+    "sceneId": 4,
+    "scene": "ホテル・宿泊",
+    "main": "チェックインのとき、《ワクワク》が止まりませんでした。",
+    "romaji": "Chekkuin no toki, **WAKUWAKU** ga tomarimasen deshita.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ワクワク》は、これから始まる体験への期待や楽しみで胸がはずむ様子を表します。旅の入口にぴったりの言葉です。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 647,
+    "sceneId": 4,
+    "scene": "ホテル・宿泊",
+    "main": "ロビーの香りに、《ほっこり》しました。",
+    "romaji": "Robī no kaori ni, **HOKKORI** shimashita.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ほっこり》は、心があたたかく和む様子を表します。丁寧なおもてなしの空気が伝わるときに使われます。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 661,
+    "sceneId": 5,
+    "scene": "空港・飛行機",
+    "main": "チェックインの列に並びながら、《ソワソワ》していました。",
+    "romaji": "Chekkuin no retsu ni narabinagara, **SOWASOWA** shite imashita.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ソワソワ》は、落ち着かずに心が浮き足立っている様子を表します。出発前の緊張や期待感にぴったりです。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 662,
+    "sceneId": 5,
+    "scene": "空港・飛行機",
+    "main": "手荷物検査のときは、《ドキドキ》してしまいます。",
+    "romaji": "Tenimotsu kensa no toki wa, **DOKIDOKI** shite shimaimasu.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ドキドキ》は、心臓の高鳴りを表し、緊張や期待が混じる瞬間に使われます。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 676,
+    "sceneId": 6,
+    "scene": "出発・到着",
+    "main": "ホテルを出るとき、《ドキドキ》がこみ上げてきました。",
+    "romaji": "Hoteru o deru toki, **DOKIDOKI** ga komiagete kimashita.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ドキドキ》は、期待や緊張で心が高鳴る様子を表します。旅立ちのワクワクした気持ちにぴったりです。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 677,
+    "sceneId": 6,
+    "scene": "出発・到着",
+    "main": "大きな荷物を《ゴロゴロ》転がして、出発しました。",
+    "romaji": "Ōkina nimotsu o **GOROGORO** korogashite, shuppatsu shimashita.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ゴロゴロ》は、重いものを引きずるように転がす音や動作を表します。スーツケースを引く音にもリアリティがあります。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 691,
+    "sceneId": 7,
+    "scene": "部屋の中",
+    "main": "帰宅後、部屋に入ると《ホッ》としました。",
+    "romaji": "Kitakugo, heya ni hairu to **HO** to shimashita.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ホッ》は、緊張から解放されて安心する瞬間を表します。家という場所のやさしさを自然に伝えます。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 692,
+    "sceneId": 7,
+    "scene": "部屋の中",
+    "main": "毛布にくるまれて、《ぬくぬく》しています。",
+    "romaji": "Mōfu ni kurumarete, **NUKUNUKU** shite imasu.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ぬくぬく》は、心地よい温かさに包まれている状態を表します。冬の夜やくつろぎの象徴です。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 706,
+    "sceneId": 8,
+    "scene": "家の中／部屋の中パート2",
+    "main": "雨の音を聞きながら、《ボーッ》と過ごしています。",
+    "romaji": "Ame no oto o kikinagara, **BŌ** to sugoshite imasu.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ボーッ》は、何も考えずに心を空っぽにする様子を表します。リラックスや放心の感覚に。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 707,
+    "sceneId": 8,
+    "scene": "家の中／部屋の中パート2",
+    "main": "湯船につかると、《ジワ〜ッ》と疲れが抜けていきました。",
+    "romaji": "Yubune ni tsukaru to, **JIWĀ** to tsukare ga nukete ikimashita.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ジワ〜ッ》は、ゆっくりと広がるような温かさや効き目を表します。体がほどけるような安堵に。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 721,
+    "sceneId": 9,
+    "scene": "自然・風景",
+    "main": "木々の葉が風に《サワサワ》と揺れていました。",
+    "romaji": "Kigi no ha ga kaze ni **SAWASAWA** to yurete imashita.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《サワサワ》は、葉や草が風に軽く触れて鳴る柔らかな音。森の中の心地よい静けさにぴったりです。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 722,
+    "sceneId": 9,
+    "scene": "自然・風景",
+    "main": "小川の水が《チョロチョロ》と流れています。",
+    "romaji": "Ogawa no mizu ga **CHOROCHORO** to nagarete imasu.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《チョロチョロ》は、小さな水の音を表す語。せせらぎや湧き水のやさしい雰囲気に合います。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 136,
+    "sceneId": 10,
+    "scene": "人とのふれあい",
+    "main": "初対面なのに、《ニコニコ》と笑顔で話しかけてくれました。",
+    "romaji": "SHOTSU TAIMEN NA NONI, 《NIKONIKO》 TO EGAO DE HANASHIKAKETE KUREMASHITA.",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《ニコニコ》は、継続してやわらかく微笑んでいる様子を表します。親しみと安心感のある表現です。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 137,
+    "sceneId": 10,
+    "scene": "人とのふれあい",
+    "main": "「ありがとう」の声が《パッ》と心に届きました。",
+    "romaji": "\"ARIGATOU\" NO KOE GA 《PA》 TO KOKORO NI TODOKIMASHITA.",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《パッ》は、瞬間的で明るい広がりを感じさせる語。人の言葉の温かさを伝える効果があります。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 151,
+    "sceneId": 14,
+    "scene": "旅行・観光",
+    "main": "初めての町に降り立って、《ドキドキ》が止まりませんでした。",
+    "romaji": "HAJIMETE NO MACHI NI ORITATTE、《DOKIDOKI》 GA TOMARIMASEN DESHITA.",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《ドキドキ》は、期待や不安が入り混じった高鳴る鼓動を表す言葉です。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 152,
+    "sceneId": 14,
+    "scene": "旅行・観光",
+    "main": "山道を登るたびに、《ゼーゼー》と息が上がりました。",
+    "romaji": "YAMAMICHI WO NOBORU TABI NI、《ZEEZEE》 TO IKI GA AGARIMASHITA.",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《ゼーゼー》は、呼吸が荒くなる音。運動の疲労や必死さを感じさせます。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 212,
+    "sceneId": 15,
+    "scene": "祝い・パーティ",
+    "main": "ケーキが登場して《キャーッ》と歓声があがりました。",
+    "romaji": "ケーキが登場して《キャーッ》と歓声があがりました",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《キャーッ》は、思わず声が出てしまうような驚きや喜びをそのまま音にした表現です。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 213,
+    "sceneId": 15,
+    "scene": "祝い・パーティ",
+    "main": "《キラキラ》の装飾に、心が躍りました。",
+    "romaji": "《キラキラ》の装飾に心が躍りました",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《キラキラ》は、光を反射して輝く様子や、華やかさ・非日常感を強調する場面で使われます。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 166,
+    "sceneId": 11,
+    "scene": "お祭り・イベント",
+    "main": "屋台の香りに誘われて、《ワクワク》が止まりません。",
+    "romaji": "YATAI NO KAORI NI SASOWARETE、《WAKUWAKU》 GA TOMARIMASEN.",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《ワクワク》は、期待や楽しみで心がはずむ様子。祭りの始まりにぴったりです。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 167,
+    "sceneId": 11,
+    "scene": "お祭り・イベント",
+    "main": "太鼓の音が《ドンドン》と胸に響きました。",
+    "romaji": "TAIKO NO OTO GA 《DONDON》 TO MUNE NI HIBIKIMASHITA.",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《ドンドン》は、太鼓や足音などの力強い音を表現します。場の高揚感を演出します。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 166,
+    "sceneId": 12,
+    "scene": "アート・クリエイティブ",
+    "main": "筆を走らせると、《スラスラ》と言葉が出てきました。",
+    "romaji": "FUDE WO HASHIRASERU TO、《SURASURA》 TO KOTOBA GA DETEKIMASHITA.",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《スラスラ》は、つまずかずに滑らかに進む様子。創作が流れに乗っている状態にぴったりです。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 167,
+    "sceneId": 12,
+    "scene": "アート・クリエイティブ",
+    "main": "アイデアが《パッ》とひらめきました。",
+    "romaji": "AIDEA GA 《PA》 TO HIRAMEKIMASHITA.",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《パッ》は、瞬間的な光やひらめきを表します。創造の起点を表現する語です。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 198,
+    "sceneId": 13,
+    "scene": "家族・親しき人との時間",
+    "main": "お母さんの包丁の音が《トントン》と心地よく響きます。",
+    "romaji": "OKAASAN NO HOUCHOU NO OTO GA 《TONTON》 TO KOKOCHIYOKU HIBIKIMASU.",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《トントン》は、軽やかに繰り返す音。日常の安心感や、家庭のぬくもりを思い起こさせます。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 199,
+    "sceneId": 13,
+    "scene": "家族・親しき人との時間",
+    "main": "一緒に食卓を囲むと、《ホッ》と心が落ち着きます。",
+    "romaji": "ISSHO NI SHOKUTAKU WO KAKOMU TO、《HO》 TO KOKORO GA OCHITSUKIMASU.",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《ホッ》は、緊張や疲れがほぐれていくときの吐息のような安堵感。家族との時間にぴったりです。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 226,
+    "sceneId": 16,
+    "scene": "ホテル・宿泊先",
+    "main": "チェックインが《スムーズ》で、とても快適でした",
+    "romaji": "Chekkuin ga 《SUMUUZU》 de, totemo kaiteki deshita",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《スムーズ》は、滞りなく流れるような進行。ストレスのない体験に。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 227,
+    "sceneId": 16,
+    "scene": "ホテル・宿泊先",
+    "main": "部屋の《ピカピカ》な清潔さに感動しました",
+    "romaji": "Heya no 《PIKAPIKA》 na seiketsusa ni kandou shimashita",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《ピカピカ》は、光り輝く様子や新しさ・きらめきを伝える擬音です。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 241,
+    "sceneId": 17,
+    "scene": "レストラン・食事の場",
+    "main": "店内の香りに《クンクン》と鼻が動きました。",
+    "romaji": "TENNAI NO KAORI NI 《KUNKUN》 TO HANA GA UGOKIMASHITA.",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《クンクン》はにおいを嗅いでいるときの軽快な動きを表し、食事前の楽しみを伝えます。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 242,
+    "sceneId": 17,
+    "scene": "レストラン・食事の場",
+    "main": "この料理を見た瞬間、心が《キュン》としました。",
+    "romaji": "KONO RYOURI WO MITA SHUNKAN, KOKORO GA 《KYUN》 TO SHIMASHITA.",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《キュン》は感動やときめきが一気に込み上げてくる気持ちを表現します。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 256,
+    "sceneId": 18,
+    "scene": "リラックス・温泉・癒し",
+    "main": "温泉に浸かって《じんわり》と温まりました。",
+    "romaji": "ONSEN NI TSUKATTE 《JINWARI》 TO ATATAMARIMASHITA.",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《じんわり》はゆっくりと効いてくる感覚や変化を音で表現します。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 257,
+    "sceneId": 18,
+    "scene": "リラックス・温泉・癒し",
+    "main": "深呼吸で《すーっ》と気持ちが落ち着きました。",
+    "romaji": "SHINKOKYŪ DE 《SŪ》 TO KIMOCHI GA OCHITSUKIMASHITA.",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《すーっ》は吸い込む息とともに気分が整う様子を表します。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 271,
+    "sceneId": 19,
+    "scene": "伝統文化・歴史スポット",
+    "main": "神社の《しんと》とした空気に包まれました。",
+    "romaji": "JINJA NO 《SHINTO》 TO SHITA KUUKI NI TSUTSUMAREMASHITA.",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《しんと》は静寂で神聖な空気を表し、厳かな雰囲気を伝えます。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 272,
+    "sceneId": 19,
+    "scene": "伝統文化・歴史スポット",
+    "main": "お寺の鐘が《ゴーン》と響いて、心が洗われました。",
+    "romaji": "OTERA NO KANE GA 《GŌN》 TO HIBIITE, KOKORO GA ARAWAREMASHITA.",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《ゴーン》は深く響く鐘の音を表し、心を清める効果を伝えます。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 286,
+    "sceneId": 20,
+    "scene": "学び・体験・ワークショップ",
+    "main": "初めての道具に《ドキドキ》しました。",
+    "romaji": "HAJIMETE NO DŌGU NI 《DOKIDOKI》 SHIMASHITA.",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《ドキドキ》は期待や緊張で胸が高鳴る様子を表します。体験の始まりにぴったりです。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 287,
+    "sceneId": 20,
+    "scene": "学び・体験・ワークショップ",
+    "main": "先生の説明に《ふむふむ》とうなずきました。",
+    "romaji": "SENSEI NO SETSUMEI NI 《FUMUFUMU》 TO UNAZUKIMASHITA.",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《ふむふむ》は理解しながら納得する様子をやさしく表現します。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 301,
+    "sceneId": 21,
+    "scene": "ビジネス・仕事の場",
+    "main": "プレゼン前に《ドキドキ》が止まりませんでした。",
+    "romaji": "",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《ドキドキ》は緊張や期待で胸が高鳴る様子を、誰もが経験する感覚として表します。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 302,
+    "sceneId": 21,
+    "scene": "ビジネス・仕事の場",
+    "main": "会議室に入ると《ピン》と空気が引き締まりました。",
+    "romaji": "",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《ピン》は緊張感や真剣さが張りつめた瞬間の静けさを音で表現します。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 316,
+    "sceneId": 22,
+    "scene": "天気・自然現象",
+    "main": "窓の外で《サラサラ》と雨が降っていました。",
+    "romaji": "",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《サラサラ》は細かい雨が静かに降る音を表し、しっとりとした空気を伝えます。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 317,
+    "sceneId": 22,
+    "scene": "天気・自然現象",
+    "main": "雷が《ゴロゴロ》と鳴り響いて、少し驚きました。",
+    "romaji": "",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《ゴロゴロ》は雷の低く響く音を再現し、空の不安定さを伝える表現です。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 331,
+    "sceneId": 23,
+    "scene": "贈り物・サプライズ",
+    "main": "袋を開ける手が《ソワソワ》してしまいました。",
+    "romaji": "",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《ソワソワ》は期待と緊張が入り混じった落ち着かない気持ちを表します。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 332,
+    "sceneId": 23,
+    "scene": "贈り物・サプライズ",
+    "main": "リボンをほどくとき、心が《ドキドキ》しました。",
+    "romaji": "",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《ドキドキ》は胸が高鳴る瞬間の気持ちを、音でそのまま伝えます。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 346,
+    "sceneId": 24,
+    "scene": "夜の時間・ロマンチックな雰囲気",
+    "main": "夜空を見上げると、《キラキラ》と星が瞬いていました。",
+    "romaji": "",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《キラキラ》は小さな光が輝き続ける様子を表し、ロマンチックな夜空にぴったりの表現です。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 347,
+    "sceneId": 24,
+    "scene": "夜の時間・ロマンチックな雰囲気",
+    "main": "静かな部屋で《しん…》と時が止まったようでした。",
+    "romaji": "",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《しん…》は音のない深い静けさをそのまま表現し、夜の世界を感じさせます。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 361,
+    "sceneId": 25,
+    "scene": "清潔・衛生・身だしなみ",
+    "main": "朝の洗顔で《シャキッ》と目が覚めました。",
+    "romaji": "",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《シャキッ》は気持ちが引き締まるような感覚を表現します。リフレッシュの始まりにぴったり。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 362,
+    "sceneId": 25,
+    "scene": "清潔・衛生・身だしなみ",
+    "main": "ハンドソープが《モコモコ》泡立って気持ちよかったです。",
+    "romaji": "",
+    "translation": {
+      "en": "",
+      "zh": "",
+      "ko": ""
+    },
+    "description": {
+      "ja": "《モコモコ》は柔らかくたっぷり泡が立つ様子を親しみを込めて伝える言葉です。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 376,
+    "sceneId": 26,
+    "scene": "お店・ショッピングモール",
+    "main": "扉を開けると《ガヤガヤ》とした賑わいが広がっていました。",
+    "romaji": "TOBIRA O AKERU TO 《GAYAGAYA》 TO SHITA NIGIWAI GA HIROGATTEIMASHITA.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ガヤガヤ》は人の話し声や雑踏を表し、にぎやかな空間の始まりを感じさせます。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 377,
+    "sceneId": 26,
+    "scene": "お店・ショッピングモール",
+    "main": "ウィンドウのディスプレイに《パッ》と心が惹かれました。",
+    "romaji": "WINDOW NO DISPLAY NI 《PA》 TO KOKORO GA HIKAREMASHITA.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《パッ》は瞬間的に視界や心が開けるような印象を音で伝える表現です。",
+      "en": "",
+      "zh": "",
+      "ko": ""
+    }
+  },
+  {
+    "id": 391,
+    "sceneId": 27,
+    "scene": "チェックイン・チェックアウト",
+    "main": "ホテルの自動ドアが《スーッ》と開いて迎えてくれました。",
+    "romaji": "HOTERU NO JIDOU DOA GA 《SUU》 TO HIRAITE MUKAETE KUREMASHITA.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《スーッ》は滑らかに動く静かな音で、緊張を和らげてくれるような安心感を伝えます。",
+      "en": "“Suu” is a smooth and quiet sound that conveys a sense of comfort.",
+      "zh": "“スーッ”是一种平稳安静的声音，传达安心感。",
+      "ko": "“스윽”은 부드럽고 조용한 소리로 안도감을 전달합니다."
+    }
+  },
+  {
+    "id": 392,
+    "sceneId": 27,
+    "scene": "チェックイン・チェックアウト",
+    "main": "フロントのベルが《チーン》と鳴りました。",
+    "romaji": "FURONTO NO BERU GA 《CHIIN》 TO NARIMASHITA.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《チーン》は澄んだ短い音で、始まりの合図のような印象を与えます。",
+      "en": "“Chiin” is a clear, short sound signaling a beginning.",
+      "zh": "“チーン”是一种清脆的短音，像是开始的信号。",
+      "ko": "“칭”은 맑고 짧은 소리로 시작을 알리는 느낌을 줍니다."
+    }
+  },
+  {
+    "id": 406,
+    "sceneId": 28,
+    "scene": "和食・伝統料理",
+    "main": "お味噌汁から《ほわ〜》と湯気が立ちのぼりました。",
+    "romaji": "OMISOSHIRU KARA 《HOWA〜》 TO YUGE GA TACHINOBORIMASHITA.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ほわ〜》はあたたかい蒸気がゆっくり広がる様子をやさしく伝えます。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 407,
+    "sceneId": 28,
+    "scene": "和食・伝統料理",
+    "main": "焼き魚の皮が《パリッ》とはじける音が心地よかったです。",
+    "romaji": "YAKIZAKANA NO KAWA GA 《PARI》 TO HAJIKERU OTO GA KOKOCHIYOKATTA DESU.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《パリッ》は焼けた表面が割れる小気味よい音で、香ばしさを際立たせます。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 443,
+    "sceneId": 30,
+    "scene": "学び・授業・体験",
+    "main": "先生のチョークが黒板に《キュッキュッ》と音を立てていました。",
+    "romaji": "先生のチョークが黒板に《キュッキュッ》と音を立てていました",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《キュッキュッ》はチョークが黒板にこすれる細く高い音で、懐かしい学びの始まりを表します。",
+      "en": "“キュッキュッ”はチョークが黒板にこすれる細く高い音で、懐かしい学びの始まりを表します。",
+      "zh": "“キュッキュッ”はチョークが黒板にこすれる細く高い音で、懐かしい学びの始まりを表します。",
+      "ko": "“キュッキュッ”はチョークが黒板にこすれる細く高い音で、懐かしい学びの始まりを表します。"
+    }
+  },
+  {
+    "id": 444,
+    "sceneId": 30,
+    "scene": "学び・授業・体験",
+    "main": "プリントが机の上に《サッ》と配られました。",
+    "romaji": "プリントが机の上に《サッ》と配られました",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《サッ》は紙や物が素早く置かれる動きを軽やかに伝える表現です。",
+      "en": "“サッ”は紙や物が素早く置かれる動きを軽やかに伝える表現です。",
+      "zh": "“サッ”は紙や物が素早く置かれる動きを軽やかに伝える表現です。",
+      "ko": "“サッ”は紙や物が素早く置かれる動きを軽やかに伝える表現です。"
+    }
+  },
+  {
+    "id": 458,
+    "sceneId": 31,
+    "scene": "写真・SNS投稿",
+    "main": "空に《パッと》花火が咲いた瞬間を切り取りました。",
+    "romaji": "空に《パッと》花火が咲いた瞬間を切り取りました",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《パッと》は一気に広がる光や表情を描写する音で、シャッターチャンスを強調します。",
+      "en": "“パッと”は一気に広がる光や表情を描写する音で、シャッターチャンスを強調します。",
+      "zh": "“パッと”は一気に広がる光や表情を描写する音で、シャッターチャンスを強調します。",
+      "ko": "“パッと”は一気に広がる光や表情を描写する音で、シャッターチャンスを強調します。"
+    }
+  },
+  {
+    "id": 459,
+    "sceneId": 31,
+    "scene": "写真・SNS投稿",
+    "main": "スイーツの上のフルーツが《キラキラ》と輝いていました。",
+    "romaji": "スイーツの上のフルーツが《キラキラ》と輝いていました",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《キラキラ》は光の反射や美しさを表す表現で、SNS映えする魅力を伝えます。",
+      "en": "“キラキラ”は光の反射や美しさを表す表現で、SNS映えする魅力を伝えます。",
+      "zh": "“キラキラ”は光の反射や美しさを表す表現で、SNS映えする魅力を伝えます。",
+      "ko": "“キラキラ”は光の反射や美しさを表す表現で、SNS映えする魅力を伝えます。"
+    }
+  },
+  {
+    "id": 473,
+    "sceneId": 32,
+    "scene": "音楽・カラオケ",
+    "main": "お気に入りの曲が始まると、心が《ノリノリ》になります。",
+    "romaji": "お気に入りの曲が始まると心が《ノリノリ》になります",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ノリノリ》はリズムに乗って気分が高揚する様子を表す定番オノマトペです。",
+      "en": "“ノリノリ”はリズムに乗って気分が高揚する様子を表す定番オノマトペです。",
+      "zh": "“ノリノリ”はリズムに乗って気分が高揚する様子を表す定番オノマトペです。",
+      "ko": "“ノリノリ”はリズムに乗って気分が高揚する様子を表す定番オノマトペです。"
+    }
+  },
+  {
+    "id": 474,
+    "sceneId": 32,
+    "scene": "音楽・カラオケ",
+    "main": "ギターの音が《ジャーン》と鳴り響きました。",
+    "romaji": "ギターの音が《ジャーン》と鳴り響きました",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ジャーン》は強くかき鳴らした楽器音を擬音化したもので、インパクトある始まりに最適です。",
+      "en": "“ジャーン”は強くかき鳴らした楽器音を擬音化したもので、インパクトある始まりに最適です。",
+      "zh": "“ジャーン”は強くかき鳴らした楽器音を擬音化したもので、インパクトある始まりに最適です。",
+      "ko": "“ジャーン”は強くかき鳴らした楽器音を擬音化したもので、インパクトある始まりに最適です。"
+    }
+  },
+  {
+    "id": 481,
+    "sceneId": 33,
+    "scene": "会話・やりとり",
+    "main": "相手の返事が《うんうん》と優しくうなずくようで安心しました。",
+    "romaji": "相手の返事が《うんうん》と優しくうなずくようで安心しました",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《うんうん》は肯定と共感を連続で表す音で、会話の温かさを感じさせます。",
+      "en": "“うんうん”は肯定と共感を連続で表す音で、会話の温かさを感じさせます。",
+      "zh": "“うんうん”は肯定と共感を連続で表す音で、会話の温かさを感じさせます。",
+      "ko": "“うんうん”は肯定と共感を連続で表す音で、会話の温かさを感じさせます。"
+    }
+  },
+  {
+    "id": 482,
+    "sceneId": 33,
+    "scene": "会話・やりとり",
+    "main": "突然の話に《ポカン》と口を開けてしまいました。",
+    "romaji": "突然の話に《ポカン》と口を開けてしまいました",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ポカン》は驚きや理解が追いつかない様子を表す音です。",
+      "en": "“ポカン”は驚きや理解が追いつかない様子を表す音です。",
+      "zh": "“ポカン”は驚きや理解が追いつかない様子を表す音です。",
+      "ko": "“ポカン”は驚きや理解が追いつかない様子を表す音です。"
+    }
+  },
+  {
+    "id": 227,
+    "sceneId": 34,
+    "scene": "シーン34",
+    "main": "シーン34の例文1",
+    "romaji": "シーン34の例文1",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "シーン34の説明1",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 228,
+    "sceneId": 34,
+    "scene": "シーン34",
+    "main": "シーン34の例文2",
+    "romaji": "シーン34の例文2",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "シーン34の説明2",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 533,
+    "sceneId": 35,
+    "scene": "病院・体の状態",
+    "main": "薬を飲んで《ほっ》とひと息つきました。",
+    "romaji": "薬を飲んで《ほっ》とひと息つきました",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ほっ》は緊張が解けたときの安心感をそのまま音で表す優しい表現です。",
+      "en": "“ほっ”は緊張が解けたときの安心感をそのまま音で表す優しい表現です。",
+      "zh": "“ほっ”は緊張が解けたときの安心感をそのまま音で表す優しい表現です。",
+      "ko": "“ほっ”は緊張が解けたときの安心感をそのまま音で表す優しい表現です。"
+    }
+  },
+  {
+    "id": 534,
+    "sceneId": 35,
+    "scene": "病院・体の状態",
+    "main": "深呼吸して《スーッ》と気持ちが落ち着いてきました。",
+    "romaji": "深呼吸して《スーッ》と気持ちが落ち着いてきました",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《スーッ》は空気や気持ちがすっと通る感覚を伝えます。",
+      "en": "“スーッ”は空気や気持ちがすっと通る感覚を伝えます。",
+      "zh": "“スーッ”は空気や気持ちがすっと通る感覚を伝えます。",
+      "ko": "“スーッ”は空気や気持ちがすっと通る感覚を伝えます。"
+    }
+  },
+  {
+    "id": 548,
+    "sceneId": 36,
+    "scene": "学校・学生生活",
+    "main": "教室に入ると《ガヤガヤ》とにぎやかな声が響いていました。",
+    "romaji": "[To be added]",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ガヤガヤ》は人が集まっている空間のざわつきを生き生きと描きます。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 549,
+    "sceneId": 36,
+    "scene": "学校・学生生活",
+    "main": "テスト前で《ソワソワ》が止まりませんでした。",
+    "romaji": "[To be added]",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ソワソワ》は落ち着かない気持ちを軽やかに表現します。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 563,
+    "sceneId": 37,
+    "scene": "恋愛",
+    "main": "目が合った瞬間、胸が《キュン》と締めつけられました。",
+    "romaji": "[To be added]",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《キュン》は一瞬で心が動かされたときのときめきを表現します。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 564,
+    "sceneId": 37,
+    "scene": "恋愛",
+    "main": "突然の告白に《ドキッ》と心が跳ねました。",
+    "romaji": "[To be added]",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ドキッ》は驚きや緊張が一気に高まる瞬間の鼓動を描写します。",
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    }
+  },
+  {
+    "id": 578,
+    "sceneId": 38,
+    "scene": "感情表現",
+    "main": "嬉しすぎて《ウキウキ》が止まりませんでした。",
+    "romaji": "[To be added]",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ウキウキ》は喜びと期待が心に弾けるような軽快な感情を表します。",
+      "en": "[To be added]",
+      "zh": "[To be added]",
+      "ko": "[To be added]"
+    }
+  },
+  {
+    "id": 579,
+    "sceneId": 38,
+    "scene": "感情表現",
+    "main": "まさかのプレゼントに《ビックリ》しました。",
+    "romaji": "[To be added]",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ビックリ》は驚きの瞬間を明るく素直に伝える表現です。",
+      "en": "[To be added]",
+      "zh": "[To be added]",
+      "ko": "[To be added]"
+    }
+  },
+  {
+    "id": 428,
+    "sceneId": 39,
+    "scene": "子ども・遊び",
+    "main": "子どもたちが《キャッキャ》とはしゃぎながら走り回っている。",
+    "romaji": "KODOMOTACHI GA 《KYAKKYA》 TO HASHAGINAGARA HASHIRIMAWATTE IRU.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《キャッキャ》は澄んだ高い声で笑う様子を表し、無邪気な歓声が空気を弾ませるような響きを持ちます。",
+      "en": "“Kyakkya” represents high-pitched, innocent laughter that fills the air with joyful excitement.",
+      "zh": "“キャッキャ”表示清脆高亢的笑声，传达出无邪的欢呼和轻快的氛围。",
+      "ko": "“캬캬”는 맑고 높은 웃음소리를 나타내며, 천진난만한 환호가 공기를 가득 채우는 느낌을 줍니다。"
+    }
+  },
+  {
+    "id": 429,
+    "sceneId": 39,
+    "scene": "子ども・遊び",
+    "main": "滑り台から《ズルズル》滑り落ちて、大笑い！",
+    "romaji": "SUBERIDAI KARA 《ZURUZURU》 SUBERIOCHITE OOWARAI!",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ズルズル》は体が地面や面に沿って連続して滑るときの音を表し、滑り落ちる感覚の楽しさや勢いを生き生きと伝えます。",
+      "en": "“Zuruzuru” represents the continuous sliding sound along a surface, conveying the lively momentum of the action.",
+      "zh": "“ズルズル”表示身体沿着地面连续滑动的声音，生动传达滑落的乐趣与动感。",
+      "ko": "“주르륵”은 몸이 바닥을 따라 연속으로 미끄러질 때 나는 소리로, 그 즐거움과 속도감을 생생하게 전합니다。"
+    }
+  },
+  {
+    "id": 601,
+    "sceneId": 41,
+    "scene": "心の余韻",
+    "main": "終演後の静けさに《ジーン》と余韻が広がった。",
+    "romaji": "SHUUENGO NO SHIZUKESA NI 《JIIN》 TO YOIN GA HIROGATTA.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ジーン》は感情が深くしみわたり、胸の奥で温かく残るような感動の余韻を表します。",
+      "en": "“Jiin” expresses a deep emotional afterglow that warmly lingers in the heart.",
+      "zh": "“ジーン”表示情感深深渗透，温暖地留在心中。",
+      "ko": "“지인”은 감정이 가슴 깊이 스며들어 따뜻하게 남는 여운을 표현합니다。"
+    }
+  },
+  {
+    "id": 602,
+    "sceneId": 41,
+    "scene": "心の余韻",
+    "main": "別れ際に《ウルッ》と目が潤んだ。",
+    "romaji": "WAKAREGIWA NI 《URU》 TO ME GA URUNDA.",
+    "translation": {
+      "en": "[Translation will appear here]",
+      "zh": "[Translation will appear here]",
+      "ko": "[Translation will appear here]"
+    },
+    "description": {
+      "ja": "《ウルッ》は涙があふれる直前の、心が震えるような優しい感情の動きを映し出します。",
+      "en": "“Uru” reflects the moment just before tears overflow, a trembling of gentle emotion.",
+      "zh": "“ウルッ”表现眼泪将溢出的瞬间，内心颤动的温柔感情。",
+      "ko": "“우룻”은 눈물이 흐르기 직전의 마음이 떨리는 듯한 부드러운 감정을 표현합니다。"
+    }
+  }
+]
