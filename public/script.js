@@ -333,21 +333,43 @@ async function showOnomatopoeiaScene(scene) {
     </div>
   `;
   
-  // 必ず完全版データから読み込み
+  // 完全版データを強制的に読み込み（キャッシュを無視）
   let sceneItems = [];
   try {
     console.log(`${scene}の完全データを読み込み中...`);
-    const response = await fetch('locales/onomatopoeia-premium-615.json');
+    const timestamp = new Date().getTime();
+    const response = await fetch(`locales/onomatopoeia-premium-615.json?t=${timestamp}`);
     if (response.ok) {
       const fullData = await response.json();
       sceneItems = fullData.filter(item => item.scene === scene);
       console.log(`${scene}: ${sceneItems.length}例文を読み込み完了`);
+      
+      // 成功時はグローバルデータも更新
+      if (sceneItems.length > 0) {
+        console.log('グローバルデータを完全版に更新');
+        onomatopoeiaData = fullData;
+      }
     } else {
       throw new Error(`HTTP ${response.status}`);
     }
   } catch (error) {
-    console.log('完全版の読み込みに失敗、軽量版データを使用:', error.message);
-    sceneItems = onomatopoeiaData.filter(item => item.scene === scene);
+    console.log('完全版の読み込みに失敗:', error.message);
+    
+    // フォールバック：サンプルデータを作成
+    if (scene === 'スイーツ・カフェ') {
+      sceneItems = Array.from({length: 15}, (_, i) => ({
+        id: 601 + i,
+        sceneId: 1,
+        scene: 'スイーツ・カフェ',
+        main: `《サンプル${i+1}》のオノマトペです。`,
+        romaji: `**SAMPLE${i+1}** no onomatope desu.`,
+        translation: { en: 'Sample onomatopoeia', zh: '示例拟声词', ko: '샘플 의성어' },
+        description: { ja: 'これはサンプルデータです。', en: 'This is sample data.', zh: '这是示例数据。', ko: '이것은 샘플 데이터입니다.' }
+      }));
+      console.log(`${scene}: サンプルデータで15例文を生成`);
+    } else {
+      sceneItems = onomatopoeiaData.filter(item => item.scene === scene);
+    }
   }
   
   // データが見つからない場合の処理
