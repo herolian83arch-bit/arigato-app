@@ -323,28 +323,46 @@ async function showOnomatopoeiaScene(scene) {
   scenesContainer.style.display = 'none';
   contentContainer.style.display = 'block';
   
-  // シーン詳細表示時は完全版データから15例文を取得
-  let sceneItems = onomatopoeiaData.filter(item => item.scene === scene);
+  // ローディング表示
+  examplesContainer.innerHTML = `
+    <div style="text-align: center; padding: 20px; color: #666;">
+      <p>データを読み込み中...</p>
+      <div style="margin-top: 15px;">
+        <div style="display: inline-block; width: 20px; height: 20px; border: 3px solid #f3f3f3; border-top: 3px solid #667eea; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+      </div>
+    </div>
+  `;
   
-  // 現在のデータに2例文しかない場合は、完全版から読み込み
-  if (sceneItems.length < 10) {
-    try {
-      console.log(`${scene}の完全データを読み込み中...`);
-      const response = await fetch('locales/onomatopoeia-premium-615.json');
-      if (response.ok) {
-        const fullData = await response.json();
-        const fullSceneItems = fullData.filter(item => item.scene === scene);
-        if (fullSceneItems.length > sceneItems.length) {
-          sceneItems = fullSceneItems;
-          console.log(`${scene}: ${fullSceneItems.length}例文を読み込み完了`);
-        }
-      }
-    } catch (error) {
-      console.log('完全版の読み込みに失敗、現在のデータを使用:', error.message);
+  // 必ず完全版データから読み込み
+  let sceneItems = [];
+  try {
+    console.log(`${scene}の完全データを読み込み中...`);
+    const response = await fetch('locales/onomatopoeia-premium-615.json');
+    if (response.ok) {
+      const fullData = await response.json();
+      sceneItems = fullData.filter(item => item.scene === scene);
+      console.log(`${scene}: ${sceneItems.length}例文を読み込み完了`);
+    } else {
+      throw new Error(`HTTP ${response.status}`);
     }
+  } catch (error) {
+    console.log('完全版の読み込みに失敗、軽量版データを使用:', error.message);
+    sceneItems = onomatopoeiaData.filter(item => item.scene === scene);
   }
   
-  let html = `<h3>${scene}</h3>`;
+  // データが見つからない場合の処理
+  if (sceneItems.length === 0) {
+    examplesContainer.innerHTML = `
+      <div style="text-align: center; padding: 20px; color: #666;">
+        <h3>${scene}</h3>
+        <p>このシーンのデータが見つかりませんでした。</p>
+        <button onclick="showOnomatopoeiaScenes()" style="padding: 10px 20px; margin-top: 10px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer;">シーン一覧に戻る</button>
+      </div>
+    `;
+    return;
+  }
+  
+  let html = `<h3>${scene} (${sceneItems.length}例文)</h3>`;
   
   for (const item of sceneItems) {
     // 動的翻訳でオノマトペの翻訳を取得
