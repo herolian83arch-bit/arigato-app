@@ -122,7 +122,16 @@ async function translateLanguageData(baseData, targetLang) {
 async function loadOnomatopoeiaData() {
   try {
     console.log('オノマトペデータの読み込みを開始...');
-    const response = await fetch('locales/onomatopoeia-premium-615.json');
+    
+    // まず小さなファイルで試し、失敗したら大きなファイルを試す
+    let response;
+    try {
+      response = await fetch('locales/onomatopoeia-test.json');
+      if (!response.ok) throw new Error('Test file not found');
+    } catch (testError) {
+      console.log('テストファイルが見つからないため、完全版を読み込み中...');
+      response = await fetch('locales/onomatopoeia-premium-615.json');
+    }
     
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -141,16 +150,38 @@ async function loadOnomatopoeiaData() {
   } catch (error) {
     console.error('オノマトペデータの読み込みに失敗:', error);
     
+    // 最後の手段：サンプルデータを作成
+    console.log('サンプルデータで代替表示します');
+    onomatopoeiaData = [
+      {
+        "id": 1,
+        "sceneId": 1,
+        "scene": "サンプル",
+        "main": "《ふわふわ》のパンケーキが美味しいです。",
+        "romaji": "**FUWAFUWA** no pankēki ga oishii desu.",
+        "translation": { "en": "The fluffy pancakes are delicious.", "zh": "蓬松的煎饼很好吃。", "ko": "폭신폭신한 팬케이크가 맛있어요." },
+        "description": { "ja": "《ふわふわ》は、柔らかく軽やかな感触を表すオノマトペです。", "en": "Fuwafuwa represents a soft and light texture.", "zh": "蓬松蓬松表示柔软轻盈的质感。", "ko": "폭신폭신은 부드럽고 가벼운 질감을 나타내는 의성어입니다." }
+      }
+    ];
+    
     // エラー時は代替メッセージを表示
     const scenesContainer = document.getElementById('onomatopoeia-scenes');
     if (scenesContainer) {
       scenesContainer.innerHTML = `
         <div style="text-align: center; padding: 20px; color: #666;">
-          <p>データの読み込みに失敗しました。</p>
-          <p>エラー: ${error.message}</p>
+          <p>⚠️ データの読み込みに失敗しました。</p>
+          <p>サンプルデータで表示しています。</p>
+          <p style="font-size: 0.9em;">エラー: ${error.message}</p>
           <button onclick="loadOnomatopoeiaData()" style="padding: 10px 20px; margin-top: 10px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">再試行</button>
         </div>
       `;
+      
+      // サンプルデータでシーンを表示
+      setTimeout(() => {
+        if (document.getElementById('onomatopoeia-modal').style.display === 'block') {
+          showOnomatopoeiaScenes();
+        }
+      }, 1000);
     }
   }
 }
