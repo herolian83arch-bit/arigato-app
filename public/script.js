@@ -121,14 +121,8 @@ async function translateLanguageData(baseData, targetLang) {
 // オノマトペデータを読み込み
 async function loadOnomatopoeiaData() {
   try {
-    const response = await fetch('locales/onomatopoeia-premium-all-41-scenes.json');
-    const rawData = await response.json();
-    
-    // romajiを大文字に変換
-    onomatopoeiaData = rawData.map(item => ({
-      ...item,
-      romaji: item.romaji ? item.romaji.toUpperCase() : item.romaji
-    }));
+    const response = await fetch('locales/onomatopoeia-premium.json');
+    onomatopoeiaData = await response.json();
   } catch (error) {
     console.error('オノマトペデータの読み込みに失敗:', error);
   }
@@ -233,9 +227,18 @@ async function showOnomatopoeiaScene(scene) {
       translatedDescription = await translateText(item.description.ja, currentLang);
     }
     
+    // お気に入り機能の設定
+    const favKey = `onomatopoeia-${item.id}`;
+    const favorites = getFavorites();
+    const isFav = !!favorites[favKey];
+    
     html += `
       <div class="onomatopoeia-item">
-        <div class="item-number">${item.id}</div>
+        <div class="item-header" style="display: flex; align-items: center; margin-bottom: 8px;">
+          <div class="item-number">${item.id}</div>
+          <span class="favorite-star" data-key="${favKey}" style="cursor:pointer;font-size:1.3em;color:${isFav ? 'gold' : '#bbb'};user-select:none;margin-left:8px;">${isFav ? '★' : '☆'}</span>
+          <button class="speak-btn" style="margin-left:12px;background:none;border:none;font-size:1.2em;cursor:pointer;" onclick="playJapaneseSpeech('${item.main.replace(/<[^>]+>/g, '').replace(/《[^》]+》/g, '')}')">🔊</button>
+        </div>
         <div class="item-main">${translatedMain}</div>
         <div class="item-romaji">${item.romaji}</div>
         <div class="item-description">${translatedDescription}</div>
@@ -258,6 +261,19 @@ async function showOnomatopoeiaScene(scene) {
   }
   
   examplesContainer.innerHTML = html;
+  
+  // オノマトペのお気に入りクリックイベントを追加
+  examplesContainer.querySelectorAll('.favorite-star').forEach(star => {
+    star.onclick = function() {
+      const key = this.getAttribute('data-key');
+      const favs = getFavorites();
+      favs[key] = !favs[key];
+      setFavorites(favs);
+      // 星の表示を更新
+      this.textContent = favs[key] ? '★' : '☆';
+      this.style.color = favs[key] ? 'gold' : '#bbb';
+    };
+  });
 }
 
 // 決済モーダルを表示
@@ -481,14 +497,9 @@ function enableOfflineMode() {
 
 // 音声再生の改善（プレミアム機能）
 window.playJapaneseSpeech = function(japaneseText) {
-  // 「音」単体の発音を訓読み「おと」に修正
-  let correctedText = japaneseText;
-  // 「音」が単体で現れる場合（前後に漢字がない場合）を訓読みに
-  correctedText = correctedText.replace(/(?<![一-龯])音(?![一-龯])/g, 'おと');
-  
   if (isPremiumUser) {
     // プレミアム音声機能
-    const utter = new SpeechSynthesisUtterance(correctedText);
+    const utter = new SpeechSynthesisUtterance(japaneseText);
     utter.lang = 'ja-JP';
     utter.rate = speechSpeed;
     utter.pitch = 1.2; // プレミアム機能：音声の高さを調整
@@ -496,7 +507,7 @@ window.playJapaneseSpeech = function(japaneseText) {
     speechSynthesis.speak(utter);
   } else {
     // 通常の音声機能
-    const utter = new SpeechSynthesisUtterance(correctedText);
+    const utter = new SpeechSynthesisUtterance(japaneseText);
     utter.lang = 'ja-JP';
     utter.rate = speechSpeed;
     speechSynthesis.speak(utter);
