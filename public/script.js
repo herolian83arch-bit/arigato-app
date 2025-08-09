@@ -166,8 +166,7 @@ async function loadOnomatopoeiaData() {
         "scene": "サンプル",
         "main": "《ふわふわ》のパンケーキが美味しいです。",
         "romaji": "**FUWAFUWA** no pankēki ga oishii desu.",
-        "translation": { "en": "The fluffy pancakes are delicious.", "zh": "蓬松的煎饼很好吃。", "ko": "폭신폭신한 팬케이크가 맛있어요." },
-        "description": { "ja": "《ふわふわ》は、柔らかく軽やかな感触を表すオノマトペです。", "en": "Fuwafuwa represents a soft and light texture.", "zh": "蓬松蓬松表示柔软轻盈的质感。", "ko": "폭신폭신은 부드럽고 가벼운 질감을 나타내는 의성어입니다." }
+        "description": { "ja": "《ふわふわ》は、柔らかく軽やかな感触を表すオノマトペです。" }
       }
     ];
     
@@ -355,31 +354,26 @@ async function showOnomatopoeiaScene(scene) {
   } catch (error) {
     console.log('完全版の読み込みに失敗:', error.message);
     
-    // フォールバック：確実に15例文を表示するサンプルデータ
-    const sampleOnomatopoeia = [
-      'ふわふわ', 'とろ〜り', 'しっとり', 'カリッ', 'ホクホク', 'ドキドキ', 'ワクワク', 'ソワソワ',
-      'キラキラ', 'ピカピカ', 'ツルツル', 'ザラザラ', 'フワリ', 'パリパリ', 'プルプル'
-    ];
+    // フォールバック：シーン別の適切なサンプルデータ
+    const sceneOnomatopoeia = {
+      '部屋の中': ['ガチャガチャ', 'パタパタ', 'コトコト', 'カチカチ', 'ブーン', 'ピピピ', 'ジリジリ', 'シーン', 'ペラペラ', 'カサカサ', 'ポンポン', 'スースー', 'トントン', 'ザザー', 'プツン'],
+      'スイーツ・カフェ': ['ふわふわ', 'とろ〜り', 'しっとり', 'カリッ', 'ホクホク', 'サクサク', 'プルプル', 'トロトロ', 'パリパリ', 'モチモチ', 'シャリシャリ', 'クリーミー', 'ジュワー', 'フワリ', 'コクコク'],
+      '出発・到着': ['ドキドキ', 'ワクワク', 'ソワソワ', 'バタバタ', 'ガラガラ', 'ゴロゴロ', 'ザワザワ', 'ペコペコ', 'ウキウキ', 'ハラハラ', 'ドタバタ', 'キョロキョロ', 'テキパキ', 'ヨタヨタ', 'フラフラ']
+    };
+    
+    const onomatoList = sceneOnomatopoeia[scene] || sceneOnomatopoeia['部屋の中'];
     
     sceneItems = Array.from({length: 15}, (_, i) => ({
       id: 601 + i,
       sceneId: 1,
       scene: scene,
-      main: `《${sampleOnomatopoeia[i]}》を使った${scene}での表現です。`,
-      romaji: `**${sampleOnomatopoeia[i].toUpperCase()}** o tsukatta ${scene} de no hyougen desu.`,
-      translation: { 
-        en: `Expression using "${sampleOnomatopoeia[i]}" in ${scene} context.`, 
-        zh: `在${scene}中使用"${sampleOnomatopoeia[i]}"的表达。`, 
-        ko: `${scene}에서 "${sampleOnomatopoeia[i]}"를 사용한 표현입니다.` 
-      },
+      main: `《${onomatoList[i]}》を使った${scene}での表現です。`,
+      romaji: `**${onomatoList[i].toUpperCase()}** o tsukatta ${scene} de no hyougen desu.`,
       description: { 
-        ja: `《${sampleOnomatopoeia[i]}》は、${scene}でよく使われるオノマトペです。`, 
-        en: `"${sampleOnomatopoeia[i]}" is commonly used onomatopoeia in ${scene}.`, 
-        zh: `"${sampleOnomatopoeia[i]}"是在${scene}中常用的拟声词。`, 
-        ko: `"${sampleOnomatopoeia[i]}"는 ${scene}에서 자주 사용되는 의성어입니다.` 
+        ja: `《${onomatoList[i]}》は、${scene}でよく使われるオノマトペです。`
       }
     }));
-    console.log(`${scene}: 確実なサンプルデータで15例文を生成`);
+    console.log(`${scene}: シーン別サンプルデータで15例文を生成`);
   }
   
   // データが見つからない場合の処理
@@ -421,20 +415,7 @@ async function showOnomatopoeiaScene(scene) {
         <div class="item-main">${translatedMain}</div>
         <div class="item-romaji">${item.romaji}</div>
         <div class="item-description">${translatedDescription}</div>
-        <div class="item-translations">
-          <div class="translation-item">
-            <span class="lang-label">EN:</span>
-            <span class="translation-text">${item.translation.en || 'Coming soon...'}</span>
-          </div>
-          <div class="translation-item">
-            <span class="lang-label">中文:</span>
-            <span class="translation-text">${item.translation.zh || '即将推出...'}</span>
-          </div>
-          <div class="translation-item">
-            <span class="lang-label">한국어:</span>
-            <span class="translation-text">${item.translation.ko || '곧 출시...'}</span>
-          </div>
-        </div>
+
       </div>
     `;
   }
