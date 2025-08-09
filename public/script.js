@@ -121,74 +121,16 @@ async function translateLanguageData(baseData, targetLang) {
 // オノマトペデータを読み込み
 async function loadOnomatopoeiaData() {
   try {
-    console.log('オノマトペデータの読み込みを開始...');
+    const response = await fetch('locales/onomatopoeia-premium-all-41-scenes.json');
+    const rawData = await response.json();
     
-    // 完全版を最優先で読み込み、失敗時のみ軽量版を使用
-    let response;
-    try {
-      console.log('完全版データ(615項目)を読み込み中...');
-      response = await fetch('locales/onomatopoeia-premium-615.json');
-      if (!response.ok) throw new Error('Premium file not found');
-    } catch (premiumError) {
-      try {
-        console.log('40シーン版ファイルを読み込み中...');
-        response = await fetch('locales/onomatopoeia-all-scenes.json');
-        if (!response.ok) throw new Error('All scenes file not found');
-      } catch (allScenesError) {
-        console.log('テストファイルを読み込み中...');
-        response = await fetch('locales/onomatopoeia-test.json');
-      }
-    }
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    
-    const text = await response.text();
-    console.log('レスポンステキスト長:', text.length);
-    
-    onomatopoeiaData = JSON.parse(text);
-    console.log(`オノマトペデータ読み込み完了: ${onomatopoeiaData.length}件`);
-    
-    // データ読み込み後にシーンを再表示
-    if (document.getElementById('onomatopoeia-modal').style.display === 'block') {
-      showOnomatopoeiaScenes();
-    }
+    // romajiを大文字に変換
+    onomatopoeiaData = rawData.map(item => ({
+      ...item,
+      romaji: item.romaji ? item.romaji.toUpperCase() : item.romaji
+    }));
   } catch (error) {
     console.error('オノマトペデータの読み込みに失敗:', error);
-    
-    // 最後の手段：サンプルデータを作成
-    console.log('サンプルデータで代替表示します');
-    onomatopoeiaData = [
-      {
-        "id": 1,
-        "sceneId": 1,
-        "scene": "サンプル",
-        "main": "《ふわふわ》のパンケーキが美味しいです。",
-        "romaji": "**FUWAFUWA** no pankēki ga oishii desu.",
-        "description": { "ja": "《ふわふわ》は、柔らかく軽やかな感触を表すオノマトペです。" }
-      }
-    ];
-    
-    // エラー時は代替メッセージを表示
-    const scenesContainer = document.getElementById('onomatopoeia-scenes');
-    if (scenesContainer) {
-      scenesContainer.innerHTML = `
-        <div style="text-align: center; padding: 20px; color: #666;">
-          <p>⚠️ データの読み込みに失敗しました。</p>
-          <p>サンプルデータで表示しています。</p>
-          <p style="font-size: 0.9em;">エラー: ${error.message}</p>
-          <button onclick="loadOnomatopoeiaData()" style="padding: 10px 20px; margin-top: 10px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">再試行</button>
-        </div>
-      `;
-      
-      // サンプルデータでシーンを表示
-      setTimeout(() => {
-        if (document.getElementById('onomatopoeia-modal').style.display === 'block') {
-          showOnomatopoeiaScenes();
-        }
-      }, 1000);
-    }
   }
 }
 
@@ -218,7 +160,7 @@ function updatePremiumUI() {
 }
 
 // オノマトペ辞典モーダルを表示
-async function showOnomatopoeiaModal() {
+function showOnomatopoeiaModal() {
   if (!isPremiumUser) {
     showPaymentModal();
     return;
@@ -226,13 +168,6 @@ async function showOnomatopoeiaModal() {
   
   const modal = document.getElementById('onomatopoeia-modal');
   modal.style.display = 'block';
-  
-  // データが読み込まれていない場合は再読み込み
-  if (!onomatopoeiaData || onomatopoeiaData.length === 0) {
-    console.log('オノマトペデータを再読み込み中...');
-    await loadOnomatopoeiaData();
-  }
-  
   showOnomatopoeiaScenes();
 }
 
@@ -249,44 +184,6 @@ function showOnomatopoeiaScenes() {
   
   scenesContainer.style.display = 'block';
   contentContainer.style.display = 'none';
-  
-  // デバッグ用ログ
-  console.log('オノマトペデータ状況:', {
-    dataLength: onomatopoeiaData.length,
-    sampleData: onomatopoeiaData.slice(0, 2)
-  });
-  
-  // データが空の場合の処理
-  if (!onomatopoeiaData || onomatopoeiaData.length === 0) {
-    scenesContainer.innerHTML = `
-      <div style="text-align: center; color: #666; padding: 20px;">
-        <p>データを読み込み中...</p>
-        <div style="margin-top: 15px;">
-          <div style="display: inline-block; width: 20px; height: 20px; border: 3px solid #f3f3f3; border-top: 3px solid #667eea; border-radius: 50%; animation: spin 1s linear infinite;"></div>
-        </div>
-        <style>
-          @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-          }
-        </style>
-      </div>
-    `;
-    
-    // 10秒後にタイムアウト処理
-    setTimeout(() => {
-      if (!onomatopoeiaData || onomatopoeiaData.length === 0) {
-        scenesContainer.innerHTML = `
-          <div style="text-align: center; padding: 20px; color: #666;">
-            <p>データの読み込みがタイムアウトしました。</p>
-            <button onclick="loadOnomatopoeiaData()" style="padding: 10px 20px; margin-top: 10px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">再試行</button>
-          </div>
-        `;
-      }
-    }, 10000);
-    
-    return;
-  }
   
   // シーンをグループ化
   const sceneGroups = {};
@@ -322,73 +219,9 @@ async function showOnomatopoeiaScene(scene) {
   scenesContainer.style.display = 'none';
   contentContainer.style.display = 'block';
   
-  // ローディング表示
-  examplesContainer.innerHTML = `
-    <div style="text-align: center; padding: 20px; color: #666;">
-      <p>データを読み込み中...</p>
-      <div style="margin-top: 15px;">
-        <div style="display: inline-block; width: 20px; height: 20px; border: 3px solid #f3f3f3; border-top: 3px solid #667eea; border-radius: 50%; animation: spin 1s linear infinite;"></div>
-      </div>
-    </div>
-  `;
+  const sceneItems = onomatopoeiaData.filter(item => item.scene === scene);
   
-  // 完全版データを強制的に読み込み（キャッシュを無視）
-  let sceneItems = [];
-  try {
-    console.log(`${scene}の完全データを読み込み中...`);
-    const timestamp = new Date().getTime();
-    const response = await fetch(`locales/onomatopoeia-premium-615.json?t=${timestamp}`);
-    if (response.ok) {
-      const fullData = await response.json();
-      sceneItems = fullData.filter(item => item.scene === scene);
-      console.log(`${scene}: ${sceneItems.length}例文を読み込み完了`);
-      
-      // 成功時はグローバルデータも更新
-      if (sceneItems.length > 0) {
-        console.log('グローバルデータを完全版に更新');
-        onomatopoeiaData = fullData;
-      }
-    } else {
-      throw new Error(`HTTP ${response.status}`);
-    }
-  } catch (error) {
-    console.log('完全版の読み込みに失敗:', error.message);
-    
-    // フォールバック：シーン別の適切なサンプルデータ
-    const sceneOnomatopoeia = {
-      '部屋の中': ['ガチャガチャ', 'パタパタ', 'コトコト', 'カチカチ', 'ブーン', 'ピピピ', 'ジリジリ', 'シーン', 'ペラペラ', 'カサカサ', 'ポンポン', 'スースー', 'トントン', 'ザザー', 'プツン'],
-      'スイーツ・カフェ': ['ふわふわ', 'とろ〜り', 'しっとり', 'カリッ', 'ホクホク', 'サクサク', 'プルプル', 'トロトロ', 'パリパリ', 'モチモチ', 'シャリシャリ', 'クリーミー', 'ジュワー', 'フワリ', 'コクコク'],
-      '出発・到着': ['ドキドキ', 'ワクワク', 'ソワソワ', 'バタバタ', 'ガラガラ', 'ゴロゴロ', 'ザワザワ', 'ペコペコ', 'ウキウキ', 'ハラハラ', 'ドタバタ', 'キョロキョロ', 'テキパキ', 'ヨタヨタ', 'フラフラ']
-    };
-    
-    const onomatoList = sceneOnomatopoeia[scene] || sceneOnomatopoeia['部屋の中'];
-    
-    sceneItems = Array.from({length: 15}, (_, i) => ({
-      id: 601 + i,
-      sceneId: 1,
-      scene: scene,
-      main: `《${onomatoList[i]}》を使った${scene}での表現です。`,
-      romaji: `**${onomatoList[i].toUpperCase()}** o tsukatta ${scene} de no hyougen desu.`,
-      description: { 
-        ja: `《${onomatoList[i]}》は、${scene}でよく使われるオノマトペです。`
-      }
-    }));
-    console.log(`${scene}: シーン別サンプルデータで15例文を生成`);
-  }
-  
-  // データが見つからない場合の処理
-  if (sceneItems.length === 0) {
-    examplesContainer.innerHTML = `
-      <div style="text-align: center; padding: 20px; color: #666;">
-        <h3>${scene}</h3>
-        <p>このシーンのデータが見つかりませんでした。</p>
-        <button onclick="showOnomatopoeiaScenes()" style="padding: 10px 20px; margin-top: 10px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer;">シーン一覧に戻る</button>
-      </div>
-    `;
-    return;
-  }
-  
-  let html = `<h3>${scene} (${sceneItems.length}例文)</h3>`;
+  let html = `<h3>${scene}</h3>`;
   
   for (const item of sceneItems) {
     // 動的翻訳でオノマトペの翻訳を取得
@@ -400,41 +233,31 @@ async function showOnomatopoeiaScene(scene) {
       translatedDescription = await translateText(item.description.ja, currentLang);
     }
     
-    // オノマトペ用のお気に入りキーを作成
-    const favKey = `onomatopoeia-${currentLang}-${item.id}`;
-    const favorites = getFavorites();
-    const isFav = !!favorites[favKey];
-    
     html += `
       <div class="onomatopoeia-item">
-        <div class="item-header">
-          <div class="item-number">${item.id}</div>
-          <span class="favorite-star" data-key="${favKey}" style="cursor:pointer;font-size:1.3em;color:${isFav ? 'gold' : '#bbb'};user-select:none;margin-left:auto;">${isFav ? '★' : '☆'}</span>
-          <button class="speak-btn" style="margin-left:8px;" onclick="playJapaneseSpeech('${item.main.replace(/<[^>]+>/g, '').replace(/《|》/g, '').replace(/'/g, "\\'")}')">🔊</button>
-        </div>
+        <div class="item-number">${item.id}</div>
         <div class="item-main">${translatedMain}</div>
         <div class="item-romaji">${item.romaji}</div>
         <div class="item-description">${translatedDescription}</div>
-
+        <div class="item-translations">
+          <div class="translation-item">
+            <span class="lang-label">EN:</span>
+            <span class="translation-text">${item.translation.en || 'Coming soon...'}</span>
+          </div>
+          <div class="translation-item">
+            <span class="lang-label">中文:</span>
+            <span class="translation-text">${item.translation.zh || '即将推出...'}</span>
+          </div>
+          <div class="translation-item">
+            <span class="lang-label">한국어:</span>
+            <span class="translation-text">${item.translation.ko || '곧 출시...'}</span>
+          </div>
+        </div>
       </div>
     `;
   }
   
   examplesContainer.innerHTML = html;
-  
-  // オノマトペ辞典のお気に入りクリックイベント
-  examplesContainer.querySelectorAll('.favorite-star').forEach(star => {
-    star.onclick = function() {
-      const key = this.getAttribute('data-key');
-      const favs = getFavorites();
-      favs[key] = !favs[key];
-      setFavorites(favs);
-      
-      // 星の表示を即座に更新
-      this.style.color = favs[key] ? 'gold' : '#bbb';
-      this.textContent = favs[key] ? '★' : '☆';
-    };
-  });
 }
 
 // 決済モーダルを表示
@@ -658,9 +481,14 @@ function enableOfflineMode() {
 
 // 音声再生の改善（プレミアム機能）
 window.playJapaneseSpeech = function(japaneseText) {
+  // 「音」単体の発音を訓読み「おと」に修正
+  let correctedText = japaneseText;
+  // 「音」が単体で現れる場合（前後に漢字がない場合）を訓読みに
+  correctedText = correctedText.replace(/(?<![一-龯])音(?![一-龯])/g, 'おと');
+  
   if (isPremiumUser) {
     // プレミアム音声機能
-    const utter = new SpeechSynthesisUtterance(japaneseText);
+    const utter = new SpeechSynthesisUtterance(correctedText);
     utter.lang = 'ja-JP';
     utter.rate = speechSpeed;
     utter.pitch = 1.2; // プレミアム機能：音声の高さを調整
@@ -668,7 +496,7 @@ window.playJapaneseSpeech = function(japaneseText) {
     speechSynthesis.speak(utter);
   } else {
     // 通常の音声機能
-    const utter = new SpeechSynthesisUtterance(japaneseText);
+    const utter = new SpeechSynthesisUtterance(correctedText);
     utter.lang = 'ja-JP';
     utter.rate = speechSpeed;
     speechSynthesis.speak(utter);
