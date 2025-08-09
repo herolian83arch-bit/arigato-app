@@ -323,7 +323,26 @@ async function showOnomatopoeiaScene(scene) {
   scenesContainer.style.display = 'none';
   contentContainer.style.display = 'block';
   
-  const sceneItems = onomatopoeiaData.filter(item => item.scene === scene);
+  // シーン詳細表示時は完全版データから15例文を取得
+  let sceneItems = onomatopoeiaData.filter(item => item.scene === scene);
+  
+  // 現在のデータに2例文しかない場合は、完全版から読み込み
+  if (sceneItems.length < 10) {
+    try {
+      console.log(`${scene}の完全データを読み込み中...`);
+      const response = await fetch('locales/onomatopoeia-premium-615.json');
+      if (response.ok) {
+        const fullData = await response.json();
+        const fullSceneItems = fullData.filter(item => item.scene === scene);
+        if (fullSceneItems.length > sceneItems.length) {
+          sceneItems = fullSceneItems;
+          console.log(`${scene}: ${fullSceneItems.length}例文を読み込み完了`);
+        }
+      }
+    } catch (error) {
+      console.log('完全版の読み込みに失敗、現在のデータを使用:', error.message);
+    }
+  }
   
   let html = `<h3>${scene}</h3>`;
   
