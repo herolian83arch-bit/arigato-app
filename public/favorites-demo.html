@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お気に入り機能デモ - Arigato App</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    .demo-section {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .demo-item {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .demo-content {
+      flex: 1;
+    }
+    .demo-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .favorite-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      font-size: 1.3em;
+      color: #bbb;
+      min-width: 40px;
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      border-radius: 4px;
+    }
+    .favorite-btn:hover {
+      color: #ffd700;
+      transform: scale(1.1);
+    }
+    .favorite-btn.active {
+      color: #ffd700;
+      transform: scale(1.1);
+    }
+    .speak-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2em;
+      padding: 8px;
+      border-radius: 4px;
+    }
+    .speak-btn:hover {
+      background-color: #f0f0f0;
+    }
+    .status {
+      background: #e8f5e8;
+      padding: 10px;
+      border-radius: 4px;
+      margin: 10px 0;
+    }
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+    .control-btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #007bff;
+      color: white;
+      font-weight: 600;
+    }
+    .control-btn:hover {
+      background: #0056b3;
+    }
+    .control-btn.danger {
+      background: #dc3545;
+    }
+    .control-btn.danger:hover {
+      background: #c82333;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌟 お気に入り機能デモ</h1>
+  
+  <div class="demo-section">
+    <h2>機能テスト</h2>
+    <div class="controls">
+      <button class="control-btn" onclick="testFavorites()">お気に入り状態確認</button>
+      <button class="control-btn" onclick="clearFavorites()">全お気に入り削除</button>
+      <button class="control-btn" onclick="toggleFeature()">機能ON/OFF切り替え</button>
+      <button class="control-btn danger" onclick="testLocalStorage()">localStorageテスト</button>
+    </div>
+    <div id="status" class="status">準備完了</div>
+  </div>
+
+  <div class="demo-section">
+    <h2>例文カード（お気に入り機能付き）</h2>
+    <div id="demo-cards"></div>
+  </div>
+
+  <div class="demo-section">
+    <h2>オノマトペ例（お気に入り機能付き）</h2>
+    <div id="demo-onomatopoeia"></div>
+  </div>
+
+  <script>
+    // 機能フラグ
+    let FEATURE_FAVORITES = true;
+    
+    // デモデータ
+    const demoMessages = [
+      { id: 1, text: "心がじんわりしました。", romaji: "KOKORO GA JINWARI SHIMASHITA", note: "温かさを感じる表現" },
+      { id: 2, text: "心がほっとしました。", romaji: "KOKORO GA HOTTO SHIMASHITA", note: "安心感を表す表現" },
+      { id: 3, text: "心がキュンとしました。", romaji: "KOKORO GA KYUN TO SHIMASHITA", note: "感動を表す表現" }
+    ];
+    
+    const demoOnomatopoeia = [
+      { id: 101, main: "じんわり", romaji: "jinwari", description: "温かさが少しずつ広がる様子" },
+      { id: 102, main: "ほっこり", romaji: "hokkori", description: "温かくて心地よい様子" },
+      { id: 103, main: "キュン", romaji: "kyun", description: "胸が締め付けられるような感動" }
+    ];
+
+    // 初期化
+    document.addEventListener('DOMContentLoaded', () => {
+      renderDemoCards();
+      renderDemoOnomatopoeia();
+      updateStatus('デモページが読み込まれました');
+    });
+
+    // デモカードの表示
+    function renderDemoCards() {
+      const container = document.getElementById('demo-cards');
+      container.innerHTML = '';
+      
+      demoMessages.forEach(msg => {
+        const card = document.createElement('div');
+        card.className = 'demo-item';
+        
+        const isFav = isFavorite(msg.id);
+        
+        card.innerHTML = `
+          <div class="demo-content">
+            <div style="font-weight: bold; margin-bottom: 4px;">${msg.text}</div>
+            <div style="color: #666; font-size: 0.9em;">${msg.romaji}</div>
+            <div style="color: #888; font-size: 0.8em;">${msg.note}</div>
+          </div>
+          <div class="demo-actions">
+            <button class="speak-btn" onclick="speakText('${msg.text}')" title="音声再生">🔊</button>
+            <button class="favorite-btn ${isFav ? 'active' : ''}" 
+                    onclick="toggleFavorite(${msg.id})" 
+                    title="${isFav ? 'お気に入りから削除' : 'お気に入りに追加'}">
+              ${isFav ? '★' : '☆'}
+            </button>
+          </div>
+        `;
+        
+        container.appendChild(card);
+      });
+    }
+
+    // オノマトペデモの表示
+    function renderDemoOnomatopoeia() {
+      const container = document.getElementById('demo-onomatopoeia');
+      container.innerHTML = '';
+      
+      demoOnomatopoeia.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'demo-item';
+        
+        const isFav = isFavorite(item.id);
+        
+        card.innerHTML = `
+          <div class="demo-content">
+            <div style="font-weight: bold; margin-bottom: 4px;">${item.main}</div>
+            <div style="color: #666; font-size: 0.9em;">${item.romaji}</div>
+            <div style="color: #888; font-size: 0.8em;">${item.description}</div>
+          </div>
+          <div class="demo-actions">
+            <button class="speak-btn" onclick="speakText('${item.main}')" title="音声再生">🔊</button>
+            <button class="favorite-btn ${isFav ? 'active' : ''}" 
+                    onclick="toggleFavorite(${item.id})" 
+                    title="${isFav ? 'お気に入りから削除' : 'お気に入りに追加'}">
+              ${isFav ? '★' : '☆'}
+            </button>
+          </div>
+        `;
+        
+        container.appendChild(card);
+      });
+    }
+
+    // お気に入り機能
+    function isFavorite(id) {
+      try {
+        const favorites = JSON.parse(localStorage.getItem('arigato_favorites_v1') || '{}');
+        return favorites[String(id)] === true;
+      } catch {
+        return false;
+      }
+    }
+
+    function toggleFavorite(id) {
+      if (!FEATURE_FAVORITES) {
+        updateStatus('お気に入り機能が無効になっています');
+        return;
+      }
+      
+      try {
+        const favorites = JSON.parse(localStorage.getItem('arigato_favorites_v1') || '{}');
+        const stringId = String(id);
+        const currentState = favorites[stringId] || false;
+        const newState = !currentState;
+        
+        favorites[stringId] = newState;
+        localStorage.setItem('arigato_favorites_v1', JSON.stringify(favorites));
+        
+        updateStatus(`ID ${id} のお気に入りを${newState ? '追加' : '削除'}しました`);
+        
+        // UI更新
+        renderDemoCards();
+        renderDemoOnomatopoeia();
+      } catch (error) {
+        updateStatus(`エラー: ${error.message}`);
+      }
+    }
+
+    // テスト機能
+    function testFavorites() {
+      try {
+        const favorites = JSON.parse(localStorage.getItem('arigato_favorites_v1') || '{}');
+        const count = Object.values(favorites).filter(v => v === true).length;
+        updateStatus(`現在のお気に入り数: ${count}件`);
+        
+        if (count > 0) {
+          const items = Object.entries(favorites)
+            .filter(([id, isFav]) => isFav === true)
+            .map(([id]) => id)
+            .join(', ');
+          updateStatus(`お気に入りID: ${items}`);
+        }
+      } catch (error) {
+        updateStatus(`エラー: ${error.message}`);
+      }
+    }
+
+    function clearFavorites() {
+      if (confirm('全てのお気に入りを削除しますか？')) {
+        localStorage.removeItem('arigato_favorites_v1');
+        updateStatus('全お気に入りを削除しました');
+        renderDemoCards();
+        renderDemoOnomatopoeia();
+      }
+    }
+
+    function toggleFeature() {
+      FEATURE_FAVORITES = !FEATURE_FAVORITES;
+      updateStatus(`お気に入り機能: ${FEATURE_FAVORITES ? 'ON' : 'OFF'}`);
+      
+      if (!FEATURE_FAVORITES) {
+        // 機能無効時はお気に入りボタンを非表示
+        document.querySelectorAll('.favorite-btn').forEach(btn => {
+          btn.style.display = 'none';
+        });
+      } else {
+        // 機能有効時はお気に入りボタンを表示
+        document.querySelectorAll('.favorite-btn').forEach(btn => {
+          btn.style.display = 'inline-flex';
+        });
+      }
+    }
+
+    function testLocalStorage() {
+      try {
+        // 大量データのテスト
+        const testData = {};
+        for (let i = 1; i <= 1000; i++) {
+          testData[`test_${i}`] = Math.random() > 0.5;
+        }
+        
+        localStorage.setItem('arigato_favorites_v1', JSON.stringify(testData));
+        updateStatus('1000件のテストデータを保存しました');
+        
+        // 読み込みテスト
+        const loaded = JSON.parse(localStorage.getItem('arigato_favorites_v1'));
+        updateStatus(`読み込み成功: ${Object.keys(loaded).length}件`);
+        
+        // クリーンアップ
+        localStorage.removeItem('arigato_favorites_v1');
+        updateStatus('テストデータを削除しました');
+        
+      } catch (error) {
+        updateStatus(`localStorageテスト失敗: ${error.message}`);
+      }
+    }
+
+    // 音声再生（ブラウザ対応確認用）
+    function speakText(text) {
+      if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'ja-JP';
+        speechSynthesis.speak(utterance);
+        updateStatus(`音声再生: ${text}`);
+      } else {
+        updateStatus('音声合成がサポートされていません');
+      }
+    }
+
+    function updateStatus(message) {
+      const statusEl = document.getElementById('status');
+      statusEl.textContent = `${new Date().toLocaleTimeString()}: ${message}`;
+      console.log(message);
+    }
+  </script>
+</body>
+</html>

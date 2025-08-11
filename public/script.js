@@ -7,6 +7,11 @@ let stripe = null;
 let elements = null;
 let onomatopoeiaData = []; // オノマトペデータ
 
+// 機能フラグ（グローバル設定）
+window.FEATURE_FAVORITES = true; // お気に入り機能
+window.FEATURE_TTS = true; // 音声再生機能
+window.FEATURE_PREMIUM = true; // プレミアム機能
+
 // サポートされている言語の定義
 const supportedLanguages = {
   'en': 'English',
@@ -22,6 +27,9 @@ const supportedLanguages = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+  // お気に入り機能の初期化
+  initializeFavorites();
+  
   loadLanguage(currentLang);
   checkPremiumStatus(); // プレミアム状態をチェック
   loadOnomatopoeiaData(); // オノマトペデータを読み込み
@@ -44,6 +52,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// お気に入り機能の初期化
+function initializeFavorites() {
+  // 機能フラグが無効の場合は何もしない
+  if (!window.FEATURE_FAVORITES) {
+    console.log('Favorites feature is disabled');
+    return;
+  }
+
+  // お気に入りAPIの初期化
+  try {
+    // 既存のlocalStorageデータを新しいスキーマに移行
+    const oldFavorites = localStorage.getItem('favorites');
+    if (oldFavorites) {
+      try {
+        const parsed = JSON.parse(oldFavorites);
+        const newFavorites = {};
+        
+        // 古いキー形式（lang-scene-number）から新しいID形式に変換
+        Object.entries(parsed).forEach(([key, value]) => {
+          if (value === true) {
+            // キーが既にID形式の場合はそのまま使用
+            if (/^\d+$/.test(key)) {
+              newFavorites[key] = true;
+            }
+          }
+        });
+        
+        // 新しいスキーマで保存
+        if (Object.keys(newFavorites).length > 0) {
+          localStorage.setItem('arigato_favorites_v1', JSON.stringify(newFavorites));
+        }
+        
+        // 古いデータを削除
+        localStorage.removeItem('favorites');
+        console.log('Migrated old favorites data to new schema');
+      } catch (error) {
+        console.warn('Failed to migrate old favorites data:', error);
+      }
+    }
+  } catch (error) {
+    console.warn('Failed to initialize favorites:', error);
+  }
+}
 
 // 動的翻訳機能
 async function translateText(text, targetLang) {
@@ -242,11 +294,18 @@ async function showOnomatopoeiaScene(scene) {
       <div class="onomatopoeia-item">
         <div class="item-header">
           <div class="item-number">${item.id}</div>
-          ${isTTSEnabled ? `
-            <button class="speak-btn" onclick="speakJapanese('${item.main.replace(/'/g, "\\'")}')" aria-label="音声再生">
-              🔊
-            </button>
-          ` : ''}
+          <div class="item-actions" style="display:inline-flex;align-items:center;">
+            ${isTTSEnabled ? `
+              <button class="speak-btn" onclick="speakJapanese('${item.main.replace(/'/g, "\\'")}')" aria-label="音声再生" style="background:none;border:none;cursor:pointer;font-size:1.2em;margin-left:12px;">
+                🔊
+              </button>
+            ` : ''}
+            ${window.FEATURE_FAVORITES ? `
+              <button class="favorite-toggle-btn" onclick="toggleFavorite(${item.id})" aria-label="お気に入りに追加" style="background:none;border:none;cursor:pointer;padding:8px;margin-left:12px;font-size:1.3em;color:#bbb;min-width:40px;min-height:40px;display:inline-flex;align-items:center;justify-content:center;transition:all 0.2s ease;border-radius:4px;">
+                ${isFavorite(item.id) ? '★' : '☆'}
+              </button>
+            ` : ''}
+          </div>
         </div>
         <div class="item-main">${translatedMain}</div>
         <div class="item-romaji">${item.romaji}</div>
@@ -401,49 +460,174 @@ function renderSceneSwitcher() {
   });
 }
 
+// お気に入り機能のAPI（新しいスキーマ対応）
 function getFavorites() {
   try {
-    return JSON.parse(localStorage.getItem('favorites') || '{}');
+    return JSON.parse(localStorage.getItem('arigato_favorites_v1') || '{}');
   } catch {
     return {};
   }
 }
+
 function setFavorites(favs) {
-  localStorage.setItem('favorites', JSON.stringify(favs));
+  try {
+    localStorage.setItem('arigato_favorites_v1', JSON.stringify(favs));
+  } catch (error) {
+    console.warn('Failed to save favorites:', error);
+  }
 }
+
+// お気に入り状態の確認（ID基準）
+function isFavorite(id) {
+  if (!id) return false;
+  const favorites = getFavorites();
+  return favorites[String(id)] === true;
+}
+
+// お気に入りの切り替え（ID基準）
+function toggleFavorite(id) {
+  if (!id) return false;
+  
+  const favorites = getFavorites();
+  const stringId = String(id);
+  const currentState = favorites[stringId] || false;
+  const newState = !currentState;
+  
+  favorites[stringId] = newState;
+  setFavorites(favorites);
+  
+  return newState;
+}
+
+// グローバルAPIとして登録（既存コードとの互換性）
+window.getFavorites = getFavorites;
+window.setFavorites = setFavorites;
+window.isFavorite = isFavorite;
+window.toggleFavorite = toggleFavorite;
 function renderScene() {
   const scene = languageData.scenes[currentScene];
   document.getElementById('scene-title').textContent = scene ? currentScene : '';
   const messagesDiv = document.getElementById('messages');
   messagesDiv.innerHTML = '';
+  
   if (scene) {
-    const favorites = getFavorites();
     scene.messages.forEach((msg, idx) => {
-      const favKey = `${currentLang}-${currentScene}-${msg.number || idx}`;
-      const isFav = !!favorites[favKey];
       const card = document.createElement('div');
       card.className = 'message-card';
+      
+      // メッセージのIDを取得（numberまたはインデックス）
+      const messageId = msg.number || (idx + 1);
+      
+      // カードのHTMLを構築（お気に入りボタンは後で動的に追加）
       card.innerHTML = `
-        <span style="font-weight:bold;margin-right:8px;">${msg.number || idx + 1}.</span>
-        <span class="favorite-star" data-key="${favKey}" style="cursor:pointer;font-size:1.3em;color:${isFav ? 'gold' : '#bbb'};user-select:none;">${isFav ? '★' : '☆'}</span>
+        <div class="message-header">
+          <span class="message-number" style="font-weight:bold;margin-right:8px;">${messageId}.</span>
+          <div class="message-actions" style="display:inline-flex;align-items:center;">
+            <button class="speak-btn" style="margin-left:12px;background:none;border:none;cursor:pointer;font-size:1.2em;" onclick="playJapaneseSpeech('${(msg.ja || msg.text || '').replace(/<[^>]+>/g, '')}')" aria-label="音声再生">🔊</button>
+          </div>
+        </div>
         <div class="message-content" style="display:inline-block;">
           <div class="message-text" style="font-weight:bold;margin-bottom:4px;">${msg.text || ''}</div>
           <div class="romaji-text" style="font-size:0.9em;color:#666;margin-bottom:4px;">${msg.romaji || ''}</div>
         </div>
-        <button class="speak-btn" style="margin-left:12px;" onclick="playJapaneseSpeech('${(msg.ja || msg.text || '').replace(/<[^>]+>/g, '')}')">🔊</button>
         <div class="note-text" style="font-size:0.95em;color:#666;margin-top:2px;">${msg.note || ''}</div>
       `;
+      
       messagesDiv.appendChild(card);
-    });
-    // お気に入りクリックイベント
-    messagesDiv.querySelectorAll('.favorite-star').forEach(star => {
-      star.onclick = function() {
-        const key = this.getAttribute('data-key');
-        const favs = getFavorites();
-        favs[key] = !favs[key];
-        setFavorites(favs);
-        renderScene();
-      };
+      
+      // お気に入りボタンを動的に追加（機能フラグが有効な場合のみ）
+      if (window.FEATURE_FAVORITES) {
+        const actionsContainer = card.querySelector('.message-actions');
+        if (actionsContainer) {
+          // お気に入りボタンの作成
+          const favoriteBtn = document.createElement('button');
+          favoriteBtn.className = 'favorite-toggle-btn';
+          favoriteBtn.setAttribute('role', 'button');
+          favoriteBtn.setAttribute('tabindex', '0');
+          favoriteBtn.setAttribute('aria-label', 'お気に入りに追加');
+          favoriteBtn.setAttribute('aria-pressed', 'false');
+          
+          // スタイル設定
+          favoriteBtn.style.cssText = `
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            margin-left: 12px;
+            font-size: 1.3em;
+            color: #bbb;
+            user-select: none;
+            min-width: 40px;
+            min-height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            border-radius: 4px;
+          `;
+          
+          // 初期アイコン（☆）
+          favoriteBtn.innerHTML = '☆';
+          
+          // お気に入り状態の確認と設定
+          const isFav = isFavorite(messageId);
+          if (isFav) {
+            favoriteBtn.innerHTML = '★';
+            favoriteBtn.style.color = '#ffd700';
+            favoriteBtn.style.transform = 'scale(1.1)';
+            favoriteBtn.setAttribute('aria-label', 'お気に入りから削除');
+            favoriteBtn.setAttribute('aria-pressed', 'true');
+          }
+          
+          // クリックイベント
+          favoriteBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const newState = toggleFavorite(messageId);
+            
+            // UI更新
+            if (newState) {
+              favoriteBtn.innerHTML = '★';
+              favoriteBtn.style.color = '#ffd700';
+              favoriteBtn.style.transform = 'scale(1.1)';
+              favoriteBtn.setAttribute('aria-label', 'お気に入りから削除');
+              favoriteBtn.setAttribute('aria-pressed', 'true');
+            } else {
+              favoriteBtn.innerHTML = '☆';
+              favoriteBtn.style.color = '#bbb';
+              favoriteBtn.style.transform = 'scale(1)';
+              favoriteBtn.setAttribute('aria-label', 'お気に入りに追加');
+              favoriteBtn.setAttribute('aria-pressed', 'false');
+            }
+          });
+          
+          // キーボードイベント
+          favoriteBtn.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              favoriteBtn.click();
+            }
+          });
+          
+          // ホバー効果
+          favoriteBtn.addEventListener('mouseenter', () => {
+            if (!isFavorite(messageId)) {
+              favoriteBtn.style.color = '#ffd700';
+              favoriteBtn.style.transform = 'scale(1.1)';
+            }
+          });
+          
+          favoriteBtn.addEventListener('mouseleave', () => {
+            if (!isFavorite(messageId)) {
+              favoriteBtn.style.color = '#bbb';
+              favoriteBtn.style.transform = 'scale(1)';
+            }
+          });
+          
+          actionsContainer.appendChild(favoriteBtn);
+        }
+      }
     });
   }
 }
