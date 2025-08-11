@@ -291,12 +291,12 @@ async function showOnomatopoeiaScene(scene) {
                          (typeof window !== 'undefined' && window.speechSynthesis);
     
     html += `
-      <div class="onomatopoeia-item">
+      <div class="onomatopoeia-item" onclick="handleOnomatopoeiaItemClick(event, ${item.id})">
         <div class="item-header">
           <div class="item-number">${item.id}</div>
           <div class="item-actions" style="display:inline-flex;align-items:center;">
             ${isTTSEnabled ? `
-              <button class="speak-btn" onclick="speakJapanese('${item.main.replace(/'/g, "\\'")}')" aria-label="音声再生" style="background:none;border:none;cursor:pointer;font-size:1.2em;margin-left:12px;">
+              <button class="speak-btn" onclick="speakJapanese('${item.main.replace(/'/g, "\\'")}')" aria-label="音声再生" style="background:none;border:none;cursor:pointer;font-size:1.2em;margin-left:12px;" data-card-control="true">
                 🔊
               </button>
             ` : ''}
@@ -499,6 +499,19 @@ function toggleFavorite(id) {
   return newState;
 }
 
+// オノマトペアイテムクリックハンドラー
+window.handleOnomatopoeiaItemClick = function(event, itemId) {
+  // コントロール要素からのクリックは無視
+  if (event.target && event.target.closest('[data-card-control="true"]')) {
+    event.preventDefault();
+    event.stopPropagation();
+    return;
+  }
+  
+  // ここに既存のカードクリック処理（詳細表示や遷移など）を追加可能
+  console.log('オノマトペアイテムがクリックされました:', itemId);
+};
+
 // グローバルAPIとして登録（既存コードとの互換性）
 window.getFavorites = getFavorites;
 window.setFavorites = setFavorites;
@@ -515,6 +528,19 @@ function renderScene() {
       const card = document.createElement('div');
       card.className = 'message-card';
       
+      // カードクリックのガード機能を追加
+      card.addEventListener('click', function(e) {
+        // コントロール要素からのクリックは無視
+        if (e.target && e.target.closest('[data-card-control="true"]')) {
+          e.preventDefault();
+          e.stopPropagation();
+          return;
+        }
+        
+        // ここに既存のカードクリック処理（詳細表示や遷移など）を追加可能
+        console.log('カード本体がクリックされました:', messageId);
+      });
+      
       // メッセージのIDを取得（numberまたはインデックス）
       const messageId = msg.number || (idx + 1);
       
@@ -523,7 +549,7 @@ function renderScene() {
         <div class="message-header">
           <span class="message-number" style="font-weight:bold;margin-right:8px;">${messageId}.</span>
           <div class="message-actions" style="display:inline-flex;align-items:center;">
-            <button class="speak-btn" style="margin-left:12px;background:none;border:none;cursor:pointer;font-size:1.2em;" onclick="playJapaneseSpeech('${(msg.ja || msg.text || '').replace(/<[^>]+>/g, '')}')" aria-label="音声再生">🔊</button>
+            <button class="speak-btn" style="margin-left:12px;background:none;border:none;cursor:pointer;font-size:1.2em;" onclick="playJapaneseSpeech('${(msg.ja || msg.text || '').replace(/<[^>]+>/g, '')}')" aria-label="音声再生" data-card-control="true">🔊</button>
           </div>
         </div>
         <div class="message-content" style="display:inline-block;">
@@ -542,10 +568,12 @@ function renderScene() {
           // お気に入りボタンの作成
           const favoriteBtn = document.createElement('button');
           favoriteBtn.className = 'favorite-toggle-btn';
+          favoriteBtn.setAttribute('type', 'button');
           favoriteBtn.setAttribute('role', 'button');
           favoriteBtn.setAttribute('tabindex', '0');
           favoriteBtn.setAttribute('aria-label', 'お気に入りに追加');
           favoriteBtn.setAttribute('aria-pressed', 'false');
+          favoriteBtn.setAttribute('data-card-control', 'true');
           
           // スタイル設定
           favoriteBtn.style.cssText = `

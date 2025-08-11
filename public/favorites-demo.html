@@ -155,9 +155,22 @@
       const container = document.getElementById('demo-cards');
       container.innerHTML = '';
       
-      demoMessages.forEach(msg => {
-        const card = document.createElement('div');
-        card.className = 'demo-item';
+             demoMessages.forEach(msg => {
+         const card = document.createElement('div');
+         card.className = 'demo-item';
+         
+         // カードクリックのガード機能を追加
+         card.addEventListener('click', function(e) {
+           // コントロール要素からのクリックは無視
+           if (e.target && e.target.closest('[data-card-control="true"]')) {
+             e.preventDefault();
+             e.stopPropagation();
+             return;
+           }
+           
+           // ここに既存のカードクリック処理（詳細表示や遷移など）を追加可能
+           updateStatus(`カード ${msg.id} がクリックされました: ${msg.text}`);
+         });
         
         const isFav = isFavorite(msg.id);
         
@@ -168,10 +181,11 @@
             <div style="color: #888; font-size: 0.8em;">${msg.note}</div>
           </div>
           <div class="demo-actions">
-            <button class="speak-btn" onclick="speakText('${msg.text}')" title="音声再生">🔊</button>
+            <button class="speak-btn" onclick="speakText('${msg.text}')" title="音声再生" data-card-control="true">🔊</button>
             <button class="favorite-btn ${isFav ? 'active' : ''}" 
                     onclick="toggleFavorite(${msg.id})" 
-                    title="${isFav ? 'お気に入りから削除' : 'お気に入りに追加'}">
+                    title="${isFav ? 'お気に入りから削除' : 'お気に入りに追加'}"
+                    data-card-control="true">
               ${isFav ? '★' : '☆'}
             </button>
           </div>
@@ -186,9 +200,22 @@
       const container = document.getElementById('demo-onomatopoeia');
       container.innerHTML = '';
       
-      demoOnomatopoeia.forEach(item => {
-        const card = document.createElement('div');
-        card.className = 'demo-item';
+             demoOnomatopoeia.forEach(item => {
+         const card = document.createElement('div');
+         card.className = 'demo-item';
+         
+         // カードクリックのガード機能を追加
+         card.addEventListener('click', function(e) {
+           // コントロール要素からのクリックは無視
+           if (e.target && e.target.closest('[data-card-control="true"]')) {
+             e.preventDefault();
+             e.stopPropagation();
+             return;
+           }
+           
+           // ここに既存のカードクリック処理（詳細表示や遷移など）を追加可能
+           updateStatus(`オノマトペ ${item.id} がクリックされました: ${item.main}`);
+         });
         
         const isFav = isFavorite(item.id);
         
@@ -199,10 +226,11 @@
             <div style="color: #888; font-size: 0.8em;">${item.description}</div>
           </div>
           <div class="demo-actions">
-            <button class="speak-btn" onclick="speakText('${item.main}')" title="音声再生">🔊</button>
+            <button class="speak-btn" onclick="speakText('${item.main}')" title="音声再生" data-card-control="true">🔊</button>
             <button class="favorite-btn ${isFav ? 'active' : ''}" 
                     onclick="toggleFavorite(${item.id})" 
-                    title="${isFav ? 'お気に入りから削除' : 'お気に入りに追加'}">
+                    title="${isFav ? 'お気に入りから削除' : 'お気に入りに追加'}"
+                    data-card-control="true">
               ${isFav ? '★' : '☆'}
             </button>
           </div>

@@ -31,6 +31,7 @@ class FavoriteToggle {
     this.element.setAttribute('tabindex', '0');
     this.element.setAttribute('aria-label', 'お気に入りに追加');
     this.element.setAttribute('aria-pressed', 'false');
+    this.element.setAttribute('data-card-control', 'true');
     
     // スタイル設定（タップ領域40px以上、🔊との余白確保）
     this.element.style.cssText = `
