@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // お気に入り機能の初期化
   initializeFavorites();
   
-  // グローバルコントロールガードを初期化
-  initializeGlobalControlGuards();
+  // グローバルコントロールガードを一時的に無効化（機能回復のため）
+  // initializeGlobalControlGuards();
   
   loadLanguage(currentLang);
   checkPremiumStatus(); // プレミアム状態をチェック
@@ -678,27 +678,9 @@ function renderScene() {
             pointer-events: auto;
           `;
           
-          // 3段階のガード：pointerdown → mousedown → click
-          
-          // 1. pointerdown（最初のタッチ/マウスイベント）
-          favoriteBtn.addEventListener('pointerdown', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            e.stopImmediatePropagation();
-          }, true); // キャプチャ段階で処理
-
-          // 2. mousedown（マウスイベント）
-          favoriteBtn.addEventListener('mousedown', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            e.stopImmediatePropagation();
-          }, true); // キャプチャ段階で処理
-
-          // 3. click（最終的なクリックイベント）
+          // 最小実装：必要最小限のガードのみ
           favoriteBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            e.stopImmediatePropagation();
+            e.stopPropagation(); // 親への伝播のみ防止
             
             const newState = toggleFavorite(messageId);
             
@@ -716,31 +698,16 @@ function renderScene() {
               favoriteBtn.setAttribute('aria-label', 'お気に入りに追加');
               favoriteBtn.setAttribute('aria-pressed', 'false');
             }
-          }, true); // キャプチャ段階で処理
+          });
 
           // キーボードイベント（Enter, Space）
           favoriteBtn.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
               e.preventDefault();
               e.stopPropagation();
-              e.stopImmediatePropagation();
               favoriteBtn.click();
             }
-          }, true); // キャプチャ段階で処理
-
-          // タッチイベント（モバイル対応）
-          favoriteBtn.addEventListener('touchstart', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            e.stopImmediatePropagation();
-          }, true); // キャプチャ段階で処理
-
-          favoriteBtn.addEventListener('touchend', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            e.stopImmediatePropagation();
-            favoriteBtn.click();
-          }, true); // キャプチャ段階で処理
+          });
           
           // ホバー効果
           favoriteBtn.addEventListener('mouseenter', () => {

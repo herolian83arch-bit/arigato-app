@@ -193,54 +193,23 @@
         
                  container.appendChild(card);
          
-         // お気に入りボタンに3段階のガードを追加
+         // お気に入りボタンに最小限のガードを追加
          const favoriteBtn = card.querySelector('.favorite-btn');
          if (favoriteBtn) {
-           // 1. pointerdown（最初のタッチ/マウスイベント）
-           favoriteBtn.addEventListener('pointerdown', (e) => {
-             e.preventDefault();
-             e.stopPropagation();
-             e.stopImmediatePropagation();
-           }, true); // キャプチャ段階で処理
-
-           // 2. mousedown（マウスイベント）
-           favoriteBtn.addEventListener('mousedown', (e) => {
-             e.preventDefault();
-             e.stopPropagation();
-             e.stopImmediatePropagation();
-           }, true); // キャプチャ段階で処理
-
-           // 3. click（最終的なクリックイベント）
+           // クリックイベント
            favoriteBtn.addEventListener('click', (e) => {
-             e.preventDefault();
-             e.stopPropagation();
-             e.stopImmediatePropagation();
+             e.stopPropagation(); // 親への伝播のみ防止
              toggleFavorite(msg.id);
-           }, true); // キャプチャ段階で処理
+           });
 
            // キーボードイベント（Enter, Space）
            favoriteBtn.addEventListener('keydown', (e) => {
              if (e.key === 'Enter' || e.key === ' ') {
                e.preventDefault();
                e.stopPropagation();
-               e.stopImmediatePropagation();
                toggleFavorite(msg.id);
              }
-           }, true); // キャプチャ段階で処理
-
-           // タッチイベント（モバイル対応）
-           favoriteBtn.addEventListener('touchstart', (e) => {
-             e.preventDefault();
-             e.stopPropagation();
-             e.stopImmediatePropagation();
-           }, true); // キャプチャ段階で処理
-
-           favoriteBtn.addEventListener('touchend', (e) => {
-             e.preventDefault();
-             e.stopPropagation();
-             e.stopImmediatePropagation();
-             toggleFavorite(msg.id);
-           }, true); // キャプチャ段階で処理
+           });
          }
        });
      }
@@ -288,54 +257,23 @@
         
                  container.appendChild(card);
          
-         // お気に入りボタンに3段階のガードを追加
+         // お気に入りボタンに最小限のガードを追加
          const favoriteBtn = card.querySelector('.favorite-btn');
          if (favoriteBtn) {
-           // 1. pointerdown（最初のタッチ/マウスイベント）
-           favoriteBtn.addEventListener('pointerdown', (e) => {
-             e.preventDefault();
-             e.stopPropagation();
-             e.stopImmediatePropagation();
-           }, true); // キャプチャ段階で処理
-
-           // 2. mousedown（マウスイベント）
-           favoriteBtn.addEventListener('mousedown', (e) => {
-             e.preventDefault();
-             e.stopPropagation();
-             e.stopImmediatePropagation();
-           }, true); // キャプチャ段階で処理
-
-           // 3. click（最終的なクリックイベント）
+           // クリックイベント
            favoriteBtn.addEventListener('click', (e) => {
-             e.preventDefault();
-             e.stopPropagation();
-             e.stopImmediatePropagation();
+             e.stopPropagation(); // 親への伝播のみ防止
              toggleFavorite(item.id);
-           }, true); // キャプチャ段階で処理
+           });
 
            // キーボードイベント（Enter, Space）
            favoriteBtn.addEventListener('keydown', (e) => {
              if (e.key === 'Enter' || e.key === ' ') {
                e.preventDefault();
                e.stopPropagation();
-               e.stopImmediatePropagation();
                toggleFavorite(item.id);
              }
-           }, true); // キャプチャ段階で処理
-
-           // タッチイベント（モバイル対応）
-           favoriteBtn.addEventListener('touchstart', (e) => {
-             e.preventDefault();
-             e.stopPropagation();
-             e.stopImmediatePropagation();
-           }, true); // キャプチャ段階で処理
-
-           favoriteBtn.addEventListener('touchend', (e) => {
-             e.preventDefault();
-             e.stopPropagation();
-             e.stopImmediatePropagation();
-             toggleFavorite(item.id);
-           }, true); // キャプチャ段階で処理
+           });
          }
        });
      }

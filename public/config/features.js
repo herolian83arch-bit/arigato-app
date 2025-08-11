@@ -1,7 +1,7 @@
 // 機能フラグ設定
 // 各機能のON/OFFを一元管理
 
-export const FEATURE_FAVORITES = true; // お気に入り機能
+export const FEATURE_FAVORITES = false; // お気に入り機能（一時無効化）
 export const FEATURE_TTS = true; // 音声再生機能
 export const FEATURE_PREMIUM = true; // プレミアム機能
 
