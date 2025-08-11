@@ -75,13 +75,29 @@ class FavoriteToggle {
   }
 
   attachEventListeners() {
-    // クリックイベント（確実に伝播を止める）
+    // 3段階のガード：pointerdown → mousedown → click
+    
+    // 1. pointerdown（最初のタッチ/マウスイベント）
+    this.element.addEventListener('pointerdown', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+    }, true); // キャプチャ段階で処理
+
+    // 2. mousedown（マウスイベント）
+    this.element.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+    }, true); // キャプチャ段階で処理
+
+    // 3. click（最終的なクリックイベント）
     this.element.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
       e.stopImmediatePropagation();
       this.toggleFavorite();
-    });
+    }, true); // キャプチャ段階で処理
 
     // キーボードイベント（Enter, Space）
     this.element.addEventListener('keydown', (e) => {
@@ -91,26 +107,23 @@ class FavoriteToggle {
         e.stopImmediatePropagation();
         this.toggleFavorite();
       }
-    });
+    }, true); // キャプチャ段階で処理
 
     // タッチイベント（モバイル対応）
     this.element.addEventListener('touchstart', (e) => {
       e.preventDefault();
       e.stopPropagation();
+      e.stopImmediatePropagation();
       this.element.style.transform = 'scale(0.95)';
-    });
+    }, true); // キャプチャ段階で処理
 
     this.element.addEventListener('touchend', (e) => {
       e.preventDefault();
       e.stopPropagation();
+      e.stopImmediatePropagation();
       this.element.style.transform = this.isFavorite ? 'scale(1.1)' : 'scale(1)';
       this.toggleFavorite();
-    });
-
-    // マウスダウンでも伝播を止める
-    this.element.addEventListener('mousedown', (e) => {
-      e.stopPropagation();
-    });
+    }, true); // キャプチャ段階で処理
   }
 
   toggleFavorite() {

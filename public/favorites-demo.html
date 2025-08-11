@@ -182,20 +182,70 @@
           </div>
           <div class="demo-actions">
             <button class="speak-btn" onclick="speakText('${msg.text}')" title="音声再生" data-card-control="true">🔊</button>
-            <button class="favorite-btn ${isFav ? 'active' : ''}" 
-                    onclick="toggleFavorite(${msg.id})" 
-                    title="${isFav ? 'お気に入りから削除' : 'お気に入りに追加'}"
-                    data-card-control="true">
-              ${isFav ? '★' : '☆'}
-            </button>
+                         <button class="favorite-btn ${isFav ? 'active' : ''}" 
+                     data-card-control="true"
+                     title="${isFav ? 'お気に入りから削除' : 'お気に入りに追加'}"
+                     style="position:relative;z-index:10;pointer-events:auto;">
+               ${isFav ? '★' : '☆'}
+             </button>
           </div>
         `;
         
-        container.appendChild(card);
-      });
-    }
+                 container.appendChild(card);
+         
+         // お気に入りボタンに3段階のガードを追加
+         const favoriteBtn = card.querySelector('.favorite-btn');
+         if (favoriteBtn) {
+           // 1. pointerdown（最初のタッチ/マウスイベント）
+           favoriteBtn.addEventListener('pointerdown', (e) => {
+             e.preventDefault();
+             e.stopPropagation();
+             e.stopImmediatePropagation();
+           }, true); // キャプチャ段階で処理
 
-    // オノマトペデモの表示
+           // 2. mousedown（マウスイベント）
+           favoriteBtn.addEventListener('mousedown', (e) => {
+             e.preventDefault();
+             e.stopPropagation();
+             e.stopImmediatePropagation();
+           }, true); // キャプチャ段階で処理
+
+           // 3. click（最終的なクリックイベント）
+           favoriteBtn.addEventListener('click', (e) => {
+             e.preventDefault();
+             e.stopPropagation();
+             e.stopImmediatePropagation();
+             toggleFavorite(msg.id);
+           }, true); // キャプチャ段階で処理
+
+           // キーボードイベント（Enter, Space）
+           favoriteBtn.addEventListener('keydown', (e) => {
+             if (e.key === 'Enter' || e.key === ' ') {
+               e.preventDefault();
+               e.stopPropagation();
+               e.stopImmediatePropagation();
+               toggleFavorite(msg.id);
+             }
+           }, true); // キャプチャ段階で処理
+
+           // タッチイベント（モバイル対応）
+           favoriteBtn.addEventListener('touchstart', (e) => {
+             e.preventDefault();
+             e.stopPropagation();
+             e.stopImmediatePropagation();
+           }, true); // キャプチャ段階で処理
+
+           favoriteBtn.addEventListener('touchend', (e) => {
+             e.preventDefault();
+             e.stopPropagation();
+             e.stopImmediatePropagation();
+             toggleFavorite(msg.id);
+           }, true); // キャプチャ段階で処理
+         }
+       });
+     }
+
+     // オノマトペデモの表示
     function renderDemoOnomatopoeia() {
       const container = document.getElementById('demo-onomatopoeia');
       container.innerHTML = '';
@@ -227,18 +277,68 @@
           </div>
           <div class="demo-actions">
             <button class="speak-btn" onclick="speakText('${item.main}')" title="音声再生" data-card-control="true">🔊</button>
-            <button class="favorite-btn ${isFav ? 'active' : ''}" 
-                    onclick="toggleFavorite(${item.id})" 
-                    title="${isFav ? 'お気に入りから削除' : 'お気に入りに追加'}"
-                    data-card-control="true">
-              ${isFav ? '★' : '☆'}
-            </button>
+                         <button class="favorite-btn ${isFav ? 'active' : ''}" 
+                     data-card-control="true"
+                     title="${isFav ? 'お気に入りから削除' : 'お気に入りに追加'}"
+                     style="position:relative;z-index:10;pointer-events:auto;">
+               ${isFav ? '★' : '☆'}
+             </button>
           </div>
         `;
         
-        container.appendChild(card);
-      });
-    }
+                 container.appendChild(card);
+         
+         // お気に入りボタンに3段階のガードを追加
+         const favoriteBtn = card.querySelector('.favorite-btn');
+         if (favoriteBtn) {
+           // 1. pointerdown（最初のタッチ/マウスイベント）
+           favoriteBtn.addEventListener('pointerdown', (e) => {
+             e.preventDefault();
+             e.stopPropagation();
+             e.stopImmediatePropagation();
+           }, true); // キャプチャ段階で処理
+
+           // 2. mousedown（マウスイベント）
+           favoriteBtn.addEventListener('mousedown', (e) => {
+             e.preventDefault();
+             e.stopPropagation();
+             e.stopImmediatePropagation();
+           }, true); // キャプチャ段階で処理
+
+           // 3. click（最終的なクリックイベント）
+           favoriteBtn.addEventListener('click', (e) => {
+             e.preventDefault();
+             e.stopPropagation();
+             e.stopImmediatePropagation();
+             toggleFavorite(item.id);
+           }, true); // キャプチャ段階で処理
+
+           // キーボードイベント（Enter, Space）
+           favoriteBtn.addEventListener('keydown', (e) => {
+             if (e.key === 'Enter' || e.key === ' ') {
+               e.preventDefault();
+               e.stopPropagation();
+               e.stopImmediatePropagation();
+               toggleFavorite(item.id);
+             }
+           }, true); // キャプチャ段階で処理
+
+           // タッチイベント（モバイル対応）
+           favoriteBtn.addEventListener('touchstart', (e) => {
+             e.preventDefault();
+             e.stopPropagation();
+             e.stopImmediatePropagation();
+           }, true); // キャプチャ段階で処理
+
+           favoriteBtn.addEventListener('touchend', (e) => {
+             e.preventDefault();
+             e.stopPropagation();
+             e.stopImmediatePropagation();
+             toggleFavorite(item.id);
+           }, true); // キャプチャ段階で処理
+         }
+       });
+     }
 
     // お気に入り機能
     function isFavorite(id) {

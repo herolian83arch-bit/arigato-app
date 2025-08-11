@@ -12,6 +12,32 @@ window.FEATURE_FAVORITES = true; // お気に入り機能
 window.FEATURE_TTS = true; // 音声再生機能
 window.FEATURE_PREMIUM = true; // プレミアム機能
 
+// グローバルコントロールガードの初期化
+function initializeGlobalControlGuards() {
+  // コントロール要素からのイベントをキャプチャ段階で一括無視
+  const guard = (ev) => {
+    const target = ev.target || ev.currentTarget;
+    if (target && target.closest && target.closest('[data-card-control="true"]')) {
+      // キャプチャ段階で止める：下層/上層どちらのハンドラも発火させない
+      if (ev.preventDefault) ev.preventDefault();
+      if (ev.stopImmediatePropagation) ev.stopImmediatePropagation();
+      if (ev.stopPropagation) ev.stopPropagation();
+      
+      // デバッグ用（必要に応じて削除）
+      console.log('Global guard: blocked event from control element', ev.type, ev.target);
+      return;
+    }
+  };
+
+  // キャプチャ = 第3引数 true
+  document.addEventListener('pointerdown', guard, true);
+  document.addEventListener('click', guard, true);
+  document.addEventListener('mousedown', guard, true); // 一部UIライブラリ対策
+  document.addEventListener('touchstart', guard, true); // モバイル対応
+  
+  console.log('Global control guards attached');
+}
+
 // サポートされている言語の定義
 const supportedLanguages = {
   'en': 'English',
@@ -29,6 +55,9 @@ const supportedLanguages = {
 document.addEventListener('DOMContentLoaded', () => {
   // お気に入り機能の初期化
   initializeFavorites();
+  
+  // グローバルコントロールガードを初期化
+  initializeGlobalControlGuards();
   
   loadLanguage(currentLang);
   checkPremiumStatus(); // プレミアム状態をチェック
@@ -301,7 +330,7 @@ async function showOnomatopoeiaScene(scene) {
               </button>
             ` : ''}
             ${window.FEATURE_FAVORITES ? `
-              <button class="favorite-toggle-btn" onclick="toggleFavorite(${item.id})" aria-label="お気に入りに追加" style="background:none;border:none;cursor:pointer;padding:8px;margin-left:12px;font-size:1.3em;color:#bbb;min-width:40px;min-height:40px;display:inline-flex;align-items:center;justify-content:center;transition:all 0.2s ease;border-radius:4px;">
+              <button class="favorite-toggle-btn" data-card-control="true" aria-label="お気に入りに追加" style="background:none;border:none;cursor:pointer;padding:8px;margin-left:12px;font-size:1.3em;color:#bbb;min-width:40px;min-height:40px;display:inline-flex;align-items:center;justify-content:center;transition:all 0.2s ease;border-radius:4px;position:relative;z-index:10;pointer-events:auto;">
                 ${isFavorite(item.id) ? '★' : '☆'}
               </button>
             ` : ''}
@@ -505,6 +534,26 @@ window.handleOnomatopoeiaItemClick = function(event, itemId) {
   if (event.target && event.target.closest('[data-card-control="true"]')) {
     event.preventDefault();
     event.stopPropagation();
+    
+    // お気に入りボタンの場合はトグル処理
+    if (event.target.classList.contains('favorite-toggle-btn')) {
+      const newState = toggleFavorite(itemId);
+      
+      // UI更新
+      if (newState) {
+        event.target.innerHTML = '★';
+        event.target.style.color = '#ffd700';
+        event.target.style.transform = 'scale(1.1)';
+        event.target.setAttribute('aria-label', 'お気に入りから削除');
+        event.target.setAttribute('aria-pressed', 'true');
+      } else {
+        event.target.innerHTML = '☆';
+        event.target.style.color = '#bbb';
+        event.target.style.transform = 'scale(1)';
+        event.target.setAttribute('aria-label', 'お気に入りに追加');
+        event.target.setAttribute('aria-pressed', 'false');
+      }
+    }
     return;
   }
   
@@ -629,7 +678,23 @@ function renderScene() {
             pointer-events: auto;
           `;
           
-          // クリックイベント（確実に伝播を止める）
+          // 3段階のガード：pointerdown → mousedown → click
+          
+          // 1. pointerdown（最初のタッチ/マウスイベント）
+          favoriteBtn.addEventListener('pointerdown', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+          }, true); // キャプチャ段階で処理
+
+          // 2. mousedown（マウスイベント）
+          favoriteBtn.addEventListener('mousedown', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+          }, true); // キャプチャ段階で処理
+
+          // 3. click（最終的なクリックイベント）
           favoriteBtn.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
@@ -651,9 +716,9 @@ function renderScene() {
               favoriteBtn.setAttribute('aria-label', 'お気に入りに追加');
               favoriteBtn.setAttribute('aria-pressed', 'false');
             }
-          });
-          
-          // キーボードイベント（確実に伝播を止める）
+          }, true); // キャプチャ段階で処理
+
+          // キーボードイベント（Enter, Space）
           favoriteBtn.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
               e.preventDefault();
@@ -661,12 +726,21 @@ function renderScene() {
               e.stopImmediatePropagation();
               favoriteBtn.click();
             }
-          });
-          
-          // マウスダウンでも伝播を止める
-          favoriteBtn.addEventListener('mousedown', (e) => {
+          }, true); // キャプチャ段階で処理
+
+          // タッチイベント（モバイル対応）
+          favoriteBtn.addEventListener('touchstart', (e) => {
+            e.preventDefault();
             e.stopPropagation();
-          });
+            e.stopImmediatePropagation();
+          }, true); // キャプチャ段階で処理
+
+          favoriteBtn.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            favoriteBtn.click();
+          }, true); // キャプチャ段階で処理
           
           // ホバー効果
           favoriteBtn.addEventListener('mouseenter', () => {
