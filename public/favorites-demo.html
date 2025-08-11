@@ -215,8 +215,14 @@
     // お気に入り機能
     function isFavorite(id) {
       try {
-        const favorites = JSON.parse(localStorage.getItem('arigato_favorites_v1') || '{}');
-        return favorites[String(id)] === true;
+        // グローバルAPIを使用（優先）
+        if (window.isFavorite) {
+          return window.isFavorite(id);
+        } else {
+          // フォールバック（直接localStorage）
+          const favorites = JSON.parse(localStorage.getItem('arigato_favorites_v1') || '{}');
+          return favorites[String(id)] === true;
+        }
       } catch {
         return false;
       }
@@ -229,15 +235,22 @@
       }
       
       try {
-        const favorites = JSON.parse(localStorage.getItem('arigato_favorites_v1') || '{}');
-        const stringId = String(id);
-        const currentState = favorites[stringId] || false;
-        const newState = !currentState;
-        
-        favorites[stringId] = newState;
-        localStorage.setItem('arigato_favorites_v1', JSON.stringify(favorites));
-        
-        updateStatus(`ID ${id} のお気に入りを${newState ? '追加' : '削除'}しました`);
+        // グローバルAPIを使用（優先）
+        if (window.toggleFavorite) {
+          const newState = window.toggleFavorite(id);
+          updateStatus(`ID ${id} のお気に入りを${newState ? '追加' : '削除'}しました`);
+        } else {
+          // フォールバック（直接localStorage）
+          const favorites = JSON.parse(localStorage.getItem('arigato_favorites_v1') || '{}');
+          const stringId = String(id);
+          const currentState = favorites[stringId] || false;
+          const newState = !currentState;
+          
+          favorites[stringId] = newState;
+          localStorage.setItem('arigato_favorites_v1', JSON.stringify(favorites));
+          
+          updateStatus(`ID ${id} のお気に入りを${newState ? '追加' : '削除'}しました`);
+        }
         
         // UI更新
         renderDemoCards();

@@ -26,6 +26,7 @@ class FavoriteToggle {
     // ボタン要素の作成
     this.element = document.createElement('button');
     this.element.className = 'favorite-toggle-btn';
+    this.element.setAttribute('type', 'button');
     this.element.setAttribute('role', 'button');
     this.element.setAttribute('tabindex', '0');
     this.element.setAttribute('aria-label', 'お気に入りに追加');
@@ -48,6 +49,9 @@ class FavoriteToggle {
       justify-content: center;
       transition: all 0.2s ease;
       border-radius: 4px;
+      position: relative;
+      z-index: 10;
+      pointer-events: auto;
     `;
 
     // 初期アイコン（☆）
@@ -70,10 +74,11 @@ class FavoriteToggle {
   }
 
   attachEventListeners() {
-    // クリックイベント
+    // クリックイベント（確実に伝播を止める）
     this.element.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
+      e.stopImmediatePropagation();
       this.toggleFavorite();
     });
 
@@ -81,6 +86,8 @@ class FavoriteToggle {
     this.element.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
         this.toggleFavorite();
       }
     });
@@ -88,13 +95,20 @@ class FavoriteToggle {
     // タッチイベント（モバイル対応）
     this.element.addEventListener('touchstart', (e) => {
       e.preventDefault();
+      e.stopPropagation();
       this.element.style.transform = 'scale(0.95)';
     });
 
     this.element.addEventListener('touchend', (e) => {
       e.preventDefault();
+      e.stopPropagation();
       this.element.style.transform = this.isFavorite ? 'scale(1.1)' : 'scale(1)';
       this.toggleFavorite();
+    });
+
+    // マウスダウンでも伝播を止める
+    this.element.addEventListener('mousedown', (e) => {
+      e.stopPropagation();
     });
   }
 
@@ -127,7 +141,8 @@ class FavoriteToggle {
       detail: {
         itemId: this.itemId,
         isFavorite: this.isFavorite
-      }
+      },
+      bubbles: false // イベントの伝播を防ぐ
     });
     this.container.dispatchEvent(event);
   }

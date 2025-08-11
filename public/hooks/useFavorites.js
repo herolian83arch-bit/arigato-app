@@ -1,139 +1,117 @@
 // お気に入り機能の状態管理フック
 // localStorageを使用した永続化とメモリフォールバック
 
-const STORAGE_KEY = 'arigato_favorites_v1';
-const FALLBACK_STORAGE = new Map(); // メモリフォールバック用
+export const STORAGE_KEY = 'arigato_favorites_v1';
 
-class FavoritesManager {
-  constructor() {
-    this.favorites = new Map();
-    this.isInitialized = false;
-    this.initialize();
-  }
+// シンプルな状態管理（クラスベースから関数ベースに変更）
+let favorites = {};
+let isInitialized = false;
 
-  // 初期化（localStorageから読み込み）
-  initialize() {
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) {
-        const parsed = JSON.parse(stored);
-        this.favorites.clear();
-        Object.entries(parsed).forEach(([id, isFavorite]) => {
-          this.favorites.set(id, isFavorite);
-        });
+// 初期化（localStorageから読み込み）
+function initialize() {
+  if (isInitialized) return;
+  
+  try {
+    const raw = typeof window !== 'undefined' 
+      ? window.localStorage.getItem(STORAGE_KEY) 
+      : null;
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (parsed && typeof parsed === 'object') {
+        favorites = parsed;
       }
-      this.isInitialized = true;
-    } catch (error) {
-      console.warn('Failed to load favorites from localStorage, using memory fallback:', error);
-      this.isInitialized = true;
     }
+  } catch (error) {
+    console.warn('Failed to load favorites from localStorage:', error);
+    favorites = {};
   }
+  
+  isInitialized = true;
+}
 
-  // お気に入り状態の取得
-  isFavorite(id) {
-    if (!id) return false;
-    const stringId = String(id);
-    return this.favorites.get(stringId) === true;
-  }
-
-  // お気に入りの切り替え
-  toggleFavorite(id) {
-    if (!id) return;
-    
-    const stringId = String(id);
-    const currentState = this.favorites.get(stringId) || false;
-    const newState = !currentState;
-    
-    this.favorites.set(stringId, newState);
-    this.saveToStorage();
-    
-    return newState;
-  }
-
-  // お気に入り状態の設定
-  setFavorite(id, isFavorite) {
-    if (!id) return;
-    
-    const stringId = String(id);
-    this.favorites.set(stringId, isFavorite);
-    this.saveToStorage();
-  }
-
-  // 全お気に入りの取得
-  getAllFavorites() {
-    const result = {};
-    this.favorites.forEach((isFavorite, id) => {
-      if (isFavorite) {
-        result[id] = true;
-      }
-    });
-    return result;
-  }
-
-  // お気に入り数の取得
-  getFavoriteCount() {
-    let count = 0;
-    this.favorites.forEach((isFavorite) => {
-      if (isFavorite) count++;
-    });
-    return count;
-  }
-
-  // localStorageへの保存
-  saveToStorage() {
-    try {
-      const data = {};
-      this.favorites.forEach((isFavorite, id) => {
-        data[id] = isFavorite;
-      });
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-    } catch (error) {
-      console.warn('Failed to save favorites to localStorage, using memory fallback:', error);
-      // メモリフォールバックに保存
-      this.favorites.forEach((isFavorite, id) => {
-        FALLBACK_STORAGE.set(id, isFavorite);
-      });
+// 永続化関数
+function persist(next) {
+  favorites = next;
+  try {
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
     }
-  }
-
-  // 初期化状態の確認
-  getInitializationStatus() {
-    return this.isInitialized;
+  } catch (error) {
+    console.warn('Failed to save favorites to localStorage:', error);
+    // 保存失敗は無視（次回までメモリ保持）
   }
 }
 
-// シングルトンインスタンス
-const favoritesManager = new FavoritesManager();
+// お気に入り状態の確認
+function isFavorite(id) {
+  if (!isInitialized) initialize();
+  if (!id) return false;
+  return !!favorites[String(id)];
+}
 
-// フック関数
+// お気に入りの切り替え
+function toggleFavorite(id) {
+  if (!isInitialized) initialize();
+  if (!id) return false;
+  
+  const key = String(id);
+  const next = { ...favorites, [key]: !favorites[key] };
+  persist(next);
+  
+  return next[key];
+}
+
+// お気に入り状態の設定
+function setFavorite(id, isFavorite) {
+  if (!isInitialized) initialize();
+  if (!id) return;
+  
+  const key = String(id);
+  const next = { ...favorites, [key]: isFavorite };
+  persist(next);
+}
+
+// 全お気に入りの取得
+function getAllFavorites() {
+  if (!isInitialized) initialize();
+  return { ...favorites };
+}
+
+// お気に入り数の取得
+function getFavoriteCount() {
+  if (!isInitialized) initialize();
+  return Object.values(favorites).filter(v => v === true).length;
+}
+
+// 初期化状態の確認
+function getInitializationStatus() {
+  return isInitialized;
+}
+
+// フック関数（非React環境用）
 export function useFavorites() {
   return {
-    // お気に入り状態の確認
-    isFavorite: (id) => favoritesManager.isFavorite(id),
-    
-    // お気に入りの切り替え
-    toggleFavorite: (id) => favoritesManager.toggleFavorite(id),
-    
-    // お気に入り状態の設定
-    setFavorite: (id, isFavorite) => favoritesManager.setFavorite(id, isFavorite),
-    
-    // 全お気に入りの取得
-    getAllFavorites: () => favoritesManager.getAllFavorites(),
-    
-    // お気に入り数の取得
-    getFavoriteCount: () => favoritesManager.getFavoriteCount(),
-    
-    // 初期化状態の確認
-    isInitialized: () => favoritesManager.getInitializationStatus()
+    favorites: getAllFavorites(),
+    isFavorite,
+    toggleFavorite,
+    setFavorite,
+    getAllFavorites,
+    getFavoriteCount,
+    isInitialized: getInitializationStatus
   };
 }
 
 // 直接アクセス用（非フック環境用）
 export const favoritesAPI = {
-  isFavorite: (id) => favoritesManager.isFavorite(id),
-  toggleFavorite: (id) => favoritesManager.toggleFavorite(id),
-  setFavorite: (id, isFavorite) => favoritesManager.setFavorite(id, isFavorite),
-  getAllFavorites: () => favoritesManager.getAllFavorites(),
-  getFavoriteCount: () => favoritesManager.getFavoriteCount(),
-  isInitialized: () => favoritesManager.getInitializationStatus()
+  isFavorite,
+  toggleFavorite,
+  setFavorite,
+  getAllFavorites,
+  getFavoriteCount,
+  isInitialized: getInitializationStatus
 };
+
+// 初期化を実行
+if (typeof window !== 'undefined') {
+  initialize();
+}

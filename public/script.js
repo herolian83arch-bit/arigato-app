@@ -579,10 +579,33 @@ function renderScene() {
             favoriteBtn.setAttribute('aria-pressed', 'true');
           }
           
-          // クリックイベント
+          // スタイル設定の強化
+          favoriteBtn.style.cssText = `
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            margin-left: 12px;
+            font-size: 1.3em;
+            color: #bbb;
+            user-select: none;
+            min-width: 40px;
+            min-height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            border-radius: 4px;
+            position: relative;
+            z-index: 10;
+            pointer-events: auto;
+          `;
+          
+          // クリックイベント（確実に伝播を止める）
           favoriteBtn.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
+            e.stopImmediatePropagation();
             
             const newState = toggleFavorite(messageId);
             
@@ -602,12 +625,19 @@ function renderScene() {
             }
           });
           
-          // キーボードイベント
+          // キーボードイベント（確実に伝播を止める）
           favoriteBtn.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
               e.preventDefault();
+              e.stopPropagation();
+              e.stopImmediatePropagation();
               favoriteBtn.click();
             }
+          });
+          
+          // マウスダウンでも伝播を止める
+          favoriteBtn.addEventListener('mousedown', (e) => {
+            e.stopPropagation();
           });
           
           // ホバー効果
