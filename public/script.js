@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   loadLanguage(currentLang);
   checkPremiumStatus(); // プレミアム状態をチェック
   loadOnomatopoeiaData(); // オノマトペデータを読み込み
+  updateTTSToggleButton(); // TTSボタンの状態を更新
   
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.onclick = () => {
@@ -233,9 +234,20 @@ async function showOnomatopoeiaScene(scene) {
       translatedDescription = await translateText(item.description.ja, currentLang);
     }
     
+    // 音声再生機能の有効/無効チェック
+    const isTTSEnabled = localStorage.getItem('feature_tts') === '1' || 
+                         (typeof window !== 'undefined' && window.speechSynthesis);
+    
     html += `
       <div class="onomatopoeia-item">
-        <div class="item-number">${item.id}</div>
+        <div class="item-header">
+          <div class="item-number">${item.id}</div>
+          ${isTTSEnabled ? `
+            <button class="speak-btn" onclick="speakJapanese('${item.main.replace(/'/g, "\\'")}')" aria-label="音声再生">
+              🔊
+            </button>
+          ` : ''}
+        </div>
         <div class="item-main">${translatedMain}</div>
         <div class="item-romaji">${item.romaji}</div>
         <div class="item-description">${translatedDescription}</div>
@@ -508,4 +520,31 @@ window.playRomajiSpeech = function(romajiText) {
   utter.lang = 'en-US';
   utter.rate = speechSpeed;
   speechSynthesis.speak(utter);
-}; 
+};
+
+// 音声再生機能の切り替え
+function toggleTTS() {
+  const currentState = localStorage.getItem('feature_tts');
+  const newState = currentState === '1' ? '0' : '1';
+  localStorage.setItem('feature_tts', newState);
+  
+  updateTTSToggleButton();
+  
+  // オノマトペモーダルが開いている場合は再描画
+  if (document.getElementById('onomatopoeia-modal').style.display !== 'none') {
+    const currentScene = document.querySelector('#onomatopoeia-content h3')?.textContent;
+    if (currentScene) {
+      showOnomatopoeiaScene(currentScene);
+    }
+  }
+}
+
+// TTSボタンの状態を更新
+function updateTTSToggleButton() {
+  const ttsBtn = document.getElementById('tts-toggle-btn');
+  if (ttsBtn) {
+    const isEnabled = localStorage.getItem('feature_tts') === '1';
+    ttsBtn.classList.toggle('active', isEnabled);
+    ttsBtn.title = isEnabled ? '音声再生機能: 有効' : '音声再生機能: 無効';
+  }
+} 

@@ -22,6 +22,9 @@
         <button class="lang-btn" data-lang="it">IT</button>
         <button class="lang-btn" data-lang="ru">RU</button>
         <button id="premium-btn" class="premium-btn" onclick="showPaymentModal()">Upgrade to Premium</button>
+        <button id="tts-toggle-btn" class="tts-toggle-btn" onclick="toggleTTS()" title="音声再生機能の有効/無効切り替え">
+          🔊
+        </button>
       </div>
     </header>
     <main>
@@ -71,6 +74,7 @@
     <button class="footer-btn" onclick="window.open('privacy-en.html','_blank')">Privacy Policy</button>
   </footer>
   <p>ありがとう：ありがとう！</p>
+  <script src="speech.js"></script>
   <script src="script.js"></script>
 </body>
 </html> 
