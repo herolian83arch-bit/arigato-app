@@ -145,4 +145,19 @@ test.describe('Premium Features Verification', () => {
     expect(count).toBeGreaterThan(0);
     console.log(`✅ Dictionary entries displayed: ${count} rows`);
   });
+
+  test('should not display translation panels', async ({ page }) => {
+    console.log('🚫 Testing translation panel removal...');
+
+    // verify.html を開く
+    await page.goto('/verify.html');
+    await page.waitForLoadState('networkidle');
+
+    // 翻訳パネルのラベルが存在しないことを確認
+    await expect(page.locator('text=EN:')).not.toBeVisible();
+    await expect(page.locator('text=中文:')).not.toBeVisible();
+    await expect(page.locator('text=한국어:')).not.toBeVisible();
+
+    console.log('✅ Translation panels are completely removed');
+  });
 });

@@ -428,20 +428,6 @@ async function showOnomatopoeiaScene(scene) {
         <div class="item-main">${translatedMain}</div>
         <div class="item-romaji">${item.romaji}</div>
         <div class="item-description">${translatedDescription}</div>
-        <div class="item-translations">
-          <div class="translation-item">
-            <span class="lang-label">EN:</span>
-            <span class="translation-text">${item.description?.en || 'Coming soon...'}</span>
-          </div>
-          <div class="translation-item">
-            <span class="lang-label">中文:</span>
-            <span class="translation-text">${item.description?.zh || '即将推出...'}</span>
-          </div>
-          <div class="translation-item">
-            <span class="lang-label">한국어:</span>
-            <span class="translation-text">${item.description?.ko || '곧 출시...'}</span>
-          </div>
-        </div>
       </div>
     `;
   }

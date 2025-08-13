@@ -17,7 +17,10 @@
           "audit:translations": "tsx scripts/audit-translation-keys.ts",
           "scrub:translations": "tsx scripts/scrub-translation-keys.ts",
           "verify:no-translation": "tsx scripts/verify-no-translation-all.ts",
-          "fix-and-verify": "npm run audit:translations && npm run scrub:translations && npm run verify:no-translation && npm run verify-app"
+          "fix-and-verify": "npm run audit:translations && npm run scrub:translations && npm run verify:no-translation && npm run verify-app",
+          "scrub:final": "tsx scripts/scrub-translation-final.ts",
+          "verify:final": "tsx scripts/verify-translation-final.ts",
+          "remove-translation-final": "npm run scrub:final && npm run verify:final"
   },
   "dependencies": {
     "stripe": "^12.0.0"
