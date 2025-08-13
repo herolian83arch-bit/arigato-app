@@ -263,12 +263,12 @@ async function loadDictionary() {
       const res = await fetch(p, { cache: 'no-store' });
       if (res.ok) {
         const data = await res.json();
-        globalThis.__DICT_DEBUG__ = { path: p, count: Array.isArray(data) ? data.length : -1 };
+
         return data;
       }
     } catch {}
   }
-  globalThis.__DICT_DEBUG__ = { path: 'NOT-FOUND', count: 0 };
+  
   return [];
 }
 
@@ -378,19 +378,7 @@ async function showOnomatopoeiaScene(scene) {
   
   const sceneItems = onomatopoeiaData.filter(item => item.scene === scene);
   
-  // 0件時のデバッグ出力
-  if (sceneItems.length === 0) {
-    const dbg = globalThis.__DICT_DEBUG__ || {};
-    const html = `
-      <h3>${scene}</h3>
-      <div style="padding:'8px', color:'#666'" data-testid="dict-empty">
-        データが0件です。<br/>
-        <small>path: ${dbg.path || 'n/a'}, loaded: ${dbg.count || 'n/a'}, sceneId: ${scene}, totalData: ${onomatopoeiaData.length}</small>
-      </div>
-    `;
-    examplesContainer.innerHTML = html;
-    return;
-  }
+
   
   let html = `<h3>${scene}</h3>`;
   

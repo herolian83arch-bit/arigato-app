@@ -34,12 +34,10 @@
 
   <hr />
   <h2>Dictionary Preview</h2>
-  <div id="dict-info" style="color:#666;font-size:12px;"></div>
   <div id="dict-list"></div>
 
   <script>
     (async function loadDictPreview(){
-      const info = document.getElementById('dict-info');
       const list = document.getElementById('dict-list');
 
       async function load(path){
@@ -64,7 +62,7 @@
         if(data.length){ used = p; break; }
       }
 
-      info.textContent = `path: ${used}, loaded: ${data.length}`;
+
 
       // 先頭シーンの上位3件をプレビュー（sceneIdでまとまりを作る）
       if(!data.length){ return; }

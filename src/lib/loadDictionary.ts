@@ -9,11 +9,11 @@ export async function loadDictionary(): Promise<any[]> {
       const res = await fetch(p, { cache: 'no-store' });
       if (res.ok) {
         const data = await res.json();
-        (globalThis as any).__DICT_DEBUG__ = { path: p, count: Array.isArray(data) ? data.length : -1 };
+
         return data;
       }
     } catch {}
   }
-  (globalThis as any).__DICT_DEBUG__ = { path: 'NOT-FOUND', count: 0 };
+
   return [];
 }
