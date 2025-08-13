@@ -4,15 +4,37 @@
   "description": "Multi-language gratitude messages app for visitors to Japan",
   "main": "index.html",
   "scripts": {
-    "start": "npx http-server -p 3000",
-    "dev": "npx http-server -p 3000",
+    "start": "node server-config.js && npx http-server -p 3000",
+    "dev": "node server-config.js && npx http-server -p 3000",
     "build": "echo 'Static site - no build required'",
-    "vercel-build": "echo 'Static site - no build required'"
+    "vercel-build": "echo 'Static site - no build required'",
+    "mkdir:reports": "node -e \"require('fs').mkdirSync('reports',{recursive:true})\"",
+    "verify:dict": "tsx scripts/verify-dictionary.ts",
+    "verify:diff": "tsx scripts/verify-translation-removal.ts",
+    "e2e:setup": "playwright install chromium",
+    "e2e:run": "start-server-and-test dev http://localhost:3000/verify.html \"playwright test\"",
+    "verify-app": "rimraf reports && npm run mkdir:reports && npm run verify:dict && npm run verify:diff && npm run e2e:setup && npm run e2e:run && node scripts/print-summary.cjs"
   },
   "dependencies": {
     "stripe": "^12.0.0"
   },
-  "keywords": ["japan", "gratitude", "multilingual", "travel", "static-site"],
+  "keywords": [
+    "japan",
+    "gratitude",
+    "multilingual",
+    "travel",
+    "static-site"
+  ],
   "author": "",
-  "license": "MIT"
-} 
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "glob": "^11.0.3",
+    "playwright": "^1.54.2",
+    "rimraf": "^6.0.1",
+    "start-server-and-test": "^2.0.13",
+    "tsx": "^4.20.4",
+    "typescript": "^5.9.2",
+    "wait-on": "^8.0.4"
+  }
+}
