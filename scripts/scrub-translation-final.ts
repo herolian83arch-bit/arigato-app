@@ -71,3 +71,4 @@ console.log('\n🎯 Translation Scrub Complete!');
 console.log(`📁 Files edited: ${edited.length}`);
 console.log(`💾 Backups saved to: ${BACKUP_DIR}`);
 console.log(`📄 Manifest: reports/scrub-manifest.json`);
+

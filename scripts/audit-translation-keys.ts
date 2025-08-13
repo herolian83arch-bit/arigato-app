@@ -25,3 +25,4 @@ for (const file of targets) {
 fs.mkdirSync('reports', { recursive: true });
 fs.writeFileSync('reports/audit-translation.json', JSON.stringify(result, null, 2));
 console.log('Audit written to reports/audit-translation.json');
+

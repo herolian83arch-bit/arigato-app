@@ -39,3 +39,4 @@ if (offenders.length) {
   fs.writeFileSync('reports/verify-no-translation-ok.json', JSON.stringify({ ok: true, at: new Date().toISOString() }, null, 2));
   console.log('✅ 全JSONから translation が完全に削除されています');
 }
+

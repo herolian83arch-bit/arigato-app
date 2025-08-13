@@ -47,3 +47,4 @@ const manifest = JSON.stringify({ edited, backupsCount: Object.keys(backups).len
 fs.writeFileSync('reports/scrub-manifest.json', manifest);
 
 console.log('Scrub done. Files edited:', edited.length);
+

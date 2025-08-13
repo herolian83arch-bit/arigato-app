@@ -22,3 +22,4 @@ export function normalizeForView(item: DictItem, locale: 'ja'|'en'|'zh'|'ko'='ja
     description: getDescription(item.description, locale).trim(),
   };
 }
+
