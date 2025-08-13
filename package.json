@@ -9,11 +9,15 @@
     "build": "echo 'Static site - no build required'",
     "vercel-build": "echo 'Static site - no build required'",
     "mkdir:reports": "node -e \"require('fs').mkdirSync('reports',{recursive:true})\"",
-    "verify:dict": "tsx scripts/verify-dictionary.ts",
-    "verify:diff": "tsx scripts/verify-translation-removal.ts",
-    "e2e:setup": "playwright install chromium",
-    "e2e:run": "start-server-and-test dev http://localhost:3000/verify.html \"playwright test\"",
-    "verify-app": "rimraf reports && npm run mkdir:reports && npm run verify:dict && npm run verify:diff && npm run e2e:setup && npm run e2e:run && node scripts/print-summary.cjs"
+              "verify:dict": "tsx scripts/verify-dictionary.ts",
+          "verify:diff": "tsx scripts/verify-translation-removal.ts",
+          "e2e:setup": "playwright install chromium",
+          "e2e:run": "start-server-and-test dev http://localhost:3000/verify.html \"playwright test\"",
+          "verify-app": "rimraf reports && npm run mkdir:reports && npm run verify:dict && npm run verify:diff && npm run e2e:setup && npm run e2e:run && node scripts/print-summary.cjs",
+          "audit:translations": "tsx scripts/audit-translation-keys.ts",
+          "scrub:translations": "tsx scripts/scrub-translation-keys.ts",
+          "verify:no-translation": "tsx scripts/verify-no-translation-all.ts",
+          "fix-and-verify": "npm run audit:translations && npm run scrub:translations && npm run verify:no-translation && npm run verify-app"
   },
   "dependencies": {
     "stripe": "^12.0.0"

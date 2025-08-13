@@ -12,11 +12,6 @@
             "number": "1",
             "romaji": "Gacha gacha",
             "text": "がちゃがちゃ",
-            "translation": {
-              "en": "clattering",
-              "zh": "咔嗒咔嗒",
-              "ko": "찰칵찰칵"
-            },
             "note": "（ドアの鍵を開ける音）",
             "ja": "がちゃがちゃ"
           },
@@ -24,11 +19,6 @@
             "number": "2",
             "romaji": "Pon pon",
             "text": "ぽんぽん",
-            "translation": {
-              "en": "knocking",
-              "zh": "咚咚",
-              "ko": "똑똑"
-            },
             "note": "（ドアを叩く音）",
             "ja": "ぽんぽん"
           },
@@ -36,11 +26,6 @@
             "number": "3",
             "romaji": "Kacha kacha",
             "text": "かちゃかちゃ",
-            "translation": {
-              "en": "clinking",
-              "zh": "叮叮当当",
-              "ko": "딸랑딸랑"
-            },
             "note": "（食器を洗う音）",
             "ja": "かちゃかちゃ"
           }
@@ -55,11 +40,6 @@
             "number": "1",
             "romaji": "Guzu guzu",
             "text": "ぐずぐず",
-            "translation": {
-              "en": "slurping",
-              "zh": "吸溜吸溜",
-              "ko": "후루룩후루룩"
-            },
             "note": "（麺を食べる音）",
             "ja": "ぐずぐず"
           },
@@ -67,11 +47,6 @@
             "number": "2",
             "romaji": "Paku paku",
             "text": "ぱくぱく",
-            "translation": {
-              "en": "munching",
-              "zh": "吧唧吧唧",
-              "ko": "우적우적"
-            },
             "note": "（美味しそうに食べる様子）",
             "ja": "ぱくぱく"
           },
@@ -79,11 +54,6 @@
             "number": "3",
             "romaji": "Goku goku",
             "text": "ごくごく",
-            "translation": {
-              "en": "gulping",
-              "zh": "咕咚咕咚",
-              "ko": "꿀꿀"
-            },
             "note": "（水を飲む音）",
             "ja": "ごくごく"
           }
@@ -98,11 +68,6 @@
             "number": "1",
             "romaji": "Wan wan",
             "text": "わんわん",
-            "translation": {
-              "en": "woof woof",
-              "zh": "汪汪",
-              "ko": "멍멍"
-            },
             "note": "（犬の鳴き声）",
             "ja": "わんわん"
           },
@@ -110,11 +75,6 @@
             "number": "2",
             "romaji": "Nya nya",
             "text": "にゃーにゃー",
-            "translation": {
-              "en": "meow meow",
-              "zh": "喵喵",
-              "ko": "야옹야옹"
-            },
             "note": "（猫の鳴き声）",
             "ja": "にゃーにゃー"
           },
@@ -122,11 +82,6 @@
             "number": "3",
             "romaji": "Pyon pyon",
             "text": "ぴょんぴょん",
-            "translation": {
-              "en": "hop hop",
-              "zh": "蹦蹦跳跳",
-              "ko": "깡총깡총"
-            },
             "note": "（ウサギが跳ねる様子）",
             "ja": "ぴょんぴょん"
           }
@@ -134,4 +89,4 @@
       }
     }
   }
-} 
+}
