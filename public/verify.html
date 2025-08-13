@@ -32,6 +32,68 @@
 
   <pre id="log"></pre>
 
+  <hr />
+  <h2>Dictionary Preview</h2>
+  <div id="dict-info" style="color:#666;font-size:12px;"></div>
+  <div id="dict-list"></div>
+
+  <script>
+    (async function loadDictPreview(){
+      const info = document.getElementById('dict-info');
+      const list = document.getElementById('dict-list');
+
+      async function load(path){
+        try{
+          const res = await fetch(path, {cache:'no-store'});
+          if(!res.ok) throw new Error(res.status+' '+res.statusText);
+          const data = await res.json();
+          return Array.isArray(data) ? data : [];
+        }catch(e){ return []; }
+      }
+
+      // 読み込みパス候補（premium版を優先）
+      const paths = [
+        '/locales/onomatopoeia-premium-all-41-scenes.json',
+        '/locales/onomatopoeia-all-scenes.json'
+      ];
+
+      let data = [];
+      let used = 'NOT-FOUND';
+      for(const p of paths){
+        data = await load(p);
+        if(data.length){ used = p; break; }
+      }
+
+      info.textContent = `path: ${used}, loaded: ${data.length}`;
+
+      // 先頭シーンの上位3件をプレビュー（sceneIdでまとまりを作る）
+      if(!data.length){ return; }
+      const firstSceneId = data[0]?.sceneId ?? null;
+      const rows = data
+        .filter(x => firstSceneId==null ? true : x.sceneId === firstSceneId)
+        .slice(0, 3);
+
+      for(const item of rows){
+        const title = (item.main||'').trim();
+        const romaji = (item.romaji||'').trim();
+        const desc = (typeof item.description === 'string'
+                        ? item.description
+                        : (item.description?.ja || item.description?.en || item.description?.zh || item.description?.ko || '')
+                     ).trim();
+
+        const el = document.createElement('div');
+        el.setAttribute('data-testid','dict-row');
+        el.style.padding = '8px 0';
+        el.innerHTML = `
+          <div data-testid="dict-title">${title}</div>
+          ${romaji ? `<div data-testid="dict-romaji">${romaji}</div>` : ''}
+          ${desc ? `<div data-testid="dict-desc">${desc}</div>` : ''}
+        `;
+        list.appendChild(el);
+      }
+    })();
+  </script>
+
   <script>
     (function () {
       const premiumEl = document.getElementById('premium');

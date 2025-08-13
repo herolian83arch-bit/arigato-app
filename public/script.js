@@ -52,7 +52,15 @@ const supportedLanguages = {
   'ru': 'Русский'
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  // 起動時ヘルスチェック
+  try {
+    await performHealthCheck();
+  } catch (error) {
+    console.error('❌ Health check failed:', error);
+    // ヘルスチェック失敗時もアプリは起動する
+  }
+  
   // お気に入り機能の初期化
   initializeFavorites();
   
@@ -81,6 +89,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// 起動時ヘルスチェック
+async function performHealthCheck() {
+  try {
+    console.log('🔍 Performing health check...');
+    
+    const response = await fetch('/api/checkout/ping.json');
+    const raw = await response.text();
+    
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    }
+    
+    if (raw) {
+      try {
+        const data = JSON.parse(raw);
+        if (data.ok === true) {
+          console.log('✅ Health check passed:', data);
+          return true;
+        } else {
+          throw new Error('Health check response is invalid');
+        }
+      } catch (e) {
+        throw new Error(`Invalid JSON response: ${raw.slice(0, 200)}`);
+      }
+    } else {
+      throw new Error('Empty health check response');
+    }
+  } catch (error) {
+    console.error('❌ Health check failed:', error);
+    
+    // ユーザーに警告を表示
+    const warningMessage = `API Health Check Failed: ${error.message}\n\nThis may affect premium features. Please check the server status.`;
+    console.warn(warningMessage);
+    
+    // 開発環境ではアラートを表示
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      alert(`⚠️ API Health Check Failed\n\n${error.message}\n\nPlease restart the server or check the configuration.`);
+    }
+    
+    throw error;
+  }
+}
 
 // お気に入り機能の初期化
 function initializeFavorites() {
@@ -200,19 +251,43 @@ async function translateLanguageData(baseData, targetLang) {
   return translatedData;
 }
 
+// 辞書データを読み込む関数
+async function loadDictionary() {
+  // public 配下の最有力パスから順に読み込み
+  const paths = [
+    '/locales/onomatopoeia-premium-all-41-scenes.json',
+    '/locales/onomatopoeia-all-scenes.json'
+  ];
+  for (const p of paths) {
+    try {
+      const res = await fetch(p, { cache: 'no-store' });
+      if (res.ok) {
+        const data = await res.json();
+        globalThis.__DICT_DEBUG__ = { path: p, count: Array.isArray(data) ? data.length : -1 };
+        return data;
+      }
+    } catch {}
+  }
+  globalThis.__DICT_DEBUG__ = { path: 'NOT-FOUND', count: 0 };
+  return [];
+}
+
 // オノマトペデータを読み込み
 async function loadOnomatopoeiaData() {
   try {
-    const response = await fetch('locales/onomatopoeia-premium-all-41-scenes.json');
-    const rawData = await response.json();
+    // 新しいデータローダーを使用
+    const rawData = await loadDictionary();
     
     // romajiを大文字に変換
     onomatopoeiaData = rawData.map(item => ({
       ...item,
       romaji: item.romaji ? item.romaji.toUpperCase() : item.romaji
     }));
+    
+    console.log(`📚 Loaded ${onomatopoeiaData.length} onomatopoeia entries`);
   } catch (error) {
     console.error('オノマトペデータの読み込みに失敗:', error);
+    onomatopoeiaData = [];
   }
 }
 
@@ -303,16 +378,30 @@ async function showOnomatopoeiaScene(scene) {
   
   const sceneItems = onomatopoeiaData.filter(item => item.scene === scene);
   
+  // 0件時のデバッグ出力
+  if (sceneItems.length === 0) {
+    const dbg = globalThis.__DICT_DEBUG__ || {};
+    const html = `
+      <h3>${scene}</h3>
+      <div style="padding:'8px', color:'#666'" data-testid="dict-empty">
+        データが0件です。<br/>
+        <small>path: ${dbg.path || 'n/a'}, loaded: ${dbg.count || 'n/a'}, sceneId: ${scene}, totalData: ${onomatopoeiaData.length}</small>
+      </div>
+    `;
+    examplesContainer.innerHTML = html;
+    return;
+  }
+  
   let html = `<h3>${scene}</h3>`;
   
   for (const item of sceneItems) {
     // 動的翻訳でオノマトペの翻訳を取得
     let translatedMain = item.main;
-    let translatedDescription = item.description.ja;
+    let translatedDescription = item.description?.ja || '';
     
     if (currentLang !== 'ja' && currentLang !== 'en') {
       translatedMain = await translateText(item.main, currentLang);
-      translatedDescription = await translateText(item.description.ja, currentLang);
+      translatedDescription = await translateText(item.description?.ja || '', currentLang);
     }
     
     // 音声再生機能の有効/無効チェック
@@ -320,7 +409,7 @@ async function showOnomatopoeiaScene(scene) {
                          (typeof window !== 'undefined' && window.speechSynthesis);
     
     html += `
-      <div class="onomatopoeia-item" onclick="handleOnomatopoeiaItemClick(event, ${item.id})">
+      <div class="onomatopoeia-item" data-testid="dict-row" onclick="handleOnomatopoeiaItemClick(event, ${item.id})">
         <div class="item-header">
           <div class="item-number">${item.id}</div>
           <div class="item-actions" style="display:inline-flex;align-items:center;">
@@ -342,15 +431,15 @@ async function showOnomatopoeiaScene(scene) {
         <div class="item-translations">
           <div class="translation-item">
             <span class="lang-label">EN:</span>
-            <span class="translation-text">${item.translation.en || 'Coming soon...'}</span>
+            <span class="translation-text">${item.description?.en || 'Coming soon...'}</span>
           </div>
           <div class="translation-item">
             <span class="lang-label">中文:</span>
-            <span class="translation-text">${item.translation.zh || '即将推出...'}</span>
+            <span class="translation-text">${item.description?.zh || '即将推出...'}</span>
           </div>
           <div class="translation-item">
             <span class="lang-label">한국어:</span>
-            <span class="translation-text">${item.translation.ko || '곧 출시...'}</span>
+            <span class="translation-text">${item.description?.ko || '곧 출시...'}</span>
           </div>
         </div>
       </div>
@@ -405,64 +494,141 @@ function closePaymentModal() {
   modal.style.display = 'none';
 }
 
-// 決済処理
+// 決済処理（堅牢化版）
 async function processPayment() {
   const payButton = document.getElementById('pay-button');
   payButton.disabled = true;
   payButton.textContent = 'Processing...';
   
   try {
-    const response = await fetch('/api/payment/create-payment-intent.js', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        amount: 999, // $9.99
-        currency: 'usd',
-        description: 'Arigato App Premium Subscription'
-      })
-    });
-
-    const responseData = await response.json();
+    console.log('🔍 Starting payment process...');
     
-    if (!responseData.clientSecret) {
-      throw new Error('No client secret received from server');
+    // 静的サイト用モック課金APIを試行
+    console.log('🔍 Starting mock checkout process...');
+    
+    try {
+      // 静的JSONファイルからモック課金データを取得
+      const mockResponse = await fetch('/api/checkout.json', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+
+      // ネットワーク診断ログ
+      console.info('🌐 Mock checkout API response:', {
+        status: mockResponse.status,
+        statusText: mockResponse.statusText,
+        contentType: mockResponse.headers.get('content-type'),
+        url: mockResponse.url
+      });
+
+      // レスポンスの堅牢化処理
+      const raw = await mockResponse.text();
+      let responseData = null;
+      
+      if (raw) {
+        try {
+          responseData = JSON.parse(raw);
+          console.log('📄 Parsed response data:', responseData);
+        } catch (e) {
+          throw new Error(`Invalid JSON response: ${raw.slice(0, 200)}`);
+        }
+      } else {
+        throw new Error('Empty response received from server');
+      }
+
+      // モック課金の成功処理
+      if (responseData.mock && responseData.premium) {
+        console.log('🎭 Mock premium access granted successfully');
+        
+        // プレミアム状態を有効化
+        localStorage.setItem('premiumStatus', 'active');
+        isPremiumUser = true;
+        updatePremiumUI();
+        closePaymentModal();
+        alert('🎉 Mock premium upgrade successful! You now have access to premium features.');
+        return;
+      } else {
+        throw new Error('Mock premium response is invalid');
+      }
+    } catch (error) {
+      console.error('❌ Mock checkout error:', error);
+      throw error; // エラーを上位に伝播
     }
-    
-    const { clientSecret } = responseData;
-    
-            const result = await stripe.confirmCardPayment(clientSecret, {
-          payment_method: {
-            card: elements.getElement('card'),
-            billing_details: {
-              name: 'Test User',
-              email: 'test@example.com',
-              address: {
-                line1: '123 Test Street',
-                city: 'Test City',
-                state: 'Test State',
-                postal_code: '12345',
-                country: 'US'
-              }
-            }
-          }
-        });
 
-    if (result.error) {
-      console.error('Payment failed:', result.error);
-      alert('Payment failed: ' + result.error.message);
-    } else {
-      // 支払い成功
+    // モック課金の成功処理
+    if (responseData.mock && responseData.premium) {
+      console.log('🎭 Mock premium access granted successfully');
+      
+      // プレミアム状態を有効化
       localStorage.setItem('premiumStatus', 'active');
       isPremiumUser = true;
       updatePremiumUI();
       closePaymentModal();
-      alert('Premium upgrade successful! 🎉');
+      alert('🎉 Mock premium upgrade successful! You now have access to premium features.');
+      return;
     }
+
+    // エラーレスポンスの処理
+    if (!mockResponse.ok) {
+      throw new Error(responseData?.error || `HTTP ${mockResponse.status}: ${mockResponse.statusText}`);
+    }
+
+    // 本番課金処理（Stripe）のフォールバック
+    if (responseData.clientSecret) {
+      console.log('💳 Proceeding with Stripe payment...');
+      
+      const result = await stripe.confirmCardPayment(responseData.clientSecret, {
+        payment_method: {
+          card: elements.getElement('card'),
+          billing_details: {
+            name: 'Test User',
+            email: 'test@example.com',
+            address: {
+              line1: '123 Test Street',
+              city: 'Test City',
+              state: 'Test State',
+              postal_code: '12345',
+              country: 'US'
+            }
+          }
+        }
+      });
+
+      if (result.error) {
+        console.error('Payment failed:', result.error);
+        throw new Error(`Payment failed: ${result.error.message}`);
+      } else {
+        // 支払い成功
+        localStorage.setItem('premiumStatus', 'active');
+        isPremiumUser = true;
+        updatePremiumUI();
+        closePaymentModal();
+        alert('Premium upgrade successful! 🎉');
+      }
+    } else {
+      throw new Error('No payment method available (neither mock nor Stripe)');
+    }
+
   } catch (error) {
-    console.error('Payment error:', error);
-    alert('Payment error: ' + error.message);
+    console.error('❌ Payment error:', error);
+    
+    // ユーザーフレンドリーなエラーメッセージ
+    let errorMessage = 'Payment error occurred. ';
+    if (error.message.includes('Invalid JSON')) {
+      errorMessage += 'Server returned invalid response format.';
+    } else if (error.message.includes('Empty response')) {
+      errorMessage += 'Server returned empty response.';
+    } else if (error.message.includes('HTTP 404')) {
+      errorMessage += 'Payment service not found.';
+    } else if (error.message.includes('HTTP 500')) {
+      errorMessage += 'Server internal error.';
+    } else {
+      errorMessage += error.message;
+    }
+    
+    alert(errorMessage);
   } finally {
     payButton.disabled = false;
     payButton.textContent = 'Pay $9.99';

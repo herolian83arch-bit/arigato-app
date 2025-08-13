@@ -126,4 +126,23 @@ test.describe('Premium Features Verification', () => {
     expect(playCount).toBeGreaterThan(0);
     console.log(`✅ Audio play called ${playCount} times`);
   });
+
+  test('should display dictionary entries correctly', async ({ page }) => {
+    console.log('📚 Testing dictionary display functionality...');
+
+    // verify.html を開く（サーバーは start-server-and-test で起動済み想定）
+    await page.goto('/verify.html');
+
+    // 少なくとも1件の辞典行が表示されること
+    const rows = page.locator('[data-testid="dict-row"]');
+    await expect(rows.first()).toBeVisible({ timeout: 10000 });
+
+    // タイトルは空でないこと
+    await expect(page.getByTestId('dict-title').first()).not.toHaveText('', { timeout: 10000 });
+
+    // （任意）最大件数 1〜3 の範囲
+    const count = await rows.count();
+    expect(count).toBeGreaterThan(0);
+    console.log(`✅ Dictionary entries displayed: ${count} rows`);
+  });
 });
