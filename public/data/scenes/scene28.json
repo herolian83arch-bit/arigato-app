@@ -1,0 +1,20 @@
+﻿[
+  {
+    "id": 406,
+    "sceneId": 28,
+    "scene": "和食・伝統料理",
+    "main": "お味噌汁から《ほわ〜》と湯気が立ちのぼりました。",
+    "romaji": "OMISOSHIRU KARA 《HOWA〜》 TO YUGE GA TACHINOBORIMASHITA",
+    "translation": { "en": "", "zh": "", "ko": "" },
+    "description": { "ja": "あたたかい蒸気がゆっくり広がる情景。" }
+  },
+  {
+    "id": 407,
+    "sceneId": 28,
+    "scene": "和食・伝統料理",
+    "main": "焼き魚の皮が《パリッ》とはじける音が心地よかったです。",
+    "romaji": "YAKIZAKANA NO KAWA GA 《PARI》 TO HAJIKERU OTO GA KOKOCHI YOKATTA DESU",
+    "translation": { "en": "", "zh": "", "ko": "" },
+    "description": { "ja": "香ばしさを引き立てる軽やかな割れ音。" }
+  }
+]
