@@ -736,7 +736,8 @@ function renderScene() {
       // カードのHTMLを構築（お気に入りボタンは後で動的に追加）
       card.innerHTML = `
         <div class="message-header">
-          <span class="message-number" style="font-weight:bold;margin-right:8px;">${messageId}.</span>
+          <span class="message-number" style="font-weight:bold;margin-right:8px;"></span>
+
           <div class="message-actions" style="display:inline-flex;align-items:center;">
             <button class="speak-btn" style="margin-left:12px;background:none;border:none;cursor:pointer;font-size:1.2em;" onclick="playJapaneseSpeech('${(msg.ja || msg.text || '').replace(/<[^>]+>/g, '')}')" aria-label="音声再生" data-card-control="true">🔊</button>
           </div>
@@ -747,7 +748,9 @@ function renderScene() {
         </div>
         <div class="note-text" style="font-size:0.95em;color:#666;margin-top:2px;">${msg.note || ''}</div>
       `;
-      
+      const numEl = card.querySelector('.message-number');
+      if (numEl) numEl.textContent = String(messageId) + '.';
+  
       messagesDiv.appendChild(card);
       
       // お気に入りボタンを動的に追加（機能フラグが有効な場合のみ）
