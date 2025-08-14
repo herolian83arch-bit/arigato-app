@@ -1,6 +1,24 @@
 // verify.js：辞書カード読み込み＆表示（/public/data/dictionary.json）
 const $ = (s, ctx = document) => ctx.querySelector(s);
-
+// 値がオブジェクトでも中の数値/文字を取り出して文字列化する
+const asText = (v) => {
+    if (v == null) return '';
+    if (typeof v !== 'object') return String(v);
+    if ('$numberInt' in v) return String(v.$numberInt);
+    if ('$numberLong' in v) return String(v.$numberLong);
+    if ('$numberDouble' in v) return String(v.$numberDouble);
+    if ('value' in v) return String(v.value);
+    // 汎用アンラップ：最初に見つかったプリミティブを返す
+    const stack = [v];
+    while (stack.length) {
+      const cur = stack.pop();
+      if (cur == null) continue;
+      if (typeof cur !== 'object') return String(cur);
+      for (const k of Object.keys(cur)) stack.push(cur[k]);
+    }
+    return '';
+  };
+   
 const state = { all: [], filtered: [], scenes: [] };
 const els = { q: null, scene: null, cards: null, count: null };
 
@@ -108,10 +126,10 @@ function renderCards() {
 
     const h3 = document.createElement('h3');
     const no = document.createElement('span');
-    no.textContent = `No.${r.id ?? '-'}`;
+    no.textContent = `No.${asText(r.id) || '-'}`;
     const sc = document.createElement('span');
     sc.className = 'scene';
-    sc.textContent = r.sceneId != null ? `#${r.sceneId} ${r.scene ?? ''}` : (r.scene ?? '');
+    sc.textContent = asText(r.sceneId) ? `#${asText(r.sceneId)} ${asText(r.scene)}` : asText(r.scene);
     h3.append(no, sc);
 
     const main = document.createElement('div');
