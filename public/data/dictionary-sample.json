@@ -1,0 +1,30 @@
+[
+  {
+    "id": 406,
+    "sceneId": 28,
+    "scene": "和食・伝統料理",
+    "main": "お味噌汁から《ほわ〜》と湯気が立ちのぼりました。",
+    "romaji": "OMISOSHIRU KARA 《ほわ〜》 TO YUGE GA TACHINOBORIMASHITA"
+  },
+  {
+    "id": 407,
+    "sceneId": 28,
+    "scene": "和食・伝統料理",
+    "main": "焼き魚の皮が《パリッ》とはじける音が心地よかったです。",
+    "romaji": "YAKIZAKANA NO KAWA GA 《パリッ》 TO HAJIKERU OTO GA KOKOCHI YOKATTA DESU"
+  },
+  {
+    "id": 408,
+    "sceneId": 28,
+    "scene": "和食・伝統料理",
+    "main": "豆腐をすくうと《ぷるん》と揺れて愛らしかったです。",
+    "romaji": "TOFU O SUKUUTO 《ぷるん》 TO YURETE AIRASHIKATTA DESU"
+  },
+  {
+    "id": 409,
+    "sceneId": 28,
+    "scene": "和食・伝統料理",
+    "main": "出汁の香りが《ふわり》と広がって食欲をそそりました。",
+    "romaji": "DASHI NO KAORI GA 《ふわり》 TO HIROGATTE SHOKUYOKU O SOSORIMASHITA"
+  }
+]
