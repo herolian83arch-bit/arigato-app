@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Verification | Arigato App</title>
   <link rel="stylesheet" href="/verify.css" />
-<script defer src="/toText-polyfill.js"></script>
 </head>
 <body>
   <main class="container">
@@ -14,30 +13,22 @@
 
     <section class="status-row">
       <span id="premium" data-testid="premium-indicator" class="badge">OFF</span>
-      <button id="star" data-testid="star-toggle" class="btn" aria-pressed="false">笘・Favorite</button>
-      <button id="audio" data-testid="audio-button" class="btn">矧 Play test</button>
+      <button id="star" data-testid="star-toggle" class="btn" aria-pressed="false">☆ Favorite</button>
+      <button id="audio" data-testid="audio-button" class="btn">🔊 Play test</button>
     </section>
 
-    <!-- Playwright遲峨′隱ｭ繧蜿ｯ閭ｽ諤ｧ縺後≠繧九・縺ｧ谿九＠縺ｾ縺呻ｼ医Ο繧ｰ逕ｨ・・-->
+    <!-- Playwright等が読む可能性があるので残します（ログ用） -->
     <pre id="log" style="display:none"></pre>
-<section class="dict">
-  <h2>霎樊嶌繝励Ξ繝薙Η繝ｼ</h2>
-  <div class="controls">
-    <input id="q" type="search" placeholder="繧ｭ繝ｼ繝ｯ繝ｼ繝画､懃ｴ｢" />
-    <select id="scene"></select>
-    <span id="count" aria-live="polite"></span>
-  </div>
-  <div id="cards" class="cards-grid" role="list"></div>
-</section>
 
+    <hr class="divider" />
+
+    <h2>Dictionary Preview</h2>
+    <div id="dict-list" class="list"></div>
   </main>
 
-  <!-- 繧ｹ繝｢繝ｼ繧ｯ譎ゅ・鄙ｻ險ｳOFF -->
+  <!-- スモーク時は翻訳OFF -->
   <script>window.__TRANSLATION_ENABLED__ = 0;</script>
   <script type="module" src="/verify.js"></script>
-<script defer src="/safe-text.js"></script>
-<script defer src="/ux-bind.js"></script>
 </body>
 </html>
-
 
