@@ -4,27 +4,31 @@
     "sceneId": 28,
     "scene": "和食・伝統料理",
     "main": "お味噌汁から《ほわ〜》と湯気が立ちのぼりました。",
-    "romaji": "OMISOSHIRU KARA 《ほわ〜》 TO YUGE GA TACHINOBORIMASHITA"
+    "romaji": "OMISOSHIRU KARA 《HOWA〜》 TO YUGE GA TACHINOBORIMASHITA",
+    "description": "あたたかい蒸気がゆっくり広がる情景。"
   },
   {
     "id": 407,
     "sceneId": 28,
     "scene": "和食・伝統料理",
     "main": "焼き魚の皮が《パリッ》とはじける音が心地よかったです。",
-    "romaji": "YAKIZAKANA NO KAWA GA 《パリッ》 TO HAJIKERU OTO GA KOKOCHI YOKATTA DESU"
+    "romaji": "YAKIZAKANA NO KAWA GA 《PARI》 TO HAJIKERU OTO GA KOKOCHI YOKATTA DESU",
+    "description": "香ばしさを引き立てる軽やかな割れ音。"
   },
   {
     "id": 408,
     "sceneId": 28,
     "scene": "和食・伝統料理",
     "main": "豆腐をすくうと《ぷるん》と揺れて愛らしかったです。",
-    "romaji": "TOFU O SUKUUTO 《ぷるん》 TO YURETE AIRASHIKATTA DESU"
+    "romaji": "TOFU O SUKUUTO 《PURUN》 TO YURETE AIRASHIKATTA DESU",
+    "description": "やわらかく弾む質感が伝わる可愛らしい揺れ。"
   },
   {
     "id": 409,
     "sceneId": 28,
     "scene": "和食・伝統料理",
     "main": "出汁の香りが《ふわり》と広がって食欲をそそりました。",
-    "romaji": "DASHI NO KAORI GA 《ふわり》 TO HIROGATTE SHOKUYOKU O SOSORIMASHITA"
+    "romaji": "DASHI NO KAORI GA 《FUWARI》 TO HIROGATTE SHOKUYOKU O SOSORIMASHITA",
+    "description": "出汁のやさしい香りが広がる瞬間の心地よさ。"
   }
 ]
