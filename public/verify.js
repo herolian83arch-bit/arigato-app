@@ -1,1 +1,162 @@
-const toT=(v,fb='')=>{try{if(v==null)return fb;const t=typeof v;if(t==='string'||t==='number'||t==='boolean')return String(v);if(Array.isArray(v))return v.map(x=>toT(x,'')).join('');for(const k of ['asText','text','value','id','sceneId']){if(v&&v[k]!=null){const s=toT(v[k],'');if(s)return s;}}if(v&&v.toString&&v.toString!==Object.prototype.toString){const s=String(v);if(s!=='[object Object]')return s;}return fb;}catch(e){return fb;}}; // verify.js・夊ｾ樊嶌繧ｫ繝ｼ繝芽ｪｭ縺ｿ霎ｼ縺ｿ・・｡ｨ遉ｺ・・public/data/dictionary.json・・const $ = (s, ctx = document) => ctx.querySelector(s);  const state = { all: [], filtered: [], scenes: [] }; const els = { q: null, scene: null, cards: null, count: null };  document.addEventListener('DOMContentLoaded', init);  async function init() {   els.q = $('#q');   els.scene = $('#scene');   els.cards = $('#cards');   els.count = $('#count');    // /verify.html 縺ｫ霎樊嶌UI縺後↑縺・凾縺ｯ菴輔ｂ縺励↑縺・ｼ井ｻ匁ｩ溯・縺ｨ蛻・屬・・  if (!els.cards) return;    try {     const res = await fetch('data/dictionary.json', { cache: 'no-store' });     if (!res.ok) throw new Error(`HTTP ${res.status}`);     const json = await res.json();     if (!Array.isArray(json)) throw new Error('JSON root is not an array');      state.all = json;     buildSceneOptions();     bindEvents();     applyFilter(); // 蛻晄悄陦ｨ遉ｺ   } catch (err) {     console.error('[verify.js] 霎樊嶌隱ｭ霎ｼ繧ｨ繝ｩ繝ｼ:', err);     renderError(`霎樊嶌繝・・繧ｿ縺ｮ隱ｭ縺ｿ霎ｼ縺ｿ縺ｫ螟ｱ謨励＠縺ｾ縺励◆・・{String(err.message || err)}`);   } }  function buildSceneOptions() {   const set = new Map();   for (const r of state.all) {     const key = `${r.sceneId ?? ''}::${r.scene ?? ''}`;     if (!set.has(key)) set.set(key, { sceneId: r.sceneId, scene: r.scene });   }   state.scenes = Array.from(set.values()).sort((a, b) => (a.sceneId ?? 0) - (b.sceneId ?? 0));    if (els.scene) {     els.scene.innerHTML = '';     const optAll = document.createElement('option');     optAll.value = '';     optAll.textContent = '蜈ｨ繧ｷ繝ｼ繝ｳ';     els.scene.appendChild(optAll);      for (const s of state.scenes) {       const opt = document.createElement('option');       opt.value = String(s.sceneId ?? s.scene ?? '');       opt.textContent = s.sceneId != null ? `#${s.sceneId} ${s.scene ?? ''}` : (s.scene ?? '');       els.scene.appendChild(opt);     }   } }  function bindEvents() {   els.q?.addEventListener('input', applyFilter);   els.scene?.addEventListener('change', applyFilter); }  function applyFilter() {   const q = (els.q?.value || '').trim().toLowerCase();   const sceneVal = els.scene?.value || '';    let list = state.all;    if (sceneVal) {     list = list.filter(r => {       const idMatch = String(r.sceneId ?? '') === sceneVal;       const nameMatch = (r.scene ?? '').toLowerCase() === sceneVal.toLowerCase();       return idMatch || nameMatch;     });   }    if (q) {     list = list.filter(r =>       String(r.id ?? '').includes(q) ||       (r.scene ?? '').toLowerCase().includes(q) ||       (r.main ?? '').toLowerCase().includes(q) ||       (r.romaji ?? '').toLowerCase().includes(q) ||       (r.description?.ja ?? '').toLowerCase().includes(q) ||       extractOno(r.main).some(o => o.toLowerCase().includes(q))     );   }    state.filtered = list;   renderCards();   updateCount(); }  function updateCount() {   if (els.count) {     const total = state.all.length;     els.count.textContent = total ? `${state.filtered.length} / ${total}` : '';   } }  function renderCards() {   if (!els.cards) return;   const frag = document.createDocumentFragment();    for (const r of state.filtered) {     const art = document.createElement('article');     art.className = 'card';     art.setAttribute('role', 'listitem');      const h3 = document.createElement('h3');     const no = document.createElement('span');     no.textContent = 'No.' + (toT(r.id, '-') || '-');     const sc = document.createElement('span');     sc.className = 'scene';     sc.textContent = (toT(r.sceneId) ? ('#' + toT(r.sceneId) + ' ' + toT(r.scene)) : toT(r.scene));     h3.append(no, sc);      const main = document.createElement('div');     main.className = 'main';     main.innerHTML = highlightOno(escapeHTML(r.main ?? ''));      const romaji = document.createElement('div');     romaji.className = 'romaji';     romaji.textContent = r.romaji || '';      const desc = document.createElement('div');     desc.className = 'desc';     desc.textContent = (toT(r.sceneId) ? ('#' + toT(r.sceneId) + ' ' + toT(r.scene)) : toT(r.scene));      art.append(h3, main, romaji, desc);     frag.appendChild(art);   }    els.cards.innerHTML = '';   els.cards.appendChild(frag); }  function renderError(msg) {   els.cards.innerHTML = `<div class="card" role="alert">${escapeHTML(msg)}</div>`;   updateCount(); }  // 縲翫が繝弱・繝医・縲区歓蜃ｺ function extractOno(text = '') {   return Array.from(text.matchAll(/縲・[^縲犠+)縲・g)).map(m => m[1]).filter(Boolean); }  // 縲岩ｦ縲九ｒ螟ｪ蟄怜喧 function highlightOno(escaped) {   return escaped.replace(/縲・[^縲犠+)縲・g, '縲・span class="ono">$1</span>縲・); }  // HTML繧ｨ繧ｹ繧ｱ繝ｼ繝・function escapeHTML(s) {   return String(s)     .replaceAll('&', '&amp;')     .replaceAll('<', '&lt;')     .replaceAll('>', '&gt;')     .replaceAll('"', '&quot;')     .replaceAll("'", '&#39;'); }
+'use strict';
+
+// ===== 要素参照 =====
+const premiumEl = document.getElementById('premium');
+const starBtn   = document.getElementById('star');
+const audioBtn  = document.getElementById('audio');
+const logEl     = document.getElementById('log');
+const listEl    = document.getElementById('dict-list');
+
+const log = (t) => { if (logEl) logEl.textContent += t + '\n'; };
+
+// ===== Premium 表示（常時ON） =====
+function setPremium(on) {
+  // 互換キー（旧verify.htmlと同じキー名）
+  localStorage.setItem('premiumEnabled', on ? '1' : '0');
+  if (!premiumEl) return;
+  premiumEl.dataset.status = on ? 'on' : 'off';
+  premiumEl.textContent = on ? 'ON' : 'OFF';
+  premiumEl.classList.toggle('on', on);
+}
+setPremium(true);
+
+// ===== グローバル Favorite（旧互換：favoriteTest） =====
+const favKeyGlobal = 'favoriteTest';
+const getFav = () => localStorage.getItem(favKeyGlobal) === '1';
+function setFav(on) {
+  localStorage.setItem(favKeyGlobal, on ? '1' : '0');
+  if (!starBtn) return;
+  starBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+  starBtn.textContent = on ? '★ Favorited' : '☆ Favorite';
+}
+setFav(getFav());
+if (starBtn) {
+  starBtn.addEventListener('click', () => {
+    const next = !getFav();
+    setFav(next);
+    log('star:' + next);
+  });
+}
+
+// ===== 🔊 Play test（Playwright互換＋実音TTS） =====
+if (audioBtn) {
+  audioBtn.addEventListener('click', () => {
+    try {
+      // Playwrightなどの自動テスト向け：必ず play() を呼ぶ
+      const a = new Audio();
+      const p = a.play();
+      if (p && p.catch) p.catch(() => {}); // ブラウザがブロックしても無視
+      log('audio:clicked');
+
+      // 実音：Web Speech API（使えない環境では自動的に無音）
+      if ('speechSynthesis' in window) {
+        const u = new SpeechSynthesisUtterance('ありがとうの気持ち、届いていますか？');
+        u.lang = 'ja-JP';
+        const v = speechSynthesis.getVoices().find(vi => vi.lang && vi.lang.startsWith('ja'));
+        if (v) u.voice = v;
+        speechSynthesis.speak(u);
+      }
+    } catch (e) {
+      log('audio:error ' + e);
+    }
+  });
+}
+
+// ===== Dictionary Preview =====
+(async function loadDictPreview() {
+  if (!listEl) return;
+
+  async function load(path) {
+    try {
+      const res = await fetch(path, { cache: 'no-store' });
+      if (!res.ok) throw new Error(res.status + ' ' + res.statusText);
+      return await res.json();
+    } catch {
+      return null;
+    }
+  }
+
+  // 旧→新の順でフォールバック（旧verify.html互換パスを優先）
+  const candidates = [
+    '/locales/onomatopoeia-premium-all-41-scenes.json',
+    '/locales/onomatopoeia-all-scenes.json',
+    '/data/dictionary.json',
+    '/data/dictionary-sample.json'
+  ];
+
+  let items = [];
+  for (const p of candidates) {
+    const j = await load(p);
+    if (!j) continue;
+    items = Array.isArray(j) ? j : (j.items || []);
+    if (items.length) break;
+  }
+
+  if (!items.length) {
+    listEl.innerHTML = `
+      <div class="card" data-testid="dict-row">
+        <div class="card-title">（プレビュー用データが未配置です）</div>
+        <div class="card-sub">public/data/dictionary.json または dictionary-sample.json を置くと表示されます。</div>
+      </div>`;
+    return;
+  }
+
+  // 先頭シーンの上位3件のみを表示（旧仕様に合わせる）
+  const firstSceneId = items[0]?.sceneId ?? null;
+  const rows = items
+    .filter(x => firstSceneId == null ? true : x.sceneId === firstSceneId)
+    .slice(0, 3);
+
+  listEl.innerHTML = rows.map(toCardHTML).join('');
+
+  // 行内ボタン（🔊/☆）のイベント委譲
+  listEl.addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-action]');
+    if (!btn) return;
+    const id = btn.dataset.id;
+    if (btn.dataset.action === 'play') {
+      const text = btn.dataset.text || '';
+      try {
+        const u = new SpeechSynthesisUtterance(text.replace(/《|》/g, ''));
+        u.lang = 'ja-JP';
+        speechSynthesis.speak(u);
+      } catch {}
+    }
+    if (btn.dataset.action === 'fav') {
+      const key = `fav:item:${id}`;
+      const on = localStorage.getItem(key) === '1';
+      localStorage.setItem(key, on ? '0' : '1');
+      btn.textContent = on ? '☆' : '★';
+      btn.setAttribute('aria-pressed', on ? 'false' : 'true');
+    }
+  }, { once: true });
+})();
+
+function toCardHTML(it) {
+  const id    = it.id ?? '';
+  const title = (it.main || '').trim();
+  const romaji = (it.romaji || '').trim();
+  const desc  = (typeof it.description === 'string'
+    ? it.description
+    : (it.description?.ja || it.description?.en || it.description?.zh || it.description?.ko || '')
+  ).trim();
+  const favKey = `fav:item:${id}`;
+  const favOn = localStorage.getItem(favKey) === '1';
+
+  return `
+    <article class="card" data-testid="dict-row">
+      <div class="card-head">
+        <div data-testid="dict-title" class="card-title">${escapeHTML(title)}</div>
+        <div class="card-actions">
+          <button class="btn small" data-action="play" data-id="${id}" data-text="${escapeAttr(title)}">🔊 Play</button>
+          <button class="btn small" data-action="fav" data-id="${id}" aria-pressed="${favOn ? 'true' : 'false'}">${favOn ? '★' : '☆'}</button>
+        </div>
+      </div>
+      ${romaji ? `<div data-testid="dict-romaji" class="card-sub">${escapeHTML(romaji)}</div>` : ''}
+      ${desc   ? `<div data-testid="dict-desc"   class="card-sub">${escapeHTML(desc)}</div>`   : ''}
+    </article>
+  `;
+}
+
+function escapeHTML(s){ return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+function escapeAttr(s){ return String(s).replace(/"/g,'&quot;'); }

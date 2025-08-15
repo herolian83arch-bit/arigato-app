@@ -31,22 +31,3 @@ h2 { font-size: 22px; margin: 20px 0 12px; }
 .card-sub { color: var(--muted); font-size: 12px; margin-top: 4px; }
 .card-actions { display: flex; gap: 8px; }
 .small { padding: 6px 10px; font-size: 12px; }
-.dict { margin-block: 24px; }
-.controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
-.controls input[type="search"] { padding: 6px 8px; min-width: 240px; }
-.controls select { padding: 6px 8px; }
-#count { opacity: 0.8; }
-
-.cards-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
-
-.card h3 { font-size: 1rem; margin: 0 0 6px; display: flex; justify-content: space-between; gap: 8px; }
-.card .scene { font-size: 0.75rem; opacity: 0.7; }
-
-.card .main { font-weight: 600; line-height: 1.5; }
-.card .romaji { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.85rem; opacity: 0.9; margin-top: 6px; word-break: break-word; }
-.card .desc { font-size: 0.9rem; margin-top: 8px; line-height: 1.6; }
-
-/* 《オノマトペ》強調 */
-.card .main .ono { font-weight: 800; }
-
- 
