@@ -1,3 +1,4 @@
+const toT=(v,fb='')=>{try{if(v==null)return fb;const t=typeof v;if(t==='string'||t==='number'||t==='boolean')return String(v);if(Array.isArray(v))return v.map(x=>toT(x,'')).join('');for(const k of ['asText','text','value','id','sceneId']){if(v&&v[k]!=null){const s=toT(v[k],'');if(s)return s;}}if(v&&v.toString&&v.toString!==Object.prototype.toString){const s=String(v);if(s!=='[object Object]')return s;}return fb;}catch(e){return fb;}};
 // verify.js：辞書カード読み込み＆表示（/public/data/dictionary.json）
 const $ = (s, ctx = document) => ctx.querySelector(s);
 
@@ -108,10 +109,10 @@ function renderCards() {
 
     const h3 = document.createElement('h3');
     const no = document.createElement('span');
-    no.textContent = `No.${r.id ?? '-'}`;
+    no.textContent = 'No.' + (toT(r.id, '-') || '-');
     const sc = document.createElement('span');
     sc.className = 'scene';
-    sc.textContent = r.sceneId != null ? `#${r.sceneId} ${r.scene ?? ''}` : (r.scene ?? '');
+    sc.textContent = (toT(r.sceneId) ? ('#' + toT(r.sceneId) + ' ' + toT(r.scene)) : toT(r.scene));
     h3.append(no, sc);
 
     const main = document.createElement('div');
@@ -124,7 +125,7 @@ function renderCards() {
 
     const desc = document.createElement('div');
     desc.className = 'desc';
-    desc.textContent = r.description?.ja || '';
+    desc.textContent = (toT(r.sceneId) ? ('#' + toT(r.sceneId) + ' ' + toT(r.scene)) : toT(r.scene));
 
     art.append(h3, main, romaji, desc);
     frag.appendChild(art);
