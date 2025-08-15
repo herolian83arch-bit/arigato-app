@@ -974,3 +974,4 @@ function updateTTSToggleButton() {
     ttsBtn.title = isEnabled ? '音声再生機能: 有効' : '音声再生機能: 無効';
   }
 } 
+// asText-numbering-v2 marker 20250815-194051
