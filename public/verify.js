@@ -160,3 +160,74 @@ function toCardHTML(it) {
 
 function escapeHTML(s){ return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
 function escapeAttr(s){ return String(s).replace(/"/g,'&quot;'); }
+
+$BEGIN
+/* Safety layer: sanitize & harden (patched $TS) */
+
+// 文字列サニタイズ： 《…》/全角句読点を除去
+function sanitizeRomaji(str){
+  try{
+    if(!str) return "";
+    return String(str)
+      .replace(/《.*?》/g,"")
+      .replace(/[。、，．！!？?\u3000【】（）\(\)「」『』［］]/g,"")
+      .replace(/\s+/g," ")
+      .trim();
+  }catch(e){ console.error("[sanitizeRomaji]", e); return ""; }
+}
+
+// localStorage 安全ラッパ
+const safeStore={
+  get(k,f){ try{ const v=localStorage.getItem(k); return v==null?f:JSON.parse(v); }catch(e){ console.error("[safeStore.get]",k,e); return f; } },
+  set(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){ console.error("[safeStore.set]",k,e); } }
+};
+
+// お気に入りキー生成（id優先＋romajiは保険）
+function makeFavKey(id,romaji){
+  const base = `fav_${String(id??"").trim()}`;
+  const tail = sanitizeRomaji(romaji||"");
+  return tail ? `${base}_${tail}` : base;
+}
+
+// 安全版: 音声
+const __safePlayAudio = function(romajiText){
+  try{
+    const t = sanitizeRomaji(romajiText);
+    if(!("speechSynthesis" in window)){ console.warn("[playAudio] no TTS"); return; }
+    try{ window.speechSynthesis.cancel(); }catch(_){}
+    const u = new SpeechSynthesisUtterance(t||"ARIGATOU");
+    u.lang="ja-JP"; u.rate=1; u.pitch=1;
+    window.speechSynthesis.speak(u);
+  }catch(e){ console.error("[playAudio]", e); }
+};
+
+// 既存への差し替え（const対策：失敗したら window に代入）
+try{ playAudio = __safePlayAudio; }catch(_){ window.playAudio = __safePlayAudio; }
+
+// 安全版: お気に入り
+const __safeToggleFavorite = function(id,romajiText){
+  try{
+    const key = makeFavKey(id,romajiText);
+    let favs = safeStore.get("favorites",[]);
+    if(!Array.isArray(favs)) favs=[];
+    const i = favs.indexOf(key);
+    if(i>=0){ favs.splice(i,1); } else { favs.push(key); }
+    safeStore.set("favorites",favs);
+
+    // data-fav-key があれば即時反映（任意）
+    try{
+      const btn = document.querySelector(`[data-fav-key="${CSS.escape(key)}"]`);
+      if(btn) btn.classList.toggle("is-active", i<0);
+    }catch(_){}
+  }catch(e){ console.error("[toggleFavorite]", e); }
+};
+
+// 既存への差し替え（const対策）
+try{ toggleFavorite = __safeToggleFavorite; }catch(_){ window.toggleFavorite = __safeToggleFavorite; }
+
+// グローバル安全網
+window.addEventListener("error", (ev)=>console.error("[GlobalError]", ev.error||ev.message||ev));
+window.addEventListener("unhandledrejection", (ev)=>console.error("[UnhandledRejection]", ev.reason||ev));
+$END
+// patched at 20250816-114623
+
