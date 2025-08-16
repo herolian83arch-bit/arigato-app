@@ -1,6 +1,6 @@
-'use strict';
+﻿'use strict';
 
-// ===== 要素参照 =====
+// ===== 隕∫ｴ蜿ら・ =====
 const premiumEl = document.getElementById('premium');
 const starBtn   = document.getElementById('star');
 const audioBtn  = document.getElementById('audio');
@@ -9,9 +9,9 @@ const listEl    = document.getElementById('dict-list');
 
 const log = (t) => { if (logEl) logEl.textContent += t + '\n'; };
 
-// ===== Premium 表示（常時ON） =====
+// ===== Premium 陦ｨ遉ｺ・亥ｸｸ譎０N・・=====
 function setPremium(on) {
-  // 互換キー（旧verify.htmlと同じキー名）
+  // 莠呈鋤繧ｭ繝ｼ・域立verify.html縺ｨ蜷後§繧ｭ繝ｼ蜷搾ｼ・
   localStorage.setItem('premiumEnabled', on ? '1' : '0');
   if (!premiumEl) return;
   premiumEl.dataset.status = on ? 'on' : 'off';
@@ -20,14 +20,14 @@ function setPremium(on) {
 }
 setPremium(true);
 
-// ===== グローバル Favorite（旧互換：favoriteTest） =====
+// ===== 繧ｰ繝ｭ繝ｼ繝舌Ν Favorite・域立莠呈鋤・喃avoriteTest・・=====
 const favKeyGlobal = 'favoriteTest';
 const getFav = () => localStorage.getItem(favKeyGlobal) === '1';
 function setFav(on) {
   localStorage.setItem(favKeyGlobal, on ? '1' : '0');
   if (!starBtn) return;
   starBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
-  starBtn.textContent = on ? '★ Favorited' : '☆ Favorite';
+  starBtn.textContent = on ? '笘・Favorited' : '笘・Favorite';
 }
 setFav(getFav());
 if (starBtn) {
@@ -38,19 +38,19 @@ if (starBtn) {
   });
 }
 
-// ===== 🔊 Play test（Playwright互換＋実音TTS） =====
+// ===== 矧 Play test・・laywright莠呈鋤・句ｮ滄浹TTS・・=====
 if (audioBtn) {
   audioBtn.addEventListener('click', () => {
     try {
-      // Playwrightなどの自動テスト向け：必ず play() を呼ぶ
+      // Playwright縺ｪ縺ｩ縺ｮ閾ｪ蜍輔ユ繧ｹ繝亥髄縺托ｼ壼ｿ・★ play() 繧貞他縺ｶ
       const a = new Audio();
       const p = a.play();
-      if (p && p.catch) p.catch(() => {}); // ブラウザがブロックしても無視
+      if (p && p.catch) p.catch(() => {}); // 繝悶Λ繧ｦ繧ｶ縺後ヶ繝ｭ繝・け縺励※繧ら┌隕・
       log('audio:clicked');
 
-      // 実音：Web Speech API（使えない環境では自動的に無音）
+      // 螳滄浹・啗eb Speech API・井ｽｿ縺医↑縺・腸蠅・〒縺ｯ閾ｪ蜍慕噪縺ｫ辟｡髻ｳ・・
       if ('speechSynthesis' in window) {
-        const u = new SpeechSynthesisUtterance('ありがとうの気持ち、届いていますか？');
+        const u = new SpeechSynthesisUtterance('縺ゅｊ縺後→縺・・豌玲戟縺｡縲∝ｱ翫＞縺ｦ縺・∪縺吶°・・);
         u.lang = 'ja-JP';
         const v = speechSynthesis.getVoices().find(vi => vi.lang && vi.lang.startsWith('ja'));
         if (v) u.voice = v;
@@ -76,7 +76,7 @@ if (audioBtn) {
     }
   }
 
-  // 旧→新の順でフォールバック（旧verify.html互換パスを優先）
+  // 譌ｧ竊呈眠縺ｮ鬆・〒繝輔か繝ｼ繝ｫ繝舌ャ繧ｯ・域立verify.html莠呈鋤繝代せ繧貞━蜈茨ｼ・
   const candidates = [
     '/locales/onomatopoeia-premium-all-41-scenes.json',
     '/locales/onomatopoeia-all-scenes.json',
@@ -95,13 +95,13 @@ if (audioBtn) {
   if (!items.length) {
     listEl.innerHTML = `
       <div class="card" data-testid="dict-row">
-        <div class="card-title">（プレビュー用データが未配置です）</div>
-        <div class="card-sub">public/data/dictionary.json または dictionary-sample.json を置くと表示されます。</div>
+        <div class="card-title">・医・繝ｬ繝薙Η繝ｼ逕ｨ繝・・繧ｿ縺梧悴驟咲ｽｮ縺ｧ縺呻ｼ・/div>
+        <div class="card-sub">public/data/dictionary.json 縺ｾ縺溘・ dictionary-sample.json 繧堤ｽｮ縺上→陦ｨ遉ｺ縺輔ｌ縺ｾ縺吶・/div>
       </div>`;
     return;
   }
 
-  // 先頭シーンの上位3件のみを表示（旧仕様に合わせる）
+  // 蜈磯ｭ繧ｷ繝ｼ繝ｳ縺ｮ荳贋ｽ・莉ｶ縺ｮ縺ｿ繧定｡ｨ遉ｺ・域立莉墓ｧ倥↓蜷医ｏ縺帙ｋ・・
   const firstSceneId = items[0]?.sceneId ?? null;
   const rows = items
     .filter(x => firstSceneId == null ? true : x.sceneId === firstSceneId)
@@ -109,7 +109,7 @@ if (audioBtn) {
 
   listEl.innerHTML = rows.map(toCardHTML).join('');
 
-  // 行内ボタン（🔊/☆）のイベント委譲
+  // 陦悟・繝懊ち繝ｳ・芋沐・笘・ｼ峨・繧､繝吶Φ繝亥ｧ碑ｭｲ
   listEl.addEventListener('click', (e) => {
     const btn = e.target.closest('button[data-action]');
     if (!btn) return;
@@ -117,7 +117,7 @@ if (audioBtn) {
     if (btn.dataset.action === 'play') {
       const text = btn.dataset.text || '';
       try {
-        const u = new SpeechSynthesisUtterance(text.replace(/《|》/g, ''));
+        const u = new SpeechSynthesisUtterance(text.replace(/縲掛縲・g, ''));
         u.lang = 'ja-JP';
         speechSynthesis.speak(u);
       } catch {}
@@ -126,7 +126,7 @@ if (audioBtn) {
       const key = `fav:item:${id}`;
       const on = localStorage.getItem(key) === '1';
       localStorage.setItem(key, on ? '0' : '1');
-      btn.textContent = on ? '☆' : '★';
+      btn.textContent = on ? '笘・ : '笘・;
       btn.setAttribute('aria-pressed', on ? 'false' : 'true');
     }
   }, { once: true });
@@ -148,8 +148,8 @@ function toCardHTML(it) {
       <div class="card-head">
         <div data-testid="dict-title" class="card-title">${escapeHTML(title)}</div>
         <div class="card-actions">
-          <button class="btn small" data-action="play" data-id="${id}" data-text="${escapeAttr(title)}">🔊 Play</button>
-          <button class="btn small" data-action="fav" data-id="${id}" aria-pressed="${favOn ? 'true' : 'false'}">${favOn ? '★' : '☆'}</button>
+          <button class="btn small" data-action="play" data-id="${id}" data-text="${escapeAttr(title)}">矧 Play</button>
+          <button class="btn small" data-action="fav" data-id="${id}" aria-pressed="${favOn ? 'true' : 'false'}">${favOn ? '笘・ : '笘・}</button>
         </div>
       </div>
       ${romaji ? `<div data-testid="dict-romaji" class="card-sub">${escapeHTML(romaji)}</div>` : ''}
@@ -161,35 +161,35 @@ function toCardHTML(it) {
 function escapeHTML(s){ return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
 function escapeAttr(s){ return String(s).replace(/"/g,'&quot;'); }
 
-$BEGIN
+// SAFE-BEGIN (removed)
 /* Safety layer: sanitize & harden (patched $TS) */
 
-// ������T�j�^�C�Y�F �s�c�t/�S�p��Ǔ_������
+// 文字列サニタイズ： 《…》/全角句読点を除去
 function sanitizeRomaji(str){
   try{
     if(!str) return "";
     return String(str)
-      .replace(/�s.*?�t/g,"")
-      .replace(/[�B�A�C�D�I!�H?\u3000�y�z�i�j\(\)�u�v�w�x�m�n]/g,"")
+      .replace(/《.*?》/g,"")
+      .replace(/[。、，．！!？?\u3000【】（）\(\)「」『』［］]/g,"")
       .replace(/\s+/g," ")
       .trim();
   }catch(e){ console.error("[sanitizeRomaji]", e); return ""; }
 }
 
-// localStorage ���S���b�p
+// localStorage 安全ラッパ
 const safeStore={
   get(k,f){ try{ const v=localStorage.getItem(k); return v==null?f:JSON.parse(v); }catch(e){ console.error("[safeStore.get]",k,e); return f; } },
   set(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){ console.error("[safeStore.set]",k,e); } }
 };
 
-// ���C�ɓ���L�[�����iid�D��{romaji�͕ی��j
+// お気に入りキー生成（id優先＋romajiは保険）
 function makeFavKey(id,romaji){
   const base = `fav_${String(id??"").trim()}`;
   const tail = sanitizeRomaji(romaji||"");
   return tail ? `${base}_${tail}` : base;
 }
 
-// ���S��: ����
+// 安全版: 音声
 const __safePlayAudio = function(romajiText){
   try{
     const t = sanitizeRomaji(romajiText);
@@ -201,10 +201,10 @@ const __safePlayAudio = function(romajiText){
   }catch(e){ console.error("[playAudio]", e); }
 };
 
-// �����ւ̍����ւ��iconst�΍�F���s������ window �ɑ���j
+// 既存への差し替え（const対策：失敗したら window に代入）
 try{ playAudio = __safePlayAudio; }catch(_){ window.playAudio = __safePlayAudio; }
 
-// ���S��: ���C�ɓ���
+// 安全版: お気に入り
 const __safeToggleFavorite = function(id,romajiText){
   try{
     const key = makeFavKey(id,romajiText);
@@ -214,7 +214,7 @@ const __safeToggleFavorite = function(id,romajiText){
     if(i>=0){ favs.splice(i,1); } else { favs.push(key); }
     safeStore.set("favorites",favs);
 
-    // data-fav-key ������Α������f�i�C�Ӂj
+    // data-fav-key があれば即時反映（任意）
     try{
       const btn = document.querySelector(`[data-fav-key="${CSS.escape(key)}"]`);
       if(btn) btn.classList.toggle("is-active", i<0);
@@ -222,12 +222,78 @@ const __safeToggleFavorite = function(id,romajiText){
   }catch(e){ console.error("[toggleFavorite]", e); }
 };
 
-// �����ւ̍����ւ��iconst�΍�j
+// 既存への差し替え（const対策）
 try{ toggleFavorite = __safeToggleFavorite; }catch(_){ window.toggleFavorite = __safeToggleFavorite; }
 
-// �O���[�o�����S��
+// グローバル安全網
 window.addEventListener("error", (ev)=>console.error("[GlobalError]", ev.error||ev.message||ev));
 window.addEventListener("unhandledrejection", (ev)=>console.error("[UnhandledRejection]", ev.reason||ev));
-$END
+// SAFE-END (removed)
 // patched at 20250816-114623
+
+
+
+// === Safety layer: sanitize & harden (no markers) ===
+
+// 文字列サニタイズ： 《…》/全角句読点/余分な空白を除去
+function sanitizeRomaji(str){
+  try{
+    if(!str) return "";
+    return String(str)
+      .replace(/《.*?》/g,"")
+      .replace(/[。、，．！!？?\u3000【】（）\(\)「」『』［］]/g,"")
+      .replace(/\s+/g," ")
+      .trim();
+  }catch(e){ console.error("[sanitizeRomaji]", e); return ""; }
+}
+
+// localStorage 安全ラッパ
+const safeStore={
+  get(k,f){ try{ const v=localStorage.getItem(k); return v==null?f:JSON.parse(v); }catch(e){ console.error("[safeStore.get]",k,e); return f; } },
+  set(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){ console.error("[safeStore.set]",k,e); } }
+};
+
+// お気に入りキー生成（id優先＋romajiは保険）
+function makeFavKey(id,romaji){
+  const base = `fav_${String(id??"").trim()}`;
+  const tail = sanitizeRomaji(romaji||"");
+  return tail ? `${base}_${tail}` : base;
+}
+
+// 音声：既存 playAudio を安全版で上書き（const対策で window 経由も）
+const __safePlayAudio = function(romajiText){
+  try{
+    const t = sanitizeRomaji(romajiText);
+    if(!("speechSynthesis" in window)){ console.warn("[playAudio] no TTS"); return; }
+    try{ window.speechSynthesis.cancel(); }catch(_){}
+    const u = new SpeechSynthesisUtterance(t||"ARIGATOU");
+    u.lang="ja-JP"; u.rate=1; u.pitch=1;
+    window.speechSynthesis.speak(u);
+  }catch(e){ console.error("[playAudio]", e); }
+};
+try{ playAudio = __safePlayAudio; }catch(_){ window.playAudio = __safePlayAudio; }
+
+// お気に入り：既存 toggleFavorite を安全版で上書き
+const __safeToggleFavorite = function(id,romajiText){
+  try{
+    const key = makeFavKey(id,romajiText);
+    let favs = safeStore.get("favorites",[]);
+    if(!Array.isArray(favs)) favs=[];
+    const i = favs.indexOf(key);
+    if(i>=0){ favs.splice(i,1); } else { favs.push(key); }
+    safeStore.set("favorites",favs);
+
+    // data-fav-key があれば即時反映（任意）
+    try{
+      const btn = document.querySelector(`[data-fav-key="${CSS.escape(key)}"]`);
+      if(btn) btn.classList.toggle("is-active", i<0);
+    }catch(_){}
+  }catch(e){ console.error("[toggleFavorite]", e); }
+};
+try{ toggleFavorite = __safeToggleFavorite; }catch(_){ window.toggleFavorite = __safeToggleFavorite; }
+
+// グローバル安全網：未捕捉エラーで初期化が止まらないようにする
+window.addEventListener("error", (ev)=>console.error("[GlobalError]", ev.error||ev.message||ev));
+window.addEventListener("unhandledrejection", (ev)=>console.error("[UnhandledRejection]", ev.reason||ev));
+// patched (verify-clean-guards) at 20250816-131058
 
