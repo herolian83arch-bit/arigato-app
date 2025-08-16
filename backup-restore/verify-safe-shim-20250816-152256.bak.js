@@ -1,4 +1,4 @@
-/* verify-safe-shim.js — Unicode-safe sanitize (keeps Japanese), escapes only dangerous chars. */
+/* verify-safe-shim.js 窶・Unicode-safe sanitize (keeps Japanese), escapes only dangerous chars.
  * Use with textContent/asText only (never innerHTML).
  */
 "use strict";
