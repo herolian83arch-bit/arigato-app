@@ -1,26 +1,23 @@
-/* verify-safe-shim.js — Unicode-safe sanitize (keeps Japanese), escapes only dangerous chars. */
- * Use with textContent/asText only (never innerHTML).
- */
-"use strict";
+﻿/* verify-safe-shim.js (v9 final)
+   - window.toText があれば優先使用
+   - 無ければ安全に文字列化する toText を定義
+   - XSS/文字化け防止のため textContent/asText を利用
+*/
+(function () {
+  if (typeof window.toText === "function") return;
 
-/** Escape minimal HTML-dangerous characters while keeping all Unicode (NFC). */
-export function sanitizeUnicode(input) {
-  const str = String(input).normalize("NFC");
-  const map = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;", "/": "&#x2F;" };
-  return str.replace(/[&<>"'/]/g, ch => map[ch]); // keep all Unicode, escape dangerous only
-}
-
-/** Convenience wrapper */
-export function safeText(input) {
-  return sanitizeUnicode(input);
-}
-
-const SafeShim = { sanitizeUnicode, safeText };
-export default SafeShim;
-
-// Optional UMD-lite exposure for non-module consumers
-try {
-  if (typeof window !== "undefined") {
-    window.SafeShim = window.SafeShim || SafeShim;
-  }
-} catch (_e) { /* no-op */ }
+  window.toText = function toText(input) {
+    try {
+      if (input == null) return "";
+      if (typeof input === "string") return input;
+      if (typeof input === "number" || typeof input === "boolean") return String(input);
+      if (Array.isArray(input)) return input.map(toText).join(" ");
+      if (typeof input === "object") {
+        return Object.values(input).map(toText).join(" ");
+      }
+      return String(input);
+    } catch (e) {
+      return "";
+    }
+  };
+})();
