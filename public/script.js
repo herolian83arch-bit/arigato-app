@@ -734,61 +734,19 @@ function renderScene() {
       const messageId = msg.number || (idx + 1);
       
       // カードのHTMLを構築（お気に入りボタンは後で動的に追加）
-      // card.innerHTML = `...` を安全描画にリファクタ
-      const headerDiv = document.createElement('div');
-      headerDiv.className = 'message-header';
-      const numberSpan = document.createElement('span');
-      numberSpan.className = 'message-number';
-      numberSpan.style.fontWeight = 'bold';
-      numberSpan.style.marginRight = '8px';
-      safeText(numberSpan, messageId + '.');
-      headerDiv.appendChild(numberSpan);
-      const actionsDiv = document.createElement('div');
-      actionsDiv.className = 'message-actions';
-      actionsDiv.style.display = 'inline-flex';
-      actionsDiv.style.alignItems = 'center';
-      const speakBtn = document.createElement('button');
-      speakBtn.className = 'speak-btn';
-      speakBtn.style.marginLeft = '12px';
-      speakBtn.style.background = 'none';
-      speakBtn.style.border = 'none';
-      speakBtn.style.cursor = 'pointer';
-      speakBtn.style.fontSize = '1.2em';
-      speakBtn.setAttribute('aria-label', '音声再生');
-      speakBtn.setAttribute('data-card-control', 'true');
-      speakBtn.textContent = '🔊';
-      speakBtn.onclick = function(e) {
-        e.stopPropagation();
-        playJapaneseSpeech((msg.ja || msg.text || '').replace(/<[^>]+>/g, ''));
-      };
-      actionsDiv.appendChild(speakBtn);
-      headerDiv.appendChild(actionsDiv);
-      card.appendChild(headerDiv);
-      const contentDiv = document.createElement('div');
-      contentDiv.className = 'message-content';
-      contentDiv.style.display = 'inline-block';
-      const textDiv = document.createElement('div');
-      textDiv.className = 'message-text';
-      textDiv.style.fontWeight = 'bold';
-      textDiv.style.marginBottom = '4px';
-      textDiv.appendChild(emphasizeOnomatopoeia(msg.text || ''));
-      contentDiv.appendChild(textDiv);
-      const romajiDiv = document.createElement('div');
-      romajiDiv.className = 'romaji-text';
-      romajiDiv.style.fontSize = '0.9em';
-      romajiDiv.style.color = '#666';
-      romajiDiv.style.marginBottom = '4px';
-      safeText(romajiDiv, msg.romaji || '');
-      contentDiv.appendChild(romajiDiv);
-      card.appendChild(contentDiv);
-      const noteDiv = document.createElement('div');
-      noteDiv.className = 'note-text';
-      noteDiv.style.fontSize = '0.95em';
-      noteDiv.style.color = '#666';
-      noteDiv.style.marginTop = '2px';
-      safeText(noteDiv, msg.note || '');
-      card.appendChild(noteDiv);
-      // translationフィールドは絶対に描画しない
+      card.innerHTML = `
+        <div class="message-header">
+          <span class="message-number" style="font-weight:bold;margin-right:8px;">${messageId}.</span>
+          <div class="message-actions" style="display:inline-flex;align-items:center;">
+            <button class="speak-btn" style="margin-left:12px;background:none;border:none;cursor:pointer;font-size:1.2em;" onclick="playJapaneseSpeech('${(msg.ja || msg.text || '').replace(/<[^>]+>/g, '')}')" aria-label="音声再生" data-card-control="true">🔊</button>
+          </div>
+        </div>
+        <div class="message-content" style="display:inline-block;">
+          <div class="message-text" style="font-weight:bold;margin-bottom:4px;">${msg.text || ''}</div>
+          <div class="romaji-text" style="font-size:0.9em;color:#666;margin-bottom:4px;">${msg.romaji || ''}</div>
+        </div>
+        <div class="note-text" style="font-size:0.95em;color:#666;margin-top:2px;">${msg.note || ''}</div>
+      `;
       
       messagesDiv.appendChild(card);
       
@@ -1014,36 +972,14 @@ function updateTTSToggleButton() {
   }
 } 
 
-// 例文描画の安全化（No.###, main, romaji, description.jaのみ、translation非表示、太字化）
-function renderOnomatopoeiaExample(item) {
-  const row = document.createElement('div');
-  row.className = 'onomatopoeia-row';
-
-  // 番号
-  const num = document.createElement('span');
-  safeText(num, 'No.' + toText(item.id));
-  num.className = 'ono-num';
-  row.appendChild(num);
-
-  // main（《…》のみ太字）
-  const main = document.createElement('span');
-  main.className = 'ono-main';
-  main.appendChild(emphasizeOnomatopoeia(item.main));
-  row.appendChild(main);
-
-  // romaji
-  const romaji = document.createElement('span');
-  romaji.className = 'ono-romaji';
-  safeText(romaji, item.romaji);
-  row.appendChild(romaji);
-
-  // description.ja
-  const desc = document.createElement('span');
-  desc.className = 'ono-desc';
-  safeText(desc, item.description && item.description.ja);
-  row.appendChild(desc);
-
-  // translationは絶対に描画しない
-
-  return row;
+// 音声再生（MP3優先＋Web Speech APIフォールバック）
+function playAudioOrTTS(el, text) {
+  const audioPath = el.dataset.audio;
+  if (audioPath) {
+    new Audio(audioPath).play();
+  } else {
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'ja-JP';
+    speechSynthesis.speak(utterance);
+  }
 } 
