@@ -402,7 +402,7 @@ async function showOnomatopoeiaScene(scene) {
           <div class="item-number">${item.id}</div>
           <div class="item-actions" style="display:inline-flex;align-items:center;">
             ${isTTSEnabled ? `
-              <button class="speak-btn" onclick="speakJapanese('${item.main.replace(/'/g, "\\'")}')" aria-label="音声再生" style="background:none;border:none;cursor:pointer;font-size:1.2em;margin-left:12px;" data-card-control="true">
+              <button class="speak-btn" onclick="playAudioWithFallback('', '${item.main.replace(/'/g, "\\'")}', 'ja-JP')" aria-label="音声再生" style="background:none;border:none;cursor:pointer;font-size:1.2em;margin-left:12px;" data-card-control="true">
                 🔊
               </button>
             ` : ''}
@@ -738,7 +738,7 @@ function renderScene() {
         <div class="message-header">
           <span class="message-number" style="font-weight:bold;margin-right:8px;">${messageId}.</span>
           <div class="message-actions" style="display:inline-flex;align-items:center;">
-            <button class="speak-btn" style="margin-left:12px;background:none;border:none;cursor:pointer;font-size:1.2em;" onclick="playJapaneseSpeech('${(msg.ja || msg.text || '').replace(/<[^>]+>/g, '')}')" aria-label="音声再生" data-card-control="true">🔊</button>
+            <button class="speak-btn" style="margin-left:12px;background:none;border:none;cursor:pointer;font-size:1.2em;" onclick="playAudioWithFallback('', '${(msg.ja || msg.text || '').replace(/<[^>]+>/g, '').replace(/'/g, "\\'")}', 'ja-JP')" aria-label="音声再生" data-card-control="true">🔊</button>
           </div>
         </div>
         <div class="message-content" style="display:inline-block;">
@@ -914,6 +914,9 @@ function enableOfflineMode() {
   console.log('Offline mode enabled');
 }
 
+// 音声再生機能（MP3優先＋Web Speech APIフォールバック）
+let currentAudio = null; // 現在再生中の音声を管理
+
 // 音声再生の改善（プレミアム機能）
 window.playJapaneseSpeech = function(japaneseText) {
   // 「音」単体の発音を訓読み「おと」に修正
@@ -970,16 +973,160 @@ function updateTTSToggleButton() {
     ttsBtn.classList.toggle('active', isEnabled);
     ttsBtn.title = isEnabled ? '音声再生機能: 有効' : '音声再生機能: 無効';
   }
-} 
+}
 
-// 音声再生（MP3優先＋Web Speech APIフォールバック）
-function playAudioOrTTS(el, text) {
-  const audioPath = el.dataset.audio;
+// 新規音声再生機能（MP3優先＋Web Speech APIフォールバック）
+function playAudioWithFallback(audioPath, text, language = 'ja-JP') {
+  // 既存の音声を停止
+  stopCurrentAudio();
+  
   if (audioPath) {
-    new Audio(audioPath).play();
+    // MP3ファイルが指定されている場合
+    console.log(`🎵 MP3ファイルを再生: ${audioPath}`);
+    
+    try {
+      // 音声オブジェクトを作成
+      const audio = new Audio(audioPath);
+      
+      // エラーハンドリング
+      audio.onerror = function() {
+        console.error(`❌ MP3ファイルの再生に失敗: ${audioPath}`);
+        // MP3再生失敗時はWeb Speech APIでフォールバック
+        if (text) {
+          console.log(`🔄 Web Speech APIでフォールバック: ${text}`);
+          playTextWithTTS(text, language);
+        }
+      };
+      
+      // 再生成功時のログ
+      audio.oncanplay = function() {
+        console.log(`✅ MP3ファイルの再生開始: ${audioPath}`);
+      };
+      
+      // 再生完了時の処理
+      audio.onended = function() {
+        console.log(`✅ MP3ファイルの再生完了: ${audioPath}`);
+        currentAudio = null;
+      };
+      
+      // 現在の音声として設定
+      currentAudio = audio;
+      
+      // 音声を再生
+      audio.play().catch(error => {
+        console.error(`❌ 音声再生エラー: ${error.message}`);
+        // 再生失敗時もWeb Speech APIでフォールバック
+        if (text) {
+          console.log(`🔄 Web Speech APIでフォールバック: ${text}`);
+          playTextWithTTS(text, language);
+        }
+      });
+      
+    } catch (error) {
+      console.error(`❌ MP3ファイル処理エラー: ${error.message}`);
+      // エラー時もWeb Speech APIでフォールバック
+      if (text) {
+        playTextWithTTS(text, language);
+      }
+    }
+    
+  } else if (text) {
+    // MP3ファイルが指定されていない場合、Web Speech APIで読み上げ
+    console.log(`🗣️ Web Speech APIで読み上げ: ${text}`);
+    playTextWithTTS(text, language);
+    
   } else {
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'ja-JP';
-    speechSynthesis.speak(utterance);
+    console.warn("⚠️ 音声再生に必要な属性が不足しています。audioPath または text を指定してください。");
   }
-} 
+}
+
+// 現在再生中の音声を停止
+function stopCurrentAudio() {
+  if (currentAudio) {
+    try {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+      currentAudio = null;
+      console.log("🔇 現在の音声を停止しました");
+    } catch (error) {
+      console.warn("音声停止時のエラー:", error);
+      currentAudio = null;
+    }
+  }
+  
+  // Web Speech APIも停止
+  if (window.speechSynthesis) {
+    speechSynthesis.cancel();
+  }
+}
+
+// Web Speech API を使用したテキスト読み上げ
+function playTextWithTTS(text, language = "ja-JP") {
+  try {
+    // ブラウザの音声合成機能が利用可能かチェック
+    if (!window.speechSynthesis) {
+      console.error("❌ このブラウザはWeb Speech APIをサポートしていません");
+      return;
+    }
+    
+    // 既存の音声を停止
+    speechSynthesis.cancel();
+    
+    // 新しい音声合成オブジェクトを作成
+    const utterance = new SpeechSynthesisUtterance(text);
+    
+    // 言語設定
+    utterance.lang = language;
+    
+    // 音声設定（既存の設定を流用）
+    utterance.rate = speechSpeed || 1.0;
+    utterance.pitch = 1.0;
+    utterance.volume = 0.9;
+    
+    // エラーハンドリング
+    utterance.onerror = function(event) {
+      console.error("❌ 音声合成エラー:", event.error);
+    };
+    
+    utterance.onstart = function() {
+      console.log(`🗣️ 音声合成開始: ${text}`);
+    };
+    
+    utterance.onend = function() {
+      console.log(`✅ 音声合成完了: ${text}`);
+    };
+    
+    // 音声合成を開始
+    speechSynthesis.speak(utterance);
+    
+  } catch (error) {
+    console.error("❌ Web Speech API エラー:", error);
+  }
+}
+
+// 音声再生機能の状態確認
+function checkAudioCapabilities() {
+  const capabilities = {
+    mp3: true, // MP3ファイル再生は基本的にサポート
+    tts: !!window.speechSynthesis, // Web Speech APIのサポート状況
+    languages: []
+  };
+  
+  // 利用可能な言語を取得
+  if (window.speechSynthesis) {
+    capabilities.languages = speechSynthesis.getVoices()
+      .filter(voice => voice.lang.startsWith('ja'))
+      .map(voice => voice.lang);
+  }
+  
+  console.log("🔊 音声機能の対応状況:", capabilities);
+  return capabilities;
+}
+
+// ページ読み込み完了時に音声機能の確認
+document.addEventListener('DOMContentLoaded', function() {
+  // 既存のDOMContentLoadedイベントハンドラーの後に実行
+  setTimeout(() => {
+    checkAudioCapabilities();
+  }, 1000); // 1秒後に実行（音声APIの初期化を待つ）
+}); 
