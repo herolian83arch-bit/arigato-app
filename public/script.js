@@ -88,6 +88,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       speedValue.textContent = `${speechSpeed.toFixed(2)}x`;
     });
   }
+  
+  // プレミアムモーダルのイベントリスナーを設定
+  initializePremiumModal();
 });
 
 // 起動時ヘルスチェック
@@ -311,9 +314,47 @@ function updatePremiumUI() {
       premiumBtn.textContent = 'Upgrade to Premium';
       premiumBtn.style.backgroundColor = '#FF9800';
       premiumBtn.disabled = false;
-      premiumBtn.onclick = showPaymentModal;
+      premiumBtn.onclick = showPremiumModal; // プレミアム機能モーダルを表示
     }
   }
+}
+
+// プレミアム機能モーダルを表示
+function showPremiumModal() {
+  const modal = document.getElementById('premium-modal');
+  modal.style.display = 'block';
+}
+
+// プレミアム機能モーダルを閉じる
+function closePremiumModal() {
+  const modal = document.getElementById('premium-modal');
+  modal.style.display = 'none';
+}
+
+// プレミアムモーダルの初期化
+function initializePremiumModal() {
+  const modal = document.getElementById('premium-modal');
+  const closeBtn = document.getElementById('premium-close');
+  
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closePremiumModal);
+  }
+  
+  // 背景クリックでモーダルを閉じる
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closePremiumModal();
+      }
+    });
+  }
+  
+  // Escキーでモーダルを閉じる
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && modal.style.display !== 'none') {
+      closePremiumModal();
+    }
+  });
 }
 
 // オノマトペ辞典モーダルを表示
@@ -1129,4 +1170,4 @@ document.addEventListener('DOMContentLoaded', function() {
   setTimeout(() => {
     checkAudioCapabilities();
   }, 1000); // 1秒後に実行（音声APIの初期化を待つ）
-}); 
+});
