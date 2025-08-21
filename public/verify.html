@@ -13,11 +13,11 @@
 
     <section class="status-row">
       <span id="premium" data-testid="premium-indicator" class="badge">OFF</span>
-      <button id="star" data-testid="star-toggle" class="btn" aria-pressed="false">笘・Favorite</button>
-      <button id="audio" data-testid="audio-button" class="btn">矧 Play test</button>
+      <button id="star" data-testid="star-toggle" class="btn" aria-pressed="false">☁EFavorite</button>
+      <button id="audio" data-testid="audio-button" class="btn">🔊 Play test</button>
     </section>
 
-    <!-- Playwright遲峨′隱ｭ繧蜿ｯ閭ｽ諤ｧ縺後≠繧九・縺ｧ谿九＠縺ｾ縺呻ｼ医Ο繧ｰ逕ｨ・・-->
+    <!-- Playwright等が読む可能性がある��Eで残します（ログ用�E�E-->
     <pre id="log" style="display:none"></pre>
 
     <hr class="divider" />
@@ -26,12 +26,14 @@
     <div id="dict-list" class="list"></div>
   </main>
 
-  <!-- 繧ｹ繝｢繝ｼ繧ｯ譎ゅ・鄙ｻ險ｳOFF -->
+  <!-- スモーク時��E翻訳OFF -->
   <script>window.__TRANSLATION_ENABLED__ = 0;</script>
   <script type="module" src="/verify.js"></script>
+  <script src="toText-polyfill.js"></script>
   <script src="verify-safe-shim.js?v=9"></script>
 </body>
 </html>
+
 
 
 

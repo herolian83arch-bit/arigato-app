@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>利用規約（日本語版）</title>
+  <style>
+    body {
+      font-family: 'Noto Sans JP', 'Inter', sans-serif;
+      background: #f7f7fa;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 700px;
+      margin: 32px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 24px 18px;
+    }
+    h1 {
+      font-size: 1.6rem;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    h2 {
+      font-size: 1.1rem;
+      margin-top: 28px;
+      margin-bottom: 10px;
+      color: #764ba2;
+    }
+    p, li {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 12px 4vw;
+      }
+      h1 {
+        font-size: 1.2rem;
+      }
+      h2 {
+        font-size: 1rem;
+      }
+      p, li {
+        font-size: 0.98rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>利用規約（日本語版）</h1>
+    <section>
+      <h2>1. はじめに</h2>
+      <p>本利用規約は、「Arigato App」（以下「本アプリ」）の運営において、利用者の皆様に適用される条件を定めるものです。</p>
+    </section>
+    <section>
+      <h2>2. 利用条件</h2>
+      <p>本アプリは、日本語の「ありがとう」表現を学ぶためのサービスです。個人利用に限り、無料でご利用いただけます。</p>
+    </section>
+    <section>
+      <h2>3. 禁止事項</h2>
+      <ul>
+        <li>本アプリの無断転載・再配布</li>
+        <li>法令や公序良俗に反する行為</li>
+        <li>運営の妨害となる行為</li>
+      </ul>
+    </section>
+    <section>
+      <h2>4. 免責事項</h2>
+      <p>本アプリの内容や安全性については万全を期しますが、正確性・安全性を保証するものではありません。利用により生じた損害について、運営者は一切責任を負いません。</p>
+    </section>
+    <section>
+      <h2>5. 著作権について</h2>
+      <p>本アプリに掲載されている全てのコンテンツの著作権は、運営者または正当な権利者に帰属します。無断利用を禁止します。</p>
+    </section>
+    <section>
+      <h2>6. 利用規約の変更</h2>
+      <p>本利用規約は、必要に応じて内容を変更することがあります。変更後の内容は本ページに掲載した時点で効力を生じます。</p>
+    </section>
+    <section>
+      <h2>7. お問い合わせ先</h2>
+      <p>お問い合わせ先：<span id="email"></span></p>
+      <script>
+        const user = "herolian83arch";
+        const domain = "gmail.com";
+        document.getElementById("email").innerHTML = `<a href="mailto:${user}@${domain}">${user}@${domain}</a>`;
+      </script>
+    </section>
+  </div>
+</body>
+</html>
