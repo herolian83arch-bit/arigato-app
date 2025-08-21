@@ -278,8 +278,13 @@ async function loadDictionary() {
 // オノマトペデータを読み込み
 async function loadOnomatopoeiaData() {
   try {
-    // 新しいデータローダーを使用
-    const rawData = await loadDictionary();
+    // dictionary.jsonを直接読み込み
+    const response = await fetch('/data/dictionary.json');
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    }
+    
+    const rawData = await response.json();
     
     // romajiを大文字に変換
     onomatopoeiaData = rawData.map(item => ({
@@ -296,8 +301,8 @@ async function loadOnomatopoeiaData() {
 
 // プレミアム機能のチェック
 function checkPremiumStatus() {
-  const premiumStatus = localStorage.getItem('premiumStatus');
-  isPremiumUser = premiumStatus === 'active';
+  const premiumStatus = localStorage.getItem('premium');
+  isPremiumUser = premiumStatus === 'true';
   updatePremiumUI();
 }
 
@@ -558,7 +563,7 @@ async function processPayment() {
         console.log('🎭 Mock premium access granted successfully');
         
         // プレミアム状態を有効化
-        localStorage.setItem('premiumStatus', 'active');
+        localStorage.setItem('premium', 'true');
         isPremiumUser = true;
         updatePremiumUI();
         closePaymentModal();
@@ -577,7 +582,7 @@ async function processPayment() {
       console.log('🎭 Mock premium access granted successfully');
       
       // プレミアム状態を有効化
-      localStorage.setItem('premiumStatus', 'active');
+      localStorage.setItem('premium', 'true');
       isPremiumUser = true;
       updatePremiumUI();
       closePaymentModal();
@@ -616,7 +621,7 @@ async function processPayment() {
         throw new Error(`Payment failed: ${result.error.message}`);
       } else {
         // 支払い成功
-        localStorage.setItem('premiumStatus', 'active');
+        localStorage.setItem('premium', 'true');
         isPremiumUser = true;
         updatePremiumUI();
         closePaymentModal();
