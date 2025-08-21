@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
@@ -13,11 +13,11 @@
 
     <section class="status-row">
       <span id="premium" data-testid="premium-indicator" class="badge">OFF</span>
-      <button id="star" data-testid="star-toggle" class="btn" aria-pressed="false">☆ Favorite</button>
+      <button id="star" data-testid="star-toggle" class="btn" aria-pressed="false">☁EFavorite</button>
       <button id="audio" data-testid="audio-button" class="btn">🔊 Play test</button>
     </section>
 
-    <!-- Playwright等が読む可能性があるので残します（ログ用） -->
+    <!-- Playwright等が読む可能性がある��Eで残します（ログ用�E�E-->
     <pre id="log" style="display:none"></pre>
 
     <hr class="divider" />
@@ -26,9 +26,15 @@
     <div id="dict-list" class="list"></div>
   </main>
 
-  <!-- スモーク時は翻訳OFF -->
+  <!-- スモーク時��E翻訳OFF -->
   <script>window.__TRANSLATION_ENABLED__ = 0;</script>
   <script type="module" src="/verify.js"></script>
+  <script src="toText-polyfill.js"></script>
+  <script src="verify-safe-shim.js?v=9"></script>
 </body>
 </html>
+
+
+
+
 

@@ -1,0 +1,21 @@
+{
+  "name": "arigato-app",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Static site for arigato-app (premium onomatopoeia dictionary).",
+  "license": "UNLICENSED",
+  "scripts": {
+    "kill": "kill-port 3000 || true",
+    "serve": "http-server public -p 3000 -c-1",
+    "dev": "npm run kill && npm run serve",
+    "verify-app": "start-server-and-test serve http://127.0.0.1:3000 \"node -e \\\"console.log('VERIFY: OK (site served)')\\\"\"",
+    "lint:json": "node -e \"JSON.parse(require('fs').readFileSync('public/data/dictionary.json','utf8')); console.log('dictionary.json: OK')\"",
+    "format": "prettier -w \"public/**/*.{html,css,js,json}\""
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "kill-port": "^2.0.1",
+    "prettier": "^3.3.3",
+    "start-server-and-test": "^2.0.3"
+  }
+}
