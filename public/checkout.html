@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Arigato App Premium</title>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="../config/stripe-config.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+    }
+    
+    .container {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .premium-icon {
+      font-size: 60px;
+      margin-bottom: 20px;
+      color: #667eea;
+    }
+    
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+      font-size: 28px;
+    }
+    
+    .description {
+      color: #7f8c8d;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    
+    .product-info {
+      background: #f8f9fa;
+      border-radius: 15px;
+      padding: 25px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    
+    .price {
+      font-size: 32px;
+      font-weight: 700;
+      color: #27ae60;
+      margin-bottom: 10px;
+    }
+    
+    .features {
+      text-align: left;
+      margin-top: 20px;
+    }
+    
+    .feature-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      color: #34495e;
+    }
+    
+    .feature-icon {
+      margin-right: 12px;
+      font-size: 18px;
+    }
+    
+    .payment-form {
+      margin-bottom: 30px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #2c3e50;
+      font-weight: 600;
+    }
+    
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.2s;
+    }
+    
+    input:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+    
+    .card-element {
+      padding: 12px;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      background: white;
+    }
+    
+    .pay-button {
+      width: 100%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .pay-button:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    
+    .pay-button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    
+    .back-link {
+      display: block;
+      text-align: center;
+      color: #7f8c8d;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+    
+    .back-link:hover {
+      color: #34495e;
+    }
+    
+    .loading {
+      display: none;
+      text-align: center;
+      margin: 20px 0;
+    }
+    
+    .spinner {
+      border: 3px solid #f3f3f3;
+      border-top: 3px solid #667eea;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 10px;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px 20px;
+        margin: 20px;
+      }
+      
+      h1 {
+        font-size: 24px;
+      }
+      
+      .premium-icon {
+        font-size: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="premium-icon">✨</div>
+      <h1>Upgrade to Premium</h1>
+      <p class="description">
+        Unlock the full potential of Arigato App with our premium features!
+      </p>
+    </div>
+    
+    <div class="product-info">
+      <div class="price">$9.99</div>
+      <div class="features">
+        <div class="feature-item">
+          <span class="feature-icon">📚</span>
+          <span>オノマトペ辞典 - 41シーン・615例文</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🎵</span>
+          <span>Enhanced audio quality</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🖼️</span>
+          <span>Custom backgrounds</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🚀</span>
+          <span>Advanced language features</span>
+        </div>
+      </div>
+    </div>
+    
+    <form class="payment-form" id="payment-form">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="card-element">Credit or Debit Card</label>
+        <div id="card-element" class="card-element"></div>
+        <div id="card-errors" style="color: #e74c3c; font-size: 14px; margin-top: 8px;"></div>
+      </div>
+      
+      <button type="submit" class="pay-button" id="pay-button">
+        Pay $9.99
+      </button>
+    </form>
+    
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+      <p>Processing payment...</p>
+    </div>
+    
+    <a href="index.html" class="back-link">← Back to App</a>
+  </div>
+
+  <script>
+    let stripe;
+    let elements;
+    let card;
+    
+    // ページ読み込み時の初期化
+    document.addEventListener('DOMContentLoaded', function() {
+      initializeStripe();
+      setupFormHandling();
+    });
+    
+    // Stripeの初期化
+    function initializeStripe() {
+      try {
+        // 設定ファイルからStripeキーを取得
+        const publishableKey = window.STRIPE_CONFIG?.publishableKey || 'pk_test_51RqsyyGWVvTYb0YWIKOq10sybzWD8e7XKXObY7Tj0dfotoGeOgvlXDEfpymqmXLSwbcz2iVbZ0Hpa800xCMSebA000SGTwfMcA';
+        
+        stripe = Stripe(publishableKey);
+        elements = stripe.elements();
+        
+        // カード要素の作成
+        card = elements.create('card', {
+          style: {
+            base: {
+              fontSize: '16px',
+              color: '#424770',
+              '::placeholder': {
+                color: '#aab7c4',
+              },
+            },
+            invalid: {
+              color: '#9e2146',
+            },
+          },
+          hidePostalCode: true,
+        });
+        
+        // カード要素をマウント
+        card.mount('#card-element');
+        
+        // カードエラーの表示
+        card.addEventListener('change', function(event) {
+          const displayError = document.getElementById('card-errors');
+          if (event.error) {
+            displayError.textContent = event.error.message;
+          } else {
+            displayError.textContent = '';
+          }
+        });
+        
+      } catch (error) {
+        console.error('Stripe initialization error:', error);
+        // エラーが発生した場合はモック決済モードに切り替え
+        enableMockPayment();
+      }
+    }
+    
+    // フォーム処理の設定
+    function setupFormHandling() {
+      const form = document.getElementById('payment-form');
+      form.addEventListener('submit', handlePayment);
+    }
+    
+    // 決済処理
+    async function handlePayment(event) {
+      event.preventDefault();
+      
+      const payButton = document.getElementById('pay-button');
+      const loading = document.getElementById('loading');
+      
+      // ボタンを無効化してローディング表示
+      payButton.disabled = true;
+      loading.style.display = 'block';
+      
+      try {
+        // テスト用のモック決済（実際のStripe決済の代わり）
+        await processMockPayment();
+        
+        // 決済成功時の処理
+        localStorage.setItem('premiumStatus', 'true');
+        
+        // 成功メッセージを表示
+        alert('🎉 Payment successful! Premium features are now unlocked!');
+        
+        // index.htmlにリダイレクト
+        window.location.href = 'index.html';
+        
+      } catch (error) {
+        console.error('Payment error:', error);
+        
+        // エラーメッセージを表示
+        const cardErrors = document.getElementById('card-errors');
+        cardErrors.textContent = error.message || 'Payment failed. Please try again.';
+        
+        // ボタンを再有効化
+        payButton.disabled = false;
+        loading.style.display = 'none';
+      }
+    }
+    
+    // モック決済処理（テスト用）
+    async function processMockPayment() {
+      return new Promise((resolve, reject) => {
+        // 2秒後に成功をシミュレート
+        setTimeout(() => {
+          // 実際の環境では、ここでStripeの決済処理を行う
+          // const result = await stripe.confirmCardPayment(clientSecret, {
+          //   payment_method: { card: card }
+          // });
+          
+          // テスト用の成功レスポンス
+          resolve({ success: true });
+        }, 2000);
+      });
+    }
+    
+    // モック決済モードの有効化
+    function enableMockPayment() {
+      console.log('🔄 Enabling mock payment mode');
+      const cardElement = document.getElementById('card-element');
+      cardElement.innerHTML = '<div style="padding: 20px; text-align: center; color: #7f8c8d;">💳 Test Mode - Click "Pay $9.99" to simulate payment</div>';
+    }
+  </script>
+</body>
+</html>
