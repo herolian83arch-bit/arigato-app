@@ -294,7 +294,14 @@ async function loadOnomatopoeiaData() {
 // プレミアム機能のチェック
 function checkPremiumStatus() {
   const premiumStatus = localStorage.getItem('premiumStatus');
-  isPremiumUser = premiumStatus === 'active';
+  isPremiumUser = premiumStatus === 'true';
+  
+  // プレミアムでない場合はロック画面に誘導
+  if (!isPremiumUser && window.location.pathname.includes('index.html')) {
+    window.location.href = 'premium-locked.html';
+    return;
+  }
+  
   updatePremiumUI();
 }
 
@@ -517,7 +524,7 @@ async function processPayment() {
         console.log('🎭 Mock premium access granted successfully');
         
         // プレミアム状態を有効化
-        localStorage.setItem('premiumStatus', 'active');
+        localStorage.setItem('premiumStatus', 'true');
         isPremiumUser = true;
         updatePremiumUI();
         closePaymentModal();
@@ -535,9 +542,9 @@ async function processPayment() {
     if (responseData.mock && responseData.premium) {
       console.log('🎭 Mock premium access granted successfully');
       
-      // プレミアム状態を有効化
-      localStorage.setItem('premiumStatus', 'active');
-      isPremiumUser = true;
+              // プレミアム状態を有効化
+        localStorage.setItem('premiumStatus', 'true');
+        isPremiumUser = true;
       updatePremiumUI();
       closePaymentModal();
       alert('🎉 Mock premium upgrade successful! You now have access to premium features.');
@@ -575,7 +582,7 @@ async function processPayment() {
         throw new Error(`Payment failed: ${result.error.message}`);
       } else {
         // 支払い成功
-        localStorage.setItem('premiumStatus', 'active');
+        localStorage.setItem('premiumStatus', 'true');
         isPremiumUser = true;
         updatePremiumUI();
         closePaymentModal();
