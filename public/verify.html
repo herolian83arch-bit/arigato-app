@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Verification | Arigato App</title>
+  <link rel="stylesheet" href="/verify.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Verification</h1>
+
+    <section class="status-row">
+      <span id="premium" data-testid="premium-indicator" class="badge">OFF</span>
+      <button id="star" data-testid="star-toggle" class="btn" aria-pressed="false">☁EFavorite</button>
+      <button id="audio" data-testid="audio-button" class="btn">🔊 Play test</button>
+    </section>
+
+    <!-- Playwright等が読む可能性がある��Eで残します（ログ用�E�E-->
+    <pre id="log" style="display:none"></pre>
+
+    <hr class="divider" />
+
+    <h2>Dictionary Preview</h2>
+    <div id="dict-list" class="list"></div>
+  </main>
+
+  <!-- スモーク時��E翻訳OFF -->
+  <script>window.__TRANSLATION_ENABLED__ = 0;</script>
+  <script type="module" src="/verify.js"></script>
+  <script src="toText-polyfill.js"></script>
+  <script src="verify-safe-shim.js?v=9"></script>
+</body>
+</html>
+
+
+
+
+

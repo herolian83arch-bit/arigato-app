@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Features Locked - Arigato App</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+    }
+    
+    .container {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    
+    .lock-icon {
+      font-size: 80px;
+      margin-bottom: 20px;
+      color: #ff6b6b;
+    }
+    
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+    
+    .description {
+      color: #7f8c8d;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    
+    .features {
+      background: #f8f9fa;
+      border-radius: 15px;
+      padding: 25px;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+    
+    .features h3 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    
+    .feature-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      color: #34495e;
+    }
+    
+    .feature-icon {
+      margin-right: 12px;
+      font-size: 20px;
+    }
+    
+    .upgrade-btn {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 25px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin-bottom: 20px;
+    }
+    
+    .upgrade-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    
+    .back-link {
+      color: #7f8c8d;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    
+    .back-link:hover {
+      color: #34495e;
+    }
+    
+    .price {
+      background: #e8f5e8;
+      color: #27ae60;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+    
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px 20px;
+        margin: 20px;
+      }
+      
+      h1 {
+        font-size: 24px;
+      }
+      
+      .lock-icon {
+        font-size: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="lock-icon">🔒</div>
+    <h1>Premium Features Locked</h1>
+    <p class="description">
+      Unlock the full potential of Arigato App with our premium features!
+    </p>
+    
+    <div class="price">$9.99</div>
+    
+    <div class="features">
+      <h3>✨ Premium Features Include:</h3>
+      <div class="feature-item">
+        <span class="feature-icon">📚</span>
+        <span>オノマトペ辞典 - 41シーン・615例文</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🎵</span>
+        <span>Enhanced audio quality</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🖼️</span>
+        <span>Custom backgrounds</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🚀</span>
+        <span>Advanced language features</span>
+      </div>
+    </div>
+    
+    <button class="upgrade-btn" onclick="window.location.href='checkout.html'">
+      Upgrade to Premium
+    </button>
+    
+    <br>
+    <a href="index.html" class="back-link">← Back to App</a>
+  </div>
+</body>
+</html>
