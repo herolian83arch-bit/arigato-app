@@ -1,32 +1,35 @@
 // Stripe Configuration
-// 本番環境では実際の公開キーに置き換えてください
+// 環境変数からキーを読み込みます（直書き禁止）
 
 const STRIPE_CONFIG = {
-  // テスト用の公開キー（仮の値）
-  publishableKey: 'pk_test_51RqsyyGWVvTYb0YWIKOq10sybzWD8e7XKXObY7Tj0dfotoGeOgvlXDEfpymqmXLSwbcz2iVbZ0Hpa800xCMSebA000SGTwfMcA',
-  
-  // 本番用の公開キー（実際の値に置き換え）
-  // publishableKey: 'pk_live_your_actual_live_key_here',
-  
-  // 決済金額（セント単位）
-  amount: 999, // $9.99
-  
-  // 通貨
-  currency: 'usd',
-  
-  // 商品名
-  productName: 'Arigato App Premium',
-  
-  // 商品説明
-  productDescription: 'オノマトペ辞典を含むプレミアム機能へのアクセス'
+  // 公開キー（フロントエンド用）
+  publishableKey: process.env.STRIPE_PUBLISHABLE_KEY || "pk_test_your_publishable_key_here",
+
+  // シークレットキー（サーバー側用）
+  secretKey: process.env.STRIPE_SECRET_KEY || "sk_test_your_secret_key_here",
+
+  // Webhook シークレット
+  webhookSecret: process.env.STRIPE_WEBHOOK_SECRET || "whsec_your_webhook_secret_here",
+
+  // 商品情報
+  product: {
+    priceId: process.env.STRIPE_PRICE_ID || "price_dummy_id",
+    productName: "Arigato App Premium",
+    productDescription: "オノマトペ辞典を含むプレミアム機能へのアクセス",
+
+    // 金額と通貨（フロント表示用）
+    amount: 500,  // $5.00
+    currency: "usd"
+  }
 };
 
-// 設定をエクスポート
-if (typeof module !== 'undefined' && module.exports) {
+// Node.js 用（バックエンドで利用する場合）
+if (typeof module !== "undefined" && module.exports) {
   module.exports = STRIPE_CONFIG;
 }
 
-// ブラウザ環境でのグローバル変数として設定
-if (typeof window !== 'undefined') {
+// ブラウザ用（フロントエンドで利用する場合）
+if (typeof window !== "undefined") {
   window.STRIPE_CONFIG = STRIPE_CONFIG;
 }
+
