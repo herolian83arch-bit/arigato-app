@@ -30,6 +30,28 @@ Start with a heartfelt “thank you.”）
 
 ---
 
+## ⚙️ Developer Information
+
+### 🏗️ Project Structure
+- Frontend: `public/index.html`, `public/script.js`, `public/data/dictionary.json`
+- Backend (API): `api/create-checkout-session.js` (Stripe integration)
+- Config: `config/stripe-checkout.js`
+- Deployment: GitHub → Vercel (Output Directory = `public`)
+
+### 🚀 Development Policy
+- Production development is based on **arigato-app-clean**
+- GitHub repository name remains **arigato-app**
+- Use `--force-with-lease` for push operations
+- Workflow: **1 task = 1 PR = 1 file**, Squash & Merge → Vercel auto-deploy
+- Stripe keys are managed via **environment variables** (never committed)
+
+### 🔍 Verification
+- `/verify.html` → confirm numbers are rendered with `asText`, translations hidden
+- Ensure 615 entries of Onomatopoeia Dictionary are displayed correctly
+- Regression test for 🔊 (audio) and ★ (favorite) features after each deploy
+
+---
+
 ## 关于本应用（中文）
 
 （Arigato App 是一款帮助你在日本旅行中使用地道日语表达感谢之情的应用。  
