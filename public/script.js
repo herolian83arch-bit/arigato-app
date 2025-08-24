@@ -72,6 +72,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   loadOnomatopoeiaData(); // オノマトペデータを読み込み
   updateTTSToggleButton(); // TTSボタンの状態を更新
   
+  // Stripe Checkout の結果をチェック
+  checkStripeCheckoutResult();
+  
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.onclick = () => {
       currentLang = btn.dataset.lang;
@@ -514,144 +517,93 @@ function closePaymentModal() {
   modal.style.display = 'none';
 }
 
-// 決済処理（堅牢化版）
+// 決済処理（Stripe Checkout 対応版）
 async function processPayment() {
   const payButton = document.getElementById('pay-button');
   payButton.disabled = true;
   payButton.textContent = 'Processing...';
   
   try {
-    console.log('🔍 Starting payment process...');
+    console.log('🔍 Starting Stripe Checkout process...');
     
-    // 静的サイト用モック課金APIを試行
-    console.log('🔍 Starting mock checkout process...');
+    // Stripe Checkout セッションを作成
+    const response = await fetch('/api/create-checkout-session', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        priceId: process.env.STRIPE_PRICE_ID
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    }
+
+    const session = await response.json();
     
+    if (session.url) {
+      // Stripe Checkout ページにリダイレクト
+      window.location.href = session.url;
+    } else {
+      throw new Error('No checkout URL received');
+    }
+
+  } catch (error) {
+    console.error('❌ Stripe Checkout error:', error);
+    alert(`Payment error: ${error.message}`);
+  } finally {
+    payButton.disabled = false;
+    payButton.textContent = 'Pay $5.00';
+  }
+}
+
+// 決済結果のチェックと処理
+async function checkStripeCheckoutResult() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const sessionId = urlParams.get('session_id');
+
+  if (sessionId) {
     try {
-      // 静的JSONファイルからモック課金データを取得
-      const mockResponse = await fetch('/api/checkout.json', {
+      const response = await fetch(`/api/checkout-session/${sessionId}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
         }
       });
 
-      // ネットワーク診断ログ
-      console.info('🌐 Mock checkout API response:', {
-        status: mockResponse.status,
-        statusText: mockResponse.statusText,
-        contentType: mockResponse.headers.get('content-type'),
-        url: mockResponse.url
-      });
-
-      // レスポンスの堅牢化処理
-      const raw = await mockResponse.text();
-      let responseData = null;
-      
-      if (raw) {
-        try {
-          responseData = JSON.parse(raw);
-          console.log('📄 Parsed response data:', responseData);
-        } catch (e) {
-          throw new Error(`Invalid JSON response: ${raw.slice(0, 200)}`);
-        }
-      } else {
-        throw new Error('Empty response received from server');
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
 
-      // モック課金の成功処理
-      if (responseData.mock && responseData.premium) {
-        console.log('🎭 Mock premium access granted successfully');
-        
-        // プレミアム状態を有効化
+      const session = await response.json();
+
+      if (session.payment_status === 'paid') {
+        console.log('🎉 Stripe Checkout successful!');
         localStorage.setItem('premium', 'true');
         isPremiumUser = true;
         updatePremiumUI();
+        alert('🎉 Premium upgrade successful! You now have access to premium features.');
         closePaymentModal();
-        alert('🎉 Mock premium upgrade successful! You now have access to premium features.');
-        return;
+      } else if (session.payment_status === 'canceled') {
+        console.log('❌ Stripe Checkout canceled.');
+        alert('Payment was canceled. You can try again or upgrade later.');
+        closePaymentModal();
       } else {
-        throw new Error('Mock premium response is invalid');
+        console.warn('Unexpected payment status:', session.payment_status);
+        alert('Payment status is unexpected. Please try again or contact support.');
+        closePaymentModal();
       }
     } catch (error) {
-      console.error('❌ Mock checkout error:', error);
-      throw error; // エラーを上位に伝播
-    }
-
-    // モック課金の成功処理
-    if (responseData.mock && responseData.premium) {
-      console.log('🎭 Mock premium access granted successfully');
-      
-      // プレミアム状態を有効化
-      localStorage.setItem('premium', 'true');
-      isPremiumUser = true;
-      updatePremiumUI();
+      console.error('❌ Error checking Stripe checkout result:', error);
+      alert(`Error checking payment status: ${error.message}`);
       closePaymentModal();
-      alert('🎉 Mock premium upgrade successful! You now have access to premium features.');
-      return;
     }
-
-    // エラーレスポンスの処理
-    if (!mockResponse.ok) {
-      throw new Error(responseData?.error || `HTTP ${mockResponse.status}: ${mockResponse.statusText}`);
-    }
-
-    // 本番課金処理（Stripe）のフォールバック
-    if (responseData.clientSecret) {
-      console.log('💳 Proceeding with Stripe payment...');
-      
-      const result = await stripe.confirmCardPayment(responseData.clientSecret, {
-        payment_method: {
-          card: elements.getElement('card'),
-          billing_details: {
-            name: 'Test User',
-            email: 'test@example.com',
-            address: {
-              line1: '123 Test Street',
-              city: 'Test City',
-              state: 'Test State',
-              postal_code: '12345',
-              country: 'US'
-            }
-          }
-        }
-      });
-
-      if (result.error) {
-        console.error('Payment failed:', result.error);
-        throw new Error(`Payment failed: ${result.error.message}`);
-      } else {
-        // 支払い成功
-        localStorage.setItem('premium', 'true');
-        isPremiumUser = true;
-        updatePremiumUI();
-        closePaymentModal();
-        alert('Premium upgrade successful! 🎉');
-      }
-    } else {
-      throw new Error('No payment method available (neither mock nor Stripe)');
-    }
-
-  } catch (error) {
-    console.error('❌ Payment error:', error);
-    
-    // ユーザーフレンドリーなエラーメッセージ
-    let errorMessage = 'Payment error occurred. ';
-    if (error.message.includes('Invalid JSON')) {
-      errorMessage += 'Server returned invalid response format.';
-    } else if (error.message.includes('Empty response')) {
-      errorMessage += 'Server returned empty response.';
-    } else if (error.message.includes('HTTP 404')) {
-      errorMessage += 'Payment service not found.';
-    } else if (error.message.includes('HTTP 500')) {
-      errorMessage += 'Server internal error.';
-    } else {
-      errorMessage += error.message;
-    }
-    
-    alert(errorMessage);
-  } finally {
-    payButton.disabled = false;
-    payButton.textContent = 'Pay $5.00';
+  } else {
+    console.warn('No session_id found in URL parameters.');
+    // ユーザーが直接URLを入力した場合など、モーダルを閉じる
+    closePaymentModal();
   }
 }
 
