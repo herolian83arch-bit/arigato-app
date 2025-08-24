@@ -651,7 +651,7 @@ async function processPayment() {
     alert(errorMessage);
   } finally {
     payButton.disabled = false;
-    payButton.textContent = 'Pay $9.99';
+    payButton.textContent = 'Pay $5.00';
   }
 }
 
