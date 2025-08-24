@@ -527,14 +527,12 @@ async function processPayment() {
     console.log('🔍 Starting Stripe Checkout process...');
     
     // Stripe Checkout セッションを作成
-    const response = await fetch('/api/create-checkout-session', {
+    const response = await fetch('/api/checkout', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        priceId: process.env.STRIPE_PRICE_ID
-      })
+      body: JSON.stringify({})
     });
 
     if (!response.ok) {
@@ -562,47 +560,19 @@ async function processPayment() {
 // 決済結果のチェックと処理
 async function checkStripeCheckoutResult() {
   const urlParams = new URLSearchParams(window.location.search);
-  const sessionId = urlParams.get('session_id');
+  const success = urlParams.get('success');
+  const canceled = urlParams.get('canceled');
 
-  if (sessionId) {
-    try {
-      const response = await fetch(`/api/checkout-session/${sessionId}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        }
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-      }
-
-      const session = await response.json();
-
-      if (session.payment_status === 'paid') {
-        console.log('🎉 Stripe Checkout successful!');
-        localStorage.setItem('premium', 'true');
-        isPremiumUser = true;
-        updatePremiumUI();
-        alert('🎉 Premium upgrade successful! You now have access to premium features.');
-        closePaymentModal();
-      } else if (session.payment_status === 'canceled') {
-        console.log('❌ Stripe Checkout canceled.');
-        alert('Payment was canceled. You can try again or upgrade later.');
-        closePaymentModal();
-      } else {
-        console.warn('Unexpected payment status:', session.payment_status);
-        alert('Payment status is unexpected. Please try again or contact support.');
-        closePaymentModal();
-      }
-    } catch (error) {
-      console.error('❌ Error checking Stripe checkout result:', error);
-      alert(`Error checking payment status: ${error.message}`);
-      closePaymentModal();
-    }
-  } else {
-    console.warn('No session_id found in URL parameters.');
-    // ユーザーが直接URLを入力した場合など、モーダルを閉じる
+  if (success === 'true') {
+    console.log('🎉 Stripe Checkout successful!');
+    localStorage.setItem('premiumActive', 'true');
+    isPremiumUser = true;
+    updatePremiumUI();
+    alert('✅ Premium upgrade successful! You now have access to premium features.');
+    closePaymentModal();
+  } else if (canceled === 'true') {
+    console.log('❌ Stripe Checkout canceled.');
+    alert('Payment was canceled. You can try again or upgrade later.');
     closePaymentModal();
   }
 }
