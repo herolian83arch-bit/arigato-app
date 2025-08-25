@@ -32,8 +32,10 @@ export default async function handler(req, res) {
         success_url: `${req.headers.origin}/?success=true`,
         cancel_url: `${req.headers.origin}/?canceled=true`,
       });
+      console.log("✅ Stripe session created successfully:", session.id);
+      res.status(200).json({ url: session.url });
 
-      console.log('✅ Stripe session created successfully:', session.id);
+
       res.status(200).json({ url: session.url });
     } catch (err) {
       console.error("❌ Stripe session error:", err);
