@@ -532,9 +532,7 @@ async function processPayment() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        priceId: process.env.STRIPE_PRICE_ID
-      })
+      body: JSON.stringify({})
     });
 
     if (!response.ok) {
