@@ -18,7 +18,6 @@ module.exports = async function handler(req, res) {
         payment_method_types: ["card"],
         line_items: [
           {
-            // Vercel に設定した Price ID ($5.00)
             price: process.env.STRIPE_PRICE_ID,
             quantity: 1,
           },
