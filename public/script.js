@@ -101,7 +101,7 @@ async function performHealthCheck() {
   try {
     console.log('🔍 Performing health check...');
     
-    const response = await fetch('/api/checkout/ping.json');
+    const response = await fetch('/api/checkout');
     const raw = await response.text();
     
     if (!response.ok) {
