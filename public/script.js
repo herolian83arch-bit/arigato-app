@@ -563,7 +563,7 @@ async function processPayment() {
   } catch (error) {
     console.error('❌ Stripe Checkout error:', error);
     
-    // より詳細なエラー情報を表示
+    // より詳細なエラー情報を表示（文字化け防止）
     let errorMessage = 'Payment error occurred.';
     
     if (error.message.includes('HTTP 500')) {
@@ -591,11 +591,16 @@ async function checkStripeCheckoutResult() {
 
   if (success === 'true') {
     console.log('🎉 Stripe Checkout successful!');
-    localStorage.setItem('premiumActive', 'true');
-    isPremiumUser = true;
-    updatePremiumUI();
-    alert('✅ Premium upgrade successful! You now have access to premium features.');
-    closePaymentModal();
+    try {
+      localStorage.setItem('premiumActive', 'true');
+      isPremiumUser = true;
+      updatePremiumUI();
+      alert('✅ Premium upgrade successful! You now have access to premium features.');
+      closePaymentModal();
+    } catch (error) {
+      console.error('❌ Error updating premium status:', error);
+      alert('✅ Premium upgrade successful! Please refresh the page to access premium features.');
+    }
   } else if (canceled === 'true') {
     console.log('❌ Stripe Checkout canceled.');
     alert('Payment was canceled. You can try again or upgrade later.');
