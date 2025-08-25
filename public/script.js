@@ -477,7 +477,7 @@ function showPaymentModal() {
   const modal = document.getElementById('payment-modal');
   modal.style.display = 'block';
   
-    // Stripe Elementsを初期化
+  // Stripe Elementsを初期化（重複作成を防ぐ）
   if (!stripe) {
     // 環境変数から取得するか、デフォルト値を使用
     const publishableKey = 'pk_test_51RqsyyGWVvTYb0YWIKOq10sybzWD8e7XKXObY7Tj0dfotoGeOgvlXDEfpymqmXLSwbcz2iVbZ0Hpa800xCMSebA000SGTwfMcA';
@@ -489,6 +489,15 @@ function showPaymentModal() {
   const cardElement = document.getElementById('card-element');
   if (cardElement) {
     cardElement.innerHTML = '';
+  }
+
+  // 既存のcard要素が存在する場合は削除
+  if (window.currentCardElement) {
+    try {
+      window.currentCardElement.destroy();
+    } catch (e) {
+      console.log('Previous card element already destroyed');
+    }
   }
 
   const card = elements.create('card', {
@@ -509,6 +518,9 @@ function showPaymentModal() {
   
   // カード要素をマウント
   card.mount('#card-element');
+  
+  // 現在のカード要素を保存（後で削除用）
+  window.currentCardElement = card;
 }
 
 // 決済モーダルを閉じる
@@ -550,7 +562,21 @@ async function processPayment() {
 
   } catch (error) {
     console.error('❌ Stripe Checkout error:', error);
-    alert(`Payment error: ${error.message}`);
+    
+    // より詳細なエラー情報を表示
+    let errorMessage = 'Payment error occurred.';
+    
+    if (error.message.includes('HTTP 500')) {
+      errorMessage = 'Server error: Please try again later or contact support.';
+    } else if (error.message.includes('HTTP 404')) {
+      errorMessage = 'Service not found: Please check the server status.';
+    } else if (error.message.includes('fetch')) {
+      errorMessage = 'Network error: Please check your internet connection.';
+    } else {
+      errorMessage = `Payment error: ${error.message}`;
+    }
+    
+    alert(`❌ ${errorMessage}`);
   } finally {
     payButton.disabled = false;
     payButton.textContent = 'Pay $5.00';
