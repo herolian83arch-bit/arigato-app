@@ -398,3 +398,135 @@ body {
 .mb-24 { margin-bottom: 24px; }
 .hidden { display: none; }
 .visible { display: block; }
+
+/* オノマトペ辞典スタイル */
+.scene-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.scene-card {
+  background: var(--bg-light);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.scene-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.scene-icon {
+  font-size: 2.5em;
+  margin-bottom: 12px;
+}
+
+.scene-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.scene-count {
+  font-size: 0.9em;
+  color: var(--text-muted);
+}
+
+.back-btn {
+  background: var(--bg-light);
+  border: 2px solid var(--border);
+  color: var(--text);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  border-color: var(--primary);
+  background: var(--bg-hover);
+}
+
+.onomatopoeia-item {
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  transition: all 0.2s ease;
+}
+
+.onomatopoeia-item:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.item-number {
+  background: var(--primary);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.item-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.item-main {
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.item-romaji {
+  font-size: 0.9em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  font-family: monospace;
+  letter-spacing: 0.5px;
+}
+
+.item-description {
+  font-size: 0.9em;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.favorite-toggle-btn {
+  transition: all 0.2s ease;
+}
+
+.favorite-toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+.speak-btn {
+  transition: all 0.2s ease;
+}
+
+.speak-btn:hover {
+  transform: scale(1.1);
+  color: var(--primary);
+}

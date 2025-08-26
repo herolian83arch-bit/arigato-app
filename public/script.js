@@ -304,7 +304,7 @@ async function loadOnomatopoeiaData() {
 
 // プレミアム機能のチェック
 function checkPremiumStatus() {
-  const premiumStatus = localStorage.getItem('premium');
+  const premiumStatus = localStorage.getItem('premiumActive');
   isPremiumUser = premiumStatus === 'true';
   updatePremiumUI();
 }
@@ -368,7 +368,7 @@ function initializePremiumModal() {
 // オノマトペ辞典モーダルを表示
 function showOnomatopoeiaModal() {
   if (!isPremiumUser) {
-    showPaymentModal();
+    alert('この機能はプレミアム専用です。プレミアムにアップグレードしてください。');
     return;
   }
   
@@ -432,15 +432,6 @@ async function showOnomatopoeiaScene(scene) {
   let html = `<h3>${scene}</h3>`;
   
   for (const item of sceneItems) {
-    // 動的翻訳でオノマトペの翻訳を取得
-    let translatedMain = item.main;
-    let translatedDescription = item.description?.ja || '';
-    
-    if (currentLang !== 'ja' && currentLang !== 'en') {
-      translatedMain = await translateText(item.main, currentLang);
-      translatedDescription = await translateText(item.description?.ja || '', currentLang);
-    }
-    
     // 音声再生機能の有効/無効チェック
     const isTTSEnabled = localStorage.getItem('feature_tts') === '1' || 
                          (typeof window !== 'undefined' && window.speechSynthesis);
@@ -462,9 +453,9 @@ async function showOnomatopoeiaScene(scene) {
             ` : ''}
           </div>
         </div>
-        <div class="item-main">${translatedMain}</div>
+        <div class="item-main">${item.main}</div>
         <div class="item-romaji">${item.romaji}</div>
-        <div class="item-description">${translatedDescription}</div>
+        <div class="item-description">${item.description?.ja || ''}</div>
       </div>
     `;
   }

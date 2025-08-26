@@ -76,11 +76,11 @@ if (audioBtn) {
     }
   }
 
-  // 譌ｧ竊呈眠縺ｮ鬆・〒繝輔か繝ｼ繝ｫ繝舌ャ繧ｯ・域立verify.html莠呈鋤繝代せ繧貞━蜈茨ｼ・
+  // データファイルの候補を順番に試して、verify.htmlで動作確認できるようにする
   const candidates = [
+    '/data/dictionary.json',
     '/locales/onomatopoeia-premium-all-41-scenes.json',
     '/locales/onomatopoeia-all-scenes.json',
-    '/data/dictionary.json',
     '/data/dictionary-sample.json'
   ];
 
