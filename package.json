@@ -5,6 +5,7 @@
   "description": "Static site for arigato-app (premium onomatopoeia dictionary).",
   "license": "UNLICENSED",
   "scripts": {
+    "build": "echo 'Build completed'",
     "kill": "kill-port 3000 || true",
     "serve": "http-server public -p 3000 -c-1",
     "dev": "npm run kill && npm run serve",
