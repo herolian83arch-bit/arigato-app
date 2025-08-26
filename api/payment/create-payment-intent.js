@@ -5,29 +5,36 @@ module.exports = async (req, res) => {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  console.log('STRIPE_SECRET_KEY exists:', !!process.env.STRIPE_SECRET_KEY);
-  console.log('STRIPE_SECRET_KEY length:', process.env.STRIPE_SECRET_KEY ? process.env.STRIPE_SECRET_KEY.length : 0);
+  console.log('🔍 Starting Stripe Checkout session creation...');
+  console.log('📋 Environment variables check:');
+  console.log('- STRIPE_SECRET_KEY:', process.env.STRIPE_SECRET_KEY ? '✅ Set' : '❌ Not set');
+  console.log('- STRIPE_PRICE_ID:', process.env.STRIPE_PRICE_ID ? `✅ Set (${process.env.STRIPE_PRICE_ID})` : '❌ Not set');
+
+  if (!process.env.STRIPE_SECRET_KEY) throw new Error("STRIPE_SECRET_KEY is not configured");
+  if (!process.env.STRIPE_PRICE_ID) throw new Error("STRIPE_PRICE_ID is not configured");
 
   try {
-    const { amount, currency = 'usd', description } = req.body;
-
-    const paymentIntent = await stripe.paymentIntents.create({
-      amount,
-      currency,
-      description: description || 'Arigato App Premium',
-      metadata: {
-        integration_check: 'accept_a_payment',
-      },
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ["card"],
+      line_items: [
+        {
+          price: process.env.STRIPE_PRICE_ID,
+          quantity: 1,
+        },
+      ],
+      mode: "payment",
+      success_url: `${req.headers.origin}/?success=true`,
+      cancel_url: `${req.headers.origin}/?canceled=true`,
     });
 
-    res.status(200).json({
-      clientSecret: paymentIntent.client_secret,
-    });
-  } catch (error) {
-    console.error('Payment Intent creation error:', error);
+    console.log('✅ Stripe session created successfully:', session.id);
+    res.status(200).json({ url: session.url });
+  } catch (err) {
+    console.error('❌ Stripe session error:', err);
     res.status(500).json({
-      error: error.message,
-      details: 'Server-side payment processing error'
+      error: err.message,
+      details: err.stack,
+      timestamp: new Date().toISOString(),
     });
   }
 };

@@ -101,7 +101,7 @@ async function performHealthCheck() {
   try {
     console.log('🔍 Performing health check...');
     
-    const response = await fetch('/api/checkout');
+    const response = await fetch('/api/payment/create-payment-intent');
     const raw = await response.text();
     
     if (!response.ok) {
@@ -539,7 +539,7 @@ async function processPayment() {
     console.log('🔍 Starting Stripe Checkout process...');
     
     // Stripe Checkout セッションを作成
-    const response = await fetch('/api/checkout', {
+    const response = await fetch('/api/payment/create-payment-intent', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
