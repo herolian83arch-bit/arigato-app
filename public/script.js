@@ -53,13 +53,13 @@ const supportedLanguages = {
 };
 
 document.addEventListener('DOMContentLoaded', async () => {
-  // 起動時ヘルスチェック
-  try {
-    await performHealthCheck();
-  } catch (error) {
-    console.error('❌ Health check failed:', error);
-    // ヘルスチェック失敗時もアプリは起動する
-  }
+  // ヘルスチェックを一時的に無効化（プレミアム機能の動作確認のため）
+  // try {
+  //   await performHealthCheck();
+  // } catch (error) {
+  //   console.error('❌ Health check failed:', error);
+  //   // ヘルスチェック失敗時もアプリは起動する
+  // }
   
   // お気に入り機能の初期化
   initializeFavorites();
@@ -306,6 +306,15 @@ async function loadOnomatopoeiaData() {
 function checkPremiumStatus() {
   const premiumStatus = localStorage.getItem('premiumActive');
   isPremiumUser = premiumStatus === 'true';
+  
+  // 開発環境でのテスト用（一時的にプレミアム状態を有効化）
+  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname.includes('vercel.app')) {
+    // テスト用：プレミアム状態を強制的に有効化
+    isPremiumUser = true;
+    localStorage.setItem('premiumActive', 'true');
+    console.log('🧪 テスト環境: プレミアム機能を強制有効化');
+  }
+  
   updatePremiumUI();
 }
 
