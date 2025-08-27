@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Features | Arigato App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Premium Features</h1>
+      <div class="back-navigation">
+        <button class="back-btn" onclick="window.location.href='index.html'">← トップページに戻る</button>
+      </div>
+    </header>
+    
+    <main>
+      <div class="premium-features-grid">
+        <div class="feature-card" onclick="window.location.href='onomatopoeia-scenes.html'">
+          <div class="feature-icon">📚</div>
+          <div class="feature-title">オノマトペ辞典</div>
+          <div class="feature-description">41シーン・615例文の日本語擬音語・擬態語辞典</div>
+          <div class="feature-details">
+            <span class="feature-count">615例文</span>
+            <span class="feature-scenes">41シーン</span>
+          </div>
+        </div>
+        
+        <div class="feature-card coming-soon">
+          <div class="feature-icon">🎵</div>
+          <div class="feature-title">高品質音声</div>
+          <div class="feature-description">より自然で美しい日本語音声</div>
+          <div class="feature-status">Coming Soon</div>
+        </div>
+        
+        <div class="feature-card coming-soon">
+          <div class="feature-icon">🖼️</div>
+          <div class="feature-title">カスタム背景</div>
+          <div class="feature-description">お好みの背景で学習</div>
+          <div class="feature-status">Coming Soon</div>
+        </div>
+        
+        <div class="feature-card coming-soon">
+          <div class="feature-icon">📱</div>
+          <div class="feature-title">オフラインモード</div>
+          <div class="feature-description">インターネットなしでも学習</div>
+          <div class="feature-status">Coming Soon</div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script>
+    // プレミアム状態の確認
+    document.addEventListener('DOMContentLoaded', function() {
+      const isPremium = localStorage.getItem('premiumActive') === 'true';
+      if (!isPremium) {
+        // プレミアムユーザーでない場合はトップページにリダイレクト
+        window.location.href = 'index.html';
+      }
+    });
+  </script>
+</body>
+</html>

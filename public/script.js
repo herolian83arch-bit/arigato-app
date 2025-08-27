@@ -326,7 +326,7 @@ function updatePremiumUI() {
       premiumBtn.textContent = 'Premium Active';
       premiumBtn.style.backgroundColor = '#4CAF50';
       premiumBtn.disabled = false;
-      premiumBtn.onclick = showOnomatopoeiaModal; // オノマトペ辞典を表示
+      premiumBtn.onclick = () => window.location.href = 'premium-features.html'; // プレミアム機能選択画面に遷移
     } else {
       premiumBtn.textContent = 'Upgrade to Premium';
       premiumBtn.style.backgroundColor = '#FF9800';

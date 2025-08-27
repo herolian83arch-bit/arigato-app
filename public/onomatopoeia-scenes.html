@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>オノマトペ辞典 - シーン選択 | Arigato App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>オノマトペ辞典</h1>
+      <div class="back-navigation">
+        <button class="back-btn" onclick="window.location.href='premium-features.html'">← プレミアム機能に戻る</button>
+      </div>
+    </header>
+    
+    <main>
+      <div class="scenes-intro">
+        <p>学習したいシーンを選択してください</p>
+      </div>
+      
+      <div id="scenes-grid" class="scene-grid">
+        <!-- シーンはJavaScriptで動的に生成 -->
+      </div>
+    </main>
+  </div>
+  
+  <script>
+    let onomatopoeiaData = [];
+    
+    // プレミアム状態の確認
+    document.addEventListener('DOMContentLoaded', async function() {
+      const isPremium = localStorage.getItem('premiumActive') === 'true';
+      if (!isPremium) {
+        // プレミアムユーザーでない場合はトップページにリダイレクト
+        window.location.href = 'index.html';
+        return;
+      }
+      
+      // オノマトペデータを読み込み
+      await loadOnomatopoeiaData();
+      // シーン一覧を表示
+      displayScenes();
+    });
+    
+    // オノマトペデータを読み込み
+    async function loadOnomatopoeiaData() {
+      try {
+        const response = await fetch('/data/dictionary.json');
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const rawData = await response.json();
+        
+        // romajiを大文字に変換
+        onomatopoeiaData = rawData.map(item => ({
+          ...item,
+          romaji: item.romaji ? item.romaji.toUpperCase() : item.romaji
+        }));
+        
+        console.log(`📚 Loaded ${onomatopoeiaData.length} onomatopoeia entries`);
+      } catch (error) {
+        console.error('オノマトペデータの読み込みに失敗:', error);
+        onomatopoeiaData = [];
+      }
+    }
+    
+    // シーン一覧を表示
+    function displayScenes() {
+      const scenesContainer = document.getElementById('scenes-grid');
+      
+      // シーンをグループ化
+      const sceneGroups = {};
+      onomatopoeiaData.forEach(item => {
+        if (!sceneGroups[item.scene]) {
+          sceneGroups[item.scene] = [];
+        }
+        sceneGroups[item.scene].push(item);
+      });
+      
+      let html = '';
+      Object.keys(sceneGroups).forEach(scene => {
+        const count = sceneGroups[scene].length;
+        html += `
+          <div class="scene-card" onclick="selectScene('${scene}')">
+            <div class="scene-icon">📚</div>
+            <div class="scene-title">${scene}</div>
+            <div class="scene-count">${count}例文</div>
+          </div>
+        `;
+      });
+      
+      scenesContainer.innerHTML = html;
+    }
+    
+    // シーンを選択
+    function selectScene(scene) {
+      // URLパラメータでシーン名を渡す
+      const encodedScene = encodeURIComponent(scene);
+      window.location.href = `onomatopoeia-examples.html?scene=${encodedScene}`;
+    }
+  </script>
+</body>
+</html>
