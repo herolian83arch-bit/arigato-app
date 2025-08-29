@@ -11,7 +11,9 @@
     "dev": "npm run kill && npm run serve",
     "verify-app": "start-server-and-test serve http://127.0.0.1:3000 \"node scripts/verify-app.mjs\"",
     "lint:json": "node -e \"JSON.parse(require('fs').readFileSync('public/data/dictionary.json','utf8')); console.log('dictionary.json: OK')\"",
-    "format": "prettier -w \"public/**/*.{html,css,js,json}\""
+    "format": "prettier -w \"public/**/*.{html,css,js,json}\"",
+    "build-locales": "node scripts/build-locales.js",
+    "build-unified-locales": "node scripts/build-unified-locales.js"
   },
   "devDependencies": {
     "http-server": "^14.1.1",
@@ -20,6 +22,7 @@
     "start-server-and-test": "^2.0.3"
   },
   "dependencies": {
-    "stripe": "^18.4.0"
+    "stripe": "^18.4.0",
+    "wanakana": "^5.3.1"
   }
 }

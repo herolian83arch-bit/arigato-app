@@ -22,7 +22,7 @@ function initializeGlobalControlGuards() {
       if (ev.preventDefault) ev.preventDefault();
       if (ev.stopImmediatePropagation) ev.stopImmediatePropagation();
       if (ev.stopPropagation) ev.stopPropagation();
-      
+
       // デバッグ用（必要に応じて削除）
       console.log('Global guard: blocked event from control element', ev.type, ev.target);
       return;
@@ -34,7 +34,7 @@ function initializeGlobalControlGuards() {
   document.addEventListener('click', guard, true);
   document.addEventListener('mousedown', guard, true); // 一部UIライブラリ対策
   document.addEventListener('touchstart', guard, true); // モバイル対応
-  
+
   console.log('Global control guards attached');
 }
 
@@ -60,21 +60,21 @@ document.addEventListener('DOMContentLoaded', async () => {
   //   console.error('❌ Health check failed:', error);
   //   // ヘルスチェック失敗時もアプリは起動する
   // }
-  
+
   // お気に入り機能の初期化
   initializeFavorites();
-  
+
   // グローバルコントロールガードを一時的に無効化（機能回復のため）
   // initializeGlobalControlGuards();
-  
+
   loadLanguage(currentLang);
   checkPremiumStatus(); // プレミアム状態をチェック
   loadOnomatopoeiaData(); // オノマトペデータを読み込み
   updateTTSToggleButton(); // TTSボタンの状態を更新
-  
+
   // Stripe Checkout の結果をチェック
   checkStripeCheckoutResult();
-  
+
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.onclick = () => {
       currentLang = btn.dataset.lang;
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       speedValue.textContent = `${speechSpeed.toFixed(2)}x`;
     });
   }
-  
+
   // プレミアムモーダルのイベントリスナーを設定
   initializePremiumModal();
 });
@@ -100,14 +100,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 async function performHealthCheck() {
   try {
     console.log('🔍 Performing health check...');
-    
+
     const response = await fetch('/api/payment/create-payment-intent');
     const raw = await response.text();
-    
+
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}: ${response.statusText}`);
     }
-    
+
     if (raw) {
       try {
         const data = JSON.parse(raw);
@@ -125,16 +125,16 @@ async function performHealthCheck() {
     }
   } catch (error) {
     console.error('❌ Health check failed:', error);
-    
+
     // ユーザーに警告を表示
     const warningMessage = `API Health Check Failed: ${error.message}\n\nThis may affect premium features. Please check the server status.`;
     console.warn(warningMessage);
-    
+
     // 開発環境ではアラートを表示
     if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
       alert(`⚠️ API Health Check Failed\n\n${error.message}\n\nPlease restart the server or check the configuration.`);
     }
-    
+
     throw error;
   }
 }
@@ -155,7 +155,7 @@ function initializeFavorites() {
       try {
         const parsed = JSON.parse(oldFavorites);
         const newFavorites = {};
-        
+
         // 古いキー形式（lang-scene-number）から新しいID形式に変換
         Object.entries(parsed).forEach(([key, value]) => {
           if (value === true) {
@@ -165,12 +165,12 @@ function initializeFavorites() {
             }
           }
         });
-        
+
         // 新しいスキーマで保存
         if (Object.keys(newFavorites).length > 0) {
           localStorage.setItem('arigato_favorites_v1', JSON.stringify(newFavorites));
         }
-        
+
         // 古いデータを削除
         localStorage.removeItem('favorites');
         console.log('Migrated old favorites data to new schema');
@@ -183,78 +183,71 @@ function initializeFavorites() {
   }
 }
 
-// 動的翻訳機能
-async function translateText(text, targetLang) {
-  try {
-    const response = await fetch(`/api/translate`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        text: text,
-        target: targetLang
-      })
-    });
-    
-    if (!response.ok) {
-      throw new Error('Translation failed');
-    }
-    
-    const data = await response.json();
-    return data.translatedText;
-  } catch (error) {
-    console.error('Translation error:', error);
-    return text; // 翻訳に失敗した場合は元のテキストを返す
-  }
-}
+// 動的翻訳機能は事前生成方式に移行済み
 
-// 言語データを読み込み（動的翻訳対応）
+// 言語データを読み込み（事前生成翻訳ファイル対応）
 async function loadLanguage(lang) {
   try {
-    // 基本言語（en, ja, zh, ko）は静的JSONから読み込み
-    if (['en', 'ja', 'zh', 'ko'].includes(lang)) {
-      const response = await fetch(`locales/${lang}.json`);
-      languageData = await response.json();
-    } else {
-      // その他の言語は動的翻訳を使用
-      const baseResponse = await fetch('locales/en.json');
-      const baseData = await baseResponse.json();
-      
-      // 動的翻訳で言語データを生成
-      languageData = await translateLanguageData(baseData, lang);
+    console.log(`🌐 言語切替開始: ${lang}`);
+
+    // 事前生成された翻訳ファイルから読み込み
+    const response = await fetch(`locales/${lang}.json`);
+    if (!response.ok) {
+      throw new Error(`翻訳ファイルの読み込みに失敗: ${response.status}`);
     }
-    
+
+    languageData = await response.json();
+    currentLang = lang;
+
+    // UI即座更新（スケルトンUIなし）
     renderSceneSwitcher();
     renderScene();
+
+    console.log(`✅ 言語切替完了: ${lang}`);
+
+    // バックグラウンドで前後2言語をプリフェッチ
+    preloadAdjacentLanguages(lang);
+
   } catch (error) {
     console.error('Language loading error:', error);
+    // エラー時は英語にフォールバック
+    if (lang !== 'en') {
+      console.log('🔄 英語にフォールバック中...');
+      await loadLanguage('en');
+    }
   }
 }
 
-// 言語データ全体を翻訳
-async function translateLanguageData(baseData, targetLang) {
-  const translatedData = {
-    scenes: {}
-  };
-  
-  for (const [sceneKey, sceneData] of Object.entries(baseData.scenes)) {
-    translatedData.scenes[sceneKey] = {
-      title: await translateText(sceneData.title, targetLang),
-      messages: []
-    };
-    
-    for (const message of sceneData.messages) {
-      const translatedMessage = {
-        ...message,
-        text: await translateText(message.text, targetLang),
-        note: await translateText(message.note, targetLang)
-      };
-      translatedData.scenes[sceneKey].messages.push(translatedMessage);
+// 前後2言語をプリフェッチ（パフォーマンス向上）
+async function preloadAdjacentLanguages(currentLang) {
+  const supportedLanguages = ['en', 'ja', 'zh', 'ko', 'pt', 'es', 'fr', 'de', 'it', 'ru'];
+  const currentIndex = supportedLanguages.indexOf(currentLang);
+
+  if (currentIndex === -1) return;
+
+  const adjacentLangs = [];
+
+  // 前の言語
+  if (currentIndex > 0) {
+    adjacentLangs.push(supportedLanguages[currentIndex - 1]);
+  }
+
+  // 次の言語
+  if (currentIndex < supportedLanguages.length - 1) {
+    adjacentLangs.push(supportedLanguages[currentIndex + 1]);
+  }
+
+  // バックグラウンドでプリフェッチ
+  for (const lang of adjacentLangs) {
+    try {
+      const response = await fetch(`locales/${lang}.json`);
+      if (response.ok) {
+        console.log(`🔄 プリフェッチ完了: ${lang}`);
+      }
+    } catch (error) {
+      console.log(`⚠️ プリフェッチ失敗: ${lang}`, error);
     }
   }
-  
-  return translatedData;
 }
 
 // 辞書データを読み込む関数
@@ -274,7 +267,7 @@ async function loadDictionary() {
       }
     } catch {}
   }
-  
+
   return [];
 }
 
@@ -286,15 +279,15 @@ async function loadOnomatopoeiaData() {
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}: ${response.statusText}`);
     }
-    
+
     const rawData = await response.json();
-    
+
     // romajiを大文字に変換
     onomatopoeiaData = rawData.map(item => ({
       ...item,
       romaji: item.romaji ? item.romaji.toUpperCase() : item.romaji
     }));
-    
+
     console.log(`📚 Loaded ${onomatopoeiaData.length} onomatopoeia entries`);
   } catch (error) {
     console.error('オノマトペデータの読み込みに失敗:', error);
@@ -306,7 +299,7 @@ async function loadOnomatopoeiaData() {
 function checkPremiumStatus() {
   const premiumStatus = localStorage.getItem('premiumActive');
   isPremiumUser = premiumStatus === 'true';
-  
+
   // 開発環境でのテスト用（一時的にプレミアム状態を有効化）
   if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname.includes('vercel.app')) {
     // テスト用：プレミアム状態を強制的に有効化
@@ -314,7 +307,7 @@ function checkPremiumStatus() {
     localStorage.setItem('premiumActive', 'true');
     console.log('🧪 テスト環境: プレミアム機能を強制有効化');
   }
-  
+
   updatePremiumUI();
 }
 
@@ -352,11 +345,11 @@ function closePremiumModal() {
 function initializePremiumModal() {
   const modal = document.getElementById('premium-modal');
   const closeBtn = document.getElementById('premium-close');
-  
+
   if (closeBtn) {
     closeBtn.addEventListener('click', closePremiumModal);
   }
-  
+
   // 背景クリックでモーダルを閉じる
   if (modal) {
     modal.addEventListener('click', (e) => {
@@ -365,7 +358,7 @@ function initializePremiumModal() {
       }
     });
   }
-  
+
   // Escキーでモーダルを閉じる
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal && modal.style.display !== 'none') {
@@ -380,7 +373,7 @@ function showOnomatopoeiaModal() {
     alert('この機能はプレミアム専用です。プレミアムにアップグレードしてください。');
     return;
   }
-  
+
   const modal = document.getElementById('onomatopoeia-modal');
   modal.style.display = 'block';
   showOnomatopoeiaScenes();
@@ -396,10 +389,10 @@ function closeOnomatopoeiaModal() {
 function showOnomatopoeiaScenes() {
   const scenesContainer = document.getElementById('onomatopoeia-scenes');
   const contentContainer = document.getElementById('onomatopoeia-content');
-  
+
   scenesContainer.style.display = 'block';
   contentContainer.style.display = 'none';
-  
+
   // シーンをグループ化
   const sceneGroups = {};
   onomatopoeiaData.forEach(item => {
@@ -408,7 +401,7 @@ function showOnomatopoeiaScenes() {
     }
     sceneGroups[item.scene].push(item);
   });
-  
+
   let html = '<div class="scene-grid">';
   Object.keys(sceneGroups).forEach(scene => {
     const count = sceneGroups[scene].length;
@@ -421,7 +414,7 @@ function showOnomatopoeiaScenes() {
     `;
   });
   html += '</div>';
-  
+
   scenesContainer.innerHTML = html;
 }
 
@@ -430,21 +423,21 @@ async function showOnomatopoeiaScene(scene) {
   const scenesContainer = document.getElementById('onomatopoeia-scenes');
   const contentContainer = document.getElementById('onomatopoeia-content');
   const examplesContainer = document.getElementById('onomatopoeia-examples');
-  
+
   scenesContainer.style.display = 'none';
   contentContainer.style.display = 'block';
-  
-  const sceneItems = onomatopoeiaData.filter(item => item.scene === scene);
-  
 
-  
+  const sceneItems = onomatopoeiaData.filter(item => item.scene === scene);
+
+
+
   let html = `<h3>${scene}</h3>`;
-  
+
   for (const item of sceneItems) {
     // 音声再生機能の有効/無効チェック
-    const isTTSEnabled = localStorage.getItem('feature_tts') === '1' || 
+    const isTTSEnabled = localStorage.getItem('feature_tts') === '1' ||
                          (typeof window !== 'undefined' && window.speechSynthesis);
-    
+
     html += `
       <div class="onomatopoeia-item" data-testid="dict-row" onclick="handleOnomatopoeiaItemClick(event, ${item.id})">
         <div class="item-header">
@@ -468,7 +461,7 @@ async function showOnomatopoeiaScene(scene) {
       </div>
     `;
   }
-  
+
   examplesContainer.innerHTML = html;
 }
 
@@ -476,7 +469,7 @@ async function showOnomatopoeiaScene(scene) {
 function showPaymentModal() {
   const modal = document.getElementById('payment-modal');
   modal.style.display = 'block';
-  
+
   // Stripe Elementsを初期化（重複作成を防ぐ）
   if (!stripe) {
     // 環境変数から取得するか、デフォルト値を使用
@@ -515,10 +508,10 @@ function showPaymentModal() {
     },
     hidePostalCode: true, // 郵便番号フィールドを隠す
   });
-  
+
   // カード要素をマウント
   card.mount('#card-element');
-  
+
   // 現在のカード要素を保存（後で削除用）
   window.currentCardElement = card;
 }
@@ -534,10 +527,10 @@ async function processPayment() {
   const payButton = document.getElementById('pay-button');
   payButton.disabled = true;
   payButton.textContent = 'Processing...';
-  
+
   try {
     console.log('🔍 Starting Stripe Checkout process...');
-    
+
     // Stripe Checkout セッションを作成
     const response = await fetch('/api/payment/create-payment-intent', {
       method: 'POST',
@@ -552,7 +545,7 @@ async function processPayment() {
     }
 
     const session = await response.json();
-    
+
     if (session.url) {
       // Stripe Checkout ページにリダイレクト
       window.location.href = session.url;
@@ -562,10 +555,10 @@ async function processPayment() {
 
   } catch (error) {
     console.error('❌ Stripe Checkout error:', error);
-    
+
     // より詳細なエラー情報を表示（文字化け防止）
     let errorMessage = 'Payment error occurred.';
-    
+
     if (error.message.includes('HTTP 500')) {
       errorMessage = 'Server error: Please try again later or contact support.';
     } else if (error.message.includes('HTTP 404')) {
@@ -575,7 +568,7 @@ async function processPayment() {
     } else {
       errorMessage = `Payment error: ${error.message}`;
     }
-    
+
     alert(`❌ ${errorMessage}`);
   } finally {
     payButton.disabled = false;
@@ -655,15 +648,15 @@ function isFavorite(id) {
 // お気に入りの切り替え（ID基準）
 function toggleFavorite(id) {
   if (!id) return false;
-  
+
   const favorites = getFavorites();
   const stringId = String(id);
   const currentState = favorites[stringId] || false;
   const newState = !currentState;
-  
+
   favorites[stringId] = newState;
   setFavorites(favorites);
-  
+
   return newState;
 }
 
@@ -673,11 +666,11 @@ window.handleOnomatopoeiaItemClick = function(event, itemId) {
   if (event.target && event.target.closest('[data-card-control="true"]')) {
     event.preventDefault();
     event.stopPropagation();
-    
+
     // お気に入りボタンの場合はトグル処理
     if (event.target.classList.contains('favorite-toggle-btn')) {
       const newState = toggleFavorite(itemId);
-      
+
       // UI更新
       if (newState) {
         event.target.innerHTML = '★';
@@ -695,7 +688,7 @@ window.handleOnomatopoeiaItemClick = function(event, itemId) {
     }
     return;
   }
-  
+
   // ここに既存のカードクリック処理（詳細表示や遷移など）を追加可能
   console.log('オノマトペアイテムがクリックされました:', itemId);
 };
@@ -710,12 +703,12 @@ function renderScene() {
   document.getElementById('scene-title').textContent = scene ? currentScene : '';
   const messagesDiv = document.getElementById('messages');
   messagesDiv.innerHTML = '';
-  
+
   if (scene) {
     scene.messages.forEach((msg, idx) => {
       const card = document.createElement('div');
       card.className = 'message-card';
-      
+
       // カードクリックのガード機能を追加
       card.addEventListener('click', function(e) {
         // コントロール要素からのクリックは無視
@@ -724,14 +717,14 @@ function renderScene() {
           e.stopPropagation();
           return;
         }
-        
+
         // ここに既存のカードクリック処理（詳細表示や遷移など）を追加可能
         console.log('カード本体がクリックされました:', messageId);
       });
-      
+
       // メッセージのIDを取得（numberまたはインデックス）
       const messageId = msg.number || (idx + 1);
-      
+
       // カードのHTMLを構築（お気に入りボタンは後で動的に追加）
       card.innerHTML = `
         <div class="message-header">
@@ -746,9 +739,9 @@ function renderScene() {
         </div>
         <div class="note-text" style="font-size:0.95em;color:#666;margin-top:2px;">${msg.note || ''}</div>
       `;
-      
+
       messagesDiv.appendChild(card);
-      
+
       // お気に入りボタンを動的に追加（機能フラグが有効な場合のみ）
       if (window.FEATURE_FAVORITES) {
         const actionsContainer = card.querySelector('.message-actions');
@@ -762,7 +755,7 @@ function renderScene() {
           favoriteBtn.setAttribute('aria-label', 'お気に入りに追加');
           favoriteBtn.setAttribute('aria-pressed', 'false');
           favoriteBtn.setAttribute('data-card-control', 'true');
-          
+
           // スタイル設定
           favoriteBtn.style.cssText = `
             background: none;
@@ -781,10 +774,10 @@ function renderScene() {
             transition: all 0.2s ease;
             border-radius: 4px;
           `;
-          
+
           // 初期アイコン（☆）
           favoriteBtn.innerHTML = '☆';
-          
+
           // お気に入り状態の確認と設定
           const isFav = isFavorite(messageId);
           if (isFav) {
@@ -794,7 +787,7 @@ function renderScene() {
             favoriteBtn.setAttribute('aria-label', 'お気に入りから削除');
             favoriteBtn.setAttribute('aria-pressed', 'true');
           }
-          
+
           // スタイル設定の強化
           favoriteBtn.style.cssText = `
             background: none;
@@ -816,13 +809,13 @@ function renderScene() {
             z-index: 10;
             pointer-events: auto;
           `;
-          
+
           // 最小実装：必要最小限のガードのみ
           favoriteBtn.addEventListener('click', (e) => {
             e.stopPropagation(); // 親への伝播のみ防止
-            
+
             const newState = toggleFavorite(messageId);
-            
+
             // UI更新
             if (newState) {
               favoriteBtn.innerHTML = '★';
@@ -847,7 +840,7 @@ function renderScene() {
               favoriteBtn.click();
             }
           });
-          
+
           // ホバー効果
           favoriteBtn.addEventListener('mouseenter', () => {
             if (!isFavorite(messageId)) {
@@ -855,14 +848,14 @@ function renderScene() {
               favoriteBtn.style.transform = 'scale(1.1)';
             }
           });
-          
+
           favoriteBtn.addEventListener('mouseleave', () => {
             if (!isFavorite(messageId)) {
               favoriteBtn.style.color = '#bbb';
               favoriteBtn.style.transform = 'scale(1)';
             }
           });
-          
+
           actionsContainer.appendChild(favoriteBtn);
         }
       }
@@ -876,7 +869,7 @@ function enablePremiumFeatures() {
     showPremiumPrompt();
     return;
   }
-  
+
   // プレミアム機能を有効化
   enableAdvancedAudio();
   enableDictionaryFeature();
@@ -922,7 +915,7 @@ window.playJapaneseSpeech = function(japaneseText) {
   let correctedText = japaneseText;
   // 「音」が単体で現れる場合（前後に漢字がない場合）を訓読みに
   correctedText = correctedText.replace(/(?<![一-龯])音(?![一-龯])/g, 'おと');
-  
+
   if (isPremiumUser) {
     // プレミアム音声機能
     const utter = new SpeechSynthesisUtterance(correctedText);
@@ -952,9 +945,9 @@ function toggleTTS() {
   const currentState = localStorage.getItem('feature_tts');
   const newState = currentState === '1' ? '0' : '1';
   localStorage.setItem('feature_tts', newState);
-  
+
   updateTTSToggleButton();
-  
+
   // オノマトペモーダルが開いている場合は再描画
   if (document.getElementById('onomatopoeia-modal').style.display !== 'none') {
     const currentScene = document.querySelector('#onomatopoeia-content h3')?.textContent;
@@ -978,15 +971,15 @@ function updateTTSToggleButton() {
 function playAudioWithFallback(audioPath, text, language = 'ja-JP') {
   // 既存の音声を停止
   stopCurrentAudio();
-  
+
   if (audioPath) {
     // MP3ファイルが指定されている場合
     console.log(`🎵 MP3ファイルを再生: ${audioPath}`);
-    
+
     try {
       // 音声オブジェクトを作成
       const audio = new Audio(audioPath);
-      
+
       // エラーハンドリング
       audio.onerror = function() {
         console.error(`❌ MP3ファイルの再生に失敗: ${audioPath}`);
@@ -996,21 +989,21 @@ function playAudioWithFallback(audioPath, text, language = 'ja-JP') {
           playTextWithTTS(text, language);
         }
       };
-      
+
       // 再生成功時のログ
       audio.oncanplay = function() {
         console.log(`✅ MP3ファイルの再生開始: ${audioPath}`);
       };
-      
+
       // 再生完了時の処理
       audio.onended = function() {
         console.log(`✅ MP3ファイルの再生完了: ${audioPath}`);
         currentAudio = null;
       };
-      
+
       // 現在の音声として設定
       currentAudio = audio;
-      
+
       // 音声を再生
       audio.play().catch(error => {
         console.error(`❌ 音声再生エラー: ${error.message}`);
@@ -1020,7 +1013,7 @@ function playAudioWithFallback(audioPath, text, language = 'ja-JP') {
           playTextWithTTS(text, language);
         }
       });
-      
+
     } catch (error) {
       console.error(`❌ MP3ファイル処理エラー: ${error.message}`);
       // エラー時もWeb Speech APIでフォールバック
@@ -1028,12 +1021,12 @@ function playAudioWithFallback(audioPath, text, language = 'ja-JP') {
         playTextWithTTS(text, language);
       }
     }
-    
+
   } else if (text) {
     // MP3ファイルが指定されていない場合、Web Speech APIで読み上げ
     console.log(`🗣️ Web Speech APIで読み上げ: ${text}`);
     playTextWithTTS(text, language);
-    
+
   } else {
     console.warn("⚠️ 音声再生に必要な属性が不足しています。audioPath または text を指定してください。");
   }
@@ -1052,7 +1045,7 @@ function stopCurrentAudio() {
       currentAudio = null;
     }
   }
-  
+
   // Web Speech APIも停止
   if (window.speechSynthesis) {
     speechSynthesis.cancel();
@@ -1067,37 +1060,37 @@ function playTextWithTTS(text, language = "ja-JP") {
       console.error("❌ このブラウザはWeb Speech APIをサポートしていません");
       return;
     }
-    
+
     // 既存の音声を停止
     speechSynthesis.cancel();
-    
+
     // 新しい音声合成オブジェクトを作成
     const utterance = new SpeechSynthesisUtterance(text);
-    
+
     // 言語設定
     utterance.lang = language;
-    
+
     // 音声設定（既存の設定を流用）
     utterance.rate = speechSpeed || 1.0;
     utterance.pitch = 1.0;
     utterance.volume = 0.9;
-    
+
     // エラーハンドリング
     utterance.onerror = function(event) {
       console.error("❌ 音声合成エラー:", event.error);
     };
-    
+
     utterance.onstart = function() {
       console.log(`🗣️ 音声合成開始: ${text}`);
     };
-    
+
     utterance.onend = function() {
       console.log(`✅ 音声合成完了: ${text}`);
     };
-    
+
     // 音声合成を開始
     speechSynthesis.speak(utterance);
-    
+
   } catch (error) {
     console.error("❌ Web Speech API エラー:", error);
   }
@@ -1110,14 +1103,14 @@ function checkAudioCapabilities() {
     tts: !!window.speechSynthesis, // Web Speech APIのサポート状況
     languages: []
   };
-  
+
   // 利用可能な言語を取得
   if (window.speechSynthesis) {
     capabilities.languages = speechSynthesis.getVoices()
       .filter(voice => voice.lang.startsWith('ja'))
       .map(voice => voice.lang);
   }
-  
+
   console.log("🔊 音声機能の対応状況:", capabilities);
   return capabilities;
 }

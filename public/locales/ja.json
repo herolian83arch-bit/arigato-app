@@ -8,7 +8,8 @@
               "text": "心が<b>じんわり</b>しました。",
               "note": "（「日本へようこそ」と言われて、本当に歓迎されていると感じました）",
               "ja": "心がじんわりしました。",
-              "isFavorite": false
+              "isFavorite": false,
+              "audioText": "心がじんわりしました。"
             },
             {
               "number": "2",
@@ -16,7 +17,8 @@
               "text": "心が<b>ほっと</b>しました。",
               "note": "（小さな親切が、安心と気遣いを感じさせてくれました）",
               "ja": "心がほっとしました。",
-              "isFavorite": false
+              "isFavorite": false,
+              "audioText": "心がほっとしました。"
             },
             {
               "number": "3",
@@ -24,7 +26,8 @@
               "text": "心が<b>キュンと</b>しました。",
               "note": "（こんな気遣いは期待していなかったので、本当に良い意味で感動しました）",
               "ja": "心がキュンとしました。",
-              "isFavorite": false
+              "isFavorite": false,
+              "audioText": "心がキュンとしました。"
             },
             {
               "number": "4",
@@ -32,7 +35,8 @@
               "text": "心が癒されました。",
               "note": "（長旅の疲れが一気に取れた気がしました）",
               "ja": "心が癒されました。",
-              "isFavorite": false
+              "isFavorite": false,
+              "audioText": "心が癒されました。"
             },
             {
               "number": "5",
@@ -40,7 +44,8 @@
               "text": "心から感謝しました。",
               "note": "（親切な対応に心から感謝しました）",
               "ja": "心から感謝しました。",
-              "isFavorite": false
+              "isFavorite": false,
+              "audioText": "心から感謝しました。"
             },
             {
               "number": "6",
@@ -48,7 +53,8 @@
               "text": "心が<b>じわ～んと</b>しました。",
               "note": "（温かい言葉に胸が熱くなりました）",
               "ja": "心がじわ～んとしました。",
-              "isFavorite": false
+              "isFavorite": false,
+              "audioText": "心がじわ～んとしました。"
             },
             {
               "number": "7",
@@ -56,7 +62,8 @@
               "text": "心が<b>うるうる</b>しました。",
               "note": "（感動して涙が出そうになりました）",
               "ja": "心がうるうるしました。",
-              "isFavorite": false
+              "isFavorite": false,
+              "audioText": "心がうるうるしました。"
             },
             {
               "number": "8",
@@ -64,7 +71,8 @@
               "text": "心が<b>ふわっと</b>和みました。",
               "note": "（優しい雰囲気に癒されました）",
               "ja": "心がふわっと和みました。",
-              "isFavorite": false
+              "isFavorite": false,
+              "audioText": "心がふわっと和みました。"
             },
             {
               "number": "9",
@@ -72,7 +80,8 @@
               "text": "心が<b>ワクワク</b>しました。",
               "note": "（新しい体験に胸が高鳴りました）",
               "ja": "心がワクワクしました。",
-              "isFavorite": false
+              "isFavorite": false,
+              "audioText": "心がワクワクしました。"
             },
             {
               "number": "10",
@@ -80,7 +89,8 @@
               "text": "心が温かくなりました。",
               "note": "（人の優しさに触れて心が温まりました）",
               "ja": "心が温かくなりました。",
-              "isFavorite": false
+              "isFavorite": false,
+              "audioText": "心が温かくなりました。"
             },
             {
               "number": "11",
@@ -88,7 +98,8 @@
               "text": "心が<b>ぽかぽか</b>しました。",
               "note": "（ほっとする瞬間でした）",
               "ja": "心がぽかぽかしました。",
-              "isFavorite": false
+              "isFavorite": false,
+              "audioText": "心がぽかぽかしました。"
             },
             {
               "number": "12",
@@ -96,7 +107,8 @@
               "text": "心が<b>じーんと</b>しました。",
               "note": "（感動で胸がいっぱいになりました）",
               "ja": "心がじーんとしました。",
-              "isFavorite": false
+              "isFavorite": false,
+              "audioText": "心がじーんとしました。"
             },
             {
               "number": "13",
@@ -104,7 +116,8 @@
               "text": "心が<b>ほっと</b>しました。",
               "note": "（安心感に包まれました）",
               "ja": "心がほっとしました。",
-              "isFavorite": false
+              "isFavorite": false,
+              "audioText": "心がほっとしました。"
             },
             {
               "number": "14",
@@ -112,7 +125,8 @@
               "text": "心が弾みました。",
               "note": "（期待で胸が弾みました）",
               "ja": "心が弾みました。",
-              "isFavorite": false
+              "isFavorite": false,
+              "audioText": "心が弾みました。"
             },
             {
               "number": "15",
@@ -120,7 +134,8 @@
               "text": "心がほどけました。",
               "note": "（緊張がほぐれました）",
               "ja": "心がほどけました。",
-              "isFavorite": false
+              "isFavorite": false,
+              "audioText": "心がほどけました。"
             },
             {
               "number": "16",
@@ -128,32 +143,33 @@
               "text": "心が<b>ときめき</b>ました。",
               "note": "（新しい出会いに心がときめきました）",
               "ja": "心がときめきました。",
-              "isFavorite": false
+              "isFavorite": false,
+              "audioText": "心がときめきました。"
             }
-          ] 
+          ]
       },
       "hotel": {
         "messages": [
-          { "number": "1", "romaji": "Wakuwaku shinagara chekkuin wo mukaemashita", "text": "《ワクワク》しながらチェックインを迎えました", "note": "（丁寧なご案内に、旅の始まりの期待がさらにふくらみました）", "ja": "《ワクワク》しながらチェックインを迎えました" },
-          { "number": "2", "romaji": "Arigatou gozaimasu. Hokkori shimashita", "text": "ありがとうございます。《ほっこり》しました。", "note": "（チェックイン時、笑顔で出迎えてくれたフロントスタッフに）", "ja": "ありがとうございます。《ほっこり》しました。" },
-          { "number": "3", "romaji": "Oheya no kaori ga kimochi ii desu ne. Arigatou gozaimasu", "text": "お部屋の香りが気持ちいいですね。ありがとうございます", "note": "（お部屋の香りが気に入ったとき）", "ja": "お部屋の香りが気持ちいいですね。ありがとうございます" },
-          { "number": "4", "romaji": "Oheya no seiketsukan ni, kokoro ga haremashita", "text": "お部屋の清潔感に、心が晴れました", "note": "（清掃の方の丁寧なお仕事に気づき、温かさを感じました）", "ja": "お部屋の清潔感に、心が晴れました" },
-          { "number": "5", "romaji": "Arigatou gozaimasu. Pikapika ni shite kudasatte kangeki desu", "text": "ありがとうございます。《ピカピカ》にしてくださって感激です。", "note": "（お部屋の清掃が完璧で、まるで新しいお部屋のように感じたとき）", "ja": "ありがとうございます。《ピカピカ》にしてくださって感激です。" },
-          { "number": "6", "romaji": "Arigatou gozaimasu. Komaka na kikubari ga ureshikatta desu", "text": "ありがとうございます。細かな気配りが嬉しかったです。", "note": "（部屋に置かれたメモ、加湿器、絵葉書など細かな心配りに）", "ja": "ありがとうございます。細かな気配りが嬉しかったです。" },
-          { "number": "7", "romaji": "Nagame ni uttori shimashita", "text": "眺めに《うっとり》しました", "note": "（窓を開けた瞬間、まるで絵画の中に入り込んだようでした）", "ja": "眺めに《うっとり》しました" },
-          { "number": "8", "romaji": "Egao ni hokkori shimashita", "text": "笑顔に《ほっこり》しました。", "note": "（言葉よりも伝わるやさしさが、胸にしみました）", "ja": "笑顔に《ほっこり》しました。" },
-          { "number": "9", "romaji": "O kokoro kubari, hontou ni arigatou gozaimasu", "text": "お心配り、本当にありがとうございます。", "note": "（こちらの気持ちを先回りしたご案内がとてもありがたかったです）", "ja": "お心配り、本当にありがとうございます。" },
-          { "number": "10", "romaji": "Arigatou gozaimasu. Uruuru kichaimashita", "text": "ありがとうございます。《うるうる》きちゃいました。", "note": "（コンシェルジュが旅の記念にメッセージカードを添えてくれたとき）", "ja": "ありがとうございます。《うるうる》きちゃいました。" },
-          { "number": "11", "romaji": "Kokoro made pokapoka ni narimashita. Arigatou gozaimasu", "text": "心まで《ぽかぽか》になりました。ありがとうございます", "note": "（素晴らしいお風呂に対する感想）", "ja": "心まで《ぽかぽか》になりました。ありがとうございます" },
-          { "number": "12", "romaji": "Arigatou gozaimasu. Torotoro ni tokesou desu", "text": "ありがとうございます。《とろとろ》にとけそうです。", "note": "（温泉で体の芯まで温まり、癒やされた瞬間に）", "ja": "ありがとうございます。《とろとろ》にとけそうです。" },
-          { "number": "13", "romaji": "Oryouri no hitosara hitosara ni wakuwaku ga tsumatte imashita", "text": "お料理のひと皿ひと皿に《ワクワク》が詰まっていました", "note": "（見た目も味も、まるで物語をいただくようでした）", "ja": "お料理のひと皿ひと皿に《ワクワク》が詰まっていました" },
-          { "number": "14", "romaji": "Arigatou gozaimasu. Dokidoki ga tomarimasen", "text": "ありがとうございます。《ドキドキ》が止まりません。", "note": "（運ばれてくる料理とお品書きに感動して、レストランのスタッフに）", "ja": "ありがとうございます。《ドキドキ》が止まりません。" },
-          { "number": "15", "romaji": "Chefu no omoi ga tsutawaru ryouri ni, kokoro ga jinwari atatakarimashita", "text": "シェフの想いが伝わる料理に、心がじんわり温まりました", "note": "（ただの食事ではなく、心を込めてくださった時間を感じました）", "ja": "シェフの想いが伝わる料理に、心がじんわり温まりました" },
-          { "number": "16", "romaji": "Ofuton ga fukafuka de, tsutsumareru you na anshinkan deshita", "text": "お布団が《ふかふか》で、包まれるような安心感でした", "note": "（旅の疲れがスッと取れていくのを感じました）", "ja": "お布団が《ふかふか》で、包まれるような安心感でした" },
-          { "number": "17", "romaji": "Arigatou gozaimasu. Howahowa shiawase kibun desu", "text": "ありがとうございます。《ほわほわ》幸せ気分です。", "note": "（ふかふかのお布団にくるまりながら、快適な寝具の用意に）", "ja": "ありがとうございます。《ほわほわ》幸せ気分です。" },
-          { "number": "18", "romaji": "Arigatou gozaimasu. Fuwafuwa yume gokochi deshita", "text": "ありがとうございます。《ふわふわ》夢ごこちでした。", "note": "（ベッドの寝心地と、夜の静けさが完璧でぐっすり眠れたとき）", "ja": "ありがとうございます。《ふわふわ》夢ごこちでした。" },
-          { "number": "19", "romaji": "Arigatou gozaimasu. Tsuyatsuya gohan, saikou deshita", "text": "ありがとうございます。《つやつや》ご飯、最高でした。", "note": "（朝食のごはんがふっくら美味しくて、食事処の方に）", "ja": "ありがとうございます。《つやつや》ご飯、最高でした。" },
-          { "number": "20", "romaji": "Arigatou gozaimasu. Mata kimasu", "text": "ありがとうございます。また来ます。", "note": "（チェックアウト時、「またお待ちしています」と手を振ってくれたスタッフに）", "ja": "ありがとうございます。また来ます。" }
+          { "number": "1", "romaji": "Wakuwaku shinagara chekkuin wo mukaemashita", "text": "《ワクワク》しながらチェックインを迎えました", "note": "（丁寧なご案内に、旅の始まりの期待がさらにふくらみました）", "ja": "《ワクワク》しながらチェックインを迎えました", "isFavorite": false, "audioText": "《ワクワク》しながらチェックインを迎えました" },
+          { "number": "2", "romaji": "Arigatou gozaimasu. Hokkori shimashita", "text": "ありがとうございます。《ほっこり》しました。", "note": "（チェックイン時、笑顔で出迎えてくれたフロントスタッフに）", "ja": "ありがとうございます。《ほっこり》しました。", "isFavorite": false, "audioText": "ありがとうございます。《ほっこり》しました。" },
+          { "number": "3", "romaji": "Oheya no kaori ga kimochi ii desu ne. Arigatou gozaimasu", "text": "お部屋の香りが気持ちいいですね。ありがとうございます", "note": "（お部屋の香りが気に入ったとき）", "ja": "お部屋の香りが気持ちいいですね。ありがとうございます", "isFavorite": false, "audioText": "お部屋の香りが気持ちいいですね。ありがとうございます" },
+          { "number": "4", "romaji": "Oheya no seiketsukan ni, kokoro ga haremashita", "text": "お部屋の清潔感に、心が晴れました", "note": "（清掃の方の丁寧なお仕事に気づき、温かさを感じました）", "ja": "お部屋の清潔感に、心が晴れました", "isFavorite": false, "audioText": "お部屋の清潔感に、心が晴れました" },
+          { "number": "5", "romaji": "Arigatou gozaimasu. Pikapika ni shite kudasatte kangeki desu", "text": "ありがとうございます。《ピカピカ》にしてくださって感激です。", "note": "（お部屋の清掃が完璧で、まるで新しいお部屋のように感じたとき）", "ja": "ありがとうございます。《ピカピカ》にしてくださって感激です。", "isFavorite": false, "audioText": "ありがとうございます。《ピカピカ》にしてくださって感激です。" },
+          { "number": "6", "romaji": "Arigatou gozaimasu. Komaka na kikubari ga ureshikatta desu", "text": "ありがとうございます。細かな気配りが嬉しかったです。", "note": "（部屋に置かれたメモ、加湿器、絵葉書など細かな心配りに）", "ja": "ありがとうございます。細かな気配りが嬉しかったです。", "isFavorite": false, "audioText": "ありがとうございます。細かな気配りが嬉しかったです。" },
+          { "number": "7", "romaji": "Nagame ni uttori shimashita", "text": "眺めに《うっとり》しました", "note": "（窓を開けた瞬間、まるで絵画の中に入り込んだようでした）", "ja": "眺めに《うっとり》しました", "isFavorite": false, "audioText": "眺めに《うっとり》しました" },
+          { "number": "8", "romaji": "Egao ni hokkori shimashita", "text": "笑顔に《ほっこり》しました。", "note": "（言葉よりも伝わるやさしさが、胸にしみました）", "ja": "笑顔に《ほっこり》しました。", "isFavorite": false, "audioText": "笑顔に《ほっこり》しました。" },
+          { "number": "9", "romaji": "O kokoro kubari, hontou ni arigatou gozaimasu", "text": "お心配り、本当にありがとうございます。", "note": "（こちらの気持ちを先回りしたご案内がとてもありがたかったです）", "ja": "お心配り、本当にありがとうございます。", "isFavorite": false, "audioText": "お心配り、本当にありがとうございます。" },
+          { "number": "10", "romaji": "Arigatou gozaimasu. Uruuru kichaimashita", "text": "ありがとうございます。《うるうる》きちゃいました。", "note": "（コンシェルジュが旅の記念にメッセージカードを添えてくれたとき）", "ja": "ありがとうございます。《うるうる》きちゃいました。", "isFavorite": false, "audioText": "ありがとうございます。《うるうる》きちゃいました。" },
+          { "number": "11", "romaji": "Kokoro made pokapoka ni narimashita. Arigatou gozaimasu", "text": "心まで《ぽかぽか》になりました。ありがとうございます", "note": "（素晴らしいお風呂に対する感想）", "ja": "心まで《ぽかぽか》になりました。ありがとうございます", "isFavorite": false, "audioText": "心まで《ぽかぽか》になりました。ありがとうございます" },
+          { "number": "12", "romaji": "Arigatou gozaimasu. Torotoro ni tokesou desu", "text": "ありがとうございます。《とろとろ》にとけそうです。", "note": "（温泉で体の芯まで温まり、癒やされた瞬間に）", "ja": "ありがとうございます。《とろとろ》にとけそうです。", "isFavorite": false, "audioText": "ありがとうございます。《とろとろ》にとけそうです。" },
+          { "number": "13", "romaji": "Oryouri no hitosara hitosara ni wakuwaku ga tsumatte imashita", "text": "お料理のひと皿ひと皿に《ワクワク》が詰まっていました", "note": "（見た目も味も、まるで物語をいただくようでした）", "ja": "お料理のひと皿ひと皿に《ワクワク》が詰まっていました", "isFavorite": false, "audioText": "お料理のひと皿ひと皿に《ワクワク》が詰まっていました" },
+          { "number": "14", "romaji": "Arigatou gozaimasu. Dokidoki ga tomarimasen", "text": "ありがとうございます。《ドキドキ》が止まりません。", "note": "（運ばれてくる料理とお品書きに感動して、レストランのスタッフに）", "ja": "ありがとうございます。《ドキドキ》が止まりません。", "isFavorite": false, "audioText": "ありがとうございます。《ドキドキ》が止まりません。" },
+          { "number": "15", "romaji": "Chefu no omoi ga tsutawaru ryouri ni, kokoro ga jinwari atatakarimashita", "text": "シェフの想いが伝わる料理に、心がじんわり温まりました", "note": "（ただの食事ではなく、心を込めてくださった時間を感じました）", "ja": "シェフの想いが伝わる料理に、心がじんわり温まりました", "isFavorite": false, "audioText": "シェフの想いが伝わる料理に、心がじんわり温まりました" },
+          { "number": "16", "romaji": "Ofuton ga fukafuka de, tsutsumareru you na anshinkan deshita", "text": "お布団が《ふかふか》で、包まれるような安心感でした", "note": "（旅の疲れがスッと取れていくのを感じました）", "ja": "お布団が《ふかふか》で、包まれるような安心感でした", "isFavorite": false, "audioText": "お布団が《ふかふか》で、包まれるような安心感でした" },
+          { "number": "17", "romaji": "Arigatou gozaimasu. Howahowa shiawase kibun desu", "text": "ありがとうございます。《ほわほわ》幸せ気分です。", "note": "（ふかふかのお布団にくるまりながら、快適な寝具の用意に）", "ja": "ありがとうございます。《ほわほわ》幸せ気分です。", "isFavorite": false, "audioText": "ありがとうございます。《ほわほわ》幸せ気分です。" },
+          { "number": "18", "romaji": "Arigatou gozaimasu. Fuwafuwa yume gokochi deshita", "text": "ありがとうございます。《ふわふわ》夢ごこちでした。", "note": "（ベッドの寝心地と、夜の静けさが完璧でぐっすり眠れたとき）", "ja": "ありがとうございます。《ふわふわ》夢ごこちでした。", "isFavorite": false, "audioText": "ありがとうございます。《ふわふわ》夢ごこちでした。" },
+          { "number": "19", "romaji": "Arigatou gozaimasu. Tsuyatsuya gohan, saikou deshita", "text": "ありがとうございます。《つやつや》ご飯、最高でした。", "note": "（朝食のごはんがふっくら美味しくて、食事処の方に）", "ja": "ありがとうございます。《つやつや》ご飯、最高でした。", "isFavorite": false, "audioText": "ありがとうございます。《つやつや》ご飯、最高でした。" },
+          { "number": "20", "romaji": "Arigatou gozaimasu. Mata kimasu", "text": "ありがとうございます。また来ます。", "note": "（チェックアウト時、「またお待ちしています」と手を振ってくれたスタッフに）", "ja": "ありがとうございます。また来ます。", "isFavorite": false, "audioText": "ありがとうございます。また来ます。" }
         ]
       },
       "restaurant": {
@@ -203,40 +219,40 @@
       },
       "shopping": {
         "messages": [
-          { "number": "1", "romaji": "Oshiguzu ni deatte, kokoro ga kyunkyun shimashita", "text": "推しグッズに出会えて、心が《キュンキュン》しました。", "note": "（まるで夢の国に来た気分です）" },
-          { "number": "2", "romaji": "Kagami no naka no jibun ni, kokoro ga tokimekimashita", "text": "鏡の中の自分に、心が《ときめき》ました。", "note": "（着物って、思ったより似合ってるかも…）" },
-          { "number": "3", "romaji": "Kore, mita shunkan ni kokoro ga pin to shimashita", "text": "これ、見た瞬間に心が《ピンと》きました！", "note": "（ときめきを伝える一言）" },
-          { "number": "4", "romaji": "Kagami de mitara, kokoro no naka de koreda tte sakebimashita", "text": "鏡で見たら、心の中でこれだ！って叫びました。", "note": "（アパレル試着時の感情の共有）" },
-          { "number": "5", "romaji": "Kokoro ga tokimeku deai desu ne", "text": "心が《ときめく》出会いですね。", "note": "（感動を分かち合う締めの一言）" },
-          { "number": "6", "romaji": "Kore, mita shunkan ni kokoro ga tokimekimashita", "text": "これ、見た瞬間に心が《ときめき》しました。", "note": "（一期一会の出会いに感動）" },
-          { "number": "7", "romaji": "Konna gara, hajimete mimashita. Kokoro ga wakuwaku shimasu", "text": "こんな柄、初めて見ました。心が《ワクワク》します！", "note": "（伝統工芸品や着物の文様などに）" },
-          { "number": "8", "romaji": "Sawatta shunkan ni, kokoro ga pitatto kimari mashita", "text": "触った瞬間に、心が《ピタッと》決まりました！", "note": "（直感で即決したときに）" },
-          { "number": "9", "romaji": "Takusan atte mayou kedo, kokoro ga ichiban uguita no wa kore desu", "text": "たくさんあって迷うけど、心が一番《動いた》のはこれです。", "note": "（比較の末の決断）" },
-          { "number": "10", "romaji": "Kokoro ga koreda yo tte itteru ki ga shimasu", "text": "心がこれだよ！って言ってる気がします（笑）", "note": "（理屈ではなく感覚で選んだとき）" },
-          { "number": "11", "romaji": "Yasashii tezawari ni, kokoro ga hokkori shimashita", "text": "やさしい手ざわりに、心が《ほっこり》しました。", "note": "（和紙のぬくもりに癒されました）" },
-          { "number": "12", "romaji": "Kono tezawari... kokoro ga jinwari ochitsukimasu", "text": "この手ざわり…心が《じんわり》落ち着きます。", "note": "（和雑貨・布製品・陶器などに）" },
-          { "number": "13", "romaji": "Kaori dake de, kokoro ga hoguremashita", "text": "香りだけで、心が《ほぐれ》ました。", "note": "（アロマ・石けん・食品などの香り体験）" },
-          { "number": "14", "romaji": "Nandaka, kokoro ga hotto shimashita", "text": "なんだか、心が《ほっと》しました。", "note": "（日本のものの優しさ・やわらかさに触れたとき）" },
-          { "number": "15", "romaji": "Kore wo mitetara, kokoro ga suu tto shizuka ni narimashita", "text": "これを見てたら、心が《スーッと》静かになりました。", "note": "（和の美しさや落ち着きに触れたとき）" },
-          { "number": "16", "romaji": "Kono iroai, kokoro ni shimimasu", "text": "この色合い、心に《しみます》…！", "note": "（渋めの和柄や繊細な作品に出会ったとき）" },
-          { "number": "17", "romaji": "Te ni tora shunkan, kokoro ga honwaka shimashita", "text": "手に取った瞬間、心が《ほんわか》しました。", "note": "（優しい素材や表情のある雑貨に）" },
-          { "number": "18", "romaji": "Kore wo misetara, kazoku mo kokoro ga nagomu to omoimasu", "text": "これを見せたら、家族も心が《和む》と思います。", "note": "（誰かを想う視点）" },
-          { "number": "19", "romaji": "Kono iro, kokoro ni shikkuri kimasu", "text": "この色、心に《しっくり》きます。", "note": "（服や雑貨を試すときに）" },
-          { "number": "20", "romaji": "Sore, watashi mo daisuki desu. Kokoro ga wakuwaku shimasu yo ne", "text": "それ、私も大好きです！心が《ワクワク》しますよね。", "note": "（共感で距離が縮まる一言）" },
-          { "number": "21", "romaji": "A, kore... kokoro ni gutto shimashita. Nayamimasu ne", "text": "あ、これ…心に《グッと》きました。悩みますね〜！", "note": "（迷いも楽しむ雰囲気づくり）" },
-          { "number": "22", "romaji": "Erande iru jikan mo, kokoro ga mitasarete ikimasu", "text": "選んでいる時間も、心が《満たされ》ていきます。", "note": "（ショッピングそのものの楽しさ）" },
-          { "number": "23", "romaji": "Dore mo suteki de... kokoro ga yuremakutte masu", "text": "どれも素敵で…心が《揺れまくって》ます（笑）", "note": "（迷っているけど楽しい気持ち）" },
-          { "number": "24", "romaji": "Kono dezain, kokoro ni nokori masu ne", "text": "このデザイン、心に《残り》ますね。", "note": "（アートの余韻を持ち帰れるのが嬉しいです）" },
-          { "number": "25", "romaji": "Kore, kokoro ni zutto nokori soudesu", "text": "これ、心に《ずっと残り》そうです。", "note": "（思い出として記憶に残る予感）" },
-          { "number": "26", "romaji": "A, kono kansou... kokoro no oku ni hibiki mashita", "text": "あ、この感覚…心の奥に《響き》ました。", "note": "（予想外の感動との出会い）" },
-          { "number": "27", "romaji": "Tabi no naka de, kokoro ga ichiban uguita shunkan kamoshiremasen", "text": "旅の中で、心が《いちばん動いた》瞬間かもしれません。", "note": "（思い出になる買い物）" },
-          { "number": "28", "romaji": "Kono deai, kokoro ni shikkari kizamare mashita", "text": "この出会い、心に《しっかり刻まれ》ました。", "note": "（最後に選んだ一品に気持ちを込めて）" },
-          { "number": "29", "romaji": "Kore, omiyage ni shitara, kitto dareka no kokoro mo hokkori shimasu yo ne", "text": "これ、お土産にしたら、きっと誰かの心も《ほっこり》しますよね。", "note": "（人に贈る想像で心が温まる）" },
-          { "number": "30", "romaji": "Jitsu wa kou iu no, daisuki nan desu. Kokoro no tsubo ni hairi mashita", "text": "実はこういうの、大好きなんです。心の《ツボに入り》ました。", "note": "（好きなものとの運命の出会い）" },
-          { "number": "31", "romaji": "Kore wa, kokoro no gohoubi ni shimasu", "text": "これは、心の《ごほうび》にします！", "note": "（自分への旅のご褒美を見つけたとき）" },
-          { "number": "32", "romaji": "Arigatou no kimochi wo, kore de tsutaetai desu", "text": "ありがとうの気持ちを、これで《伝えたい》です。", "note": "（贈り物としての買い物）" },
-          { "number": "33", "romaji": "Kou iu deai ga aru kara, tabi ga suki nan desu", "text": "こういう出会いがあるから、旅が《好き》なんです。", "note": "（商品の奥にある体験への感謝）" },
-          { "number": "34", "romaji": "Masa ni kokoro wo kusuguru tte kou iu koto desu ne", "text": "まさに心を《くすぐる》ってこういうことですね。", "note": "（デザインやパッケージに）" }
+          { "number": "1", "romaji": "Oshiguzu ni deatte, kokoro ga kyunkyun shimashita", "text": "推しグッズに出会えて、心が《キュンキュン》しました。", "note": "（まるで夢の国に来た気分です）", "ja": "推しグッズに出会えて、心が《キュンキュン》しました。", "isFavorite": false, "audioText": "推しグッズに出会えて、心が《キュンキュン》しました。" },
+          { "number": "2", "romaji": "Kagami no naka no jibun ni, kokoro ga tokimekimashita", "text": "鏡の中の自分に、心が《ときめき》ました。", "note": "（着物って、思ったより似合ってるかも…）", "ja": "鏡の中の自分に、心が《ときめき》ました。", "isFavorite": false, "audioText": "鏡の中の自分に、心が《ときめき》ました。" },
+          { "number": "3", "romaji": "Kore, mita shunkan ni kokoro ga pin to shimashita", "text": "これ、見た瞬間に心が《ピンと》きました！", "note": "（ときめきを伝える一言）", "ja": "これ、見た瞬間に心が《ピンと》きました！", "isFavorite": false, "audioText": "これ、見た瞬間に心が《ピンと》きました！" },
+          { "number": "4", "romaji": "Kagami de mitara, kokoro no naka de koreda tte sakebimashita", "text": "鏡で見たら、心の中でこれだ！って叫びました。", "note": "（アパレル試着時の感情の共有）", "ja": "鏡で見たら、心の中でこれだ！って叫びました。", "isFavorite": false, "audioText": "鏡で見たら、心の中でこれだ！って叫びました。" },
+          { "number": "5", "romaji": "Kokoro ga tokimeku deai desu ne", "text": "心が《ときめく》出会いですね。", "note": "（感動を分かち合う締めの一言）", "ja": "心が《ときめく》出会いですね。", "isFavorite": false, "audioText": "心が《ときめく》出会いですね。" },
+          { "number": "6", "romaji": "Kore, mita shunkan ni kokoro ga tokimekimashita", "text": "これ、見た瞬間に心が《ときめき》しました。", "note": "（一期一会の出会いに感動）", "ja": "これ、見た瞬間に心が《ときめき》しました。", "isFavorite": false, "audioText": "これ、見た瞬間に心が《ときめき》しました。" },
+          { "number": "7", "romaji": "Konna gara, hajimete mimashita. Kokoro ga wakuwaku shimasu", "text": "こんな柄、初めて見ました。心が《ワクワク》します！", "note": "（伝統工芸品や着物の文様などに）", "ja": "こんな柄、初めて見ました。心が《ワクワク》します！", "isFavorite": false, "audioText": "こんな柄、初めて見ました。心が《ワクワク》します！" },
+          { "number": "8", "romaji": "Sawatta shunkan ni, kokoro ga pitatto kimari mashita", "text": "触った瞬間に、心が《ピタッと》決まりました！", "note": "（直感で即決したときに）", "ja": "触った瞬間に、心が《ピタッと》決まりました！", "isFavorite": false, "audioText": "触った瞬間に、心が《ピタッと》決まりました！" },
+          { "number": "9", "romaji": "Takusan atte mayou kedo, kokoro ga ichiban uguita no wa kore desu", "text": "たくさんあって迷うけど、心が一番《動いた》のはこれです。", "note": "（比較の末の決断）", "ja": "たくさんあって迷うけど、心が一番《動いた》のはこれです。", "isFavorite": false, "audioText": "たくさんあって迷うけど、心が一番《動いた》のはこれです。" },
+          { "number": "10", "romaji": "Kokoro ga koreda yo tte itteru ki ga shimasu", "text": "心がこれだよ！って言ってる気がします（笑）", "note": "（理屈ではなく感覚で選んだとき）", "ja": "心がこれだよ！って言ってる気がします（笑）", "isFavorite": false, "audioText": "心がこれだよ！って言ってる気がします（笑）" },
+          { "number": "11", "romaji": "Yasashii tezawari ni, kokoro ga hokkori shimashita", "text": "やさしい手ざわりに、心が《ほっこり》しました。", "note": "（和紙のぬくもりに癒されました）", "ja": "やさしい手ざわりに、心が《ほっこり》しました。", "isFavorite": false, "audioText": "やさしい手ざわりに、心が《ほっこり》しました。" },
+          { "number": "12", "romaji": "Kono tezawari... kokoro ga jinwari ochitsukimasu", "text": "この手ざわり…心が《じんわり》落ち着きます。", "note": "（和雑貨・布製品・陶器などに）", "ja": "この手ざわり…心が《じんわり》落ち着きます。", "isFavorite": false, "audioText": "この手ざわり…心が《じんわり》落ち着きます。" },
+          { "number": "13", "romaji": "Kaori dake de, kokoro ga hoguremashita", "text": "香りだけで、心が《ほぐれ》ました。", "note": "（アロマ・石けん・食品などの香り体験）", "ja": "香りだけで、心が《ほぐれ》ました。", "isFavorite": false, "audioText": "香りだけで、心が《ほぐれ》ました。" },
+          { "number": "14", "romaji": "Nandaka, kokoro ga hotto shimashita", "text": "なんだか、心が《ほっと》しました。", "note": "（日本のものの優しさ・やわらかさに触れたとき）", "ja": "なんだか、心が《ほっと》しました。", "isFavorite": false, "audioText": "なんだか、心が《ほっと》しました。" },
+          { "number": "15", "romaji": "Kore wo mitetara, kokoro ga suu tto shizuka ni narimashita", "text": "これを見てたら、心が《スーッと》静かになりました。", "note": "（和の美しさや落ち着きに触れたとき）", "ja": "これを見てたら、心が《スーッと》静かになりました。", "isFavorite": false, "audioText": "これを見てたら、心が《スーッと》静かになりました。" },
+          { "number": "16", "romaji": "Kono iroai, kokoro ni shimimasu", "text": "この色合い、心に《しみます》…！", "note": "（渋めの和柄や繊細な作品に出会ったとき）", "ja": "この色合い、心に《しみます》…！", "isFavorite": false, "audioText": "この色合い、心に《しみます》…！" },
+          { "number": "17", "romaji": "Te ni tora shunkan, kokoro ga honwaka shimashita", "text": "手に取った瞬間、心が《ほんわか》しました。", "note": "（優しい素材や表情のある雑貨に）", "ja": "手に取った瞬間、心が《ほんわか》しました。", "isFavorite": false, "audioText": "手に取った瞬間、心が《ほんわか》しました。" },
+          { "number": "18", "romaji": "Kore wo misetara, kazoku mo kokoro ga nagomu to omoimasu", "text": "これを見せたら、家族も心が《和む》と思います。", "note": "（誰かを想う視点）", "ja": "これを見せたら、家族も心が《和む》と思います。", "isFavorite": false, "audioText": "これを見せたら、家族も心が《和む》と思います。" },
+          { "number": "19", "romaji": "Kono iro, kokoro ni shikkuri kimasu", "text": "この色、心に《しっくり》きます。", "note": "（服や雑貨を試すときに）", "ja": "この色、心に《しっくり》きます。", "isFavorite": false, "audioText": "この色、心に《しっくり》きます。" },
+          { "number": "20", "romaji": "Sore, watashi mo daisuki desu. Kokoro ga wakuwaku shimasu yo ne", "text": "それ、私も大好きです！心が《ワクワク》しますよね。", "note": "（共感で距離が縮まる一言）", "ja": "それ、私も大好きです！心が《ワクワク》しますよね。", "isFavorite": false, "audioText": "それ、私も大好きです！心が《ワクワク》しますよね。" },
+          { "number": "21", "romaji": "A, kore... kokoro ni gutto shimashita. Nayamimasu ne", "text": "あ、これ…心に《グッと》きました。悩みますね〜！", "note": "（迷いも楽しむ雰囲気づくり）", "ja": "あ、これ…心に《グッと》きました。悩みますね〜！", "isFavorite": false, "audioText": "あ、これ…心に《グッと》きました。悩みますね〜！" },
+          { "number": "22", "romaji": "Erande iru jikan mo, kokoro ga mitasarete ikimasu", "text": "選んでいる時間も、心が《満たされ》ていきます。", "note": "（ショッピングそのものの楽しさ）", "ja": "選んでいる時間も、心が《満たされ》ていきます。", "isFavorite": false, "audioText": "選んでいる時間も、心が《満たされ》ていきます。" },
+          { "number": "23", "romaji": "Dore mo suteki de... kokoro ga yuremakutte masu", "text": "どれも素敵で…心が《揺れまくって》ます（笑）", "note": "（迷っているけど楽しい気持ち）", "ja": "どれも素敵で…心が《揺れまくって》ます（笑）", "isFavorite": false, "audioText": "どれも素敵で…心が《揺れまくって》ます（笑）" },
+          { "number": "24", "romaji": "Kono dezain, kokoro ni nokori masu ne", "text": "このデザイン、心に《残り》ますね。", "note": "（アートの余韻を持ち帰れるのが嬉しいです）", "ja": "このデザイン、心に《残り》ますね。", "isFavorite": false, "audioText": "このデザイン、心に《残り》ますね。" },
+          { "number": "25", "romaji": "Kore, kokoro ni zutto nokori soudesu", "text": "これ、心に《ずっと残り》そうです。", "note": "（思い出として記憶に残る予感）", "ja": "これ、心に《ずっと残り》そうです。", "isFavorite": false, "audioText": "これ、心に《ずっと残り》そうです。" },
+          { "number": "26", "romaji": "A, kono kansou... kokoro no oku ni hibiki mashita", "text": "あ、この感覚…心の奥に《響き》ました。", "note": "（予想外の感動との出会い）", "ja": "あ、この感覚…心の奥に《響き》ました。", "isFavorite": false, "audioText": "あ、この感覚…心の奥に《響き》ました。" },
+          { "number": "27", "romaji": "Tabi no naka de, kokoro ga ichiban uguita shunkan kamoshiremasen", "text": "旅の中で、心が《いちばん動いた》瞬間かもしれません。", "note": "（思い出になる買い物）", "ja": "旅の中で、心が《いちばん動いた》瞬間かもしれません。", "isFavorite": false, "audioText": "旅の中で、心が《いちばん動いた》瞬間かもしれません。" },
+          { "number": "28", "romaji": "Kono deai, kokoro ni shikkari kizamare mashita", "text": "この出会い、心に《しっかり刻まれ》ました。", "note": "（最後に選んだ一品に気持ちを込めて）", "ja": "この出会い、心に《しっかり刻まれ》ました。", "isFavorite": false, "audioText": "この出会い、心に《しっかり刻まれ》ました。" },
+          { "number": "29", "romaji": "Kore, omiyage ni shitara, kitto dareka no kokoro mo hokkori shimasu yo ne", "text": "これ、お土産にしたら、きっと誰かの心も《ほっこり》しますよね。", "note": "（人に贈る想像で心が温まる）", "ja": "これ、お土産にしたら、きっと誰かの心も《ほっこり》しますよね。", "isFavorite": false, "audioText": "これ、お土産にしたら、きっと誰かの心も《ほっこり》しますよね。" },
+          { "number": "30", "romaji": "Jitsu wa kou iu no, daisuki nan desu. Kokoro no tsubo ni hairi mashita", "text": "実はこういうの、大好きなんです。心の《ツボに入り》ました。", "note": "（好きなものとの運命の出会い）", "ja": "実はこういうの、大好きなんです。心の《ツボに入り》ました。", "isFavorite": false, "audioText": "実はこういうの、大好きなんです。心の《ツボに入り》ました。" },
+          { "number": "31", "romaji": "Kore wa, kokoro no gohoubi ni shimasu", "text": "これは、心の《ごほうび》にします！", "note": "（自分への旅のご褒美を見つけたとき）", "ja": "これは、心の《ごほうび》にします！", "isFavorite": false, "audioText": "これは、心の《ごほうび》にします！" },
+          { "number": "32", "romaji": "Arigatou no kimochi wo, kore de tsutaetai desu", "text": "ありがとうの気持ちを、これで《伝えたい》です。", "note": "（贈り物としての買い物）", "ja": "ありがとうの気持ちを、これで《伝えたい》です。", "isFavorite": false, "audioText": "ありがとうの気持ちを、これで《伝えたい》です。" },
+          { "number": "33", "romaji": "Kou iu deai ga aru kara, tabi ga suki nan desu", "text": "こういう出会いがあるから、旅が《好き》なんです。", "note": "（商品の奥にある体験への感謝）", "ja": "こういう出会いがあるから、旅が《好き》なんです。", "isFavorite": false, "audioText": "こういう出会いがあるから、旅が《好き》なんです。" },
+          { "number": "34", "romaji": "Masa ni kokoro wo kusuguru tte kou iu koto desu ne", "text": "まさに心を《くすぐる》ってこういうことですね。", "note": "（デザインやパッケージに）", "ja": "まさに心を《くすぐる》ってこういうことですね。", "isFavorite": false, "audioText": "まさに心を《くすぐる》ってこういうことですね。" }
         ]
       },
       "transportation": {
@@ -247,7 +263,8 @@
             "text": "切符購入をお手伝いいただきありがとうございます",
             "note": "（外国語が通じにくい中、窓口や駅員さんのサポートで安心できたシーン）",
             "ja": "切符購入をお手伝いいただきありがとうございます",
-            "isFavorite": false
+            "isFavorite": false,
+            "audioText": "切符購入をお手伝いいただきありがとうございます"
           },
           {
             "number": "2",
@@ -255,7 +272,8 @@
             "text": "英語案内を見つけてくれて助かりました",
             "note": "（案内表示が小さかったり、翻訳が不明瞭な中での感謝）",
             "ja": "英語案内を見つけてくれて助かりました",
-            "isFavorite": false
+            "isFavorite": false,
+            "audioText": "英語案内を見つけてくれて助かりました"
           },
           {
             "number": "3",
@@ -263,7 +281,8 @@
             "text": "丁寧に教えてくれて、本当に心強かったです",
             "note": "（地方や初乗車で困った時に現地の人が助けてくれた状況）",
             "ja": "丁寧に教えてくれて、本当に心強かったです",
-            "isFavorite": false
+            "isFavorite": false,
+            "audioText": "丁寧に教えてくれて、本当に心強かったです"
           },
           {
             "number": "4",
@@ -271,7 +290,8 @@
             "text": "道案内してくれてありがとう",
             "note": "（英語や翻訳アプリでやりとりを助けてもらった瞬間）",
             "ja": "道案内してくれてありがとう",
-            "isFavorite": false
+            "isFavorite": false,
+            "audioText": "道案内してくれてありがとう"
           },
           {
             "number": "5",
@@ -279,7 +299,8 @@
             "text": "混雑状況を教えてくれて感謝しています",
             "note": "（時間帯や道路状況が分かりにくい中での助言）",
             "ja": "混雑状況を教えてくれて感謝しています",
-            "isFavorite": false
+            "isFavorite": false,
+            "audioText": "混雑状況を教えてくれて感謝しています"
           },
           {
             "number": "6",
@@ -287,7 +308,8 @@
             "text": "降車ボタンを押すタイミングを教えてくれてありがとうございました",
             "note": "（バス車内で降り方がわからず困っているところ）",
             "ja": "降車ボタンを押すタイミングを教えてくれてありがとうございました",
-            "isFavorite": false
+            "isFavorite": false,
+            "audioText": "降車ボタンを押すタイミングを教えてくれてありがとうございました"
           },
           {
             "number": "7",
@@ -295,7 +317,8 @@
             "text": "乗換案内を親切に説明してくれて、本当に救われました",
             "note": "（駅で目的地に行く複雑なルートを案内してもらった場面）",
             "ja": "乗換案内を親切に説明してくれて、本当に救われました",
-            "isFavorite": false
+            "isFavorite": false,
+            "audioText": "乗換案内を親切に説明してくれて、本当に救われました"
           },
           {
             "number": "8",
@@ -303,7 +326,8 @@
             "text": "席を譲ってくれてありがとうございます",
             "note": "（お年寄りや体調の悪い人への、優しい行動）",
             "ja": "席を譲ってくれてありがとうございます",
-            "isFavorite": false
+            "isFavorite": false,
+            "audioText": "席を譲ってくれてありがとうございます"
           },
           {
             "number": "9",
@@ -311,7 +335,8 @@
             "text": "交通ルールを説明してくれてありがとうございます",
             "note": "（特に右側通行とは逆の習慣に戸惑う訪日客への配慮）",
             "ja": "交通ルールを説明してくれてありがとうございます",
-            "isFavorite": false
+            "isFavorite": false,
+            "audioText": "交通ルールを説明してくれてありがとうございます"
           },
           {
             "number": "10",
@@ -319,7 +344,8 @@
             "text": "笑顔で案内してくれて嬉しかったです",
             "note": "（笑顔で教えてくれて、不安が和らいだとき）",
             "ja": "笑顔で案内してくれて嬉しかったです",
-            "isFavorite": false
+            "isFavorite": false,
+            "audioText": "笑顔で案内してくれて嬉しかったです"
           },
           {
             "number": "11",
@@ -327,7 +353,8 @@
             "text": "一緒に調べてくれて、本当にありがとう",
             "note": "（スマホで一緒に調べてくれた地元の方へ）",
             "ja": "一緒に調べてくれて、本当にありがとう",
-            "isFavorite": false
+            "isFavorite": false,
+            "audioText": "一緒に調べてくれて、本当にありがとう"
           },
           {
             "number": "12",
@@ -335,7 +362,8 @@
             "text": "案内してくれて感謝しています",
             "note": "（表示やアナウンスが理解しづらい路線で、近くの人が助けてくれた状況）",
             "ja": "案内してくれて感謝しています",
-            "isFavorite": false
+            "isFavorite": false,
+            "audioText": "案内してくれて感謝しています"
           },
           {
             "number": "13",
@@ -343,7 +371,8 @@
             "text": "安心して乗れました。ありがとうございました",
             "note": "（路線を丁寧に教えてくれた状況）",
             "ja": "安心して乗れました。ありがとうございました",
-            "isFavorite": false
+            "isFavorite": false,
+            "audioText": "安心して乗れました。ありがとうございました"
           }
         ]
       }
