@@ -1,0 +1,1017 @@
+{
+  "scenes": {
+    "airport": {
+      "messages": [
+        {
+          "number": "1",
+          "romaji": "KOKORO GA JINWARI SHIMASHITA.",
+          "text": "Il mio cuore si è <b>commosso</b> profondamente.",
+          "note": "(Mi sono sentito davvero accolto quando mi hanno detto \"Benvenuto in Giappone\")",
+          "ja": "心がじんわりしました。",
+          "isFavorite": false
+        },
+        {
+          "number": "2",
+          "romaji": "KOKORO GA HOTTO SHIMASHITA.",
+          "text": "Il mio cuore si è <b>rincuorato</b>.",
+          "note": "(Un piccolo gesto gentile mi ha fatto sentire conforto e premura)",
+          "ja": "心がほっとしました。",
+          "isFavorite": false
+        },
+        {
+          "number": "3",
+          "romaji": "KOKORO GA KYUN TO SHIMASHITA.",
+          "text": "Il mio cuore si è <b>emozionato</b>.",
+          "note": "(Non mi aspettavo una tale premura, quindi sono rimasto davvero commosso in senso positivo)",
+          "ja": "心がキュンとしました。",
+          "isFavorite": false
+        },
+        {
+          "number": "4",
+          "romaji": "KOKORO GA IYASARE MASHITA.",
+          "text": "Il mio cuore si è sentito confortato.",
+          "note": "(Mi è sembrato che la stanchezza del lungo viaggio sia svanita di colpo)",
+          "ja": "心が癒されました。",
+          "isFavorite": false
+        },
+        {
+          "number": "5",
+          "romaji": "KOKORO KARA KANSHA SHIMASHITA.",
+          "text": "Ho provato gratitudine dal profondo del cuore.",
+          "note": "(Ho provato gratitudine dal profondo del cuore per la gentilezza ricevuta)",
+          "ja": "心から感謝しました。",
+          "isFavorite": false
+        },
+        {
+          "number": "6",
+          "romaji": "KOKORO GA JIWAN TO SHIMASHITA.",
+          "text": "Il mio cuore si è <b>commosso</b> profondamente.",
+          "note": "(Le parole calorose mi hanno fatto scaldare il petto)",
+          "ja": "心がじわ～んとしました。",
+          "isFavorite": false
+        },
+        {
+          "number": "7",
+          "romaji": "KOKORO GA URUURU SHIMASHITA.",
+          "text": "Il mio cuore si è <b>commosso</b> fino alle lacrime.",
+          "note": "(Sono rimasto così commosso che mi sono venute le lacrime agli occhi)",
+          "ja": "心がうるうるしました。",
+          "isFavorite": false
+        },
+        {
+          "number": "8",
+          "romaji": "KOKORO GA FUWATTO NAGOMIMASHITA.",
+          "text": "Il mio cuore si è <b>addolcito</b> dolcemente.",
+          "note": "(Mi sono sentito confortato dall'atmosfera gentile)",
+          "ja": "心がふわっと和みました。",
+          "isFavorite": false
+        },
+        {
+          "number": "9",
+          "romaji": "KOKORO GA WAKUWAKU SHIMASHITA.",
+          "text": "Il mio cuore si è <b>emozionato</b>.",
+          "note": "(Il mio petto ha palpitato per la nuova esperienza)",
+          "ja": "心がワクワクしました。",
+          "isFavorite": false
+        },
+        {
+          "number": "10",
+          "romaji": "KOKORO GA ATATAKAKU NARIMASHITA.",
+          "text": "Il mio cuore si è riscaldato.",
+          "note": "(Il mio cuore si è riscaldato toccando la gentilezza delle persone)",
+          "ja": "心が温かくなりました。",
+          "isFavorite": false
+        },
+        {
+          "number": "11",
+          "romaji": "KOKORO GA POKAPOKA SHIMASHITA.",
+          "text": "Il mio cuore si è sentito <b>confortato</b>.",
+          "note": "(È stato un momento rassicurante)",
+          "ja": "心がぽかぽかしました。",
+          "isFavorite": false
+        },
+        {
+          "number": "12",
+          "romaji": "KOKORO GA JIIN TO SHIMASHITA.",
+          "text": "Il mio cuore si è <b>commosso</b> profondamente.",
+          "note": "(Il mio petto si è riempito di commozione)",
+          "ja": "心がじーんとしました。",
+          "isFavorite": false
+        },
+        {
+          "number": "13",
+          "romaji": "KOKORO GA HOTTO SHIMASHITA.",
+          "text": "Il mio cuore si è <b>rincuorato</b>.",
+          "note": "(Mi sono sentito sollevato dalla gentilezza ricevuta)",
+          "ja": "心がほっとしました。",
+          "isFavorite": false
+        },
+        {
+          "number": "14",
+          "romaji": "KOKORO GA HAZUMI MASHITA.",
+          "text": "Il mio cuore si è emozionato.",
+          "note": "(Mi sono sentito emozionato per l'aspettativa)",
+          "ja": "心が弾みました。",
+          "isFavorite": false
+        },
+        {
+          "number": "15",
+          "romaji": "KOKORO GA HODOKEMASHITA.",
+          "text": "Il mio cuore si è rilassato.",
+          "note": "(La tensione si è sciolta)",
+          "ja": "心がほどけました。",
+          "isFavorite": false
+        },
+        {
+          "number": "16",
+          "romaji": "KOKORO GA TOKIMEKI MASHITA.",
+          "text": "Il mio cuore si è <b>emozionato</b>.",
+          "note": "(Il mio cuore si è emozionato per il nuovo incontro)",
+          "ja": "心がときめきました。",
+          "isFavorite": false
+        }
+      ]
+    },
+    "hotel": {
+      "messages": [
+        {
+          "number": "1",
+          "romaji": "WAKUWAKU SHINAGARA CHEKKUIN WO MUKAEMASHITA",
+          "text": "Ho accolto il check-in con <b>emozione</b>.",
+          "note": "(La guida attenta ha fatto crescere ulteriormente l'aspettativa per l'inizio del viaggio)",
+          "ja": "《ワクワク》しながらチェックインを迎えました",
+          "isFavorite": false
+        },
+        {
+          "number": "2",
+          "romaji": "ARIGATOU GOZAIMASU. HOKKORI SHIMASHITA",
+          "text": "Grazie mille. Mi sono sentito <b>confortato</b>.",
+          "note": "(Al momento del check-in, al personale della reception che mi ha accolto con un sorriso)",
+          "ja": "ありがとうございます。《ほっこり》しました。",
+          "isFavorite": false
+        },
+        {
+          "number": "3",
+          "romaji": "OHEYA NO KAORI GA KIMOCHI II DESU NE. ARIGATOU GOZAIMASU",
+          "text": "Il profumo della stanza è piacevole. Grazie mille.",
+          "note": "(Quando mi è piaciuto il profumo della stanza)",
+          "ja": "お部屋の香りが気持ちいいですね。ありがとうございます",
+          "isFavorite": false
+        },
+        {
+          "number": "4",
+          "romaji": "OHEYA NO SEIKETSUKAN NI, KOKORO GA HAREMASHITA",
+          "text": "La sensazione di pulizia della stanza mi ha rallegrato il cuore.",
+          "note": "(Mi sono accorto del lavoro attento del personale delle pulizie e ho sentito calore)",
+          "ja": "お部屋の清潔感に、心が晴れました",
+          "isFavorite": false
+        },
+        {
+          "number": "5",
+          "romaji": "ARIGATOU GOZAIMASU. PIKAPIKA NI SHITE KUDASATTE KANGEKI DESU",
+          "text": "Grazie mille. Sono commosso che l'avete resa <b>brillante</b>.",
+          "note": "(La pulizia della stanza era perfetta, sembrava una stanza completamente nuova)",
+          "ja": "ありがとうございます。《ピカピカ》にしてくださって感激です。",
+          "isFavorite": false
+        },
+        {
+          "number": "6",
+          "romaji": "ARIGATOU GOZAIMASU. KOMAKA NA KIKUBARI GA URESHIKATTA DESU",
+          "text": "Grazie mille. Sono stato felice per le piccole attenzioni.",
+          "note": "(Il memo lasciato nella stanza, l'umidificatore, la cartolina illustrata e altre piccole premure)",
+          "ja": "ありがとうございます。細かな気配りが嬉しかったです。",
+          "isFavorite": false
+        },
+        {
+          "number": "7",
+          "romaji": "NAGAME NI UTTORI SHIMASHITA",
+          "text": "Mi sono <b>incantato</b> dalla vista.",
+          "note": "(Nel momento in cui ho aperto la finestra, è stato come entrare in un dipinto)",
+          "ja": "眺めに《うっとり》しました",
+          "isFavorite": false
+        },
+        {
+          "number": "8",
+          "romaji": "EGAO NI HOKKORI SHIMASHITA",
+          "text": "Mi sono sentito <b>confortato</b> dal sorriso.",
+          "note": "(La gentilezza che si trasmette più delle parole mi ha toccato il cuore)",
+          "ja": "笑顔に《ほっこり》しました。",
+          "isFavorite": false
+        },
+        {
+          "number": "9",
+          "romaji": "O KOKORO KUBARI, HONTOU NI ARIGATOU GOZAIMASU",
+          "text": "Grazie mille per la vostra premura.",
+          "note": "(La guida che ha anticipato i miei sentimenti è stata molto apprezzata)",
+          "ja": "お心配り、本当にありがとうございます。",
+          "isFavorite": false
+        },
+        {
+          "number": "10",
+          "romaji": "ARIGATOU GOZAIMASU. URUURU KICHAIMASHITA",
+          "text": "Grazie mille. Mi sono <b>commosso</b> fino alle lacrime.",
+          "note": "(Quando il concierge ha aggiunto un biglietto di auguri per commemorare il viaggio)",
+          "ja": "ありがとうございます。《うるうる》きちゃいました。",
+          "isFavorite": false
+        },
+        {
+          "number": "11",
+          "romaji": "KOKORO MADE POKAPOKA NI NARIMASHITA. ARIGATOU GOZAIMASU",
+          "text": "Anche il mio cuore si è sentito <b>confortato</b>. Grazie mille.",
+          "note": "(Impressioni sul bagno meraviglioso)",
+          "ja": "心まで《ぽかぽか》になりました。ありがとうございます",
+          "isFavorite": false
+        },
+        {
+          "number": "12",
+          "romaji": "ARIGATOU GOZAIMASU. TOROTORO NI TOKESOU DESU",
+          "text": "Grazie mille. Mi sento come se mi <b>sciogliessi</b>.",
+          "note": "(Nel momento in cui mi sono sentito riscaldato fino al midollo e confortato dalla sorgente termale)",
+          "ja": "ありがとうございます。《とろとろ》にとけそうです。",
+          "isFavorite": false
+        },
+        {
+          "number": "13",
+          "romaji": "ORYOURI NO HITOSARA HITOSARA NI WAKUWAKU GA TSUMATTE IMASHITA",
+          "text": "Ogni piatto era pieno di <b>emozione</b>.",
+          "note": "(Era come gustare una storia, sia nell'aspetto che nel sapore)",
+          "ja": "お料理のひと皿ひと皿に《ワクワク》が詰まっていました",
+          "isFavorite": false
+        },
+        {
+          "number": "14",
+          "romaji": "ARIGATOU GOZAIMASU. DOKIDOKI GA TOMARIMASEN",
+          "text": "Grazie mille. Il mio cuore <b>batte</b> senza fermarsi.",
+          "note": "(Sono rimasto commosso dai piatti serviti e dal menu, rivolgendomi al personale del ristorante)",
+          "ja": "ありがとうございます。《ドキドキ》が止まりません。",
+          "isFavorite": false
+        },
+        {
+          "number": "15",
+          "romaji": "CHEFU NO OMOI GA TSUTAWARU RYOURI NI, KOKORO GA JINWARI ATATAKARIMASHITA",
+          "text": "Il mio cuore si è riscaldato profondamente con i piatti che trasmettono i sentimenti dello chef.",
+          "note": "(Ho sentito che non era solo un pasto, ma un tempo dedicato con il cuore)",
+          "ja": "シェフの想いが伝わる料理に、心がじんわり温まりました",
+          "isFavorite": false
+        },
+        {
+          "number": "16",
+          "romaji": "OFUTON GA FUKAFUKA DE, TSUTSUMARERU YOU NA ANSHINKAN DESHITA",
+          "text": "Il futon era <b>soffice</b> e mi dava una sensazione di sicurezza avvolgente.",
+          "note": "(Ho sentito che la stanchezza del viaggio svaniva gradualmente)",
+          "ja": "お布団が《ふかふか》で、包まれるような安心感でした",
+          "isFavorite": false
+        },
+        {
+          "number": "17",
+          "romaji": "ARIGATOU GOZAIMASU. HOWAHOWA SHIAWASE KIBUN DESU",
+          "text": "Grazie mille. Mi sento felice e <b>leggero</b>.",
+          "note": "(Avvolto nel futon soffice, rivolgendomi a chi ha preparato la biancheria confortevole)",
+          "ja": "ありがとうございます。《ほわほわ》幸せ気分です。",
+          "isFavorite": false
+        },
+        {
+          "number": "18",
+          "romaji": "ARIGATOU GOZAIMASU. FUWAFUWA YUME GOKOCHI DESHITA",
+          "text": "Grazie mille. È stato come un sogno <b>soffice</b>.",
+          "note": "(La comodità del letto e il silenzio della notte erano perfetti, ho dormito profondamente)",
+          "ja": "ありがとうございます。《ふわふわ》夢ごこちでした。",
+          "isFavorite": false
+        },
+        {
+          "number": "19",
+          "romaji": "ARIGATOU GOZAIMASU. TSUYATSUYA GOHAN, SAIKOU DESHITA",
+          "text": "Grazie mille. Il riso <b>brillante</b> era fantastico.",
+          "note": "(Il riso della colazione era soffice e delizioso, rivolgendomi al personale della sala da pranzo)",
+          "ja": "ありがとうございます。《つやつや》ご飯、最高でした。",
+          "isFavorite": false
+        },
+        {
+          "number": "20",
+          "romaji": "ARIGATOU GOZAIMASU. MATA KIMASU",
+          "text": "Grazie mille. Tornerò.",
+          "note": "(Al momento del check-out, rivolgendomi al personale che mi ha salutato dicendo \"Vi aspettiamo di nuovo\")",
+          "ja": "ありがとうございます。また来ます。",
+          "isFavorite": false
+        }
+      ]
+    },
+    "restaurant": {
+      "messages": [
+        {
+          "number": "1",
+          "romaji": "KONNA KIZUKAI NI, 《JIIN》 TO KIMASHITA",
+          "text": "Mi sono <b>commosso</b> per una tale premura.",
+          "note": "(Per la gentilezza del personale che ha aggiunto un piatto extra per rendere più facile la condivisione del cibo)",
+          "ja": "こんな気遣いに、《じ〜ん》ときました。",
+          "isFavorite": false
+        },
+        {
+          "number": "2",
+          "romaji": "TEPPAN WO KAKONDE NO JIKAN GA, OMOIDE NI KAWARIMASHITA",
+          "text": "Il tempo trascorso intorno alla piastra è diventato un ricordo.",
+          "note": "(Quando intorno alla piastra si sono diffusi conversazioni e sorrisi)",
+          "ja": "鉄板を囲んでの時間が、思い出に変わりました。",
+          "isFavorite": false
+        },
+        {
+          "number": "3",
+          "romaji": "ANATA NO EGAO GA KOKORO NI SHIMIMASHITA",
+          "text": "Il tuo sorriso mi ha toccato il cuore.",
+          "note": "(Grazie al personale che mi ha parlato con gentilezza, la tensione si è sciolta)",
+          "ja": "あなたの笑顔が心に沁みました。",
+          "isFavorite": false
+        },
+        {
+          "number": "4",
+          "romaji": "MAGOKORO NI 《HOKKORI》 SHITEIMASU",
+          "text": "Mi sento <b>confortato</b> dalla sincerità.",
+          "note": "(Al personale che serve i piatti con attenzione anche quando è occupato)",
+          "ja": "まごころに《ほっこり》しています。",
+          "isFavorite": false
+        },
+        {
+          "number": "5",
+          "romaji": "HOTTO DEKIRU, KONO BASHO NI KANSHA DESU",
+          "text": "Sono grato per questo posto dove posso rilassarmi.",
+          "note": "(In un izakaya dove sono diventato cliente abituale, avvolto da una sensazione di sicurezza immutabile)",
+          "ja": "ホッとできる、この場所に感謝です。",
+          "isFavorite": false
+        },
+        {
+          "number": "6",
+          "romaji": "《KIRAKIRA》 NO OMOTENASHI GA KOKORO NI NOKORIMASU",
+          "text": "L'ospitalità <b>brillante</b> rimane nel cuore.",
+          "note": "(Con il servizio attento, un semplice pasto è diventato un ricordo)",
+          "ja": "《キラキラ》のおもてなしが心に残ります。",
+          "isFavorite": false
+        },
+        {
+          "number": "7",
+          "romaji": "KAIWA GA HANDE SHIAWASE NA JIKAN NI NARIMASHITA",
+          "text": "La conversazione è diventata un tempo felice.",
+          "note": "(Una notte in cui la conversazione è stata vivace grazie ai racconti divertenti del proprietario)",
+          "ja": "会話が弾んで幸せな時間になりました。",
+          "isFavorite": false
+        },
+        {
+          "number": "8",
+          "romaji": "《JUWA~》 TO HIROGARU SHIAWASE NI, UTTORI DESU",
+          "text": "Sono <b>incantato</b> dalla felicità che si espande <b>succosamente</b>.",
+          "note": "(Nel momento in cui la succosità della carne si scioglie in bocca)",
+          "ja": "《ジュワ〜ッ》と広がる幸せに、うっとりです。",
+          "isFavorite": false
+        },
+        {
+          "number": "9",
+          "romaji": "SUKIYAKI NO AMASA NI, 《HOKKORI》《TOROKE》 MASHITA",
+          "text": "Mi sono sentito <b>confortato</b> e <b>sciolto</b> dalla dolcezza del sukiyaki.",
+          "note": "(Con il brodo e l'uovo, un boccone di beatitudine)",
+          "ja": "すき焼きの甘さに、《ほっこり》《とろけ》ました。",
+          "isFavorite": false
+        },
+        {
+          "number": "10",
+          "romaji": "HITOKUCHI GOTO NI, CHIKARA GA WAITEKURU YOU DESHITA",
+          "text": "Ad ogni boccone, sembrava che mi tornassero le forze.",
+          "note": "(Quando ho ricevuto energia da una bistecca succosa)",
+          "ja": "一口ごとに、力が湧いてくるようでした。",
+          "isFavorite": false
+        },
+        {
+          "number": "11",
+          "romaji": "KUSHI NO IPPON IPPON NI, TEINEI NA TESHIGOTO WO KANJIMASHITA",
+          "text": "Ho sentito il lavoro attento in ogni spiedino.",
+          "note": "(Mangiando yakitori, sentendo il cuore dell'artigiano)",
+          "ja": "串の一本一本に、丁寧な手仕事を感じました。",
+          "isFavorite": false
+        },
+        {
+          "number": "12",
+          "romaji": "SAKANA NO FUKKURA NI, KANDO SHITEIMASU",
+          "text": "Sono commosso dalla morbidezza del pesce.",
+          "note": "(Assaporando lentamente la carne del pesce cotto con attenzione)",
+          "ja": "魚のふっくらに、感動しています。",
+          "isFavorite": false
+        },
+        {
+          "number": "13",
+          "romaji": "SAKANA NO UMAJI GA, KOKORO NI SHIMIWATARIMASU",
+          "text": "La succosità del pesce mi pervade il cuore.",
+          "note": "(Pesce alla griglia o in umido, un piatto che rispetta il sapore degli ingredienti)",
+          "ja": "魚の旨みが、心に沁みわたります。",
+          "isFavorite": false
+        },
+        {
+          "number": "14",
+          "romaji": "OSUSHI NO SHARI TO NETA GA, SUBARASHII HARMONI DESU",
+          "text": "Il riso e il neta del sushi creano un'armonia meravigliosa.",
+          "note": "(Sentendo il cuore dell'artigiano in un nigiri bilanciato)",
+          "ja": "お寿司のシャリとネタが、素晴らしいハーモニーです。",
+          "isFavorite": false
+        },
+        {
+          "number": "15",
+          "romaji": "IKKAN IKKAN GA, MARU DE CHIISANA GEIJUTSUHIN NO YOU DESHITA",
+          "text": "Ogni nigiri era come una piccola opera d'arte.",
+          "note": "(Rimanendo affascinato dal bellissimo lavoro del maestro sushi)",
+          "ja": "一貫一貫が、まるで小さな芸術品のようでした。",
+          "isFavorite": false
+        },
+        {
+          "number": "16",
+          "romaji": "TEMPURA NO 《SAKUSAKU》 NI, TENSION GA AGARIMASHITA",
+          "text": "La tensione è salita con la <b>croccantezza</b> della tempura.",
+          "note": "(Sentendo la gioia della consistenza e del profumo della pastella appena fritta)",
+          "ja": "天ぷらの《サクサク》に、テンションが上がりました。",
+          "isFavorite": false
+        },
+        {
+          "number": "17",
+          "romaji": "KOROMO NO KARUYASA GA, TOTEMO JOHIN DESHITA",
+          "text": "La leggerezza della pastella era molto raffinata.",
+          "note": "(Assaporando silenziosamente la consistenza e il profumo della tempura)",
+          "ja": "衣の軽やかさが、とても上品でした。",
+          "isFavorite": false
+        },
+        {
+          "number": "18",
+          "romaji": "RAMEN NO SUPU NI KOKORO GA UBAREMASHITA",
+          "text": "Il mio cuore è stato rapito dalla zuppa del ramen.",
+          "note": "(La zuppa del ramen che ha rapito il mio cuore con un cucchiaio)",
+          "ja": "ラーメンのスープに心が奪われました。",
+          "isFavorite": false
+        },
+        {
+          "number": "19",
+          "romaji": "KONO RAMEN NO IPPAI NI, FUKAMI WO KANJIMASHITA",
+          "text": "Ho sentito profondità in questa ciotola di ramen.",
+          "note": "(Confortato dalla zuppa dal sapore profondo)",
+          "ja": "このラーメンの一杯に、深みを感じました。",
+          "isFavorite": false
+        },
+        {
+          "number": "20",
+          "romaji": "SOBA NO KAORI NI, KOKORO GA OCHITSUKIMASHITA",
+          "text": "Il mio cuore si è calmato con il profumo del soba.",
+          "note": "(Confortato non solo dalla consistenza ma anche dal retrogusto del profumo)",
+          "ja": "そばの香りに、心が落ち着きました。",
+          "isFavorite": false
+        },
+        {
+          "number": "21",
+          "romaji": "SOBA NO KAORI NI, KISETSU NO UTSUKUSHISA WO KANJIMASHITA",
+          "text": "Ho sentito la bellezza della stagione nel profumo del soba.",
+          "note": "(Insieme al soba nuovo e alle verdure di stagione)",
+          "ja": "そばの香りに、季節の美しさを感じました。",
+          "isFavorite": false
+        },
+        {
+          "number": "22",
+          "romaji": "UDON NO MOCHIMOCHI NI, BIKKURI SHIMASHITA",
+          "text": "Sono rimasto sorpreso dalla consistenza <b>morbida</b> dell'udon.",
+          "note": "(Soddisfatto sia nello stomaco che nel cuore con il brodo delicato e la consistenza morbida)",
+          "ja": "うどんのモチモチに、びっくりしました。",
+          "isFavorite": false
+        },
+        {
+          "number": "23",
+          "romaji": "YASASHII DASHI GA, KOKORO NI SHIMIWATARIMASU",
+          "text": "Il brodo delicato mi pervade il cuore.",
+          "note": "(La sensazione di essere avvolti dal brodo dell'udon e dalla sua calda temperatura)",
+          "ja": "やさしい出汁が、心に沁みわたります。",
+          "isFavorite": false
+        },
+        {
+          "number": "24",
+          "romaji": "TAKOYAKI NO OISHISA NI 《TOROKE》 SOU DESU",
+          "text": "Mi sento come se mi <b>sciogliessi</b> per la delizia del takoyaki.",
+          "note": "(Tensione alle stelle con il ripieno cremoso e il profumo della salsa)",
+          "ja": "たこやきの美味しさに《とろけ》そうです。",
+          "isFavorite": false
+        },
+        {
+          "number": "25",
+          "romaji": "TOROMI TO DASHI NO OISHISA NI KANDO SHIMASHITA",
+          "text": "Sono rimasto commosso dalla delizia della consistenza e del brodo.",
+          "note": "(Con la calda temperatura e l'accessibilità del takoyaki)",
+          "ja": "とろみと出汁の美味しさに感動しました。",
+          "isFavorite": false
+        },
+        {
+          "number": "26",
+          "romaji": "OKONOMIYAKI NO 《FUWAFUWA》 NI, KOKORO MADE FUNWARI DESU",
+          "text": "Sono <b>soffice</b> fino al cuore con la <b>sofficità</b> dell'okonomiyaki.",
+          "note": "(Commozione per la consistenza dell'okonomiyaki)",
+          "ja": "お好み焼きの《フワフワ》に、心までふんわりです。",
+          "isFavorite": false
+        },
+        {
+          "number": "27",
+          "romaji": "MONJYA NO YAKERU OTO NI, 《WAKUWAKU》 GA TOMARANAKU NARIMASHITA",
+          "text": "L'<b>emozione</b> non si è fermata con il suono della cottura del monjayaki.",
+          "note": "(Il suono e il profumo della piastra che creano \"l'intrattenimento culinario\")",
+          "ja": "もんじゃの焼ける音に、《ワクワク》がとまらなくなりました。",
+          "isFavorite": false
+        },
+        {
+          "number": "28",
+          "romaji": "OTSUMAMI NI 《WAKUWAKU》 GA TOMARIMASEN",
+          "text": "L'<b>emozione</b> non si ferma con gli stuzzichini.",
+          "note": "(Quando escono piccole ciotole con un tocco speciale, diventando un piacere ogni volta)",
+          "ja": "おつまみに《ワクワク》が止まりません。",
+          "isFavorite": false
+        },
+        {
+          "number": "29",
+          "romaji": "SUITSU NO TOKIMEKI DE, 《KYUNKYUN》 KOKORO GA HANEMASHITA",
+          "text": "Il mio cuore ha <b>saltellato</b> con l'<b>emozione</b> del dolce.",
+          "note": "(La felicità che inizia dal momento in cui si infila la forchetta)",
+          "ja": "スイーツのときめきで、《キュンキュン》心が跳ねました。",
+          "isFavorite": false
+        },
+        {
+          "number": "30",
+          "romaji": "KONO HITOZARA GA, KYO WO TOKUBETSU NA HI NI SHITE KUREMASHITA",
+          "text": "Questo piatto ha reso oggi un giorno speciale.",
+          "note": "(Torta o parfait come regalo per se stessi)",
+          "ja": "このひと皿が、今日を特別な日にしてくれました。",
+          "isFavorite": false
+        },
+        {
+          "number": "31",
+          "romaji": "TOTEMO, TOTEMO, HONTO NI OJOHIN DESU NE",
+          "text": "È davvero, davvero molto raffinato.",
+          "note": "(Incantato dalla dolcezza raffinata e dalla bellezza visiva)",
+          "ja": "とても、とても、本当にお上品ですね。",
+          "isFavorite": false
+        },
+        {
+          "number": "32",
+          "romaji": "WAGASHI NO SENSASA NI, KOKORO GA TOKIMEKIMASHITA",
+          "text": "Il mio cuore si è emozionato per la delicatezza del wagashi.",
+          "note": "(Quando lo metto in bocca, la gentilezza delicata si diffonde in bocca, commuovendomi)",
+          "ja": "和菓子の繊細さに、心がトキメキました。",
+          "isFavorite": false
+        },
+        {
+          "number": "33",
+          "romaji": "MACCHA NO 《HORONIGASA》 NI, KOKORO GA OCHITSUKIMASHITA",
+          "text": "Il mio cuore si è calmato con l'<b>amarezza</b> del matcha.",
+          "note": "(Un momento di conforto tranquillo nel tempo occupato)",
+          "ja": "抹茶の《ほろ苦さ》に、心が落ち着きました。",
+          "isFavorite": false
+        },
+        {
+          "number": "34",
+          "romaji": "MACCHA NO OKUFUKASA GA, KARADA NI SHIMIWATARIMASHITA",
+          "text": "La profondità del matcha mi ha pervaso il corpo.",
+          "note": "(Un momento di respiro con una tazza di matcha o matcha latte)",
+          "ja": "抹茶の奥深さが、身体に沁みわたりました。",
+          "isFavorite": false
+        },
+        {
+          "number": "35",
+          "romaji": "KOKORO TO KARADA GA IYASAREMASHITA",
+          "text": "Il mio cuore e il mio corpo si sono sentiti confortati.",
+          "note": "(Confortato da dolci come tiramisù al matcha o parfait)",
+          "ja": "心と体が癒されました。",
+          "isFavorite": false
+        },
+        {
+          "number": "36",
+          "romaji": "KOKORO GA 《POKAPOKA》 SHITEIMASU",
+          "text": "Il mio cuore si sente <b>confortato</b>.",
+          "note": "(Quando mi hanno servito un pasto caldo in una giornata fredda, mi sono riscaldato sia nel corpo che nel cuore)",
+          "ja": "心が《ぽかぽか》しています。",
+          "isFavorite": false
+        },
+        {
+          "number": "37",
+          "romaji": "AJI DAKE DE NAKU, OMOI MADE ITADAKIMASHITA",
+          "text": "Ho ricevuto non solo il sapore ma anche i sentimenti.",
+          "note": "(Dopo che il capo mi ha parlato della passione per gli ingredienti, ho mangiato il piatto)",
+          "ja": "味だけでなく、想いまでいただきました。",
+          "isFavorite": false
+        },
+        {
+          "number": "38",
+          "romaji": "《KYUNKYUN》 SHIMASU",
+          "text": "Mi sento <b>emozionato</b>.",
+          "note": "(Con un piatto emozionante davanti a me)",
+          "ja": "《キュンキュン》します。",
+          "isFavorite": false
+        },
+        {
+          "number": "39",
+          "romaji": "KONNA NI OISHIKUTE, 《TOROKERU》 HODO SHIAWASE DESU",
+          "text": "Sono così felice da <b>sciogliermi</b> per quanto è delizioso.",
+          "note": "(Quando ho ricevuto piatti come donburi con uova che si sciolgono o piatti al formaggio)",
+          "ja": "こんなに美味しくて、《とろける》ほど幸せです。",
+          "isFavorite": false
+        },
+        {
+          "number": "40",
+          "romaji": "KOKORO MADE MITASARERU, YUTAKA NA ORYORI DESHITA",
+          "text": "È stato un pasto ricco che ha saziato anche il cuore.",
+          "note": "(Commozione per la delizia e l'ospitalità)",
+          "ja": "心まで満たされる、豊かなお料理でした。",
+          "isFavorite": false
+        },
+        {
+          "number": "41",
+          "romaji": "KONO RAMEN NO IPPAI NI, FUKAMI WO KANJIMASHITA",
+          "text": "Ho sentito profondità in questa ciotola di ramen.",
+          "note": "(Confortato dalla zuppa dal sapore profondo)",
+          "ja": "このラーメンの一杯に、深みを感じました。",
+          "isFavorite": false
+        }
+      ]
+    },
+    "shopping": {
+      "messages": [
+        {
+          "number": "1",
+          "romaji": "OSHIGUZU NI DEATTE, KOKORO GA KYUNKYUN SHIMASHITA",
+          "text": "Mi sono <b>emozionato</b> di incontrare i prodotti del mio idolo.",
+          "note": "(È come essere arrivato in un paese dei sogni)",
+          "ja": "推しグッズに出会えて、心が《キュンキュン》しました。",
+          "isFavorite": false
+        },
+        {
+          "number": "2",
+          "romaji": "KAGAMI NO NAKA NO JIBUN NI, KOKORO GA TOKIMEKIMASHITA",
+          "text": "Il mio cuore si è <b>emozionato</b> guardandomi nello specchio.",
+          "note": "(Il kimono mi sta meglio di quanto pensassi...)",
+          "ja": "鏡の中の自分に、心が《ときめき》ました。",
+          "isFavorite": false
+        },
+        {
+          "number": "3",
+          "romaji": "KORE, MITA SHUNKAN NI KOKORO GA PIN TO SHIMASHITA",
+          "text": "Questo, nel momento in cui l'ho visto il mio cuore si è <b>illuminato</b>!",
+          "note": "(Una parola che trasmette l'emozione)",
+          "ja": "これ、見た瞬間に心が《ピンと》きました！",
+          "isFavorite": false
+        },
+        {
+          "number": "4",
+          "romaji": "KAGAMI DE MITARA, KOKORO NO NAKA DE KOREDA TTE SAKEBIMASHITA",
+          "text": "Quando l'ho visto nello specchio, ho gridato \"Questo è quello giusto!\" nel mio cuore.",
+          "note": "(Condivisione dell'emozione durante la prova di abbigliamento)",
+          "ja": "鏡で見たら、心の中でこれだ！って叫びました。",
+          "isFavorite": false
+        },
+        {
+          "number": "5",
+          "romaji": "KOKORO GA TOKIMEKU DEAI DESU NE",
+          "text": "È un incontro che fa <b>emozionare</b> il cuore, vero?",
+          "note": "(Una parola finale per condividere la commozione)",
+          "ja": "心が《ときめく》出会いですね。",
+          "isFavorite": false
+        },
+        {
+          "number": "6",
+          "romaji": "KORE, MITA SHUNKAN NI KOKORO GA TOKIMEKIMASHITA",
+          "text": "Questo, nel momento in cui l'ho visto il mio cuore si è <b>emozionato</b>.",
+          "note": "(Commozione per l'incontro di una vita)",
+          "ja": "これ、見た瞬間に心が《ときめき》しました。",
+          "isFavorite": false
+        },
+        {
+          "number": "7",
+          "romaji": "KONNA GARA, HAJIMETE MIMASHITA. KOKORO GA WAKUWAKU SHIMASU",
+          "text": "Non ho mai visto un motivo così. Il mio cuore si <b>emoziona</b>!",
+          "note": "(Con motivi tradizionali di artigianato o kimono)",
+          "ja": "こんな柄、初めて見ました。心が《ワクワク》します！",
+          "isFavorite": false
+        },
+        {
+          "number": "8",
+          "romaji": "SAWATTA SHUNKAN NI, KOKORO GA PITATTO KIMARI MASHITA",
+          "text": "Nel momento in cui l'ho toccato, il mio cuore si è <b>deciso</b>!",
+          "note": "(Quando ho deciso immediatamente per intuizione)",
+          "ja": "触った瞬間に、心が《ピタッと》決まりました！",
+          "isFavorite": false
+        },
+        {
+          "number": "9",
+          "romaji": "TAKUSAN ATTE MAYOU KEDO, KOKORO GA ICHIBAN UGUITA NO WA KORE DESU",
+          "text": "Ce ne sono molti e sono confuso, ma quello che ha <b>mosso</b> di più il mio cuore è questo.",
+          "note": "(La decisione dopo il confronto)",
+          "ja": "たくさんあって迷うけど、心が一番《動いた》のはこれです。",
+          "isFavorite": false
+        },
+        {
+          "number": "10",
+          "romaji": "KOKORO GA KOREDA YO TTE ITTERU KI GA SHIMASU",
+          "text": "Sento che il mio cuore mi sta dicendo \"Questo è quello giusto!\" (ride)",
+          "note": "(Quando ho scelto per sensazione invece che per logica)",
+          "ja": "心がこれだよ！って言ってる気がします（笑）",
+          "isFavorite": false
+        },
+        {
+          "number": "11",
+          "romaji": "YASASHII TEZAWARI NI, KOKORO GA HOKKORI SHIMASHITA",
+          "text": "Mi sono sentito <b>confortato</b> dal tocco delicato.",
+          "note": "(Mi sono sentito confortato dalla calda temperatura della carta washi)",
+          "ja": "やさしい手ざわりに、心が《ほっこり》しました。",
+          "isFavorite": false
+        },
+        {
+          "number": "12",
+          "romaji": "KONO TEZAWARI... KOKORO GA JINWARI OCHITSUKIMASU",
+          "text": "Questo tocco... il mio cuore si calma <b>profondamente</b>.",
+          "note": "(Con articoli giapponesi, prodotti tessili, ceramiche, ecc.)",
+          "ja": "この手ざわり…心が《じんわり》落ち着きます。",
+          "isFavorite": false
+        },
+        {
+          "number": "13",
+          "romaji": "KAORI DAKE DE, KOKORO GA HOGUREMASHITA",
+          "text": "Solo con il profumo, il mio cuore si è <b>rilassato</b>.",
+          "note": "(Esperienza olfattiva con aromi, saponi, cibi, ecc.)",
+          "ja": "香りだけで、心が《ほぐれ》ました。",
+          "isFavorite": false
+        },
+        {
+          "number": "14",
+          "romaji": "NANDAKA, KOKORO GA HOTTO SHIMASHITA",
+          "text": "Non so perché, ma il mio cuore si è <b>rincuorato</b>.",
+          "note": "(Quando ho toccato la gentilezza e la morbidezza delle cose giapponesi)",
+          "ja": "なんだか、心が《ほっと》しました。",
+          "isFavorite": false
+        },
+        {
+          "number": "15",
+          "romaji": "KORE WO MITETARA, KOKORO GA SUU TTO SHIZUKA NI NARIMASHITA",
+          "text": "Guardando questo, il mio cuore si è <b>calmato</b> profondamente.",
+          "note": "(Quando ho toccato la bellezza e la tranquillità giapponese)",
+          "ja": "これを見てたら、心が《スーッと》静かになりました。",
+          "isFavorite": false
+        },
+        {
+          "number": "16",
+          "romaji": "KONO IROAI, KOKORO NI SHIMIMASU",
+          "text": "Questa combinazione di colori mi <b>tocca</b> il cuore...!",
+          "note": "(Quando ho incontrato motivi giapponesi sobri o opere delicate)",
+          "ja": "この色合い、心に《しみます》…！",
+          "isFavorite": false
+        },
+        {
+          "number": "17",
+          "romaji": "TE NI TORA SHUNKAN, KOKORO GA HONWAKA SHIMASHITA",
+          "text": "Nel momento in cui l'ho preso in mano, il mio cuore si è sentito <b>caldo</b>.",
+          "note": "(Con materiali delicati o articoli con personalità)",
+          "ja": "手に取った瞬間、心が《ほんわか》しました。",
+          "isFavorite": false
+        },
+        {
+          "number": "18",
+          "romaji": "KORE WO MISETARA, KAZOKU MO KOKORO GA NAGOMU TO OMOIMASU",
+          "text": "Se mostro questo, penso che anche la famiglia si <b>calmerà</b> il cuore.",
+          "note": "(Una prospettiva che pensa agli altri)",
+          "ja": "これを見せたら、家族も心が《和む》と思います。",
+          "isFavorite": false
+        },
+        {
+          "number": "19",
+          "romaji": "KONO IRO, KOKORO NI SHIKKURI KIMASU",
+          "text": "Questo colore mi <b>calza</b> perfettamente nel cuore.",
+          "note": "(Quando provo vestiti o articoli)",
+          "ja": "この色、心に《しっくり》きます。",
+          "isFavorite": false
+        },
+        {
+          "number": "20",
+          "romaji": "SORE, WATASHI MO DAISUKI DESU. KOKORO GA WAKUWAKU SHIMASU YO NE",
+          "text": "Anche a me piace molto! Il mio cuore si <b>emoziona</b>, vero?",
+          "note": "(Una parola che accorcia le distanze attraverso l'empatia)",
+          "ja": "それ、私も大好きです！心が《ワクワク》しますよね。",
+          "isFavorite": false
+        },
+        {
+          "number": "21",
+          "romaji": "A, KORE... KOKORO NI GUTTO SHIMASHITA. NAYAMIMASU NE",
+          "text": "Ah, questo... mi ha <b>toccato</b> il cuore. È difficile decidere~!",
+          "note": "(Creare un'atmosfera che gode anche dell'indecisione)",
+          "ja": "あ、これ…心に《グッと》きました。悩みますね〜！",
+          "isFavorite": false
+        },
+        {
+          "number": "22",
+          "romaji": "ERANDE IRU JIKAN MO, KOKORO GA MITASARETE IKIMASU",
+          "text": "Anche il tempo che passo a scegliere <b>sazia</b> il mio cuore.",
+          "note": "(La gioia dello shopping stesso)",
+          "ja": "選んでいる時間も、心が《満たされ》ていきます。",
+          "isFavorite": false
+        },
+        {
+          "number": "23",
+          "romaji": "DORE MO SUTEKI DE... KOKORO GA YUREMAKUTTE MASU",
+          "text": "Sono tutti bellissimi... il mio cuore <b>tremola</b> (ride)",
+          "note": "(La sensazione di essere confuso ma felice)",
+          "ja": "どれも素敵で…心が《揺れまくって》ます（笑）",
+          "isFavorite": false
+        },
+        {
+          "number": "24",
+          "romaji": "KONO DEZAIN, KOKORO NI NOKORI MASU NE",
+          "text": "Questo design <b>rimane</b> nel cuore, vero?",
+          "note": "(Sono felice di poter portare a casa il retrogusto dell'arte)",
+          "ja": "このデザイン、心に《残り》ますね。",
+          "isFavorite": false
+        },
+        {
+          "number": "25",
+          "romaji": "KORE, KOKORO NI ZUTTO NOKORI SOUDESU",
+          "text": "Questo sembra che <b>rimarrà</b> nel mio cuore per sempre.",
+          "note": "(Il presentimento che rimarrà come ricordo)",
+          "ja": "これ、心に《ずっと残り》そうです。",
+          "isFavorite": false
+        },
+        {
+          "number": "26",
+          "romaji": "A, KONO KANSOU... KOKORO NO OKU NI HIBIKI MASHITA",
+          "text": "Ah, questa sensazione... ha <b>risonato</b> nel profondo del mio cuore.",
+          "note": "(L'incontro con una commozione inaspettata)",
+          "ja": "あ、この感覚…心の奥に《響き》ました。",
+          "isFavorite": false
+        },
+        {
+          "number": "27",
+          "romaji": "TABI NO NAKA DE, KOKORO GA ICHIBAN UGUITA SHUNKAN KAMOSHIREMASEN",
+          "text": "Potrebbe essere il momento in cui il mio cuore si è <b>mosso</b> di più durante il viaggio.",
+          "note": "(Un acquisto che diventerà un ricordo)",
+          "ja": "旅の中で、心が《いちばん動いた》瞬間かもしれません。",
+          "isFavorite": false
+        },
+        {
+          "number": "28",
+          "romaji": "KONO DEAI, KOKORO NI SHIKKARI KIZAMARE MASHITA",
+          "text": "Questo incontro è stato <b>inciso</b> saldamente nel mio cuore.",
+          "note": "(Concentrando i sentimenti sull'ultimo articolo scelto)",
+          "ja": "この出会い、心に《しっかり刻まれ》ました。",
+          "isFavorite": false
+        },
+        {
+          "number": "29",
+          "romaji": "KORE, OMIYAGE NI SHITARA, KITTO DAREKA NO KOKORO MO HOKKORI SHIMASU YO NE",
+          "text": "Se lo uso come souvenir, sicuramente anche il cuore di qualcun altro si <b>conforterà</b>, vero?",
+          "note": "(Il cuore si riscalda immaginando di regalarlo a qualcuno)",
+          "ja": "これ、お土産にしたら、きっと誰かの心も《ほっこり》しますよね。",
+          "isFavorite": false
+        },
+        {
+          "number": "30",
+          "romaji": "JITSU WA KOU IU NO, DAISUKI NAN DESU. KOKORO NO TSUBO NI HAIRI MASHITA",
+          "text": "In realtà adoro questo tipo di cose. Mi è <b>entrato</b> nel punto debole del cuore.",
+          "note": "(L'incontro del destino con qualcosa che mi piace)",
+          "ja": "実はこういうの、大好きなんです。心の《ツボに入り》ました。",
+          "isFavorite": false
+        },
+        {
+          "number": "31",
+          "romaji": "KORE WA, KOKORO NO GOHOUBI NI SHIMASU",
+          "text": "Questo lo userò come <b>premio</b> per il mio cuore!",
+          "note": "(Quando ho trovato un premio per me stesso dal viaggio)",
+          "ja": "これは、心の《ごほうび》にします！",
+          "isFavorite": false
+        },
+        {
+          "number": "32",
+          "romaji": "ARIGATOU NO KIMOCHI WO, KORE DE TSUTAETAI DESU",
+          "text": "Voglio <b>trasmettere</b> i sentimenti di gratitudine con questo.",
+          "note": "(Shopping come regalo)",
+          "ja": "ありがとうの気持ちを、これで《伝えたい》です。",
+          "isFavorite": false
+        },
+        {
+          "number": "33",
+          "romaji": "KOU IU DEAI GA ARU KARA, TABI GA SUKI NAN DESU",
+          "text": "È per questi incontri che mi piace <b>viaggiare</b>.",
+          "note": "(Gratitudine per l'esperienza dietro i prodotti)",
+          "ja": "こういう出会いがあるから、旅が《好き》なんです。",
+          "isFavorite": false
+        },
+        {
+          "number": "34",
+          "romaji": "MASA NI KOKORO WO KUSUGURU TTE KOU IU KOTO DESU NE",
+          "text": "Questo è davvero quello che si intende per <b>solleticare</b> il cuore.",
+          "note": "(Con design o confezioni)",
+          "ja": "まさに心を《くすぐる》ってこういうことですね。",
+          "isFavorite": false
+        }
+      ]
+    },
+    "transportation": {
+      "messages": [
+        {
+          "number": "1",
+          "romaji": "KIPPU KOUNYUU O OTETSUDIAI ITADAKI ARIGATOU GOZAIMASU",
+          "text": "Grazie mille per avermi aiutato con l'acquisto del biglietto.",
+          "note": "(In una situazione in cui le lingue straniere non funzionavano bene, mi sono sentito sicuro grazie al supporto della biglietteria e del personale della stazione)",
+          "ja": "切符購入をお手伝いいただきありがとうございます",
+          "isFavorite": false
+        },
+        {
+          "number": "2",
+          "romaji": "EIGO ANNAI O MITSUKETE KURETE TASUKARIMASHITA",
+          "text": "Mi avete aiutato a trovare le indicazioni in inglese.",
+          "note": "(Gratitudine in mezzo a cartelli di indicazione piccoli e traduzioni poco chiare)",
+          "ja": "英語案内を見つけてくれて助かりました",
+          "isFavorite": false
+        },
+        {
+          "number": "3",
+          "romaji": "TEINEI NI OSHIETE KURETE, HONTŌ NI KOKOROZUYOKATTA DESU",
+          "text": "Mi avete spiegato con attenzione e mi sono sentito davvero rincuorato.",
+          "note": "(Quando mi sono trovato in difficoltà in una zona rurale o al primo viaggio, e la gente del posto mi ha aiutato)",
+          "ja": "丁寧に教えてくれて、本当に心強かったです",
+          "isFavorite": false
+        },
+        {
+          "number": "4",
+          "romaji": "MICHI ANNAI SHITE KURETE ARIGATOU",
+          "text": "Grazie per avermi indicato la strada.",
+          "note": "(Il momento in cui mi avete aiutato con l'inglese o l'app di traduzione)",
+          "ja": "道案内してくれてありがとう",
+          "isFavorite": false
+        },
+        {
+          "number": "5",
+          "romaji": "KONZATSU JŌKYŌ O OSHIETE KURETE KANSHA SHITEIMASU",
+          "text": "Sono grato che mi abbiate informato sulla situazione del traffico.",
+          "note": "(Consigli in mezzo a difficoltà nel capire gli orari o le condizioni stradali)",
+          "ja": "混雑状況を教えてくれて感謝しています",
+          "isFavorite": false
+        },
+        {
+          "number": "6",
+          "romaji": "KŌSHA BOTAN O OSU TAIMINGU O OSHIETE KURETE ARIGATOU GOZAIMASHITA",
+          "text": "Grazie mille per avermi spiegato quando premere il pulsante di discesa.",
+          "note": "(Quando ero confuso su come scendere dall'autobus)",
+          "ja": "降車ボタンを押すタイミングを教えてくれてありがとうございました",
+          "isFavorite": false
+        },
+        {
+          "number": "7",
+          "romaji": "NORIKA E ANNAI O SHINSETSU NI SETSUMEI SHITE KURETE, HONTŌ NI SUKUWAREMASHITA",
+          "text": "Mi avete spiegato gentilmente le indicazioni per il cambio e mi avete davvero salvato.",
+          "note": "(Quando mi hanno indicato una rotta complessa per raggiungere la destinazione alla stazione)",
+          "ja": "乗換案内を親切に説明してくれて、本当に救われました",
+          "isFavorite": false
+        },
+        {
+          "number": "8",
+          "romaji": "SEKI O YUZUTTE KURETE ARIGATOU GOZAIMASU",
+          "text": "Grazie per avermi ceduto il posto.",
+          "note": "(Un gesto gentile verso anziani o persone che non si sentono bene)",
+          "ja": "席を譲ってくれてありがとうございます",
+          "isFavorite": false
+        },
+        {
+          "number": "9",
+          "romaji": "KŌTSŪ RŪRU O SETSUMEI SHITE KURETE ARIGATOU GOZAIMASU",
+          "text": "Grazie per avermi spiegato le regole del traffico.",
+          "note": "(Considerazione per i visitatori stranieri confusi dalle abitudini opposte, come la guida a destra)",
+          "ja": "交通ルールを説明してくれてありがとうございます",
+          "isFavorite": false
+        },
+        {
+          "number": "10",
+          "romaji": "EGAO DE ANNAI SHITE KURETE URESHIKATTA DESU",
+          "text": "Sono stato felice che mi abbiate guidato con un sorriso.",
+          "note": "(Quando mi avete insegnato con un sorriso, alleviando la mia ansia)",
+          "ja": "笑顔で案内してくれて嬉しかったです",
+          "isFavorite": false
+        },
+        {
+          "number": "11",
+          "romaji": "ISSHO NI SHIRABETE KURETE, HONTŌ NI ARIGATOU",
+          "text": "Grazie mille per aver cercato insieme a me.",
+          "note": "(A chi mi ha aiutato a cercare insieme con lo smartphone)",
+          "ja": "一緒に調べてくれて、本当にありがとう",
+          "isFavorite": false
+        },
+        {
+          "number": "12",
+          "romaji": "ANNAI SHITE KURETE KANSHA SHITEIMASU",
+          "text": "Sono grato per avermi guidato.",
+          "note": "(Quando qualcuno nelle vicinanze mi ha aiutato in una linea dove le indicazioni o gli annunci erano difficili da capire)",
+          "ja": "案内してくれて感謝しています",
+          "isFavorite": false
+        },
+        {
+          "number": "13",
+          "romaji": "ANSHIN SHITE NOREMASHITA. ARIGATOU GOZAIMASHITA",
+          "text": "Ho potuto viaggiare con tranquillità. Grazie mille.",
+          "note": "(Quando mi hanno spiegato attentamente la linea)",
+          "ja": "安心して乗れました。ありがとうございました",
+          "isFavorite": false
+        }
+      ]
+    }
+  },
+  "ありがとう": "Grazie!"
+}
