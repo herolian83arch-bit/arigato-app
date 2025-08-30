@@ -49,7 +49,8 @@ const supportedLanguages = {
   'fr': 'Français',
   'de': 'Deutsch',
   'it': 'Italiano',
-  'ru': 'Русский'
+  'ru': 'Русский',
+  'tw': '繁體中文'
 };
 
 document.addEventListener('DOMContentLoaded', async () => {
