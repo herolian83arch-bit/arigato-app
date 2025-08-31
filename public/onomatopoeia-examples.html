@@ -13,19 +13,36 @@
       <div class="back-navigation">
         <button class="back-btn" onclick="window.location.href='onomatopoeia-scenes.html'">← シーン選択に戻る</button>
       </div>
+
+      <!-- 言語選択ボタン -->
+      <div class="language-selector">
+        <div class="language-buttons">
+          <button class="lang-btn active" data-lang="ja" onclick="changeLanguage('ja')">日本語</button>
+          <button class="lang-btn" data-lang="en" onclick="changeLanguage('en')">English</button>
+          <button class="lang-btn" data-lang="zh" onclick="changeLanguage('zh')">中文</button>
+          <button class="lang-btn" data-lang="ko" onclick="changeLanguage('ko')">한국어</button>
+          <button class="lang-btn" data-lang="de" onclick="changeLanguage('de')">Deutsch</button>
+          <button class="lang-btn" data-lang="fr" onclick="changeLanguage('fr')">Français</button>
+          <button class="lang-btn" data-lang="it" onclick="changeLanguage('it')">Italiano</button>
+          <button class="lang-btn" data-lang="tw" onclick="changeLanguage('tw')">繁體中文</button>
+        </div>
+      </div>
     </header>
-    
+
     <main>
       <div id="examples-container">
         <!-- 例文はJavaScriptで動的に生成 -->
       </div>
     </main>
   </div>
-  
+
+  <script src="translation-api.js"></script>
   <script>
     let onomatopoeiaData = [];
     let currentScene = '';
-    
+    let currentLanguage = 'ja'; // 現在選択されている言語
+    let translatedSceneItems = []; // 翻訳された例文のキャッシュ
+
     // プレミアム状態の確認
     document.addEventListener('DOMContentLoaded', async function() {
       const isPremium = localStorage.getItem('premiumActive') === 'true';
@@ -34,26 +51,26 @@
         window.location.href = 'index.html';
         return;
       }
-      
+
       // URLパラメータからシーン名を取得
       const urlParams = new URLSearchParams(window.location.search);
       currentScene = urlParams.get('scene');
-      
+
       if (!currentScene) {
         // シーン名が指定されていない場合はシーン選択画面に戻る
         window.location.href = 'onomatopoeia-scenes.html';
         return;
       }
-      
+
       // シーンタイトルを更新
       document.getElementById('scene-title').textContent = currentScene;
-      
+
       // オノマトペデータを読み込み
       await loadOnomatopoeiaData();
       // 例文を表示
       displayExamples();
     });
-    
+
     // オノマトペデータを読み込み
     async function loadOnomatopoeiaData() {
       try {
@@ -61,40 +78,40 @@
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}: ${response.statusText}`);
         }
-        
+
         const rawData = await response.json();
-        
+
         // romajiを大文字に変換
         onomatopoeiaData = rawData.map(item => ({
           ...item,
           romaji: item.romaji ? item.romaji.toUpperCase() : item.romaji
         }));
-        
+
         console.log(`📚 Loaded ${onomatopoeiaData.length} onomatopoeia entries`);
       } catch (error) {
         console.error('オノマトペデータの読み込みに失敗:', error);
         onomatopoeiaData = [];
       }
     }
-    
+
     // 例文を表示
     function displayExamples() {
       const examplesContainer = document.getElementById('examples-container');
-      
-      // 現在のシーンの例文をフィルタリング
-      const sceneItems = onomatopoeiaData.filter(item => item.scene === currentScene);
-      
-      if (sceneItems.length === 0) {
+
+      // 表示する例文を決定（翻訳済みがあれば使用、なければ元のデータ）
+      const displayItems = translatedSceneItems.length > 0 ? translatedSceneItems : onomatopoeiaData.filter(item => item.scene === currentScene);
+
+      if (displayItems.length === 0) {
         examplesContainer.innerHTML = '<p>このシーンの例文が見つかりませんでした。</p>';
         return;
       }
-      
+
       let html = '';
-      for (const item of sceneItems) {
+      for (const item of displayItems) {
         // 音声再生機能の有効/無効チェック
-        const isTTSEnabled = localStorage.getItem('feature_tts') === '1' || 
+        const isTTSEnabled = localStorage.getItem('feature_tts') === '1' ||
                              (typeof window !== 'undefined' && window.speechSynthesis);
-        
+
         html += `
           <div class="onomatopoeia-item" data-testid="dict-row">
             <div class="item-header">
@@ -116,10 +133,10 @@
           </div>
         `;
       }
-      
+
       examplesContainer.innerHTML = html;
     }
-    
+
     // 音声再生
     function playAudio(text) {
       if ('speechSynthesis' in window) {
@@ -131,7 +148,7 @@
         speechSynthesis.speak(utterance);
       }
     }
-    
+
     // お気に入り状態の確認
     function isFavorite(id) {
       if (!id) return false;
@@ -142,20 +159,20 @@
         return false;
       }
     }
-    
+
     // お気に入りの切り替え
     function toggleFavorite(id, button) {
       if (!id) return false;
-      
+
       try {
         const favorites = JSON.parse(localStorage.getItem('arigato_favorites_v1') || '{}');
         const stringId = String(id);
         const currentState = favorites[stringId] || false;
         const newState = !currentState;
-        
+
         favorites[stringId] = newState;
         localStorage.setItem('arigato_favorites_v1', JSON.stringify(favorites));
-        
+
         // UI更新
         if (newState) {
           button.innerHTML = '★';
@@ -170,12 +187,82 @@
           button.setAttribute('aria-label', 'お気に入りに追加');
           button.setAttribute('aria-pressed', 'false');
         }
-        
+
         return newState;
       } catch (error) {
         console.warn('Failed to toggle favorite:', error);
         return false;
       }
+    }
+
+    // 言語を切り替え
+    async function changeLanguage(lang) {
+      if (lang === currentLanguage) return;
+
+      // 言語ボタンのアクティブ状態を更新
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+
+      currentLanguage = lang;
+
+      // 翻訳中のローディング表示
+      showLoading();
+
+      try {
+        if (lang === 'ja') {
+          // 日本語の場合は翻訳不要
+          translatedSceneItems = [];
+        } else {
+          // 現在のシーンの例文を翻訳
+          await translateSceneItems(lang);
+        }
+
+        // 例文を再表示
+        displayExamples();
+      } catch (error) {
+        console.error('言語切り替えエラー:', error);
+        // エラー時は元の言語に戻す
+        currentLanguage = 'ja';
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          btn.classList.remove('active');
+        });
+        document.querySelector('[data-lang="ja"]').classList.add('active');
+      } finally {
+        hideLoading();
+      }
+    }
+
+    // シーンの例文を翻訳
+    async function translateSceneItems(targetLang) {
+      if (targetLang === 'ja') return;
+
+      const sceneItems = onomatopoeiaData.filter(item => item.scene === currentScene);
+
+      try {
+        translatedSceneItems = await window.translationAPI.translateSceneItems(sceneItems, targetLang);
+        console.log(`✅ シーン例文の翻訳完了: ${translatedSceneItems.length}件`);
+      } catch (error) {
+        console.error('シーン例文翻訳エラー:', error);
+        translatedSceneItems = sceneItems; // エラー時は元の例文
+      }
+    }
+
+    // ローディング表示
+    function showLoading() {
+      const examplesContainer = document.getElementById('examples-container');
+      examplesContainer.innerHTML = `
+        <div class="loading-container">
+          <div class="loading-spinner"></div>
+          <p>翻訳中...</p>
+        </div>
+      `;
+    }
+
+    // ローディング非表示
+    function hideLoading() {
+      // ローディングは自動的にdisplayExamples()で解除される
     }
   </script>
 </body>
