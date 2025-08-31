@@ -221,7 +221,7 @@ async function loadLanguage(lang) {
 
 // 前後2言語をプリフェッチ（パフォーマンス向上）
 async function preloadAdjacentLanguages(currentLang) {
-  const supportedLanguages = ['en', 'ja', 'zh', 'ko', 'pt', 'es', 'fr', 'de', 'it', 'ru'];
+  const supportedLanguages = ['en', 'ja', 'zh', 'ko', 'fr', 'de', 'it', 'tw'];
   const currentIndex = supportedLanguages.indexOf(currentLang);
 
   if (currentIndex === -1) return;
