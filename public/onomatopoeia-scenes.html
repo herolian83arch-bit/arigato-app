@@ -15,23 +15,21 @@
       </div>
 
       <!-- 言語選択ボタン -->
-      <div class="language-selector">
-        <div class="language-buttons">
-          <button class="lang-btn active" data-lang="ja" onclick="changeLanguage('ja')">日本語</button>
-          <button class="lang-btn" data-lang="en" onclick="changeLanguage('en')">English</button>
-          <button class="lang-btn" data-lang="zh" onclick="changeLanguage('zh')">中文</button>
-          <button class="lang-btn" data-lang="ko" onclick="changeLanguage('ko')">한국어</button>
-          <button class="lang-btn" data-lang="de" onclick="changeLanguage('de')">Deutsch</button>
-          <button class="lang-btn" data-lang="fr" onclick="changeLanguage('fr')">Français</button>
-          <button class="lang-btn" data-lang="it" onclick="changeLanguage('it')">Italiano</button>
-          <button class="lang-btn" data-lang="tw" onclick="changeLanguage('tw')">繁體中文</button>
-        </div>
+      <div class="lang-container">
+        <button class="lang-btn active" data-lang="ja" onclick="changeLanguage('ja')">日本語</button>
+        <button class="lang-btn" data-lang="en" onclick="changeLanguage('en')">English</button>
+        <button class="lang-btn" data-lang="zh" onclick="changeLanguage('zh')">中文</button>
+        <button class="lang-btn" data-lang="ko" onclick="changeLanguage('ko')">한국어</button>
+        <button class="lang-btn" data-lang="de" onclick="changeLanguage('de')">Deutsch</button>
+        <button class="lang-btn" data-lang="fr" onclick="changeLanguage('fr')">Français</button>
+        <button class="lang-btn" data-lang="it" onclick="changeLanguage('it')">Italiano</button>
+        <button class="lang-btn" data-lang="tw" onclick="changeLanguage('tw')">繁體中文</button>
       </div>
     </header>
 
     <main>
       <div class="scenes-intro">
-        <p>学習したいシーンを選択してください</p>
+        <p id="scenes-intro-text">学習したいシーンを選択してください</p>
       </div>
 
       <div id="scenes-grid" class="scene-grid">
@@ -40,11 +38,11 @@
     </main>
   </div>
 
-  <script src="translation-api.js"></script>
+    <script src="translation-api.js"></script>
   <script>
     let onomatopoeiaData = [];
-    let currentLanguage = 'ja'; // 現在選択されている言語
-    let translatedSceneTitles = {}; // 翻訳されたシーンのタイトルのキャッシュ
+    let currentLanguage = 'ja';
+    let translationAPI = null;
 
     // プレミアム状態の確認
     document.addEventListener('DOMContentLoaded', async function() {
@@ -54,6 +52,14 @@
         window.location.href = 'index.html';
         return;
       }
+
+      // 翻訳APIの初期化
+      translationAPI = new TranslationAPI();
+
+      // 保存された言語設定を復元
+      const savedLanguage = localStorage.getItem('onomatopoeiaLanguage') || 'ja';
+      currentLanguage = savedLanguage;
+      updateLanguageButtons();
 
       // オノマトペデータを読み込み
       await loadOnomatopoeiaData();
@@ -84,8 +90,30 @@
       }
     }
 
+        // 言語切り替え
+    async function changeLanguage(lang) {
+      if (currentLanguage === lang) return;
+
+      currentLanguage = lang;
+      localStorage.setItem('onomatopoeiaLanguage', lang);
+      updateLanguageButtons();
+
+      // シーン一覧を再表示（翻訳付き）
+      await displayScenes();
+    }
+
+    // 言語ボタンの状態更新
+    function updateLanguageButtons() {
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.lang === currentLanguage) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
     // シーン一覧を表示
-    function displayScenes() {
+    async function displayScenes() {
       const scenesContainer = document.getElementById('scenes-grid');
 
       // シーンをグループ化
@@ -98,17 +126,53 @@
       });
 
       let html = '';
-      Object.keys(sceneGroups).forEach(scene => {
-        const count = sceneGroups[scene].length;
-        const displayTitle = translatedSceneTitles[scene] || scene;
-        html += `
-          <div class="scene-card" onclick="selectScene('${scene}')">
-            <div class="scene-icon">📚</div>
-            <div class="scene-title">${displayTitle}</div>
-            <div class="scene-count">${count}例文</div>
-          </div>
-        `;
-      });
+      const scenes = Object.keys(sceneGroups);
+
+      // 日本語以外の場合は翻訳を実行
+      if (currentLanguage !== 'ja') {
+        try {
+          const translatedScenes = await translationAPI.translateMultipleTexts(scenes, currentLanguage);
+
+          for (let i = 0; i < scenes.length; i++) {
+            const originalScene = scenes[i];
+            const translatedScene = translatedScenes[i];
+            const count = sceneGroups[originalScene].length;
+
+            html += `
+              <div class="scene-card" onclick="selectScene('${originalScene}')">
+                <div class="scene-icon">📚</div>
+                <div class="scene-title">${translatedScene}</div>
+                <div class="scene-count">${count}例文</div>
+              </div>
+            `;
+          }
+        } catch (error) {
+          console.error('シーン翻訳エラー:', error);
+          // エラー時は元のシーン名で表示
+          scenes.forEach(scene => {
+            const count = sceneGroups[scene].length;
+            html += `
+              <div class="scene-card" onclick="selectScene('${scene}')">
+                <div class="scene-icon">📚</div>
+                <div class="scene-title">${scene}</div>
+                <div class="scene-count">${count}例文</div>
+              </div>
+            `;
+          });
+        }
+      } else {
+        // 日本語の場合は翻訳不要
+        scenes.forEach(scene => {
+          const count = sceneGroups[scene].length;
+          html += `
+            <div class="scene-card" onclick="selectScene('${scene}')">
+              <div class="scene-icon">📚</div>
+              <div class="scene-title">${scene}</div>
+              <div class="scene-count">${count}例文</div>
+            </div>
+          `;
+        });
+      }
 
       scenesContainer.innerHTML = html;
     }
@@ -118,89 +182,6 @@
       // URLパラメータでシーン名を渡す
       const encodedScene = encodeURIComponent(scene);
       window.location.href = `onomatopoeia-examples.html?scene=${encodedScene}`;
-    }
-
-    // 言語を切り替え
-    async function changeLanguage(lang) {
-      if (lang === currentLanguage) return;
-
-      // 言語ボタンのアクティブ状態を更新
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
-
-      currentLanguage = lang;
-
-      // 翻訳中のローディング表示
-      showLoading();
-
-      try {
-        if (lang === 'ja') {
-          // 日本語の場合は翻訳不要
-          translatedSceneTitles = {};
-        } else {
-          // シーンのタイトルを翻訳
-          await translateSceneTitles(lang);
-        }
-
-        // シーン一覧を再表示
-        displayScenes();
-      } catch (error) {
-        console.error('言語切り替えエラー:', error);
-        // エラー時は元の言語に戻す
-        currentLanguage = 'ja';
-          document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.remove('active');
-          });
-          document.querySelector('[data-lang="ja"]').classList.add('active');
-      } finally {
-        hideLoading();
-      }
-    }
-
-    // シーンのタイトルを翻訳
-    async function translateSceneTitles(targetLang) {
-      if (targetLang === 'ja') return;
-
-      const sceneGroups = {};
-      onomatopoeiaData.forEach(item => {
-        if (!sceneGroups[item.scene]) {
-          sceneGroups[item.scene] = [];
-        }
-        sceneGroups[item.scene].push(item);
-      });
-
-      const sceneTitles = Object.keys(sceneGroups);
-
-      for (const sceneTitle of sceneTitles) {
-        try {
-          const translatedTitle = await window.translationAPI.translateSceneTitle(sceneTitle, targetLang);
-          translatedSceneTitles[sceneTitle] = translatedTitle;
-
-          // API制限を考慮して少し待機
-          await new Promise(resolve => setTimeout(resolve, 200));
-        } catch (error) {
-          console.error(`シーンタイトル翻訳エラー (${sceneTitle}):`, error);
-          translatedSceneTitles[sceneTitle] = sceneTitle; // エラー時は元のタイトル
-        }
-      }
-    }
-
-    // ローディング表示
-    function showLoading() {
-      const scenesContainer = document.getElementById('scenes-grid');
-      scenesContainer.innerHTML = `
-        <div class="loading-container">
-          <div class="loading-spinner"></div>
-          <p>翻訳中...</p>
-        </div>
-      `;
-    }
-
-    // ローディング非表示
-    function hideLoading() {
-      // ローディングは自動的にdisplayScenes()で解除される
     }
   </script>
 </body>
