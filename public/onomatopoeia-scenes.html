@@ -166,7 +166,6 @@
               <div class="scene-card" onclick="selectScene('${originalScene}')">
                 <div class="scene-icon">📚</div>
                 <div class="scene-title">${translatedScene}</div>
-                <div class="scene-count">${count}例文</div>
               </div>
             `;
           }
@@ -180,7 +179,6 @@
               <div class="scene-card" onclick="selectScene('${scene}')">
                 <div class="scene-icon">📚</div>
                 <div class="scene-title">${scene}</div>
-                <div class="scene-count">${count}例文</div>
               </div>
             `;
           });
@@ -191,12 +189,10 @@
       } else {
         // 日本語の場合は翻訳不要
         scenes.forEach(scene => {
-          const count = sceneGroups[scene].length;
           html += `
             <div class="scene-card" onclick="selectScene('${scene}')">
               <div class="scene-icon">📚</div>
               <div class="scene-title">${scene}</div>
-              <div class="scene-count">${count}例文</div>
             </div>
           `;
         });
