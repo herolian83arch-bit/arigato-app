@@ -23,7 +23,7 @@
         <button class="lang-btn" data-lang="de" onclick="changeLanguage('de')">Deutsch</button>
         <button class="lang-btn" data-lang="fr" onclick="changeLanguage('fr')">Français</button>
         <button class="lang-btn" data-lang="it" onclick="changeLanguage('it')">Italiano</button>
-        <button class="lang-btn" data-lang="tw" onclick="changeLanguage('tw')">繁體中文</button>
+        <button class="lang-btn" data-lang="zh-TW" onclick="changeLanguage('zh-TW')">繁體中文</button>
       </div>
     </header>
 
@@ -34,6 +34,12 @@
 
       <div id="scenes-grid" class="scene-grid">
         <!-- シーンはJavaScriptで動的に生成 -->
+      </div>
+
+      <!-- ローディング表示 -->
+      <div id="loading-indicator" class="loading-indicator" style="display: none;">
+        <div class="loading-spinner"></div>
+        <p>翻訳中...</p>
       </div>
     </main>
   </div>
@@ -90,7 +96,7 @@
       }
     }
 
-        // 言語切り替え
+            // 言語切り替え
     async function changeLanguage(lang) {
       if (currentLanguage === lang) return;
 
@@ -98,8 +104,29 @@
       localStorage.setItem('onomatopoeiaLanguage', lang);
       updateLanguageButtons();
 
+      // ローディング表示を開始
+      showLoading();
+
       // シーン一覧を再表示（翻訳付き）
       await displayScenes();
+
+      // ローディング表示を終了
+      hideLoading();
+    }
+
+    // ローディング表示の制御
+    function showLoading() {
+      const loadingIndicator = document.getElementById('loading-indicator');
+      if (loadingIndicator) {
+        loadingIndicator.style.display = 'block';
+      }
+    }
+
+    function hideLoading() {
+      const loadingIndicator = document.getElementById('loading-indicator');
+      if (loadingIndicator) {
+        loadingIndicator.style.display = 'none';
+      }
     }
 
     // 言語ボタンの状態更新

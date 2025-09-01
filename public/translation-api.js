@@ -16,7 +16,7 @@ class TranslationAPI {
       'de': 'Deutsch',
       'fr': 'Français',
       'it': 'Italiano',
-      'tw': '繁體中文'
+      'zh-TW': '繁體中文'
     };
   }
 
