@@ -96,7 +96,7 @@
       }
     }
 
-            // 言語切り替え
+                // 言語切り替え
     async function changeLanguage(lang) {
       if (currentLanguage === lang) return;
 
@@ -104,14 +104,8 @@
       localStorage.setItem('onomatopoeiaLanguage', lang);
       updateLanguageButtons();
 
-      // ローディング表示を開始
-      showLoading();
-
       // シーン一覧を再表示（翻訳付き）
       await displayScenes();
-
-      // ローディング表示を終了
-      hideLoading();
     }
 
     // ローディング表示の制御
@@ -158,6 +152,9 @@
       // 日本語以外の場合は翻訳を実行
       if (currentLanguage !== 'ja') {
         try {
+          // 翻訳処理中はローディングを表示
+          showLoading();
+
           const translatedScenes = await translationAPI.translateMultipleTexts(scenes, currentLanguage);
 
           for (let i = 0; i < scenes.length; i++) {
@@ -173,6 +170,7 @@
               </div>
             `;
           }
+
         } catch (error) {
           console.error('シーン翻訳エラー:', error);
           // エラー時は元のシーン名で表示
@@ -186,6 +184,9 @@
               </div>
             `;
           });
+        } finally {
+          // 必ずローディング表示を終了
+          hideLoading();
         }
       } else {
         // 日本語の場合は翻訳不要
