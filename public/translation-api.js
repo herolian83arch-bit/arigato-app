@@ -215,8 +215,8 @@ class TranslationAPI {
       const translatedItem = { ...item };
 
       // 元の日本語データを保持（音声再生用）
-      translatedItem.originalMain = item.main;
-      translatedItem.originalDescription = item.description?.ja;
+      translatedItem.originalMain = item.main || '';
+      translatedItem.originalDescription = item.description?.ja || '';
 
       // mainフィールドの翻訳結果を適用
       const mainMapping = textMapping.find(m => m.type === 'main' && m.index === index);
@@ -235,7 +235,8 @@ class TranslationAPI {
         };
       }
 
-      // romajiは翻訳対象外（そのまま保持）
+      // romajiは翻訳対象外（確実に保持）
+      translatedItem.romaji = item.romaji;
 
       return translatedItem;
     });
