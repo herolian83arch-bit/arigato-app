@@ -45,10 +45,14 @@
   </div>
 
     <script src="translation-api.js"></script>
+    <script src="translation-batch.js"></script>
+    <script src="translation-cache.js"></script>
   <script>
     let onomatopoeiaData = [];
     let currentLanguage = 'ja';
     let translationAPI = null;
+    let batchTranslationManager = null;
+    let translationCache = null;
 
     // プレミアム状態の確認
     document.addEventListener('DOMContentLoaded', async function() {
@@ -61,6 +65,8 @@
 
       // 翻訳APIの初期化
       translationAPI = new TranslationAPI();
+      batchTranslationManager = window.batchTranslationManager;
+      translationCache = window.translationCache;
 
       // 保存された言語設定を復元
       const savedLanguage = localStorage.getItem('onomatopoeiaLanguage') || 'ja';
@@ -155,7 +161,19 @@
           // 翻訳処理中はローディングを表示
           showLoading();
 
-          const translatedScenes = await translationAPI.translateMultipleTexts(scenes, currentLanguage);
+          // キャッシュから翻訳結果を取得
+          let translatedScenes = translationCache.get('scene_titles', currentLanguage);
+
+          if (!translatedScenes) {
+            // キャッシュにない場合は翻訳を実行
+            console.log(`🚀 シーンタイトル翻訳開始: ${currentLanguage}`);
+            translatedScenes = await translationAPI.translateMultipleTexts(scenes, currentLanguage);
+
+            // 翻訳結果をキャッシュに保存
+            translationCache.set('scene_titles', currentLanguage, translatedScenes);
+          } else {
+            console.log(`📦 シーンタイトルキャッシュヒット: ${currentLanguage}`);
+          }
 
           for (let i = 0; i < scenes.length; i++) {
             const originalScene = scenes[i];
@@ -166,6 +184,7 @@
               <div class="scene-card" onclick="selectScene('${originalScene}')">
                 <div class="scene-icon">📚</div>
                 <div class="scene-title">${translatedScene}</div>
+                <div class="scene-count">${count}例文</div>
               </div>
             `;
           }
@@ -179,6 +198,7 @@
               <div class="scene-card" onclick="selectScene('${scene}')">
                 <div class="scene-icon">📚</div>
                 <div class="scene-title">${scene}</div>
+                <div class="scene-count">${count}例文</div>
               </div>
             `;
           });
@@ -189,10 +209,12 @@
       } else {
         // 日本語の場合は翻訳不要
         scenes.forEach(scene => {
+          const count = sceneGroups[scene].length;
           html += `
             <div class="scene-card" onclick="selectScene('${scene}')">
               <div class="scene-icon">📚</div>
               <div class="scene-title">${scene}</div>
+              <div class="scene-count">${count}例文</div>
             </div>
           `;
         });
@@ -203,9 +225,9 @@
 
     // シーンを選択
     function selectScene(scene) {
-      // URLパラメータでシーン名を渡す
+      // URLパラメータでシーン名と言語設定を渡す
       const encodedScene = encodeURIComponent(scene);
-      window.location.href = `onomatopoeia-examples.html?scene=${encodedScene}`;
+      window.location.href = `onomatopoeia-examples.html?scene=${encodedScene}&lang=${currentLanguage}`;
     }
   </script>
 </body>

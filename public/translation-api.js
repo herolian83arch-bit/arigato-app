@@ -7,7 +7,8 @@ class TranslationAPI {
   constructor() {
     this.apiKey = 'AIzaSyCYxjAwaKi1KRwsYF0CvO69O5X0gCADdIs';
     this.baseUrl = 'https://translation.googleapis.com/language/translate/v2';
-    this.cache = new Map(); // 翻訳結果のキャッシュ
+    this.cache = new Map(); // メモリキャッシュ（高速アクセス用）
+    this.localCache = null; // ローカルストレージキャッシュ（永続化用）
     this.supportedLanguages = {
       'ja': '日本語',
       'en': 'English',
@@ -18,6 +19,25 @@ class TranslationAPI {
       'it': 'Italiano',
       'zh-TW': '繁體中文'
     };
+
+    // ローカルストレージキャッシュの初期化
+    this.initializeLocalCache();
+  }
+
+  /**
+   * ローカルストレージキャッシュを初期化
+   */
+  initializeLocalCache() {
+    try {
+      if (typeof window !== 'undefined' && window.translationCache) {
+        this.localCache = window.translationCache;
+        console.log('✅ ローカルストレージキャッシュ初期化完了');
+      } else {
+        console.warn('⚠️ ローカルストレージキャッシュが利用できません');
+      }
+    } catch (error) {
+      console.error('ローカルストレージキャッシュ初期化エラー:', error);
+    }
   }
 
   /**
@@ -68,7 +88,55 @@ class TranslationAPI {
   }
 
   /**
-   * 複数テキストを一括翻訳
+   * 複数テキストを一括翻訳（バッチ翻訳）
+   * @param {Array<string>} texts - 翻訳対象のテキスト配列
+   * @param {string} targetLang - 翻訳先言語
+   * @returns {Promise<Array<string>>} 翻訳結果の配列
+   */
+  async translateBatch(texts, targetLang) {
+    if (targetLang === 'ja' || !texts || texts.length === 0) {
+      return texts; // 日本語の場合は翻訳不要
+    }
+
+    // キャッシュチェック（バッチ用）
+    const cacheKey = `batch_${texts.join('|')}_${targetLang}`;
+    if (this.cache.has(cacheKey)) {
+      return this.cache.get(cacheKey);
+    }
+
+    try {
+      const response = await fetch(`${this.baseUrl}?key=${this.apiKey}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          q: texts, // 配列で一括送信
+          target: targetLang,
+          source: 'ja'
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`Batch translation API error: ${response.status}`);
+      }
+
+      const data = await response.json();
+      const translatedTexts = data.data.translations.map(t => t.translatedText);
+
+      // キャッシュに保存
+      this.cache.set(cacheKey, translatedTexts);
+
+      return translatedTexts;
+    } catch (error) {
+      console.error('バッチ翻訳エラー:', error);
+      // エラー時は個別翻訳にフォールバック
+      return await this.translateMultipleTexts(texts, targetLang);
+    }
+  }
+
+  /**
+   * 複数テキストを順次翻訳（フォールバック用）
    * @param {Array<string>} texts - 翻訳対象のテキスト配列
    * @param {string} targetLang - 翻訳先言語
    * @returns {Promise<Array<string>>} 翻訳結果の配列
@@ -101,46 +169,76 @@ class TranslationAPI {
   }
 
   /**
-   * シーンの例文を翻訳
+   * シーンの例文を翻訳（バッチ翻訳 + ローカルストレージキャッシュ対応）
    * @param {Array} sceneItems - シーンの例文配列
    * @param {string} targetLang - 翻訳先言語
+   * @param {string} sceneName - シーン名（キャッシュ用）
    * @returns {Promise<Array>} 翻訳された例文配列
    */
-  async translateSceneItems(sceneItems, targetLang) {
+  async translateSceneItems(sceneItems, targetLang, sceneName = '') {
     if (targetLang === 'ja') {
       return sceneItems; // 日本語の場合は翻訳不要
     }
 
-    const translatedItems = [];
-    for (const item of sceneItems) {
+    // ローカルストレージキャッシュチェック
+    if (this.localCache && sceneName) {
+      const cachedData = this.localCache.get(sceneName, targetLang);
+      if (cachedData) {
+        console.log(`📦 ローカルストレージキャッシュヒット: ${sceneName} (${targetLang})`);
+        return cachedData;
+      }
+    }
+
+    // 翻訳対象テキストを抽出
+    const textsToTranslate = [];
+    const textMapping = [];
+
+    sceneItems.forEach((item, index) => {
+      // mainフィールドを翻訳
+      if (item.main) {
+        textsToTranslate.push(item.main);
+        textMapping.push({ type: 'main', index: index, original: item.main });
+      }
+
+      // description.jaフィールドを翻訳
+      if (item.description && item.description.ja) {
+        textsToTranslate.push(item.description.ja);
+        textMapping.push({ type: 'description', index: index, original: item.description.ja });
+      }
+    });
+
+    // バッチ翻訳実行
+    const translatedTexts = await this.translateBatch(textsToTranslate, targetLang);
+
+    // 結果をマッピング
+    const translatedItems = sceneItems.map((item, index) => {
       const translatedItem = { ...item };
 
-      // textフィールドを翻訳
-      if (item.text) {
-        // HTMLタグを除去して翻訳
-        const cleanText = item.text.replace(/<[^>]*>/g, '');
-        const translatedText = await this.translateText(cleanText, targetLang);
-        translatedItem.text = translatedText;
+      // mainフィールドの翻訳結果を適用
+      const mainMapping = textMapping.find(m => m.type === 'main' && m.index === index);
+      if (mainMapping) {
+        const mainIndex = textMapping.indexOf(mainMapping);
+        translatedItem.main = translatedTexts[mainIndex];
       }
 
-      // noteフィールドを翻訳
-      if (item.note) {
-        const translatedNote = await this.translateText(item.note, targetLang);
-        translatedItem.note = translatedNote;
-      }
-
-      // jaフィールドを翻訳
-      if (item.ja) {
-        const translatedJa = await this.translateText(item.ja, targetLang);
-        translatedItem.ja = translatedJa;
+      // descriptionフィールドの翻訳結果を適用
+      const descMapping = textMapping.find(m => m.type === 'description' && m.index === index);
+      if (descMapping) {
+        const descIndex = textMapping.indexOf(descMapping);
+        translatedItem.description = {
+          ...item.description,
+          [targetLang]: translatedTexts[descIndex]
+        };
       }
 
       // romajiは翻訳対象外（そのまま保持）
 
-      translatedItems.push(translatedItem);
+      return translatedItem;
+    });
 
-      // API制限を考慮して少し待機
-      await new Promise(resolve => setTimeout(resolve, 100));
+    // ローカルストレージキャッシュに保存
+    if (this.localCache && sceneName) {
+      this.localCache.set(sceneName, targetLang, translatedItems);
     }
 
     return translatedItems;
@@ -167,7 +265,36 @@ class TranslationAPI {
    * キャッシュをクリア
    */
   clearCache() {
-    this.cache.clear();
+    this.cache.clear(); // メモリキャッシュをクリア
+
+    if (this.localCache) {
+      this.localCache.clear(); // ローカルストレージキャッシュをクリア
+    }
+
+    console.log('🗑️ 全キャッシュクリア完了');
+  }
+
+  /**
+   * キャッシュ統計を取得
+   * @returns {Object} キャッシュ統計
+   */
+  getCacheStats() {
+    const memoryStats = {
+      size: this.cache.size,
+      keys: Array.from(this.cache.keys())
+    };
+
+    const localStats = this.localCache ? this.localCache.getStats() : null;
+
+    return {
+      memory: memoryStats,
+      local: localStats,
+      total: {
+        memoryItems: memoryStats.size,
+        localItems: localStats ? localStats.totalItems : 0,
+        totalItems: memoryStats.size + (localStats ? localStats.totalItems : 0)
+      }
+    };
   }
 }
 
