@@ -445,7 +445,7 @@ async function showOnomatopoeiaScene(scene) {
           <div class="item-number">${item.id}</div>
           <div class="item-actions" style="display:inline-flex;align-items:center;">
             ${isTTSEnabled ? `
-              <button class="speak-btn" onclick="playAudioWithFallback('', '${item.main.replace(/'/g, "\\'")}', 'ja-JP')" aria-label="音声再生" style="background:none;border:none;cursor:pointer;font-size:1.2em;margin-left:12px;" data-card-control="true">
+              <button class="speak-btn" onclick="playAudioWithFallback('', '${item.voiceJa.replace(/'/g, "\\'")}', 'ja-JP')" aria-label="音声再生" style="background:none;border:none;cursor:pointer;font-size:1.2em;margin-left:12px;" data-card-control="true">
                 🔊
               </button>
             ` : ''}
