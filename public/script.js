@@ -1,3 +1,19 @@
+
+// 完全な文字エスケープ処理関数
+function escape_for_javascript(text) {
+  if (!text) return "";
+
+  return text
+    .replace(/\\/g, '\\\\')  // バックスラッシュ
+    .replace(/'/g, "\\'")       // シングルクォート
+    .replace(/"/g, '\\"')       // ダブルクォート
+    .replace(/\n/g, '\\n')     // 改行
+    .replace(/\r/g, '\\r')     // キャリッジリターン
+    .replace(/\t/g, '\\t')     // タブ
+    .replace(/\b/g, '\\b')     // バックスペース
+    .replace(/\f/g, '\\f');    // フォームフィード
+}
+
 let currentLang = 'en';
 let currentScene = 'airport';
 let languageData = {};
@@ -445,7 +461,7 @@ async function showOnomatopoeiaScene(scene) {
           <div class="item-number">${item.id}</div>
           <div class="item-actions" style="display:inline-flex;align-items:center;">
             ${isTTSEnabled ? `
-              <button class="speak-btn" onclick="playAudioWithFallback('', '${item.text.replace(/'/g, "\\'").replace(/"/g, '\\"')}', 'ja-JP')" aria-label="音声再生" style="background:none;border:none;cursor:pointer;font-size:1.2em;margin-left:12px;" data-card-control="true">
+              <button class="speak-btn" onclick="playAudioWithFallback('', '${escape_for_javascript(item.text)}', 'ja-JP')" aria-label="音声再生" style="background:none;border:none;cursor:pointer;font-size:1.2em;margin-left:12px;" data-card-control="true">
                 🔊
               </button>
             ` : ''}
@@ -731,7 +747,7 @@ function renderScene() {
         <div class="message-header">
           <span class="message-number" style="font-weight:bold;margin-right:8px;">${messageId}.</span>
           <div class="message-actions" style="display:inline-flex;align-items:center;">
-            <button class="speak-btn" style="margin-left:12px;background:none;border:none;cursor:pointer;font-size:1.2em;" onclick="playAudioWithFallback('', '${(msg.ja || msg.text || '').replace(/<[^>]+>/g, '').replace(/'/g, "\\'")}', 'ja-JP')" aria-label="音声再生" data-card-control="true">🔊</button>
+            <button class="speak-btn" style="margin-left:12px;background:none;border:none;cursor:pointer;font-size:1.2em;" onclick="playAudioWithFallback('', '${escape_for_javascript((msg.ja || msg.text || '').replace(/<[^>]+>/g, ''))}', 'ja-JP')" aria-label="音声再生" data-card-control="true">🔊</button>
           </div>
         </div>
         <div class="message-content" style="display:inline-block;">
