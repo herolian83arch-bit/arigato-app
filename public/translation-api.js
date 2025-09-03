@@ -214,12 +214,11 @@ class TranslationAPI {
     const translatedItems = sceneItems.map((item, index) => {
       const translatedItem = { ...item };
 
-      // mainフィールドは元の日本語を保持（音声再生用）
-      // 翻訳結果をtranslatedMainフィールドに保存（表示用）
+      // mainフィールドの翻訳結果を適用
       const mainMapping = textMapping.find(m => m.type === 'main' && m.index === index);
       if (mainMapping) {
         const mainIndex = textMapping.indexOf(mainMapping);
-        translatedItem.translatedMain = translatedTexts[mainIndex];
+        translatedItem.main = translatedTexts[mainIndex];
       }
 
       // descriptionフィールドの翻訳結果を適用
