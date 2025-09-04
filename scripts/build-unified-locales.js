@@ -64,7 +64,7 @@ async function buildUnifiedLocale(lang) {
         title: sceneData.scene,
         messages: sceneData.messages.map(msg => ({
           number: msg.id,
-          text: msg.text || msg.main, // textフィールドが存在する場合はそれを使用、なければmainを使用
+          text: msg.jpsen || msg.main, // jpsenフィールドが存在する場合はそれを使用、なければmainを使用
           romaji: msg.romaji,
           note: msg.description,
           ja: msg.main // 日本語版の場合は元のテキストを保持

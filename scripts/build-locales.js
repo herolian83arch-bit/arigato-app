@@ -100,7 +100,7 @@ async function translateSceneData(sceneData, targetLang) {
       id: message.id,
       sceneId: message.sceneId,
       romaji: message.romaji, // 翻訳除外
-      text: message.text, // 翻訳除外
+      jpsen: message.jpsen, // 翻訳除外
       main: await translateText(message.main, targetLang),
       description: await translateText(message.description.ja, targetLang),
       translation: message.translation // 既存翻訳を保持
