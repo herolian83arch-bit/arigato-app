@@ -747,7 +747,7 @@ function renderScene() {
         <div class="message-header">
           <span class="message-number" style="font-weight:bold;margin-right:8px;">${messageId}.</span>
           <div class="message-actions" style="display:inline-flex;align-items:center;">
-            <button class="speak-btn" style="margin-left:12px;background:none;border:none;cursor:pointer;font-size:1.2em;" onclick="playAudioWithFallback('', '${escape_for_javascript((msg.ja || msg.text || '').replace(/<[^>]+>/g, ''))}', 'ja-JP')" aria-label="音声再生" data-card-control="true">🔊</button>
+            <button class="speak-btn" style="margin-left:12px;background:none;border:none;cursor:pointer;font-size:1.2em;" onclick="playAudioWithFallback('', '${escape_for_javascript((msg.jpsen || '').replace(/<[^>]+>/g, ''))}', 'ja-JP')" aria-label="音声再生" data-card-control="true">🔊</button>
           </div>
         </div>
         <div class="message-content" style="display:inline-block;">
