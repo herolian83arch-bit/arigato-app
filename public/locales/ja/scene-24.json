@@ -1,0 +1,290 @@
+{
+  "scene": "夜の時間・ロマンチックな雰囲気",
+  "messages": [
+    {
+      "id": 346,
+      "sceneId": 24,
+      "scene": "夜の時間・ロマンチックな雰囲気",
+      "main": "夜空を見上げると、《キラキラ》と星が瞬いていました。",
+      "romaji": "YOZORAWOMIAGERUTO 《KIRAKIRA》TOHOSHIGASHUNITEIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《キラキラ》は小さな光が輝き続ける様子を表し、ロマンチックな夜空にぴったりの表現です。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "夜空を見上げると、《キラキラ》と星が瞬いていました。"
+    },
+    {
+      "id": 347,
+      "sceneId": 24,
+      "scene": "夜の時間・ロマンチックな雰囲気",
+      "main": "静かな部屋で《しん…》と時が止まったようでした。",
+      "romaji": "SHIZUKANAHEYADE 《SHIN…》TOTOKIGATOMATTAYOUDESHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《しん…》は音のない深い静けさをそのまま表現し、夜の世界を感じさせます。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "静かな部屋で《しん…》と時が止まったようでした。"
+    },
+    {
+      "id": 348,
+      "sceneId": 24,
+      "scene": "夜の時間・ロマンチックな雰囲気",
+      "main": "蝋燭の炎が《チリチリ》と小さく揺れていました。",
+      "romaji": "ROUSOKUNOHONOOGA 《CHIRICHIRI》TOCHISAKUYURETEIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《チリチリ》は小さな炎が発する静かな音を表現し、夜の空間に漂う温もりと幻想感を伝えます。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "蝋燭の炎が《チリチリ》と小さく揺れていました。"
+    },
+    {
+      "id": 349,
+      "sceneId": 24,
+      "scene": "夜の時間・ロマンチックな雰囲気",
+      "main": "照明が《ほわん》と灯って、落ち着いた雰囲気に包まれました。",
+      "romaji": "SHOUMEIGA 《HOWAN》TOTOMOTSUTE OCHITSUITAFUN'IKINITSUTSUMAREMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《ほわん》は柔らかくひろがる光や空気感を、あたたかく表現する音です。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "照明が《ほわん》と灯って、落ち着いた雰囲気に包まれました。"
+    },
+    {
+      "id": 350,
+      "sceneId": 24,
+      "scene": "夜の時間・ロマンチックな雰囲気",
+      "main": "風が《そよそよ》とカーテンを揺らしていました。",
+      "romaji": "KAZEGA 《SOYOSOYO》TOKAATENWOYURASHITEIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《そよそよ》はやさしく吹く風の音を表現し、心地よい静けさを伝えます。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "風が《そよそよ》とカーテンを揺らしていました。"
+    },
+    {
+      "id": 351,
+      "sceneId": 24,
+      "scene": "夜の時間・ロマンチックな雰囲気",
+      "main": "となりにいるだけで、《ぽかぽか》と心が温まりました。",
+      "romaji": "TONARINIIRUDAKEDE 《POKAPOKA》TOKOKOROGAATATAMARIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《ぽかぽか》は内側からじんわりと温かさが広がる感覚を表す言葉です。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "となりにいるだけで、《ぽかぽか》と心が温まりました。"
+    },
+    {
+      "id": 352,
+      "sceneId": 24,
+      "scene": "夜の時間・ロマンチックな雰囲気",
+      "main": "月が《ふんわり》と雲に包まれていました。",
+      "romaji": "GATSUGA 《FUNWARI》TOKUMONITSUTSUMARETEIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《ふんわり》はやわらかく包むような動きや光の質感を表します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "月が《ふんわり》と雲に包まれていました。"
+    },
+    {
+      "id": 353,
+      "sceneId": 24,
+      "scene": "夜の時間・ロマンチックな雰囲気",
+      "main": "ふたりで歩く音が《コツコツ》と響いていました。",
+      "romaji": "FUTARIDEARUKUOTOGA 《KOTSUKOTSU》TOHIBIITEIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《コツコツ》は足音の響きをリズミカルに描写し、静かな夜道に寄り添います。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "ふたりで歩く音が《コツコツ》と響いていました。"
+    },
+    {
+      "id": 354,
+      "sceneId": 24,
+      "scene": "夜の時間・ロマンチックな雰囲気",
+      "main": "沈黙の中に《じんわり》と優しさが伝わってきました。",
+      "romaji": "CHINMOKUNONAKANI 《JINWARI》TOYASASHISAGATSUTAWATTEKIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《じんわり》は言葉にならない感情が、静かに心に届く様子を表します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "沈黙の中に《じんわり》と優しさが伝わってきました。"
+    },
+    {
+      "id": 355,
+      "sceneId": 24,
+      "scene": "夜の時間・ロマンチックな雰囲気",
+      "main": "手をつないだ瞬間、《ドキン》と心が跳ねました。",
+      "romaji": "TEWOTSUNAIDASHUNKAN 《DOKIN》TOKOKOROGAHANEMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《ドキン》は突然の高鳴りを伝えるオノマトペで、ロマンチックな場面にぴったりです。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "手をつないだ瞬間、《ドキン》と心が跳ねました。"
+    },
+    {
+      "id": 356,
+      "sceneId": 24,
+      "scene": "夜の時間・ロマンチックな雰囲気",
+      "main": "キャンドルの炎が《ゆらゆら》揺れていました。",
+      "romaji": "KYANDORUNOHONOOGA 《YURAYURA》YURETEIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《ゆらゆら》はやわらかい揺れの動きや、不確かで幻想的な雰囲気を伝えます。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "キャンドルの炎が《ゆらゆら》揺れていました。"
+    },
+    {
+      "id": 357,
+      "sceneId": 24,
+      "scene": "夜の時間・ロマンチックな雰囲気",
+      "main": "ふとした笑顔に《キュン》としてしまいました。",
+      "romaji": "FUTOSHITAEGAONI 《KYUN》TOSHITESHIMAIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《キュン》は心をギュッとつかまれたような、ときめきの感情を表します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "ふとした笑顔に《キュン》としてしまいました。"
+    },
+    {
+      "id": 358,
+      "sceneId": 24,
+      "scene": "夜の時間・ロマンチックな雰囲気",
+      "main": "夜風に吹かれて《ヒヤリ》としました。",
+      "romaji": "YOKAZENIFUKARETE 《HIYARI》TOSHIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《ヒヤリ》は突然の冷たさや緊張感を一瞬で感じたときに使います。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "夜風に吹かれて《ヒヤリ》としました。"
+    },
+    {
+      "id": 359,
+      "sceneId": 24,
+      "scene": "夜の時間・ロマンチックな雰囲気",
+      "main": "会話が途切れても、《まったり》と心地よく過ごせました。",
+      "romaji": "KAIWAGATOGIRETEMO 《MATTARI》TOKOKOCHIYOKUSUGOSEMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《まったり》はゆったりしていて、緊張のないくつろいだ空気を伝えます。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "会話が途切れても、《まったり》と心地よく過ごせました。"
+    },
+    {
+      "id": 360,
+      "sceneId": 24,
+      "scene": "夜の時間・ロマンチックな雰囲気",
+      "main": "夜が《しっとり》と更けていきました。",
+      "romaji": "YORUGA 《SHITTORI》TOFUKETEIKIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《しっとり》は落ち着きがあり、静けさや余韻を含んだ夜の表情を表現します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "夜が《しっとり》と更けていきました。"
+    }
+  ]
+}

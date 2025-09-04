@@ -1,0 +1,200 @@
+{
+  "scene": "[ES] 学び・体験・ワークショップ",
+  "messages": [
+    {
+      "id": 286,
+      "sceneId": 20,
+      "romaji": "HAJIMETENODOUGUNI 《DOKIDOKI》SHIMASHITA",
+      "jpsen": "初めての道具に《ドキドキ》しました。",
+      "main": "[ES] 初めての道具に《ドキドキ》しました。",
+      "description": "[ES] 《ドキドキ》は期待や緊張で胸が高鳴る様子を表します。体験の始まりにぴったりです。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 287,
+      "sceneId": 20,
+      "romaji": "SENSEINOSETSUMEINI 《FUMUFUMU》TOUNAZUKIMASHITA",
+      "jpsen": "先生の説明に《ふむふむ》とうなずきました。",
+      "main": "[ES] 先生の説明に《ふむふむ》とうなずきました。",
+      "description": "[ES] 《ふむふむ》は理解しながら納得する様子をやさしく表現します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 288,
+      "sceneId": 20,
+      "romaji": "FUDEGAKAMINOUEWO 《SURASURA》TOHASHIRIMASHITA",
+      "jpsen": "筆が紙の上を《スラスラ》と走りました。",
+      "main": "[ES] 筆が紙の上を《スラスラ》と走りました。",
+      "description": "[ES] 《スラスラ》は引っかかりなく気持ちよく進む感覚を、視覚と手触りで伝えます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 289,
+      "sceneId": 20,
+      "romaji": "NENDOWO 《KONEKONE》SURUNOGATANOSHIKATTADESU",
+      "jpsen": "粘土を《こねこね》するのが楽しかったです。",
+      "main": "[ES] 粘土を《こねこね》するのが楽しかったです。",
+      "description": "[ES] 《こねこね》は手で素材をやわらかくこねる動きを、そのまま音で表しています。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 290,
+      "sceneId": 20,
+      "romaji": "SHIPPAISHITE 《GAKKURI》SHITESHIMAIMASHITA",
+      "jpsen": "失敗して《がっくり》してしまいました。",
+      "main": "[ES] 失敗して《がっくり》してしまいました。",
+      "description": "[ES] 《がっくり》は肩を落とすような落ち込みを、やさしく表現する言葉です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 291,
+      "sceneId": 20,
+      "romaji": "DEMOYARINAOSHITE 《WAKUWAKU》GAMODOTSUTEKIMASHITA",
+      "jpsen": "でもやり直して《ワクワク》が戻ってきました。",
+      "main": "[ES] でもやり直して《ワクワク》が戻ってきました。",
+      "description": "[ES] 《ワクワク》は再び湧き上がる期待や高揚感を伝えます。リスタートの時にぴったり。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 292,
+      "sceneId": 20,
+      "romaji": "SHUUCHUUSHITEIRUUCHINI 《SHIIN》TOSHIZUMARIKAERIMASHITA",
+      "jpsen": "集中しているうちに《シーン》と静まり返りました。",
+      "main": "[ES] 集中しているうちに《シーン》と静まり返りました。",
+      "description": "[ES] 《シーン》は周囲が静かになる様子を表す、緊張感と集中を伝える音です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 293,
+      "sceneId": 20,
+      "romaji": "SHIAGENI 《KYUKKYUTSU》TOMIGAKIMASHITA",
+      "jpsen": "仕上げに《キュッキュッ》と磨きました。",
+      "main": "[ES] 仕上げに《キュッキュッ》と磨きました。",
+      "description": "[ES] 《キュッキュッ》は磨いたときの音をリアルに再現し、手応えある達成感を演出します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 294,
+      "sceneId": 20,
+      "romaji": "IROWOOMONETEIKUUCHINI 《JIWAJIWA》TOSEKAIGAHIROGARIMASHITA",
+      "jpsen": "色を重ねていくうちに《じわじわ》と世界が広がりました。",
+      "main": "[ES] 色を重ねていくうちに《じわじわ》と世界が広がりました。",
+      "description": "[ES] 《じわじわ》はゆっくりと内側から変化が広がる様子を、感覚的に伝える言葉です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 295,
+      "sceneId": 20,
+      "romaji": "OMOWAZU 《NINMARI》SHITESHIMAUDEKIBAEDESHITA",
+      "jpsen": "思わず《ニンマリ》してしまう出来栄えでした。",
+      "main": "[ES] 思わず《ニンマリ》してしまう出来栄えでした。",
+      "description": "[ES] 《ニンマリ》はちょっと得意げに満足する笑みを表現します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 296,
+      "sceneId": 20,
+      "romaji": "KOUSHINOHITOKOTONI 《HATSU》TOSASERAREMASHITA",
+      "jpsen": "講師の一言に《ハッ》とさせられました。",
+      "main": "[ES] 講師の一言に《ハッ》とさせられました。",
+      "description": "[ES] 《ハッ》は気づきや意外なことに瞬間的に驚く様子を表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 297,
+      "sceneId": 20,
+      "romaji": "NAKAMANOSAKUHINNI 《JIITSU》TOMIITSUTESHIMAIMASHITA",
+      "jpsen": "仲間の作品に《じーっ》と見入ってしまいました。",
+      "main": "[ES] 仲間の作品に《じーっ》と見入ってしまいました。",
+      "description": "[ES] 《じーっ》は集中してじっと見つめる様子を表す視線のオノマトペです。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 298,
+      "sceneId": 20,
+      "romaji": "SAIGONI 《PACHIPACHI》TOHAKUSHUGAWAKIMASHITA",
+      "jpsen": "最後に《パチパチ》と拍手が湧きました。",
+      "main": "[ES] 最後に《パチパチ》と拍手が湧きました。",
+      "description": "[ES] 《パチパチ》は拍手の音をそのまま表現し、場の一体感や祝福の雰囲気を伝えます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 299,
+      "sceneId": 20,
+      "romaji": "SAKUHINWOTENISHITE 《JINWARI》TOURESHISAGAKOMIAGEMASHITA",
+      "jpsen": "作品を手にして《じんわり》とうれしさがこみ上げました。",
+      "main": "[ES] 作品を手にして《じんわり》とうれしさがこみ上げました。",
+      "description": "[ES] 《じんわり》は時間をかけて感情が深くしみ出す様子を表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 300,
+      "sceneId": 20,
+      "romaji": "KAERIMICHI 《KIRAKIRA》SHITAKIMOCHIGAMUNENINOKOTSUTEIMASHITA",
+      "jpsen": "帰り道、《キラキラ》した気持ちが胸に残っていました。",
+      "main": "[ES] 帰り道、《キラキラ》した気持ちが胸に残っていました。",
+      "description": "[ES] 《キラキラ》は心が輝いているような充実感や感動の余韻を伝えます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    }
+  ]
+}

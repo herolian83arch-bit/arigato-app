@@ -1,0 +1,290 @@
+{
+  "scene": "恋愛",
+  "messages": [
+    {
+      "id": 563,
+      "sceneId": 37,
+      "scene": "恋愛",
+      "main": "目が合った瞬間、胸が《キュン》と締めつけられました。",
+      "romaji": "MEGAATSUTASHUNKAN MUNEGA 《KYUN》TOSHIMETSUKERAREMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《キュン》は一瞬で心が動かされたときのときめきを表現します。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "目が合った瞬間、胸が《キュン》と締めつけられました。"
+    },
+    {
+      "id": 564,
+      "sceneId": 37,
+      "scene": "恋愛",
+      "main": "突然の告白に《ドキッ》と心が跳ねました。",
+      "romaji": "TOTSUZENNOKOKUHAKUNI 《DOKITSU》TOKOKOROGAHANEMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ドキッ》は驚きや緊張が一気に高まる瞬間の鼓動を描写します。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "突然の告白に《ドキッ》と心が跳ねました。"
+    },
+    {
+      "id": 565,
+      "sceneId": 37,
+      "scene": "恋愛",
+      "main": "隣に座っただけで《ソワソワ》してしまいました。",
+      "romaji": "TONARINISUWATSUTADAKEDE 《SOWASOWA》SHITESHIMAIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ソワソワ》は落ち着かない気持ちを軽やかに伝えます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "隣に座っただけで《ソワソワ》してしまいました。"
+    },
+    {
+      "id": 566,
+      "sceneId": 37,
+      "scene": "恋愛",
+      "main": "ふたりきりになって《モジモジ》してしまいました。",
+      "romaji": "FUTARIKIRININATTE 《MOJIMOJI》SHITESHIMAIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《モジモジ》は恥ずかしさや照れをこらえた控えめな動きを表します。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "ふたりきりになって《モジモジ》してしまいました。"
+    },
+    {
+      "id": 567,
+      "sceneId": 37,
+      "scene": "恋愛",
+      "main": "メールを待つ間、《ソワソワ》が止まりませんでした。",
+      "romaji": "MEERUWOMATSUKAN 《SOWASOWA》GADOMARIMASENDESHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ソワソワ》は期待や不安で気持ちが落ち着かない様子を示します。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "メールを待つ間、《ソワソワ》が止まりませんでした。"
+    },
+    {
+      "id": 568,
+      "sceneId": 37,
+      "scene": "恋愛",
+      "main": "返事が来た瞬間、《パッ》と心が明るくなりました。",
+      "romaji": "HENJIGAKITASHUNKAN 《PATSU》TOKOKOROGAAKARUKUNARIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《パッ》は光が差し込むように気持ちが晴れる音です。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "返事が来た瞬間、《パッ》と心が明るくなりました。"
+    },
+    {
+      "id": 569,
+      "sceneId": 37,
+      "scene": "恋愛",
+      "main": "手が触れた瞬間、《ビクッ》と反応してしまいました。",
+      "romaji": "TEGAFURETASHUNKAN 《BIKUTSU》TOHANNOUSHITESHIMAIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ビクッ》は予想外の刺激に驚いた感覚を素早く表します。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "手が触れた瞬間、《ビクッ》と反応してしまいました。"
+    },
+    {
+      "id": 570,
+      "sceneId": 37,
+      "scene": "恋愛",
+      "main": "一緒に歩くと《ドキドキ》が止まりませんでした。",
+      "romaji": "ISSHONIARUKUTO 《DOKIDOKI》GADOMARIMASENDESHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ドキドキ》は胸の高鳴りや緊張、喜びを含む定番表現です。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "一緒に歩くと《ドキドキ》が止まりませんでした。"
+    },
+    {
+      "id": 571,
+      "sceneId": 37,
+      "scene": "恋愛",
+      "main": "デートの帰り道、《キラキラ》と夜景がふたりを包みました。",
+      "romaji": "DEETONOKAERIMICHI 《KIRAKIRA》TOYAKEIGAFUTARIWOTSUTSUMIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《キラキラ》は光や気持ちの輝き、ロマンティックな雰囲気を演出します。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "デートの帰り道、《キラキラ》と夜景がふたりを包みました。"
+    },
+    {
+      "id": 572,
+      "sceneId": 37,
+      "scene": "恋愛",
+      "main": "手紙を読んでいると《じーん》と涙があふれました。",
+      "romaji": "TEGAMIWOYONDEIRUTO 《JIIN》TONAMIDAGAAFUREMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《じーん》は感動がしみ込むように心に広がる様子を表します。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "手紙を読んでいると《じーん》と涙があふれました。"
+    },
+    {
+      "id": 573,
+      "sceneId": 37,
+      "scene": "恋愛",
+      "main": "初デートの前は《バタバタ》と準備に追われました。",
+      "romaji": "HATSUDEETONOMAEHA 《BATABATA》TOJUNBINIOWAREMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《バタバタ》は忙しさや緊張による慌ただしさを描写します。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "初デートの前は《バタバタ》と準備に追われました。"
+    },
+    {
+      "id": 574,
+      "sceneId": 37,
+      "scene": "恋愛",
+      "main": "彼の声に《ホッ》と安心しました。",
+      "romaji": "KANOKOENI 《HOTSU》TOANSHINSHIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ホッ》は緊張がほどけた瞬間の呼吸の音をやさしく伝えます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "彼の声に《ホッ》と安心しました。"
+    },
+    {
+      "id": 575,
+      "sceneId": 37,
+      "scene": "恋愛",
+      "main": "待ち合わせ場所で《キョロキョロ》してしまいました。",
+      "romaji": "MACHIAWASEBASHODE 《KYOROKYORO》SHITESHIMAIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《キョロキョロ》は周囲を気にして探す様子を可愛らしく描きます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "待ち合わせ場所で《キョロキョロ》してしまいました。"
+    },
+    {
+      "id": 576,
+      "sceneId": 37,
+      "scene": "恋愛",
+      "main": "ふたりで笑い合う時間が《ポカポカ》と心地よく感じました。",
+      "romaji": "FUTARIDEWARAIAUJIKANGA 《POKAPOKA》TOKOKOCHIYOKUKANJIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ポカポカ》はぬくもりと安心を含む幸福な時間を表現します。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "ふたりで笑い合う時間が《ポカポカ》と心地よく感じました。"
+    },
+    {
+      "id": 577,
+      "sceneId": 37,
+      "scene": "恋愛",
+      "main": "別れ際の一言に《ジーン》と余韻が残りました。",
+      "romaji": "WAKARESAINOHITOKOTONI 《JIIN》TOYOINGANOKORIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ジーン》は言葉が心の奥にしみわたる、感動の瞬間を描きます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "別れ際の一言に《ジーン》と余韻が残りました。"
+    }
+  ]
+}

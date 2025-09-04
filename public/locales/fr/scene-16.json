@@ -1,0 +1,200 @@
+{
+  "scene": "[FR] ホテル・宿泊先",
+  "messages": [
+    {
+      "id": 752,
+      "sceneId": 16,
+      "romaji": "CHEKKUINGA 《SUMUUZU》DE TOTEMOKAITEKIDESHITA",
+      "jpsen": "チェックインが《スムーズ》で、とても快適でした",
+      "main": "[FR] チェックインが《スムーズ》で、とても快適でした",
+      "description": "[FR] 《スムーズ》は、滞りなく流れるような進行。ストレスのない体験に。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 227,
+      "sceneId": 16,
+      "romaji": "HEYANO 《PIKAPIKA》NASEIKETSUSANIKANDOUSHIMASHITA",
+      "jpsen": "部屋の《ピカピカ》な清潔さに感動しました",
+      "main": "[FR] 部屋の《ピカピカ》な清潔さに感動しました",
+      "description": "[FR] 《ピカピカ》は、光り輝く様子や新しさ・きらめきを伝える擬音です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 228,
+      "sceneId": 16,
+      "romaji": "BEDDOGA 《FUKAFUKA》DE SAIKOUNONEMURIDESHITA",
+      "jpsen": "ベッドが《ふかふか》で、最高の眠りでした",
+      "main": "[FR] ベッドが《ふかふか》で、最高の眠りでした",
+      "description": "[FR] 《ふかふか》は、柔らかく心地よい感触。快適な寝具の印象に。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 229,
+      "sceneId": 16,
+      "romaji": "ONSENNOYUGA 《TOROORI》SHITEITE HADAGAYOROKOBIMASHITA",
+      "jpsen": "温泉の湯が《とろーり》していて、肌が喜びました",
+      "main": "[FR] 温泉の湯が《とろーり》していて、肌が喜びました",
+      "description": "[FR] 《とろーり》は、やわらかくとろけるような質感。温泉の贅沢さに。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 230,
+      "sceneId": 16,
+      "romaji": "SUTAFFUNO 《TEKIPAKI》SHITATAIOUNIKANDOUSHIMASHITA",
+      "jpsen": "スタッフの《テキパキ》した対応に感動しました",
+      "main": "[FR] スタッフの《テキパキ》した対応に感動しました",
+      "description": "[FR] 《テキパキ》は、無駄なく迅速に行動する様子。プロフェッショナルな対応に。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 231,
+      "sceneId": 16,
+      "romaji": "CHEKKUAUTOGA 《SUMUUZU》DETASUKARIMASHITA",
+      "jpsen": "チェックアウトが《スムーズ》で助かりました",
+      "main": "[FR] チェックアウトが《スムーズ》で助かりました",
+      "description": "[FR] 《スムーズ》は、滞りなく流れるような進行。ストレスのない体験に。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 232,
+      "sceneId": 16,
+      "romaji": "《PATAPATA》TONIZUKURIWOSHINAGARA NAGORIOSHISAGATSUNORIMASHITA",
+      "jpsen": "《パタパタ》と荷造りをしながら、名残惜しさが募りました",
+      "main": "[FR] 《パタパタ》と荷造りをしながら、名残惜しさが募りました",
+      "description": "[FR] 《パタパタ》は、慌ただしく動く音や様子。出発前のバタバタ感に。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 233,
+      "sceneId": 16,
+      "romaji": "《KIRAKIRA》SHITAOMOIDEWOMUNENI HOTERUWONOCHINISHIMASHITA",
+      "jpsen": "《キラキラ》した思い出を胸に、ホテルを後にしました",
+      "main": "[FR] 《キラキラ》した思い出を胸に、ホテルを後にしました",
+      "description": "[FR] 《キラキラ》は、まぶしいほどの美しい記憶や感動を象徴します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 234,
+      "sceneId": 16,
+      "romaji": "CHOUSHOKUNO 《WAIWAI》TOSHITAFUN'IKIGATANOSHIKATTADESU",
+      "jpsen": "朝食の《ワイワイ》とした雰囲気が楽しかったです",
+      "main": "[FR] 朝食の《ワイワイ》とした雰囲気が楽しかったです",
+      "description": "[FR] 《ワイワイ》は、にぎやかで活気のある様子を音で表現した言葉です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 235,
+      "sceneId": 16,
+      "romaji": "YAKEIGA 《KIRAKIRA》TOKAGAYAITE KANDOUTEKIDESHITA",
+      "jpsen": "夜景が《キラキラ》と輝いて、感動的でした",
+      "main": "[FR] 夜景が《キラキラ》と輝いて、感動的でした",
+      "description": "[FR] 《キラキラ》は、光を反射して輝く様子や、華やかさ・非日常感を強調する場面で使われます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 236,
+      "sceneId": 16,
+      "romaji": "《DOKIDOKI》SHINAGARA TOKUBETSUNAYORUWOSUGOSHIMASHITA",
+      "jpsen": "《ドキドキ》しながら、特別な夜を過ごしました",
+      "main": "[FR] 《ドキドキ》しながら、特別な夜を過ごしました",
+      "description": "[FR] 《ドキドキ》は緊張や期待で胸が高鳴る様子を示すオノマトペです。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 237,
+      "sceneId": 16,
+      "romaji": "《HIYAHIYA》SHINAGARA ONSENNISHINKARIMASHITA",
+      "jpsen": "《ヒヤヒヤ》しながら、温泉に浸かりました",
+      "main": "[FR] 《ヒヤヒヤ》しながら、温泉に浸かりました",
+      "description": "[FR] 《ヒヤヒヤ》は、少し緊張しながらも期待に胸を膨らませる様子。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 238,
+      "sceneId": 16,
+      "romaji": "《UTTORI》TOONSENNOYUNISHINKATTE SHIFUKUNOJIKANDESHITA",
+      "jpsen": "《ウットリ》と温泉の湯に浸かって、至福の時間でした",
+      "main": "[FR] 《ウットリ》と温泉の湯に浸かって、至福の時間でした",
+      "description": "[FR] 《ウットリ》は、心地よさに浸って恍惚とした様子。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 239,
+      "sceneId": 16,
+      "romaji": "《HOTSU》TOHITOIKITSUITE TABINOTSUKAREWOIYASHIMASHITA",
+      "jpsen": "《ホッ》と一息ついて、旅の疲れを癒しました",
+      "main": "[FR] 《ホッ》と一息ついて、旅の疲れを癒しました",
+      "description": "[FR] 《ホッ》は、安心して緊張が解ける様子。リラックスした瞬間に。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 240,
+      "sceneId": 16,
+      "romaji": "《FUKAFUKA》NOFUTONDE SAIKOUNONEMURIWOTANOSHIMIMASHITA",
+      "jpsen": "《ふかふか》の布団で、最高の眠りを楽しみました",
+      "main": "[FR] 《ふかふか》の布団で、最高の眠りを楽しみました",
+      "description": "[FR] 《ふかふか》は、柔らかく心地よい感触。快適な寝具の印象に。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    }
+  ]
+}

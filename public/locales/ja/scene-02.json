@@ -1,0 +1,290 @@
+{
+  "scene": "ショッピング",
+  "messages": [
+    {
+      "id": 616,
+      "sceneId": 2,
+      "scene": "ショッピング",
+      "main": "《キュンキュン》するほど可愛い雑貨に出会ってしまいました。",
+      "romaji": "《KYUNKYUN》SURUHODOKAWAIZAKKANIDEATSUTESHIMAIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《キュンキュン》は、心がときめくような強い感情を連続的に感じたときに使われます。恋愛や感動、衝動買いにもぴったりです。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "《キュンキュン》するほど可愛い雑貨に出会ってしまいました。"
+    },
+    {
+      "id": 617,
+      "sceneId": 2,
+      "scene": "ショッピング",
+      "main": "鏡の前で着てみたら、《ピン》ときたんです、この一着。",
+      "romaji": "KAGAMINOMAEDEKITEMITARA 《PIN》TOKITANDESU KONOITCHAKU",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ピン》は、直感的に「これだ」と感じた瞬間に使われる表現で、決断やひらめきの強さを伝えます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "鏡の前で着てみたら、《ピン》ときたんです、この一着。"
+    },
+    {
+      "id": 618,
+      "sceneId": 2,
+      "scene": "ショッピング",
+      "main": "バッグのデザインに《ズキュン》と撃ち抜かれました。",
+      "romaji": "BAGGUNODEZAINNI 《ZUKYUN》TOUCHINUKAREMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ズキュン》は、心を撃ち抜かれるような強いインパクトを受けたときに使われます。衝撃的なときめきを表します。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "バッグのデザインに《ズキュン》と撃ち抜かれました。"
+    },
+    {
+      "id": 619,
+      "sceneId": 2,
+      "scene": "ショッピング",
+      "main": "色と柄のバランスが、《しっくり》きました。",
+      "romaji": "IROTOGARANOBARANSUGA 《SHIKKURI》KIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《しっくり》は、自分にぴったり合う・しっかりなじむという意味合いで、違和感のなさを穏やかに伝えます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "色と柄のバランスが、《しっくり》きました。"
+    },
+    {
+      "id": 620,
+      "sceneId": 2,
+      "scene": "ショッピング",
+      "main": "並んでいる中で、この一点だけが《キラキラ》して見えました。",
+      "romaji": "NARANDEIRUNAKADE KONOITTENDAKEGA 《KIRAKIRA》SHITEMIEMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《キラキラ》は、光や輝きだけでなく、感覚的な「目をひく魅力」も表現します。運命の出会いを感じるときに。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "並んでいる中で、この一点だけが《キラキラ》して見えました。"
+    },
+    {
+      "id": 621,
+      "sceneId": 2,
+      "scene": "ショッピング",
+      "main": "手に取った瞬間、《ワクワク》が止まりませんでした。",
+      "romaji": "TENITOTSUTASHUNKAN 《WAKUWAKU》GADOMARIMASENDESHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ワクワク》は、これから起こることへの期待や楽しさで心がはずむ様子を表します。買い物の高揚感にぴったりです。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "手に取った瞬間、《ワクワク》が止まりませんでした。"
+    },
+    {
+      "id": 622,
+      "sceneId": 2,
+      "scene": "ショッピング",
+      "main": "お店の空気が《ほっこり》していて、長居してしまいました。",
+      "romaji": "OMISENOKUUKIGA 《HOKKORI》SHITEITE NAGAISHITESHIMAIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ほっこり》は、心があたたかくなるような空間・雰囲気を表現します。雑貨店や小さなカフェにもよく合います。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "お店の空気が《ほっこり》していて、長居してしまいました。"
+    },
+    {
+      "id": 623,
+      "sceneId": 2,
+      "scene": "ショッピング",
+      "main": "このデザイン、《ジワジワ》くるんですよね…。",
+      "romaji": "KONODEZAIN 《JIWAJIWA》KURUNDESUYONE…",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ジワジワ》は、最初は目立たないけれど、だんだんと良さが伝わってくる様子を表します。隠れた魅力や余韻に使えます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "このデザイン、《ジワジワ》くるんですよね…。"
+    },
+    {
+      "id": 624,
+      "sceneId": 2,
+      "scene": "ショッピング",
+      "main": "ディスプレイを見た瞬間、《トキメキ》ました。",
+      "romaji": "DISUPUREIWOMITASHUNKAN 《TOKIMEKI》MASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《トキメキ》は、心がパッと華やぐような感情や瞬間を表します。商品との一期一会にぴったりの表現です。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "ディスプレイを見た瞬間、《トキメキ》ました。"
+    },
+    {
+      "id": 625,
+      "sceneId": 2,
+      "scene": "ショッピング",
+      "main": "手触りが《スベスベ》で、ずっと触っていたくなりました。",
+      "romaji": "TEZAWARIGA 《SUBESUBE》DE ZUTTOSAWATSUTEITAKUNARIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《スベスベ》は、滑らかで気持ちのいい手触りを表す語です。布地・スキンケア用品などにも使われます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "手触りが《スベスベ》で、ずっと触っていたくなりました。"
+    },
+    {
+      "id": 626,
+      "sceneId": 2,
+      "scene": "ショッピング",
+      "main": "限定品という言葉に、《グラッ》ときました…。",
+      "romaji": "GENTEIHINTOIUKOTOBANI 《GURATSU》TOKIMASHITA…",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《グラッ》は、心が揺れて気持ちが動いた瞬間を表す語です。迷い・誘惑・衝動に対して使われます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "限定品という言葉に、《グラッ》ときました…。"
+    },
+    {
+      "id": 627,
+      "sceneId": 2,
+      "scene": "ショッピング",
+      "main": "ずっと探していたものに《やっと》出会えた気がしました。",
+      "romaji": "ZUTTOSAGASHITEITAMONONI 《YATTO》DEAETAKIGASHIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《やっと》は努力や時間の末にたどり着いた感覚を表します。買い物での達成感を表現する際にぴったりです。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "ずっと探していたものに《やっと》出会えた気がしました。"
+    },
+    {
+      "id": 628,
+      "sceneId": 2,
+      "scene": "ショッピング",
+      "main": "買うかどうか、《ウロウロ》しながら迷いました。",
+      "romaji": "KAUKADOUKA 《UROURO》SHINAGARAMAYOIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ウロウロ》は、目的地を決めかねてあちこち動き回る様子を表します。決断を迷っている時にリアルです。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "買うかどうか、《ウロウロ》しながら迷いました。"
+    },
+    {
+      "id": 629,
+      "sceneId": 2,
+      "scene": "ショッピング",
+      "main": "他の商品を見ながらも、頭の中で《グルグル》考えてました。",
+      "romaji": "HOKANOSHOUHINWOMINAGARAMO ATAMANONAKADE 《GURUGURU》KANGAETEMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《グルグル》は、同じことを繰り返し考えたり、感情が巡っている様子を表現します。迷いのリアルさを伝えます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "他の商品を見ながらも、頭の中で《グルグル》考えてました。"
+    },
+    {
+      "id": 630,
+      "sceneId": 2,
+      "scene": "ショッピング",
+      "main": "会計のあと、《スッキリ》した気持ちになれました。",
+      "romaji": "KAIKEINOATO 《SUKKIRI》SHITAKIMOCHININAREMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《スッキリ》は、もやもやや迷いが晴れて、爽やかな気分になった状態を表します。買い物の清々しさを伝えるのに効果的です。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "会計のあと、《スッキリ》した気持ちになれました。"
+    }
+  ]
+}

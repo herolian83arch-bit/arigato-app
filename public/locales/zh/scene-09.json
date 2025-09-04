@@ -1,0 +1,200 @@
+{
+  "scene": "[ZH] 自然・風景",
+  "messages": [
+    {
+      "id": 721,
+      "sceneId": 9,
+      "romaji": "KIGINOHAGAKAZENI 《SAWASAWA》TOYURETEIMASHITA",
+      "jpsen": "木々の葉が風に《サワサワ》と揺れていました。",
+      "main": "[ZH] 木々の葉が風に《サワサワ》と揺れていました。",
+      "description": "[ZH] 《サワサワ》は、葉や草が風に軽く触れて鳴る柔らかな音。森の中の心地よい静けさにぴったりです。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 722,
+      "sceneId": 9,
+      "romaji": "OGAWANOMIZUGA 《CHOROCHORO》TONAGARETEIMASU",
+      "jpsen": "小川の水が《チョロチョロ》と流れています。",
+      "main": "[ZH] 小川の水が《チョロチョロ》と流れています。",
+      "description": "[ZH] 《チョロチョロ》は、小さな水の音を表す語。せせらぎや湧き水のやさしい雰囲気に合います。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 723,
+      "sceneId": 9,
+      "romaji": "TAIYOUNOHIKARIGAMIZUUMINI 《KIRAKIRA》TOHANSHASHITEIMASHITA",
+      "jpsen": "太陽の光が湖に《キラキラ》と反射していました。",
+      "main": "[ZH] 太陽の光が湖に《キラキラ》と反射していました。",
+      "description": "[ZH] 《キラキラ》は、光が繊細に輝く様子を表します。透明感や自然の美しさを映し出します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 724,
+      "sceneId": 9,
+      "romaji": "TOOKUDE 《GOROGORO》TOKAMINARINOOTOGAKIKOETEKIMASHITA",
+      "jpsen": "遠くで《ゴロゴロ》と雷の音が聞こえてきました。",
+      "main": "[ZH] 遠くで《ゴロゴロ》と雷の音が聞こえてきました。",
+      "description": "[ZH] 《ゴロゴロ》は、低く響く雷の音。自然のダイナミックさを感じさせる語です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 725,
+      "sceneId": 9,
+      "romaji": "OCHIBAGA 《KASAKASA》TOMATSUTEIMASHITA",
+      "jpsen": "落ち葉が《カサカサ》と舞っていました。",
+      "main": "[ZH] 落ち葉が《カサカサ》と舞っていました。",
+      "description": "[ZH] 《カサカサ》は、乾いた葉や紙などがこすれる軽い音。秋の気配を感じる描写にぴったりです。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 726,
+      "sceneId": 9,
+      "romaji": "MUSHITACHINO 《RIINRIIN》TOIUKOEGAYORUNOSHIZUKESANIHIBIITEIMASHITA",
+      "jpsen": "虫たちの《リーンリーン》という声が夜の静けさに響いていました。",
+      "main": "[ZH] 虫たちの《リーンリーン》という声が夜の静けさに響いていました。",
+      "description": "[ZH] 《リーンリーン》は、鈴虫などの鳴き声を表す語。季節の移ろいと静寂を感じさせます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 727,
+      "sceneId": 9,
+      "romaji": "TAKINOOTOGA 《DODODODO》TOHAKURYOKUWOMOTTEHIBIKIWATATSUTEIMASHITA",
+      "jpsen": "滝の音が《ドドドド》と迫力をもって響き渡っていました。",
+      "main": "[ZH] 滝の音が《ドドドド》と迫力をもって響き渡っていました。",
+      "description": "[ZH] 《ドドドド》は、大量の水が流れる重厚な音を表現します。自然の力強さに適しています。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 728,
+      "sceneId": 9,
+      "romaji": "ASATSUYUGAHANOUEDE 《PURUN》TOYURETEIMASHITA",
+      "jpsen": "朝露が葉の上で《プルン》と揺れていました。",
+      "main": "[ZH] 朝露が葉の上で《プルン》と揺れていました。",
+      "description": "[ZH] 《プルン》は、水分が弾力を持って動く様子を表します。みずみずしさや静かな動きを想起させます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 729,
+      "sceneId": 9,
+      "romaji": "KAZEGA 《BYUUTSU》TOFUKINUKETE BOUSHIGATOBISOUDESHITA",
+      "jpsen": "風が《ビューッ》と吹き抜けて、帽子が飛びそうでした。",
+      "main": "[ZH] 風が《ビューッ》と吹き抜けて、帽子が飛びそうでした。",
+      "description": "[ZH] 《ビューッ》は、強い風が勢いよく吹く音。季節の変わり目や屋外のダイナミズムに。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 730,
+      "sceneId": 9,
+      "romaji": "KONOMIGA 《POTON》TOJIMENNIOCHIMASHITA",
+      "jpsen": "木の実が《ポトン》と地面に落ちました。",
+      "main": "[ZH] 木の実が《ポトン》と地面に落ちました。",
+      "description": "[ZH] 《ポトン》は、小さなものが静かに落ちる音。自然の中の時間の流れをやさしく描けます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 731,
+      "sceneId": 9,
+      "romaji": "MORINOOKUKARA 《ZAWAZAWA》TOOTOGASHITE SUKOSHIDOKIDOKISHIMASHITA",
+      "jpsen": "森の奥から《ザワザワ》と音がして、少しドキドキしました。",
+      "main": "[ZH] 森の奥から《ザワザワ》と音がして、少しドキドキしました。",
+      "description": "[ZH] 《ザワザワ》は、人や自然がざわめくような音を表します。緊張感や不安も内包する言葉です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 732,
+      "sceneId": 9,
+      "romaji": "AMEAGARINOMICHIWOARUKUTO 《GUCHUGUCHU》TOOTOGASHIMASHITA",
+      "jpsen": "雨上がりの道を歩くと、《グチュグチュ》と音がしました。",
+      "main": "[ZH] 雨上がりの道を歩くと、《グチュグチュ》と音がしました。",
+      "description": "[ZH] 《グチュグチュ》は、濡れた地面を踏んだときの湿った音。足元の感触まで伝えます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 733,
+      "sceneId": 9,
+      "romaji": "YUKIGA 《SHINSHIN》TOORITSUMOTTEIMASHITA",
+      "jpsen": "雪が《シンシン》と降り積もっていました。",
+      "main": "[ZH] 雪が《シンシン》と降り積もっていました。",
+      "description": "[ZH] 《シンシン》は、静かに雪が降る様子を表します。音がないからこそ聞こえる\"静けさの音\"です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 734,
+      "sceneId": 9,
+      "romaji": "YUUGURETOKINOSORAGA 《JIWA〜TSU》TOAKAKUSOMATTEIKIMASU",
+      "jpsen": "夕暮れ時の空が《ジワ〜ッ》と赤く染まっていきます。",
+      "main": "[ZH] 夕暮れ時の空が《ジワ〜ッ》と赤く染まっていきます。",
+      "description": "[ZH] 《ジワ〜ッ》は、ゆっくりと広がる感覚を表します。空のグラデーションなどの移ろいにぴったりです。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 735,
+      "sceneId": 9,
+      "romaji": "ASANOKUUKIGA 《HINYARI》TOSHITEKIMOCHIYOKATTADESU",
+      "jpsen": "朝の空気が《ヒンヤリ》として気持ちよかったです。",
+      "main": "[ZH] 朝の空気が《ヒンヤリ》として気持ちよかったです。",
+      "description": "[ZH] 《ヒンヤリ》は、軽く冷たくて清々しい感覚。初夏や早朝の空気に使えます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    }
+  ]
+}

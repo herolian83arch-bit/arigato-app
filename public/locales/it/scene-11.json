@@ -1,0 +1,200 @@
+{
+  "scene": "[IT] お祭り・イベント",
+  "messages": [
+    {
+      "id": 166,
+      "sceneId": 11,
+      "romaji": "YATAINOKAORINISASOWARETE 《WAKUWAKU》GADOMARIMASEN",
+      "jpsen": "屋台の香りに誘われて、《ワクワク》が止まりません。",
+      "main": "[IT] 屋台の香りに誘われて、《ワクワク》が止まりません。",
+      "description": "[IT] 《ワクワク》は、期待や楽しみで心がはずむ様子。祭りの始まりにぴったりです。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 167,
+      "sceneId": 11,
+      "romaji": "TAIKONOOTOGA 《DONDON》TOMUNENIHIBIKIMASHITA",
+      "jpsen": "太鼓の音が《ドンドン》と胸に響きました。",
+      "main": "[IT] 太鼓の音が《ドンドン》と胸に響きました。",
+      "description": "[IT] 《ドンドン》は、太鼓や足音などの力強い音を表現します。場の高揚感を演出します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 168,
+      "sceneId": 11,
+      "romaji": "YATAINOTAKOYAKIWO 《HAFUHAFU》SHINAGARATABEMASHITA",
+      "jpsen": "屋台のたこ焼きを《ハフハフ》しながら食べました。",
+      "main": "[IT] 屋台のたこ焼きを《ハフハフ》しながら食べました。",
+      "description": "[IT] 《ハフハフ》は、熱いものをふーふー冷ましながら食べる様子。屋外の食べ物にぴったりの語です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 169,
+      "sceneId": 11,
+      "romaji": "KINGYOSUKUIDE 《PURUPURU》TOUGOKUKINGYONIMUCHUUNINARIMASHITA",
+      "jpsen": "金魚すくいで《プルプル》と動く金魚に夢中になりました。",
+      "main": "[IT] 金魚すくいで《プルプル》と動く金魚に夢中になりました。",
+      "description": "[IT] 《プルプル》は、小さく震えるような動きを表します。かわいらしさや繊細さが伝わります。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 170,
+      "sceneId": 11,
+      "romaji": "TOMODACHITO 《KYAKKYATSU》TOHASHAGINAGARAARUKIMASHITA",
+      "jpsen": "友達と《キャッキャッ》とはしゃぎながら歩きました。",
+      "main": "[IT] 友達と《キャッキャッ》とはしゃぎながら歩きました。",
+      "description": "[IT] 《キャッキャッ》は、楽しげな笑い声やはしゃぐ様子。子どもや若者らしい無邪気さがあります。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 171,
+      "sceneId": 11,
+      "romaji": "YOMISENOHIKARIGA 《KIRAKIRA》SHITEITE MARUDEYUMENOYOUDESHITA",
+      "jpsen": "夜店の光が《キラキラ》していて、まるで夢のようでした。",
+      "main": "[IT] 夜店の光が《キラキラ》していて、まるで夢のようでした。",
+      "description": "[IT] 《キラキラ》は、光がきらめく様子。美しさや華やかさを表現する語です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 172,
+      "sceneId": 11,
+      "romaji": "MENAMEWO 《PEROPERO》TOTABETE KODOMONOGOROWOOMOIDASHIMASHITA",
+      "jpsen": "綿あめを《ペロペロ》と食べて、子どもの頃を思い出しました。",
+      "main": "[IT] 綿あめを《ペロペロ》と食べて、子どもの頃を思い出しました。",
+      "description": "[IT] 《ペロペロ》は、舌でなめるような動作を表します。懐かしさや楽しさを演出します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 173,
+      "sceneId": 11,
+      "romaji": "SHATEKIDE 《PACHIN》TOATATTE 《YATTAA》TOSAKEBIMASHITA",
+      "jpsen": "射的で《パチン》と当たって、《ヤッター》と叫びました。",
+      "main": "[IT] 射的で《パチン》と当たって、《ヤッター》と叫びました。",
+      "description": "[IT] 《パチン》は、弾が当たる音、《ヤッター》は喜びの叫び声。成功の瞬間を表現します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 174,
+      "sceneId": 11,
+      "romaji": "TOMODACHITO 《WAIWAI》TOOSHABERISHINAGARAARUKIMASHITA",
+      "jpsen": "友達と《ワイワイ》とおしゃべりしながら歩きました。",
+      "main": "[IT] 友達と《ワイワイ》とおしゃべりしながら歩きました。",
+      "description": "[IT] 《ワイワイ》は、にぎやかに話し合う様子。楽しい雰囲気や親しみやすさを表現します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 175,
+      "sceneId": 11,
+      "romaji": "TOMODACHITOISSHONI 《HOTSU》TOANSHINSHIMASHITA",
+      "jpsen": "友達と一緒に《ホッ》と安心しました。",
+      "main": "[IT] 友達と一緒に《ホッ》と安心しました。",
+      "description": "[IT] 《ホッ》は、安心感や緊張から解放されたときの感覚。ぬくもりある関係性に。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 176,
+      "sceneId": 11,
+      "romaji": "SENKOUHANABIGA 《PACHIPACHI》TOSHIZUKANIHIKATSUTEIMASHITA",
+      "jpsen": "線香花火が《パチパチ》と静かに光っていました。",
+      "main": "[IT] 線香花火が《パチパチ》と静かに光っていました。",
+      "description": "[IT] 《パチパチ》は、小さくはじける音や光を表します。静かな感動を呼ぶ花火の描写に。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 177,
+      "sceneId": 11,
+      "romaji": "BON'ODORINOONGAKUGA 《PONPON》TONARIHIBIITEIMASHITA",
+      "jpsen": "盆踊りの音楽が《ポンポン》と鳴り響いていました。",
+      "main": "[IT] 盆踊りの音楽が《ポンポン》と鳴り響いていました。",
+      "description": "[IT] 《ポンポン》は、軽く弾むような音。にぎやかで楽しい雰囲気に最適です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 178,
+      "sceneId": 11,
+      "romaji": "YOOYOOGA 《YURAYURA》TOYURETE NATSUKASHIIKIMOCHININARIMASHITA",
+      "jpsen": "ヨーヨーが《ユラユラ》と揺れて、懐かしい気持ちになりました。",
+      "main": "[IT] ヨーヨーが《ユラユラ》と揺れて、懐かしい気持ちになりました。",
+      "description": "[IT] 《ユラユラ》は、やわらかくゆれる様子。視覚的にも感情的にも落ち着く表現です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 179,
+      "sceneId": 11,
+      "romaji": "KUJIHIKINOKEKKANI 《GAAN》TOOCHIKOMIMASHITA",
+      "jpsen": "くじ引きの結果に《ガーン》と落ち込みました。",
+      "main": "[IT] くじ引きの結果に《ガーン》と落ち込みました。",
+      "description": "[IT] 《ガーン》は、ショックを受けたときの擬音語。落差の大きな感情表現に。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 180,
+      "sceneId": 11,
+      "romaji": "SAIGONOHANABIGA 《DOON》TOYOZORANIHIROGARIMASHITA",
+      "jpsen": "最後の花火が《ドーン》と夜空に広がりました。",
+      "main": "[IT] 最後の花火が《ドーン》と夜空に広がりました。",
+      "description": "[IT] 《ドーン》は、重く大きな音が広がる様子。クライマックスの演出にぴったりです。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    }
+  ]
+}

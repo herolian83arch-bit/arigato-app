@@ -1,0 +1,200 @@
+{
+  "scene": "[DE] レストラン・食事の場",
+  "messages": [
+    {
+      "id": 241,
+      "sceneId": 17,
+      "romaji": "TENNAINOKAORINI 《KUNKUN》TOHANAGAUGOKIMASHITA",
+      "jpsen": "店内の香りに《クンクン》と鼻が動きました。",
+      "main": "[DE] 店内の香りに《クンクン》と鼻が動きました。",
+      "description": "[DE] 《クンクン》はにおいを嗅いでいるときの軽快な動きを表し、食事前の楽しみを伝えます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 242,
+      "sceneId": 17,
+      "romaji": "KONORYOURIWOMITASHUNKAN KOKOROGA 《KYUN》TOSHIMASHITA",
+      "jpsen": "この料理を見た瞬間、心が《キュン》としました。",
+      "main": "[DE] この料理を見た瞬間、心が《キュン》としました。",
+      "description": "[DE] 《キュン》は感動やときめきが一気に込み上げてくる気持ちを表現します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 243,
+      "sceneId": 17,
+      "romaji": "HITOKUCHITABETE 《JUWATSU》TOSHIAWASEGAHIROGARIMASHITA",
+      "jpsen": "ひとくち食べて《じゅわっ》と幸せが広がりました。",
+      "main": "[DE] ひとくち食べて《じゅわっ》と幸せが広がりました。",
+      "description": "[DE] 《じゅわっ》は口に入れた瞬間に旨味やあたたかさがあふれ出すような感覚を、音で伝えます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 244,
+      "sceneId": 17,
+      "romaji": "JUUJUUTOYAKERUOTONI 《UTTORI》SHIMASHITA",
+      "jpsen": "ジュウジュウと焼ける音に《うっとり》しました。",
+      "main": "[DE] ジュウジュウと焼ける音に《うっとり》しました。",
+      "description": "[DE] 《うっとり》は目や耳が魅了され、夢中になるような感覚を表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 245,
+      "sceneId": 17,
+      "romaji": "KUCHINONAKADE 《HOKUHOKU》TOHIROGARUATATAKASAGATAMARIMASEN",
+      "jpsen": "口の中で《ホクホク》と広がるあたたかさがたまりません。",
+      "main": "[DE] 口の中で《ホクホク》と広がるあたたかさがたまりません。",
+      "description": "[DE] 《ホクホク》は湯気のたつ料理の温もりと、やわらかい食感を想起させます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 246,
+      "sceneId": 17,
+      "romaji": "AMARINOOISHISANI 《MOGUMOGU》GADOMARIMASEN",
+      "jpsen": "あまりのおいしさに《モグモグ》が止まりません。",
+      "main": "[DE] あまりのおいしさに《モグモグ》が止まりません。",
+      "description": "[DE] 《モグモグ》は夢中で噛んで食べる様子を表し、満足感を伝えます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 247,
+      "sceneId": 17,
+      "romaji": "SUUPUNOKAORINI 《FUWATSU》TOTSUTSUMAREMASHITA",
+      "jpsen": "スープの香りに《ふわっ》と包まれました。",
+      "main": "[DE] スープの香りに《ふわっ》と包まれました。",
+      "description": "[DE] 《ふわっ》はやさしく広がる香りや軽やかな印象を与える表現です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 248,
+      "sceneId": 17,
+      "romaji": "DEZAATOWOMITE 《NINMARI》SHITESHIMAIMASHITA",
+      "jpsen": "デザートを見て《ニンマリ》してしまいました。",
+      "main": "[DE] デザートを見て《ニンマリ》してしまいました。",
+      "description": "[DE] 《ニンマリ》はちょっとした喜びを含んだ、にやっとする微笑を表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 249,
+      "sceneId": 17,
+      "romaji": "GURASUWOMOTSUTEGA 《DOKIDOKI》SHITESHIMAIMASHITA",
+      "jpsen": "グラスを持つ手が《ドキドキ》してしまいました。",
+      "main": "[DE] グラスを持つ手が《ドキドキ》してしまいました。",
+      "description": "[DE] 《ドキドキ》は緊張や期待、特別なひとときの高鳴りを表現します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 250,
+      "sceneId": 17,
+      "romaji": "TENNAINO 《GAYAGAYA》SHITAFUN'IKIGAKOKOCHIYOKATTADESU",
+      "jpsen": "店内の《ガヤガヤ》した雰囲気が心地よかったです。",
+      "main": "[DE] 店内の《ガヤガヤ》した雰囲気が心地よかったです。",
+      "description": "[DE] 《ガヤガヤ》はにぎやかな話し声や活気を伝えるオノマトペです。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 251,
+      "sceneId": 17,
+      "romaji": "KONOKOBASHISANI 《JUWA〜TSU》TOSHOKUYOKUGAWAKIMASHITA",
+      "jpsen": "この香ばしさに《ジュワ〜ッ》と食欲がわきました。",
+      "main": "[DE] この香ばしさに《ジュワ〜ッ》と食欲がわきました。",
+      "description": "[DE] 《ジュワ〜ッ》は肉やたれなどが焼ける音を想像させ、五感に響く表現です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 252,
+      "sceneId": 17,
+      "romaji": "OREINO 《KINKIN》NIHIETAKANJIGASAIKOUDESHITA",
+      "jpsen": "お冷の《キンキン》に冷えた感じが最高でした。",
+      "main": "[DE] お冷の《キンキン》に冷えた感じが最高でした。",
+      "description": "[DE] 《キンキン》は強く冷えた感覚を表し、リフレッシュ感を伝えます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 253,
+      "sceneId": 17,
+      "romaji": "SAABISUNOTEINEISANI 《JIIN》TOSHIMASHITA",
+      "jpsen": "サービスの丁寧さに《ジーン》としました。",
+      "main": "[DE] サービスの丁寧さに《ジーン》としました。",
+      "description": "[DE] 《ジーン》は心がじんわり感動したときに使われる、深い気持ちの表現です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 254,
+      "sceneId": 17,
+      "romaji": "TEN'INSANNOEGAODEKIMOCHIGA 《PAATSU》TOHAREMASHITA",
+      "jpsen": "店員さんの笑顔で気持ちが《パァッ》と晴れました。",
+      "main": "[DE] 店員さんの笑顔で気持ちが《パァッ》と晴れました。",
+      "description": "[DE] 《パァッ》は空気や気分が明るく広がる様子をイメージさせる音です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 255,
+      "sceneId": 17,
+      "romaji": "SAIGONOHITOKUCHIMADE 《PERORI》TOTAIRAGEMASHITA",
+      "jpsen": "最後のひとくちまで《ペロリ》と平らげました。",
+      "main": "[DE] 最後のひとくちまで《ペロリ》と平らげました。",
+      "description": "[DE] 《ペロリ》は完食した様子を軽快に伝える表現で、満足度が伝わります。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    }
+  ]
+}

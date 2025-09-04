@@ -1,0 +1,200 @@
+{
+  "scene": "[RU] 病院・体の状態",
+  "messages": [
+    {
+      "id": 533,
+      "sceneId": 35,
+      "romaji": "KUSURIWONONDE 《HOTSU》TOHITOIKITSUKIMASHITA",
+      "jpsen": "薬を飲んで《ほっ》とひと息つきました。",
+      "main": "[RU] 薬を飲んで《ほっ》とひと息つきました。",
+      "description": "[RU] 《ほっ》は緊張が解けたときの安心感をそのまま音で表す優しい表現です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 534,
+      "sceneId": 35,
+      "romaji": "SHINKOKYUUSHITE 《SUUTSU》TOKIMOCHIGAOCHITSUITEKIMASHITA",
+      "jpsen": "深呼吸して《スーッ》と気持ちが落ち着いてきました。",
+      "main": "[RU] 深呼吸して《スーッ》と気持ちが落ち着いてきました。",
+      "description": "[RU] 《スーッ》は空気や気持ちがすっと通る感覚を伝えます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 535,
+      "sceneId": 35,
+      "romaji": "KEN'ONKEIGA 《PIPITSU》TOTAIONWOSHIRASETEKUREMASHITA",
+      "jpsen": "検温計が《ピピッ》と体温を知らせてくれました。",
+      "main": "[RU] 検温計が《ピピッ》と体温を知らせてくれました。",
+      "description": "[RU] 《ピピッ》は電子音や機械からの通知音をコンパクトに表現します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 536,
+      "sceneId": 35,
+      "romaji": "SHINSATSUSHITSUNOMAEDE 《SOWASOWA》TOOCHITSUKIMASENDESHITA",
+      "jpsen": "診察室の前で《ソワソワ》と落ち着きませんでした。",
+      "main": "[RU] 診察室の前で《ソワソワ》と落ち着きませんでした。",
+      "description": "[RU] 《ソワソワ》は不安や緊張でじっとしていられない様子を表します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 537,
+      "sceneId": 35,
+      "romaji": "SENSEINOKOTOBANI 《JIIN》TOKOKOROGAATATAKAKUNARIMASHITA",
+      "jpsen": "先生の言葉に《じーん》と心があたたかくなりました。",
+      "main": "[RU] 先生の言葉に《じーん》と心があたたかくなりました。",
+      "description": "[RU] 《じーん》は感動や癒しがじわっと広がる心の状態を描きます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 538,
+      "sceneId": 35,
+      "romaji": "SHIPPUWOHATSUTASHUNKAN 《HIYATSU》TOTSUMETASAGATSUTAWARIMASHITA",
+      "jpsen": "湿布を貼った瞬間、《ヒヤッ》と冷たさが伝わりました。",
+      "main": "[RU] 湿布を貼った瞬間、《ヒヤッ》と冷たさが伝わりました。",
+      "description": "[RU] 《ヒヤッ》は冷たさに驚いたときの一瞬の感覚を表現します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 539,
+      "sceneId": 35,
+      "romaji": "KARADAGA 《DARU〜N》TOOMOKUTENANIMOSHITAKUARIMASENDESHITA",
+      "jpsen": "体が《ダル〜ン》と重くて何もしたくありませんでした。",
+      "main": "[RU] 体が《ダル〜ン》と重くて何もしたくありませんでした。",
+      "description": "[RU] 《ダル〜ン》はだるさや無気力な状態を音としてやわらかく伝えます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 540,
+      "sceneId": 35,
+      "romaji": "MEGUSURIWOSASUTO 《SHIMISHIMI》TOSHIMITEKIMASHITA",
+      "jpsen": "目薬をさすと《しみしみ》と沁みてきました。",
+      "main": "[RU] 目薬をさすと《しみしみ》と沁みてきました。",
+      "description": "[RU] 《しみしみ》はしみる感覚や、じんわり染み込むような痛みをやさしく表現します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 541,
+      "sceneId": 35,
+      "romaji": "KUSURIGA 《SUKKIRI》TOKIITEKIMASHITA",
+      "jpsen": "薬が《スッキリ》と効いてきました。",
+      "main": "[RU] 薬が《スッキリ》と効いてきました。",
+      "description": "[RU] 《スッキリ》は重さが取れて爽快になった状態を音で伝える表現です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 542,
+      "sceneId": 35,
+      "romaji": "TENTEKINO 《POTA…POTA…》TOIUOTOGASHIZUKESAWOTSUTSUNDEIMASHITA",
+      "jpsen": "点滴の《ポタ…ポタ…》という音が静けさを包んでいました。",
+      "main": "[RU] 点滴の《ポタ…ポタ…》という音が静けさを包んでいました。",
+      "description": "[RU] 《ポタポタ》は液体が静かに滴る音で、時間の流れも感じさせます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 543,
+      "sceneId": 35,
+      "romaji": "NEGAERIWOUTSUTABI 《ZUKIZUKI》TOITAMIGAHASHIRIMASHITA",
+      "jpsen": "寝返りを打つたび《ズキズキ》と痛みが走りました。",
+      "main": "[RU] 寝返りを打つたび《ズキズキ》と痛みが走りました。",
+      "description": "[RU] 《ズキズキ》は断続的な鋭い痛みの感覚を表します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 544,
+      "sceneId": 35,
+      "romaji": "SHINSATSUSHITSUDE 《DOKIDOKI》GADOMARIMASENDESHITA",
+      "jpsen": "診察室で《ドキドキ》が止まりませんでした。",
+      "main": "[RU] 診察室で《ドキドキ》が止まりませんでした。",
+      "description": "[RU] 《ドキドキ》は緊張や不安による心拍の高まりを素直に伝えます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 545,
+      "sceneId": 35,
+      "romaji": "MASSAAJIDE 《KORIKORI》TOOTOGANATSUTEKIMOCHIYOKATTADESU",
+      "jpsen": "マッサージで《コリコリ》と音が鳴って気持ちよかったです。",
+      "main": "[RU] マッサージで《コリコリ》と音が鳴って気持ちよかったです。",
+      "description": "[RU] 《コリコリ》は筋肉の硬さや凝りを音で描き、実感を伴う表現です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 546,
+      "sceneId": 35,
+      "romaji": "NYUUINCHUUNOYORUHA 《SHIIN》TOSHIZUMARIKAETSUTEIMASHITA",
+      "jpsen": "入院中の夜は《シーン》と静まり返っていました。",
+      "main": "[RU] 入院中の夜は《シーン》と静まり返っていました。",
+      "description": "[RU] 《シーン》は物音ひとつない沈黙を強調し、心の静けさも表します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 547,
+      "sceneId": 35,
+      "romaji": "KAIFUKUNOKIZASHINI 《PAATSU》TOKIMOCHIGAAKARUKUNARIMASHITA",
+      "jpsen": "回復の兆しに《パァッ》と気持ちが明るくなりました。",
+      "main": "[RU] 回復の兆しに《パァッ》と気持ちが明るくなりました。",
+      "description": "[RU] 《パァッ》は雲が晴れるような明るさや希望が広がる様子を表します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    }
+  ]
+}

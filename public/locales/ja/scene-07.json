@@ -1,0 +1,290 @@
+{
+  "scene": "部屋の中",
+  "messages": [
+    {
+      "id": 691,
+      "sceneId": 7,
+      "scene": "部屋の中",
+      "main": "帰宅後、部屋に入ると《ホッ》としました。",
+      "romaji": "KITAKUGO HEYANIIRUTO 《HOTSU》TOSHIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ホッ》は、緊張から解放されて安心する瞬間を表します。家という場所のやさしさを自然に伝えます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "帰宅後、部屋に入ると《ホッ》としました。"
+    },
+    {
+      "id": 692,
+      "sceneId": 7,
+      "scene": "部屋の中",
+      "main": "毛布にくるまれて、《ぬくぬく》しています。",
+      "romaji": "MOUFUNIKURUMARETE 《NUKUNUKU》SHITEIMASU",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ぬくぬく》は、心地よい温かさに包まれている状態を表します。冬の夜やくつろぎの象徴です。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "毛布にくるまれて、《ぬくぬく》しています。"
+    },
+    {
+      "id": 693,
+      "sceneId": 7,
+      "scene": "部屋の中",
+      "main": "お気に入りのソファに《ゴロゴロ》しています。",
+      "romaji": "OKINIIRINOSOFANI 《GOROGORO》SHITEIMASU",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ゴロゴロ》は、気ままに寝転がる様子を表現します。のんびりとした自分時間を描くのにぴったりです。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "お気に入りのソファに《ゴロゴロ》しています。"
+    },
+    {
+      "id": 694,
+      "sceneId": 7,
+      "scene": "部屋の中",
+      "main": "読書していたら、《うとうと》してきました。",
+      "romaji": "DOKUSHOSHITEITARA 《UTOUTO》SHITEKIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《うとうと》は、眠気に誘われて意識がゆらぐ様子を表します。穏やかな部屋時間にぴったりな言葉です。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "読書していたら、《うとうと》してきました。"
+    },
+    {
+      "id": 695,
+      "sceneId": 7,
+      "scene": "部屋の中",
+      "main": "湯気が《ふわ〜っ》と広がるカップを見て、気持ちが和らぎました。",
+      "romaji": "YUGEGA 《FUWA〜TSU》TOHIROGARUKAPPUWOMITE KIMOCHIGAYAWARAGIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ふわ〜っ》は、軽やかに広がる様子をやさしく表現します。温かい飲み物やくつろぎの空間を描くのに効果的です。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "湯気が《ふわ〜っ》と広がるカップを見て、気持ちが和らぎました。"
+    },
+    {
+      "id": 696,
+      "sceneId": 7,
+      "scene": "部屋の中",
+      "main": "部屋の掃除で《スッキリ》しました。",
+      "romaji": "HEYANOSOUJIDE 《SUKKIRI》SHIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《スッキリ》は、心身や空間が整い、気持ちよく感じる状態を表します。リセットされた感覚にぴったりです。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "部屋の掃除で《スッキリ》しました。"
+    },
+    {
+      "id": 697,
+      "sceneId": 7,
+      "scene": "部屋の中",
+      "main": "窓から差し込む光が《ポカポカ》で心地いいです。",
+      "romaji": "MADOKARASASHIKOMUHIKARIGA 《POKAPOKA》DEKOKOCHIIIDESU",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ポカポカ》は、太陽の光や暖房の温かさが優しく届く様子を表します。日常の小さな幸せに使えます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "窓から差し込む光が《ポカポカ》で心地いいです。"
+    },
+    {
+      "id": 698,
+      "sceneId": 7,
+      "scene": "部屋の中",
+      "main": "床暖房の《ジンジン》とした温かさに癒されました。",
+      "romaji": "YUKADANBOUNO 《JINJIN》TOSHITAATATAKASANIIYASAREMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ジンジン》は、身体の内側から温まるようなじんわりとした感覚を表します。体感のリアルさを引き立てます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "床暖房の《ジンジン》とした温かさに癒されました。"
+    },
+    {
+      "id": 699,
+      "sceneId": 7,
+      "scene": "部屋の中",
+      "main": "テレビの音が《ワイワイ》と賑やかに響いています。",
+      "romaji": "TEREBINOOTOGA 《WAIWAI》TONIGIYAKANIHIBIITEIMASU",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ワイワイ》は、楽しげでにぎやかな様子を表します。部屋の中の温かい生活感を表現できます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "テレビの音が《ワイワイ》と賑やかに響いています。"
+    },
+    {
+      "id": 700,
+      "sceneId": 7,
+      "scene": "部屋の中",
+      "main": "一人の時間を《しんみり》味わっています。",
+      "romaji": "HITORINOJIKANWO 《SHINMIRI》AJIWATTEIMASU",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《しんみり》は、静かに落ち着いた気分で物思いにふける様子を表します。感傷的な時間や余韻に向いています。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "一人の時間を《しんみり》味わっています。"
+    },
+    {
+      "id": 701,
+      "sceneId": 7,
+      "scene": "部屋の中",
+      "main": "お香の香りが《フワッ》と広がり、心が整いました。",
+      "romaji": "OKAORINOKAORIGA 《FUWATSU》TOHIROGARI KOKOROGATOTONOIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《フワッ》は、香りや空気がやさしく漂う様子を描写します。五感に響く穏やかさが伝わります。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "お香の香りが《フワッ》と広がり、心が整いました。"
+    },
+    {
+      "id": 702,
+      "sceneId": 7,
+      "scene": "部屋の中",
+      "main": "スリッパを脱ぐと、足裏に《ヒヤッ》と冷たさが走りました。",
+      "romaji": "SURIPPAWONUGUTO ASHIURANI 《HIYATSU》TOTSUMETASAGAHASHIRIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ヒヤッ》は、思わず身震いするような軽い冷たさを表します。冬の朝やフローリングの感覚にぴったりです。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "スリッパを脱ぐと、足裏に《ヒヤッ》と冷たさが走りました。"
+    },
+    {
+      "id": 703,
+      "sceneId": 7,
+      "scene": "部屋の中",
+      "main": "クッションに《ポスン》と身をあずけて、深呼吸しました。",
+      "romaji": "KUSSHONNI 《POSUN》TOMIWOAZUKETE SHINKOKYUUSHIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ポスン》は、柔らかいものに身体が沈みこむ軽やかな音や感触を表します。リラックスした瞬間に最適な語です。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "クッションに《ポスン》と身をあずけて、深呼吸しました。"
+    },
+    {
+      "id": 704,
+      "sceneId": 7,
+      "scene": "部屋の中",
+      "main": "アロマキャンドルの灯りが《ゆらゆら》揺れていて癒されます。",
+      "romaji": "AROMAKYANDORUNOAKARIGA 《YURAYURA》YURETEITEIYASAREMASU",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ゆらゆら》は、一定のリズムで静かに揺れ動く様子を表します。落ち着いた空間の演出に効果的です。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "アロマキャンドルの灯りが《ゆらゆら》揺れていて癒されます。"
+    },
+    {
+      "id": 705,
+      "sceneId": 7,
+      "scene": "部屋の中",
+      "main": "「ただいま」の声が《ポツン》と響く静かな夜でした。",
+      "romaji": "「TADAIMA」NOKOEGA 《POTSUN》TOHIBIKUSHIZUKANAYORUDESHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ポツン》は、孤独さや静けさの中にある小さな音や存在感を表します。夜のしんとした情景に合います。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "「ただいま」の声が《ポツン》と響く静かな夜でした。"
+    }
+  ]
+}

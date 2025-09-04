@@ -1,0 +1,290 @@
+{
+  "scene": "ビジネス・仕事の場",
+  "messages": [
+    {
+      "id": 301,
+      "sceneId": 21,
+      "scene": "ビジネス・仕事の場",
+      "main": "プレゼン前に《ドキドキ》が止まりませんでした。",
+      "romaji": "PUREZENMAENI 《DOKIDOKI》GADOMARIMASENDESHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《ドキドキ》は緊張や期待で胸が高鳴る様子を、誰もが経験する感覚として表します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "プレゼン前に《ドキドキ》が止まりませんでした。"
+    },
+    {
+      "id": 302,
+      "sceneId": 21,
+      "scene": "ビジネス・仕事の場",
+      "main": "会議室に入ると《ピン》と空気が引き締まりました。",
+      "romaji": "KAIGISHITSUNIIRUTO 《PIN》TOKUUKIGAHIKISHIMARIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《ピン》は緊張感や真剣さが張りつめた瞬間の静けさを音で表現します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "会議室に入ると《ピン》と空気が引き締まりました。"
+    },
+    {
+      "id": 303,
+      "sceneId": 21,
+      "scene": "ビジネス・仕事の場",
+      "main": "話を《コツコツ》と積み上げていきました。",
+      "romaji": "HANASHIWO 《KOTSUKOTSU》TOTSUMIAGETEIKIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《コツコツ》は地道に努力を重ねている様子を音で示す、ビジネスに合う表現です。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "話を《コツコツ》と積み上げていきました。"
+    },
+    {
+      "id": 304,
+      "sceneId": 21,
+      "scene": "ビジネス・仕事の場",
+      "main": "相手の説明に《ふむふむ》とうなずきました。",
+      "romaji": "AITENOSETSUMEINI 《FUMUFUMU》TOUNAZUKIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《ふむふむ》は相手の話に共感しながら理解を深めていく雰囲気を表します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "相手の説明に《ふむふむ》とうなずきました。"
+    },
+    {
+      "id": 305,
+      "sceneId": 21,
+      "scene": "ビジネス・仕事の場",
+      "main": "キーボードを《カタカタ》と打つ音が心地よかったです。",
+      "romaji": "KIIBOODOWO 《KATAKATA》TOUTSUOTOGAKOKOCHIYOKATTADESU",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《カタカタ》は入力作業のリズム感や集中状態を耳で感じさせる音です。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "キーボードを《カタカタ》と打つ音が心地よかったです。"
+    },
+    {
+      "id": 306,
+      "sceneId": 21,
+      "scene": "ビジネス・仕事の場",
+      "main": "返信が来るまで《ソワソワ》していました。",
+      "romaji": "HENSHINGAKURUMADE 《SOWASOWA》SHITEIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《ソワソワ》は落ち着かず、何かが気になって心が揺れる様子を表します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "返信が来るまで《ソワソワ》していました。"
+    },
+    {
+      "id": 307,
+      "sceneId": 21,
+      "scene": "ビジネス・仕事の場",
+      "main": "資料をめくる手が《パラパラ》と軽やかに動きました。",
+      "romaji": "SHIRYOUWOMEKURUTEGA 《PARAPARA》TOKEIYAKANIUGOKIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《パラパラ》は紙のめくれる音や、動作の軽快さを伝える表現です。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "資料をめくる手が《パラパラ》と軽やかに動きました。"
+    },
+    {
+      "id": 308,
+      "sceneId": 21,
+      "scene": "ビジネス・仕事の場",
+      "main": "突然の依頼に《アタフタ》してしまいました。",
+      "romaji": "TOTSUZENNOIRAINI 《ATAFUTA》SHITESHIMAIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《アタフタ》は焦って行動が空回りしてしまう様子を表現します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "突然の依頼に《アタフタ》してしまいました。"
+    },
+    {
+      "id": 309,
+      "sceneId": 21,
+      "scene": "ビジネス・仕事の場",
+      "main": "冷静に《スッ》と対応できました。",
+      "romaji": "REISEINI 《SUTSU》TOTAIOUDEKIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《スッ》は無駄なく整った動きや対応のスマートさを表します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "冷静に《スッ》と対応できました。"
+    },
+    {
+      "id": 310,
+      "sceneId": 21,
+      "scene": "ビジネス・仕事の場",
+      "main": "会話が《ポンポン》進んでテンポがよかったです。",
+      "romaji": "KAIWAGA 《PONPON》SUSUNDETENPOGAYOKATTADESU",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《ポンポン》は話が軽快に続いていく様子をリズミカルに伝えます。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "会話が《ポンポン》進んでテンポがよかったです。"
+    },
+    {
+      "id": 311,
+      "sceneId": 21,
+      "scene": "ビジネス・仕事の場",
+      "main": "先輩のアドバイスが《グサッ》と胸に刺さりました。",
+      "romaji": "SENPAINOADOBAISUGA 《GUSATSU》TOMUNENISASARIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《グサッ》は鋭く、印象に残る言葉が心に刺さったときの感覚を表現します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "先輩のアドバイスが《グサッ》と胸に刺さりました。"
+    },
+    {
+      "id": 312,
+      "sceneId": 21,
+      "scene": "ビジネス・仕事の場",
+      "main": "やるべきことが《ぎっしり》詰まっていました。",
+      "romaji": "YARUBEKIKOTOGA 《GISSHIRI》TSUMATTEIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《ぎっしり》は情報や予定、タスクなどが詰まっている様子を濃密に伝えます。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "やるべきことが《ぎっしり》詰まっていました。"
+    },
+    {
+      "id": 313,
+      "sceneId": 21,
+      "scene": "ビジネス・仕事の場",
+      "main": "進捗が《ジワジワ》と見えてきました。",
+      "romaji": "SHINCHOKUGA 《JIWAJIWA》TOMIETEKIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《ジワジワ》は徐々に変化や成果が現れてくる様子を、焦らず伝える言葉です。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "進捗が《ジワジワ》と見えてきました。"
+    },
+    {
+      "id": 314,
+      "sceneId": 21,
+      "scene": "ビジネス・仕事の場",
+      "main": "上司のねぎらいに《ほっ》としました。",
+      "romaji": "JOUSHINONEGIRAINI 《HOTSU》TOSHIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《ほっ》は安心感や緊張から解放された瞬間に出る、心の緩みを表現します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "上司のねぎらいに《ほっ》としました。"
+    },
+    {
+      "id": 315,
+      "sceneId": 21,
+      "scene": "ビジネス・仕事の場",
+      "main": "一日を《スパッ》と切り替えて帰宅しました。",
+      "romaji": "TSUITACHIWO 《SUPATSU》TOKIRIKAETEKITAKUSHIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《スパッ》は迷いなく、きっぱりと切り替える様子を伝える爽快な音です。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "一日を《スパッ》と切り替えて帰宅しました。"
+    }
+  ]
+}

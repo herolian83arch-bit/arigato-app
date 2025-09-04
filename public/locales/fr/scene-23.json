@@ -1,0 +1,200 @@
+{
+  "scene": "[FR] 贈り物・サプライズ",
+  "messages": [
+    {
+      "id": 331,
+      "sceneId": 23,
+      "romaji": "FUKUROWOHIRAKERUTEGA 《SOWASOWA》SHITESHIMAIMASHITA",
+      "jpsen": "袋を開ける手が《ソワソワ》してしまいました。",
+      "main": "[FR] 袋を開ける手が《ソワソワ》してしまいました。",
+      "description": "[FR] 《ソワソワ》は期待と緊張が入り混じった落ち着かない気持ちを表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 332,
+      "sceneId": 23,
+      "romaji": "RIBONWOHODOKUTOKI KOKOROGA 《DOKIDOKI》SHIMASHITA",
+      "jpsen": "リボンをほどくとき、心が《ドキドキ》しました。",
+      "main": "[FR] リボンをほどくとき、心が《ドキドキ》しました。",
+      "description": "[FR] 《ドキドキ》は胸が高鳴る瞬間の気持ちを、音でそのまま伝えます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 333,
+      "sceneId": 23,
+      "romaji": "PUREZENTOWOMITE 《PATSU》TOHYOUJOUGAAKARUKUNARIMASHITA",
+      "jpsen": "プレゼントを見て《パッ》と表情が明るくなりました。",
+      "main": "[FR] プレゼントを見て《パッ》と表情が明るくなりました。",
+      "description": "[FR] 《パッ》は一気に明るく広がるような感情の変化を鮮やかに描きます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 334,
+      "sceneId": 23,
+      "romaji": "HAKONONAKADEAKUSESARIIGA 《KIRARI》TOKAGAYAITEIMASHITA",
+      "jpsen": "箱の中でアクセサリーが《キラリ》と輝いていました。",
+      "main": "[FR] 箱の中でアクセサリーが《キラリ》と輝いていました。",
+      "description": "[FR] 《キラリ》は小さくても印象に残る輝きを表現し、目に映る瞬間の美しさを描きます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 335,
+      "sceneId": 23,
+      "romaji": "HAKOWOHIRAKETASHUNKAN 《KIRATSU》TOHIKARIGASASHITAYOUDESHITA",
+      "jpsen": "箱を開けた瞬間、《キラッ》と光が差したようでした。",
+      "main": "[FR] 箱を開けた瞬間、《キラッ》と光が差したようでした。",
+      "description": "[FR] 《キラッ》は輝きや印象的な一瞬を音で表現する、サプライズ感のあるオノマトペです。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 336,
+      "sceneId": 23,
+      "romaji": "URESHISAGA 《JINWARI》TOHIROGATTEKIMASHITA",
+      "jpsen": "うれしさが《じんわり》と広がってきました。",
+      "main": "[FR] うれしさが《じんわり》と広がってきました。",
+      "description": "[FR] 《じんわり》は静かに、でも確かに心に染みわたる感情を表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 337,
+      "sceneId": 23,
+      "romaji": "OMOWAZU 《NIKKORI》EGAONINATTESHIMAIMASHITA",
+      "jpsen": "思わず《ニッコリ》笑顔になってしまいました。",
+      "main": "[FR] 思わず《ニッコリ》笑顔になってしまいました。",
+      "description": "[FR] 《ニッコリ》は心が満たされて自然と笑みがこぼれる様子を表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 338,
+      "sceneId": 23,
+      "romaji": "「ETSU 」TOKOEGADERUHODO 《BIKKURI》SHIMASHITA",
+      "jpsen": "「えっ！」と声が出るほど《ビックリ》しました。",
+      "main": "[FR] 「えっ！」と声が出るほど《ビックリ》しました。",
+      "description": "[FR] 《ビックリ》は驚きの瞬間を音のインパクトで伝える表現です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 339,
+      "sceneId": 23,
+      "romaji": "NAKAMIWOMITE 《KYUN》TOMUNEGASHIMETSUKERAREMASHITA",
+      "jpsen": "中身を見て《キュン》と胸が締めつけられました。",
+      "main": "[FR] 中身を見て《キュン》と胸が締めつけられました。",
+      "description": "[FR] 《キュン》は切なさや感動が同時に込み上げるような強い気持ちを表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 340,
+      "sceneId": 23,
+      "romaji": "KAADONOMESSEEJINI 《HORORI》TONAMIDAGADEMASHITA",
+      "jpsen": "カードのメッセージに《ホロリ》と涙が出ました。",
+      "main": "[FR] カードのメッセージに《ホロリ》と涙が出ました。",
+      "description": "[FR] 《ホロリ》は静かにこぼれる涙の感情を、あたたかく柔らかに伝える表現です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 341,
+      "sceneId": 23,
+      "romaji": "KAKUSHITEITAPUREZENTOGA 《HYOKOTSU》TOARAWARETEWARATSUTESHIMAIMASHITA",
+      "jpsen": "隠していたプレゼントが《ひょこっ》と現れて笑ってしまいました。",
+      "main": "[FR] 隠していたプレゼントが《ひょこっ》と現れて笑ってしまいました。",
+      "description": "[FR] 《ひょこっ》は思いがけず可愛らしく現れる様子を表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 342,
+      "sceneId": 23,
+      "romaji": "TSUTSUMIWOHIRAKETASHUNKAN 《FUWATSU》TOKAORIGAHIROGARIMASHITA",
+      "jpsen": "包みを開けた瞬間、《ふわっ》と香りが広がりました。",
+      "main": "[FR] 包みを開けた瞬間、《ふわっ》と香りが広がりました。",
+      "description": "[FR] 《ふわっ》はやさしく空気にのって広がる香りや雰囲気を、柔らかく表現します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 343,
+      "sceneId": 23,
+      "romaji": "HOUSOUNOIRONI 《UTTORI》MITORETESHIMAIMASHITA",
+      "jpsen": "包装の色に《うっとり》見とれてしまいました。",
+      "main": "[FR] 包装の色に《うっとり》見とれてしまいました。",
+      "description": "[FR] 《うっとり》は美しさに心を奪われている様子をやわらかく伝えます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 344,
+      "sceneId": 23,
+      "romaji": "TOTTEOKINOIPPINNI 《NINMARI》SHITESHIMAIMASHITA",
+      "jpsen": "とっておきの一品に《ニンマリ》してしまいました。",
+      "main": "[FR] とっておきの一品に《ニンマリ》してしまいました。",
+      "description": "[FR] 《ニンマリ》は嬉しさや誇らしさがにじむ、ちょっと得意げな笑みの表現です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 345,
+      "sceneId": 23,
+      "romaji": "SAPURAIZUNOYOINGA 《POKAPOKA》TOKOKORONINOKOTSUTEIMASU",
+      "jpsen": "サプライズの余韻が《ぽかぽか》と心に残っています。",
+      "main": "[FR] サプライズの余韻が《ぽかぽか》と心に残っています。",
+      "description": "[FR] 《ぽかぽか》はやさしくあたたかな気持ちが続いている様子を表現します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    }
+  ]
+}

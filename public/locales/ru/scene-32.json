@@ -1,0 +1,200 @@
+{
+  "scene": "[RU] 音楽・カラオケ",
+  "messages": [
+    {
+      "id": 473,
+      "sceneId": 32,
+      "romaji": "OKINIIRINOKYOKUGAHAJIMARUTO KOKOROGA 《NORINORI》NINARIMASU",
+      "jpsen": "お気に入りの曲が始まると、心が《ノリノリ》になります。",
+      "main": "[RU] お気に入りの曲が始まると、心が《ノリノリ》になります。",
+      "description": "[RU] 《ノリノリ》はリズムに乗って気分が高揚する様子を表す定番オノマトペです。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 474,
+      "sceneId": 32,
+      "romaji": "GITAANOOTOGA 《JAAN》TONARIHIBIKIMASHITA",
+      "jpsen": "ギターの音が《ジャーン》と鳴り響きました。",
+      "main": "[RU] ギターの音が《ジャーン》と鳴り響きました。",
+      "description": "[RU] 《ジャーン》は強くかき鳴らした楽器音を擬音化したもので、インパクトある始まりに最適です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 475,
+      "sceneId": 32,
+      "romaji": "JUUTEIONGA 《ZUNZUN》TOSHINTAINIHIBIITEKIMASHITA",
+      "jpsen": "重低音が《ズンズン》と身体に響いてきました。",
+      "main": "[RU] 重低音が《ズンズン》と身体に響いてきました。",
+      "description": "[RU] 《ズンズン》は連続して響く重い音のイメージで、クラブやライブの臨場感を表現します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 476,
+      "sceneId": 32,
+      "romaji": "MAIKUNIMUKATTE 《DOON》TOKOEWOHIBIKASEMASHITA",
+      "jpsen": "マイクに向かって《ドーン》と声を響かせました。",
+      "main": "[RU] マイクに向かって《ドーン》と声を響かせました。",
+      "description": "[RU] 《ドーン》は大きく力強い音や衝撃を表す擬音で、歌の迫力を印象づけます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 477,
+      "sceneId": 32,
+      "romaji": "KYOKUNOSABIDETEBYOUSHIGA 《PACHIPACHI》TONARIHAJIMEMASHITA",
+      "jpsen": "曲のサビで手拍子が《パチパチ》と鳴り始めました。",
+      "main": "[RU] 曲のサビで手拍子が《パチパチ》と鳴り始めました。",
+      "description": "[RU] 《パチパチ》は軽快な拍手や音の重なりを表現します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 478,
+      "sceneId": 32,
+      "romaji": "KOUONPAATODE 《KYAATSU》TOKANSEIGAAGARIMASHITA",
+      "jpsen": "高音パートで《キャーッ》と歓声が上がりました。",
+      "main": "[RU] 高音パートで《キャーッ》と歓声が上がりました。",
+      "description": "[RU] 《キャーッ》は驚きや感動、熱狂など、観客の感情の高まりをそのまま音で描きます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 479,
+      "sceneId": 32,
+      "romaji": "SHIZUKANAINTOROGA 《PORONPORON》TONAGARETEKIMASHITA",
+      "jpsen": "静かなイントロが《ポロンポロン》と流れてきました。",
+      "main": "[RU] 静かなイントロが《ポロンポロン》と流れてきました。",
+      "description": "[RU] 《ポロンポロン》は優しく連なる音の響きで、アコースティックやピアノにぴったりです。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 480,
+      "sceneId": 32,
+      "romaji": "MINNADE 《WAIWAI》MORIAGARIMASHITA",
+      "jpsen": "みんなで《ワイワイ》盛り上がりました。",
+      "main": "[RU] みんなで《ワイワイ》盛り上がりました。",
+      "description": "[RU] 《ワイワイ》は複数人の楽しそうな賑わいを描写し、カラオケの雰囲気にぴったりです。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 481,
+      "sceneId": 32,
+      "romaji": "ONTEIGA 《GURAGURA》YURETEFUANTEIDESHITA",
+      "jpsen": "音程が《グラグラ》揺れて不安定でした。",
+      "main": "[RU] 音程が《グラグラ》揺れて不安定でした。",
+      "description": "[RU] 《グラグラ》は不安定でブレている様子を表し、緊張や笑いを誘う場面にも使えます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 482,
+      "sceneId": 32,
+      "romaji": "RIZUMUGA 《PITATSU》TOATSUTE KIMOCHIYOKUHAMOREMASHITA",
+      "jpsen": "リズムが《ピタッ》と合って、気持ちよくハモれました。",
+      "main": "[RU] リズムが《ピタッ》と合って、気持ちよくハモれました。",
+      "description": "[RU] 《ピタッ》は正確にぴったり合う瞬間を切り取る擬音で、息の合った演奏にぴったりです。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 483,
+      "sceneId": 32,
+      "romaji": "KASHINIKYOUKANSHITE 《JI〜N》TOKOKOROGAFURUEMASHITA",
+      "jpsen": "歌詞に共感して《じ〜ん》と心が震えました。",
+      "main": "[RU] 歌詞に共感して《じ〜ん》と心が震えました。",
+      "description": "[RU] 《じ〜ん》は感動して心に染み入る様子を表す、音楽の余韻にぴったりな表現です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 484,
+      "sceneId": 32,
+      "romaji": "RAPPUNOBIITOGA 《BARIBARI》KIMATTEITEKAKKOYOKATTA",
+      "jpsen": "ラップのビートが《バリバリ》決まっていてカッコよかった！",
+      "main": "[RU] ラップのビートが《バリバリ》決まっていてカッコよかった！",
+      "description": "[RU] 《バリバリ》は勢いよく鮮やかな音の切れ味を強調する表現です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 485,
+      "sceneId": 32,
+      "romaji": "TENPOGA 《TONTON》TOKEIKAINISUSUNDEIKIMASHITA",
+      "jpsen": "テンポが《トントン》と軽快に進んでいきました。",
+      "main": "[RU] テンポが《トントン》と軽快に進んでいきました。",
+      "description": "[RU] 《トントン》は軽くて安定したテンポのイメージで、ポップな楽曲にぴったりです。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 486,
+      "sceneId": 32,
+      "romaji": "KANSOUDEDORAMUGA 《DOKODOKO》TOMORIAGETEKUREMASHITA",
+      "jpsen": "間奏でドラムが《ドコドコ》と盛り上げてくれました。",
+      "main": "[RU] 間奏でドラムが《ドコドコ》と盛り上げてくれました。",
+      "description": "[RU] 《ドコドコ》は連打される太鼓やドラムの音を表し、熱気ある演奏に最適です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 487,
+      "sceneId": 32,
+      "romaji": "SAIGONOOTOGA 《SUUTSU》TOSHIZUKANIKIETEIKIMASHITA",
+      "jpsen": "最後の音が《スーッ》と静かに消えていきました。",
+      "main": "[RU] 最後の音が《スーッ》と静かに消えていきました。",
+      "description": "[RU] 《スーッ》は音が滑らかに終息していく様子を描写し、曲の締めにぴったりです。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    }
+  ]
+}

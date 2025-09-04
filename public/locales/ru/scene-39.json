@@ -1,0 +1,200 @@
+{
+  "scene": "[RU] 子ども・遊び",
+  "messages": [
+    {
+      "id": 753,
+      "sceneId": 39,
+      "romaji": "KODOMOTACHIGA 《KYAKKYA》TOHASHAGINAGARAHASHIRIMAWATSUTEIRU",
+      "jpsen": "子どもたちが《キャッキャ》とはしゃぎながら走り回っている。",
+      "main": "[RU] 子どもたちが《キャッキャ》とはしゃぎながら走り回っている。",
+      "description": "[RU] 《キャッキャ》は澄んだ高い声で笑う様子を表し、無邪気な歓声が空気を弾ませるような響きを持ちます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 754,
+      "sceneId": 39,
+      "romaji": "SUBERIDAIKARA 《ZURUZURU》SUBERIOCHITE OOWARAI",
+      "jpsen": "滑り台から《ズルズル》滑り落ちて、大笑い！",
+      "main": "[RU] 滑り台から《ズルズル》滑り落ちて、大笑い！",
+      "description": "[RU] 《ズルズル》は体が地面や面に沿って連続して滑るときの音を表し、滑り落ちる感覚の楽しさや勢いを生き生きと伝えます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 755,
+      "sceneId": 39,
+      "romaji": "EHONNOPEEJIWO 《PERAPERA》MEKUTTEMUCHUUNINATTEITA",
+      "jpsen": "絵本のページを《ペラペラ》めくって夢中になっていた。",
+      "main": "[RU] 絵本のページを《ペラペラ》めくって夢中になっていた。",
+      "description": "[RU] 《ペラペラ》は紙が軽やかにめくられる音や動作を示し、集中して読み進める子どもの手の動きやワクワク感が感じられます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 756,
+      "sceneId": 39,
+      "romaji": "KORONDEMO 《KEROTSU》TOWARATSUTETACHIAGATTA",
+      "jpsen": "転んでも《ケロッ》と笑って立ち上がった。",
+      "main": "[RU] 転んでも《ケロッ》と笑って立ち上がった。",
+      "description": "[RU] 《ケロッ》は失敗や痛みをものともしない明るさを表し、子どもらしい回復の早さとたくましさを感じさせます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 757,
+      "sceneId": 39,
+      "romaji": "KOUENNOSUNABADE 《ZAKUZAKU》TOSUKOPPUWOUGOKASUOTOGAKOKOCHIII",
+      "jpsen": "公園の砂場で《ザクザク》とスコップを動かす音が心地いい。",
+      "main": "[RU] 公園の砂場で《ザクザク》とスコップを動かす音が心地いい。",
+      "description": "[RU] 《ザクザク》は粗く乾いた砂や雪などを切るように掘る音を表し、スコップの動きと感触が耳と手に響く感覚を伴います。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 758,
+      "sceneId": 39,
+      "romaji": "JANPUSHITE 《PYONPYON》HANEMAWATSUTEIRUSUGATAGAKAWAISUGIRU",
+      "jpsen": "ジャンプして《ピョンピョン》跳ね回っている姿がかわいすぎる。",
+      "main": "[RU] ジャンプして《ピョンピョン》跳ね回っている姿がかわいすぎる。",
+      "description": "[RU] 《ピョンピョン》は小さな体が軽快に跳ねる様子を繰り返しで表し、エネルギーと楽しさに満ちた動きが目に浮かびます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 759,
+      "sceneId": 39,
+      "romaji": "OMAMAGOTONOFURAIPANKARA 《JUUJUU》TOOISHISOUNAOTO",
+      "jpsen": "おままごとのフライパンから《ジュージュー》とおいしそうな音！",
+      "main": "[RU] おままごとのフライパンから《ジュージュー》とおいしそうな音！",
+      "description": "[RU] 《ジュージュー》は食材が熱せられて焼けるときの香ばしい音を再現し、子どもの想像力とごっこ遊びの臨場感を引き立てます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 760,
+      "sceneId": 39,
+      "romaji": "BASUGOKKODE 《GOTONGOTON》TOYURENAGARA「HASSHASHIMAASU 」",
+      "jpsen": "バスごっこで《ゴトンゴトン》と揺れながら「発車しまーす！」",
+      "main": "[RU] バスごっこで《ゴトンゴトン》と揺れながら「発車しまーす！」",
+      "description": "[RU] 《ゴトンゴトン》は列車やバスが線路や道路を走るときの規則的な揺れや響きを模しており、遊びの中に旅の臨場感をもたらします。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 436,
+      "sceneId": 39,
+      "romaji": "PUURUDEHASHAGUKOGA 《BASHABASHA》MIZUSHIBUKIWOAGETEITA",
+      "jpsen": "プールではしゃぐ子が《バシャバシャ》水しぶきを上げていた。",
+      "main": "[RU] プールではしゃぐ子が《バシャバシャ》水しぶきを上げていた。",
+      "description": "[RU] 《バシャバシャ》は水を力強くかく音や感触を表し、遊びの熱中と解放感が全身からあふれる様子が伝わります。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 437,
+      "sceneId": 39,
+      "romaji": "WARAIKOEGA 《GERAGERA》HIBIKIWATATSUTE KOTCHIMADEEGAONINARU",
+      "jpsen": "笑い声が《ゲラゲラ》響き渡って、こっちまで笑顔になる。",
+      "main": "[RU] 笑い声が《ゲラゲラ》響き渡って、こっちまで笑顔になる。",
+      "description": "[RU] 《ゲラゲラ》は腹の底から湧き上がるような大きな笑い声を表し、周囲まで巻き込むような楽しさと明るさを生み出します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 438,
+      "sceneId": 39,
+      "romaji": "BURANKONINOTTE 《GIKKONBATTAN》TANOSHIIRIZUMU",
+      "jpsen": "ブランコに乗って《ギッコンバッタン》楽しいリズム。",
+      "main": "[RU] ブランコに乗って《ギッコンバッタン》楽しいリズム。",
+      "description": "[RU] 《ギッコンバッタン》は前後に大きく揺れる遊具の動きをリズミカルに表し、遊びの躍動感と安定したリズムが感じられます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 439,
+      "sceneId": 39,
+      "romaji": "DAKKOSARETAAKACHANGA 《SUYASUYA》TOKIMOCHIYOSASOUNINEMUTSUTEIRU",
+      "jpsen": "抱っこされた赤ちゃんが《スヤスヤ》と気持ちよさそうに眠っている。",
+      "main": "[RU] 抱っこされた赤ちゃんが《スヤスヤ》と気持ちよさそうに眠っている。",
+      "description": "[RU] 《スヤスヤ》は深く穏やかな眠りの状態を表し、静かな寝息とともに安心とやすらぎが広がる情景を描きます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 440,
+      "sceneId": 39,
+      "romaji": "SHABONTAMAGA 《FUWAFUWA》TOSORANIMATSUTEIKUNOWOMITSUMETEITA",
+      "jpsen": "シャボン玉が《フワフワ》と空に舞っていくのを見つめていた。",
+      "main": "[RU] シャボン玉が《フワフワ》と空に舞っていくのを見つめていた。",
+      "description": "[RU] 《フワフワ》は軽く、柔らかく、風に乗って漂う動きを表し、夢のような浮遊感や儚さを含んだ美しさを伝えます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 441,
+      "sceneId": 39,
+      "romaji": "BOORUWO 《KOROKORO》KOROGASHITEOIKAKETEASOBUNOGAMAIBUUMU",
+      "jpsen": "ボールを《コロコロ》転がして追いかけて遊ぶのがマイブーム。",
+      "main": "[RU] ボールを《コロコロ》転がして追いかけて遊ぶのがマイブーム。",
+      "description": "[RU] 《コロコロ》は小さく丸いものが床を軽快に転がる音や動きを表し、楽しげな追いかけっこのリズムを感じさせます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 442,
+      "sceneId": 39,
+      "romaji": "SUBERIDAINOUEDE 《MOJIMOJI》SHITE NAKANAKASUBERENAI…KAWAIIYUUKI",
+      "jpsen": "すべり台の上で《モジモジ》して、なかなか滑れない…かわいい勇気！",
+      "main": "[RU] すべり台の上で《モジモジ》して、なかなか滑れない…かわいい勇気！",
+      "description": "[RU] 《モジモジ》は恥ずかしさや緊張から身体を小さく動かす様子を表し、内に秘めた葛藤や小さな一歩を踏み出そうとする姿を映し出します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    }
+  ]
+}

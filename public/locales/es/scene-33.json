@@ -1,0 +1,200 @@
+{
+  "scene": "[ES] 会話・やりとり",
+  "messages": [
+    {
+      "id": 761,
+      "sceneId": 33,
+      "romaji": "AITENOHENJIGA 《UN'UN》TOYASASHIKUUNAZUKUYOUDEANSHINSHIMASHITA",
+      "jpsen": "相手の返事が《うんうん》と優しくうなずくようで安心しました。",
+      "main": "[ES] 相手の返事が《うんうん》と優しくうなずくようで安心しました。",
+      "description": "[ES] 《うんうん》は肯定と共感を連続で表す音で、会話の温かさを感じさせます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 762,
+      "sceneId": 33,
+      "romaji": "TOTSUZENNOHANASHINI 《POKAN》TOKUCHIWOHIRAKETESHIMAIMASHITA",
+      "jpsen": "突然の話に《ポカン》と口を開けてしまいました。",
+      "main": "[ES] 突然の話に《ポカン》と口を開けてしまいました。",
+      "description": "[ES] 《ポカン》は驚きや理解が追いつかない様子を表す音です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 763,
+      "sceneId": 33,
+      "romaji": "OTAGAINOKOTOBAGA 《PONPON》TOKOKOCHIYOKUHAZUMIMASHITA",
+      "jpsen": "お互いの言葉が《ポンポン》と心地よく弾みました。",
+      "main": "[ES] お互いの言葉が《ポンポン》と心地よく弾みました。",
+      "description": "[ES] 《ポンポン》は軽快なテンポで進む会話を表現します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 764,
+      "sceneId": 33,
+      "romaji": "KIKIMACHIGAETE 《ATAFUTA》SHITESHIMAIMASHITA",
+      "jpsen": "聞き間違えて《アタフタ》してしまいました。",
+      "main": "[ES] 聞き間違えて《アタフタ》してしまいました。",
+      "description": "[ES] 《アタフタ》は焦りや混乱した動作や表情をオノマトペで表す表現です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 765,
+      "sceneId": 33,
+      "romaji": "TOMODACHIKARANO 《PORORI》TOKOBORETAHONNENIODOROKIMASHITA",
+      "jpsen": "友だちからの《ぽろり》とこぼれた本音に驚きました。",
+      "main": "[ES] 友だちからの《ぽろり》とこぼれた本音に驚きました。",
+      "description": "[ES] 《ぽろり》は言葉や涙などが自然にこぼれる様子を表し、感情の繊細さを伝えます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 766,
+      "sceneId": 33,
+      "romaji": "「SORE WAKARU〜 」TO 《PATSUTO》KIMOCHIGATSUNAGARIMASHITA",
+      "jpsen": "「それ、わかる〜！」と《パッと》気持ちがつながりました。",
+      "main": "[ES] 「それ、わかる〜！」と《パッと》気持ちがつながりました。",
+      "description": "[ES] 《パッと》は直感的なひらめきや共感の広がりを示します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 767,
+      "sceneId": 33,
+      "romaji": "HENJIGANAKUTE 《MOJIMOJI》SHITESHIMAIMASHITA",
+      "jpsen": "返事がなくて《モジモジ》してしまいました。",
+      "main": "[ES] 返事がなくて《モジモジ》してしまいました。",
+      "description": "[ES] 《モジモジ》はためらいや恥ずかしさからくる遠慮がちな動作を描きます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 488,
+      "sceneId": 33,
+      "romaji": "IITAIKOTOGA 《GURUGURU》TOATAMAWOMAWATSUTEMATOMARIMASENDESHITA",
+      "jpsen": "言いたいことが《グルグル》と頭を回ってまとまりませんでした。",
+      "main": "[ES] 言いたいことが《グルグル》と頭を回ってまとまりませんでした。",
+      "description": "[ES] 《グルグル》は考えが堂々巡りする様子を表現し、会話の中の迷いを伝えます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 489,
+      "sceneId": 33,
+      "romaji": "TOTSUZENNOTEIANNI 《DOGIMAGI》SHITESHIMAIMASHITA",
+      "jpsen": "突然の提案に《ドギマギ》してしまいました。",
+      "main": "[ES] 突然の提案に《ドギマギ》してしまいました。",
+      "description": "[ES] 《ドギマギ》は緊張や戸惑いによるぎこちなさを表す音です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 490,
+      "sceneId": 33,
+      "romaji": "CHOTTOSHITAJOUDANNI 《KUSUTSU》TOWARATSUTESHIMAIMASHITA",
+      "jpsen": "ちょっとした冗談に《クスッ》と笑ってしまいました。",
+      "main": "[ES] ちょっとした冗談に《クスッ》と笑ってしまいました。",
+      "description": "[ES] 《クスッ》は静かにこみあげる笑いを表現し、会話のやさしさを添えます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 491,
+      "sceneId": 33,
+      "romaji": "AIZUCHIGA 《KOKUKOKU》TOTENPOYOKUKAETSUTEKITEURESHIKATTADESU",
+      "jpsen": "相づちが《コクコク》とテンポよく返ってきて嬉しかったです。",
+      "main": "[ES] 相づちが《コクコク》とテンポよく返ってきて嬉しかったです。",
+      "description": "[ES] 《コクコク》はうなずく動作が繰り返される様子を、音で表現します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 492,
+      "sceneId": 33,
+      "romaji": "KIKARETE 《OROORO》SURUSUGATANI TSUIWARATSUTESHIMAIMASHITA",
+      "jpsen": "聞かれて《オロオロ》する姿に、つい笑ってしまいました。",
+      "main": "[ES] 聞かれて《オロオロ》する姿に、つい笑ってしまいました。",
+      "description": "[ES] 《オロオロ》は困って迷っているときの様子を表す表現です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 493,
+      "sceneId": 33,
+      "romaji": "「ARIGATOU」TO 《POTSURI》TOTSUBUYAKUKOEGAMUNENIHIBIKIMASHITA",
+      "jpsen": "「ありがとう」と《ポツリ》とつぶやく声が胸に響きました。",
+      "main": "[ES] 「ありがとう」と《ポツリ》とつぶやく声が胸に響きました。",
+      "description": "[ES] 《ポツリ》は静かにぽつんと発せられる一言にぴったりのオノマトペです。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 494,
+      "sceneId": 33,
+      "romaji": "HENJIGA 《KIPPARI》SHITEITE TANOMOSHIKUKANJIMASHITA",
+      "jpsen": "返事が《キッパリ》していて、頼もしく感じました。",
+      "main": "[ES] 返事が《キッパリ》していて、頼もしく感じました。",
+      "description": "[ES] 《キッパリ》は迷いのない態度や言い切る姿を音で表す表現です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 495,
+      "sceneId": 33,
+      "romaji": "HENJIGA 《HAKIHAKI》SHITEITE KAIWAGAKIMOCHIYOKATTADESU",
+      "jpsen": "返事が《はきはき》していて、会話が気持ちよかったです。",
+      "main": "[ES] 返事が《はきはき》していて、会話が気持ちよかったです。",
+      "description": "[ES] 《はきはき》は言葉が明るく、明瞭で元気な印象を与えます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    }
+  ]
+}

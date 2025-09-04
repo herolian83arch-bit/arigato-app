@@ -1,0 +1,290 @@
+{
+  "scene": "読書・知的な時間",
+  "messages": [
+    {
+      "id": 421,
+      "sceneId": 29,
+      "scene": "読書・知的な時間",
+      "main": "ページを《パラリ》とめくる音が静かに響きました。",
+      "romaji": "PEEJIWO 《PARARI》TOMEKURUOTOGASHIZUKANIHIBIKIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《パラリ》は紙が一枚、ゆっくりとめくられる音で、落ち着いた読書の始まりを伝えます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "ページを《パラリ》とめくる音が静かに響きました。"
+    },
+    {
+      "id": 422,
+      "sceneId": 29,
+      "scene": "読書・知的な時間",
+      "main": "万年筆が《カリカリ》と紙の上を走りました。",
+      "romaji": "MANNENHITSUGA 《KARIKARI》TOKAMINOUEWOHASHIRIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《カリカリ》はペン先が細かく動く音で、集中した書きものの時間を表します。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "万年筆が《カリカリ》と紙の上を走りました。"
+    },
+    {
+      "id": 423,
+      "sceneId": 29,
+      "scene": "読書・知的な時間",
+      "main": "ノートに文字を書いていると、《スラスラ》とペンが進みました。",
+      "romaji": "NOOTONIMOJIWOKAITEIRUTO 《SURASURA》TOPENGASUSUMIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《スラスラ》は滑らかに進む様子を表現し、思考が心地よく流れている状態を示します。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "ノートに文字を書いていると、《スラスラ》とペンが進みました。"
+    },
+    {
+      "id": 424,
+      "sceneId": 29,
+      "scene": "読書・知的な時間",
+      "main": "本を開いたとき、《ふわっ》とインクの香りが立ちました。",
+      "romaji": "HONWOHIRAITATOKI 《FUWATSU》TOINKUNOKAORIGATACHIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ふわっ》はやわらかく漂う気配を示し、紙やインクのにおいとともに知的な雰囲気を演出します。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "本を開いたとき、《ふわっ》とインクの香りが立ちました。"
+    },
+    {
+      "id": 425,
+      "sceneId": 29,
+      "scene": "読書・知的な時間",
+      "main": "薄い紙が《サラサラ》と指の下を流れていきました。",
+      "romaji": "USUIKAMIGA 《SARASARA》TOYUBINOSHITAWONAGARETEIKIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《サラサラ》は軽やかにすれる音で、繊細な読書のリズムを指先で感じるような描写です。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "薄い紙が《サラサラ》と指の下を流れていきました。"
+    },
+    {
+      "id": 426,
+      "sceneId": 29,
+      "scene": "読書・知的な時間",
+      "main": "しおりを《スッ》と差し込みました。",
+      "romaji": "SHIORIWO 《SUTSU》TOSASHIKOMIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《スッ》はなめらかで素早い動作を表す音で、丁寧な所作を感じさせます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "しおりを《スッ》と差し込みました。"
+    },
+    {
+      "id": 427,
+      "sceneId": 29,
+      "scene": "読書・知的な時間",
+      "main": "辞書を《パタン》と閉じました。",
+      "romaji": "JISHOWO 《PATAN》TOTOJIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《パタン》は本がしっかりと閉じる音で、一区切りついた感じを伝えます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "辞書を《パタン》と閉じました。"
+    },
+    {
+      "id": 428,
+      "sceneId": 29,
+      "scene": "読書・知的な時間",
+      "main": "静かな図書室に《コツコツ》と靴音が響いていました。",
+      "romaji": "SHIZUKANATOSHOSHITSUNI 《KOTSUKOTSU》TOKUTSUOTOGAHIBIITEIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《コツコツ》は硬い床に響く足音で、整った空間にリズムを与える音です。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "静かな図書室に《コツコツ》と靴音が響いていました。"
+    },
+    {
+      "id": 429,
+      "sceneId": 29,
+      "scene": "読書・知的な時間",
+      "main": "ページの端が《ぺらっ》と軽くめくれました。",
+      "romaji": "PEEJINOHAJIGA 《PERATSU》TOKARUKUMEKUREMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ぺらっ》は紙が薄く軽く動く音で、繊細な変化を感じ取る表現です。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "ページの端が《ぺらっ》と軽くめくれました。"
+    },
+    {
+      "id": 430,
+      "sceneId": 29,
+      "scene": "読書・知的な時間",
+      "main": "問題集のページを《パッ》と開きました。",
+      "romaji": "MONDAISHUUNOPEEJIWO 《PATSU》TOHIRAKIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《パッ》は瞬間的な動作を表現し、やる気や集中のスイッチが入る場面を描きます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "問題集のページを《パッ》と開きました。"
+    },
+    {
+      "id": 431,
+      "sceneId": 29,
+      "scene": "読書・知的な時間",
+      "main": "鉛筆の芯を《カチカチッ》と調整しました。",
+      "romaji": "ENPITSUNOSHINWO 《KACHIKACHITSU》TOCHOUSEISHIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《カチカチッ》は少し多めに押すような連続音で、準備する手の動きがより丁寧に伝わります。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "鉛筆の芯を《カチカチッ》と調整しました。"
+    },
+    {
+      "id": 432,
+      "sceneId": 29,
+      "scene": "読書・知的な時間",
+      "main": "ふとため息を《ふぅ〜》とついて、読み直しました。",
+      "romaji": "FUTOTAMEIKIWO 《FUU〜》TOTSUITE YOMINAOSHIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ふぅ〜》は気持ちを整えるための深い呼吸音で、静かに流れる時間を象徴します。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "ふとため息を《ふぅ〜》とついて、読み直しました。"
+    },
+    {
+      "id": 433,
+      "sceneId": 29,
+      "scene": "読書・知的な時間",
+      "main": "静かすぎて、《カリッ》とお菓子の音が響きました。",
+      "romaji": "SHIZUKASUGITE 《KARITSU》TOOKASHINOOTOGAHIBIKIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《カリッ》は小さくも歯ごたえのある音で、緊張をほどくユーモアを感じさせます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "静かすぎて、《カリッ》とお菓子の音が響きました。"
+    },
+    {
+      "id": 434,
+      "sceneId": 29,
+      "scene": "読書・知的な時間",
+      "main": "本棚に本を《スッ》と戻しました。",
+      "romaji": "HONDANANIHONWO 《SUTSU》TOMODOSHIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《スッ》は静かな動作を滑らかに表す音で、行儀よさや整った環境を描きます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "本棚に本を《スッ》と戻しました。"
+    },
+    {
+      "id": 435,
+      "sceneId": 29,
+      "scene": "読書・知的な時間",
+      "main": "机の上に手を置くと、《トン》と音が鳴りました。",
+      "romaji": "TSUKUENOUENITEWOOKUTO 《TON》TOOTOGANARIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《トン》は小さく軽い接触音で、意志のある静かな気配を感じさせます。",
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "jpsen": "机の上に手を置くと、《トン》と音が鳴りました。"
+    }
+  ]
+}

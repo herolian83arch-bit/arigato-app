@@ -1,0 +1,200 @@
+{
+  "scene": "[RU] 天気・自然現象",
+  "messages": [
+    {
+      "id": 316,
+      "sceneId": 22,
+      "romaji": "MADONOSOTODE 《SARASARA》TOAMEGAFUTSUTEIMASHITA",
+      "jpsen": "窓の外で《サラサラ》と雨が降っていました。",
+      "main": "[RU] 窓の外で《サラサラ》と雨が降っていました。",
+      "description": "[RU] 《サラサラ》は細かい雨が静かに降る音を表し、しっとりとした空気を伝えます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 317,
+      "sceneId": 22,
+      "romaji": "KAMINARIGA 《GOROGORO》TONARIHIBIITE SUKOSHIODOROKIMASHITA",
+      "jpsen": "雷が《ゴロゴロ》と鳴り響いて、少し驚きました。",
+      "main": "[RU] 雷が《ゴロゴロ》と鳴り響いて、少し驚きました。",
+      "description": "[RU] 《ゴロゴロ》は雷の低く響く音を再現し、空の不安定さを伝える表現です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 318,
+      "sceneId": 22,
+      "romaji": "ASANOKUUKIGA 《HINYARI》SHITEITE KIMOCHIYOKATTADESU",
+      "jpsen": "朝の空気が《ひんやり》していて、気持ちよかったです。",
+      "main": "[RU] 朝の空気が《ひんやり》していて、気持ちよかったです。",
+      "description": "[RU] 《ひんやり》は冷たさをやさしく伝える言葉で、季節の移ろいを感じさせます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 319,
+      "sceneId": 22,
+      "romaji": "TAIYOUGA 《GIRAGIRA》SHOUTTE ASEGADOMARIMASENDESHITA",
+      "jpsen": "太陽が《ギラギラ》照って、汗が止まりませんでした。",
+      "main": "[RU] 太陽が《ギラギラ》照って、汗が止まりませんでした。",
+      "description": "[RU] 《ギラギラ》は強い日差しの照りつける様子を、視覚的に伝える表現です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 320,
+      "sceneId": 22,
+      "romaji": "KAZEGA 《BYUUBYUU》FUITEITE BOUSHIGATOBISOUDESHITA",
+      "jpsen": "風が《ビュービュー》吹いていて、帽子が飛びそうでした。",
+      "main": "[RU] 風が《ビュービュー》吹いていて、帽子が飛びそうでした。",
+      "description": "[RU] 《ビュービュー》は強い風の音をそのまま再現した、動きと迫力のあるオノマトペです。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 321,
+      "sceneId": 22,
+      "romaji": "KONOHAGA 《KASAKASA》TOOTOWOTATETEYURETEIMASHITA",
+      "jpsen": "木の葉が《カサカサ》と音を立てて揺れていました。",
+      "main": "[RU] 木の葉が《カサカサ》と音を立てて揺れていました。",
+      "description": "[RU] 《カサカサ》は乾いた葉や紙がこすれる音を表し、秋の風情を感じさせます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 322,
+      "sceneId": 22,
+      "romaji": "YUKIGA 《SHINSHIN》TOFUTSUTE OTONONAISEKAINITSUTSUMAREMASHITA",
+      "jpsen": "雪が《しんしん》と降って、音のない世界に包まれました。",
+      "main": "[RU] 雪が《しんしん》と降って、音のない世界に包まれました。",
+      "description": "[RU] 《しんしん》は静かに雪が降る様子を表し、時間の流れがゆっくり感じられます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 323,
+      "sceneId": 22,
+      "romaji": "KASANIATARUAMAOTOGA 《POTSUPOTSU》TOKOKOCHIYOKATTADESU",
+      "jpsen": "傘に当たる雨音が《ポツポツ》と心地よかったです。",
+      "main": "[RU] 傘に当たる雨音が《ポツポツ》と心地よかったです。",
+      "description": "[RU] 《ポツポツ》は小さな雨粒が断続的に落ちる音を再現した、繊細なオノマトペです。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 324,
+      "sceneId": 22,
+      "romaji": "FUURINGA 《RINRIN》TONATSUTE NATSUNOOTOZUREWOKANJIMASHITA",
+      "jpsen": "風鈴が《リンリン》と鳴って、夏の訪れを感じました。",
+      "main": "[RU] 風鈴が《リンリン》と鳴って、夏の訪れを感じました。",
+      "description": "[RU] 《リンリン》は澄んだ金属音を描写し、涼しげな日本の夏の風情を伝えます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 325,
+      "sceneId": 22,
+      "romaji": "KUMOGA 《MOKUMOKU》TOHIROGATTEIKIMASHITA",
+      "jpsen": "雲が《モクモク》と広がっていきました。",
+      "main": "[RU] 雲が《モクモク》と広がっていきました。",
+      "description": "[RU] 《モクモク》は雲や煙が厚く湧きあがるような視覚的な動きを表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 326,
+      "sceneId": 22,
+      "romaji": "TOOKUDE 《PARAPARA》TOKOSAMEGAFUTSUTEIMASHITA",
+      "jpsen": "遠くで《パラパラ》と小雨が降っていました。",
+      "main": "[RU] 遠くで《パラパラ》と小雨が降っていました。",
+      "description": "[RU] 《パラパラ》は音も軽く、雨がちらつく様子を柔らかく伝える表現です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 327,
+      "sceneId": 22,
+      "romaji": "KAMINARIGACHIKAZUKUNITSURETE 《PIKATSU》《GOROGORO》TOOTOGATSUZUKIMASHITA",
+      "jpsen": "雷が近づくにつれて《ピカッ》《ゴロゴロ》と音が続きました。",
+      "main": "[RU] 雷が近づくにつれて《ピカッ》《ゴロゴロ》と音が続きました。",
+      "description": "[RU] 《ピカッ》は光の瞬間を、《ゴロゴロ》はその余韻を。空の劇的な変化を伝える組み合わせです。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 328,
+      "sceneId": 22,
+      "romaji": "TAIFUUNOKAZEGA 《GOOTSU》TONATSUTEITE MADOGAYUREMASHITA",
+      "jpsen": "台風の風が《ゴーッ》と鳴っていて、窓が揺れました。",
+      "main": "[RU] 台風の風が《ゴーッ》と鳴っていて、窓が揺れました。",
+      "description": "[RU] 《ゴーッ》は空気を巻き込む大きな風の音をダイナミックに表現します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 329,
+      "sceneId": 22,
+      "romaji": "KIRIGA 《FUWA〜TSU》TOHIROGATTE GENSOUTEKIDESHITA",
+      "jpsen": "霧が《ふわ〜っ》と広がって、幻想的でした。",
+      "main": "[RU] 霧が《ふわ〜っ》と広がって、幻想的でした。",
+      "description": "[RU] 《ふわ〜っ》はやわらかく広がる霧や煙の様子を、視覚と感触で表す音です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 330,
+      "sceneId": 22,
+      "romaji": "TENKIGA 《KOROKORO》KAWATTE OMOSHIROKATTADESU",
+      "jpsen": "天気が《コロコロ》変わって、おもしろかったです。",
+      "main": "[RU] 天気が《コロコロ》変わって、おもしろかったです。",
+      "description": "[RU] 《コロコロ》は物事がころころ転がるように変化する様子を、親しみやすく伝える言葉です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    }
+  ]
+}

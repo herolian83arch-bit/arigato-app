@@ -1,0 +1,200 @@
+{
+  "scene": "[ZH] 出発・到着",
+  "messages": [
+    {
+      "id": 676,
+      "sceneId": 6,
+      "romaji": "HOTERUWODERUTOKI 《DOKIDOKI》GAKOMIAGETEKIMASHITA",
+      "jpsen": "ホテルを出るとき、《ドキドキ》がこみ上げてきました。",
+      "main": "[ZH] ホテルを出るとき、《ドキドキ》がこみ上げてきました。",
+      "description": "[ZH] 《ドキドキ》は、期待や緊張で心が高鳴る様子を表します。旅立ちのワクワクした気持ちにぴったりです。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 677,
+      "sceneId": 6,
+      "romaji": "OOKINANIMOTSUWO 《GOROGORO》KOROGASHITE SHUPPATSUSHIMASHITA",
+      "jpsen": "大きな荷物を《ゴロゴロ》転がして、出発しました。",
+      "main": "[ZH] 大きな荷物を《ゴロゴロ》転がして、出発しました。",
+      "description": "[ZH] 《ゴロゴロ》は、重いものを引きずるように転がす音や動作を表します。スーツケースを引く音にもリアリティがあります。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 678,
+      "sceneId": 6,
+      "romaji": "SHINKANSENNOSHASOUKARAMACHIGA 《SUUTSU》TONAGARETEIKIMASU",
+      "jpsen": "新幹線の車窓から街が《スーッ》と流れていきます。",
+      "main": "[ZH] 新幹線の車窓から街が《スーッ》と流れていきます。",
+      "description": "[ZH] 《スーッ》は、静かでなめらかな動きや変化を表す語です。移動のスピード感や静けさを描けます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 679,
+      "sceneId": 6,
+      "romaji": "SHUPPATSUSHITESUGUNI 《BATABATA》SHITESHIMAIMASHITA",
+      "jpsen": "出発してすぐに、《バタバタ》してしまいました。",
+      "main": "[ZH] 出発してすぐに、《バタバタ》してしまいました。",
+      "description": "[ZH] 《バタバタ》は、慌ただしく落ち着きのない動きを表します。乗り遅れそうな焦りや移動の慌ただしさに。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 680,
+      "sceneId": 6,
+      "romaji": "MOKUTEKICHINICHIKAZUKUNITSURETE 《SOWASOWA》SHITEKIMASHITA",
+      "jpsen": "目的地に近づくにつれて、《ソワソワ》してきました。",
+      "main": "[ZH] 目的地に近づくにつれて、《ソワソワ》してきました。",
+      "description": "[ZH] 《ソワソワ》は、何かが気になって落ち着かない様子を表します。期待と不安が混じる心の動きに。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 681,
+      "sceneId": 6,
+      "romaji": "EKINITOUCHAKUSHITASHUNKAN 《HOTSU》TOIKIGAMOREMASHITA",
+      "jpsen": "駅に到着した瞬間、《ホッ》と息がもれました。",
+      "main": "[ZH] 駅に到着した瞬間、《ホッ》と息がもれました。",
+      "description": "[ZH] 《ホッ》は、緊張や不安から解放されて安心した気持ちをやさしく伝えます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 682,
+      "sceneId": 6,
+      "romaji": "DENSHANOTOBIRAGA 《PATAN》TOSHIMARI IYOIYOSHUPPATSUDESU",
+      "jpsen": "電車の扉が《パタン》と閉まり、いよいよ出発です。",
+      "main": "[ZH] 電車の扉が《パタン》と閉まり、いよいよ出発です。",
+      "description": "[ZH] 《パタン》は、軽やかにものが閉じる音を表します。始まりの合図のような印象を与える語です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 683,
+      "sceneId": 6,
+      "romaji": "HOOMUNITSUITARA NINNONAGAREGA 《ZOROZORO》TOTSUZUITEIMASHITA",
+      "jpsen": "ホームに着いたら、人の流れが《ゾロゾロ》と続いていました。",
+      "main": "[ZH] ホームに着いたら、人の流れが《ゾロゾロ》と続いていました。",
+      "description": "[ZH] 《ゾロゾロ》は、大勢の人が列になって移動する様子を表します。駅の混雑感や人の動きにぴったりです。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 684,
+      "sceneId": 6,
+      "romaji": "KAISATSUNOOTOGA 《PITSU》TONATSUTE TABIGAOWATTAKOTOWOJIKKANSHIMASHITA",
+      "jpsen": "改札の音が《ピッ》と鳴って、旅が終わったことを実感しました。",
+      "main": "[ZH] 改札の音が《ピッ》と鳴って、旅が終わったことを実感しました。",
+      "description": "[ZH] 《ピッ》は、短く高めの電子音を表し、機械操作やシステム音に使われます。改札機の音にぴったりで、現代的な場面描写に向いています。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 685,
+      "sceneId": 6,
+      "romaji": "ORITASHUNKAN KUUKIGA 《HIYATSU》TOSHITEITEKIMOCHIYOKATTADESU",
+      "jpsen": "降りた瞬間、空気が《ヒヤッ》としていて気持ちよかったです。",
+      "main": "[ZH] 降りた瞬間、空気が《ヒヤッ》としていて気持ちよかったです。",
+      "description": "[ZH] 《ヒヤッ》は、急に冷たさを感じる瞬間を表します。気候や場所の変化を印象づける表現です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 686,
+      "sceneId": 6,
+      "romaji": "KAETSUTEKITAEKINOKAISATSUWOTOURUTO 《JINWARI》URESHISAGAKOMIAGEMASHITA",
+      "jpsen": "帰ってきた駅の改札を通ると、《じんわり》嬉しさがこみ上げました。",
+      "main": "[ZH] 帰ってきた駅の改札を通ると、《じんわり》嬉しさがこみ上げました。",
+      "description": "[ZH] 《じんわり》は、ゆっくりと心に広がっていく感情を表す語です。再会や安心感にぴったりです。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 687,
+      "sceneId": 6,
+      "romaji": "GENKANNODOAWOSHIMETASHUNKAN 《FUUTSU》TOIKIGANUKEMASHITA",
+      "jpsen": "玄関のドアを閉めた瞬間、《フーッ》と息が抜けました。",
+      "main": "[ZH] 玄関のドアを閉めた瞬間、《フーッ》と息が抜けました。",
+      "description": "[ZH] 《フーッ》は、ため息や深呼吸のように、心身の緊張がほぐれる瞬間を表す語です。無事帰宅した安堵感をやさしく表現できます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 688,
+      "sceneId": 6,
+      "romaji": "TOBIRAWOHIRAKETASHUNKAN HEYANI 《FUWATSU》TONATSUKASHIIKAORIGAHIROGARIMASHITA",
+      "jpsen": "扉を開けた瞬間、部屋に《フワッ》と懐かしい香りが広がりました。",
+      "main": "[ZH] 扉を開けた瞬間、部屋に《フワッ》と懐かしい香りが広がりました。",
+      "description": "[ZH] 《フワッ》は、やさしく漂うものの広がりを表します。記憶に残る匂いや空気感にも。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 689,
+      "sceneId": 6,
+      "romaji": "SHUPPATSUMAEHA 《WAKUWAKU》DEIPPAIDESHITA",
+      "jpsen": "出発前は《ワクワク》でいっぱいでした。",
+      "main": "[ZH] 出発前は《ワクワク》でいっぱいでした。",
+      "description": "[ZH] 《ワクワク》は、これから始まる冒険や期待に心がはずむ様子を表します。出発時の典型的な感情です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 690,
+      "sceneId": 6,
+      "romaji": "YOUYAKUMOKUTEKICHINITSUITE 《NIKKORI》SHITESHIMAIMASHITA",
+      "jpsen": "ようやく目的地に着いて、《ニッコリ》してしまいました。",
+      "main": "[ZH] ようやく目的地に着いて、《ニッコリ》してしまいました。",
+      "description": "[ZH] 《ニッコリ》は、自然とこぼれる笑顔を表す語です。安心感や満足感を穏やかに伝えることができます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    }
+  ]
+}

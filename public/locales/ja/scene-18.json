@@ -1,0 +1,290 @@
+{
+  "scene": "リラックス・温泉・癒し",
+  "messages": [
+    {
+      "id": 256,
+      "sceneId": 18,
+      "scene": "リラックス・温泉・癒し",
+      "main": "温泉に浸かって《じんわり》と温まりました。",
+      "romaji": "ONSENNISHINKATTE 《JINWARI》TOATATAMARIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《じんわり》はゆっくりと効いてくる感覚や変化を音で表現します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "温泉に浸かって《じんわり》と温まりました。"
+    },
+    {
+      "id": 257,
+      "sceneId": 18,
+      "scene": "リラックス・温泉・癒し",
+      "main": "深呼吸で《すーっ》と気持ちが落ち着きました。",
+      "romaji": "SHINKOKYUUDE 《SUUTSU》TOKIMOCHIGAOCHITSUKIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《すーっ》は吸い込む息とともに気分が整う様子を表します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "深呼吸で《すーっ》と気持ちが落ち着きました。"
+    },
+    {
+      "id": 258,
+      "sceneId": 18,
+      "scene": "リラックス・温泉・癒し",
+      "main": "お茶の香りで《ほっと》しました。",
+      "romaji": "OCHANOKAORIDE 《HOTTO》SHIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《ほっと》は安心や安堵の気持ちがふっと緩む様子を表します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "お茶の香りで《ほっと》しました。"
+    },
+    {
+      "id": 259,
+      "sceneId": 18,
+      "scene": "リラックス・温泉・癒し",
+      "main": "自然の中で《ゆったり》と過ごしました。",
+      "romaji": "SHIZENNONAKADE 《YUTTARI》TOSUGOSHIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《ゆったり》は時間や気分がのびのびとリラックスしている様子です。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "自然の中で《ゆったり》と過ごしました。"
+    },
+    {
+      "id": 260,
+      "sceneId": 18,
+      "scene": "リラックス・温泉・癒し",
+      "main": "川のせせらぎが《さらさら》と心地よく響きました。",
+      "romaji": "KAWANOSESERAGIGA 《SARASARA》TOKOKOCHIYOKUHIBIKIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《さらさら》は水が軽やかに流れる音を表現します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "川のせせらぎが《さらさら》と心地よく響きました。"
+    },
+    {
+      "id": 261,
+      "sceneId": 18,
+      "scene": "リラックス・温泉・癒し",
+      "main": "湯上がりに肌が《すべすべ》になりました。",
+      "romaji": "YUAGARINIHADAGA 《SUBESUBE》NINARIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《すべすべ》は滑らかで気持ちのいい肌触りを音で伝えます。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "湯上がりに肌が《すべすべ》になりました。"
+    },
+    {
+      "id": 262,
+      "sceneId": 18,
+      "scene": "リラックス・温泉・癒し",
+      "main": "《のんびり》とした時間を楽しみました。",
+      "romaji": "《NONBIRI》TOSHITAJIKANWOTANOSHIMIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《のんびり》は急がずにゆっくりと過ごす様子を表します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "《のんびり》とした時間を楽しみました。"
+    },
+    {
+      "id": 263,
+      "sceneId": 18,
+      "scene": "リラックス・温泉・癒し",
+      "main": "《ほっと》一息ついて、疲れを癒しました。",
+      "romaji": "《HOTTO》HITOIKITSUITE TSUKAREWOIYASHIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《ほっと》は緊張が解けて安心する様子を表します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "《ほっと》一息ついて、疲れを癒しました。"
+    },
+    {
+      "id": 264,
+      "sceneId": 18,
+      "scene": "リラックス・温泉・癒し",
+      "main": "《まったり》とした空気に包まれました。",
+      "romaji": "《MATTARI》TOSHITAKUUKINITSUTSUMAREMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《まったり》はゆったりとした落ち着いた雰囲気を表します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "《まったり》とした空気に包まれました。"
+    },
+    {
+      "id": 265,
+      "sceneId": 18,
+      "scene": "リラックス・温泉・癒し",
+      "main": "《くつろぎ》の時間を満喫しました。",
+      "romaji": "《KUTSUROGI》NOJIKANWOMANKITSUSHIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《くつろぎ》は緊張から解放されてリラックスした状態を表します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "《くつろぎ》の時間を満喫しました。"
+    },
+    {
+      "id": 266,
+      "sceneId": 18,
+      "scene": "リラックス・温泉・癒し",
+      "main": "《やすらぎ》のひとときを過ごしました。",
+      "romaji": "《YASURAGI》NOHITOTOKIWOSUGOSHIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《やすらぎ》は心が落ち着いて安らかな気持ちになる様子を表します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "《やすらぎ》のひとときを過ごしました。"
+    },
+    {
+      "id": 267,
+      "sceneId": 18,
+      "scene": "リラックス・温泉・癒し",
+      "main": "《いやし》の時間を楽しみました。",
+      "romaji": "《IYASHI》NOJIKANWOTANOSHIMIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《いやし》は心身の疲れを癒してくれる効果を表します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "《いやし》の時間を楽しみました。"
+    },
+    {
+      "id": 268,
+      "sceneId": 18,
+      "scene": "リラックス・温泉・癒し",
+      "main": "《リフレッシュ》した気分で帰りました。",
+      "romaji": "《RIFURESSHU》SHITAKIBUNDEKAERIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《リフレッシュ》は心身がすっきりと新しくなった感覚を表します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "《リフレッシュ》した気分で帰りました。"
+    },
+    {
+      "id": 269,
+      "sceneId": 18,
+      "scene": "リラックス・温泉・癒し",
+      "main": "《リラックス》した状態で一日を終えました。",
+      "romaji": "《RIRAKKUSU》SHITAJOUTAIDETSUITACHIWOOEMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《リラックス》は緊張が解けて心身がゆったりとした状態を表します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "《リラックス》した状態で一日を終えました。"
+    },
+    {
+      "id": 270,
+      "sceneId": 18,
+      "scene": "リラックス・温泉・癒し",
+      "main": "《癒し》の効果を実感しました。",
+      "romaji": "《IYASHI》NOKOUKAWOJIKKANSHIMASHITA",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "description": {
+        "ja": "《癒し》は心身の疲れやストレスが解消される効果を表します。",
+        "en": "",
+        "zh": "",
+        "ko": ""
+      },
+      "jpsen": "《癒し》の効果を実感しました。"
+    }
+  ]
+}

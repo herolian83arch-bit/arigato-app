@@ -1,0 +1,200 @@
+{
+  "scene": "[RU] 家族・親しき人との時間",
+  "messages": [
+    {
+      "id": 198,
+      "sceneId": 13,
+      "romaji": "OKAASANNOHOUCHOUNOOTOGA 《TONTON》TOKOKOCHIYOKUHIBIKIMASU",
+      "jpsen": "お母さんの包丁の音が《トントン》と心地よく響きます。",
+      "main": "[RU] お母さんの包丁の音が《トントン》と心地よく響きます。",
+      "description": "[RU] 《トントン》は、軽やかに繰り返す音。日常の安心感や、家庭のぬくもりを思い起こさせます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 199,
+      "sceneId": 13,
+      "romaji": "ISSHONISHOKUTAKUWOKAKOMUTO 《HOTSU》TOKOKOROGAOCHITSUKIMASU",
+      "jpsen": "一緒に食卓を囲むと、《ホッ》と心が落ち着きます。",
+      "main": "[RU] 一緒に食卓を囲むと、《ホッ》と心が落ち着きます。",
+      "description": "[RU] 《ホッ》は、緊張や疲れがほぐれていくときの吐息のような安堵感。家族との時間にぴったりです。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 200,
+      "sceneId": 13,
+      "romaji": "KODOMOGA 《NIKOTSU》TOWARATSUTEKURETADAKEDE TSUKAREGAFUKITOBIMASHITA",
+      "jpsen": "子どもが《ニコッ》と笑ってくれただけで、疲れが吹き飛びました。",
+      "main": "[RU] 子どもが《ニコッ》と笑ってくれただけで、疲れが吹き飛びました。",
+      "description": "[RU] 《ニコッ》は、穏やかで自然な笑顔。見返りを求めない優しさを感じさせます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 201,
+      "sceneId": 13,
+      "romaji": "CHIISANAKOEDE「ARIGATOU」TOIWARETE 《KYUN》TOSHIMASHITA",
+      "jpsen": "小さな声で「ありがとう」と言われて、《キュン》としました。",
+      "main": "[RU] 小さな声で「ありがとう」と言われて、《キュン》としました。",
+      "description": "[RU] 《キュン》は、胸がぎゅっと締めつけられるようなときめきや感動を表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 202,
+      "sceneId": 13,
+      "romaji": "KAZOKUMINNANOWARAIKOEGA 《WAIWAI》TOHIROGATTEIMASHITA",
+      "jpsen": "家族みんなの笑い声が《ワイワイ》と広がっていました。",
+      "main": "[RU] 家族みんなの笑い声が《ワイワイ》と広がっていました。",
+      "description": "[RU] 《ワイワイ》は、にぎやかで楽しい雰囲気。食卓や団らんのひとときにぴったりです。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 203,
+      "sceneId": 13,
+      "romaji": "SUTOOBUNOMAEDENEKOGA 《GOROGORO》TONODOWONARASHITEIMASHITA",
+      "jpsen": "ストーブの前で猫が《ゴロゴロ》と喉を鳴らしていました。",
+      "main": "[RU] ストーブの前で猫が《ゴロゴロ》と喉を鳴らしていました。",
+      "description": "[RU] 《ゴロゴロ》は、猫がリラックスしているときの喉の音。穏やかで癒される家庭のひとときにぴったりです。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 204,
+      "sceneId": 13,
+      "romaji": "KAETSUTEKITAKOEGAKIKOETE 《PAATSU》TOIENOKUUKIGAAKARUKUNARIMASHITA",
+      "jpsen": "帰ってきた声が聞こえて、《パァッ》と家の空気が明るくなりました。",
+      "main": "[RU] 帰ってきた声が聞こえて、《パァッ》と家の空気が明るくなりました。",
+      "description": "[RU] 《パァッ》は、光や雰囲気が一気に広がる様子。家族がそろう瞬間の輝きに。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 205,
+      "sceneId": 13,
+      "romaji": "SOTTOSENAKAWO 《PONPON》TOTATAITEKURETANOGA NANIYORIURESHIKATTA",
+      "jpsen": "そっと背中を《ポンポン》とたたいてくれたのが、何より嬉しかった。",
+      "main": "[RU] そっと背中を《ポンポン》とたたいてくれたのが、何より嬉しかった。",
+      "description": "[RU] 《ポンポン》は、やさしくリズムをとる軽いタッチ。沈黙の中の励ましや応援に使われます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 206,
+      "sceneId": 13,
+      "romaji": "KYOUDAIGENKANOATO 《SHIIN》TOSHIZUMARIKAETTAKUUKIGA CHOTTOTEREKUSAKUTE",
+      "jpsen": "兄弟げんかのあと、《シーン》と静まりかえった空気が、ちょっと照れくさくて。",
+      "main": "[RU] 兄弟げんかのあと、《シーン》と静まりかえった空気が、ちょっと照れくさくて。",
+      "description": "[RU] 《シーン》は、完全な静けさを表す語。感情の余韻や気まずさをやわらかく描きます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 207,
+      "sceneId": 13,
+      "romaji": "NERUMAENI 《GIYUTSU》TODAKISHIMETEKURETE NAMIDAGADASOUNINARIMASHITA",
+      "jpsen": "寝る前に《ギュッ》と抱きしめてくれて、涙が出そうになりました。",
+      "main": "[RU] 寝る前に《ギュッ》と抱きしめてくれて、涙が出そうになりました。",
+      "description": "[RU] 《ギュッ》は、力強く、確かに想いがこもった抱擁の感覚。心を温めるふれあいの象徴です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 208,
+      "sceneId": 13,
+      "romaji": "ASANOPANNOKAORINI 《FUWATSU》TOMEGASAMEMASHITA",
+      "jpsen": "朝のパンの香りに《フワッ》と目が覚めました。",
+      "main": "[RU] 朝のパンの香りに《フワッ》と目が覚めました。",
+      "description": "[RU] 《フワッ》は、やわらかく広がる感覚や香りを表します。やさしい目覚めに。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 209,
+      "sceneId": 13,
+      "romaji": "DAREKAGA「OKAERI」TOITTEKURERUTO 《JIIN》TOKIMASU",
+      "jpsen": "誰かが「おかえり」と言ってくれると、《ジーン》ときます。",
+      "main": "[RU] 誰かが「おかえり」と言ってくれると、《ジーン》ときます。",
+      "description": "[RU] 《ジーン》は、胸の奥にしみてくる感動を表します。さりげない言葉の重みを伝えます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 210,
+      "sceneId": 13,
+      "romaji": "KOTATSUNIIRUTO 《POKAPOKA》TOSHIAWASENAKIMOCHININARIMASU",
+      "jpsen": "こたつに入ると、《ポカポカ》と幸せな気持ちになります。",
+      "main": "[RU] こたつに入ると、《ポカポカ》と幸せな気持ちになります。",
+      "description": "[RU] 《ポカポカ》は、身体も心もあたたまる感覚。冬の団らんの象徴的なオノマトペです。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 211,
+      "sceneId": 13,
+      "romaji": "ISSHONITEREBIWOMINAGARA 《KUSUKUSU》WARAIAUJIKANGADAISUKIDESU",
+      "jpsen": "一緒にテレビを見ながら、《クスクス》笑い合う時間が大好きです。",
+      "main": "[RU] 一緒にテレビを見ながら、《クスクス》笑い合う時間が大好きです。",
+      "description": "[RU] 《クスクス》は、声を抑えたやさしい笑い。静かな共有時間にぴったりです。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 751,
+      "sceneId": 13,
+      "romaji": "OBENTOUBAKOWOHIRAKETASHUNKAN 《PACHIN》TOWAGOMUGAHAZURETE NANDAKAURESHIKUNARIMASHITA",
+      "jpsen": "お弁当箱を開けた瞬間、《パチン》と輪ゴムが外れて、なんだかうれしくなりました。",
+      "main": "[RU] お弁当箱を開けた瞬間、《パチン》と輪ゴムが外れて、なんだかうれしくなりました。",
+      "description": "[RU] 《パチン》は、小気味よく弾ける音。日常のささやかな喜びを伝えるアクセントになります。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    }
+  ]
+}

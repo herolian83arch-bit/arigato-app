@@ -1,0 +1,290 @@
+{
+  "scene": "チェックイン・チェックアウト",
+  "messages": [
+    {
+      "id": 391,
+      "sceneId": 27,
+      "scene": "チェックイン・チェックアウト",
+      "main": "ホテルの自動ドアが《スーッ》と開いて迎えてくれました。",
+      "romaji": "HOTERUNOJIDOUDOAGA 《SUUTSU》TOHIRAITEMUKAETEKUREMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《スーッ》は滑らかに動く静かな音で、緊張を和らげてくれるような安心感を伝えます。",
+        "en": "“Suu” is a smooth and quiet sound that conveys a sense of comfort.",
+        "zh": "“スーッ”是一种平稳安静的声音，传达安心感。",
+        "ko": "“스윽”은 부드럽고 조용한 소리로 안도감을 전달합니다."
+      },
+      "jpsen": "ホテルの自動ドアが《スーッ》と開いて迎えてくれました。"
+    },
+    {
+      "id": 392,
+      "sceneId": 27,
+      "scene": "チェックイン・チェックアウト",
+      "main": "フロントのベルが《チーン》と鳴りました。",
+      "romaji": "FURONTONOBERUGA 《CHIIN》TONARIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《チーン》は澄んだ短い音で、始まりの合図のような印象を与えます。",
+        "en": "“Chiin” is a clear, short sound signaling a beginning.",
+        "zh": "“チーン”是一种清脆的短音，像是开始的信号。",
+        "ko": "“칭”은 맑고 짧은 소리로 시작을 알리는 느낌을 줍니다."
+      },
+      "jpsen": "フロントのベルが《チーン》と鳴りました。"
+    },
+    {
+      "id": 393,
+      "sceneId": 27,
+      "scene": "チェックイン・チェックアウト",
+      "main": "鍵を渡されたとき、手の中で《カチャ》と鳴りました。",
+      "romaji": "KAGIWOWATASARETATOKI TENONAKADE 《KACHA》TONARIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《カチャ》は金属が軽く触れ合う音を表現し、旅の実感をもたらします。",
+        "en": "“Kacha” represents metal lightly clinking, evoking a travel moment.",
+        "zh": "“カチャ”是金属轻触的声音，带来旅行的实感。",
+        "ko": "“카차”는 금속이 살짝 부딪히는 소리로 여행의 실감을 줍니다."
+      },
+      "jpsen": "鍵を渡されたとき、手の中で《カチャ》と鳴りました。"
+    },
+    {
+      "id": 394,
+      "sceneId": 27,
+      "scene": "チェックイン・チェックアウト",
+      "main": "エレベーターが《ウィーン》と上昇する音に包まれました。",
+      "romaji": "EREBEETAAGA 《UIIN》TOJOUSHOUSURUOTONITSUTSUMAREMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ウィーン》は機械が動く静かな持続音で、移動の期待感を含んでいます。",
+        "en": "“Wiin” is a soft mechanical hum, conveying anticipation of movement.",
+        "zh": "“ウィーン”是机器运行的持续声，带来移动的期待感。",
+        "ko": "“위잉”은 기계가 움직이는 조용한 지속음으로, 이동의 기대감을 줍니다."
+      },
+      "jpsen": "エレベーターが《ウィーン》と上昇する音に包まれました。"
+    },
+    {
+      "id": 395,
+      "sceneId": 27,
+      "scene": "チェックイン・チェックアウト",
+      "main": "部屋に入ると《パタン》とドアが閉まりました。",
+      "romaji": "HEYANIIRUTO 《PATAN》TODOAGASHIMARIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《パタン》は軽くもしっかりと閉まる音で、プライベート空間の始まりを感じさせます。",
+        "en": "“Patan” is the firm yet gentle sound of a door closing, marking privacy.",
+        "zh": "“パタン”是轻柔而坚定的关门声，象征私人空间的开始。",
+        "ko": "“파탄”은 가볍지만 단단한 문 닫는 소리로 사적인 공간의 시작을 알립니다."
+      },
+      "jpsen": "部屋に入ると《パタン》とドアが閉まりました。"
+    },
+    {
+      "id": 396,
+      "sceneId": 27,
+      "scene": "チェックイン・チェックアウト",
+      "main": "カードキーを《ピッ》と当てる音がしました。",
+      "romaji": "KAADOKIIWO 《PITSU》TOATERUOTOGASHIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ピッ》はデジタルな読み取り音で、今どきのスマートな旅の象徴でもあります。",
+        "en": "“Pi” is a digital reading sound that symbolizes a smart journey.",
+        "zh": "“ピッ”是数码读取的声音，象征现代智能旅行。",
+        "ko": "“삡”은 디지털 인식 소리로 현대적인 여행의 상징입니다."
+      },
+      "jpsen": "カードキーを《ピッ》と当てる音がしました。"
+    },
+    {
+      "id": 397,
+      "sceneId": 27,
+      "scene": "チェックイン・チェックアウト",
+      "main": "荷物をベッドに《ドサッ》と置くと一気に力が抜けました。",
+      "romaji": "NIMOTSUWOBEDDONI 《DOSATSU》TOOKUTOIKKINICHIKARAGANUKEMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ドサッ》は重たいものが落ちる音で、安心や安堵の瞬間を表します。",
+        "en": "“Dossa” is the sound of something heavy being dropped, expressing relief.",
+        "zh": "“ドサッ”是重物掉落的声音，代表安心和放松。",
+        "ko": "“도삭”은 무거운 물건이 떨어질 때의 소리로, 안도의 순간을 나타냅니다."
+      },
+      "jpsen": "荷物をベッドに《ドサッ》と置くと一気に力が抜けました。"
+    },
+    {
+      "id": 398,
+      "sceneId": 27,
+      "scene": "チェックイン・チェックアウト",
+      "main": "観光パンフレットを《パラパラ》とめくっていました。",
+      "romaji": "KANKOUPANFURETTOWO 《PARAPARA》TOMEKUTTEIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《パラパラ》は紙を連続してめくる音で、計画のワクワク感を伝えます。",
+        "en": "“Parapara” is the sound of flipping pages, evoking excitement in planning.",
+        "zh": "“パラパラ”是翻动纸张的声音，传达旅行计划的兴奋。",
+        "ko": "“파라파라”는 종이를 넘기는 소리로, 여행 계획의 설렘을 전합니다."
+      },
+      "jpsen": "観光パンフレットを《パラパラ》とめくっていました。"
+    },
+    {
+      "id": 399,
+      "sceneId": 27,
+      "scene": "チェックイン・チェックアウト",
+      "main": "フロントで質問すると、スタッフが《にこっ》と笑って応じてくれました。",
+      "romaji": "FURONTODESHITSUMONSURUTO SUTAFFUGA 《NIKOTSU》TOWARATSUTEOUJITEKUREMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《にこっ》は笑顔の瞬間のぬくもりを、音として感じさせる柔らかい表現です。",
+        "en": "“Niko” expresses the warmth of a smile through sound.",
+        "zh": "“にこっ”通过声音表达微笑的温暖。",
+        "ko": "“니꼿”은 미소 짓는 순간의 따뜻함을 표현하는 소리입니다."
+      },
+      "jpsen": "フロントで質問すると、スタッフが《にこっ》と笑って応じてくれました。"
+    },
+    {
+      "id": 400,
+      "sceneId": 27,
+      "scene": "チェックイン・チェックアウト",
+      "main": "チェックアウトのとき、《カタカタ》とキーボードを打つ音が心地よく響いていました。",
+      "romaji": "CHEKKUAUTONOTOKI 《KATAKATA》TOKIIBOODOWOUTSUOTOGAKOKOCHIYOKUHIBIITEIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《カタカタ》は細かく連続した打鍵音で、事務的ながらも丁寧なやりとりを伝えます。",
+        "en": "“Katakata” is a repeated typing sound, conveying orderly interaction.",
+        "zh": "“カタカタ”是连续的键盘声，传达有序的交流。",
+        "ko": "“카타카타”는 반복적인 타자 소리로, 정돈된 소통을 나타냅니다."
+      },
+      "jpsen": "チェックアウトのとき、《カタカタ》とキーボードを打つ音が心地よく響いていました。"
+    },
+    {
+      "id": 401,
+      "sceneId": 27,
+      "scene": "チェックイン・チェックアウト",
+      "main": "レシートが《スルスル》と出てきました。",
+      "romaji": "RESHIITOGA 《SURUSURU》TODETEKIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《スルスル》は滑らかに紙が出てくる感触を柔らかく表します。",
+        "en": "“Surusuru” expresses the smooth feeling of paper sliding out.",
+        "zh": "“スルスル”描绘了纸张顺畅滑出的感觉。",
+        "ko": "“스르르”는 종이가 부드럽게 나오는 감각을 전합니다."
+      },
+      "jpsen": "レシートが《スルスル》と出てきました。"
+    },
+    {
+      "id": 402,
+      "sceneId": 27,
+      "scene": "チェックイン・チェックアウト",
+      "main": "「ありがとうございました」の声に、《ぺこり》と頭を下げました。",
+      "romaji": "「ARIGATOUGOZAIMASHITA」NOKOENI 《PEKORI》TOATAMAWOSAGEMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ぺこり》はお辞儀の仕草をやさしく音で表現し、日本らしい礼儀を伝えます。",
+        "en": "“Pekori” gently expresses the sound of a bow, symbolizing Japanese etiquette.",
+        "zh": "“ぺこり”温柔地表达鞠躬的声音，象征日本礼仪。",
+        "ko": "“페코리”는 고개 숙이는 소리를 부드럽게 표현하며 일본의 예절을 나타냅니다."
+      },
+      "jpsen": "「ありがとうございました」の声に、《ぺこり》と頭を下げました。"
+    },
+    {
+      "id": 403,
+      "sceneId": 27,
+      "scene": "チェックイン・チェックアウト",
+      "main": "荷物を転がすキャリーが《ゴロゴロ》と音を立てていました。",
+      "romaji": "NIMOTSUWOKOROGASUKYARIIGA 《GOROGORO》TOOTOWOTATETEIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ゴロゴロ》はタイヤの回転音で、旅の余韻や出発の足取りを象徴します。",
+        "en": "“Gorogoro” is the sound of rolling wheels, symbolizing a journey’s rhythm.",
+        "zh": "“ゴロゴロ”是轮子滚动的声音，象征旅程的节奏。",
+        "ko": "“고로고로”는 바퀴가 구르는 소리로, 여행의 여운을 상징합니다."
+      },
+      "jpsen": "荷物を転がすキャリーが《ゴロゴロ》と音を立てていました。"
+    },
+    {
+      "id": 404,
+      "sceneId": 27,
+      "scene": "チェックイン・チェックアウト",
+      "main": "ホテルのロビーを出ると《ふわっ》と風が吹き抜けました。",
+      "romaji": "HOTERUNOROBIIWODERUTO 《FUWATSU》TOKAZEGAFUKINUKEMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ふわっ》はやさしい風や気配を感じるときの軽やかな感覚を表します。",
+        "en": "“Fuwa” expresses the soft sensation of a gentle breeze.",
+        "zh": "“ふわっ”传达轻风拂面的柔和感觉。",
+        "ko": "“후와”는 부드러운 바람이 스치는 가벼운 감각을 표현합니다."
+      },
+      "jpsen": "ホテルのロビーを出ると《ふわっ》と風が吹き抜けました。"
+    },
+    {
+      "id": 405,
+      "sceneId": 27,
+      "scene": "チェックイン・チェックアウト",
+      "main": "振り返ると、ホテルの看板が《キラリ》と輝いて見えました。",
+      "romaji": "FURIKAERUTO HOTERUNOKANBANGA 《KIRARI》TOKAGAYAITEMIEMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《キラリ》は一瞬の光や記憶に残るような輝きを音で表現します。",
+        "en": "“Kirari” represents a momentary sparkle that leaves a lasting impression.",
+        "zh": "“キラリ”描绘一闪而过的光芒和难忘的记忆。",
+        "ko": "“키라리”는 순간적인 반짝임과 기억에 남는 인상을 표현합니다."
+      },
+      "jpsen": "振り返ると、ホテルの看板が《キラリ》と輝いて見えました。"
+    }
+  ]
+}

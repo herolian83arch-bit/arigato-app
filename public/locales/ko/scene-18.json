@@ -1,0 +1,200 @@
+{
+  "scene": "[KO] リラックス・温泉・癒し",
+  "messages": [
+    {
+      "id": 256,
+      "sceneId": 18,
+      "romaji": "ONSENNISHINKATTE 《JINWARI》TOATATAMARIMASHITA",
+      "jpsen": "温泉に浸かって《じんわり》と温まりました。",
+      "main": "[KO] 温泉に浸かって《じんわり》と温まりました。",
+      "description": "[KO] 《じんわり》はゆっくりと効いてくる感覚や変化を音で表現します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 257,
+      "sceneId": 18,
+      "romaji": "SHINKOKYUUDE 《SUUTSU》TOKIMOCHIGAOCHITSUKIMASHITA",
+      "jpsen": "深呼吸で《すーっ》と気持ちが落ち着きました。",
+      "main": "[KO] 深呼吸で《すーっ》と気持ちが落ち着きました。",
+      "description": "[KO] 《すーっ》は吸い込む息とともに気分が整う様子を表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 258,
+      "sceneId": 18,
+      "romaji": "OCHANOKAORIDE 《HOTTO》SHIMASHITA",
+      "jpsen": "お茶の香りで《ほっと》しました。",
+      "main": "[KO] お茶の香りで《ほっと》しました。",
+      "description": "[KO] 《ほっと》は安心や安堵の気持ちがふっと緩む様子を表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 259,
+      "sceneId": 18,
+      "romaji": "SHIZENNONAKADE 《YUTTARI》TOSUGOSHIMASHITA",
+      "jpsen": "自然の中で《ゆったり》と過ごしました。",
+      "main": "[KO] 自然の中で《ゆったり》と過ごしました。",
+      "description": "[KO] 《ゆったり》は時間や気分がのびのびとリラックスしている様子です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 260,
+      "sceneId": 18,
+      "romaji": "KAWANOSESERAGIGA 《SARASARA》TOKOKOCHIYOKUHIBIKIMASHITA",
+      "jpsen": "川のせせらぎが《さらさら》と心地よく響きました。",
+      "main": "[KO] 川のせせらぎが《さらさら》と心地よく響きました。",
+      "description": "[KO] 《さらさら》は水が軽やかに流れる音を表現します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 261,
+      "sceneId": 18,
+      "romaji": "YUAGARINIHADAGA 《SUBESUBE》NINARIMASHITA",
+      "jpsen": "湯上がりに肌が《すべすべ》になりました。",
+      "main": "[KO] 湯上がりに肌が《すべすべ》になりました。",
+      "description": "[KO] 《すべすべ》は滑らかで気持ちのいい肌触りを音で伝えます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 262,
+      "sceneId": 18,
+      "romaji": "《NONBIRI》TOSHITAJIKANWOTANOSHIMIMASHITA",
+      "jpsen": "《のんびり》とした時間を楽しみました。",
+      "main": "[KO] 《のんびり》とした時間を楽しみました。",
+      "description": "[KO] 《のんびり》は急がずにゆっくりと過ごす様子を表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 263,
+      "sceneId": 18,
+      "romaji": "《HOTTO》HITOIKITSUITE TSUKAREWOIYASHIMASHITA",
+      "jpsen": "《ほっと》一息ついて、疲れを癒しました。",
+      "main": "[KO] 《ほっと》一息ついて、疲れを癒しました。",
+      "description": "[KO] 《ほっと》は緊張が解けて安心する様子を表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 264,
+      "sceneId": 18,
+      "romaji": "《MATTARI》TOSHITAKUUKINITSUTSUMAREMASHITA",
+      "jpsen": "《まったり》とした空気に包まれました。",
+      "main": "[KO] 《まったり》とした空気に包まれました。",
+      "description": "[KO] 《まったり》はゆったりとした落ち着いた雰囲気を表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 265,
+      "sceneId": 18,
+      "romaji": "《KUTSUROGI》NOJIKANWOMANKITSUSHIMASHITA",
+      "jpsen": "《くつろぎ》の時間を満喫しました。",
+      "main": "[KO] 《くつろぎ》の時間を満喫しました。",
+      "description": "[KO] 《くつろぎ》は緊張から解放されてリラックスした状態を表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 266,
+      "sceneId": 18,
+      "romaji": "《YASURAGI》NOHITOTOKIWOSUGOSHIMASHITA",
+      "jpsen": "《やすらぎ》のひとときを過ごしました。",
+      "main": "[KO] 《やすらぎ》のひとときを過ごしました。",
+      "description": "[KO] 《やすらぎ》は心が落ち着いて安らかな気持ちになる様子を表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 267,
+      "sceneId": 18,
+      "romaji": "《IYASHI》NOJIKANWOTANOSHIMIMASHITA",
+      "jpsen": "《いやし》の時間を楽しみました。",
+      "main": "[KO] 《いやし》の時間を楽しみました。",
+      "description": "[KO] 《いやし》は心身の疲れを癒してくれる効果を表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 268,
+      "sceneId": 18,
+      "romaji": "《RIFURESSHU》SHITAKIBUNDEKAERIMASHITA",
+      "jpsen": "《リフレッシュ》した気分で帰りました。",
+      "main": "[KO] 《リフレッシュ》した気分で帰りました。",
+      "description": "[KO] 《リフレッシュ》は心身がすっきりと新しくなった感覚を表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 269,
+      "sceneId": 18,
+      "romaji": "《RIRAKKUSU》SHITAJOUTAIDETSUITACHIWOOEMASHITA",
+      "jpsen": "《リラックス》した状態で一日を終えました。",
+      "main": "[KO] 《リラックス》した状態で一日を終えました。",
+      "description": "[KO] 《リラックス》は緊張が解けて心身がゆったりとした状態を表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 270,
+      "sceneId": 18,
+      "romaji": "《IYASHI》NOKOUKAWOJIKKANSHIMASHITA",
+      "jpsen": "《癒し》の効果を実感しました。",
+      "main": "[KO] 《癒し》の効果を実感しました。",
+      "description": "[KO] 《癒し》は心身の疲れやストレスが解消される効果を表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    }
+  ]
+}

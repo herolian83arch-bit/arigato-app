@@ -1,0 +1,200 @@
+{
+  "scene": "[ZH] 空港・飛行機",
+  "messages": [
+    {
+      "id": 661,
+      "sceneId": 5,
+      "romaji": "CHEKKUINNOTSURANINARABINAGARA 《SOWASOWA》SHITEIMASHITA",
+      "jpsen": "チェックインの列に並びながら、《ソワソワ》していました。",
+      "main": "[ZH] チェックインの列に並びながら、《ソワソワ》していました。",
+      "description": "[ZH] 《ソワソワ》は、落ち着かずに心が浮き足立っている様子を表します。出発前の緊張や期待感にぴったりです。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 662,
+      "sceneId": 5,
+      "romaji": "TENIMOTSUKENSANOTOKIHA 《DOKIDOKI》SHITESHIMAIMASU",
+      "jpsen": "手荷物検査のときは、《ドキドキ》してしまいます。",
+      "main": "[ZH] 手荷物検査のときは、《ドキドキ》してしまいます。",
+      "description": "[ZH] 《ドキドキ》は、心臓の高鳴りを表し、緊張や期待が混じる瞬間に使われます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 663,
+      "sceneId": 5,
+      "romaji": "TOUJOUGUCHIGAHENKOUNINATTE 《ATAFUTA》SHITESHIMAIMASHITA",
+      "jpsen": "搭乗口が変更になって、《アタフタ》してしまいました。",
+      "main": "[ZH] 搭乗口が変更になって、《アタフタ》してしまいました。",
+      "description": "[ZH] 《アタフタ》は、焦って落ち着かずに動いてしまう様子を表します。突然の変化に対応する場面に合います。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 664,
+      "sceneId": 5,
+      "romaji": "ANNAISUTAFFUNOTAIOUNI 《HOKKORI》SHIMASHITA",
+      "jpsen": "案内スタッフの対応に、《ほっこり》しました。",
+      "main": "[ZH] 案内スタッフの対応に、《ほっこり》しました。",
+      "description": "[ZH] 《ほっこり》は、あたたかさや優しさを感じて、心が和む様子を表現します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 665,
+      "sceneId": 5,
+      "romaji": "KINAINIITSUTSUTASHUNKAN KINCHOUGA 《SUUTSU》TONUKETEIKIMASHITA",
+      "jpsen": "機内に入った瞬間、緊張が《スーッ》と抜けていきました。",
+      "main": "[ZH] 機内に入った瞬間、緊張が《スーッ》と抜けていきました。",
+      "description": "[ZH] 《スーッ》は、重いものが静かに取り除かれるような安心感を伝える語です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 666,
+      "sceneId": 5,
+      "romaji": "SHIITONISUWATSUTE 《FUWATSU》TOUKABUYOUNAKANKAKUGAARIMASHITA",
+      "jpsen": "シートに座って、《フワッ》と浮かぶような感覚がありました。",
+      "main": "[ZH] シートに座って、《フワッ》と浮かぶような感覚がありました。",
+      "description": "[ZH] 《フワッ》は、軽く持ち上がるような動きや感覚を表します。離陸前後の体験にぴったりです。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 667,
+      "sceneId": 5,
+      "romaji": "RIRIKUJINIKITAIGA 《GOTOGOTO》TOYUREMASHITA",
+      "jpsen": "離陸時に機体が《ゴトゴト》と揺れました。",
+      "main": "[ZH] 離陸時に機体が《ゴトゴト》と揺れました。",
+      "description": "[ZH] 《ゴトゴト》は、不規則な揺れや鈍い音を伴う動きを表します。飛行機の振動に適した表現です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 668,
+      "sceneId": 5,
+      "romaji": "KIRYUUNOEIKYOUDE 《GATAGATA》YURETECHOTTOKINCHOUSHIMASHITA",
+      "jpsen": "気流の影響で、《ガタガタ》揺れてちょっと緊張しました。",
+      "main": "[ZH] 気流の影響で、《ガタガタ》揺れてちょっと緊張しました。",
+      "description": "[ZH] 《ガタガタ》は、小刻みで連続的な揺れを表します。不安や不快感も軽く伝えられます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 669,
+      "sceneId": 5,
+      "romaji": "NOMIMONONOSAABISUNI 《NIKOTSU》TOSHIMASHITA",
+      "jpsen": "飲み物のサービスに、《ニコッ》としました。",
+      "main": "[ZH] 飲み物のサービスに、《ニコッ》としました。",
+      "description": "[ZH] 《ニコッ》は、やさしい笑顔や好意を受けたときに自然とこぼれる微笑みを表現します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 670,
+      "sceneId": 5,
+      "romaji": "KUMONOUENOKESHIKINI 《UTTORI》SHIMASHITA",
+      "jpsen": "雲の上の景色に、《うっとり》しました。",
+      "main": "[ZH] 雲の上の景色に、《うっとり》しました。",
+      "description": "[ZH] 《うっとり》は、美しいものに心を奪われ、見とれてしまう様子を表します。窓側の席の特権ですね。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 671,
+      "sceneId": 5,
+      "romaji": "CHOUJIKANNOFURAITODEASHIGA 《MUZUMUZU》SHITEKIMASHITA",
+      "jpsen": "長時間のフライトで足が《ムズムズ》してきました。",
+      "main": "[ZH] 長時間のフライトで足が《ムズムズ》してきました。",
+      "description": "[ZH] 《ムズムズ》は、身体の一部が落ち着かず、動かしたくなる感覚を表します。じっとしている状況に使われます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 672,
+      "sceneId": 5,
+      "romaji": "KINAIANAUNSUNOKOEGA 《SUTSU》TOMIMINIITSUTSUTEKITE ANSHINDEKIMASHITA",
+      "jpsen": "機内アナウンスの声が《スッ》と耳に入ってきて、安心できました。",
+      "main": "[ZH] 機内アナウンスの声が《スッ》と耳に入ってきて、安心できました。",
+      "description": "[ZH] 《スッ》は、なめらかで自然に物事が進んだり、入ってくるような感覚を表す語です。聞き取りやすさや心の整いを伝えられます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 673,
+      "sceneId": 5,
+      "romaji": "CHAKURIKUNOSHUNKAN 《DOSHIN》TOIUOTOGAHIBIKIMASHITA",
+      "jpsen": "着陸の瞬間、《ドシン》という音が響きました。",
+      "main": "[ZH] 着陸の瞬間、《ドシン》という音が響きました。",
+      "description": "[ZH] 《ドシン》は、大きくて重たいものがぶつかったような音を表す語です。到着を印象的に演出できます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 674,
+      "sceneId": 5,
+      "romaji": "NYUUKOKUSHINSAWOOETATOKI 《HOTSU》TOIKIWOTSUKIMASHITA",
+      "jpsen": "入国審査を終えたとき、《ホッ》と息をつきました。",
+      "main": "[ZH] 入国審査を終えたとき、《ホッ》と息をつきました。",
+      "description": "[ZH] 《ホッ》は、緊張や不安が解けて安心した瞬間をやさしく表す語です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 675,
+      "sceneId": 5,
+      "romaji": "TAANTEEBURUDENIMOTSUGA 《KOROKORO》TONAGARETEKURUNOWOMITE OMOWAZUEGAONINARIMASHITA",
+      "jpsen": "ターンテーブルで荷物が《コロコロ》と流れてくるのを見て、思わず笑顔になりました。",
+      "main": "[ZH] ターンテーブルで荷物が《コロコロ》と流れてくるのを見て、思わず笑顔になりました。",
+      "description": "[ZH] 《コロコロ》は、小さなものが転がるように動く様子を表します。スーツケースの移動や旅の軽やかさをユーモラスに描けます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "scene": "写真・SNS投稿",
+  "messages": [
+    {
+      "id": 458,
+      "sceneId": 31,
+      "scene": "写真・SNS投稿",
+      "main": "空に《パッと》花火が咲いた瞬間を切り取りました。",
+      "romaji": "SORANI 《PATSUTO》HANABIGASAITASHUNKANWOKIRITORIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《パッと》は一気に広がる光や表情を描写する音で、シャッターチャンスを強調します。",
+        "en": "“パッと”は一気に広がる光や表情を描写する音で、シャッターチャンスを強調します。",
+        "zh": "“パッと”は一気に広がる光や表情を描写する音で、シャッターチャンスを強調します。",
+        "ko": "“パッと”は一気に広がる光や表情を描写する音で、シャッターチャンスを強調します。"
+      },
+      "jpsen": "空に《パッと》花火が咲いた瞬間を切り取りました。"
+    },
+    {
+      "id": 459,
+      "sceneId": 31,
+      "scene": "写真・SNS投稿",
+      "main": "スイーツの上のフルーツが《キラキラ》と輝いていました。",
+      "romaji": "SUIITSUNOUENOFURUUTSUGA 《KIRAKIRA》TOKAGAYAITEIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《キラキラ》は光の反射や美しさを表す表現で、SNS映えする魅力を伝えます。",
+        "en": "“キラキラ”は光の反射や美しさを表す表現で、SNS映えする魅力を伝えます。",
+        "zh": "“キラキラ”は光の反射や美しさを表す表現で、SNS映えする魅力を伝えます。",
+        "ko": "“キラキラ”は光の反射や美しさを表す表現で、SNS映えする魅力を伝えます。"
+      },
+      "jpsen": "スイーツの上のフルーツが《キラキラ》と輝いていました。"
+    },
+    {
+      "id": 460,
+      "sceneId": 31,
+      "scene": "写真・SNS投稿",
+      "main": "開けた瞬間のプレゼントに《キュン》としました。",
+      "romaji": "HIRAKETASHUNKANNOPUREZENTONI 《KYUN》TOSHIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《キュン》は胸がときめく気持ちを表し、写真に込めた感動を伝えます。",
+        "en": "“キュン”は胸がときめく気持ちを表し、写真に込めた感動を伝えます。",
+        "zh": "“キュン”は胸がときめく気持ちを表し、写真に込めた感動を伝えます。",
+        "ko": "“キュン”は胸がときめく気持ちを表し、写真に込めた感動を伝えます。"
+      },
+      "jpsen": "開けた瞬間のプレゼントに《キュン》としました。"
+    },
+    {
+      "id": 461,
+      "sceneId": 31,
+      "scene": "写真・SNS投稿",
+      "main": "朝焼けが《じわ〜っ》とにじむ空に心奪われました。",
+      "romaji": "ASAYAKEGA 《JIWA〜TSU》TONIJIMUSORANIKOKOROUBAWAREMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《じわ〜っ》はゆっくり広がる様子を表現し、自然な光のグラデーションを感じさせます。",
+        "en": "“じわ〜っ”はゆっくり広がる様子を表現し、自然な光のグラデーションを感じさせます。",
+        "zh": "“じわ〜っ”はゆっくり広がる様子を表現し、自然な光のグラデーションを感じさせます。",
+        "ko": "“じわ〜っ”はゆっくり広がる様子を表現し、自然な光のグラデーションを感じさせます。"
+      },
+      "jpsen": "朝焼けが《じわ〜っ》とにじむ空に心奪われました。"
+    },
+    {
+      "id": 462,
+      "sceneId": 31,
+      "scene": "写真・SNS投稿",
+      "main": "写真を見返すたびに、あの《ざわっ》とした感動が蘇ります。",
+      "romaji": "SHASHINWOMIKAESUTABINI ANO 《ZAWATSU》TOSHITAKANDOUGAYOMIGAERIMASU",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ざわっ》は心が揺れ動いた瞬間や感動の波をイメージさせます。",
+        "en": "“ざわっ”は心が揺れ動いた瞬間や感動の波をイメージさせます。",
+        "zh": "“ざわっ”は心が揺れ動いた瞬間や感動の波をイメージさせます。",
+        "ko": "“ざわっ”は心が揺れ動いた瞬間や感動の波をイメージさせます。"
+      },
+      "jpsen": "写真を見返すたびに、あの《ざわっ》とした感動が蘇ります。"
+    },
+    {
+      "id": 463,
+      "sceneId": 31,
+      "scene": "写真・SNS投稿",
+      "main": "カメラのシャッター音が《パシャッ》と響きました。",
+      "romaji": "KAMERANOSHATTAAOTOGA 《PASHATSU》TOHIBIKIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《パシャッ》は撮影の瞬間を音で表現し、行動の臨場感を伝えます。",
+        "en": "“パシャッ”は撮影の瞬間を音で表現し、行動の臨場感を伝えます。",
+        "zh": "“パシャッ”は撮影の瞬間を音で表現し、行動の臨場感を伝えます。",
+        "ko": "“パシャッ”は撮影の瞬間を音で表現し、行動の臨場感を伝えます。"
+      },
+      "jpsen": "カメラのシャッター音が《パシャッ》と響きました。"
+    },
+    {
+      "id": 464,
+      "sceneId": 31,
+      "scene": "写真・SNS投稿",
+      "main": "水面に《ゆらゆら》と映る景色が幻想的でした。",
+      "romaji": "SUIMENNI 《YURAYURA》TOUTSURUKESHIKIGAGENSOUTEKIDESHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ゆらゆら》は柔らかな揺れを表す音で、写真におさめた静かな動きを伝えます。",
+        "en": "“ゆらゆら”は柔らかな揺れを表す音で、写真におさめた静かな動きを伝えます。",
+        "zh": "“ゆらゆら”は柔らかな揺れを表す音で、写真におさめた静かな動きを伝えます。",
+        "ko": "“ゆらゆら”は柔らかな揺れを表す音で、写真におさめた静かな動きを伝えます。"
+      },
+      "jpsen": "水面に《ゆらゆら》と映る景色が幻想的でした。"
+    },
+    {
+      "id": 465,
+      "sceneId": 31,
+      "scene": "写真・SNS投稿",
+      "main": "色とりどりの和菓子が《つやつや》と輝いていました。",
+      "romaji": "IROTORIDORINOWAGASHIGA 《TSUYATSUYA》TOKAGAYAITEIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《つやつや》は艶やかな質感を表し、細部まで映えるビジュアルを伝えます。",
+        "en": "“つやつや”は艶やかな質感を表し、細部まで映えるビジュアルを伝えます。",
+        "zh": "“つやつや”は艶やかな質感を表し、細部まで映えるビジュアルを伝えます。",
+        "ko": "“つやつや”は艶やかな質感を表し、細部まで映えるビジュアルを伝えます。"
+      },
+      "jpsen": "色とりどりの和菓子が《つやつや》と輝いていました。"
+    },
+    {
+      "id": 466,
+      "sceneId": 31,
+      "scene": "写真・SNS投稿",
+      "main": "空を見上げたら《ドーン》と虹がかかっていました。",
+      "romaji": "SORAWOMIAGETARA 《DOON》TONIJIGAKAKATTEIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ドーン》は迫力や大きな存在感を表現し、インパクトのある写真にぴったりです。",
+        "en": "“ドーン”は迫力や大きな存在感を表現し、インパクトのある写真にぴったりです。",
+        "zh": "“ドーン”は迫力や大きな存在感を表現し、インパクトのある写真にぴったりです。",
+        "ko": "“ドーン”は迫力や大きな存在感を表現し、インパクトのある写真にぴったりです。"
+      },
+      "jpsen": "空を見上げたら《ドーン》と虹がかかっていました。"
+    },
+    {
+      "id": 467,
+      "sceneId": 31,
+      "scene": "写真・SNS投稿",
+      "main": "子どもの笑顔が《にこにこ》と光っていました。",
+      "romaji": "KODOMONOEGAOGA 《NIKONIKO》TOHIKATSUTEIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《にこにこ》は穏やかで幸せな笑顔を表し、心あたたまる写真に使えます。",
+        "en": "“にこにこ”は穏やかで幸せな笑顔を表し、心あたたまる写真に使えます。",
+        "zh": "“にこにこ”は穏やかで幸せな笑顔を表し、心あたたまる写真に使えます。",
+        "ko": "“にこにこ”は穏やかで幸せな笑顔を表し、心あたたまる写真に使えます。"
+      },
+      "jpsen": "子どもの笑顔が《にこにこ》と光っていました。"
+    },
+    {
+      "id": 468,
+      "sceneId": 31,
+      "scene": "写真・SNS投稿",
+      "main": "レンズ越しに《ふわっ》と花びらが舞い込みました。",
+      "romaji": "RENZUKOSHINI 《FUWATSU》TOHANABIRAGAMAIKOMIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ふわっ》は軽やかで優しい動きを表し、幻想的な写真にぴったりの効果です。",
+        "en": "“ふわっ”は軽やかで優しい動きを表し、幻想的な写真にぴったりの効果です。",
+        "zh": "“ふわっ”は軽やかで優しい動きを表し、幻想的な写真にぴったりの効果です。",
+        "ko": "“ふわっ”は軽やかで優しい動きを表し、幻想的な写真にぴったりの効果です。"
+      },
+      "jpsen": "レンズ越しに《ふわっ》と花びらが舞い込みました。"
+    },
+    {
+      "id": 469,
+      "sceneId": 31,
+      "scene": "写真・SNS投稿",
+      "main": "街の灯りが《ポツポツ》と点き始めた時間。",
+      "romaji": "MACHINOAKARIGA 《POTSUPOTSU》TOTSUKIHAJIMETAJIKAN",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ポツポツ》は間隔をおいて灯る様子を描写し、暮れなずむ街の情景を伝えます。",
+        "en": "“ポツポツ”は間隔をおいて灯る様子を描写し、暮れなずむ街の情景を伝えます。",
+        "zh": "“ポツポツ”は間隔をおいて灯る様子を描写し、暮れなずむ街の情景を伝えます。",
+        "ko": "“ポツポツ”は間隔をおいて灯る様子を描写し、暮れなずむ街の情景を伝えます。"
+      },
+      "jpsen": "街の灯りが《ポツポツ》と点き始めた時間。"
+    },
+    {
+      "id": 470,
+      "sceneId": 31,
+      "scene": "写真・SNS投稿",
+      "main": "カフェのラテアートが《ほっこり》癒しの時間をくれました。",
+      "romaji": "KAFENORATEAATOGA 《HOKKORI》IYASHINOJIKANWOKUREMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ほっこり》は心があたたかくなる様子を表現し、SNSに載せたくなる写真にぴったりです。",
+        "en": "“ほっこり”は心があたたかくなる様子を表現し、SNSに載せたくなる写真にぴったりです。",
+        "zh": "“ほっこり”は心があたたかくなる様子を表現し、SNSに載せたくなる写真にぴったりです。",
+        "ko": "“ほっこり”は心があたたかくなる様子を表現し、SNSに載せたくなる写真にぴったりです。"
+      },
+      "jpsen": "カフェのラテアートが《ほっこり》癒しの時間をくれました。"
+    },
+    {
+      "id": 471,
+      "sceneId": 31,
+      "scene": "写真・SNS投稿",
+      "main": "友だちと《ぱちり》と記念写真を撮りました。",
+      "romaji": "TOMODACHITO 《PACHIRI》TOKINENSHASHINWOTORIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ぱちり》は気軽で楽しい撮影音を表現し、旅の思い出を切り取ります。",
+        "en": "“ぱちり”は気軽で楽しい撮影音を表現し、旅の思い出を切り取ります。",
+        "zh": "“ぱちり”は気軽で楽しい撮影音を表現し、旅の思い出を切り取ります。",
+        "ko": "“ぱちり”は気軽で楽しい撮影音を表現し、旅の思い出を切り取ります。"
+      },
+      "jpsen": "友だちと《ぱちり》と記念写真を撮りました。"
+    },
+    {
+      "id": 472,
+      "sceneId": 31,
+      "scene": "写真・SNS投稿",
+      "main": "和装姿に《パッと》視線が集まりました。",
+      "romaji": "WASOUSUGATANI 《PATSUTO》SHISENGAATSUMARIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《パッと》は視覚的インパクトや存在感を伝える音で、注目される瞬間に最適です。",
+        "en": "“パッと”は視覚的インパクトや存在感を伝える音で、注目される瞬間に最適です。",
+        "zh": "“パッと”は視覚的インパクトや存在感を伝える音で、注目される瞬間に最適です。",
+        "ko": "“パッと”は視覚的インパクトや存在感を伝える音で、注目される瞬間に最適です。"
+      },
+      "jpsen": "和装姿に《パッと》視線が集まりました。"
+    }
+  ]
+}

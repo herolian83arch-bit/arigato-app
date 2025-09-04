@@ -1,0 +1,200 @@
+{
+  "scene": "[RU] アート・クリエイティブ",
+  "messages": [
+    {
+      "id": 736,
+      "sceneId": 12,
+      "romaji": "FUDEWOHASHIRASERUTO 《SURASURA》TOKOTOBAGADETEKIMASHITA",
+      "jpsen": "筆を走らせると、《スラスラ》と言葉が出てきました。",
+      "main": "[RU] 筆を走らせると、《スラスラ》と言葉が出てきました。",
+      "description": "[RU] 《スラスラ》は、つまずかずに滑らかに進む様子。創作が流れに乗っている状態にぴったりです。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 737,
+      "sceneId": 12,
+      "romaji": "AIDEAGA 《PATSU》TOHIRAMEKIMASHITA",
+      "jpsen": "アイデアが《パッ》とひらめきました。",
+      "main": "[RU] アイデアが《パッ》とひらめきました。",
+      "description": "[RU] 《パッ》は、瞬間的な光やひらめきを表します。創造の起点を表現する語です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 738,
+      "sceneId": 12,
+      "romaji": "YUBISAKIKARA 《ZOKUZOKU》TONANIKAGAWAKIAGATTEKIMASHITA",
+      "jpsen": "指先から《ゾクゾク》と何かが湧き上がってきました。",
+      "main": "[RU] 指先から《ゾクゾク》と何かが湧き上がってきました。",
+      "description": "[RU] 《ゾクゾク》は、興奮や感動が連続的に押し寄せる様子。ひらめきの興奮にぴったりです。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 739,
+      "sceneId": 12,
+      "romaji": "SHIZUKANASHUUCHUUGA 《JIWAJIWA》TOFUKAMATTEIKIMASHITA",
+      "jpsen": "静かな集中が《ジワジワ》と深まっていきました。",
+      "main": "[RU] 静かな集中が《ジワジワ》と深まっていきました。",
+      "description": "[RU] 《ジワジワ》は、ゆっくり確実に広がっていく感覚。集中力が増していく過程に合います。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 740,
+      "sceneId": 12,
+      "romaji": "OMOIKITSUTEIROWOKASANERUTO 《GUIGUI》TOHIKIKOMARETEIKIMASHITA",
+      "jpsen": "思い切って色を重ねると、《グイグイ》と引き込まれていきました。",
+      "main": "[RU] 思い切って色を重ねると、《グイグイ》と引き込まれていきました。",
+      "description": "[RU] 《グイグイ》は、強く引き込まれるような勢いを表します。創作への没入感に。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 741,
+      "sceneId": 12,
+      "romaji": "DEZAINGA 《PITATSU》TOHAMATTASHUNKANGATAMARIMASEN",
+      "jpsen": "デザインが《ピタッ》とハマった瞬間がたまりません。",
+      "main": "[RU] デザインが《ピタッ》とハマった瞬間がたまりません。",
+      "description": "[RU] 《ピタッ》は、ぴったりと合う感覚。解決感や納得感を伝えます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 742,
+      "sceneId": 12,
+      "romaji": "SAKUHINGAKANSEINICHIKAZUKI 《WAKUWAKU》GADOMARIMASEN",
+      "jpsen": "作品が完成に近づき、《ワクワク》が止まりません。",
+      "main": "[RU] 作品が完成に近づき、《ワクワク》が止まりません。",
+      "description": "[RU] 《ワクワク》は、期待と喜びが入り混じった心の動き。仕上がりを目前にした高揚感に。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 743,
+      "sceneId": 12,
+      "romaji": "SHIPPAISHITE 《GAAN》TOOCHIKOMIMASHITA",
+      "jpsen": "失敗して《ガーン》と落ち込みました。",
+      "main": "[RU] 失敗して《ガーン》と落ち込みました。",
+      "description": "[RU] 《ガーン》は、ショックやがっかりした気持ちを表現する語です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 744,
+      "sceneId": 12,
+      "romaji": "YARINAOSUTABINI 《KOTSUKOTSU》TODORYOKUWOOMONEMASHITA",
+      "jpsen": "やり直すたびに《コツコツ》と努力を重ねました。",
+      "main": "[RU] やり直すたびに《コツコツ》と努力を重ねました。",
+      "description": "[RU] 《コツコツ》は、地道に積み重ねる努力の音。創作過程に不可欠な粘り強さを表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 745,
+      "sceneId": 12,
+      "romaji": "SHIKOUSAKUGONOMATSU 《FUWATSU》TONATTOKUNOIKUKATACHIGAMIEMASHITA",
+      "jpsen": "試行錯誤の末、《フワッ》と納得のいくカタチが見えました。",
+      "main": "[RU] 試行錯誤の末、《フワッ》と納得のいくカタチが見えました。",
+      "description": "[RU] 《フワッ》は、軽やかに浮かぶ感覚。ひらめきやイメージが柔らかく形になるときに。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 746,
+      "sceneId": 12,
+      "romaji": "TENJIWOMITANINGA 《HATSU》TOSHITAHYOUJOUWOSHITEKUREMASHITA",
+      "jpsen": "展示を見た人が《ハッ》とした表情をしてくれました。",
+      "main": "[RU] 展示を見た人が《ハッ》とした表情をしてくれました。",
+      "description": "[RU] 《ハッ》は、驚きや気づきの瞬間を表現します。鑑賞者のリアクションにぴったりです。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 747,
+      "sceneId": 12,
+      "romaji": "KOTOBANISHINAKUTEMO 《JINJIN》TOTSUTAWARUKANJIGAARIMASHITA",
+      "jpsen": "言葉にしなくても、《ジンジン》と伝わる感じがありました。",
+      "main": "[RU] 言葉にしなくても、《ジンジン》と伝わる感じがありました。",
+      "description": "[RU] 《ジンジン》は、心や身体に響き続ける感覚。メッセージ性のある作品に。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 748,
+      "sceneId": 12,
+      "romaji": "NANDOMOEGAKINAOSHITE 《GUSHAGUSHA》NINATTAKAMINIMOAICHAKUGAWAKIMASHITA",
+      "jpsen": "何度も描き直して、《グシャグシャ》になった紙にも愛着が湧きました。",
+      "main": "[RU] 何度も描き直して、《グシャグシャ》になった紙にも愛着が湧きました。",
+      "description": "[RU] 《グシャグシャ》は、混乱や失敗を象徴する音でもあり、挑戦の軌跡でもあります。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 749,
+      "sceneId": 12,
+      "romaji": "KANSEISHITASHUNKAN 《PAAATSU》TOHIKARIGASASHITAYOUDESHITA",
+      "jpsen": "完成した瞬間、《パァーッ》と光が差したようでした。",
+      "main": "[RU] 完成した瞬間、《パァーッ》と光が差したようでした。",
+      "description": "[RU] 《パァーッ》は、広がる光や開放感を表現します。達成感や作品完成の瞬間に。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 750,
+      "sceneId": 12,
+      "romaji": "NAKAMATOSAKUHINWOMINAGARA 《FUFUTSU》TOHOHOEMIGAKOBOREMASHITA",
+      "jpsen": "仲間と作品を見ながら、《フフッ》と微笑みがこぼれました。",
+      "main": "[RU] 仲間と作品を見ながら、《フフッ》と微笑みがこぼれました。",
+      "description": "[RU] 《フフッ》は、静かで控えめな笑い。満足感や心のゆとりを伝える語です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "scene": "感情表現",
+  "messages": [
+    {
+      "id": 578,
+      "sceneId": 38,
+      "scene": "感情表現",
+      "main": "嬉しすぎて《ウキウキ》が止まりませんでした。",
+      "romaji": "URESHISUGITE 《UKIUKI》GADOMARIMASENDESHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ウキウキ》は喜びと期待が心に弾けるような軽快な感情を表します。",
+        "en": "[To be added]",
+        "zh": "[To be added]",
+        "ko": "[To be added]"
+      },
+      "jpsen": "嬉しすぎて《ウキウキ》が止まりませんでした。"
+    },
+    {
+      "id": 579,
+      "sceneId": 38,
+      "scene": "感情表現",
+      "main": "まさかのプレゼントに《ビックリ》しました。",
+      "romaji": "MASAKANOPUREZENTONI 《BIKKURI》SHIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ビックリ》は驚きの瞬間を明るく素直に伝える表現です。",
+        "en": "[To be added]",
+        "zh": "[To be added]",
+        "ko": "[To be added]"
+      },
+      "jpsen": "まさかのプレゼントに《ビックリ》しました。"
+    },
+    {
+      "id": 580,
+      "sceneId": 38,
+      "scene": "感情表現",
+      "main": "予定変更に《イライラ》してしまいました。",
+      "romaji": "YOTEIHENKOUNI 《IRAIRA》SHITESHIMAIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《イライラ》は苛立ちや不快感をリズムで表現します。",
+        "en": "[To be added]",
+        "zh": "[To be added]",
+        "ko": "[To be added]"
+      },
+      "jpsen": "予定変更に《イライラ》してしまいました。"
+    },
+    {
+      "id": 581,
+      "sceneId": 38,
+      "scene": "感情表現",
+      "main": "うまく話せず《モヤモヤ》した気持ちが残りました。",
+      "romaji": "UMAKUHANASEZU 《MOYAMOYA》SHITAKIMOCHIGANOKORIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《モヤモヤ》は言葉にできない感情の曇りを表します。",
+        "en": "[To be added]",
+        "zh": "[To be added]",
+        "ko": "[To be added]"
+      },
+      "jpsen": "うまく話せず《モヤモヤ》した気持ちが残りました。"
+    },
+    {
+      "id": 582,
+      "sceneId": 38,
+      "scene": "感情表現",
+      "main": "彼の無邪気な笑顔に《キュンキュン》してしまいました。",
+      "romaji": "KANOMUJAKINAEGAONI 《KYUNKYUN》SHITESHIMAIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《キュンキュン》は胸の奥で連続するときめきの波を表します。",
+        "en": "[To be added]",
+        "zh": "[To be added]",
+        "ko": "[To be added]"
+      },
+      "jpsen": "彼の無邪気な笑顔に《キュンキュン》してしまいました。"
+    },
+    {
+      "id": 583,
+      "sceneId": 38,
+      "scene": "感情表現",
+      "main": "思い出すたび《ニヤニヤ》が止まりません。",
+      "romaji": "OMOIDASUTABI 《NIYANIYA》GADOMARIMASEN",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ニヤニヤ》は思わずこぼれる笑み、こっそり嬉しい気持ちを描きます。",
+        "en": "[To be added]",
+        "zh": "[To be added]",
+        "ko": "[To be added]"
+      },
+      "jpsen": "思い出すたび《ニヤニヤ》が止まりません。"
+    },
+    {
+      "id": 584,
+      "sceneId": 38,
+      "scene": "感情表現",
+      "main": "強い言葉に《ムカッ》ときました。",
+      "romaji": "TSUYOIKOTOBANI 《MUKATSU》TOKIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ムカッ》は一瞬でこみ上げる怒りの起点を表現します。",
+        "en": "[To be added]",
+        "zh": "[To be added]",
+        "ko": "[To be added]"
+      },
+      "jpsen": "強い言葉に《ムカッ》ときました。"
+    },
+    {
+      "id": 585,
+      "sceneId": 38,
+      "scene": "感情表現",
+      "main": "悲しいニュースに《ジワッ》と涙がにじみました。",
+      "romaji": "KANASHIINYUUSUNI 《JIWATSU》TONAMIDAGANIJIMIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ジワッ》は感情がゆっくりと広がり、涙や想いがあふれる様子を伝えます。",
+        "en": "[To be added]",
+        "zh": "[To be added]",
+        "ko": "[To be added]"
+      },
+      "jpsen": "悲しいニュースに《ジワッ》と涙がにじみました。"
+    },
+    {
+      "id": 586,
+      "sceneId": 38,
+      "scene": "感情表現",
+      "main": "友達のやさしさに《ポロポロ》と涙がこぼれました。",
+      "romaji": "TOMODACHINOYASASHISANI 《POROPORO》TONAMIDAGAKOBOREMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ポロポロ》は静かに涙が流れる様子を繊細に描写します。",
+        "en": "[To be added]",
+        "zh": "[To be added]",
+        "ko": "[To be added]"
+      },
+      "jpsen": "友達のやさしさに《ポロポロ》と涙がこぼれました。"
+    },
+    {
+      "id": 587,
+      "sceneId": 38,
+      "scene": "感情表現",
+      "main": "予想外の展開に《ハッ》と息をのみました。",
+      "romaji": "YOSOUGAINOTENKAINI 《HATSU》TOIKIWONOMIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ハッ》は驚きや衝撃で一瞬息が止まるような感覚を表します。",
+        "en": "[To be added]",
+        "zh": "[To be added]",
+        "ko": "[To be added]"
+      },
+      "jpsen": "予想外の展開に《ハッ》と息をのみました。"
+    },
+    {
+      "id": 588,
+      "sceneId": 38,
+      "scene": "感情表現",
+      "main": "悔しくて《ギリギリ》と歯を食いしばりました。",
+      "romaji": "KUYASHIKUTE 《GIRIGIRI》TOHAWOKUISHIBARIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ギリギリ》はこらえきれない怒りや悔しさを音に変える表現です。",
+        "en": "[To be added]",
+        "zh": "[To be added]",
+        "ko": "[To be added]"
+      },
+      "jpsen": "悔しくて《ギリギリ》と歯を食いしばりました。"
+    },
+    {
+      "id": 589,
+      "sceneId": 38,
+      "scene": "感情表現",
+      "main": "感極まって《グスッ》と鼻をすすってしまいました。",
+      "romaji": "KANKIWAMATTE 《GUSUTSU》TOHANAWOSUSUTTESHIMAIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《グスッ》は泣きながらも感情をこらえる切なさを表します。",
+        "en": "[To be added]",
+        "zh": "[To be added]",
+        "ko": "[To be added]"
+      },
+      "jpsen": "感極まって《グスッ》と鼻をすすってしまいました。"
+    },
+    {
+      "id": 590,
+      "sceneId": 38,
+      "scene": "感情表現",
+      "main": "笑いすぎて《ケラケラ》が止まりませんでした。",
+      "romaji": "WARAISUGITE 《KERAKERA》GADOMARIMASENDESHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ケラケラ》は明るくて軽快な笑い声を楽しく響かせます。",
+        "en": "[To be added]",
+        "zh": "[To be added]",
+        "ko": "[To be added]"
+      },
+      "jpsen": "笑いすぎて《ケラケラ》が止まりませんでした。"
+    },
+    {
+      "id": 591,
+      "sceneId": 38,
+      "scene": "感情表現",
+      "main": "大切な言葉が《スッ》と心に入ってきました。",
+      "romaji": "TAISETSUNAKOTOBAGA 《SUTSU》TOKOKORONIITSUTSUTEKIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《スッ》は何かが自然と浸透していく感覚、心の受容をやさしく表します。",
+        "en": "[To be added]",
+        "zh": "[To be added]",
+        "ko": "[To be added]"
+      },
+      "jpsen": "大切な言葉が《スッ》と心に入ってきました。"
+    },
+    {
+      "id": 592,
+      "sceneId": 38,
+      "scene": "感情表現",
+      "main": "胸がいっぱいで《ポカポカ》とあたたかくなりました。",
+      "romaji": "MUNEGAIPPAIDE 《POKAPOKA》TOATATAKAKUNARIMASHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ポカポカ》は心の芯から満ちるあたたかさをやさしく伝える表現です。",
+        "en": "[To be added]",
+        "zh": "[To be added]",
+        "ko": "[To be added]"
+      },
+      "jpsen": "胸がいっぱいで《ポカポカ》とあたたかくなりました。"
+    }
+  ]
+}

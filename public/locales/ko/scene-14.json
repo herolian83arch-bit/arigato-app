@@ -1,0 +1,200 @@
+{
+  "scene": "[KO] 旅行・観光",
+  "messages": [
+    {
+      "id": 151,
+      "sceneId": 14,
+      "romaji": "HAJIMETENOMACHINIORITATSUTE 《DOKIDOKI》GADOMARIMASENDESHITA",
+      "jpsen": "初めての町に降り立って、《ドキドキ》が止まりませんでした。",
+      "main": "[KO] 初めての町に降り立って、《ドキドキ》が止まりませんでした。",
+      "description": "[KO] 《ドキドキ》は、期待や不安が入り混じった高鳴る鼓動を表す言葉です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 152,
+      "sceneId": 14,
+      "romaji": "YAMAMICHIWONOBORUTABINI 《ZEEZEE》TOIKIGAAGARIMASHITA",
+      "jpsen": "山道を登るたびに、《ゼーゼー》と息が上がりました。",
+      "main": "[KO] 山道を登るたびに、《ゼーゼー》と息が上がりました。",
+      "description": "[KO] 《ゼーゼー》は、呼吸が荒くなる音。運動の疲労や必死さを感じさせます。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 153,
+      "sceneId": 14,
+      "romaji": "TENBOUDAIKARANOKESHIKINI 《PAAATSU》TOKOKOROGAHIRAKAREMASHITA",
+      "jpsen": "展望台からの景色に、《パァーッ》と心が開かれました。",
+      "main": "[KO] 展望台からの景色に、《パァーッ》と心が開かれました。",
+      "description": "[KO] 《パァーッ》は、視界や心が一気に明るくなるイメージ。絶景と感動にぴったりです。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 154,
+      "sceneId": 14,
+      "romaji": "IKOKUNOSHIJOUNONIGIWAIGA 《GAYAGAYA》TOHIBIITEIMASHITA",
+      "jpsen": "異国の市場のにぎわいが《ガヤガヤ》と響いていました。",
+      "main": "[KO] 異国の市場のにぎわいが《ガヤガヤ》と響いていました。",
+      "description": "[KO] 《ガヤガヤ》は、多くの人の話し声や雑踏のざわめきを表します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 155,
+      "sceneId": 14,
+      "romaji": "ROJIURAWOARUKUTABINI 《WAKUWAKU》GATSUNOTSUTEIKIMASHITA",
+      "jpsen": "路地裏を歩くたびに、《ワクワク》が募っていきました。",
+      "main": "[KO] 路地裏を歩くたびに、《ワクワク》が募っていきました。",
+      "description": "[KO] 《ワクワク》は、期待と興奮が入り混じった心の動きを伝える語です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 156,
+      "sceneId": 14,
+      "romaji": "BASUNOYURENI 《YURAYURA》TOMIWOMAKASE MADORONDESHIMAIMASHITA",
+      "jpsen": "バスの揺れに《ユラユラ》と身を任せ、まどろんでしまいました。",
+      "main": "[KO] バスの揺れに《ユラユラ》と身を任せ、まどろんでしまいました。",
+      "description": "[KO] 《ユラユラ》は、やさしく揺れる様子。安心感や眠気を誘うリズムに。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 157,
+      "sceneId": 14,
+      "romaji": "ONSENNITSUKARUTO 《SUUTSU》TOTSUKAREGATOKETEIKIMASHITA",
+      "jpsen": "温泉につかると、《スーッ》と疲れが溶けていきました。",
+      "main": "[KO] 温泉につかると、《スーッ》と疲れが溶けていきました。",
+      "description": "[KO] 《スーッ》は、心身が軽くなっていくときの感覚。癒しの時間にぴったりです。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 158,
+      "sceneId": 14,
+      "romaji": "HOTERUNOROBIIGA 《KIRAKIRA》TOKAGAYAITEMIEMASHITA",
+      "jpsen": "ホテルのロビーが《キラキラ》と輝いて見えました。",
+      "main": "[KO] ホテルのロビーが《キラキラ》と輝いて見えました。",
+      "description": "[KO] 《キラキラ》は、光のきらめきや華やかさを表す語。非日常の美しさに。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 159,
+      "sceneId": 14,
+      "romaji": "MEISHONOMAEDESHASHINWOTORUTABINI 《PASHATSU》TOTABINOKIOKUGAKIZAMAREMASHITA",
+      "jpsen": "名所の前で写真を撮るたびに、《パシャッ》と旅の記憶が刻まれました。",
+      "main": "[KO] 名所の前で写真を撮るたびに、《パシャッ》と旅の記憶が刻まれました。",
+      "description": "[KO] 《パシャッ》は、カメラのシャッター音。瞬間を切り取る旅の象徴です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 160,
+      "sceneId": 14,
+      "romaji": "TABISAKINOASA TORINO 《CHUNCHUN》TOIUKOEDEMEZAMEMASHITA",
+      "jpsen": "旅先の朝、鳥の《チュンチュン》という声で目覚めました。",
+      "main": "[KO] 旅先の朝、鳥の《チュンチュン》という声で目覚めました。",
+      "description": "[KO] 《チュンチュン》は、小鳥のさえずりを模した音。穏やかな目覚めに最適です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 161,
+      "sceneId": 14,
+      "romaji": "JIMOTONONINNOEGAONI 《HOKKORI》SHIMASHITA",
+      "jpsen": "地元の人の笑顔に、《ホッコリ》しました。",
+      "main": "[KO] 地元の人の笑顔に、《ホッコリ》しました。",
+      "description": "[KO] 《ホッコリ》は、心がやさしく温まる様子。思いやりやあたたかさに触れたときに。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 162,
+      "sceneId": 14,
+      "romaji": "YORUNOUMINOOTOGA 《ZAZAATSU》TOMUNENISHIMIMASHITA",
+      "jpsen": "夜の海の音が《ザザーッ》と胸に沁みました。",
+      "main": "[KO] 夜の海の音が《ザザーッ》と胸に沁みました。",
+      "description": "[KO] 《ザザーッ》は、波が寄せる音。静けさの中にある自然の力強さを表現します。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 163,
+      "sceneId": 14,
+      "romaji": "AMENOOTOGA 《POTSUPOTSU》TOYANEWOUTSUNOWOKIKINAGARA SHIZUKANAJIKANWOSUGOSHIMASHITA",
+      "jpsen": "雨の音が《ポツポツ》と屋根を打つのを聞きながら、静かな時間を過ごしました。",
+      "main": "[KO] 雨の音が《ポツポツ》と屋根を打つのを聞きながら、静かな時間を過ごしました。",
+      "description": "[KO] 《ポツポツ》は、小さな水滴が落ちる音。静寂とともにある旅の時間に。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 164,
+      "sceneId": 14,
+      "romaji": "GAIDOSANNOSETSUMEINI 《UN'UN》TOUNAZUKINAGARAKIKIIRIMASHITA",
+      "jpsen": "ガイドさんの説明に、《ウンウン》とうなずきながら聞き入りました。",
+      "main": "[KO] ガイドさんの説明に、《ウンウン》とうなずきながら聞き入りました。",
+      "description": "[KO] 《ウンウン》は、同意や納得を表す動作音。興味深く話を聞く場面に合います。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    },
+    {
+      "id": 165,
+      "sceneId": 14,
+      "romaji": "KAERINODENSHADE 《JIIN》TOTABINOYOINNIHITATSUTEIMASHITA",
+      "jpsen": "帰りの電車で、《ジーン》と旅の余韻に浸っていました。",
+      "main": "[KO] 帰りの電車で、《ジーン》と旅の余韻に浸っていました。",
+      "description": "[KO] 《ジーン》は、感情がしみじみとこみ上げてくる様子。旅の終わりにふさわしい語です。",
+      "translation": {
+        "en": "",
+        "zh": "",
+        "ko": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "scene": "子ども・遊び",
+  "messages": [
+    {
+      "id": 753,
+      "sceneId": 39,
+      "scene": "子ども・遊び",
+      "main": "子どもたちが《キャッキャ》とはしゃぎながら走り回っている。",
+      "romaji": "KODOMOTACHIGA 《KYAKKYA》TOHASHAGINAGARAHASHIRIMAWATSUTEIRU",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《キャッキャ》は澄んだ高い声で笑う様子を表し、無邪気な歓声が空気を弾ませるような響きを持ちます。",
+        "en": "“Kyakkya” represents high-pitched, innocent laughter that fills the air with joyful excitement.",
+        "zh": "“キャッキャ”表示清脆高亢的笑声，传达出无邪的欢呼和轻快的氛围。",
+        "ko": "“캬캬”는 맑고 높은 웃음소리를 나타내며, 천진난만한 환호가 공기를 가득 채우는 느낌을 줍니다。"
+      },
+      "jpsen": "子どもたちが《キャッキャ》とはしゃぎながら走り回っている。"
+    },
+    {
+      "id": 754,
+      "sceneId": 39,
+      "scene": "子ども・遊び",
+      "main": "滑り台から《ズルズル》滑り落ちて、大笑い！",
+      "romaji": "SUBERIDAIKARA 《ZURUZURU》SUBERIOCHITE OOWARAI",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ズルズル》は体が地面や面に沿って連続して滑るときの音を表し、滑り落ちる感覚の楽しさや勢いを生き生きと伝えます。",
+        "en": "“Zuruzuru” represents the continuous sliding sound along a surface, conveying the lively momentum of the action.",
+        "zh": "“ズルズル”表示身体沿着地面连续滑动的声音，生动传达滑落的乐趣与动感。",
+        "ko": "“주르륵”은 몸이 바닥을 따라 연속으로 미끄러질 때 나는 소리로, 그 즐거움과 속도감을 생생하게 전합니다。"
+      },
+      "jpsen": "滑り台から《ズルズル》滑り落ちて、大笑い！"
+    },
+    {
+      "id": 755,
+      "sceneId": 39,
+      "scene": "子ども・遊び",
+      "main": "絵本のページを《ペラペラ》めくって夢中になっていた。",
+      "romaji": "EHONNOPEEJIWO 《PERAPERA》MEKUTTEMUCHUUNINATTEITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ペラペラ》は紙が軽やかにめくられる音や動作を示し、集中して読み進める子どもの手の動きやワクワク感が感じられます。",
+        "en": "“Perapera” expresses the light flipping sound of pages, reflecting the child’s focused and excited engagement.",
+        "zh": "“ペラペラ”表示轻快翻页的声音，体现孩子专注阅读时的手势与兴奋。",
+        "ko": "“페라페라”는 종이를 가볍게 넘기는 소리와 동작을 나타내며, 집중하며 읽는 아이의 손놀림과 설렘을 느낄 수 있습니다。"
+      },
+      "jpsen": "絵本のページを《ペラペラ》めくって夢中になっていた。"
+    },
+    {
+      "id": 756,
+      "sceneId": 39,
+      "scene": "子ども・遊び",
+      "main": "転んでも《ケロッ》と笑って立ち上がった。",
+      "romaji": "KORONDEMO 《KEROTSU》TOWARATSUTETACHIAGATTA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ケロッ》は失敗や痛みをものともしない明るさを表し、子どもらしい回復の早さとたくましさを感じさせます。",
+        "en": "“Kero” expresses cheerful resilience after failure or pain, showing a child’s quick recovery and toughness.",
+        "zh": "“ケロッ”表示不在意失败或疼痛的乐观，展现孩子快速复原的坚强。",
+        "ko": "“케로”는 실패나 아픔도 대수롭지 않게 여기는 명랑함을 나타내며, 아이의 빠른 회복력과 강인함을 보여줍니다。"
+      },
+      "jpsen": "転んでも《ケロッ》と笑って立ち上がった。"
+    },
+    {
+      "id": 757,
+      "sceneId": 39,
+      "scene": "子ども・遊び",
+      "main": "公園の砂場で《ザクザク》とスコップを動かす音が心地いい。",
+      "romaji": "KOUENNOSUNABADE 《ZAKUZAKU》TOSUKOPPUWOUGOKASUOTOGAKOKOCHIII",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ザクザク》は粗く乾いた砂や雪などを切るように掘る音を表し、スコップの動きと感触が耳と手に響く感覚を伴います。",
+        "en": "“Zakuzaku” represents the coarse digging sound in sand or snow, resonating through the shovel’s motion and touch.",
+        "zh": "“ザクザク”表示挖掘干沙或雪时的粗糙声响，伴随铲子的动作与手感。",
+        "ko": "“자쿠자쿠”는 마른 모래나 눈을 파낼 때 나는 거친 소리를 나타내며, 삽질의 움직임과 촉감을 전달합니다。"
+      },
+      "jpsen": "公園の砂場で《ザクザク》とスコップを動かす音が心地いい。"
+    },
+    {
+      "id": 758,
+      "sceneId": 39,
+      "scene": "子ども・遊び",
+      "main": "ジャンプして《ピョンピョン》跳ね回っている姿がかわいすぎる。",
+      "romaji": "JANPUSHITE 《PYONPYON》HANEMAWATSUTEIRUSUGATAGAKAWAISUGIRU",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ピョンピョン》は小さな体が軽快に跳ねる様子を繰り返しで表し、エネルギーと楽しさに満ちた動きが目に浮かびます。",
+        "en": "“Pyonpyon” expresses the repeated light bouncing of a small body, full of energy and fun.",
+        "zh": "“ピョンピョン”表示小身体轻快跳跃的样子，充满活力与快乐。",
+        "ko": "“퐁퐁”은 작은 몸이 가볍게 튀는 모습을 반복적으로 나타내며, 에너지와 즐거움이 넘쳐나는 동작을 묘사합니다。"
+      },
+      "jpsen": "ジャンプして《ピョンピョン》跳ね回っている姿がかわいすぎる。"
+    },
+    {
+      "id": 759,
+      "sceneId": 39,
+      "scene": "子ども・遊び",
+      "main": "おままごとのフライパンから《ジュージュー》とおいしそうな音！",
+      "romaji": "OMAMAGOTONOFURAIPANKARA 《JUUJUU》TOOISHISOUNAOTO",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ジュージュー》は食材が熱せられて焼けるときの香ばしい音を再現し、子どもの想像力とごっこ遊びの臨場感を引き立てます。",
+        "en": "“Juujuu” mimics the sizzling sound of food cooking, enhancing a child's imaginative play.",
+        "zh": "“ジュージュー”模拟食材加热时的滋滋声，增强孩子扮演游戏的真实感。",
+        "ko": "“지글지글”은 음식이 구워질 때 나는 소리를 흉내 내어, 아이의 상상력과 놀이의 생생함을 더합니다。"
+      },
+      "jpsen": "おままごとのフライパンから《ジュージュー》とおいしそうな音！"
+    },
+    {
+      "id": 760,
+      "sceneId": 39,
+      "scene": "子ども・遊び",
+      "main": "バスごっこで《ゴトンゴトン》と揺れながら「発車しまーす！」",
+      "romaji": "BASUGOKKODE 《GOTONGOTON》TOYURENAGARA「HASSHASHIMAASU 」",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ゴトンゴトン》は列車やバスが線路や道路を走るときの規則的な揺れや響きを模しており、遊びの中に旅の臨場感をもたらします。",
+        "en": "“Gotongoton” simulates the rhythmic motion and sound of a vehicle, creating a sense of travel in play.",
+        "zh": "“ゴトンゴトン”模仿列车或巴士行驶时的节奏晃动与声音，让游戏中充满旅程的真实感。",
+        "ko": "“고퉁고퉁”은 기차나 버스가 달릴 때의 규칙적인 흔들림과 소리를 모방하여, 놀이에 여행의 생동감을 더합니다。"
+      },
+      "jpsen": "バスごっこで《ゴトンゴトン》と揺れながら「発車しまーす！」"
+    },
+    {
+      "id": 436,
+      "sceneId": 39,
+      "scene": "子ども・遊び",
+      "main": "プールではしゃぐ子が《バシャバシャ》水しぶきを上げていた。",
+      "romaji": "PUURUDEHASHAGUKOGA 《BASHABASHA》MIZUSHIBUKIWOAGETEITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《バシャバシャ》は水を力強くかく音や感触を表し、遊びの熱中と解放感が全身からあふれる様子が伝わります。",
+        "en": "“Bashabasha” conveys the energetic splashing of water, expressing joyful freedom in play.",
+        "zh": "“バシャバシャ”表现用力划水的声音与触感，传达玩水时的尽情与释放。",
+        "ko": "“바샤바샤”는 물을 힘차게 튀기는 소리와 감촉을 나타내며, 놀이의 열중과 해방감을 전달합니다。"
+      },
+      "jpsen": "プールではしゃぐ子が《バシャバシャ》水しぶきを上げていた。"
+    },
+    {
+      "id": 437,
+      "sceneId": 39,
+      "scene": "子ども・遊び",
+      "main": "笑い声が《ゲラゲラ》響き渡って、こっちまで笑顔になる。",
+      "romaji": "WARAIKOEGA 《GERAGERA》HIBIKIWATATSUTE KOTCHIMADEEGAONINARU",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ゲラゲラ》は腹の底から湧き上がるような大きな笑い声を表し、周囲まで巻き込むような楽しさと明るさを生み出します。",
+        "en": "“Geragera” depicts loud, hearty laughter that spreads joy to those around.",
+        "zh": "“ゲラゲラ”表示从腹部涌出的笑声，带动周围人一起感受欢乐。",
+        "ko": "“게라게라”는 배꼽 잡는 큰 웃음소리를 나타내며, 주변 사람까지 즐겁게 만듭니다。"
+      },
+      "jpsen": "笑い声が《ゲラゲラ》響き渡って、こっちまで笑顔になる。"
+    },
+    {
+      "id": 438,
+      "sceneId": 39,
+      "scene": "子ども・遊び",
+      "main": "ブランコに乗って《ギッコンバッタン》楽しいリズム。",
+      "romaji": "BURANKONINOTTE 《GIKKONBATTAN》TANOSHIIRIZUMU",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ギッコンバッタン》は前後に大きく揺れる遊具の動きをリズミカルに表し、遊びの躍動感と安定したリズムが感じられます。",
+        "en": "“Gikkonbattan” expresses the rhythmic swaying of a swing, full of energy and motion.",
+        "zh": "“ギッコンバッタン”表现秋千前后摆动的节奏感，充满动感。",
+        "ko": "“깃콘밧딴”은 그네가 앞뒤로 흔들리는 리듬을 표현하며, 활기찬 놀이의 감각을 담고 있습니다。"
+      },
+      "jpsen": "ブランコに乗って《ギッコンバッタン》楽しいリズム。"
+    },
+    {
+      "id": 439,
+      "sceneId": 39,
+      "scene": "子ども・遊び",
+      "main": "抱っこされた赤ちゃんが《スヤスヤ》と気持ちよさそうに眠っている。",
+      "romaji": "DAKKOSARETAAKACHANGA 《SUYASUYA》TOKIMOCHIYOSASOUNINEMUTSUTEIRU",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《スヤスヤ》は深く穏やかな眠りの状態を表し、静かな寝息とともに安心とやすらぎが広がる情景を描きます。",
+        "en": "“Suyasuya” depicts deep and peaceful sleep, evoking a sense of calm and comfort.",
+        "zh": "“スヤスヤ”表示深沉安稳的睡眠，传达出安心与宁静的氛围。",
+        "ko": "“수야수야”는 깊고 평화로운 잠의 상태를 나타내며, 안심과 편안함을 전달합니다。"
+      },
+      "jpsen": "抱っこされた赤ちゃんが《スヤスヤ》と気持ちよさそうに眠っている。"
+    },
+    {
+      "id": 440,
+      "sceneId": 39,
+      "scene": "子ども・遊び",
+      "main": "シャボン玉が《フワフワ》と空に舞っていくのを見つめていた。",
+      "romaji": "SHABONTAMAGA 《FUWAFUWA》TOSORANIMATSUTEIKUNOWOMITSUMETEITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《フワフワ》は軽く、柔らかく、風に乗って漂う動きを表し、夢のような浮遊感や儚さを含んだ美しさを伝えます。",
+        "en": "“Fuwafuwa” expresses light, soft drifting, evoking a dreamlike, delicate beauty.",
+        "zh": "“フワフワ”表现轻盈柔软随风飘舞的动作，传达梦幻般的美感。",
+        "ko": "“후와후와”는 가볍고 부드럽게 바람을 타고 떠다니는 모습을 나타내며, 꿈같은 아름다움을 전달합니다。"
+      },
+      "jpsen": "シャボン玉が《フワフワ》と空に舞っていくのを見つめていた。"
+    },
+    {
+      "id": 441,
+      "sceneId": 39,
+      "scene": "子ども・遊び",
+      "main": "ボールを《コロコロ》転がして追いかけて遊ぶのがマイブーム。",
+      "romaji": "BOORUWO 《KOROKORO》KOROGASHITEOIKAKETEASOBUNOGAMAIBUUMU",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《コロコロ》は小さく丸いものが床を軽快に転がる音や動きを表し、楽しげな追いかけっこのリズムを感じさせます。",
+        "en": "“Korokoro” depicts the light rolling sound of a small object, evoking a playful rhythm.",
+        "zh": "“コロコロ”表示小物体在地板上轻快滚动的声音与动作，充满追逐的乐趣。",
+        "ko": "“코로코로”는 작은 공이 가볍게 구르는 소리와 동작을 나타내며, 쫓고 노는 리듬을 느끼게 합니다。"
+      },
+      "jpsen": "ボールを《コロコロ》転がして追いかけて遊ぶのがマイブーム。"
+    },
+    {
+      "id": 442,
+      "sceneId": 39,
+      "scene": "子ども・遊び",
+      "main": "すべり台の上で《モジモジ》して、なかなか滑れない…かわいい勇気！",
+      "romaji": "SUBERIDAINOUEDE 《MOJIMOJI》SHITE NAKANAKASUBERENAI…KAWAIIYUUKI",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《モジモジ》は恥ずかしさや緊張から身体を小さく動かす様子を表し、内に秘めた葛藤や小さな一歩を踏み出そうとする姿を映し出します。",
+        "en": "“Mojimoji” shows shy, hesitant movements, reflecting the courage to take a small step forward.",
+        "zh": "“モジモジ”表示因害羞或紧张而做出的小动作，体现内心的挣扎与踏出第一步的勇气。",
+        "ko": "“모지모지”는 부끄러움이나 긴장으로 인해 몸을 조심스럽게 움직이는 모습을 나타내며, 내면의 갈등과 첫걸음을 내딛으려는 용기를 표현합니다。"
+      },
+      "jpsen": "すべり台の上で《モジモジ》して、なかなか滑れない…かわいい勇気！"
+    }
+  ]
+}

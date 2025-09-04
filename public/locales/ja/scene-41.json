@@ -1,0 +1,290 @@
+{
+  "scene": "心の余韻",
+  "messages": [
+    {
+      "id": 790,
+      "sceneId": 41,
+      "scene": "心の余韻",
+      "main": "終演後の静けさに《ジーン》と余韻が広がった。",
+      "romaji": "SHUUENGONOSHIZUKESANI 《JIIN》TOYOINGAHIROGATTA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ジーン》は感情が深くしみわたり、胸の奥で温かく残るような感動の余韻を表します。",
+        "en": "“Jiin” expresses a deep emotional afterglow that warmly lingers in the heart.",
+        "zh": "“ジーン”表示情感深深渗透，温暖地留在心中。",
+        "ko": "“지인”은 감정이 가슴 깊이 스며들어 따뜻하게 남는 여운을 표현합니다。"
+      },
+      "jpsen": "終演後の静けさに《ジーン》と余韻が広がった。"
+    },
+    {
+      "id": 791,
+      "sceneId": 41,
+      "scene": "心の余韻",
+      "main": "別れ際に《ウルッ》と目が潤んだ。",
+      "romaji": "WAKARESAINI 《URUTSU》TOMEGAJUNNDA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ウルッ》は涙があふれる直前の、心が震えるような優しい感情の動きを映し出します。",
+        "en": "“Uru” reflects the moment just before tears overflow, a trembling of gentle emotion.",
+        "zh": "“ウルッ”表现眼泪将溢出的瞬间，内心颤动的温柔感情。",
+        "ko": "“우룻”은 눈물이 흐르기 직전의 마음이 떨리는 듯한 부드러운 감정을 표현합니다。"
+      },
+      "jpsen": "別れ際に《ウルッ》と目が潤んだ。"
+    },
+    {
+      "id": 792,
+      "sceneId": 41,
+      "scene": "心の余韻",
+      "main": "ふとした瞬間に《ジワジワ》と幸せを実感した。",
+      "romaji": "FUTOSHITASHUNKANNI 《JIWAJIWA》TOSHIAWASEWOJIKKANSHITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ジワジワ》は感情が静かに、でも確実に広がっていく様子を表し、心の奥に長く残る余韻を伝えます。",
+        "en": "“Jiwajiwa” describes emotions that quietly but surely spread, leaving a lasting afterglow.",
+        "zh": "“ジワジワ”表示情感缓慢却坚定地扩散，留下深刻的余韵。",
+        "ko": "“지와지와”는 감정이 조용히 그러나 확실하게 퍼져나가며 마음에 오래 남는 여운을 전합니다。"
+      },
+      "jpsen": "ふとした瞬間に《ジワジワ》と幸せを実感した。"
+    },
+    {
+      "id": 793,
+      "sceneId": 41,
+      "scene": "心の余韻",
+      "main": "思い出すと《ポカポカ》あたたかい気持ちになる。",
+      "romaji": "OMOIDASUTO 《POKAPOKA》ATATAKAIKIMOCHININARU",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ポカポカ》は心身ともにあたたかく満たされるような穏やかな幸福感を表します。",
+        "en": "“Pokapoka” expresses a gentle warmth that fills both body and heart with happiness.",
+        "zh": "“ポカポカ”表示身心温暖充实的幸福感。",
+        "ko": "“포카포카”는 몸과 마음이 따뜻하게 채워지는 평온한 행복감을 나타냅니다。"
+      },
+      "jpsen": "思い出すと《ポカポカ》あたたかい気持ちになる。"
+    },
+    {
+      "id": 794,
+      "sceneId": 41,
+      "scene": "心の余韻",
+      "main": "まるで時間が《シーン》と止まったかのようだった。",
+      "romaji": "MARUDEJIKANGA 《SHIIN》TOTOMATTAKANOYOUDATTA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《シーン》は音のない静けさを強調し、深い感動や余韻の中で、世界が一瞬止まったような印象を与えます。",
+        "en": "“Shiin” emphasizes utter silence, as if time itself has paused in a moment of deep emotion.",
+        "zh": "“シーン”强调无声的静谧，仿佛在感动中时间停滞。",
+        "ko": "“씬”은 소리 없는 고요함을 강조하며, 깊은 감동 속에서 시간이 멈춘 듯한 인상을 줍니다。"
+      },
+      "jpsen": "まるで時間が《シーン》と止まったかのようだった。"
+    },
+    {
+      "id": 795,
+      "sceneId": 41,
+      "scene": "心の余韻",
+      "main": "帰り道に《フワッ》とやさしい風が吹いた。",
+      "romaji": "KAERIMICHINI 《FUWATSU》TOYASASHIIKAZEGAFUITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《フワッ》は空気や感情が柔らかく軽やかに動く様子を表し、やさしい余韻や解放感をそっと描きます。",
+        "en": "“Fuwa” expresses a gentle motion of air or emotion, evoking peaceful release.",
+        "zh": "“フワッ”表示空气或情感轻柔流动，营造温和的余韵感。",
+        "ko": "“후와”는 공기나 감정이 부드럽게 움직이는 모습을 나타내며, 편안한 여운을 전달합니다。"
+      },
+      "jpsen": "帰り道に《フワッ》とやさしい風が吹いた。"
+    },
+    {
+      "id": 796,
+      "sceneId": 41,
+      "scene": "心の余韻",
+      "main": "余韻に《ひたひた》と心が満たされていく。",
+      "romaji": "YOINNI 《HITAHITA》TOKOKOROGAMITASARETEIKU",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ひたひた》は静かに、しかし確かに満ちていく様子を表し、感情がしずかに広がるさまを丁寧に伝えます。",
+        "en": "“Hitahita” represents a quiet yet certain filling of the heart with emotion.",
+        "zh": "“ひたひた”表示静静地、确实地情感满溢。",
+        "ko": "“히타히타”는 조용하지만 확실하게 마음이 차오르는 감정을 표현합니다。"
+      },
+      "jpsen": "余韻に《ひたひた》と心が満たされていく。"
+    },
+    {
+      "id": 797,
+      "sceneId": 41,
+      "scene": "心の余韻",
+      "main": "感動が《ポロポロ》と涙になってこぼれた。",
+      "romaji": "KANDOUGA 《POROPORO》TONAMIDANINATTEKOBORETA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《ポロポロ》は涙が途切れることなく、静かに、自然にこぼれる様子を表し、感情のあふれ出す余韻を表現します。",
+        "en": "“Poroporo” illustrates quiet, continuous tears, expressing lingering emotions spilling out.",
+        "zh": "“ポロポロ”表示泪水静静不断地流出，表达情感的溢出余韵。",
+        "ko": "“포로포로”는 조용히 끊임없이 흐르는 눈물을 묘사하며, 감정이 흘러넘치는 여운을 전합니다。"
+      },
+      "jpsen": "感動が《ポロポロ》と涙になってこぼれた。"
+    },
+    {
+      "id": 798,
+      "sceneId": 41,
+      "scene": "心の余韻",
+      "main": "思い出が《キラキラ》と輝いて心に残る。",
+      "romaji": "OMOIDEGA 《KIRAKIRA》TOKAGAYAITEKOKORONINOKORU",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《キラキラ》は光や感情がきらめく様子を表し、過去の美しい記憶が宝石のように心に残る情景を描きます。",
+        "en": "“Kirakira” reflects the sparkle of light or emotion, preserving memories like precious gems.",
+        "zh": "“キラキラ”描绘闪耀的光或感情，像宝石般留存在心中。",
+        "ko": "“키라키라”는 빛이나 감정이 반짝이는 모습을 나타내며, 아름다운 기억이 보석처럼 마음에 남는 장면을 그립니다。"
+      },
+      "jpsen": "思い出が《キラキラ》と輝いて心に残る。"
+    },
+    {
+      "id": 799,
+      "sceneId": 41,
+      "scene": "心の余韻",
+      "main": "しんみり《シクシク》と泣きながらも、前を向いた。",
+      "romaji": "SHINMIRI 《SHIKUSHIKU》TONAKINAGARAMO MAEWOMUITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《シクシク》は小さく絶え間ない涙を表し、悲しみの中にある静かな強さや優しさを含んだ余韻を伝えます。",
+        "en": "“Shikushiku” expresses soft, continuous crying, conveying gentle strength in sorrow.",
+        "zh": "“シクシク”表示细小不断的哭泣声，传递悲伤中的温柔坚强。",
+        "ko": "“시쿠시쿠”는 조용히 흐르는 눈물을 표현하며, 슬픔 속의 고요한 강인함을 담고 있습니다。"
+      },
+      "jpsen": "しんみり《シクシク》と泣きながらも、前を向いた。"
+    },
+    {
+      "id": 800,
+      "sceneId": 41,
+      "scene": "心の余韻",
+      "main": "最後に《パチパチ》と拍手が鳴り響いた。",
+      "romaji": "SAIGONI 《PACHIPACHI》TOHAKUSHUGANARIHIBIITA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《パチパチ》は拍手の音を表し、感謝や感動を形にしたフィナーレの音として、静かな余韻の中にも力強さを感じさせます。",
+        "en": "“Pachipachi” is the sound of applause, resonating with gratitude and a powerful finale.",
+        "zh": "“パチパチ”是掌声的声音，代表感动与谢意，是余韵中带有力量的句点。",
+        "ko": "“파치파치”는 박수 소리를 나타내며, 감사와 감동이 담긴 피날레로서 조용한 여운 속에서도 힘을 느끼게 합니다。"
+      },
+      "jpsen": "最後に《パチパチ》と拍手が鳴り響いた。"
+    },
+    {
+      "id": 801,
+      "sceneId": 41,
+      "scene": "心の余韻",
+      "main": "時間が《トボトボ》とゆっくり歩いているみたいだった。",
+      "romaji": "JIKANGA 《TOBOTOBO》TOYUKKURIARUITEIRUMITAIDATTA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《トボトボ》は疲れや切なさを抱えながら、静かに歩を進める様子を表し、名残惜しさの残る感情を描きます。",
+        "en": "“Tobotobo” expresses slow, weary walking filled with lingering sadness.",
+        "zh": "“トボトボ”表示带着疲惫或忧伤缓缓前行，充满依依不舍之情。",
+        "ko": "“토보토보”는 피곤함이나 서글픔을 안고 천천히 걷는 모습을 나타내며, 아쉬움이 남는 감정을 표현합니다。"
+      },
+      "jpsen": "時間が《トボトボ》とゆっくり歩いているみたいだった。"
+    },
+    {
+      "id": 802,
+      "sceneId": 41,
+      "scene": "心の余韻",
+      "main": "気持ちが《スーッ》と静かに落ち着いていった。",
+      "romaji": "KIMOCHIGA 《SUUTSU》TOSHIZUKANIOCHITSUITEITTA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《スーッ》は風のように澄んだ気配で感情が静まりゆく様子を表し、余韻の中で心が凪いでいく感覚を伝えます。",
+        "en": "“Suu” represents feelings gently calming down like a clear breeze.",
+        "zh": "“スーッ”表现如清风般的情绪平静过程，传达余韵中平和的心境。",
+        "ko": "“스으”는 감정이 맑은 바람처럼 조용히 가라앉아가는 모습을 나타냅니다。"
+      },
+      "jpsen": "気持ちが《スーッ》と静かに落ち着いていった。"
+    },
+    {
+      "id": 803,
+      "sceneId": 41,
+      "scene": "心の余韻",
+      "main": "胸に《グッ》と込み上げるものがあった。",
+      "romaji": "MUNENI 《GUTSU》TOKOMIAGERUMONOGAATTA",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《グッ》は言葉にならない強い感情が一瞬で込み上げてくる様子を表し、余韻が凝縮された感情の高まりを示します。",
+        "en": "“Gu” shows an unspoken rush of emotion that wells up all at once.",
+        "zh": "“グッ”表示瞬间涌现的强烈情绪，难以用言语表达。",
+        "ko": "“굿”은 말로 표현할 수 없는 강한 감정이 갑자기 솟구치는 모습을 나타냅니다。"
+      },
+      "jpsen": "胸に《グッ》と込み上げるものがあった。"
+    },
+    {
+      "id": 804,
+      "sceneId": 41,
+      "scene": "心の余韻",
+      "main": "今日の出来事が《じわ〜っ》と心に残っている。",
+      "romaji": "KYOUNODEKIGOTOGA 《JIWA〜TSU》TOKOKORONINOKOTSUTEIRU",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      },
+      "description": {
+        "ja": "《じわ〜っ》は余韻が時間をかけて浸透していく様子を表し、忘れられない感情が波のように広がる感覚を描きます。",
+        "en": "“Jiwaa” expresses an emotional afterglow that slowly permeates, like waves in the heart.",
+        "zh": "“じわ〜っ”表示余韵缓慢渗透，如同情感的波浪。",
+        "ko": "“지와아”는 여운이 천천히 스며들며 마음속에 파도처럼 퍼져나가는 감정을 표현합니다。"
+      },
+      "jpsen": "今日の出来事が《じわ〜っ》と心に残っている。"
+    }
+  ]
+}

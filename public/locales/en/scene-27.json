@@ -1,0 +1,200 @@
+{
+  "scene": "[EN] チェックイン・チェックアウト",
+  "messages": [
+    {
+      "id": 391,
+      "sceneId": 27,
+      "romaji": "HOTERUNOJIDOUDOAGA 《SUUTSU》TOHIRAITEMUKAETEKUREMASHITA",
+      "jpsen": "ホテルの自動ドアが《スーッ》と開いて迎えてくれました。",
+      "main": "[EN] ホテルの自動ドアが《スーッ》と開いて迎えてくれました。",
+      "description": "[EN] 《スーッ》は滑らかに動く静かな音で、緊張を和らげてくれるような安心感を伝えます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 392,
+      "sceneId": 27,
+      "romaji": "FURONTONOBERUGA 《CHIIN》TONARIMASHITA",
+      "jpsen": "フロントのベルが《チーン》と鳴りました。",
+      "main": "[EN] フロントのベルが《チーン》と鳴りました。",
+      "description": "[EN] 《チーン》は澄んだ短い音で、始まりの合図のような印象を与えます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 393,
+      "sceneId": 27,
+      "romaji": "KAGIWOWATASARETATOKI TENONAKADE 《KACHA》TONARIMASHITA",
+      "jpsen": "鍵を渡されたとき、手の中で《カチャ》と鳴りました。",
+      "main": "[EN] 鍵を渡されたとき、手の中で《カチャ》と鳴りました。",
+      "description": "[EN] 《カチャ》は金属が軽く触れ合う音を表現し、旅の実感をもたらします。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 394,
+      "sceneId": 27,
+      "romaji": "EREBEETAAGA 《UIIN》TOJOUSHOUSURUOTONITSUTSUMAREMASHITA",
+      "jpsen": "エレベーターが《ウィーン》と上昇する音に包まれました。",
+      "main": "[EN] エレベーターが《ウィーン》と上昇する音に包まれました。",
+      "description": "[EN] 《ウィーン》は機械が動く静かな持続音で、移動の期待感を含んでいます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 395,
+      "sceneId": 27,
+      "romaji": "HEYANIIRUTO 《PATAN》TODOAGASHIMARIMASHITA",
+      "jpsen": "部屋に入ると《パタン》とドアが閉まりました。",
+      "main": "[EN] 部屋に入ると《パタン》とドアが閉まりました。",
+      "description": "[EN] 《パタン》は軽くもしっかりと閉まる音で、プライベート空間の始まりを感じさせます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 396,
+      "sceneId": 27,
+      "romaji": "KAADOKIIWO 《PITSU》TOATERUOTOGASHIMASHITA",
+      "jpsen": "カードキーを《ピッ》と当てる音がしました。",
+      "main": "[EN] カードキーを《ピッ》と当てる音がしました。",
+      "description": "[EN] 《ピッ》はデジタルな読み取り音で、今どきのスマートな旅の象徴でもあります。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 397,
+      "sceneId": 27,
+      "romaji": "NIMOTSUWOBEDDONI 《DOSATSU》TOOKUTOIKKINICHIKARAGANUKEMASHITA",
+      "jpsen": "荷物をベッドに《ドサッ》と置くと一気に力が抜けました。",
+      "main": "[EN] 荷物をベッドに《ドサッ》と置くと一気に力が抜けました。",
+      "description": "[EN] 《ドサッ》は重たいものが落ちる音で、安心や安堵の瞬間を表します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 398,
+      "sceneId": 27,
+      "romaji": "KANKOUPANFURETTOWO 《PARAPARA》TOMEKUTTEIMASHITA",
+      "jpsen": "観光パンフレットを《パラパラ》とめくっていました。",
+      "main": "[EN] 観光パンフレットを《パラパラ》とめくっていました。",
+      "description": "[EN] 《パラパラ》は紙を連続してめくる音で、計画のワクワク感を伝えます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 399,
+      "sceneId": 27,
+      "romaji": "FURONTODESHITSUMONSURUTO SUTAFFUGA 《NIKOTSU》TOWARATSUTEOUJITEKUREMASHITA",
+      "jpsen": "フロントで質問すると、スタッフが《にこっ》と笑って応じてくれました。",
+      "main": "[EN] フロントで質問すると、スタッフが《にこっ》と笑って応じてくれました。",
+      "description": "[EN] 《にこっ》は笑顔の瞬間のぬくもりを、音として感じさせる柔らかい表現です。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 400,
+      "sceneId": 27,
+      "romaji": "CHEKKUAUTONOTOKI 《KATAKATA》TOKIIBOODOWOUTSUOTOGAKOKOCHIYOKUHIBIITEIMASHITA",
+      "jpsen": "チェックアウトのとき、《カタカタ》とキーボードを打つ音が心地よく響いていました。",
+      "main": "[EN] チェックアウトのとき、《カタカタ》とキーボードを打つ音が心地よく響いていました。",
+      "description": "[EN] 《カタカタ》は細かく連続した打鍵音で、事務的ながらも丁寧なやりとりを伝えます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 401,
+      "sceneId": 27,
+      "romaji": "RESHIITOGA 《SURUSURU》TODETEKIMASHITA",
+      "jpsen": "レシートが《スルスル》と出てきました。",
+      "main": "[EN] レシートが《スルスル》と出てきました。",
+      "description": "[EN] 《スルスル》は滑らかに紙が出てくる感触を柔らかく表します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 402,
+      "sceneId": 27,
+      "romaji": "「ARIGATOUGOZAIMASHITA」NOKOENI 《PEKORI》TOATAMAWOSAGEMASHITA",
+      "jpsen": "「ありがとうございました」の声に、《ぺこり》と頭を下げました。",
+      "main": "[EN] 「ありがとうございました」の声に、《ぺこり》と頭を下げました。",
+      "description": "[EN] 《ぺこり》はお辞儀の仕草をやさしく音で表現し、日本らしい礼儀を伝えます。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 403,
+      "sceneId": 27,
+      "romaji": "NIMOTSUWOKOROGASUKYARIIGA 《GOROGORO》TOOTOWOTATETEIMASHITA",
+      "jpsen": "荷物を転がすキャリーが《ゴロゴロ》と音を立てていました。",
+      "main": "[EN] 荷物を転がすキャリーが《ゴロゴロ》と音を立てていました。",
+      "description": "[EN] 《ゴロゴロ》はタイヤの回転音で、旅の余韻や出発の足取りを象徴します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 404,
+      "sceneId": 27,
+      "romaji": "HOTERUNOROBIIWODERUTO 《FUWATSU》TOKAZEGAFUKINUKEMASHITA",
+      "jpsen": "ホテルのロビーを出ると《ふわっ》と風が吹き抜けました。",
+      "main": "[EN] ホテルのロビーを出ると《ふわっ》と風が吹き抜けました。",
+      "description": "[EN] 《ふわっ》はやさしい風や気配を感じるときの軽やかな感覚を表します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    },
+    {
+      "id": 405,
+      "sceneId": 27,
+      "romaji": "FURIKAERUTO HOTERUNOKANBANGA 《KIRARI》TOKAGAYAITEMIEMASHITA",
+      "jpsen": "振り返ると、ホテルの看板が《キラリ》と輝いて見えました。",
+      "main": "[EN] 振り返ると、ホテルの看板が《キラリ》と輝いて見えました。",
+      "description": "[EN] 《キラリ》は一瞬の光や記憶に残るような輝きを音で表現します。",
+      "translation": {
+        "en": "[Translation will appear here]",
+        "zh": "[Translation will appear here]",
+        "ko": "[Translation will appear here]"
+      }
+    }
+  ]
+}
