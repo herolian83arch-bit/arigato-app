@@ -1,3 +1,4 @@
+
 // 完全な文字エスケープ処理関数
 function escape_for_javascript(text) {
   if (!text) return "";
@@ -305,6 +306,11 @@ async function loadOnomatopoeiaData() {
     }));
 
     console.log(`📚 Loaded ${onomatopoeiaData.length} onomatopoeia entries`);
+
+    // === Onomatopoeia TTS: 日本語原文を固定保持（翻訳で上書きされない）
+    const JPSEN_MAP = new Map(onomatopoeiaData.map(it => [it.id, it.jpsen]));
+    // （デバッグ用）必要ならウィンドウへ露出
+    if (typeof window !== 'undefined') window.__JPSEN_MAP__ = JPSEN_MAP;
   } catch (error) {
     console.error('オノマトペデータの読み込みに失敗:', error);
     onomatopoeiaData = [];
@@ -746,7 +752,7 @@ function renderScene() {
         <div class="message-header">
           <span class="message-number" style="font-weight:bold;margin-right:8px;">${messageId}.</span>
           <div class="message-actions" style="display:inline-flex;align-items:center;">
-            <button class="speak-btn" style="margin-left:12px;background:none;border:none;cursor:pointer;font-size:1.2em;" onclick="playAudioWithFallback('', '${escape_for_javascript((msg.ja || '').replace(/<[^>]+>/g, ''))}', 'ja-JP')" aria-label="音声再生" data-card-control="true">🔊</button>
+            <button class="speak-btn" style="margin-left:12px;background:none;border:none;cursor:pointer;font-size:1.2em;" onclick="playAudioWithFallback('', '${escape_for_javascript((msg.ja || msg.jpsen || '').replace(/<[^>]+>/g, ''))}', 'ja-JP')" aria-label="音声再生" data-card-control="true">🔊</button>
           </div>
         </div>
         <div class="message-content" style="display:inline-block;">
