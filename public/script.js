@@ -311,23 +311,6 @@ async function loadOnomatopoeiaData() {
     const JPSEN_MAP = new Map(onomatopoeiaData.map(it => [it.id, it.jpsen]));
     // （デバッグ用）必要ならウィンドウへ露出
     if (typeof window !== 'undefined') window.__JPSEN_MAP__ = JPSEN_MAP;
-
-    // オノマトペ辞典専用：表示は翻訳のまま、音声は必ず jpsen（日本語原文）
-    window.playOnomatopoeiaFromDictionary = function (itemId) {
-      try {
-        const jps = JPSEN_MAP.get(Number(itemId));
-        if (!jps) { console.warn(`jpsen not found: ID=${itemId}`); return; }
-        try { speechSynthesis.cancel(); } catch (_) {}
-        const u = new SpeechSynthesisUtterance(jps);
-        u.lang = 'ja-JP';
-        u.rate = (typeof speechSpeed === 'number' ? speechSpeed : 1);
-        u.pitch = 1.0;
-        u.volume = 0.9;
-        speechSynthesis.speak(u);
-      } catch (e) {
-        console.error('onomatopoeia TTS error:', e);
-      }
-    };
   } catch (error) {
     console.error('オノマトペデータの読み込みに失敗:', error);
     onomatopoeiaData = [];
@@ -1135,6 +1118,21 @@ function playTextWithTTS(text, language = "ja-JP") {
   }
 }
 
+// オノマトペ辞典専用の音声再生関数（新規作成）
+function playOnomatopoeiaFromDictionary(itemId) {
+  try {
+    // dictionary.jsonから該当するitemを検索
+    const item = onomatopoeiaData.find(item => item.id === itemId);
+    if (item && item.jpsen) {
+      console.log(`🎵 オノマトペ辞典音声再生: ID=${itemId}, jpsen=${item.jpsen}`);
+      playAudioWithFallback('', item.jpsen, 'ja-JP');
+    } else {
+      console.warn(`⚠️ オノマトペ辞典データが見つかりません: ID=${itemId}`);
+    }
+  } catch (error) {
+    console.error("❌ オノマトペ辞典音声再生エラー:", error);
+  }
+}
 
 // 音声再生機能の状態確認
 function checkAudioCapabilities() {
