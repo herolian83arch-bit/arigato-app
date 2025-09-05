@@ -461,7 +461,7 @@ async function showOnomatopoeiaScene(scene) {
           <div class="item-number">${item.id}</div>
           <div class="item-actions" style="display:inline-flex;align-items:center;">
             ${isTTSEnabled ? `
-              <button class="speak-btn" onclick="playAudioWithFallback('', '${escape_for_javascript(item.jpsen)}', 'ja-JP')" aria-label="音声再生" style="background:none;border:none;cursor:pointer;font-size:1.2em;margin-left:12px;" data-card-control="true">
+              <button class="speak-btn" onclick="playOnomatopoeiaFromDictionary(${item.id})" aria-label="音声再生" style="background:none;border:none;cursor:pointer;font-size:1.2em;margin-left:12px;" data-card-control="true">
                 🔊
               </button>
             ` : ''}
@@ -747,7 +747,7 @@ function renderScene() {
         <div class="message-header">
           <span class="message-number" style="font-weight:bold;margin-right:8px;">${messageId}.</span>
           <div class="message-actions" style="display:inline-flex;align-items:center;">
-            <button class="speak-btn" style="margin-left:12px;background:none;border:none;cursor:pointer;font-size:1.2em;" onclick="playAudioWithFallback('', '${escape_for_javascript((msg.ja || msg.jpsen || '').replace(/<[^>]+>/g, ''))}', 'ja-JP')" aria-label="音声再生" data-card-control="true">🔊</button>
+            <button class="speak-btn" style="margin-left:12px;background:none;border:none;cursor:pointer;font-size:1.2em;" onclick="playAudioWithFallback('', '${escape_for_javascript((msg.ja || '').replace(/<[^>]+>/g, ''))}', 'ja-JP')" aria-label="音声再生" data-card-control="true">🔊</button>
           </div>
         </div>
         <div class="message-content" style="display:inline-block;">
@@ -1110,6 +1110,22 @@ function playTextWithTTS(text, language = "ja-JP") {
 
   } catch (error) {
     console.error("❌ Web Speech API エラー:", error);
+  }
+}
+
+// オノマトペ辞典専用の音声再生関数（新規作成）
+function playOnomatopoeiaFromDictionary(itemId) {
+  try {
+    // dictionary.jsonから該当するitemを検索
+    const item = onomatopoeiaData.find(item => item.id === itemId);
+    if (item && item.jpsen) {
+      console.log(`🎵 オノマトペ辞典音声再生: ID=${itemId}, jpsen=${item.jpsen}`);
+      playAudioWithFallback('', item.jpsen, 'ja-JP');
+    } else {
+      console.warn(`⚠️ オノマトペ辞典データが見つかりません: ID=${itemId}`);
+    }
+  } catch (error) {
+    console.error("❌ オノマトペ辞典音声再生エラー:", error);
   }
 }
 
