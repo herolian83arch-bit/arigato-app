@@ -43,6 +43,7 @@
   <script src="translation-api.js"></script>
   <script src="translation-batch.js"></script>
   <script src="translation-cache.js"></script>
+  <script src="script.js?v=tts-jpsen-final"></script>
   <script>
     let onomatopoeiaData = [];
     let currentScene = '';
@@ -222,7 +223,7 @@
               <div class="item-number">${item.id}</div>
               <div class="item-actions" style="display:inline-flex;align-items:center;">
                 ${isTTSEnabled ? `
-                  <button class="speak-btn" onclick="playAudio('${mainText.replace(/'/g, "\\'")}')" aria-label="音声再生" style="background:none;border:none;cursor:pointer;font-size:1.2em;margin-left:12px;" data-card-control="true">
+                  <button class="speak-btn" onclick="event.stopImmediatePropagation(); return playOnomatopoeiaFromDictionary(${item.id})" aria-label="音声再生" style="background:none;border:none;cursor:pointer;font-size:1.2em;margin-left:12px;" data-card-control="true">
                     🔊
                   </button>
                 ` : ''}
