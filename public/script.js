@@ -751,7 +751,7 @@ function renderScene() {
           </div>
         </div>
         <div class="message-content" style="display:inline-block;">
-          <div class="message-text" style="font-weight:bold;margin-bottom:4px;">${msg.jpsen || ''}</div>
+          <div class="message-text" style="font-weight:bold;margin-bottom:4px;">${msg.text || ''}</div>
           <div class="romaji-text" style="font-size:0.9em;color:#666;margin-bottom:4px;">${msg.romaji || ''}</div>
         </div>
         <div class="note-text" style="font-size:0.95em;color:#666;margin-top:2px;">${msg.note || ''}</div>
