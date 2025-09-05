@@ -291,6 +291,8 @@ async function loadDictionary() {
 // オノマトペデータを読み込み
 async function loadOnomatopoeiaData() {
   try {
+    console.log('🔄 オノマトペデータの読み込み開始...');
+    
     // dictionary.jsonを直接読み込み
     const response = await fetch('/data/dictionary.json');
     if (!response.ok) {
@@ -298,6 +300,12 @@ async function loadOnomatopoeiaData() {
     }
 
     const rawData = await response.json();
+    console.log(`📊 生データ取得完了: ${rawData.length} エントリ`);
+
+    // データの検証
+    if (!Array.isArray(rawData)) {
+      throw new Error('dictionary.json is not an array');
+    }
 
     // romajiを大文字に変換
     onomatopoeiaData = rawData.map(item => ({
@@ -309,6 +317,8 @@ async function loadOnomatopoeiaData() {
 
     // === Onomatopoeia TTS: 日本語原文を固定保持（翻訳で上書きされない）
     const JPSEN_MAP = new Map(onomatopoeiaData.map(it => [it.id, it.jpsen]));
+    console.log(`🗺️ JPSEN_MAP created with ${JPSEN_MAP.size} entries`);
+    
     // （デバッグ用）必要ならウィンドウへ露出
     if (typeof window !== 'undefined') window.__JPSEN_MAP__ = JPSEN_MAP;
 
@@ -328,8 +338,10 @@ async function loadOnomatopoeiaData() {
         console.error('onomatopoeia TTS error:', e);
       }
     };
+    
+    console.log('✅ オノマトペデータの読み込み完了');
   } catch (error) {
-    console.error('オノマトペデータの読み込みに失敗:', error);
+    console.error('❌ オノマトペデータの読み込みに失敗:', error);
     onomatopoeiaData = [];
   }
 }
@@ -425,12 +437,20 @@ function closeOnomatopoeiaModal() {
 }
 
 // オノマトペシーン一覧を表示
-function showOnomatopoeiaScenes() {
+async function showOnomatopoeiaScenes() {
+  console.log('🔄 オノマトペシーン一覧表示開始');
+  
   const scenesContainer = document.getElementById('onomatopoeia-scenes');
   const contentContainer = document.getElementById('onomatopoeia-content');
 
   scenesContainer.style.display = 'block';
   contentContainer.style.display = 'none';
+
+  // データが読み込まれていない場合は再読み込みを試行
+  if (!onomatopoeiaData || onomatopoeiaData.length === 0) {
+    console.log('⚠️ オノマトペデータが空です。再読み込みを試行...');
+    await loadOnomatopoeiaData();
+  }
 
   // シーンをグループ化
   const sceneGroups = {};
@@ -440,6 +460,8 @@ function showOnomatopoeiaScenes() {
     }
     sceneGroups[item.scene].push(item);
   });
+
+  console.log(`📊 シーングループ数: ${Object.keys(sceneGroups).length}`);
 
   let html = '<div class="scene-grid">';
   Object.keys(sceneGroups).forEach(scene => {
@@ -455,10 +477,13 @@ function showOnomatopoeiaScenes() {
   html += '</div>';
 
   scenesContainer.innerHTML = html;
+  console.log('✅ オノマトペシーン一覧表示完了');
 }
 
 // オノマトペシーンの詳細を表示
 async function showOnomatopoeiaScene(scene) {
+  console.log(`🔄 オノマトペシーン表示開始: ${scene}`);
+  
   const scenesContainer = document.getElementById('onomatopoeia-scenes');
   const contentContainer = document.getElementById('onomatopoeia-content');
   const examplesContainer = document.getElementById('onomatopoeia-examples');
@@ -466,11 +491,22 @@ async function showOnomatopoeiaScene(scene) {
   scenesContainer.style.display = 'none';
   contentContainer.style.display = 'block';
 
+  // データが読み込まれていない場合は再読み込みを試行
+  if (!onomatopoeiaData || onomatopoeiaData.length === 0) {
+    console.log('⚠️ オノマトペデータが空です。再読み込みを試行...');
+    await loadOnomatopoeiaData();
+  }
+
   const sceneItems = onomatopoeiaData.filter(item => item.scene === scene);
-
-
+  console.log(`📊 シーン「${scene}」のアイテム数: ${sceneItems.length}`);
 
   let html = `<h3>${scene}</h3>`;
+
+  if (sceneItems.length === 0) {
+    html += `<p>このシーンの例文が見つかりませんでした。</p>`;
+    examplesContainer.innerHTML = html;
+    return;
+  }
 
   for (const item of sceneItems) {
     // 音声再生機能の有効/無効チェック
@@ -1135,6 +1171,21 @@ function playTextWithTTS(text, language = "ja-JP") {
   }
 }
 
+// オノマトペ辞典専用の音声再生関数（新規作成）
+function playOnomatopoeiaFromDictionary(itemId) {
+  try {
+    // dictionary.jsonから該当するitemを検索
+    const item = onomatopoeiaData.find(item => item.id === itemId);
+    if (item && item.jpsen) {
+      console.log(`🎵 オノマトペ辞典音声再生: ID=${itemId}, jpsen=${item.jpsen}`);
+      playAudioWithFallback('', item.jpsen, 'ja-JP');
+    } else {
+      console.warn(`⚠️ オノマトペ辞典データが見つかりません: ID=${itemId}`);
+    }
+  } catch (error) {
+    console.error("❌ オノマトペ辞典音声再生エラー:", error);
+  }
+}
 
 // 音声再生機能の状態確認
 function checkAudioCapabilities() {
