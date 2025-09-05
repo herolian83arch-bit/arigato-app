@@ -292,7 +292,7 @@ async function loadDictionary() {
 async function loadOnomatopoeiaData() {
   try {
     console.log('🔄 オノマトペデータの読み込み開始...');
-    
+
     // dictionary.jsonを直接読み込み
     const response = await fetch('/data/dictionary.json');
     if (!response.ok) {
@@ -318,7 +318,7 @@ async function loadOnomatopoeiaData() {
     // === Onomatopoeia TTS: 日本語原文を固定保持（翻訳で上書きされない）
     const JPSEN_MAP = new Map(onomatopoeiaData.map(it => [it.id, it.jpsen]));
     console.log(`🗺️ JPSEN_MAP created with ${JPSEN_MAP.size} entries`);
-    
+
     // （デバッグ用）必要ならウィンドウへ露出
     if (typeof window !== 'undefined') window.__JPSEN_MAP__ = JPSEN_MAP;
 
@@ -338,7 +338,7 @@ async function loadOnomatopoeiaData() {
         console.error('onomatopoeia TTS error:', e);
       }
     };
-    
+
     console.log('✅ オノマトペデータの読み込み完了');
   } catch (error) {
     console.error('❌ オノマトペデータの読み込みに失敗:', error);
@@ -439,7 +439,7 @@ function closeOnomatopoeiaModal() {
 // オノマトペシーン一覧を表示
 async function showOnomatopoeiaScenes() {
   console.log('🔄 オノマトペシーン一覧表示開始');
-  
+
   const scenesContainer = document.getElementById('onomatopoeia-scenes');
   const contentContainer = document.getElementById('onomatopoeia-content');
 
@@ -483,7 +483,7 @@ async function showOnomatopoeiaScenes() {
 // オノマトペシーンの詳細を表示
 async function showOnomatopoeiaScene(scene) {
   console.log(`🔄 オノマトペシーン表示開始: ${scene}`);
-  
+
   const scenesContainer = document.getElementById('onomatopoeia-scenes');
   const contentContainer = document.getElementById('onomatopoeia-content');
   const examplesContainer = document.getElementById('onomatopoeia-examples');
