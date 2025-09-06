@@ -65,13 +65,34 @@
       }
 
       // シーンタイトルを更新
-      document.getElementById('scene-title').textContent = currentScene;
+      // シーンタイトルを翻訳して表示
+      await updateSceneTitle(currentScene);
 
       // オノマトペデータを読み込み
       await loadOnomatopoeiaData();
       // 例文を表示（翻訳付き）
       await displayExamples();
     });
+
+    // シーンタイトルを翻訳して表示
+    async function updateSceneTitle(scene) {
+      const titleElement = document.getElementById('scene-title');
+
+      if (currentLanguage !== 'ja') {
+        try {
+          // 翻訳APIでシーンタイトルを翻訳
+          const translatedTitle = await translationAPI.translateText(scene, currentLanguage);
+          titleElement.textContent = translatedTitle;
+        } catch (error) {
+          console.error('シーンタイトル翻訳エラー:', error);
+          // エラー時は元の日本語を表示
+          titleElement.textContent = scene;
+        }
+      } else {
+        // 日本語の場合は翻訳不要
+        titleElement.textContent = scene;
+      }
+    }
 
     // オノマトペデータを読み込み
     async function loadOnomatopoeiaData() {
