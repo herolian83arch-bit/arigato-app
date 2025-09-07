@@ -110,8 +110,16 @@
       localStorage.setItem('onomatopoeiaLanguage', lang);
       updateLanguageButtons();
 
-      // シーン一覧を再表示（翻訳付き）
-      await displayScenes();
+      // ローディング表示を開始
+      showLoading();
+
+      try {
+        // シーン一覧を再表示（翻訳付き）
+        await displayScenes();
+      } finally {
+        // 必ずローディング表示を終了
+        hideLoading();
+      }
     }
 
     // ローディング表示の制御
@@ -173,6 +181,8 @@
             translationCache.set('scene_titles', currentLanguage, translatedScenes);
           } else {
             console.log(`📦 シーンタイトルキャッシュヒット: ${currentLanguage}`);
+            // キャッシュヒット時も少し待機してローディング表示を維持
+            await new Promise(resolve => setTimeout(resolve, 500));
           }
 
           for (let i = 0; i < scenes.length; i++) {
