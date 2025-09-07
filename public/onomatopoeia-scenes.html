@@ -166,9 +166,6 @@
       // 日本語以外の場合は翻訳を実行
       if (currentLanguage !== 'ja') {
         try {
-          // 翻訳処理中はローディングを表示
-          showLoading();
-
           // キャッシュから翻訳結果を取得
           let translatedScenes = translationCache.get('scene_titles', currentLanguage);
 
