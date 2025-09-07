@@ -210,9 +210,8 @@
               </div>
             `;
           });
-        } finally {
-          // 必ずローディング表示を終了
-          hideLoading();
+        } catch (error) {
+          console.error('翻訳エラー:', error);
         }
       } else {
         // 日本語の場合は翻訳不要
