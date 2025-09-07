@@ -116,6 +116,9 @@
       try {
         // シーン一覧を再表示（翻訳付き）
         await displayScenes();
+
+        // 最小表示時間を確保（ローディング表示を確実に見せるため）
+        await new Promise(resolve => setTimeout(resolve, 800));
       } finally {
         // 必ずローディング表示を終了
         hideLoading();
