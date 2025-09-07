@@ -210,8 +210,8 @@
               </div>
             `;
           });
-        } catch (error) {
-          console.error('翻訳エラー:', error);
+        } finally {
+          // 翻訳処理完了（ローディング表示は changeLanguage 関数で制御）
         }
       } else {
         // 日本語の場合は翻訳不要
