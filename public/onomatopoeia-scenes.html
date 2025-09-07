@@ -104,39 +104,60 @@
 
                 // 言語切り替え
     async function changeLanguage(lang) {
-      if (currentLanguage === lang) return;
+      console.log('🔄 changeLanguage 開始:', lang);
+      if (currentLanguage === lang) {
+        console.log('⚠️ 同じ言語なので処理をスキップ');
+        return;
+      }
 
       currentLanguage = lang;
       localStorage.setItem('onomatopoeiaLanguage', lang);
       updateLanguageButtons();
 
       // ローディング表示を開始
+      console.log('📱 showLoading() 呼び出し');
       showLoading();
 
       try {
+        console.log('🔄 displayScenes() 呼び出し開始');
         // シーン一覧を再表示（翻訳付き）
         await displayScenes();
+        console.log('✅ displayScenes() 完了');
 
         // 最小表示時間を確保（ローディング表示を確実に見せるため）
+        console.log('⏱️ 800ms 待機開始');
         await new Promise(resolve => setTimeout(resolve, 800));
+        console.log('⏱️ 800ms 待機完了');
       } finally {
         // 必ずローディング表示を終了
+        console.log('📱 hideLoading() 呼び出し');
         hideLoading();
+        console.log('✅ changeLanguage 完了');
       }
     }
 
     // ローディング表示の制御
     function showLoading() {
+      console.log('📱 showLoading() 実行開始');
       const loadingIndicator = document.getElementById('loading-indicator');
+      console.log('📱 loadingIndicator 要素:', loadingIndicator);
       if (loadingIndicator) {
         loadingIndicator.style.display = 'block';
+        console.log('✅ ローディング表示を表示しました');
+      } else {
+        console.error('❌ loading-indicator 要素が見つかりません');
       }
     }
 
     function hideLoading() {
+      console.log('📱 hideLoading() 実行開始');
       const loadingIndicator = document.getElementById('loading-indicator');
+      console.log('📱 loadingIndicator 要素:', loadingIndicator);
       if (loadingIndicator) {
         loadingIndicator.style.display = 'none';
+        console.log('✅ ローディング表示を非表示にしました');
+      } else {
+        console.error('❌ loading-indicator 要素が見つかりません');
       }
     }
 
@@ -152,7 +173,12 @@
 
     // シーン一覧を表示
     async function displayScenes() {
+      console.log('🔄 displayScenes() 開始, 現在の言語:', currentLanguage);
       const scenesContainer = document.getElementById('scenes-grid');
+      if (!scenesContainer) {
+        console.error('❌ scenes-grid 要素が見つかりません');
+        return;
+      }
 
       // シーンをグループ化
       const sceneGroups = {};
@@ -165,9 +191,11 @@
 
       let html = '';
       const scenes = Object.keys(sceneGroups);
+      console.log('📊 シーン数:', scenes.length, 'シーン:', scenes);
 
       // 日本語以外の場合は翻訳を実行
       if (currentLanguage !== 'ja') {
+        console.log('🌐 翻訳処理開始, 言語:', currentLanguage);
         try {
           // キャッシュから翻訳結果を取得
           let translatedScenes = translationCache.get('scene_titles', currentLanguage);
