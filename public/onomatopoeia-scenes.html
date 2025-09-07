@@ -232,9 +232,15 @@
 
     // シーンを選択
     function selectScene(scene) {
-      // URLパラメータでシーン名と言語設定を渡す
-      const encodedScene = encodeURIComponent(scene);
-      window.location.href = `onomatopoeia-examples.html?scene=${encodedScene}&lang=${currentLanguage}`;
+      // ローディング表示を開始
+      showLoading();
+
+      // 少し待機してからページ遷移（ローディング表示を確実に見せるため）
+      setTimeout(() => {
+        // URLパラメータでシーン名と言語設定を渡す
+        const encodedScene = encodeURIComponent(scene);
+        window.location.href = `onomatopoeia-examples.html?scene=${encodedScene}&lang=${currentLanguage}`;
+      }, 300);
     }
   </script>
 </body>
