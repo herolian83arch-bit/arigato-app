@@ -163,42 +163,6 @@ body {
   border-color: var(--primary);
 }
 
-/* Scene Button */
-.scene-btn {
-  padding: 8px 16px;
-  border: 2px solid var(--border);
-  background: var(--bg);
-  color: var(--text);
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  margin: 4px;
-}
-
-.scene-btn:hover {
-  border-color: var(--primary);
-  color: var(--primary);
-}
-
-.scene-btn.active {
-  background: var(--primary);
-  color: white;
-  border-color: var(--primary);
-}
-
-/* Scene Switcher */
-#scene-switcher {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: var(--bg);
-  padding: 16px 0;
-  margin-bottom: 16px;
-  border-bottom: 1px solid var(--border);
-}
-
 /* Main Content */
 .main-content {
   background: var(--bg);
@@ -454,6 +418,49 @@ body {
     padding: 24px;
     margin: 16px;
   }
+
+  /* オノマトペ辞典のスマートフォン対応 */
+  .scene-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 16px 0;
+  }
+
+  .scene-card {
+    height: 120px;
+    padding: 16px;
+  }
+
+  .scene-icon {
+    font-size: 2em;
+    margin-bottom: 6px;
+  }
+
+  .scene-title {
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+
+  .scene-count {
+    font-size: 0.8rem;
+  }
+
+  .search-container {
+    flex-direction: column;
+    gap: 8px;
+    margin: 16px 0;
+  }
+
+  .search-input {
+    max-width: 100%;
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+
+  .search-clear {
+    font-size: 0.8rem;
+    padding: 10px 12px;
+  }
 }
 
 /* Utility Classes */
@@ -481,6 +488,12 @@ body {
   transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
+  /* カードの高さを統一 */
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .scene-card:hover {
@@ -491,19 +504,82 @@ body {
 
 .scene-icon {
   font-size: 2.5em;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .scene-title {
   font-size: 1.1em;
   font-weight: 600;
   color: var(--text);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  /* 長いタイトルの場合の処理 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 .scene-count {
   font-size: 0.9em;
   color: var(--text-muted);
+}
+
+/* 検索機能のスタイル */
+.search-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-input {
+  flex: 1;
+  max-width: 400px;
+  padding: 12px 16px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--bg-light);
+  color: var(--text);
+  transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-clear {
+  background: var(--bg-light);
+  border: 2px solid var(--border);
+  color: var(--text);
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.search-clear:hover {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: white;
+}
+
+.search-results-info {
+  text-align: center;
+  margin: 16px 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.scene-card.hidden {
+  display: none;
 }
 
 .back-btn {

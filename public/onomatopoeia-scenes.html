@@ -32,14 +32,25 @@
         <p id="scenes-intro-text">Please select the scene you want to learn</p>
       </div>
 
-      <!-- ローディング表示 -->
-      <div id="loading-indicator" class="loading-indicator" style="display: none;">
-        <div class="loading-spinner"></div>
-        <p>Loading...</p>
+      <!-- 検索機能 -->
+      <div class="search-container">
+        <input type="text" id="scene-search" class="search-input" placeholder="Search scenes..." />
+        <button id="search-clear" class="search-clear">Clear</button>
+      </div>
+
+      <!-- 検索結果情報 -->
+      <div id="search-results-info" class="search-results-info" style="display: none;">
+        <span id="search-results-count">0</span> scenes found
       </div>
 
       <div id="scenes-grid" class="scene-grid">
         <!-- シーンはJavaScriptで動的に生成 -->
+      </div>
+
+      <!-- ローディング表示 -->
+      <div id="loading-indicator" class="loading-indicator" style="display: none;">
+        <div class="loading-spinner"></div>
+        <p>翻訳中...</p>
       </div>
     </main>
   </div>
@@ -73,20 +84,13 @@
       currentLanguage = savedLanguage;
       updateLanguageButtons();
 
-      // 日本語以外の場合はローディング表示を開始
-      if (currentLanguage !== 'ja') {
-        showLoading();
-      }
-
       // オノマトペデータを読み込み
       await loadOnomatopoeiaData();
       // シーン一覧を表示
-      await displayScenes();
+      displayScenes();
 
-      // 日本語以外の場合はローディング表示を終了
-      if (currentLanguage !== 'ja') {
-        hideLoading();
-      }
+      // 検索機能の初期化
+      initializeSearch();
     });
 
     // オノマトペデータを読み込み
@@ -112,19 +116,16 @@
       }
     }
 
-    // 言語切り替え
+                // 言語切り替え
     async function changeLanguage(lang) {
       if (currentLanguage === lang) return;
+
       currentLanguage = lang;
       localStorage.setItem('onomatopoeiaLanguage', lang);
       updateLanguageButtons();
-      showLoading();
-      try {
-        await displayScenes();
-        await new Promise(resolve => setTimeout(resolve, 800));
-      } finally {
-        hideLoading();
-      }
+
+      // シーン一覧を再表示（翻訳付き）
+      await displayScenes();
     }
 
     // ローディング表示の制御
@@ -154,12 +155,7 @@
 
     // シーン一覧を表示
     async function displayScenes() {
-      console.log('🔄 displayScenes() 開始, 現在の言語:', currentLanguage);
       const scenesContainer = document.getElementById('scenes-grid');
-      if (!scenesContainer) {
-        console.error('❌ scenes-grid 要素が見つかりません');
-        return;
-      }
 
       // シーンをグループ化
       const sceneGroups = {};
@@ -172,12 +168,13 @@
 
       let html = '';
       const scenes = Object.keys(sceneGroups);
-      console.log('📊 シーン数:', scenes.length, 'シーン:', scenes);
 
       // 日本語以外の場合は翻訳を実行
       if (currentLanguage !== 'ja') {
-        console.log('🌐 翻訳処理開始, 言語:', currentLanguage);
         try {
+          // 翻訳処理中はローディングを表示
+          showLoading();
+
           // キャッシュから翻訳結果を取得
           let translatedScenes = translationCache.get('scene_titles', currentLanguage);
 
@@ -190,8 +187,6 @@
             translationCache.set('scene_titles', currentLanguage, translatedScenes);
           } else {
             console.log(`📦 シーンタイトルキャッシュヒット: ${currentLanguage}`);
-            // キャッシュヒット時も少し待機してローディング表示を維持
-            await new Promise(resolve => setTimeout(resolve, 500));
           }
 
           for (let i = 0; i < scenes.length; i++) {
@@ -203,6 +198,7 @@
               <div class="scene-card" onclick="selectScene('${originalScene}')">
                 <div class="scene-icon">📚</div>
                 <div class="scene-title">${translatedScene}</div>
+                <div class="scene-count">${count}例文</div>
               </div>
             `;
           }
@@ -216,11 +212,13 @@
               <div class="scene-card" onclick="selectScene('${scene}')">
                 <div class="scene-icon">📚</div>
                 <div class="scene-title">${scene}</div>
+                <div class="scene-count">${count}例文</div>
               </div>
             `;
           });
         } finally {
-          // 翻訳処理完了（ローディング表示は changeLanguage 関数で制御）
+          // 必ずローディング表示を終了
+          hideLoading();
         }
       } else {
         // 日本語の場合は翻訳不要
@@ -230,6 +228,7 @@
             <div class="scene-card" onclick="selectScene('${scene}')">
               <div class="scene-icon">📚</div>
               <div class="scene-title">${scene}</div>
+              <div class="scene-count">${count}例文</div>
             </div>
           `;
         });
@@ -240,15 +239,67 @@
 
     // シーンを選択
     function selectScene(scene) {
-      // ローディング表示を開始
-      showLoading();
+      // URLパラメータでシーン名と言語設定を渡す
+      const encodedScene = encodeURIComponent(scene);
+      window.location.href = `onomatopoeia-examples.html?scene=${encodedScene}&lang=${currentLanguage}`;
+    }
 
-      // 少し待機してからページ遷移（ローディング表示を確実に見せるため）
-      setTimeout(() => {
-        // URLパラメータでシーン名と言語設定を渡す
-        const encodedScene = encodeURIComponent(scene);
-        window.location.href = `onomatopoeia-examples.html?scene=${encodedScene}&lang=${currentLanguage}`;
-      }, 300);
+    // 検索機能の初期化
+    function initializeSearch() {
+      const searchInput = document.getElementById('scene-search');
+      const searchClear = document.getElementById('search-clear');
+      const searchResultsInfo = document.getElementById('search-results-info');
+      const searchResultsCount = document.getElementById('search-results-count');
+
+      // 検索入力イベント
+      searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase().trim();
+        filterScenes(searchTerm);
+      });
+
+      // クリアボタンイベント
+      searchClear.addEventListener('click', function() {
+        searchInput.value = '';
+        filterScenes('');
+        searchInput.focus();
+      });
+
+      // エンターキーでクリア
+      searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          this.value = '';
+          filterScenes('');
+        }
+      });
+    }
+
+    // シーンのフィルタリング
+    function filterScenes(searchTerm) {
+      const sceneCards = document.querySelectorAll('.scene-card');
+      const searchResultsInfo = document.getElementById('search-results-info');
+      const searchResultsCount = document.getElementById('search-results-count');
+
+      let visibleCount = 0;
+
+      sceneCards.forEach(card => {
+        const sceneTitle = card.querySelector('.scene-title').textContent.toLowerCase();
+        const isVisible = searchTerm === '' || sceneTitle.includes(searchTerm);
+
+        if (isVisible) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      // 検索結果情報の表示
+      if (searchTerm === '') {
+        searchResultsInfo.style.display = 'none';
+      } else {
+        searchResultsInfo.style.display = 'block';
+        searchResultsCount.textContent = visibleCount;
+      }
     }
   </script>
 </body>
