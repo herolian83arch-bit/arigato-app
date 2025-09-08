@@ -454,6 +454,40 @@ body {
     padding: 24px;
     margin: 16px;
   }
+
+  /* オノマトペ辞典のスマートフォン対応 */
+  .scene-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 16px 0;
+  }
+
+  .scene-card {
+    height: 120px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .scene-icon {
+    font-size: 2em;
+    margin-bottom: 6px;
+  }
+
+  .scene-title {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+
+  .scene-count {
+    font-size: 0.8rem;
+  }
 }
 
 /* Utility Classes */
