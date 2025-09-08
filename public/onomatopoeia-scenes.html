@@ -32,14 +32,14 @@
         <p id="scenes-intro-text">Please select the scene you want to learn</p>
       </div>
 
+      <div id="scenes-grid" class="scene-grid">
+        <!-- シーンはJavaScriptで動的に生成 -->
+      </div>
+
       <!-- ローディング表示 -->
       <div id="loading-indicator" class="loading-indicator" style="display: none;">
         <div class="loading-spinner"></div>
         <p>翻訳中...</p>
-      </div>
-
-      <div id="scenes-grid" class="scene-grid">
-        <!-- シーンはJavaScriptで動的に生成 -->
       </div>
     </main>
   </div>
@@ -73,10 +73,20 @@
       currentLanguage = savedLanguage;
       updateLanguageButtons();
 
+      // 日本語以外の場合はローディング表示を開始
+      if (currentLanguage !== 'ja') {
+        showLoading();
+      }
+
       // オノマトペデータを読み込み
       await loadOnomatopoeiaData();
       // シーン一覧を表示
-      displayScenes();
+      await displayScenes();
+
+      // 日本語以外の場合はローディング表示を終了
+      if (currentLanguage !== 'ja') {
+        hideLoading();
+      }
     });
 
     // オノマトペデータを読み込み
@@ -102,16 +112,19 @@
       }
     }
 
-                // 言語切り替え
+    // 言語切り替え
     async function changeLanguage(lang) {
       if (currentLanguage === lang) return;
-
       currentLanguage = lang;
       localStorage.setItem('onomatopoeiaLanguage', lang);
       updateLanguageButtons();
-
-      // シーン一覧を再表示（翻訳付き）
-      await displayScenes();
+      showLoading();
+      try {
+        await displayScenes();
+        await new Promise(resolve => setTimeout(resolve, 800));
+      } finally {
+        hideLoading();
+      }
     }
 
     // ローディング表示の制御
@@ -141,7 +154,12 @@
 
     // シーン一覧を表示
     async function displayScenes() {
+      console.log('🔄 displayScenes() 開始, 現在の言語:', currentLanguage);
       const scenesContainer = document.getElementById('scenes-grid');
+      if (!scenesContainer) {
+        console.error('❌ scenes-grid 要素が見つかりません');
+        return;
+      }
 
       // シーンをグループ化
       const sceneGroups = {};
@@ -154,13 +172,12 @@
 
       let html = '';
       const scenes = Object.keys(sceneGroups);
+      console.log('📊 シーン数:', scenes.length, 'シーン:', scenes);
 
       // 日本語以外の場合は翻訳を実行
       if (currentLanguage !== 'ja') {
+        console.log('🌐 翻訳処理開始, 言語:', currentLanguage);
         try {
-          // 翻訳処理中はローディングを表示
-          showLoading();
-
           // キャッシュから翻訳結果を取得
           let translatedScenes = translationCache.get('scene_titles', currentLanguage);
 
@@ -173,6 +190,8 @@
             translationCache.set('scene_titles', currentLanguage, translatedScenes);
           } else {
             console.log(`📦 シーンタイトルキャッシュヒット: ${currentLanguage}`);
+            // キャッシュヒット時も少し待機してローディング表示を維持
+            await new Promise(resolve => setTimeout(resolve, 500));
           }
 
           for (let i = 0; i < scenes.length; i++) {
@@ -201,8 +220,7 @@
             `;
           });
         } finally {
-          // 必ずローディング表示を終了
-          hideLoading();
+          // 翻訳処理完了（ローディング表示は changeLanguage 関数で制御）
         }
       } else {
         // 日本語の場合は翻訳不要
@@ -222,9 +240,15 @@
 
     // シーンを選択
     function selectScene(scene) {
-      // URLパラメータでシーン名と言語設定を渡す
-      const encodedScene = encodeURIComponent(scene);
-      window.location.href = `onomatopoeia-examples.html?scene=${encodedScene}&lang=${currentLanguage}`;
+      // ローディング表示を開始
+      showLoading();
+
+      // 少し待機してからページ遷移（ローディング表示を確実に見せるため）
+      setTimeout(() => {
+        // URLパラメータでシーン名と言語設定を渡す
+        const encodedScene = encodeURIComponent(scene);
+        window.location.href = `onomatopoeia-examples.html?scene=${encodedScene}&lang=${currentLanguage}`;
+      }, 300);
     }
   </script>
 </body>
