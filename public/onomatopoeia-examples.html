@@ -14,10 +14,16 @@
         <button class="back-btn" onclick="window.location.href='onomatopoeia-scenes.html'">← Back</button>
       </div>
     </header>
-    
+
     <main>
       <div id="examples-container">
         <!-- 例文はJavaScriptで動的に生成 -->
+      </div>
+
+      <!-- ローディング表示 -->
+      <div id="loading-indicator" class="loading-indicator" style="display: none;">
+        <div class="loading-spinner"></div>
+        <p>翻訳中...</p>
       </div>
     </main>
   </div>
@@ -28,7 +34,11 @@
   <script>
     let onomatopoeiaData = [];
     let currentScene = '';
-    
+    let currentLanguage = 'ja';
+    let translationAPI = null;
+    let batchTranslationManager = null;
+    let translationCache = null;
+
     // プレミアム状態の確認
     document.addEventListener('DOMContentLoaded', async function() {
       const isPremium = localStorage.getItem('premiumActive') === 'true';
@@ -37,13 +47,6 @@
         window.location.href = 'index.html';
         return;
       }
-<<<<<<< HEAD
-      
-      // URLパラメータからシーン名を取得
-      const urlParams = new URLSearchParams(window.location.search);
-      currentScene = urlParams.get('scene');
-      
-=======
 
       // 翻訳APIの初期化
       translationAPI = new TranslationAPI();
@@ -55,24 +58,13 @@
       currentScene = urlParams.get('scene');
       currentLanguage = urlParams.get('lang') || 'ja';
 
->>>>>>> hotfix/revert-examples-20250906-003154
       if (!currentScene) {
         // シーン名が指定されていない場合はシーン選択画面に戻る
         window.location.href = 'onomatopoeia-scenes.html';
         return;
       }
-      
+
       // シーンタイトルを更新
-<<<<<<< HEAD
-      document.getElementById('scene-title').textContent = currentScene;
-      
-      // オノマトペデータを読み込み
-      await loadOnomatopoeiaData();
-      // 例文を表示
-      displayExamples();
-    });
-    
-=======
       // シーンタイトルを翻訳して表示
       await updateSceneTitle(currentScene);
 
@@ -102,7 +94,6 @@
       }
     }
 
->>>>>>> hotfix/revert-examples-20250906-003154
     // オノマトペデータを読み込み
     async function loadOnomatopoeiaData() {
       try {
@@ -110,42 +101,33 @@
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}: ${response.statusText}`);
         }
-        
+
         const rawData = await response.json();
-        
+
         // romajiを大文字に変換
         onomatopoeiaData = rawData.map(item => ({
           ...item,
           romaji: item.romaji ? item.romaji.toUpperCase() : item.romaji
         }));
-        
+
         console.log(`📚 Loaded ${onomatopoeiaData.length} onomatopoeia entries`);
       } catch (error) {
         console.error('オノマトペデータの読み込みに失敗:', error);
         onomatopoeiaData = [];
       }
     }
-<<<<<<< HEAD
-    
-    // 例文を表示
-    function displayExamples() {
-=======
 
     // 例文を表示（翻訳機能付き）
     async function displayExamples() {
->>>>>>> hotfix/revert-examples-20250906-003154
       const examplesContainer = document.getElementById('examples-container');
-      
+
       // 現在のシーンの例文をフィルタリング
       const sceneItems = onomatopoeiaData.filter(item => item.scene === currentScene);
-      
+
       if (sceneItems.length === 0) {
         examplesContainer.innerHTML = '<p>このシーンの例文が見つかりませんでした。</p>';
         return;
       }
-<<<<<<< HEAD
-      
-=======
 
       // 日本語以外の場合は翻訳を実行
       if (currentLanguage !== 'ja') {
@@ -188,15 +170,11 @@
     function displayTranslatedExamples(items) {
       const examplesContainer = document.getElementById('examples-container');
 
->>>>>>> hotfix/revert-examples-20250906-003154
       let html = '';
-      for (const item of sceneItems) {
+      for (const item of items) {
         // 音声再生機能の有効/無効チェック
-        const isTTSEnabled = localStorage.getItem('feature_tts') === '1' || 
+        const isTTSEnabled = localStorage.getItem('feature_tts') === '1' ||
                              (typeof window !== 'undefined' && window.speechSynthesis);
-<<<<<<< HEAD
-        
-=======
 
         // 翻訳されたテキストを取得（翻訳がない場合は元のテキストを使用）
         const mainText = item.main || item.originalMain || '';
@@ -204,18 +182,13 @@
                                (item.description && item.description.ja) ||
                                item.originalDescription || '';
 
->>>>>>> hotfix/revert-examples-20250906-003154
         html += `
           <div class="onomatopoeia-item" data-testid="dict-row">
             <div class="item-header">
               <div class="item-number">${item.id}</div>
               <div class="item-actions" style="display:inline-flex;align-items:center;">
                 ${isTTSEnabled ? `
-<<<<<<< HEAD
-                  <button class="speak-btn" onclick="playAudio('${item.main.replace(/'/g, "\\'")}')" aria-label="音声再生" style="background:none;border:none;cursor:pointer;font-size:1.2em;margin-left:12px;" data-card-control="true">
-=======
                   <button class="speak-btn" onclick="playAudio('${(item.jpsen || '').replace(/'/g, "\\'")}')" aria-label="音声再生" style="background:none;border:none;cursor:pointer;font-size:1.2em;margin-left:12px;" data-card-control="true">
->>>>>>> hotfix/revert-examples-20250906-003154
                     🔊
                   </button>
                 ` : ''}
@@ -224,18 +197,15 @@
                 </button>
               </div>
             </div>
-            <div class="item-main">${item.main}</div>
+            <div class="item-main">${mainText}</div>
             <div class="item-romaji">${item.romaji}</div>
-            <div class="item-description">${item.description?.ja || ''}</div>
+            <div class="item-description">${descriptionText}</div>
           </div>
         `;
       }
-      
+
       examplesContainer.innerHTML = html;
     }
-<<<<<<< HEAD
-    
-=======
 
     // ローディング表示の制御
     function showLoading() {
@@ -252,7 +222,6 @@
       }
     }
 
->>>>>>> hotfix/revert-examples-20250906-003154
     // 音声再生
     function playAudio(text) {
       if ('speechSynthesis' in window) {
@@ -264,7 +233,7 @@
         speechSynthesis.speak(utterance);
       }
     }
-    
+
     // お気に入り状態の確認
     function isFavorite(id) {
       if (!id) return false;
@@ -275,20 +244,20 @@
         return false;
       }
     }
-    
+
     // お気に入りの切り替え
     function toggleFavorite(id, button) {
       if (!id) return false;
-      
+
       try {
         const favorites = JSON.parse(localStorage.getItem('arigato_favorites_v1') || '{}');
         const stringId = String(id);
         const currentState = favorites[stringId] || false;
         const newState = !currentState;
-        
+
         favorites[stringId] = newState;
         localStorage.setItem('arigato_favorites_v1', JSON.stringify(favorites));
-        
+
         // UI更新
         if (newState) {
           button.innerHTML = '★';
@@ -303,7 +272,7 @@
           button.setAttribute('aria-label', 'お気に入りに追加');
           button.setAttribute('aria-pressed', 'false');
         }
-        
+
         return newState;
       } catch (error) {
         console.warn('Failed to toggle favorite:', error);
