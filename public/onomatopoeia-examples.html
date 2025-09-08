@@ -11,7 +11,11 @@
     <header>
       <h1 id="scene-title">オノマトペ辞典</h1>
       <div class="back-navigation">
+<<<<<<< HEAD
         <button class="back-btn" onclick="window.location.href='onomatopoeia-scenes.html'">← シーン選択に戻る</button>
+=======
+        <button class="back-btn" onclick="window.location.href='onomatopoeia-scenes.html'">← Back</button>
+>>>>>>> hotfix/revert-examples-20250906-003154
       </div>
     </header>
     
@@ -21,7 +25,14 @@
       </div>
     </main>
   </div>
+<<<<<<< HEAD
   
+=======
+
+  <script src="translation-api.js"></script>
+  <script src="translation-batch.js"></script>
+  <script src="translation-cache.js"></script>
+>>>>>>> hotfix/revert-examples-20250906-003154
   <script>
     let onomatopoeiaData = [];
     let currentScene = '';
@@ -34,11 +45,25 @@
         window.location.href = 'index.html';
         return;
       }
+<<<<<<< HEAD
       
       // URLパラメータからシーン名を取得
       const urlParams = new URLSearchParams(window.location.search);
       currentScene = urlParams.get('scene');
       
+=======
+
+      // 翻訳APIの初期化
+      translationAPI = new TranslationAPI();
+      batchTranslationManager = window.batchTranslationManager;
+      translationCache = window.translationCache;
+
+      // URLパラメータからシーン名と言語を取得
+      const urlParams = new URLSearchParams(window.location.search);
+      currentScene = urlParams.get('scene');
+      currentLanguage = urlParams.get('lang') || 'ja';
+
+>>>>>>> hotfix/revert-examples-20250906-003154
       if (!currentScene) {
         // シーン名が指定されていない場合はシーン選択画面に戻る
         window.location.href = 'onomatopoeia-scenes.html';
@@ -46,6 +71,7 @@
       }
       
       // シーンタイトルを更新
+<<<<<<< HEAD
       document.getElementById('scene-title').textContent = currentScene;
       
       // オノマトペデータを読み込み
@@ -54,6 +80,37 @@
       displayExamples();
     });
     
+=======
+      // シーンタイトルを翻訳して表示
+      await updateSceneTitle(currentScene);
+
+      // オノマトペデータを読み込み
+      await loadOnomatopoeiaData();
+      // 例文を表示（翻訳付き）
+      await displayExamples();
+    });
+
+    // シーンタイトルを翻訳して表示
+    async function updateSceneTitle(scene) {
+      const titleElement = document.getElementById('scene-title');
+
+      if (currentLanguage !== 'ja') {
+        try {
+          // 翻訳APIでシーンタイトルを翻訳
+          const translatedTitle = await translationAPI.translateText(scene, currentLanguage);
+          titleElement.textContent = translatedTitle;
+        } catch (error) {
+          console.error('シーンタイトル翻訳エラー:', error);
+          // エラー時は元の日本語を表示
+          titleElement.textContent = scene;
+        }
+      } else {
+        // 日本語の場合は翻訳不要
+        titleElement.textContent = scene;
+      }
+    }
+
+>>>>>>> hotfix/revert-examples-20250906-003154
     // オノマトペデータを読み込み
     async function loadOnomatopoeiaData() {
       try {
@@ -76,9 +133,15 @@
         onomatopoeiaData = [];
       }
     }
+<<<<<<< HEAD
     
     // 例文を表示
     function displayExamples() {
+=======
+
+    // 例文を表示（翻訳機能付き）
+    async function displayExamples() {
+>>>>>>> hotfix/revert-examples-20250906-003154
       const examplesContainer = document.getElementById('examples-container');
       
       // 現在のシーンの例文をフィルタリング
@@ -88,20 +151,79 @@
         examplesContainer.innerHTML = '<p>このシーンの例文が見つかりませんでした。</p>';
         return;
       }
+<<<<<<< HEAD
       
+=======
+
+      // 日本語以外の場合は翻訳を実行
+      if (currentLanguage !== 'ja') {
+        try {
+          // 翻訳処理中はローディングを表示
+          showLoading();
+
+          // キャッシュから翻訳結果を取得
+          let translatedItems = translationCache.get(currentScene, currentLanguage);
+
+          if (!translatedItems) {
+            // キャッシュにない場合は翻訳を実行
+            console.log(`🚀 例文翻訳開始: ${currentScene} (${currentLanguage})`);
+            translatedItems = await batchTranslationManager.translateSceneBatch(sceneItems, currentLanguage, currentScene);
+
+            // 翻訳結果をキャッシュに保存
+            translationCache.set(currentScene, currentLanguage, translatedItems);
+          } else {
+            console.log(`📦 例文翻訳キャッシュヒット: ${currentScene} (${currentLanguage})`);
+          }
+
+          // 翻訳された例文を表示
+          displayTranslatedExamples(translatedItems);
+
+        } catch (error) {
+          console.error('例文翻訳エラー:', error);
+          // エラー時は元の日本語で表示
+          displayTranslatedExamples(sceneItems);
+        } finally {
+          // 必ずローディング表示を終了
+          hideLoading();
+        }
+      } else {
+        // 日本語の場合は翻訳不要
+        displayTranslatedExamples(sceneItems);
+      }
+    }
+
+    // 例文を表示（翻訳済みデータ用）
+    function displayTranslatedExamples(items) {
+      const examplesContainer = document.getElementById('examples-container');
+
+>>>>>>> hotfix/revert-examples-20250906-003154
       let html = '';
       for (const item of sceneItems) {
         // 音声再生機能の有効/無効チェック
         const isTTSEnabled = localStorage.getItem('feature_tts') === '1' || 
                              (typeof window !== 'undefined' && window.speechSynthesis);
+<<<<<<< HEAD
         
+=======
+
+        // 翻訳されたテキストを取得（翻訳がない場合は元のテキストを使用）
+        const mainText = item.main || item.originalMain || '';
+        const descriptionText = (item.description && item.description[currentLanguage]) ||
+                               (item.description && item.description.ja) ||
+                               item.originalDescription || '';
+
+>>>>>>> hotfix/revert-examples-20250906-003154
         html += `
           <div class="onomatopoeia-item" data-testid="dict-row">
             <div class="item-header">
               <div class="item-number">${item.id}</div>
               <div class="item-actions" style="display:inline-flex;align-items:center;">
                 ${isTTSEnabled ? `
+<<<<<<< HEAD
                   <button class="speak-btn" onclick="playAudio('${item.main.replace(/'/g, "\\'")}')" aria-label="音声再生" style="background:none;border:none;cursor:pointer;font-size:1.2em;margin-left:12px;" data-card-control="true">
+=======
+                  <button class="speak-btn" onclick="playAudio('${(item.jpsen || '').replace(/'/g, "\\'")}')" aria-label="音声再生" style="background:none;border:none;cursor:pointer;font-size:1.2em;margin-left:12px;" data-card-control="true">
+>>>>>>> hotfix/revert-examples-20250906-003154
                     🔊
                   </button>
                 ` : ''}
@@ -119,7 +241,26 @@
       
       examplesContainer.innerHTML = html;
     }
+<<<<<<< HEAD
     
+=======
+
+    // ローディング表示の制御
+    function showLoading() {
+      const loadingIndicator = document.getElementById('loading-indicator');
+      if (loadingIndicator) {
+        loadingIndicator.style.display = 'block';
+      }
+    }
+
+    function hideLoading() {
+      const loadingIndicator = document.getElementById('loading-indicator');
+      if (loadingIndicator) {
+        loadingIndicator.style.display = 'none';
+      }
+    }
+
+>>>>>>> hotfix/revert-examples-20250906-003154
     // 音声再生
     function playAudio(text) {
       if ('speechSynthesis' in window) {
