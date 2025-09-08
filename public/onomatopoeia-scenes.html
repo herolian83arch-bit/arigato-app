@@ -19,7 +19,7 @@
         <button class="lang-btn active" data-lang="ja" onclick="changeLanguage('ja')">日本語</button>
         <button class="lang-btn" data-lang="en" onclick="changeLanguage('en')">English</button>
         <button class="lang-btn" data-lang="zh" onclick="changeLanguage('zh')">中文</button>
-        <button class="lang-btn" data-lang="ko" onclick="console.log('🔴 韓国語ボタンクリック'); changeLanguage('ko')">한국어</button>
+        <button class="lang-btn" data-lang="ko" onclick="console.log('🔴 韓国語ボタンクリック'); console.log('🔴 changeLanguage関数の存在確認:', typeof changeLanguage); changeLanguage('ko'); console.log('🔴 changeLanguage呼び出し後');">한국어</button>
         <button class="lang-btn" data-lang="de" onclick="changeLanguage('de')">Deutsch</button>
         <button class="lang-btn" data-lang="fr" onclick="changeLanguage('fr')">Français</button>
         <button class="lang-btn" data-lang="it" onclick="changeLanguage('it')">Italiano</button>
@@ -73,10 +73,22 @@
       currentLanguage = savedLanguage;
       updateLanguageButtons();
 
+      // 日本語以外の場合はローディング表示を開始
+      if (currentLanguage !== 'ja') {
+        console.log('🔄 初期読み込み時のローディング表示開始');
+        showLoading();
+      }
+
       // オノマトペデータを読み込み
       await loadOnomatopoeiaData();
       // シーン一覧を表示
-      displayScenes();
+      await displayScenes();
+
+      // 日本語以外の場合はローディング表示を終了
+      if (currentLanguage !== 'ja') {
+        console.log('🔄 初期読み込み時のローディング表示終了');
+        hideLoading();
+      }
     });
 
     // オノマトペデータを読み込み
