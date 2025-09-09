@@ -455,37 +455,35 @@ body {
     margin: 16px;
   }
 
-  /* オノマトペ辞典のスマートフォン対応 */
-  .scene-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin: 16px 0;
-  }
-
+  /* オノマトペ辞典のスマートフォン用1行ボタンレイアウト */
   .scene-card {
-    height: 120px;
-    padding: 16px;
-    flex-direction: column;
-    justify-content: center;
+    display: flex;
     align-items: center;
+    padding: 12px 16px;
+    text-align: left;
+    height: 48px; /* iPhone SEで8行表示用 */
   }
-
+  
   .scene-icon {
-    font-size: 2em;
-    margin-bottom: 6px;
+    font-size: 1.5em;
+    margin-right: 12px;
+    margin-bottom: 0;
+    flex-shrink: 0;
   }
-
+  
   .scene-title {
-    font-size: 0.9rem;
-    margin-bottom: 4px;
+    flex: 1;
+    font-size: 0.9rem; /* iPhone SEで8行表示用 */
+    margin-bottom: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: 100%;
   }
-
+  
   .scene-count {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    margin-left: 8px;
+    flex-shrink: 0;
   }
 }
 
