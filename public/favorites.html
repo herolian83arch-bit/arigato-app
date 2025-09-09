@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Favorites | Arigato App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>My Favorites</h1>
+      <div class="back-navigation">
+        <button class="back-btn" onclick="window.location.href='premium-features.html'">← Back</button>
+      </div>
+    </header>
+    
+    <main>
+      <div id="favorites-container">
+        <p>お気に入り一覧がここに表示されます</p>
+      </div>
+    </main>
+  </div>
+  
+  <script>
+    // プレミアム状態の確認
+    document.addEventListener('DOMContentLoaded', function() {
+      const isPremium = localStorage.getItem('premiumActive') === 'true';
+      if (!isPremium) {
+        // プレミアムユーザーでない場合はトップページにリダイレクト
+        window.location.href = 'index.html';
+      }
+    });
+  </script>
+</body>
+</html>
