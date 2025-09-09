@@ -54,6 +54,54 @@
     let batchTranslationManager = null;
     let translationCache = null;
 
+    // シーン名とアイコンのマッピング関数
+    function getSceneIcon(sceneName) {
+      const iconMap = {
+        'お店・ショッピングモール': '🏬',
+        'お祭り・イベント': '🎪',
+        'アート・クリエイティブ': '🎨',
+        'ショッピング': '🛍️',
+        'スイーツ・カフェ': '☕',
+        'チェックイン・チェックアウト': '🏨',
+        'ビジネス・仕事の場': '💼',
+        'ホテル・宿泊': '🛏️',
+        'ホテル・宿泊先': '🏨',
+        'リラックス・温泉・癒し': '🛁',
+        'レストラン・食事の場': '🍽️',
+        '交通・駅': '🚉',
+        '人とのふれあい': '👥',
+        '会話・やりとり': '💬',
+        '伝統文化・歴史スポット': '🏛️',
+        '写真・SNS投稿': '📸',
+        '出発・到着': '✈️',
+        '動物ペット': '🐕',
+        '和食・伝統料理': '🍱',
+        '夜の時間・ロマンチックな雰囲気': '🌙',
+        '天気・自然現象': '⛈️',
+        '子ども・遊び': '🧸',
+        '学び・体験・ワークショップ': '🎓',
+        '学び・授業・体験': '📚',
+        '学校・学生生活': '🏫',
+        '家の中／部屋の中パート2': '🏠',
+        '家族・親しき人との時間': '👨‍👩‍👧‍👦',
+        '心の余韻': '💭',
+        '恋愛': '💕',
+        '感情表現': '😊',
+        '感情表現パート2': '😢',
+        '旅行・観光': '🗺️',
+        '清潔・衛生・身だしなみ': '🧴',
+        '病院・体の状態': '🏥',
+        '祝い・パーティ': '🎉',
+        '空港・飛行機': '✈️',
+        '自然・風景': '🌿',
+        '読書・知的な時間': '📖',
+        '贈り物・サプライズ': '🎁',
+        '部屋の中': '🏠',
+        '音楽・カラオケ': '🎤'
+      };
+      return iconMap[sceneName] || '📚'; // デフォルトは本のアイコン
+    }
+
     // プレミアム状態の確認
     document.addEventListener('DOMContentLoaded', async function() {
       const isPremium = localStorage.getItem('premiumActive') === 'true';
@@ -201,7 +249,7 @@
 
             html += `
               <div class="scene-card" onclick="selectScene('${originalScene}')">
-                <div class="scene-icon">📚</div>
+                <div class="scene-icon">${getSceneIcon(originalScene)}</div>
                 <div class="scene-title">${translatedScene}</div>
               </div>
             `;
@@ -214,7 +262,7 @@
             const count = sceneGroups[scene].length;
             html += `
               <div class="scene-card" onclick="selectScene('${scene}')">
-                <div class="scene-icon">📚</div>
+                <div class="scene-icon">${getSceneIcon(scene)}</div>
                 <div class="scene-title">${scene}</div>
               </div>
             `;
@@ -228,7 +276,7 @@
           const count = sceneGroups[scene].length;
           html += `
             <div class="scene-card" onclick="selectScene('${scene}')">
-              <div class="scene-icon">📚</div>
+              <div class="scene-icon">${getSceneIcon(scene)}</div>
               <div class="scene-title">${scene}</div>
             </div>
           `;
