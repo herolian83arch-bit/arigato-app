@@ -65,8 +65,8 @@
         // お気に入りの例文を抽出
         const favoriteItems = onomatopoeiaData.filter(item => favorites[String(item.id)] === true);
 
-        // お気に入り一覧を表示（翻訳機能付き）
-        displayFavoritesWithTranslation(favoriteItems);
+        // お気に入り一覧を表示
+        displayFavorites(favoriteItems);
 
       } catch (error) {
         console.error('お気に入り読み込みエラー:', error);
@@ -74,8 +74,8 @@
       }
     }
 
-    // 翻訳機能付きのお気に入り表示
-    async function displayFavoritesWithTranslation(items) {
+    // お気に入り一覧を表示（翻訳機能付き）
+    async function displayFavorites(items) {
       const container = document.getElementById('favorites-container');
       
       if (items.length === 0) {
@@ -86,9 +86,8 @@
       let html = `<p>お気に入り: ${items.length}件</p>`;
       
       // 日本語以外の場合は翻訳を実行
-      if (currentLanguage !== 'ja') {
+      if (currentLanguage !== 'ja' && translationAPI) {
         try {
-          // 翻訳処理の実装
           for (const item of items) {
             const translatedMain = await translationAPI.translateText(item.main, currentLanguage);
             const translatedDescription = await translationAPI.translateText(item.description.ja, currentLanguage);
@@ -113,27 +112,19 @@
         } catch (error) {
           console.error('翻訳エラー:', error);
           // エラー時は元の日本語で表示
-          displayFavorites(items);
+          displayFavoritesOriginal(items, html);
+          return;
         }
       } else {
         // 日本語の場合は翻訳不要
-        displayFavorites(items);
+        displayFavoritesOriginal(items, html);
       }
       
       container.innerHTML = html;
     }
 
-    // お気に入り一覧を表示（日本語用）
-    function displayFavorites(items) {
-      const container = document.getElementById('favorites-container');
-      
-      if (items.length === 0) {
-        container.innerHTML = '<p>お気に入りがありません</p>';
-        return;
-      }
-      
-      let html = `<p>お気に入り: ${items.length}件</p>`;
-      
+    // 元の表示関数（日本語用）
+    function displayFavoritesOriginal(items, html) {
       items.forEach(item => {
         html += `
           <div class="onomatopoeia-item">
@@ -153,7 +144,7 @@
         `;
       });
       
-      container.innerHTML = html;
+      document.getElementById('favorites-container').innerHTML = html;
     }
 
     // 音声再生機能（オノマトペ辞典から移植）
