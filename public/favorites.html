@@ -29,8 +29,88 @@
       if (!isPremium) {
         // プレミアムユーザーでない場合はトップページにリダイレクト
         window.location.href = 'index.html';
+      } else {
+        // プレミアムユーザーの場合はお気に入り一覧を読み込み
+        loadFavorites();
       }
     });
+
+    // お気に入り一覧表示機能
+    async function loadFavorites() {
+      try {
+        // localStorageからお気に入りを取得
+        const favorites = JSON.parse(localStorage.getItem('arigato_favorites_v1') || '{}');
+        
+        // オノマトペデータを読み込み
+        const response = await fetch('/data/dictionary.json');
+        const onomatopoeiaData = await response.json();
+        
+        // お気に入りの例文を抽出
+        const favoriteItems = onomatopoeiaData.filter(item => favorites[String(item.id)] === true);
+        
+        // お気に入り一覧を表示
+        displayFavorites(favoriteItems);
+        
+      } catch (error) {
+        console.error('お気に入り読み込みエラー:', error);
+        document.getElementById('favorites-container').innerHTML = '<p>お気に入りの読み込みに失敗しました</p>';
+      }
+    }
+
+    // お気に入り一覧を表示
+    function displayFavorites(items) {
+      const container = document.getElementById('favorites-container');
+      
+      if (items.length === 0) {
+        container.innerHTML = '<p>お気に入りがありません</p>';
+        return;
+      }
+      
+      let html = `<p>お気に入り: ${items.length}件</p>`;
+      
+      items.forEach(item => {
+        html += `
+          <div class="onomatopoeia-item">
+            <div class="item-header">
+              <div class="item-number">${item.id}</div>
+              <div class="item-actions">
+                <button class="speak-btn" onclick="playOnomatopoeiaFromDictionary(${item.id})">🔊</button>
+                <button class="favorite-toggle-btn" onclick="toggleFavorite(${item.id}, this)">⭐</button>
+              </div>
+            </div>
+            <div class="item-content">
+              <div class="main-text">${item.main}</div>
+              <div class="romaji-text">${item.romaji}</div>
+              <div class="description-text">${item.description.ja}</div>
+            </div>
+          </div>
+        `;
+      });
+      
+      container.innerHTML = html;
+    }
+
+    // 音声再生機能（オノマトペ辞典から移植）
+    function playOnomatopoeiaFromDictionary(id) {
+      // オノマトペ辞典の音声再生機能を呼び出し
+      if (window.playOnomatopoeia) {
+        window.playOnomatopoeia(id);
+      } else {
+        console.log('音声再生機能が見つかりません');
+      }
+    }
+
+    // お気に入り切り替え機能（オノマトペ辞典から移植）
+    function toggleFavorite(id, button) {
+      // オノマトペ辞典のお気に入り切り替え機能を呼び出し
+      if (window.toggleFavorite) {
+        window.toggleFavorite(id, button);
+        // お気に入り一覧を再読み込み
+        loadFavorites();
+      } else {
+        console.log('お気に入り切り替え機能が見つかりません');
+      }
+    }
   </script>
 </body>
 </html>
