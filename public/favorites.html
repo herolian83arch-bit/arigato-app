@@ -65,8 +65,8 @@
         // お気に入りの例文を抽出
         const favoriteItems = onomatopoeiaData.filter(item => favorites[String(item.id)] === true);
 
-        // お気に入り一覧を表示
-        displayFavorites(favoriteItems);
+        // お気に入り一覧を表示（翻訳機能付き）
+        await displayFavoritesWithTranslation(favoriteItems);
 
       } catch (error) {
         console.error('お気に入り読み込みエラー:', error);
@@ -74,8 +74,8 @@
       }
     }
 
-    // お気に入り一覧を表示（翻訳機能付き）
-    async function displayFavorites(items) {
+    // 翻訳機能付きのお気に入り表示
+    async function displayFavoritesWithTranslation(items) {
       const container = document.getElementById('favorites-container');
       
       if (items.length === 0) {
@@ -112,19 +112,29 @@
         } catch (error) {
           console.error('翻訳エラー:', error);
           // エラー時は元の日本語で表示
-          displayFavoritesOriginal(items, html);
+          displayFavorites(items);
           return;
         }
       } else {
         // 日本語の場合は翻訳不要
-        displayFavoritesOriginal(items, html);
+        displayFavorites(items);
+        return;
       }
       
       container.innerHTML = html;
     }
 
-    // 元の表示関数（日本語用）
-    function displayFavoritesOriginal(items, html) {
+    // お気に入り一覧を表示（日本語用）
+    function displayFavorites(items) {
+      const container = document.getElementById('favorites-container');
+
+      if (items.length === 0) {
+        container.innerHTML = '<p>お気に入りがありません</p>';
+        return;
+      }
+
+      let html = `<p>お気に入り: ${items.length}件</p>`;
+
       items.forEach(item => {
         html += `
           <div class="onomatopoeia-item">
@@ -143,8 +153,8 @@
           </div>
         `;
       });
-      
-      document.getElementById('favorites-container').innerHTML = html;
+
+      container.innerHTML = html;
     }
 
     // 音声再生機能（オノマトペ辞典から移植）
