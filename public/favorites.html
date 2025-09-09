@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Favorites | Arigato App</title>
   <link rel="stylesheet" href="style.css">
+  <script src="translation-api.js"></script>
+  <script src="translation-batch.js"></script>
+  <script src="translation-cache.js"></script>
 </head>
 <body>
   <div class="container">
@@ -14,14 +17,14 @@
         <button class="back-btn" onclick="window.location.href='premium-features.html'">← Back</button>
       </div>
     </header>
-    
+
     <main>
       <div id="favorites-container">
         <p>お気に入り一覧がここに表示されます</p>
       </div>
     </main>
   </div>
-  
+
   <script>
     // プレミアム状態の確認
     document.addEventListener('DOMContentLoaded', function() {
@@ -40,17 +43,17 @@
       try {
         // localStorageからお気に入りを取得
         const favorites = JSON.parse(localStorage.getItem('arigato_favorites_v1') || '{}');
-        
+
         // オノマトペデータを読み込み
         const response = await fetch('/data/dictionary.json');
         const onomatopoeiaData = await response.json();
-        
+
         // お気に入りの例文を抽出
         const favoriteItems = onomatopoeiaData.filter(item => favorites[String(item.id)] === true);
-        
+
         // お気に入り一覧を表示
         displayFavorites(favoriteItems);
-        
+
       } catch (error) {
         console.error('お気に入り読み込みエラー:', error);
         document.getElementById('favorites-container').innerHTML = '<p>お気に入りの読み込みに失敗しました</p>';
@@ -60,14 +63,14 @@
     // お気に入り一覧を表示
     function displayFavorites(items) {
       const container = document.getElementById('favorites-container');
-      
+
       if (items.length === 0) {
         container.innerHTML = '<p>お気に入りがありません</p>';
         return;
       }
-      
+
       let html = `<p>お気に入り: ${items.length}件</p>`;
-      
+
       items.forEach(item => {
         html += `
           <div class="onomatopoeia-item">
@@ -86,7 +89,7 @@
           </div>
         `;
       });
-      
+
       container.innerHTML = html;
     }
 
