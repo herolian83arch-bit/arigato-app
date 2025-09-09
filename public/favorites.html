@@ -46,6 +46,7 @@
 
         // 現在の言語設定を取得
         currentLanguage = localStorage.getItem('selectedLanguage') || 'ja';
+        console.log('現在の言語設定:', currentLanguage);
 
         // プレミアムユーザーの場合はお気に入り一覧を読み込み
         loadFavorites();
@@ -77,21 +78,22 @@
     // 翻訳機能付きのお気に入り表示
     async function displayFavoritesWithTranslation(items) {
       const container = document.getElementById('favorites-container');
-      
+
       if (items.length === 0) {
         container.innerHTML = '<p>お気に入りがありません</p>';
         return;
       }
-      
+
       let html = `<p>お気に入り: ${items.length}件</p>`;
-      
+
       // 日本語以外の場合は翻訳を実行
+      console.log('翻訳チェック - 言語:', currentLanguage, 'API:', !!translationAPI);
       if (currentLanguage !== 'ja' && translationAPI) {
         try {
           for (const item of items) {
             const translatedMain = await translationAPI.translateText(item.main, currentLanguage);
             const translatedDescription = await translationAPI.translateText(item.description.ja, currentLanguage);
-            
+
             html += `
               <div class="onomatopoeia-item">
                 <div class="item-header">
@@ -120,7 +122,7 @@
         displayFavorites(items);
         return;
       }
-      
+
       container.innerHTML = html;
     }
 
@@ -157,25 +159,64 @@
       container.innerHTML = html;
     }
 
-    // 音声再生機能（オノマトペ辞典から移植）
+    // 音声再生機能
     function playOnomatopoeiaFromDictionary(id) {
-      // オノマトペ辞典の音声再生機能を呼び出し
-      if (window.playOnomatopoeia) {
-        window.playOnomatopoeia(id);
-      } else {
-        console.log('音声再生機能が見つかりません');
+      if (!id) return;
+      
+      // オノマトペデータから該当するアイテムを検索
+      const item = onomatopoeiaData.find(item => item.id === id);
+      if (item) {
+        playAudio(item.main);
+      }
+    }
+
+    // 音声再生（オノマトペ辞典から移植）
+    function playAudio(text) {
+      if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'ja-JP';
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+        utterance.volume = 0.9;
+        speechSynthesis.speak(utterance);
       }
     }
 
     // お気に入り切り替え機能（オノマトペ辞典から移植）
     function toggleFavorite(id, button) {
-      // オノマトペ辞典のお気に入り切り替え機能を呼び出し
-      if (window.toggleFavorite) {
-        window.toggleFavorite(id, button);
+      if (!id) return false;
+
+      try {
+        const favorites = JSON.parse(localStorage.getItem('arigato_favorites_v1') || '{}');
+        const stringId = String(id);
+        const currentState = favorites[stringId] || false;
+        const newState = !currentState;
+
+        favorites[stringId] = newState;
+        localStorage.setItem('arigato_favorites_v1', JSON.stringify(favorites));
+
+        // UI更新
+        if (newState) {
+          button.innerHTML = '★';
+          button.style.color = '#ffd700';
+          button.style.transform = 'scale(1.1)';
+          button.setAttribute('aria-label', 'お気に入りから削除');
+          button.setAttribute('aria-pressed', 'true');
+        } else {
+          button.innerHTML = '☆';
+          button.style.color = '#bbb';
+          button.style.transform = 'scale(1)';
+          button.setAttribute('aria-label', 'お気に入りに追加');
+          button.setAttribute('aria-pressed', 'false');
+        }
+
         // お気に入り一覧を再読み込み
         loadFavorites();
-      } else {
-        console.log('お気に入り切り替え機能が見つかりません');
+
+        return newState;
+      } catch (error) {
+        console.error('お気に入り切り替えエラー:', error);
+        return false;
       }
     }
   </script>
