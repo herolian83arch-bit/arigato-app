@@ -26,6 +26,12 @@
   </div>
 
   <script>
+    // 翻訳API変数の初期化
+    let translationAPI = null;
+    let batchTranslationManager = null;
+    let translationCache = null;
+    let currentLanguage = 'ja';
+
     // プレミアム状態の確認
     document.addEventListener('DOMContentLoaded', function() {
       const isPremium = localStorage.getItem('premiumActive') === 'true';
@@ -33,6 +39,14 @@
         // プレミアムユーザーでない場合はトップページにリダイレクト
         window.location.href = 'index.html';
       } else {
+        // 翻訳APIの初期化
+        translationAPI = new TranslationAPI();
+        batchTranslationManager = window.batchTranslationManager;
+        translationCache = window.translationCache;
+        
+        // 現在の言語設定を取得
+        currentLanguage = localStorage.getItem('selectedLanguage') || 'ja';
+        
         // プレミアムユーザーの場合はお気に入り一覧を読み込み
         loadFavorites();
       }
