@@ -31,6 +31,9 @@
     let batchTranslationManager = null;
     let translationCache = null;
     let currentLanguage = 'ja';
+    
+    // オノマトペデータ（グローバル変数）
+    let onomatopoeiaData = [];
 
     // プレミアム状態の確認
     document.addEventListener('DOMContentLoaded', function() {
@@ -59,9 +62,9 @@
         // localStorageからお気に入りを取得
         const favorites = JSON.parse(localStorage.getItem('arigato_favorites_v1') || '{}');
 
-        // オノマトペデータを読み込み
+        // オノマトペデータを読み込み（グローバル変数に代入）
         const response = await fetch('/data/dictionary.json');
-        const onomatopoeiaData = await response.json();
+        onomatopoeiaData = await response.json();
 
         // お気に入りの例文を抽出
         const favoriteItems = onomatopoeiaData.filter(item => favorites[String(item.id)] === true);
@@ -163,10 +166,12 @@
     function playOnomatopoeiaFromDictionary(id) {
       if (!id) return;
       
-      // オノマトペデータから該当するアイテムを検索
+      // グローバル変数のオノマトペデータから該当するアイテムを検索
       const item = onomatopoeiaData.find(item => item.id === id);
       if (item) {
         playAudio(item.main);
+      } else {
+        console.log('音声再生対象のアイテムが見つかりません:', id);
       }
     }
 
