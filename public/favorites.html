@@ -48,9 +48,9 @@
         translationCache = window.translationCache;
 
         // 現在の言語設定を取得（複数キーをチェック）
-        currentLanguage = localStorage.getItem('selectedLanguage') || 
-                         localStorage.getItem('language') || 
-                         localStorage.getItem('currentLanguage') || 
+        currentLanguage = localStorage.getItem('selectedLanguage') ||
+                         localStorage.getItem('language') ||
+                         localStorage.getItem('currentLanguage') ||
                          'ja';
         console.log('現在の言語設定:', currentLanguage);
 
@@ -81,9 +81,9 @@
             itemLanguage = favoriteData.language;
           } else if (favoriteData === true) {
             // 既存データ（true形式）の場合は現在の言語設定を使用
-            itemLanguage = localStorage.getItem('selectedLanguage') || 
-                          localStorage.getItem('language') || 
-                          localStorage.getItem('currentLanguage') || 
+            itemLanguage = localStorage.getItem('selectedLanguage') ||
+                          localStorage.getItem('language') ||
+                          localStorage.getItem('currentLanguage') ||
                           'ja';
           }
           return {
@@ -246,7 +246,7 @@
       try {
         const favorites = JSON.parse(localStorage.getItem('arigato_favorites_v1') || '{}');
         const stringId = String(id);
-        
+
         // 既存データの互換性処理
         const favoriteData = favorites[stringId];
         const currentState = favoriteData === true || (favoriteData && favoriteData.isFavorite === true);
@@ -254,17 +254,15 @@
 
         // お気に入り登録時は現在の言語設定を保存
         if (newState) {
-          // 複数の言語設定キーを確認（より確実な取得）
-          const currentLang = localStorage.getItem('selectedLanguage') || 
-                             localStorage.getItem('language') || 
-                             localStorage.getItem('currentLanguage') || 
+          // 複数の言語設定キーを確認
+          const currentLang = localStorage.getItem('selectedLanguage') ||
+                             localStorage.getItem('language') ||
                              'ja';
           favorites[stringId] = {
             isFavorite: true,
             language: currentLang,
             timestamp: Date.now()
           };
-          console.log(`お気に入り登録: ID=${id}, 言語=${currentLang}`);
         } else {
           // お気に入り解除時は削除
           delete favorites[stringId];

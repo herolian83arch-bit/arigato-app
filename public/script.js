@@ -673,7 +673,7 @@ function toggleFavorite(id) {
 
   const favorites = getFavorites();
   const stringId = String(id);
-  
+
   // 既存データの互換性処理
   const favoriteData = favorites[stringId];
   const currentState = favoriteData === true || (favoriteData && favoriteData.isFavorite === true);
@@ -681,17 +681,17 @@ function toggleFavorite(id) {
 
   if (newState) {
     // お気に入り登録時は現在の言語設定を保存
-    const currentLang = localStorage.getItem('selectedLanguage') || 
-                       localStorage.getItem('language') || 
-                       localStorage.getItem('currentLanguage') || 
+    const currentLang = localStorage.getItem('selectedLanguage') ||
+                       localStorage.getItem('language') ||
+                       localStorage.getItem('currentLanguage') ||
                        'ja';
-    
+
     favorites[stringId] = {
       isFavorite: true,
       language: currentLang,
       timestamp: Date.now()
     };
-    
+
     console.log(`お気に入り登録: ID=${id}, 言語=${currentLang}`);
   } else {
     // お気に入り解除時は削除
