@@ -66,8 +66,17 @@
         const response = await fetch('/data/dictionary.json');
         onomatopoeiaData = await response.json();
 
-        // お気に入りの例文を抽出
-        const favoriteItems = onomatopoeiaData.filter(item => favorites[String(item.id)] === true);
+        // お気に入りの例文を抽出（言語情報付き）
+        const favoriteItems = onomatopoeiaData.filter(item => {
+          const favoriteData = favorites[String(item.id)];
+          return favoriteData && (favoriteData === true || favoriteData.isFavorite === true);
+        }).map(item => {
+          const favoriteData = favorites[String(item.id)];
+          return {
+            ...item,
+            favoriteLanguage: favoriteData && favoriteData.language ? favoriteData.language : 'ja'
+          };
+        });
 
         // お気に入り一覧を表示（翻訳機能付き）
         await displayFavoritesWithTranslation(favoriteItems);
@@ -89,30 +98,53 @@
 
       let html = `<p>お気に入り: ${items.length}件</p>`;
 
-      // 日本語以外の場合は翻訳を実行
-      console.log('翻訳チェック - 言語:', currentLanguage, 'API:', !!translationAPI);
-      if (currentLanguage !== 'ja' && translationAPI) {
+      // 各アイテムの保存された言語で翻訳を実行
+      console.log('翻訳チェック - アイテム数:', items.length, 'API:', !!translationAPI);
+      if (translationAPI) {
         try {
           for (const item of items) {
-            const translatedMain = await translationAPI.translateText(item.main, currentLanguage);
-            const translatedDescription = await translationAPI.translateText(item.description.ja, currentLanguage);
+            const itemLanguage = item.favoriteLanguage || 'ja';
+            console.log(`アイテム ${item.id} の言語:`, itemLanguage);
+            
+            if (itemLanguage !== 'ja') {
+              const translatedMain = await translationAPI.translateText(item.main, itemLanguage);
+              const translatedDescription = await translationAPI.translateText(item.description.ja, itemLanguage);
 
-            html += `
-              <div class="onomatopoeia-item">
-                <div class="item-header">
-                  <div class="item-number">${item.id}</div>
-                  <div class="item-actions">
-                    <button class="speak-btn" onclick="playOnomatopoeiaFromDictionary(${item.id})">🔊</button>
-                    <button class="favorite-toggle-btn" onclick="toggleFavorite(${item.id}, this)">⭐</button>
+              html += `
+                <div class="onomatopoeia-item">
+                  <div class="item-header">
+                    <div class="item-number">${item.id}</div>
+                    <div class="item-actions">
+                      <button class="speak-btn" onclick="playOnomatopoeiaFromDictionary(${item.id})">🔊</button>
+                      <button class="favorite-toggle-btn" onclick="toggleFavorite(${item.id}, this)">⭐</button>
+                    </div>
+                  </div>
+                  <div class="item-content">
+                    <div class="main-text">${translatedMain}</div>
+                    <div class="romaji-text">${item.romaji}</div>
+                    <div class="description-text">${translatedDescription}</div>
                   </div>
                 </div>
-                <div class="item-content">
-                  <div class="main-text">${translatedMain}</div>
-                  <div class="romaji-text">${item.romaji}</div>
-                  <div class="description-text">${translatedDescription}</div>
+              `;
+            } else {
+              // 日本語の場合は翻訳不要
+              html += `
+                <div class="onomatopoeia-item">
+                  <div class="item-header">
+                    <div class="item-number">${item.id}</div>
+                    <div class="item-actions">
+                      <button class="speak-btn" onclick="playOnomatopoeiaFromDictionary(${item.id})">🔊</button>
+                      <button class="favorite-toggle-btn" onclick="toggleFavorite(${item.id}, this)">⭐</button>
+                    </div>
+                  </div>
+                  <div class="item-content">
+                    <div class="main-text">${item.main}</div>
+                    <div class="romaji-text">${item.romaji}</div>
+                    <div class="description-text">${item.description.ja}</div>
+                  </div>
                 </div>
-              </div>
-            `;
+              `;
+            }
           }
         } catch (error) {
           console.error('翻訳エラー:', error);
@@ -187,7 +219,7 @@
       }
     }
 
-    // お気に入り切り替え機能（オノマトペ辞典から移植）
+    // お気に入り切り替え機能（言語情報保存付き）
     function toggleFavorite(id, button) {
       if (!id) return false;
 
@@ -197,7 +229,19 @@
         const currentState = favorites[stringId] || false;
         const newState = !currentState;
 
-        favorites[stringId] = newState;
+        // お気に入り登録時は現在の言語設定を保存
+        if (newState) {
+          const currentLang = localStorage.getItem('selectedLanguage') || 'ja';
+          favorites[stringId] = {
+            isFavorite: true,
+            language: currentLang,
+            timestamp: Date.now()
+          };
+        } else {
+          // お気に入り解除時は削除
+          delete favorites[stringId];
+        }
+        
         localStorage.setItem('arigato_favorites_v1', JSON.stringify(favorites));
 
         // UI更新
