@@ -83,13 +83,22 @@
             itemLanguage = favoriteData.language;
             console.log(`アイテム ${item.id} の保存された言語: ${itemLanguage}`);
           } else if (favoriteData === true) {
-            // 古い形式の場合は現在の言語設定を使用
+            // 古い形式の場合は現在の言語設定を使用（強化版）
             const storedLang = localStorage.getItem('selectedLanguage') ||
                               localStorage.getItem('language') ||
                               localStorage.getItem('currentLanguage');
             const globalLang = window.currentLang || window.currentLanguage;
-            itemLanguage = storedLang || globalLang || 'ja';
-            console.log(`アイテム ${item.id} の古い形式 - 現在の言語設定: ${itemLanguage}`);
+            const urlLang = new URLSearchParams(window.location.search).get('lang');
+
+            // 優先順位: URLパラメータ > 保存された言語 > グローバル変数 > デフォルト
+            itemLanguage = urlLang || storedLang || globalLang || 'ja';
+
+            // 英語の場合は日本語に変更（翻訳不要のため）
+            if (itemLanguage === 'en') {
+              itemLanguage = 'ja';
+            }
+
+            console.log(`アイテム ${item.id} の古い形式 - URL:${urlLang}, 保存:${storedLang}, グローバル:${globalLang}, 最終:${itemLanguage}`);
           }
           return { ...item, favoriteLanguage: itemLanguage };
         });
@@ -127,7 +136,7 @@
               console.log(`翻訳開始: アイテム ${item.id}, 言語 ${itemLanguage}`);
               let translatedMain = item.main;
               let translatedDescription = item.description.ja;
-              
+
               try {
                 translatedMain = await translationAPI.translateText(item.main, itemLanguage);
                 translatedDescription = await translationAPI.translateText(item.description.ja, itemLanguage);
