@@ -125,14 +125,18 @@
             if (itemLanguage !== 'ja') {
               // 保存された言語で翻訳
               console.log(`翻訳開始: アイテム ${item.id}, 言語 ${itemLanguage}`);
+              let translatedMain = item.main;
+              let translatedDescription = item.description.ja;
+              
               try {
-                const translatedMain = await translationAPI.translateText(item.main, itemLanguage);
-                const translatedDescription = await translationAPI.translateText(item.description.ja, itemLanguage);
+                translatedMain = await translationAPI.translateText(item.main, itemLanguage);
+                translatedDescription = await translationAPI.translateText(item.description.ja, itemLanguage);
                 console.log(`翻訳完了: アイテム ${item.id}, メイン="${translatedMain}", 説明="${translatedDescription.substring(0, 50)}..."`);
               } catch (translationError) {
                 console.error(`翻訳エラー: アイテム ${item.id}, 言語 ${itemLanguage}`, translationError);
                 // 翻訳エラー時は日本語で表示
-                itemLanguage = 'ja';
+                translatedMain = item.main;
+                translatedDescription = item.description.ja;
               }
 
               html += `
