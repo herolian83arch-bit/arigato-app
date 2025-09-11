@@ -273,57 +273,22 @@ const __safePlayAudio = function(romajiText){
 };
 try{ playAudio = __safePlayAudio; }catch(_){ window.playAudio = __safePlayAudio; }
 
-// お気に入り：既存 toggleFavorite を安全版で上書き（言語保存対応版）
+// お気に入り：既存 toggleFavorite を安全版で上書き
 const __safeToggleFavorite = function(id,romajiText){
   try{
-    if (!id) return false;
-
-    const favorites = JSON.parse(localStorage.getItem('arigato_favorites_v1') || '{}');
-    const stringId = String(id);
-
-    // 既存データの互換性処理
-    const favoriteData = favorites[stringId];
-    const currentState = favoriteData === true || (favoriteData && favoriteData.isFavorite === true);
-    const newState = !currentState;
-
-    if (newState) {
-      // お気に入り登録時：現在の言語を取得・保存（複数ソースから確実に取得）
-      const storedLang = localStorage.getItem('selectedLanguage') ||
-                         localStorage.getItem('language') ||
-                         localStorage.getItem('currentLanguage');
-      const globalLang = window.currentLang || currentLang;
-      const finalLang = storedLang || globalLang || 'ja';
-
-      console.log(`🔍 言語取得デバッグ: selectedLanguage=${localStorage.getItem('selectedLanguage')}, language=${localStorage.getItem('language')}, currentLanguage=${localStorage.getItem('currentLanguage')}, global=${globalLang}, final=${finalLang}`);
-
-      // 言語が確実に取得できているかチェック
-      if (finalLang === 'ja' && storedLang && storedLang !== 'ja') {
-        console.warn(`⚠️ 言語取得に問題があります: 期待値=${storedLang}, 実際=${finalLang}`);
-      }
-
-      favorites[stringId] = {
-        isFavorite: true,
-        language: finalLang,
-        timestamp: Date.now()
-      };
-      console.log(`お気に入り登録: ID=${id}, 言語=${finalLang}`);
-    } else {
-      // お気に入り解除時
-      delete favorites[stringId];
-      console.log(`お気に入り解除: ID=${id}`);
-    }
-
-    localStorage.setItem('arigato_favorites_v1', JSON.stringify(favorites));
+    const key = makeFavKey(id,romajiText);
+    let favs = safeStore.get("favorites",[]);
+    if(!Array.isArray(favs)) favs=[];
+    const i = favs.indexOf(key);
+    if(i>=0){ favs.splice(i,1); } else { favs.push(key); }
+    safeStore.set("favorites",favs);
 
     // data-fav-key があれば即時反映（任意）
     try{
-      const key = makeFavKey(id,romajiText);
       const btn = document.querySelector(`[data-fav-key="${CSS.escape(key)}"]`);
-      if(btn) btn.classList.toggle("is-active", newState);
+      if(btn) btn.classList.toggle("is-active", i<0);
     }catch(_){}
-
-    return newState;
-  }catch(e){ console.error("[toggleFavorite]", e); return false; }
+  }catch(e){ console.error("[toggleFavorite]", e); }
 };
 try{ toggleFavorite = __safeToggleFavorite; }catch(_){ window.toggleFavorite = __safeToggleFavorite; }
 
