@@ -257,17 +257,42 @@
       }
     }
 
-    // お気に入り切り替え機能（オノマトペ辞典から移植）
+    // お気に入り切り替え機能（言語保存対応版）
     function toggleFavorite(id, button) {
       if (!id) return false;
 
       try {
         const favorites = JSON.parse(localStorage.getItem('arigato_favorites_v1') || '{}');
         const stringId = String(id);
-        const currentState = favorites[stringId] || false;
+
+        // 既存データの互換性処理
+        const favoriteData = favorites[stringId];
+        const currentState = favoriteData === true || (favoriteData && favoriteData.isFavorite === true);
         const newState = !currentState;
 
-        favorites[stringId] = newState;
+        if (newState) {
+          // お気に入り登録時：現在の言語を取得・保存（複数ソースから確実に取得）
+          const storedLang = localStorage.getItem('selectedLanguage') ||
+                             localStorage.getItem('language') ||
+                             localStorage.getItem('currentLanguage');
+          const globalLang = window.currentLang || currentLang;
+          const urlLang = new URLSearchParams(window.location.search).get('lang');
+          const finalLang = urlLang || storedLang || globalLang || 'ja';
+
+          console.log(`🔍 お気に入り登録時の言語取得: URL=${urlLang}, 保存=${storedLang}, グローバル=${globalLang}, 最終=${finalLang}`);
+
+          favorites[stringId] = {
+            isFavorite: true,
+            language: finalLang,
+            timestamp: Date.now()
+          };
+          console.log(`お気に入り登録: ID=${id}, 言語=${finalLang}`);
+        } else {
+          // お気に入り解除時
+          delete favorites[stringId];
+          console.log(`お気に入り解除: ID=${id}`);
+        }
+
         localStorage.setItem('arigato_favorites_v1', JSON.stringify(favorites));
 
         // UI更新
