@@ -263,7 +263,16 @@
           const storedLang = localStorage.getItem('selectedLanguage') ||
                              localStorage.getItem('language') ||
                              localStorage.getItem('currentLanguage');
-          const globalLang = window.currentLang || currentLang;
+          
+          // currentLang変数の安全な取得
+          let globalLang;
+          try {
+            globalLang = window.currentLang || currentLang;
+          } catch (error) {
+            console.warn('currentLang取得エラー:', error);
+            globalLang = null;
+          }
+          
           const finalLang = storedLang || globalLang || 'ja';
 
           console.log(`🔍 言語取得デバッグ: selectedLanguage=${localStorage.getItem('selectedLanguage')}, language=${localStorage.getItem('language')}, currentLanguage=${localStorage.getItem('currentLanguage')}, global=${globalLang}, final=${finalLang}`);
