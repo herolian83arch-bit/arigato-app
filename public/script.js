@@ -215,6 +215,12 @@ async function loadLanguage(lang) {
 
     languageData = await response.json();
     currentLang = lang;
+    
+    // 言語設定をlocalStorageに保存（複数キーで確実に保存）
+    localStorage.setItem('selectedLanguage', lang);
+    localStorage.setItem('language', lang);
+    localStorage.setItem('currentLanguage', lang);
+    console.log(`💾 言語設定をlocalStorageに保存: ${lang}`);
 
     // UI即座更新（スケルトンUIなし）
     renderSceneSwitcher();
@@ -680,11 +686,13 @@ function toggleFavorite(id) {
   const newState = !currentState;
 
   if (newState) {
-    // お気に入り登録時：現在の言語を取得・保存
-    const currentLang = localStorage.getItem('selectedLanguage') ||
+    // お気に入り登録時：現在の言語を取得・保存（複数ソースから確実に取得）
+    const storedLang = localStorage.getItem('selectedLanguage') ||
                        localStorage.getItem('language') ||
-                       localStorage.getItem('currentLanguage') ||
-                       'ja';
+                       localStorage.getItem('currentLanguage');
+    const currentLang = storedLang || currentLang || 'ja';
+    
+    console.log(`🔍 言語取得デバッグ: selectedLanguage=${localStorage.getItem('selectedLanguage')}, language=${localStorage.getItem('language')}, currentLanguage=${localStorage.getItem('currentLanguage')}, global=${currentLang}, final=${currentLang}`);
 
     favorites[stringId] = {
       isFavorite: true,
