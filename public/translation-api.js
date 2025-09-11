@@ -72,7 +72,9 @@ class TranslationAPI {
       });
 
       if (!response.ok) {
-        throw new Error(`Translation API error: ${response.status}`);
+        const errorText = await response.text();
+        console.error(`翻訳APIエラー: ${response.status} - ${errorText}`);
+        throw new Error(`Translation API error: ${response.status} - ${errorText}`);
       }
 
       const data = await response.json();
