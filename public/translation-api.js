@@ -66,7 +66,8 @@ class TranslationAPI {
         body: JSON.stringify({
           q: text,
           target: targetLang,
-          source: 'ja'
+          source: 'ja',
+          format: 'text'
         })
       });
 
