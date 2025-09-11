@@ -667,39 +667,18 @@ function isFavorite(id) {
   return favorites[String(id)] === true;
 }
 
-// お気に入りの切り替え（ID基準・言語保存対応）
+// お気に入りの切り替え（ID基準）
 function toggleFavorite(id) {
   if (!id) return false;
 
   const favorites = getFavorites();
   const stringId = String(id);
-
-  // 既存データの互換性処理
-  const favoriteData = favorites[stringId];
-  const currentState = favoriteData === true || (favoriteData && favoriteData.isFavorite === true);
+  const currentState = favorites[stringId] || false;
   const newState = !currentState;
 
-  if (newState) {
-    // お気に入り登録時は現在の言語設定を保存
-    const currentLang = localStorage.getItem('selectedLanguage') ||
-                       localStorage.getItem('language') ||
-                       localStorage.getItem('currentLanguage') ||
-                       'ja';
-
-    favorites[stringId] = {
-      isFavorite: true,
-      language: currentLang,
-      timestamp: Date.now()
-    };
-
-    console.log(`お気に入り登録: ID=${id}, 言語=${currentLang}`);
-  } else {
-    // お気に入り解除時は削除
-    delete favorites[stringId];
-    console.log(`お気に入り解除: ID=${id}`);
-  }
-
+  favorites[stringId] = newState;
   setFavorites(favorites);
+
   return newState;
 }
 
