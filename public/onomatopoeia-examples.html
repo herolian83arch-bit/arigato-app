@@ -259,7 +259,8 @@
         const newState = !currentState;
 
         if (newState) {
-          // お気に入り登録時：現在の言語を取得・保存（複数ソースから確実に取得）
+          // お気に入り登録時：現在の言語を取得・保存（URLパラメータを最優先）
+          const urlLang = new URLSearchParams(window.location.search).get('lang');
           const storedLang = localStorage.getItem('selectedLanguage') ||
                              localStorage.getItem('language') ||
                              localStorage.getItem('currentLanguage');
@@ -273,9 +274,10 @@
             globalLang = null;
           }
           
-          const finalLang = storedLang || globalLang || 'ja';
+          // URLパラメータを最優先で言語を決定
+          const finalLang = urlLang || storedLang || globalLang || 'ja';
 
-          console.log(`🔍 言語取得デバッグ: selectedLanguage=${localStorage.getItem('selectedLanguage')}, language=${localStorage.getItem('language')}, currentLanguage=${localStorage.getItem('currentLanguage')}, global=${globalLang}, final=${finalLang}`);
+          console.log(`🔍 言語取得デバッグ: URL=${urlLang}, selectedLanguage=${localStorage.getItem('selectedLanguage')}, language=${localStorage.getItem('language')}, currentLanguage=${localStorage.getItem('currentLanguage')}, global=${globalLang}, final=${finalLang}`);
 
           // 言語が確実に取得できているかチェック
           if (finalLang === 'ja' && storedLang && storedLang !== 'ja') {
