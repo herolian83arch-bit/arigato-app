@@ -215,7 +215,7 @@ async function loadLanguage(lang) {
 
     languageData = await response.json();
     currentLang = lang;
-    
+
     // 言語設定をlocalStorageに保存（複数キーで確実に保存）
     localStorage.setItem('selectedLanguage', lang);
     localStorage.setItem('language', lang);
@@ -690,16 +690,16 @@ function toggleFavorite(id) {
     const storedLang = localStorage.getItem('selectedLanguage') ||
                        localStorage.getItem('language') ||
                        localStorage.getItem('currentLanguage');
-    const currentLang = storedLang || currentLang || 'ja';
-    
-    console.log(`🔍 言語取得デバッグ: selectedLanguage=${localStorage.getItem('selectedLanguage')}, language=${localStorage.getItem('language')}, currentLanguage=${localStorage.getItem('currentLanguage')}, global=${currentLang}, final=${currentLang}`);
+    const finalLang = storedLang || window.currentLang || 'ja';
+
+    console.log(`🔍 言語取得デバッグ: selectedLanguage=${localStorage.getItem('selectedLanguage')}, language=${localStorage.getItem('language')}, currentLanguage=${localStorage.getItem('currentLanguage')}, global=${window.currentLang}, final=${finalLang}`);
 
     favorites[stringId] = {
       isFavorite: true,
-      language: currentLang,
+      language: finalLang,
       timestamp: Date.now()
     };
-    console.log(`お気に入り登録: ID=${id}, 言語=${currentLang}`);
+    console.log(`お気に入り登録: ID=${id}, 言語=${finalLang}`);
   } else {
     // お気に入り解除時
     delete favorites[stringId];
