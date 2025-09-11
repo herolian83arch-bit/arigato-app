@@ -93,9 +93,18 @@ document.addEventListener('DOMContentLoaded', async () => {
   checkStripeCheckoutResult();
 
   document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.onclick = () => {
-      currentLang = btn.dataset.lang;
-      loadLanguage(currentLang);
+    btn.onclick = async () => {
+      const newLang = btn.dataset.lang;
+      console.log(`🔄 言語ボタンクリック: ${newLang}`);
+
+      // グローバル変数を即座に更新
+      currentLang = newLang;
+      window.currentLang = newLang;
+
+      // 言語切替処理を実行（localStorage保存完了まで待機）
+      await loadLanguage(newLang);
+
+      console.log(`✅ 言語切替処理完了: ${newLang}`);
     };
   });
 
@@ -221,6 +230,10 @@ async function loadLanguage(lang) {
     localStorage.setItem('language', lang);
     localStorage.setItem('currentLanguage', lang);
     console.log(`💾 言語設定をlocalStorageに保存: ${lang}`);
+
+    // グローバル変数も確実に更新
+    window.currentLang = lang;
+    console.log(`🔄 グローバル変数更新完了: currentLang=${currentLang}, window.currentLang=${window.currentLang}`);
 
     // UI即座更新（スケルトンUIなし）
     renderSceneSwitcher();
@@ -690,9 +703,15 @@ function toggleFavorite(id) {
     const storedLang = localStorage.getItem('selectedLanguage') ||
                        localStorage.getItem('language') ||
                        localStorage.getItem('currentLanguage');
-    const finalLang = storedLang || window.currentLang || 'ja';
+    const globalLang = window.currentLang || currentLang;
+    const finalLang = storedLang || globalLang || 'ja';
 
-    console.log(`🔍 言語取得デバッグ: selectedLanguage=${localStorage.getItem('selectedLanguage')}, language=${localStorage.getItem('language')}, currentLanguage=${localStorage.getItem('currentLanguage')}, global=${window.currentLang}, final=${finalLang}`);
+    console.log(`🔍 言語取得デバッグ: selectedLanguage=${localStorage.getItem('selectedLanguage')}, language=${localStorage.getItem('language')}, currentLanguage=${localStorage.getItem('currentLanguage')}, global=${globalLang}, final=${finalLang}`);
+
+    // 言語が確実に取得できているかチェック
+    if (finalLang === 'ja' && storedLang && storedLang !== 'ja') {
+      console.warn(`⚠️ 言語取得に問題があります: 期待値=${storedLang}, 実際=${finalLang}`);
+    }
 
     favorites[stringId] = {
       isFavorite: true,

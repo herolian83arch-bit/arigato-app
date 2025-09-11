@@ -47,9 +47,14 @@
         batchTranslationManager = window.batchTranslationManager;
         translationCache = window.translationCache;
 
-        // 現在の言語設定を取得
-        currentLanguage = localStorage.getItem('selectedLanguage') || 'ja';
+        // 現在の言語設定を取得（複数ソースから確実に取得）
+        const storedLang = localStorage.getItem('selectedLanguage') ||
+                           localStorage.getItem('language') ||
+                           localStorage.getItem('currentLanguage');
+        const globalLang = window.currentLang || window.currentLanguage;
+        currentLanguage = storedLang || globalLang || 'ja';
         console.log('現在の言語設定:', currentLanguage);
+        console.log('言語取得デバッグ: storedLang=' + storedLang + ', globalLang=' + globalLang + ', final=' + currentLanguage);
 
         // プレミアムユーザーの場合はお気に入り一覧を読み込み
         loadFavorites();
@@ -76,12 +81,15 @@
           let itemLanguage = 'ja';
           if (favoriteData && typeof favoriteData === 'object' && favoriteData.language) {
             itemLanguage = favoriteData.language;
+            console.log(`アイテム ${item.id} の保存された言語: ${itemLanguage}`);
           } else if (favoriteData === true) {
             // 古い形式の場合は現在の言語設定を使用
-            itemLanguage = localStorage.getItem('selectedLanguage') ||
-                          localStorage.getItem('language') ||
-                          localStorage.getItem('currentLanguage') ||
-                          'ja';
+            const storedLang = localStorage.getItem('selectedLanguage') ||
+                              localStorage.getItem('language') ||
+                              localStorage.getItem('currentLanguage');
+            const globalLang = window.currentLang || window.currentLanguage;
+            itemLanguage = storedLang || globalLang || 'ja';
+            console.log(`アイテム ${item.id} の古い形式 - 現在の言語設定: ${itemLanguage}`);
           }
           return { ...item, favoriteLanguage: itemLanguage };
         });
@@ -116,8 +124,16 @@
 
             if (itemLanguage !== 'ja') {
               // 保存された言語で翻訳
-              const translatedMain = await translationAPI.translateText(item.main, itemLanguage);
-              const translatedDescription = await translationAPI.translateText(item.description.ja, itemLanguage);
+              console.log(`翻訳開始: アイテム ${item.id}, 言語 ${itemLanguage}`);
+              try {
+                const translatedMain = await translationAPI.translateText(item.main, itemLanguage);
+                const translatedDescription = await translationAPI.translateText(item.description.ja, itemLanguage);
+                console.log(`翻訳完了: アイテム ${item.id}, メイン="${translatedMain}", 説明="${translatedDescription.substring(0, 50)}..."`);
+              } catch (translationError) {
+                console.error(`翻訳エラー: アイテム ${item.id}, 言語 ${itemLanguage}`, translationError);
+                // 翻訳エラー時は日本語で表示
+                itemLanguage = 'ja';
+              }
 
               html += `
                 <div class="onomatopoeia-item">
