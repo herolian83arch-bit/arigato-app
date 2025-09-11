@@ -47,14 +47,9 @@
         batchTranslationManager = window.batchTranslationManager;
         translationCache = window.translationCache;
 
-        // 現在の言語設定を取得（複数ソースから確実に取得）
-        const storedLang = localStorage.getItem('selectedLanguage') ||
-                           localStorage.getItem('language') ||
-                           localStorage.getItem('currentLanguage');
-        const globalLang = window.currentLang || window.currentLanguage;
-        currentLanguage = storedLang || globalLang || 'ja';
+        // 現在の言語設定を取得
+        currentLanguage = localStorage.getItem('selectedLanguage') || 'ja';
         console.log('現在の言語設定:', currentLanguage);
-        console.log('言語取得デバッグ: storedLang=' + storedLang + ', globalLang=' + globalLang + ', final=' + currentLanguage);
 
         // プレミアムユーザーの場合はお気に入り一覧を読み込み
         loadFavorites();
@@ -71,27 +66,16 @@
         const response = await fetch('/data/dictionary.json');
         onomatopoeiaData = await response.json();
 
-        // お気に入りの例文を抽出（互換性を保つ）
+        // お気に入りの例文を抽出（言語情報付き）
         const favoriteItems = onomatopoeiaData.filter(item => {
           const favoriteData = favorites[String(item.id)];
-          return favoriteData === true || (favoriteData && favoriteData.isFavorite === true);
+          return favoriteData && (favoriteData === true || favoriteData.isFavorite === true);
         }).map(item => {
-          // 保存された言語情報を取得
           const favoriteData = favorites[String(item.id)];
-          let itemLanguage = 'ja';
-          if (favoriteData && typeof favoriteData === 'object' && favoriteData.language) {
-            itemLanguage = favoriteData.language;
-            console.log(`アイテム ${item.id} の保存された言語: ${itemLanguage}`);
-          } else if (favoriteData === true) {
-            // 古い形式の場合は現在の言語設定を使用
-            const storedLang = localStorage.getItem('selectedLanguage') ||
-                              localStorage.getItem('language') ||
-                              localStorage.getItem('currentLanguage');
-            const globalLang = window.currentLang || window.currentLanguage;
-            itemLanguage = storedLang || globalLang || 'ja';
-            console.log(`アイテム ${item.id} の古い形式 - 現在の言語設定: ${itemLanguage}`);
-          }
-          return { ...item, favoriteLanguage: itemLanguage };
+          return {
+            ...item,
+            favoriteLanguage: favoriteData && favoriteData.language ? favoriteData.language : 'ja'
+          };
         });
 
         // お気に入り一覧を表示（翻訳機能付き）
@@ -114,26 +98,17 @@
 
       let html = `<p>お気に入り: ${items.length}件</p>`;
 
-      // 各アイテムを保存された言語で翻訳表示
-      console.log('翻訳チェック - API:', !!translationAPI);
+      // 各アイテムの保存された言語で翻訳を実行
+      console.log('翻訳チェック - アイテム数:', items.length, 'API:', !!translationAPI);
       if (translationAPI) {
         try {
           for (const item of items) {
             const itemLanguage = item.favoriteLanguage || 'ja';
-            console.log(`アイテム ${item.id} の言語: ${itemLanguage}`);
+            console.log(`アイテム ${item.id} の言語:`, itemLanguage);
 
             if (itemLanguage !== 'ja') {
-              // 保存された言語で翻訳
-              console.log(`翻訳開始: アイテム ${item.id}, 言語 ${itemLanguage}`);
-              try {
-                const translatedMain = await translationAPI.translateText(item.main, itemLanguage);
-                const translatedDescription = await translationAPI.translateText(item.description.ja, itemLanguage);
-                console.log(`翻訳完了: アイテム ${item.id}, メイン="${translatedMain}", 説明="${translatedDescription.substring(0, 50)}..."`);
-              } catch (translationError) {
-                console.error(`翻訳エラー: アイテム ${item.id}, 言語 ${itemLanguage}`, translationError);
-                // 翻訳エラー時は日本語で表示
-                itemLanguage = 'ja';
-              }
+              const translatedMain = await translationAPI.translateText(item.main, itemLanguage);
+              const translatedDescription = await translationAPI.translateText(item.description.ja, itemLanguage);
 
               html += `
                 <div class="onomatopoeia-item">
@@ -178,7 +153,7 @@
           return;
         }
       } else {
-        // 翻訳APIが利用できない場合は元の日本語で表示
+        // 日本語の場合は翻訳不要
         displayFavorites(items);
         return;
       }
@@ -244,17 +219,46 @@
       }
     }
 
-    // お気に入り切り替え機能（オノマトペ辞典から移植）
+    // お気に入り切り替え機能（言語情報保存付き・強化版）
     function toggleFavorite(id, button) {
       if (!id) return false;
 
       try {
         const favorites = JSON.parse(localStorage.getItem('arigato_favorites_v1') || '{}');
         const stringId = String(id);
-        const currentState = favorites[stringId] || false;
+
+        // 既存データの互換性処理
+        const favoriteData = favorites[stringId];
+        const currentState = favoriteData === true || (favoriteData && favoriteData.isFavorite === true);
         const newState = !currentState;
 
-        favorites[stringId] = newState;
+        if (newState) {
+          // お気に入り登録時：現在の言語を取得・保存（複数ソースから確実に取得）
+          const storedLang = localStorage.getItem('selectedLanguage') ||
+                             localStorage.getItem('language') ||
+                             localStorage.getItem('currentLanguage');
+          const globalLang = window.currentLang || currentLang;
+          const finalLang = storedLang || globalLang || 'ja';
+
+          console.log(`🔍 言語取得デバッグ: selectedLanguage=${localStorage.getItem('selectedLanguage')}, language=${localStorage.getItem('language')}, currentLanguage=${localStorage.getItem('currentLanguage')}, global=${globalLang}, final=${finalLang}`);
+
+          // 言語が確実に取得できているかチェック
+          if (finalLang === 'ja' && storedLang && storedLang !== 'ja') {
+            console.warn(`⚠️ 言語取得に問題があります: 期待値=${storedLang}, 実際=${finalLang}`);
+          }
+
+          favorites[stringId] = {
+            isFavorite: true,
+            language: finalLang,
+            timestamp: Date.now()
+          };
+          console.log(`お気に入り登録: ID=${id}, 言語=${finalLang}`);
+        } else {
+          // お気に入り解除時
+          delete favorites[stringId];
+          console.log(`お気に入り解除: ID=${id}`);
+        }
+
         localStorage.setItem('arigato_favorites_v1', JSON.stringify(favorites));
 
         // UI更新

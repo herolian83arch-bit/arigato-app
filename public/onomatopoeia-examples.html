@@ -11,7 +11,7 @@
     <header>
       <h1 id="scene-title">オノマトペ辞典</h1>
       <div class="back-navigation">
-        <button class="back-btn" onclick="window.location.href='onomatopoeia-scenes.html'">← Back</button>
+        <button class="back-btn" onclick="window.location.href='onomatopoeia-scenes.html'">← シーン選択に戻る</button>
       </div>
     </header>
 
@@ -19,25 +19,12 @@
       <div id="examples-container">
         <!-- 例文はJavaScriptで動的に生成 -->
       </div>
-
-      <!-- ローディング表示 -->
-      <div id="loading-indicator" class="loading-indicator" style="display: none;">
-        <div class="loading-spinner"></div>
-        <p>翻訳中...</p>
-      </div>
     </main>
   </div>
 
-  <script src="translation-api.js"></script>
-  <script src="translation-batch.js"></script>
-  <script src="translation-cache.js"></script>
   <script>
     let onomatopoeiaData = [];
     let currentScene = '';
-    let currentLanguage = 'ja';
-    let translationAPI = null;
-    let batchTranslationManager = null;
-    let translationCache = null;
 
     // プレミアム状態の確認
     document.addEventListener('DOMContentLoaded', async function() {
@@ -48,15 +35,9 @@
         return;
       }
 
-      // 翻訳APIの初期化
-      translationAPI = new TranslationAPI();
-      batchTranslationManager = window.batchTranslationManager;
-      translationCache = window.translationCache;
-
-      // URLパラメータからシーン名と言語を取得
+      // URLパラメータからシーン名を取得
       const urlParams = new URLSearchParams(window.location.search);
       currentScene = urlParams.get('scene');
-      currentLanguage = urlParams.get('lang') || 'ja';
 
       if (!currentScene) {
         // シーン名が指定されていない場合はシーン選択画面に戻る
@@ -65,34 +46,13 @@
       }
 
       // シーンタイトルを更新
-      // シーンタイトルを翻訳して表示
-      await updateSceneTitle(currentScene);
+      document.getElementById('scene-title').textContent = currentScene;
 
       // オノマトペデータを読み込み
       await loadOnomatopoeiaData();
-      // 例文を表示（翻訳付き）
-      await displayExamples();
+      // 例文を表示
+      displayExamples();
     });
-
-    // シーンタイトルを翻訳して表示
-    async function updateSceneTitle(scene) {
-      const titleElement = document.getElementById('scene-title');
-
-      if (currentLanguage !== 'ja') {
-        try {
-          // 翻訳APIでシーンタイトルを翻訳
-          const translatedTitle = await translationAPI.translateText(scene, currentLanguage);
-          titleElement.textContent = translatedTitle;
-        } catch (error) {
-          console.error('シーンタイトル翻訳エラー:', error);
-          // エラー時は元の日本語を表示
-          titleElement.textContent = scene;
-        }
-      } else {
-        // 日本語の場合は翻訳不要
-        titleElement.textContent = scene;
-      }
-    }
 
     // オノマトペデータを読み込み
     async function loadOnomatopoeiaData() {
@@ -117,8 +77,8 @@
       }
     }
 
-    // 例文を表示（翻訳機能付き）
-    async function displayExamples() {
+    // 例文を表示
+    function displayExamples() {
       const examplesContainer = document.getElementById('examples-container');
 
       // 現在のシーンの例文をフィルタリング
@@ -129,58 +89,11 @@
         return;
       }
 
-      // 日本語以外の場合は翻訳を実行
-      if (currentLanguage !== 'ja') {
-        try {
-          // 翻訳処理中はローディングを表示
-          showLoading();
-
-          // キャッシュから翻訳結果を取得
-          let translatedItems = translationCache.get(currentScene, currentLanguage);
-
-          if (!translatedItems) {
-            // キャッシュにない場合は翻訳を実行
-            console.log(`🚀 例文翻訳開始: ${currentScene} (${currentLanguage})`);
-            translatedItems = await batchTranslationManager.translateSceneBatch(sceneItems, currentLanguage, currentScene);
-
-            // 翻訳結果をキャッシュに保存
-            translationCache.set(currentScene, currentLanguage, translatedItems);
-          } else {
-            console.log(`📦 例文翻訳キャッシュヒット: ${currentScene} (${currentLanguage})`);
-          }
-
-          // 翻訳された例文を表示
-          displayTranslatedExamples(translatedItems);
-
-        } catch (error) {
-          console.error('例文翻訳エラー:', error);
-          // エラー時は元の日本語で表示
-          displayTranslatedExamples(sceneItems);
-        } finally {
-          // 必ずローディング表示を終了
-          hideLoading();
-        }
-      } else {
-        // 日本語の場合は翻訳不要
-        displayTranslatedExamples(sceneItems);
-      }
-    }
-
-    // 例文を表示（翻訳済みデータ用）
-    function displayTranslatedExamples(items) {
-      const examplesContainer = document.getElementById('examples-container');
-
       let html = '';
-      for (const item of items) {
+      for (const item of sceneItems) {
         // 音声再生機能の有効/無効チェック
         const isTTSEnabled = localStorage.getItem('feature_tts') === '1' ||
                              (typeof window !== 'undefined' && window.speechSynthesis);
-
-        // 翻訳されたテキストを取得（翻訳がない場合は元のテキストを使用）
-        const mainText = item.main || item.originalMain || '';
-        const descriptionText = (item.description && item.description[currentLanguage]) ||
-                               (item.description && item.description.ja) ||
-                               item.originalDescription || '';
 
         html += `
           <div class="onomatopoeia-item" data-testid="dict-row">
@@ -188,7 +101,7 @@
               <div class="item-number">${item.id}</div>
               <div class="item-actions" style="display:inline-flex;align-items:center;">
                 ${isTTSEnabled ? `
-                  <button class="speak-btn" onclick="playAudio('${(item.jpsen || '').replace(/'/g, "\\'")}')" aria-label="音声再生" style="background:none;border:none;cursor:pointer;font-size:1.2em;margin-left:12px;" data-card-control="true">
+                  <button class="speak-btn" onclick="playAudio('${item.main.replace(/'/g, "\\'")}')" aria-label="音声再生" style="background:none;border:none;cursor:pointer;font-size:1.2em;margin-left:12px;" data-card-control="true">
                     🔊
                   </button>
                 ` : ''}
@@ -197,29 +110,14 @@
                 </button>
               </div>
             </div>
-            <div class="item-main">${mainText}</div>
+            <div class="item-main">${item.main}</div>
             <div class="item-romaji">${item.romaji}</div>
-            <div class="item-description">${descriptionText}</div>
+            <div class="item-description">${item.description?.ja || ''}</div>
           </div>
         `;
       }
 
       examplesContainer.innerHTML = html;
-    }
-
-    // ローディング表示の制御
-    function showLoading() {
-      const loadingIndicator = document.getElementById('loading-indicator');
-      if (loadingIndicator) {
-        loadingIndicator.style.display = 'block';
-      }
-    }
-
-    function hideLoading() {
-      const loadingIndicator = document.getElementById('loading-indicator');
-      if (loadingIndicator) {
-        loadingIndicator.style.display = 'none';
-      }
     }
 
     // 音声再生
@@ -245,17 +143,46 @@
       }
     }
 
-    // お気に入りの切り替え
+    // お気に入りの切り替え（言語保存対応版）
     function toggleFavorite(id, button) {
       if (!id) return false;
 
       try {
         const favorites = JSON.parse(localStorage.getItem('arigato_favorites_v1') || '{}');
         const stringId = String(id);
-        const currentState = favorites[stringId] || false;
+
+        // 既存データの互換性処理
+        const favoriteData = favorites[stringId];
+        const currentState = favoriteData === true || (favoriteData && favoriteData.isFavorite === true);
         const newState = !currentState;
 
-        favorites[stringId] = newState;
+        if (newState) {
+          // お気に入り登録時：現在の言語を取得・保存（複数ソースから確実に取得）
+          const storedLang = localStorage.getItem('selectedLanguage') ||
+                             localStorage.getItem('language') ||
+                             localStorage.getItem('currentLanguage');
+          const globalLang = window.currentLang || currentLang;
+          const finalLang = storedLang || globalLang || 'ja';
+
+          console.log(`🔍 言語取得デバッグ: selectedLanguage=${localStorage.getItem('selectedLanguage')}, language=${localStorage.getItem('language')}, currentLanguage=${localStorage.getItem('currentLanguage')}, global=${globalLang}, final=${finalLang}`);
+
+          // 言語が確実に取得できているかチェック
+          if (finalLang === 'ja' && storedLang && storedLang !== 'ja') {
+            console.warn(`⚠️ 言語取得に問題があります: 期待値=${storedLang}, 実際=${finalLang}`);
+          }
+
+          favorites[stringId] = {
+            isFavorite: true,
+            language: finalLang,
+            timestamp: Date.now()
+          };
+          console.log(`お気に入り登録: ID=${id}, 言語=${finalLang}`);
+        } else {
+          // お気に入り解除時
+          delete favorites[stringId];
+          console.log(`お気に入り解除: ID=${id}`);
+        }
+
         localStorage.setItem('arigato_favorites_v1', JSON.stringify(favorites));
 
         // UI更新
