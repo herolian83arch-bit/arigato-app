@@ -20,7 +20,7 @@
 
     <main>
       <div id="favorites-container">
-        <p>お気に入り一覧がここに表示されます</p>
+        <p>Your favorites will appear here</p>
       </div>
     </main>
   </div>
@@ -108,7 +108,7 @@
 
       } catch (error) {
         console.error('お気に入り読み込みエラー:', error);
-        document.getElementById('favorites-container').innerHTML = '<p>お気に入りの読み込みに失敗しました</p>';
+        document.getElementById('favorites-container').innerHTML = '<p>Failed to load favorites</p>';
       }
     }
 
@@ -117,11 +117,11 @@
       const container = document.getElementById('favorites-container');
 
       if (items.length === 0) {
-        container.innerHTML = '<p>お気に入りがありません</p>';
+        container.innerHTML = '<p>No favorites yet</p>';
         return;
       }
 
-      let html = `<p>お気に入り: ${items.length}件</p>`;
+      let html = `<p>Favorites: ${items.length}</p>`;
 
       // 各アイテムを保存された言語で翻訳表示
       console.log('翻訳チェック - API:', !!translationAPI);
@@ -204,11 +204,11 @@
       const container = document.getElementById('favorites-container');
 
       if (items.length === 0) {
-        container.innerHTML = '<p>お気に入りがありません</p>';
+        container.innerHTML = '<p>No favorites yet</p>';
         return;
       }
 
-      let html = `<p>お気に入り: ${items.length}件</p>`;
+      let html = `<p>Favorites: ${items.length}</p>`;
 
       items.forEach(item => {
         html += `
