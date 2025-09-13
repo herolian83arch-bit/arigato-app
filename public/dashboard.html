@@ -144,6 +144,33 @@
       text-decoration: underline;
     }
 
+    .error-log-item {
+      background: #f8f9fa;
+      border: 1px solid #e9ecef;
+      border-radius: 6px;
+      padding: 12px;
+      margin-bottom: 8px;
+      font-family: 'Courier New', monospace;
+    }
+
+    .error-timestamp {
+      font-size: 0.8rem;
+      color: #6c757d;
+      margin-bottom: 4px;
+    }
+
+    .error-message {
+      font-size: 0.9rem;
+      color: #dc3545;
+      word-break: break-word;
+    }
+
+    .error-context {
+      font-size: 0.8rem;
+      color: #6c757d;
+      margin-top: 4px;
+    }
+
     @media (max-width: 768px) {
       .dashboard-container {
         padding: 10px;
@@ -200,6 +227,12 @@
         <div class="value" id="total-revenue">-</div>
         <div class="subtitle">From Stripe payments</div>
       </div>
+
+      <div class="stat-card">
+        <h3>Premium Usage</h3>
+        <div class="value" id="premium-usage">-</div>
+        <div class="subtitle" id="premium-usage-breakdown">-</div>
+      </div>
     </div>
 
     <!-- 売上推移グラフ -->
@@ -213,6 +246,22 @@
       </div>
       <div style="position: relative; height: 400px;">
         <canvas id="revenue-chart"></canvas>
+      </div>
+    </div>
+
+    <!-- エラーログ表示 -->
+    <div class="chart-container">
+      <div class="chart-header">
+        <h2 class="chart-title">Error Logs</h2>
+        <div class="chart-controls">
+          <button class="chart-btn" id="refresh-error-logs">Refresh</button>
+        </div>
+      </div>
+      <div id="error-logs-container">
+        <div class="error-log-item">
+          <div class="error-timestamp">Loading...</div>
+          <div class="error-message">Loading error logs...</div>
+        </div>
       </div>
     </div>
 

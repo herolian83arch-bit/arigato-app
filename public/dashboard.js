@@ -19,6 +19,12 @@ async function initializeDashboard() {
         // ユーザー統計の取得と表示
         await loadUserStats();
 
+        // プレミアム利用回数の取得と表示
+        await loadPremiumUsageStats();
+
+        // エラーログの取得と表示
+        await loadErrorLogs();
+
         // 売上データの取得と表示
         await loadRevenueData();
 
@@ -55,6 +61,84 @@ async function loadUserStats() {
     } catch (error) {
         console.error('❌ User stats loading error:', error);
         throw error;
+    }
+}
+
+// プレミアム利用回数の読み込み
+async function loadPremiumUsageStats() {
+    try {
+        // localStorageから利用回数を取得
+        const premiumUsage = getLocalStorageItem('premiumUsageCount') || 0;
+        const audioPlayCount = getLocalStorageItem('audioPlayCount') || 0;
+        const favoriteToggleCount = getLocalStorageItem('favoriteToggleCount') || 0;
+
+        const totalUsage = premiumUsage + audioPlayCount + favoriteToggleCount;
+
+        // 統計カードの更新
+        updateStatCard('premium-usage', totalUsage);
+        updateStatCard('premium-usage-breakdown',
+            `Dictionary: ${premiumUsage}, Audio: ${audioPlayCount}, Favorites: ${favoriteToggleCount}`);
+
+        console.log('✅ Premium usage stats loaded:', {
+            premiumUsage,
+            audioPlayCount,
+            favoriteToggleCount,
+            totalUsage
+        });
+    } catch (error) {
+        console.error('❌ Premium usage stats loading error:', error);
+        // エラーが発生してもダッシュボードは表示する
+        updateStatCard('premium-usage', 'Error loading data');
+        updateStatCard('premium-usage-breakdown', 'Failed to load usage statistics');
+    }
+}
+
+// エラーログの読み込み
+async function loadErrorLogs() {
+    try {
+        const errorLogs = getLocalStorageItem('errorLogs') || [];
+        const recentLogs = errorLogs.slice(-10); // 最新10件
+
+        const container = document.getElementById('error-logs-container');
+        if (!container) return;
+
+        if (recentLogs.length === 0) {
+            container.innerHTML = '<div class="error-log-item"><div class="error-message">No errors logged</div></div>';
+            return;
+        }
+
+        let html = '';
+        recentLogs.reverse().forEach(log => {
+            const timestamp = new Date(log.timestamp).toLocaleString();
+            html += `
+                <div class="error-log-item">
+                    <div class="error-timestamp">${timestamp}</div>
+                    <div class="error-message">${log.message}</div>
+                    ${log.context ? `<div class="error-context">Context: ${log.context}</div>` : ''}
+                </div>
+            `;
+        });
+
+        container.innerHTML = html;
+
+        console.log('✅ Error logs loaded:', recentLogs.length, 'recent errors');
+    } catch (error) {
+        console.error('❌ Error logs loading error:', error);
+        const container = document.getElementById('error-logs-container');
+        if (container) {
+            container.innerHTML = '<div class="error-log-item"><div class="error-message">Failed to load error logs</div></div>';
+        }
+    }
+}
+
+// localStorageからアイテムを安全に取得
+function getLocalStorageItem(key) {
+    try {
+        const item = localStorage.getItem(key);
+        return item ? JSON.parse(item) : null;
+    } catch (error) {
+        console.error(`Failed to get localStorage item ${key}:`, error);
+        return null;
     }
 }
 
@@ -188,6 +272,21 @@ function setupEventListeners() {
             switchPeriod(period);
         });
     });
+
+    // エラーログリフレッシュボタン
+    const refreshErrorLogsBtn = document.getElementById('refresh-error-logs');
+    if (refreshErrorLogsBtn) {
+        refreshErrorLogsBtn.addEventListener('click', async function() {
+            try {
+                showLoading(true);
+                await loadErrorLogs();
+                showLoading(false);
+            } catch (error) {
+                console.error('❌ Error logs refresh error:', error);
+                showError('Failed to refresh error logs: ' + error.message);
+            }
+        });
+    }
 }
 
 // 期間の切り替え

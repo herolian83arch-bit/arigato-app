@@ -28,6 +28,76 @@ window.FEATURE_FAVORITES = true; // お気に入り機能
 window.FEATURE_TTS = true; // 音声再生機能
 window.FEATURE_PREMIUM = true; // プレミアム機能
 
+// プレミアム機能利用回数記録システム
+function incrementUsageCount(key) {
+  try {
+    const currentCount = parseInt(localStorage.getItem(key) || '0');
+    localStorage.setItem(key, (currentCount + 1).toString());
+    console.log(`📊 Usage count incremented: ${key} = ${currentCount + 1}`);
+  } catch (error) {
+    console.error(`❌ Failed to increment usage count for ${key}:`, error);
+  }
+}
+
+function getUsageCount(key) {
+  try {
+    return parseInt(localStorage.getItem(key) || '0');
+  } catch (error) {
+    console.error(`❌ Failed to get usage count for ${key}:`, error);
+    return 0;
+  }
+}
+
+// エラーログ収集システム
+function logError(error, context = '') {
+  try {
+    const errorLog = {
+      timestamp: new Date().toISOString(),
+      message: error.message || String(error),
+      stack: error.stack || '',
+      context: context,
+      userAgent: navigator.userAgent,
+      url: window.location.href
+    };
+
+    // 既存のエラーログを取得
+    let errorLogs = [];
+    try {
+      const stored = localStorage.getItem('errorLogs');
+      if (stored) {
+        errorLogs = JSON.parse(stored);
+      }
+    } catch (e) {
+      console.warn('Failed to parse existing error logs:', e);
+    }
+
+    // 新しいエラーログを追加
+    errorLogs.push(errorLog);
+
+    // 最大100件まで保持（古いものから削除）
+    if (errorLogs.length > 100) {
+      errorLogs = errorLogs.slice(-100);
+    }
+
+    // localStorageに保存
+    localStorage.setItem('errorLogs', JSON.stringify(errorLogs));
+
+    console.log(`📝 Error logged: ${error.message || String(error)}`);
+  } catch (e) {
+    console.error('Failed to log error:', e);
+  }
+}
+
+function getErrorLogs() {
+  try {
+    const stored = localStorage.getItem('errorLogs');
+    return stored ? JSON.parse(stored) : [];
+  } catch (error) {
+    console.error('Failed to get error logs:', error);
+    return [];
+  }
+}
+
 // グローバルコントロールガードの初期化
 function initializeGlobalControlGuards() {
   // コントロール要素からのイベントをキャプチャ段階で一括無視
@@ -70,6 +140,15 @@ const supportedLanguages = {
 };
 
 document.addEventListener('DOMContentLoaded', async () => {
+  // グローバルエラーハンドラーの設定
+  window.addEventListener('error', (event) => {
+    logError(event.error || new Error(event.message), 'Global Error');
+  });
+
+  window.addEventListener('unhandledrejection', (event) => {
+    logError(new Error(event.reason), 'Unhandled Promise Rejection');
+  });
+
   // ヘルスチェックを一時的に無効化（プレミアム機能の動作確認のため）
   // try {
   //   await performHealthCheck();
@@ -93,18 +172,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   checkStripeCheckoutResult();
 
   document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.onclick = async () => {
-      const newLang = btn.dataset.lang;
-      console.log(`🔄 言語ボタンクリック: ${newLang}`);
-
-      // グローバル変数を即座に更新
-      currentLang = newLang;
-      window.currentLang = newLang;
-
-      // 言語切替処理を実行（localStorage保存完了まで待機）
-      await loadLanguage(newLang);
-
-      console.log(`✅ 言語切替処理完了: ${newLang}`);
+    btn.onclick = () => {
+      currentLang = btn.dataset.lang;
+      loadLanguage(currentLang);
     };
   });
 
@@ -224,16 +294,6 @@ async function loadLanguage(lang) {
 
     languageData = await response.json();
     currentLang = lang;
-
-    // 言語設定をlocalStorageに保存（複数キーで確実に保存）
-    localStorage.setItem('selectedLanguage', lang);
-    localStorage.setItem('language', lang);
-    localStorage.setItem('currentLanguage', lang);
-    console.log(`💾 言語設定をlocalStorageに保存: ${lang}`);
-
-    // グローバル変数も確実に更新
-    window.currentLang = lang;
-    console.log(`🔄 グローバル変数更新完了: currentLang=${currentLang}, window.currentLang=${window.currentLang}`);
 
     // UI即座更新（スケルトンUIなし）
     renderSceneSwitcher();
@@ -414,6 +474,9 @@ function showOnomatopoeiaModal() {
     alert('この機能はプレミアム専用です。プレミアムにアップグレードしてください。');
     return;
   }
+
+  // オノマトペ辞典アクセス回数を記録
+  incrementUsageCount('premiumUsageCount');
 
   const modal = document.getElementById('onomatopoeia-modal');
   modal.style.display = 'block';
@@ -686,46 +749,21 @@ function isFavorite(id) {
   return favorites[String(id)] === true;
 }
 
-// お気に入りの切り替え（ID基準・言語保存対応）
+// お気に入りの切り替え（ID基準）
 function toggleFavorite(id) {
   if (!id) return false;
 
+  // お気に入り利用回数を記録
+  incrementUsageCount('favoriteToggleCount');
+
   const favorites = getFavorites();
   const stringId = String(id);
-
-  // 既存データの互換性処理
-  const favoriteData = favorites[stringId];
-  const currentState = favoriteData === true || (favoriteData && favoriteData.isFavorite === true);
+  const currentState = favorites[stringId] || false;
   const newState = !currentState;
 
-  if (newState) {
-    // お気に入り登録時：現在の言語を取得・保存（複数ソースから確実に取得）
-    const storedLang = localStorage.getItem('selectedLanguage') ||
-                       localStorage.getItem('language') ||
-                       localStorage.getItem('currentLanguage');
-    const globalLang = window.currentLang || currentLang;
-    const finalLang = storedLang || globalLang || 'ja';
-
-    console.log(`🔍 言語取得デバッグ: selectedLanguage=${localStorage.getItem('selectedLanguage')}, language=${localStorage.getItem('language')}, currentLanguage=${localStorage.getItem('currentLanguage')}, global=${globalLang}, final=${finalLang}`);
-
-    // 言語が確実に取得できているかチェック
-    if (finalLang === 'ja' && storedLang && storedLang !== 'ja') {
-      console.warn(`⚠️ 言語取得に問題があります: 期待値=${storedLang}, 実際=${finalLang}`);
-    }
-
-    favorites[stringId] = {
-      isFavorite: true,
-      language: finalLang,
-      timestamp: Date.now()
-    };
-    console.log(`お気に入り登録: ID=${id}, 言語=${finalLang}`);
-  } else {
-    // お気に入り解除時
-    delete favorites[stringId];
-    console.log(`お気に入り解除: ID=${id}`);
-  }
-
+  favorites[stringId] = newState;
   setFavorites(favorites);
+
   return newState;
 }
 
@@ -980,6 +1018,9 @@ let currentAudio = null; // 現在再生中の音声を管理
 
 // 音声再生の改善（プレミアム機能）
 window.playJapaneseSpeech = function(japaneseText) {
+  // 音声再生利用回数を記録
+  incrementUsageCount('audioPlayCount');
+
   // 「音」単体の発音を訓読み「おと」に修正
   let correctedText = japaneseText;
   // 「音」が単体で現れる場合（前後に漢字がない場合）を訓読みに
@@ -1003,6 +1044,9 @@ window.playJapaneseSpeech = function(japaneseText) {
 };
 
 window.playRomajiSpeech = function(romajiText) {
+  // 音声再生利用回数を記録
+  incrementUsageCount('audioPlayCount');
+
   const utter = new SpeechSynthesisUtterance(romajiText);
   utter.lang = 'en-US';
   utter.rate = speechSpeed;
