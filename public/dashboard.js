@@ -25,6 +25,9 @@ async function initializeDashboard() {
         // エラーログの取得と表示
         await loadErrorLogs();
 
+        // お知らせの読み込みと表示
+        await loadAnnouncement();
+
         // 売上データの取得と表示
         await loadRevenueData();
 
@@ -139,6 +142,176 @@ function getLocalStorageItem(key) {
     } catch (error) {
         console.error(`Failed to get localStorage item ${key}:`, error);
         return null;
+    }
+}
+
+// お知らせの読み込み
+async function loadAnnouncement() {
+    try {
+        const announcement = getLocalStorageItem('adminAnnouncement');
+        const textarea = document.getElementById('announcement-text');
+
+        if (textarea) {
+            textarea.value = announcement || '';
+        }
+
+        console.log('✅ Announcement loaded:', announcement ? 'Present' : 'None');
+    } catch (error) {
+        console.error('❌ Announcement loading error:', error);
+    }
+}
+
+// お知らせの保存
+function saveAnnouncement() {
+    try {
+        const textarea = document.getElementById('announcement-text');
+        const statusDiv = document.getElementById('announcement-status');
+
+        if (!textarea) {
+            throw new Error('Announcement textarea not found');
+        }
+
+        const message = textarea.value.trim();
+
+        if (message) {
+            localStorage.setItem('adminAnnouncement', JSON.stringify(message));
+            showAnnouncementStatus('Announcement saved successfully!', 'success');
+            console.log('✅ Announcement saved:', message);
+        } else {
+            localStorage.removeItem('adminAnnouncement');
+            showAnnouncementStatus('Announcement cleared!', 'success');
+            console.log('✅ Announcement cleared');
+        }
+    } catch (error) {
+        console.error('❌ Save announcement error:', error);
+        showAnnouncementStatus('Failed to save announcement: ' + error.message, 'error');
+    }
+}
+
+// お知らせのクリア
+function clearAnnouncement() {
+    try {
+        const textarea = document.getElementById('announcement-text');
+        const statusDiv = document.getElementById('announcement-status');
+
+        if (textarea) {
+            textarea.value = '';
+        }
+
+        localStorage.removeItem('adminAnnouncement');
+        showAnnouncementStatus('Announcement cleared!', 'success');
+        console.log('✅ Announcement cleared');
+    } catch (error) {
+        console.error('❌ Clear announcement error:', error);
+        showAnnouncementStatus('Failed to clear announcement: ' + error.message, 'error');
+    }
+}
+
+// お知らせステータス表示
+function showAnnouncementStatus(message, type) {
+    const statusDiv = document.getElementById('announcement-status');
+    if (statusDiv) {
+        statusDiv.textContent = message;
+        statusDiv.className = `announcement-status ${type}`;
+
+        // 3秒後に非表示
+        setTimeout(() => {
+            statusDiv.textContent = '';
+            statusDiv.className = 'announcement-status';
+        }, 3000);
+    }
+}
+
+// CSVエクスポート機能
+async function exportToCSV() {
+    try {
+        const statusDiv = document.getElementById('export-status');
+        showExportStatus('Preparing CSV export...', 'info');
+
+        // データを収集
+        const userStats = estimateUserStats();
+        const premiumUsage = getLocalStorageItem('premiumUsageCount') || 0;
+        const audioPlayCount = getLocalStorageItem('audioPlayCount') || 0;
+        const favoriteToggleCount = getLocalStorageItem('favoriteToggleCount') || 0;
+        const errorLogs = getLocalStorageItem('errorLogs') || [];
+
+        // 売上データを取得
+        let revenueData = null;
+        try {
+            const response = await fetch('/api/admin-metrics');
+            if (response.ok) {
+                const data = await response.json();
+                revenueData = data;
+            }
+        } catch (error) {
+            console.warn('Failed to fetch revenue data for CSV:', error);
+        }
+
+        // CSVデータを生成
+        const csvData = generateCSVData({
+            userStats,
+            premiumUsage,
+            audioPlayCount,
+            favoriteToggleCount,
+            errorLogs,
+            revenueData
+        });
+
+        // ファイルをダウンロード
+        downloadCSV(csvData, 'arigato-dashboard-' + new Date().toISOString().split('T')[0] + '.csv');
+
+        showExportStatus('CSV exported successfully!', 'success');
+        console.log('✅ CSV exported successfully');
+
+    } catch (error) {
+        console.error('❌ CSV export error:', error);
+        showExportStatus('Failed to export CSV: ' + error.message, 'error');
+    }
+}
+
+// CSVデータ生成
+function generateCSVData(data) {
+    const { userStats, premiumUsage, audioPlayCount, favoriteToggleCount, errorLogs, revenueData } = data;
+
+    let csv = 'Date,Total Users,Premium Users,Free Users,Revenue,Premium Usage (Dictionary),Premium Usage (Audio),Premium Usage (Favorites),Error Count\n';
+
+    const today = new Date().toISOString().split('T')[0];
+    const totalRevenue = revenueData ? revenueData.totalRevenue : 0;
+    const errorCount = errorLogs.length;
+
+    csv += `${today},${userStats.totalUsers},${userStats.premiumUsers},${userStats.freeUsers},${totalRevenue},${premiumUsage},${audioPlayCount},${favoriteToggleCount},${errorCount}\n`;
+
+    return csv;
+}
+
+// CSVファイルダウンロード
+function downloadCSV(csvData, filename) {
+    const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+
+    if (link.download !== undefined) {
+        const url = URL.createObjectURL(blob);
+        link.setAttribute('href', url);
+        link.setAttribute('download', filename);
+        link.style.visibility = 'hidden';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+}
+
+// エクスポートステータス表示
+function showExportStatus(message, type) {
+    const statusDiv = document.getElementById('export-status');
+    if (statusDiv) {
+        statusDiv.textContent = message;
+        statusDiv.className = `export-status ${type}`;
+
+        // 5秒後に非表示
+        setTimeout(() => {
+            statusDiv.textContent = '';
+            statusDiv.className = 'export-status';
+        }, 5000);
     }
 }
 
@@ -286,6 +459,24 @@ function setupEventListeners() {
                 showError('Failed to refresh error logs: ' + error.message);
             }
         });
+    }
+
+    // お知らせ保存ボタン
+    const saveAnnouncementBtn = document.getElementById('save-announcement');
+    if (saveAnnouncementBtn) {
+        saveAnnouncementBtn.addEventListener('click', saveAnnouncement);
+    }
+
+    // お知らせクリアボタン
+    const clearAnnouncementBtn = document.getElementById('clear-announcement');
+    if (clearAnnouncementBtn) {
+        clearAnnouncementBtn.addEventListener('click', clearAnnouncement);
+    }
+
+    // CSVエクスポートボタン
+    const exportCsvBtn = document.getElementById('export-csv');
+    if (exportCsvBtn) {
+        exportCsvBtn.addEventListener('click', exportToCSV);
     }
 }
 

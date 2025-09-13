@@ -171,6 +171,72 @@
       margin-top: 4px;
     }
 
+    .announcement-form {
+      padding: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #2d3748;
+    }
+
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 14px;
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .announcement-status, .export-status {
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .announcement-status.success {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+
+    .announcement-status.error {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+
+    .export-section {
+      padding: 20px;
+    }
+
+    .export-section p {
+      margin-bottom: 20px;
+      color: #6c757d;
+    }
+
     @media (max-width: 768px) {
       .dashboard-container {
         padding: 10px;
@@ -262,6 +328,36 @@
           <div class="error-timestamp">Loading...</div>
           <div class="error-message">Loading error logs...</div>
         </div>
+      </div>
+    </div>
+
+    <!-- お知らせ配信機能 -->
+    <div class="chart-container">
+      <div class="chart-header">
+        <h2 class="chart-title">Announcement Management</h2>
+      </div>
+      <div class="announcement-form">
+        <div class="form-group">
+          <label for="announcement-text">Announcement Message:</label>
+          <textarea id="announcement-text" placeholder="Enter announcement message for all users..." rows="4"></textarea>
+        </div>
+        <div class="form-actions">
+          <button class="chart-btn" id="save-announcement">Save Announcement</button>
+          <button class="chart-btn" id="clear-announcement">Clear Announcement</button>
+        </div>
+        <div id="announcement-status" class="announcement-status"></div>
+      </div>
+    </div>
+
+    <!-- CSVエクスポート機能 -->
+    <div class="chart-container">
+      <div class="chart-header">
+        <h2 class="chart-title">Data Export</h2>
+      </div>
+      <div class="export-section">
+        <p>Export all dashboard data to CSV format for analysis.</p>
+        <button class="chart-btn" id="export-csv">Export CSV</button>
+        <div id="export-status" class="export-status"></div>
       </div>
     </div>
 

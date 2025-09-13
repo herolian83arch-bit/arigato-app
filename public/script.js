@@ -98,6 +98,139 @@ function getErrorLogs() {
   }
 }
 
+// お知らせ表示機能
+function initializeAnnouncement() {
+  try {
+    // お知らせバナーが既に表示されているかチェック
+    if (document.getElementById('announcement-banner')) {
+      return;
+    }
+
+    // お知らせが閉じられているかチェック
+    const isDismissed = localStorage.getItem('announcementDismissed') === 'true';
+    if (isDismissed) {
+      return;
+    }
+
+    // お知らせを取得
+    const announcement = getAnnouncement();
+    if (!announcement) {
+      return;
+    }
+
+    // お知らせバナーを表示
+    showAnnouncementBanner(announcement);
+
+    console.log('✅ Announcement displayed:', announcement);
+  } catch (error) {
+    console.error('❌ Announcement initialization error:', error);
+  }
+}
+
+// お知らせを取得
+function getAnnouncement() {
+  try {
+    const stored = localStorage.getItem('adminAnnouncement');
+    return stored ? JSON.parse(stored) : null;
+  } catch (error) {
+    console.error('Failed to get announcement:', error);
+    return null;
+  }
+}
+
+// お知らせバナーを表示
+function showAnnouncementBanner(message) {
+  // バナー要素を作成
+  const banner = document.createElement('div');
+  banner.id = 'announcement-banner';
+  banner.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 20px;
+    z-index: 10000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 1.4;
+  `;
+
+  // メッセージ部分
+  const messageDiv = document.createElement('div');
+  messageDiv.style.cssText = `
+    flex: 1;
+    margin-right: 15px;
+  `;
+  messageDiv.innerHTML = `📢 <strong>Announcement:</strong> ${message}`;
+
+  // 閉じるボタン
+  const closeBtn = document.createElement('button');
+  closeBtn.innerHTML = '×';
+  closeBtn.style.cssText = `
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+  `;
+
+  // 閉じるボタンのホバー効果
+  closeBtn.addEventListener('mouseenter', () => {
+    closeBtn.style.backgroundColor = 'rgba(255,255,255,0.2)';
+  });
+  closeBtn.addEventListener('mouseleave', () => {
+    closeBtn.style.backgroundColor = 'transparent';
+  });
+
+  // 閉じるボタンのクリックイベント
+  closeBtn.addEventListener('click', () => {
+    dismissAnnouncement();
+  });
+
+  // 要素を組み立て
+  banner.appendChild(messageDiv);
+  banner.appendChild(closeBtn);
+
+  // ページの先頭に挿入
+  document.body.insertBefore(banner, document.body.firstChild);
+
+  // ページのコンテンツを下にずらす
+  document.body.style.paddingTop = '60px';
+}
+
+// お知らせを閉じる
+function dismissAnnouncement() {
+  try {
+    const banner = document.getElementById('announcement-banner');
+    if (banner) {
+      banner.remove();
+    }
+
+    // ページのコンテンツのパディングを元に戻す
+    document.body.style.paddingTop = '0';
+
+    // 閉じたフラグを保存
+    localStorage.setItem('announcementDismissed', 'true');
+
+    console.log('✅ Announcement dismissed');
+  } catch (error) {
+    console.error('❌ Dismiss announcement error:', error);
+  }
+}
+
 // グローバルコントロールガードの初期化
 function initializeGlobalControlGuards() {
   // コントロール要素からのイベントをキャプチャ段階で一括無視
@@ -148,6 +281,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   window.addEventListener('unhandledrejection', (event) => {
     logError(new Error(event.reason), 'Unhandled Promise Rejection');
   });
+
+  // お知らせ表示機能の初期化
+  initializeAnnouncement();
 
   // ヘルスチェックを一時的に無効化（プレミアム機能の動作確認のため）
   // try {
