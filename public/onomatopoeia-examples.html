@@ -264,7 +264,7 @@
           const storedLang = localStorage.getItem('selectedLanguage') ||
                              localStorage.getItem('language') ||
                              localStorage.getItem('currentLanguage');
-          
+
           // currentLang変数の安全な取得
           let globalLang;
           try {
@@ -273,7 +273,7 @@
             console.warn('currentLang取得エラー:', error);
             globalLang = null;
           }
-          
+
           // URLパラメータを最優先で言語を決定
           const finalLang = urlLang || storedLang || globalLang || 'ja';
 
