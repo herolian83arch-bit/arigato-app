@@ -538,8 +538,8 @@ function checkPremiumStatus() {
   isPremiumUser = premiumStatus === 'true';
 
   // 開発環境でのテスト用（一時的にプレミアム状態を有効化）
-  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname.includes('vercel.app')) {
-    // テスト用：プレミアム状態を強制的に有効化
+  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    // テスト用：プレミアム状態を強制的に有効化（ローカル環境のみ）
     isPremiumUser = true;
     localStorage.setItem('premiumActive', 'true');
     console.log('🧪 テスト環境: プレミアム機能を強制有効化');
