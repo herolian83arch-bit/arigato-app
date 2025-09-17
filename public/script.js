@@ -1122,7 +1122,7 @@ function enablePremiumFeatures() {
 
 // プレミアムプロンプト表示
 function showPremiumPrompt() {
-  alert('✨ This feature is available for Premium users!\n\nUpgrade to Premium to unlock:\n• Advanced audio quality\n• Dictionary integration\n• Custom backgrounds\n• Offline mode');
+  alert('✨ This feature is available for Premium users!\n\nUpgrade to Premium to unlock:\n• Dictionary integration\n• My Favorites');
 }
 
 // 高度な音声機能
