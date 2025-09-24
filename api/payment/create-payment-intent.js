@@ -23,8 +23,8 @@ module.exports = async (req, res) => {
         },
       ],
       mode: "payment",
-      success_url: `${req.headers.origin}/?success=true`,
-      cancel_url: `${req.headers.origin}/?canceled=true`,
+      success_url: `${process.env.SITE_URL}/?success=true`,
+      cancel_url: `${process.env.SITE_URL}/?canceled=true`,
     });
 
     console.log('✅ Stripe session created successfully:', session.id);
