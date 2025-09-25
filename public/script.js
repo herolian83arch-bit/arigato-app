@@ -1543,9 +1543,9 @@ function checkAdminMode() {
   return false;
 }
 
-// PC版: Ctrl+Shift+A で管理者画面表示
+// PC版: Ctrl+Shift+Z で管理者画面表示
 document.addEventListener('keydown', function(e) {
-  if (e.ctrlKey && e.shiftKey && e.key === 'A') {
+  if (e.ctrlKey && e.shiftKey && e.key === 'Z') {
     e.preventDefault();
     showAdminLogin();
   }
