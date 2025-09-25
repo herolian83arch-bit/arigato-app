@@ -1387,3 +1387,195 @@ document.addEventListener('DOMContentLoaded', function() {
     checkAudioCapabilities();
   }, 1000); // 1秒後に実行（音声APIの初期化を待つ）
 });
+
+// ========================================
+// 管理者認証システム
+// ========================================
+
+// 管理者認証情報
+const ADMIN_EMAIL = 'hilohasumayu324@gmail.com';
+const ADMIN_PASSWORD = 'honma.arigato@non';
+
+// 管理者モードフラグ
+let isAdminMode = false;
+
+// 管理者画面を表示
+function showAdminLogin() {
+  console.log('🔑 管理者ログイン画面を表示します');
+
+  // 管理者モーダルが既に存在する場合は表示
+  const existingModal = document.getElementById('admin-modal');
+  if (existingModal) {
+    existingModal.style.display = 'block';
+    return;
+  }
+
+  // 管理者モーダルを作成
+  const modal = document.createElement('div');
+  modal.id = 'admin-modal';
+  modal.style.cssText = `
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  `;
+
+  modal.innerHTML = `
+    <div style="
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    ">
+      <h2 style="margin-bottom: 20px; color: #333;">🔑 管理者ログイン</h2>
+      <div style="margin-bottom: 15px;">
+        <input type="email" id="admin-email" placeholder="メールアドレス"
+               style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;">
+      </div>
+      <div style="margin-bottom: 20px;">
+        <input type="password" id="admin-password" placeholder="パスワード"
+               style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+      </div>
+      <div style="display: flex; gap: 10px; justify-content: center;">
+        <button onclick="authenticateAdmin()"
+                style="background: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+          ログイン
+        </button>
+        <button onclick="closeAdminModal()"
+                style="background: #f44336; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+          キャンセル
+        </button>
+      </div>
+      <div id="admin-message" style="margin-top: 15px; color: #f44336; font-size: 14px;"></div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  // エンターキーでログイン
+  document.getElementById('admin-email').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      document.getElementById('admin-password').focus();
+    }
+  });
+
+  document.getElementById('admin-password').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      authenticateAdmin();
+    }
+  });
+
+  // モーダル外クリックで閉じる
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeAdminModal();
+    }
+  });
+}
+
+// 管理者モーダルを閉じる
+function closeAdminModal() {
+  const modal = document.getElementById('admin-modal');
+  if (modal) {
+    modal.style.display = 'none';
+  }
+}
+
+// 管理者認証
+function authenticateAdmin() {
+  const email = document.getElementById('admin-email').value;
+  const password = document.getElementById('admin-password').value;
+  const messageDiv = document.getElementById('admin-message');
+
+  if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
+    // 認証成功
+    isAdminMode = true;
+    isPremiumUser = true;
+
+    // 全ブラウザでプレミアム機能を有効化
+    localStorage.setItem('premiumActive', 'true');
+    localStorage.setItem('adminMode', 'true');
+    localStorage.setItem('adminEmail', email);
+
+    messageDiv.style.color = '#4CAF50';
+    messageDiv.textContent = '✅ 管理者認証成功！プレミアム機能が有効になりました。';
+
+    // UI更新
+    updatePremiumUI();
+
+    console.log('🔑 管理者認証成功:', email);
+
+    // 3秒後にモーダルを閉じる
+    setTimeout(() => {
+      closeAdminModal();
+    }, 3000);
+
+  } else {
+    // 認証失敗
+    messageDiv.style.color = '#f44336';
+    messageDiv.textContent = '❌ 認証に失敗しました。メールアドレスとパスワードを確認してください。';
+
+    console.log('❌ 管理者認証失敗');
+  }
+}
+
+// 管理者モードのチェック
+function checkAdminMode() {
+  const adminMode = localStorage.getItem('adminMode');
+  const adminEmail = localStorage.getItem('adminEmail');
+
+  if (adminMode === 'true' && adminEmail === ADMIN_EMAIL) {
+    isAdminMode = true;
+    isPremiumUser = true;
+    console.log('🔑 管理者モードが有効です:', adminEmail);
+    return true;
+  }
+
+  return false;
+}
+
+// PC版: Ctrl+Shift+A で管理者画面表示
+document.addEventListener('keydown', function(e) {
+  if (e.ctrlKey && e.shiftKey && e.key === 'A') {
+    e.preventDefault();
+    showAdminLogin();
+  }
+});
+
+// モバイル版: 長押しジェスチャーで管理者画面表示
+let touchStartTime = 0;
+let touchStartElement = null;
+
+document.addEventListener('touchstart', function(e) {
+  touchStartTime = Date.now();
+  touchStartElement = e.target;
+});
+
+document.addEventListener('touchend', function(e) {
+  const touchDuration = Date.now() - touchStartTime;
+
+  // 5秒以上長押しで管理者画面表示
+  if (touchDuration > 5000 && touchStartElement) {
+    e.preventDefault();
+    showAdminLogin();
+  }
+
+  touchStartTime = 0;
+  touchStartElement = null;
+});
+
+// ページ読み込み時に管理者モードをチェック
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(() => {
+    checkAdminMode();
+  }, 500);
+});
