@@ -81,8 +81,8 @@ chmod +x deploy-to-production.sh
 ### 成功時
 ```
 🎉 SUCCESS: Production に反映されました！
-デプロイURL: https://arigato-app-starter-1iykcs43b-herolians-projects.vercel.app
-Production URL: https://arigato-app-starter.vercel.app
+デプロイURL: https://www.arigato-app.com
+Production URL: https://www.arigato-app.com
 ```
 
 ### 失敗時
