@@ -435,9 +435,6 @@ async function loadLanguage(lang) {
     renderSceneSwitcher();
     renderScene();
 
-    // 検索ボックスのプレースホルダーを更新
-    updateSearchPlaceholder();
-
     console.log(`✅ 言語切替完了: ${lang}`);
 
     // バックグラウンドで前後2言語をプリフェッチ
@@ -608,7 +605,7 @@ function initializePremiumModal() {
 }
 
 // オノマトペ辞典モーダルを表示
-async function showOnomatopoeiaModal() {
+function showOnomatopoeiaModal() {
   if (!isPremiumUser) {
     alert('この機能はプレミアム専用です。プレミアムにアップグレードしてください。');
     return;
@@ -619,7 +616,7 @@ async function showOnomatopoeiaModal() {
 
   const modal = document.getElementById('onomatopoeia-modal');
   modal.style.display = 'block';
-  await showOnomatopoeiaScenes();
+  showOnomatopoeiaScenes();
 }
 
 // オノマトペ辞典モーダルを閉じる
@@ -629,31 +626,12 @@ function closeOnomatopoeiaModal() {
 }
 
 // オノマトペシーン一覧を表示
-async function showOnomatopoeiaScenes() {
+function showOnomatopoeiaScenes() {
   const scenesContainer = document.getElementById('onomatopoeia-scenes');
   const contentContainer = document.getElementById('onomatopoeia-content');
-  const searchContainer = document.getElementById('search-container');
 
   scenesContainer.style.display = 'block';
   contentContainer.style.display = 'none';
-  searchContainer.style.display = 'block';
-
-  // オノマトペデータの存在確認と再読み込み
-  if (onomatopoeiaData.length === 0) {
-    console.log('🔄 オノマトペデータが空のため再読み込み中...');
-    try {
-      await loadOnomatopoeiaData();
-      console.log(`✅ オノマトペデータ読み込み完了: ${onomatopoeiaData.length}件`);
-    } catch (error) {
-      console.error('❌ オノマトペデータの再読み込みに失敗:', error);
-      // エラーの場合は空のシーンを表示
-      renderOnomatopoeiaScenes({});
-      return;
-    }
-  }
-
-  // 検索ボックスのイベントリスナーを設定
-  setupOnomatopoeiaSearch();
 
   // シーンをグループ化
   const sceneGroups = {};
@@ -664,99 +642,11 @@ async function showOnomatopoeiaScenes() {
     sceneGroups[item.scene].push(item);
   });
 
-  renderOnomatopoeiaScenes(sceneGroups);
-}
-
-// オノマトペ検索機能のセットアップ
-function setupOnomatopoeiaSearch() {
-  const searchBox = document.getElementById('onomatopoeia-search-box');
-  const resultsCount = document.getElementById('search-results-count');
-
-  if (!searchBox) return;
-
-  // プレースホルダーの多言語対応
-  const placeholders = {
-    'ja': 'オノマトペを検索...',
-    'en': 'Search onomatopoeia...',
-    'zh': '搜索拟声词...',
-    'ko': '의성어 검색...',
-    'fr': 'Rechercher des onomatopées...',
-    'de': 'Onomatopöie suchen...',
-    'it': 'Cerca onomatopee...',
-    'tw': '搜尋擬聲詞...'
-  };
-
-  searchBox.placeholder = placeholders[currentLang] || placeholders['en'];
-
-  // 検索実行
-  searchBox.addEventListener('input', function() {
-    const searchTerm = this.value.trim().toUpperCase();
-    performOnomatopoeiaSearch(searchTerm);
-  });
-
-  // 初期表示
-  performOnomatopoeiaSearch('');
-}
-
-// オノマトペ検索実行
-function performOnomatopoeiaSearch(searchTerm) {
-  const scenesContainer = document.getElementById('onomatopoeia-scenes');
-  const resultsCount = document.getElementById('search-results-count');
-
-  // シーンをグループ化
-  const sceneGroups = {};
-  let totalMatches = 0;
-  let matchedScenes = 0;
-
-  onomatopoeiaData.forEach(item => {
-    if (!sceneGroups[item.scene]) {
-      sceneGroups[item.scene] = [];
-    }
-
-    // romajiフィールドから《》内のオノマトペを抽出して検索
-    const onomatopoeiaMatches = extractOnomatopoeiaFromRomaji(item.romaji);
-    const hasMatch = searchTerm === '' || onomatopoeiaMatches.some(onomatopoeia =>
-      onomatopoeia.includes(searchTerm)
-    );
-
-    if (hasMatch) {
-      sceneGroups[item.scene].push(item);
-      totalMatches++;
-    }
-  });
-
-  // マッチしたシーンのみカウント
-  matchedScenes = Object.keys(sceneGroups).filter(scene => sceneGroups[scene].length > 0).length;
-
-  // 結果表示
-  if (searchTerm === '') {
-    resultsCount.textContent = '';
-  } else {
-    resultsCount.textContent = `${matchedScenes}個のシーンで${totalMatches}件のオノマトペが見つかりました`;
-  }
-
-  renderOnomatopoeiaScenes(sceneGroups, searchTerm);
-}
-
-// romajiフィールドから《》内のオノマトペを抽出
-function extractOnomatopoeiaFromRomaji(romaji) {
-  if (!romaji) return [];
-  const matches = romaji.match(/《([^》]*)》/g);
-  return matches ? matches.map(match => match.replace(/[《》]/g, '')) : [];
-}
-
-// シーンカードのレンダリング
-function renderOnomatopoeiaScenes(sceneGroups, searchTerm = '') {
-  const scenesContainer = document.getElementById('onomatopoeia-scenes');
-
   let html = '<div class="scene-grid">';
   Object.keys(sceneGroups).forEach(scene => {
     const count = sceneGroups[scene].length;
-    const hasMatches = count > 0;
-    const cardClass = hasMatches ? 'scene-card' : 'scene-card search-no-match';
-
     html += `
-      <div class="${cardClass}" onclick="showOnomatopoeiaScene('${scene}')" ${!hasMatches ? 'style="pointer-events: none;"' : ''}>
+      <div class="scene-card" onclick="showOnomatopoeiaScene('${scene}')">
         <div class="scene-icon">📚</div>
         <div class="scene-title">${scene}</div>
         <div class="scene-count">${count}例文</div>
@@ -768,35 +658,14 @@ function renderOnomatopoeiaScenes(sceneGroups, searchTerm = '') {
   scenesContainer.innerHTML = html;
 }
 
-// 検索ボックスのプレースホルダーを更新
-function updateSearchPlaceholder() {
-  const searchBox = document.getElementById('onomatopoeia-search-box');
-  if (!searchBox) return;
-
-  const placeholders = {
-    'ja': 'オノマトペを検索...',
-    'en': 'Search onomatopoeia...',
-    'zh': '搜索拟声词...',
-    'ko': '의성어 검색...',
-    'fr': 'Rechercher des onomatopées...',
-    'de': 'Onomatopöie suchen...',
-    'it': 'Cerca onomatopee...',
-    'tw': '搜尋擬聲詞...'
-  };
-
-  searchBox.placeholder = placeholders[currentLang] || placeholders['en'];
-}
-
 // オノマトペシーンの詳細を表示
 async function showOnomatopoeiaScene(scene) {
   const scenesContainer = document.getElementById('onomatopoeia-scenes');
   const contentContainer = document.getElementById('onomatopoeia-content');
   const examplesContainer = document.getElementById('onomatopoeia-examples');
-  const searchContainer = document.getElementById('search-container');
 
   scenesContainer.style.display = 'none';
   contentContainer.style.display = 'block';
-  searchContainer.style.display = 'none';
 
   const sceneItems = onomatopoeiaData.filter(item => item.scene === scene);
 
