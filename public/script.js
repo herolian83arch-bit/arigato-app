@@ -608,7 +608,7 @@ function initializePremiumModal() {
 }
 
 // オノマトペ辞典モーダルを表示
-function showOnomatopoeiaModal() {
+async function showOnomatopoeiaModal() {
   if (!isPremiumUser) {
     alert('この機能はプレミアム専用です。プレミアムにアップグレードしてください。');
     return;
@@ -619,7 +619,7 @@ function showOnomatopoeiaModal() {
 
   const modal = document.getElementById('onomatopoeia-modal');
   modal.style.display = 'block';
-  showOnomatopoeiaScenes();
+  await showOnomatopoeiaScenes();
 }
 
 // オノマトペ辞典モーダルを閉じる
@@ -629,7 +629,7 @@ function closeOnomatopoeiaModal() {
 }
 
 // オノマトペシーン一覧を表示
-function showOnomatopoeiaScenes() {
+async function showOnomatopoeiaScenes() {
   const scenesContainer = document.getElementById('onomatopoeia-scenes');
   const contentContainer = document.getElementById('onomatopoeia-content');
   const searchContainer = document.getElementById('search-container');
@@ -637,6 +637,20 @@ function showOnomatopoeiaScenes() {
   scenesContainer.style.display = 'block';
   contentContainer.style.display = 'none';
   searchContainer.style.display = 'block';
+
+  // オノマトペデータの存在確認と再読み込み
+  if (onomatopoeiaData.length === 0) {
+    console.log('🔄 オノマトペデータが空のため再読み込み中...');
+    try {
+      await loadOnomatopoeiaData();
+      console.log(`✅ オノマトペデータ読み込み完了: ${onomatopoeiaData.length}件`);
+    } catch (error) {
+      console.error('❌ オノマトペデータの再読み込みに失敗:', error);
+      // エラーの場合は空のシーンを表示
+      renderOnomatopoeiaScenes({});
+      return;
+    }
+  }
 
   // 検索ボックスのイベントリスナーを設定
   setupOnomatopoeiaSearch();
