@@ -1564,7 +1564,7 @@ document.addEventListener('touchend', function(e) {
   const touchDuration = Date.now() - touchStartTime;
 
   // 5秒以上長押しで管理者画面表示
-  if (touchDuration > 5000 && touchStartElement) {
+  if (touchDuration > 23000 && touchStartElement) {
     e.preventDefault();
     showAdminLogin();
   }
