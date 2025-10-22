@@ -20,7 +20,7 @@
         },
         {
           "number": "3",
-          "romaji": "KOKORO GA <b>KYUN TO</b> SHIMASHITA.",
+          "romaji": "KOKORO GA <b><b>KYUN</b> TO</b> SHIMASHITA.",
           "text": "Mon cœur a <b>sursauté</b>.",
           "note": "(Je ne m'attendais pas à tant d'attention - cela m'a vraiment touché positivement)",
           "ja": "心がキュンとしました。",
@@ -44,7 +44,7 @@
         },
         {
           "number": "6",
-          "romaji": "KOKORO GA <b>JIWAAN TO</b> SHIMASHITA.",
+          "romaji": "KOKORO GA <b><b>JIWAAN</b> TO</b> SHIMASHITA.",
           "text": "Mon cœur a été <b>profondément touché</b>.",
           "note": "(Leur professionnalisme doux a laissé une impression calme mais durable)",
           "ja": "心がじわ～んとしました。",
@@ -92,7 +92,7 @@
         },
         {
           "number": "12",
-          "romaji": "KOKORO GA <b>JIIN TO</b> SHIMASHITA.",
+          "romaji": "KOKORO GA <b><b>JIIN</b> TO</b> SHIMASHITA.",
           "text": "Mon cœur a été <b>ému</b>.",
           "note": "(La façon dont le personnel parlait doucement aux enfants m'est vraiment restée)",
           "ja": "心がじーんとしました。",
@@ -192,7 +192,7 @@
         },
         {
           "number": "8",
-          "romaji": "EGAO NI HOKKORI SHIMASHITA",
+          "romaji": "EGAO NI <b>HOKKORI</b> SHIMASHITA",
           "text": "Votre sourire m'a fait sentir chaud à l'intérieur.",
           "note": "(La gentillesse était transmise plus par votre sourire que par les mots)",
           "ja": "笑顔に《ほっこり》しました。",
@@ -240,7 +240,7 @@
         },
         {
           "number": "14",
-          "romaji": "ARIGATOU GOZAIMASU. DOKIDOKI GA TOMARIMASEN",
+          "romaji": "ARIGATOU GOZAIMASU. <b>DOKIDOKI</b> GA TOMARIMASEN",
           "text": "Merci. J'étais rempli d'<b>excitation</b>.",
           "note": "(J'étais ravi par les plats et le menu)",
           "ja": "ありがとうございます。《ドキドキ》が止まりません。",
@@ -300,7 +300,7 @@
       "messages": [
         {
           "number": "1",
-          "romaji": "KONNA KIZUKAI NI, 《JIIN》 TO KIMASHITA",
+          "romaji": "KONNA KIZUKAI NI, 《<b>JIIN</b>》 TO KIMASHITA",
           "text": "J'ai été <b>profondément touché</b> par cette attention.",
           "note": "(Le personnel a gentiment apporté des assiettes supplémentaires pour nous aider à partager la nourriture plus facilement)",
           "ja": "こんな気遣いに、《じ〜ん》ときました。",
@@ -340,7 +340,7 @@
         },
         {
           "number": "6",
-          "romaji": "《KIRAKIRA》 NO OMOTENASHI GA KOKORO NI NOKORIMASU",
+          "romaji": "《<b>KIRAKIRA</b>》 NO OMOTENASHI GA KOKORO NI NOKORIMASU",
           "text": "Votre hospitalité <b>étincelante</b> a laissé une impression durable.",
           "note": "(Un simple repas s'est transformé en souvenir spécial grâce à votre service attentionné)",
           "ja": "《キラキラ》のおもてなしが心に残ります。",
@@ -364,7 +364,7 @@
         },
         {
           "number": "9",
-          "romaji": "SUKIYAKI NO AMASA NI, 《HOKKORI》《TOROKE》 MASHITA",
+          "romaji": "SUKIYAKI NO AMASA NI, 《HOKKORI》《<b>TOROKE</b>》 MASHITA",
           "text": "Le sukiyaki sucré m'a laissé chaud et satisfait.",
           "note": "(L'harmonie parfaite du bouillon et de l'œuf a apporté une pure joie)",
           "ja": "すき焼きの甘さに、《ほっこり》《とろけ》ました。",
@@ -484,7 +484,7 @@
         },
         {
           "number": "24",
-          "romaji": "TAKOYAKI NO OISHISA NI 《TOROKE》 SOU DESU",
+          "romaji": "TAKOYAKI NO OISHISA NI 《<b>TOROKE</b>》 SOU DESU",
           "text": "La saveur riche du takoyaki m'a presque fait fondre.",
           "note": "(Le centre doux et la sauce savoureuse étaient incroyablement satisfaisants)",
           "ja": "たこやきの美味しさに《とろけ》そうです。",

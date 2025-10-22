@@ -20,7 +20,7 @@
         },
         {
           "number": "3",
-          "romaji": "KOKORO GA <b>KYUN TO</b> SHIMASHITA.",
+          "romaji": "KOKORO GA <b><b>KYUN</b> TO</b> SHIMASHITA.",
           "text": "마음이 두근거렸습니다.",
           "note": "(이런 배려는 기대하지 못했는데 정말 좋은 의미로 감동이었습니다.)",
           "ja": "心がキュンとしました。",
@@ -44,7 +44,7 @@
         },
         {
           "number": "6",
-          "romaji": "KOKORO GA <b>JIWAAN TO</b> SHIMASHITA.",
+          "romaji": "KOKORO GA <b><b>JIWAAN</b> TO</b> SHIMASHITA.",
           "text": "마음이 깊이 감동받았습니다.",
           "note": "(부드럽고 전문적인 태도가 조용하지만 오래 남는 인상을 주었습니다.)",
           "ja": "心がじわ〜んとしました。",
@@ -144,7 +144,7 @@
         },
         {
           "number": "2",
-          "romaji": "ARIGATOU GOZAIMASU. HOKKORI SHIMASHITA",
+          "romaji": "ARIGATOU GOZAIMASU. <b>HOKKORI</b> SHIMASHITA",
           "text": "감사합니다. 마음이 따뜻해졌습니다.",
           "note": "프론트 직원이 미소로 맞이해주어 마음이 따뜻해졌습니다.",
           "ja": "ありがとうございます。《ほっこり》했습니다。",
@@ -192,7 +192,7 @@
         },
         {
           "number": "8",
-          "romaji": "EGAO NI HOKKORI SHIMASHITA",
+          "romaji": "EGAO NI <b>HOKKORI</b> SHIMASHITA",
           "text": "미소에 마음이 따뜻해졌습니다.",
           "note": "말보다 더 전해지는 친절함이 마음에 와닿았습니다.",
           "ja": "笑顔に《ほっこり》했습니다。",
@@ -240,7 +240,7 @@
         },
         {
           "number": "14",
-          "romaji": "ARIGATOU GOZAIMASU. DOKIDOKI GA TOMARIMASEN",
+          "romaji": "ARIGATOU GOZAIMASU. <b>DOKIDOKI</b> GA TOMARIMASEN",
           "text": "감사합니다. 두근거림이 멈추지 않았습니다.",
           "note": "나오는 요리와 메뉴에 감동해서 레스토랑 직원에게 전하고 싶었습니다.",
           "ja": "ありがとうございます。《ドキドキ》が止まりません。",

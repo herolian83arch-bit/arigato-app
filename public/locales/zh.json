@@ -20,7 +20,7 @@
         },
         {
           "number": "3",
-          "romaji": "KOKORO GA <b>KYUN TO</b> SHIMASHITA.",
+          "romaji": "KOKORO GA <b><b>KYUN</b> TO</b> SHIMASHITA.",
           "text": "我的心怦然一动。",
           "note": "（没想到会遇到这样的关怀，真的让我很感动。）",
           "ja": "心がキュンとしました。",
@@ -44,7 +44,7 @@
         },
         {
           "number": "6",
-          "romaji": "KOKORO GA <b>JIWAAN TO</b> SHIMASHITA.",
+          "romaji": "KOKORO GA <b><b>JIWAAN</b> TO</b> SHIMASHITA.",
           "text": "我的内心被深深打动。",
           "note": "（他们温柔而专业的态度留下了安静却持久的印象。）",
           "ja": "心がじわ〜んとしました。",
@@ -92,7 +92,7 @@
         },
         {
           "number": "12",
-          "romaji": "KOKORO GA <b>JIIN TO</b> SHIMASHITA.",
+          "romaji": "KOKORO GA <b><b>JIIN</b> TO</b> SHIMASHITA.",
           "text": "我的心被感动了。",
           "note": "（工作人员温柔地与孩子说话的样子让我印象深刻。）",
           "ja": "心がじーんとしました。",
@@ -300,7 +300,7 @@
       "messages": [
         {
           "number": "1",
-          "romaji": "KONNA KIZUKAI NI,《JIIN》 TO KIMASHITA.",
+          "romaji": "KONNA KIZUKAI NI,《<b>JIIN</b>》 TO KIMASHITA.",
           "text": "这份贴心让我感动得《心头一颤》。",
           "note": "（服务员贴心地多拿了盘子，方便我们分菜。）",
           "ja": "こんな気遣いに、《じ〜ん》ときました。",
@@ -340,7 +340,7 @@
         },
         {
           "number": "6",
-          "romaji": "《KIRAKIRA》NO OMOTENASHI GA KOKORO NI NOKORIMASU.",
+          "romaji": "《<b>KIRAKIRA</b>》NO OMOTENASHI GA KOKORO NI NOKORIMASU.",
           "text": "《闪耀》的款待让我难以忘怀。",
           "note": "（贴心的服务让简单的一餐变得特别。）",
           "ja": "《キラキラ》のおもてなしが心に残ります。",
@@ -364,7 +364,7 @@
         },
         {
           "number": "9",
-          "romaji": "SUKIYAKI NO AMASA NI,《HOKKORI》《TOROKE》MASHITA.",
+          "romaji": "SUKIYAKI NO AMASA NI,《HOKKORI》《<b>TOROKE</b>》MASHITA.",
           "text": "寿喜烧的甜味让我《暖暖》《融化》。",
           "note": "（高汤与鸡蛋的完美融合带来极致享受。）",
           "ja": "すきやきの甘さに、《ほっこり》《とろけ》ました。",
@@ -484,7 +484,7 @@
         },
         {
           "number": "24",
-          "romaji": "TAKOYAKI NO OISHISA NI《TOROKE》SŌ DESU.",
+          "romaji": "TAKOYAKI NO OISHISA NI《<b>TOROKE</b>》SŌ DESU.",
           "text": "章鱼烧的美味让我快要《融化》。",
           "note": "（柔软的内馅和咸香的酱汁令人满足。）",
           "ja": "たこ焼きのおいしさに《とろけ》そうです。",
