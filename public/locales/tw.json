@@ -4,7 +4,7 @@
       "messages": [
         {
           "number": "1",
-          "romaji": "KOKORO GA <b>JINWARI</b> SHIMASHITA.",
+          "romaji": "KOKORO GA 《JINWARI》 SHIMASHITA.",
           "text": "心<b>漸漸地</b>溫暖起來了。",
           "note": "（被說「歡迎來到日本」時，真的感覺自己受到了歡迎）",
           "ja": "心がじんわりしました。",
@@ -12,7 +12,7 @@
         },
         {
           "number": "2",
-          "romaji": "KOKORO GA <b>HOTTO</b> SHIMASHITA.",
+          "romaji": "KOKORO GA 《HOTTO》 SHIMASHITA.",
           "text": "心<b>鬆了一口氣</b>。",
           "note": "（一點小小的親切，讓我感受到安心與關懷）",
           "ja": "心がほっとしました。",
@@ -20,7 +20,7 @@
         },
         {
           "number": "3",
-          "romaji": "KOKORO GA <b>KYUN</b> TO SHIMASHITA.",
+          "romaji": "KOKORO GA 《KYUN》 TO SHIMASHITA.",
           "text": "心裡突然<b>一緊</b>。",
           "note": "（沒想到會有這樣的貼心，真的是一個令人感動的驚喜）",
           "ja": "心がキュンとしました。",
@@ -44,7 +44,7 @@
         },
         {
           "number": "6",
-          "romaji": "KOKORO GA <b>JIWAAN</b> TO SHIMASHITA.",
+          "romaji": "KOKORO GA 《JIWAN TO》 SHIMASHITA.",
           "text": "心<b>慢慢地</b>被感動了。",
           "note": "（溫暖的話語讓我的心被觸動）",
           "ja": "心がじわ～んとしました。",
@@ -52,7 +52,7 @@
         },
         {
           "number": "7",
-          "romaji": "KOKORO GA URUURU SHIMASHITA.",
+          "romaji": "KOKORO GA 《URUURU》 SHIMASHITA.",
           "text": "心裡<b>眼眶濕潤</b>了。",
           "note": "（感動得眼眶差點泛淚）",
           "ja": "心がうるうるしました。",
@@ -60,7 +60,7 @@
         },
         {
           "number": "8",
-          "romaji": "KOKORO GA FUWATTO NAGOMIMASHITA.",
+          "romaji": "KOKORO GA 《FUWATTO》 NAGOMIMASHITA.",
           "text": "心情<b>輕輕地</b>放鬆下來了。",
           "note": "（親切的氛圍讓我安心）",
           "ja": "心がふわっと和みました。",
@@ -68,7 +68,7 @@
         },
         {
           "number": "9",
-          "romaji": "KOKORO GA <b>WAKUWAKU</b> SHIMASHITA.",
+          "romaji": "KOKORO GA 《WAKUWAKU》 SHIMASHITA.",
           "text": "心情充滿了<b>期待</b>。",
           "note": "（新的體驗讓我的心怦然加速）",
           "ja": "心がワクワクしました。",
@@ -84,7 +84,7 @@
         },
         {
           "number": "11",
-          "romaji": "KOKORO GA POKAPOKA SHIMASHITA.",
+          "romaji": "KOKORO GA 《POKAPOKA》 SHIMASHITA.",
           "text": "心感到<b>暖洋洋</b>的。",
           "note": "（那是一個令人放鬆的瞬間）",
           "ja": "心がぽかぽかしました。",
@@ -92,7 +92,7 @@
         },
         {
           "number": "12",
-          "romaji": "KOKORO GA <b>JIIN</b> TO SHIMASHITA.",
+          "romaji": "KOKORO GA 《JIIN》 TO SHIMASHITA.",
           "text": "心被<b>深深感動</b>。",
           "note": "（心中充滿了感動）",
           "ja": "心がじーんとしました。",
@@ -100,7 +100,7 @@
         },
         {
           "number": "13",
-          "romaji": "KOKORO GA <b>HOTTO</b> SHIMASHITA.",
+          "romaji": "KOKORO GA 《HOTTO》 SHIMASHITA.",
           "text": "心感到<b>安心</b>。",
           "note": "（被包圍在一種安心感中）",
           "ja": "心がほっとしました。",
@@ -108,7 +108,7 @@
         },
         {
           "number": "14",
-          "romaji": "KOKORO GA HAZUMIMASHITA.",
+          "romaji": "KOKORO GA HAZUMI MASHITA.",
           "text": "心<b>雀躍</b>了起來。",
           "note": "（滿心期待而激動不已）",
           "ja": "心が弾みました。",
@@ -124,7 +124,7 @@
         },
         {
           "number": "16",
-          "romaji": "KOKORO GA TOKIMEKIMASHITA.",
+          "romaji": "KOKORO GA 《TOKIMEKI》 MASHITA.",
           "text": "心充滿了<b>悸動</b>。",
           "note": "（新的相遇讓心跳加快）",
           "ja": "心がときめきました。",
@@ -136,7 +136,7 @@
       "messages": [
         {
           "number": "1",
-          "romaji": "<b>WAKUWAKU</b> SHINAGARA CHEKKUIN WO MUKAEMASHITA",
+          "romaji": "《WAKUWAKU》 SHINAGARA CHEKKUIN WO MUKAEMASHITA",
           "text": "帶著<b>興奮期待</b>的心情迎接了入住手續。",
           "note": "（貼心的引導，讓旅程開始的期待更加膨脹）",
           "ja": "《ワクワク》しながらチェックインを迎えました",
@@ -144,7 +144,7 @@
         },
         {
           "number": "2",
-          "romaji": "ARIGATOU GOZAIMASU. <b>HOKKORI</b> SHIMASHITA",
+          "romaji": "ARIGATOU GOZAIMASU. 《HOKKORI》 SHIMASHITA",
           "text": "非常感謝。心裡覺得<b>暖洋洋</b>。",
           "note": "（辦理入住時，櫃檯人員以笑容迎接）",
           "ja": "ありがとうございます。《ほっこり》しました。",
@@ -168,7 +168,7 @@
         },
         {
           "number": "5",
-          "romaji": "ARIGATOU GOZAIMASU. PIKAPIKA NI SHITE KUDASATTE KANGEKI DESU",
+          "romaji": "ARIGATOU GOZAIMASU. 《PIKAPIKA》 NI SHITE KUDASATTE KANGEKI DESU",
           "text": "非常感謝。打掃得<b>亮晶晶</b>讓我很感動。",
           "note": "（房間打掃得十分完美，彷彿全新的一樣）",
           "ja": "ありがとうございます。《ピカピカ》にしてくださって感激です。",
@@ -184,7 +184,7 @@
         },
         {
           "number": "7",
-          "romaji": "NAGAME NI UTTORI SHIMASHITA",
+          "romaji": "NAGAME NI 《UTTORI》 SHIMASHITA",
           "text": "對眼前的景色感到<b>陶醉</b>。",
           "note": "（打開窗戶的瞬間，彷彿置身於畫中）",
           "ja": "眺めに《うっとり》しました",
@@ -192,7 +192,7 @@
         },
         {
           "number": "8",
-          "romaji": "EGAO NI <b>HOKKORI</b> SHIMASHITA",
+          "romaji": "EGAO NI 《HOKKORI》 SHIMASHITA",
           "text": "因笑容而感到<b>暖洋洋</b>。",
           "note": "（比言語更能傳達的溫柔，深深打動了心）",
           "ja": "笑顔に《ほっこり》しました。",
@@ -208,7 +208,7 @@
         },
         {
           "number": "10",
-          "romaji": "ARIGATOU GOZAIMASU. URUURU KICHAIMASHITA",
+          "romaji": "ARIGATOU GOZAIMASU. 《URUURU》 KICHAIMASHITA",
           "text": "非常感謝。感動得<b>熱淚盈眶</b>了。",
           "note": "（禮賓人員在旅程紀念時附上了一張卡片）",
           "ja": "ありがとうございます。《うるうる》きちゃいました。",
@@ -216,7 +216,7 @@
         },
         {
           "number": "11",
-          "romaji": "KOKORO MADE POKAPOKA NI NARIMASHITA. ARIGATOU GOZAIMASU",
+          "romaji": "KOKORO MADE 《POKAPOKA》 NI NARIMASHITA. ARIGATOU GOZAIMASU",
           "text": "心裡都<b>暖烘烘</b>了。非常感謝。",
           "note": "（對美好的浴池的感想）",
           "ja": "心まで《ぽかぽか》になりました。ありがとうございます",
@@ -224,7 +224,7 @@
         },
         {
           "number": "12",
-          "romaji": "ARIGATOU GOZAIMASU. TOROTORO NI TOKESOU DESU",
+          "romaji": "ARIGATOU GOZAIMASU. 《TOROTORO》 NI TOKESOU DESU",
           "text": "謝謝您。整個人都快<b>融化軟綿綿</b>了。",
           "note": "（在溫泉裡從身體深處暖和，被治癒的瞬間）",
           "ja": "ありがとうございます。《とろとろ》にとけそうです。",
@@ -232,7 +232,7 @@
         },
         {
           "number": "13",
-          "romaji": "ORYOURI NO HITOSARA HITOSARA NI <b>WAKUWAKU</b> GA TSUMATTE IMASHITA",
+          "romaji": "ORYOURI NO HITOSARA HITOSARA NI 《WAKUWAKU》 GA TSUMATTE IMASHITA",
           "text": "每一道料理裡都充滿了<b>興奮期待</b>。",
           "note": "（外觀與味道都像是在享用一個故事）",
           "ja": "お料理のひと皿ひと皿に《ワクワク》が詰まっていました",
@@ -240,7 +240,7 @@
         },
         {
           "number": "14",
-          "romaji": "ARIGATOU GOZAIMASU. <b>DOKIDOKI</b> GA TOMARIMASEN",
+          "romaji": "ARIGATOU GOZAIMASU. 《DOKIDOKI》 GA TOMARIMASEN",
           "text": "謝謝您。我的<b>心跳加速</b>停不下來。",
           "note": "（被送上的料理與菜單所感動時，對餐廳員工）",
           "ja": "ありがとうございます。《ドキドキ》が止まりません。",
@@ -248,7 +248,7 @@
         },
         {
           "number": "15",
-          "romaji": "CHEFU NO OMOI GA TSUTAWARU RYOURI NI, KOKORO GA <b>JINWARI</b> ATATAKARIMASHITA",
+          "romaji": "CHEFU NO OMOI GA TSUTAWARU RYOURI NI, KOKORO GA 《JINWARI》 ATATAKARIMASHITA",
           "text": "從廚師心意傳達的料理中，心裡<b>暖洋洋</b>的。",
           "note": "（感受到的不只是餐點，而是充滿心意的時光）",
           "ja": "シェフの想いが伝わる料理に、心がじんわり温まりました",
@@ -256,7 +256,7 @@
         },
         {
           "number": "16",
-          "romaji": "OFUTON GA FUKAFUKA DE, TSUTSUMARERU YOU NA ANSHINKAN DESHITA",
+          "romaji": "OFUTON GA 《FUKAFUKA》 DE, TSUTSUMARERU YOU NA ANSHINKAN DESHITA",
           "text": "被子<b>軟綿綿</b>的，像被包裹住般的安心感。",
           "note": "（感受到旅途疲勞瞬間消散）",
           "ja": "お布団が《ふかふか》で、包まれるような安心感でした",
@@ -264,7 +264,7 @@
         },
         {
           "number": "17",
-          "romaji": "ARIGATOU GOZAIMASU. HOWAHOWA SHIAWASE KIBUN DESU",
+          "romaji": "ARIGATOU GOZAIMASU. 《HOWAHOWA》 SHIAWASE KIBUN DESU",
           "text": "謝謝您。是種<b>軟綿綿</b>的幸福感。",
           "note": "（裹在蓬鬆的被子裡，感謝舒適的寢具）",
           "ja": "ありがとうございます。《ほわほわ》幸せ気分です。",
@@ -272,7 +272,7 @@
         },
         {
           "number": "18",
-          "romaji": "ARIGATOU GOZAIMASU. FUWAFUWA YUME GOKOCHI DESHITA",
+          "romaji": "ARIGATOU GOZAIMASU. 《FUWAFUWA》 YUME GOKOCHI DESHITA",
           "text": "謝謝您。像做夢般<b>輕飄飄</b>的感覺。",
           "note": "（床鋪舒適，夜晚寧靜，因此能熟睡的時候）",
           "ja": "ありがとうございます。《ふわふわ》夢ごこちでした。",
@@ -280,7 +280,7 @@
         },
         {
           "number": "19",
-          "romaji": "ARIGATOU GOZAIMASU. TSUYATSUYA GOHAN, SAIKOU DESHITA",
+          "romaji": "ARIGATOU GOZAIMASU. 《TSUYATSUYA》 GOHAN, SAIKOU DESHITA",
           "text": "謝謝您。<b>晶瑩剔透</b>的米飯，真是太棒了。",
           "note": "（早餐的米飯鬆軟可口，對食堂的人表示感謝）",
           "ja": "ありがとうございます。《つやつや》ご飯、最高でした。",
@@ -300,7 +300,7 @@
       "messages": [
         {
           "number": "1",
-          "romaji": "KONNA KIZUKAI NI, <b>JIIN</b> TO KIMASHITA",
+          "romaji": "KONNA KIZUKAI NI, 《JIIN》 TO KIMASHITA",
           "text": "這樣的貼心，讓我<b>感動</b>了。",
           "note": "（因為店員貼心地多拿了一個盤子，方便分菜）",
           "ja": "こんな気遣いに、《じ〜ん》ときました。",
@@ -324,7 +324,7 @@
         },
         {
           "number": "4",
-          "romaji": "MAGOKORO NI <b>HOKKORI</b> SHITEIMASU",
+          "romaji": "MAGOKORO NI 《HOKKORI》 SHITEIMASU",
           "text": "因為真誠的心意而感到<b>暖洋洋</b>。",
           "note": "（即使很忙，也仍然用心上菜的店員）",
           "ja": "まごころに《ほっこり》しています。",
@@ -332,7 +332,7 @@
         },
         {
           "number": "5",
-          "romaji": "<b>HOTTO</b> DEKIRU, KONO BASHO NI KANSHA DESU",
+          "romaji": "《HOTTO》 DEKIRU, KONO BASHO NI KANSHA DESU",
           "text": "能在這裡<b>放鬆</b>，真的很感謝。",
           "note": "（在常去的居酒屋裡，感受到不變的安心感）",
           "ja": "ホッとできる、この場所に感謝です。",
@@ -340,7 +340,7 @@
         },
         {
           "number": "6",
-          "romaji": "<b>KIRAKIRA</b> NO OMOTENASHI GA KOKORO NI NOKORIMASU",
+          "romaji": "《KIRAKIRA》 NO OMOTENASHI GA KOKORO NI NOKORIMASU",
           "text": "<b>閃閃發光</b>的款待留在心裡。",
           "note": "（因為細緻的接待，讓一頓飯成為美好的回憶）",
           "ja": "《キラキラ》のおもてなしが心に残ります。",
@@ -356,7 +356,7 @@
         },
         {
           "number": "8",
-          "romaji": "JUWA TO HIROGARU SHIAWASE NI, UTTORI DESU",
+          "romaji": "《JUWA~》 TO HIROGARU SHIAWASE NI, UTTORI DESU",
           "text": "肉汁<b>滋滋</b>地擴散的幸福，讓人陶醉。",
           "note": "（肉汁在口中化開的瞬間）",
           "ja": "《ジュワ〜ッ》と広がる幸せに、うっとりです。",
@@ -364,7 +364,7 @@
         },
         {
           "number": "9",
-          "romaji": "SUKIYAKI NO AMASA NI, <b>HOKKORI</b> <b>TOROKE</b> MASHITA",
+          "romaji": "SUKIYAKI NO AMASA NI, 《HOKKORI》《TOROKE》 MASHITA",
           "text": "因為壽喜燒的甜味而感到<b>暖洋洋</b>、<b>融化</b>了。",
           "note": "（割下醬汁與雞蛋交織出的極致一口）",
           "ja": "すき焼きの甘さに、《ほっこり》《とろけ》ました。",
@@ -388,7 +388,7 @@
         },
         {
           "number": "12",
-          "romaji": "SAKANA NO FUKKURA NI, KANDO SHITEIMASU",
+          "romaji": "SAKANA NO 《FUKKURA》 NI, KANDO SHITEIMASU",
           "text": "魚肉的<b>鬆軟</b>讓我很感動。",
           "note": "（細心烤製的魚肉，細細品嚐時的感動）",
           "ja": "魚のふっくらに、感動しています。",
@@ -420,7 +420,7 @@
         },
         {
           "number": "16",
-          "romaji": "TEMPURA NO SAKUSAKU NI, TENSION GA AGARIMASHITA",
+          "romaji": "TEMPURA NO 《SAKUSAKU》 NI, TENSION GA AGARIMASHITA",
           "text": "天婦羅的<b>酥脆</b>讓我興奮起來。",
           "note": "（咬下剛炸好的外衣，感受到食感與香氣的喜悅）",
           "ja": "天ぷらの《サクサク》に、テンションが上がりました。",
@@ -428,7 +428,7 @@
         },
         {
           "number": "17",
-          "romaji": "KOROMO NO KARUYASA GA, TOTEMO JOHIN DESHITA",
+          "romaji": "KOROMO NO KAROYAKASA GA, TOTEMO JOHIN DESHITA",
           "text": "麵衣的<b>輕盈</b>感覺，非常高雅。",
           "note": "（靜靜地品味天婦羅的口感與香氣）",
           "ja": "衣の軽やかさが、とても上品でした。",
@@ -468,7 +468,7 @@
         },
         {
           "number": "22",
-          "romaji": "UDON NO MOCHIMOCHI NI, BIKKURI SHIMASHITA",
+          "romaji": "UDON NO 《MOCHIMOCHI》 NI, 《BIKKURI》 SHIMASHITA",
           "text": "烏龍麵的<b>Q彈口感</b>讓我很驚喜。",
           "note": "（溫柔的高湯與Q彈的口感讓身心都滿足）",
           "ja": "うどんのモチモチに、びっくりしました。",
@@ -484,7 +484,7 @@
         },
         {
           "number": "24",
-          "romaji": "TAKOYAKI NO OISHISA NI <b>TOROKE</b> SOU DESU",
+          "romaji": "TAKOYAKI NO OISHISA NI 《TOROKE》 SOU DESU",
           "text": "章魚燒的美味讓人快要<b>融化</b>了。",
           "note": "（濃郁的餡料和醬汁香氣讓人心情高漲）",
           "ja": "たこやきの美味しさに《とろけ》そうです。",
@@ -500,7 +500,7 @@
         },
         {
           "number": "26",
-          "romaji": "OKONOMIYAKI NO FUWAFUWA NI, KOKORO MADE FUNWARI DESU",
+          "romaji": "OKONOMIYAKI NO 《FUWAFUWA》 NI, KOKORO MADE FUNWARI DESU",
           "text": "御好燒的<b>鬆軟</b>讓心也跟著柔和了。",
           "note": "（因御好燒的口感而感動）",
           "ja": "お好み焼きの《フワフワ》に、心までふんわりです。",
@@ -508,7 +508,7 @@
         },
         {
           "number": "27",
-          "romaji": "MONJYA NO YAKERU OTO NI, <b>WAKUWAKU</b> GA TOMARANAKU NARIMASHITA",
+          "romaji": "MONJYA NO YAKERU OTO NI, 《WAKUWAKU》 GA TOMARANAKU NARIMASHITA",
           "text": "文字燒的烹飪聲讓<b>期待感</b>停不下來。",
           "note": "（鐵板的聲音與香氣帶來了「飲食娛樂」的體驗）",
           "ja": "もんじゃの焼ける音に、《ワクワク》がとまらなくなりました。",
@@ -516,7 +516,7 @@
         },
         {
           "number": "28",
-          "romaji": "OTSUMAMI NI <b>WAKUWAKU</b> GA TOMARIMASEN",
+          "romaji": "OTSUMAMI NI 《WAKUWAKU》 GA TOMARIMASEN",
           "text": "小菜帶來<b>滿滿的期待</b>，停不下來。",
           "note": "（每次出現有巧思的小菜時，都充滿驚喜）",
           "ja": "おつまみに《ワクワク》が止まりません。",
@@ -524,7 +524,7 @@
         },
         {
           "number": "29",
-          "romaji": "SUITSU NO TOKIMEKI DE, <b>KYUNKYUN</b> KOKORO GA HANEMASHITA",
+          "romaji": "SUITSU NO TOKIMEKI DE, 《KYUNKYUN》 KOKORO GA HANEMASHITA",
           "text": "甜點的悸動讓心<b>怦怦跳</b>。",
           "note": "（叉子插下的瞬間開始的幸福時光）",
           "ja": "スイーツのときめきで、《キュンキュン》心が跳ねました。",
@@ -532,7 +532,7 @@
         },
         {
           "number": "30",
-          "romaji": "KONO HITOZARA GA, KYO WO TOKUBETSU NA HI NI SHITE KUREMASHITA",
+          "romaji": "KONO HITO SARA GA, KYO WO TOKUBETSU NA HI NI SHITE KUREMASHITA",
           "text": "這一道料理，讓今天成為<b>特別的日子</b>。",
           "note": "（蛋糕或聖代成為給自己的獎勵時）",
           "ja": "このひと皿が、今日を特別な日にしてくれました。",
@@ -548,7 +548,7 @@
         },
         {
           "number": "32",
-          "romaji": "WAGASHI NO SENSASA NI, KOKORO GA TOKIMEKIMASHITA",
+          "romaji": "WAGASHI NO SENSASA NI, KOKORO GA 《TOKIMEKI》MASHITA",
           "text": "因為和菓子的<b>細緻</b>而心動。",
           "note": "（入口瞬間，細緻的溫柔在口中蔓延，令人感動）",
           "ja": "和菓子の繊細さに、心がトキメキました。",
@@ -580,7 +580,7 @@
         },
         {
           "number": "36",
-          "romaji": "KOKORO GA POKAPOKA SHITEIMASU",
+          "romaji": "KOKORO GA 《POKAPOKA》 SHITEIMASU",
           "text": "心裡感到<b>暖烘烘</b>。",
           "note": "（寒冷的日子裡吃到溫熱的料理，身心都暖和了）",
           "ja": "心が《ぽかぽか》しています。",
@@ -596,7 +596,7 @@
         },
         {
           "number": "38",
-          "romaji": "<b>KYUNKYUN</b> SHIMASU",
+          "romaji": "《KYUNKYUN》 SHIMASU",
           "text": "讓人心<b>怦怦跳</b>。",
           "note": "（面對讓心動的料理時）",
           "ja": "《キュンキュン》します。",
@@ -604,7 +604,7 @@
         },
         {
           "number": "39",
-          "romaji": "KONNA NI OISHIKUTE, TOROKERU HODO SHIAWASE DESU",
+          "romaji": "KONNA NI OISHIKUTE, 《TOROKERU》 HODO SHIAWASE DESU",
           "text": "如此美味，幸福到快要<b>融化</b>。",
           "note": "（入口即化的蛋包飯或起司料理時的感動）",
           "ja": "こんなに美味しくて、《とろける》ほど幸せです。",
@@ -632,7 +632,7 @@
       "messages": [
         {
           "number": "1",
-          "romaji": "OSHIGUZU NI DEATTE, KOKORO GA <b>KYUNKYUN</b> SHIMASHITA",
+          "romaji": "OSHIGUZU NI DEATTE, KOKORO GA 《KYUNKYUN》 SHIMASHITA",
           "text": "遇到應援商品時，心裡<b>怦怦跳</b>。",
           "note": "（感覺就像來到夢幻國度一樣）",
           "ja": "推しグッズに出会えて、心が《キュンキュン》しました。",
@@ -640,7 +640,7 @@
         },
         {
           "number": "2",
-          "romaji": "KAGAMI NO NAKA NO JIBUN NI, KOKORO GA TOKIMEKIMASHITA",
+          "romaji": "KAGAMI NO NAKA NO JIBUN NI, KOKORO GA 《TOKIMEKI》MASHITA",
           "text": "看到鏡子裡的自己，心裡<b>怦然心動</b>。",
           "note": "（覺得和服意外地很適合自己…）",
           "ja": "鏡の中の自分に、心が《ときめき》ました。",
@@ -648,7 +648,7 @@
         },
         {
           "number": "3",
-          "romaji": "KORE, MITA SHUNKAN NI KOKORO GA PIN TO SHIMASHITA",
+          "romaji": "KORE, MITA SHUNKAN NI KOKORO GA 《PIN》 TO SHIMASHITA",
           "text": "這個，一看到的瞬間心裡就<b>靈光一閃</b>！",
           "note": "（傳達心動的一句話）",
           "ja": "これ、見た瞬間に心が《ピンと》きました！",
@@ -664,7 +664,7 @@
         },
         {
           "number": "5",
-          "romaji": "KOKORO GA TOKIMEKU DEAI DESU NE",
+          "romaji": "KOKORO GA 《TOKIMEKU》DEAI DESU NE",
           "text": "這是一場讓心<b>怦然心動</b>的邂逅呢。",
           "note": "（分享感動時的結尾一句）",
           "ja": "心が《ときめく》出会いですね。",
@@ -672,7 +672,7 @@
         },
         {
           "number": "6",
-          "romaji": "KORE, MITA SHUNKAN NI KOKORO GA TOKIMEKIMASHITA",
+          "romaji": "KORE, MITA SHUNKAN NI KOKORO GA 《TOKIMEKI》MASHITA",
           "text": "這個，一看到的瞬間心裡就<b>怦然心動</b>。",
           "note": "（感受到一期一會的相遇）",
           "ja": "これ、見た瞬間に心が《ときめき》しました。",
@@ -680,7 +680,7 @@
         },
         {
           "number": "7",
-          "romaji": "KONNA GARA, HAJIMETE MIMASHITA. KOKORO GA <b>WAKUWAKU</b> SHIMASU",
+          "romaji": "KONNA GARA, HAJIMETE MIMASHITA. KOKORO GA 《WAKUWAKU》 SHIMASU",
           "text": "第一次看到這樣的花紋，心裡充滿了<b>期待</b>！",
           "note": "（在傳統工藝品或和服圖案上）",
           "ja": "こんな柄、初めて見ました。心が《ワクワク》します！",
@@ -688,7 +688,7 @@
         },
         {
           "number": "8",
-          "romaji": "SAWATTA SHUNKAN NI, KOKORO GA PITATTO KIMARI MASHITA",
+          "romaji": "SAWATTA SHUNKAN NI, KOKORO GA 《PITATTO》 KIMARI MASHITA",
           "text": "一觸碰的瞬間，心裡就<b>立刻決定</b>了！",
           "note": "（直覺性的一見鍾情）",
           "ja": "触った瞬間に、心が《ピタッと》決まりました！",
@@ -712,7 +712,7 @@
         },
         {
           "number": "11",
-          "romaji": "YASASHII TEZAWARI NI, KOKORO GA <b>HOKKORI</b> SHIMASHITA",
+          "romaji": "YASASHII TEZAWARI NI, KOKORO GA 《HOKKORI》 SHIMASHITA",
           "text": "溫柔的觸感讓心裡感到<b>暖呼呼</b>。",
           "note": "（被和紙的溫潤質感療癒時）",
           "ja": "やさしい手ざわりに、心が《ほっこり》しました。",
@@ -720,7 +720,7 @@
         },
         {
           "number": "12",
-          "romaji": "KONO TEZAWARI... KOKORO GA <b>JINWARI</b> OCHITSUKIMASU",
+          "romaji": "KONO TEZAWARI... KOKORO GA 《JINWARI》 OCHITSUKIMASU",
           "text": "這種手感…讓心裡<b>慢慢平靜</b>下來。",
           "note": "（觸摸和雜貨、布製品、陶器時的感受）",
           "ja": "この手ざわり…心が《じんわり》落ち着きます。",
@@ -736,7 +736,7 @@
         },
         {
           "number": "14",
-          "romaji": "NANDAKA, KOKORO GA <b>HOTTO</b> SHIMASHITA",
+          "romaji": "NANDAKA, KOKORO GA 《HOTTO》 SHIMASHITA",
           "text": "總覺得心裡<b>鬆了一口氣</b>。",
           "note": "（接觸到日本物品的柔和與溫暖時）",
           "ja": "なんだか、心が《ほっと》しました。",
@@ -744,7 +744,7 @@
         },
         {
           "number": "15",
-          "romaji": "KORE WO MITETARA, KOKORO GA SUU TTO SHIZUKA NI NARIMASHITA",
+          "romaji": "KORE WO MITETARA, KOKORO GA 《SUU TTO》 SHIZUKA NI NARIMASHITA",
           "text": "看著這個，心裡<b>瞬間安靜</b>了下來。",
           "note": "（感受到和風之美與寧靜時）",
           "ja": "これを見てたら、心が《スーッと》静かになりました。",
@@ -760,7 +760,7 @@
         },
         {
           "number": "17",
-          "romaji": "TE NI TORA SHUNKAN, KOKORO GA HONWAKA SHIMASHITA",
+          "romaji": "TE NI TORA SHUNKAN, KOKORO GA 《HONWANA》SHIMASHITA",
           "text": "拿起來的瞬間，心裡感到<b>暖洋洋</b>。",
           "note": "（接觸到柔和材質或有溫度的雜貨時）",
           "ja": "手に取った瞬間、心が《ほんわか》しました。",
@@ -776,7 +776,7 @@
         },
         {
           "number": "19",
-          "romaji": "KONO IRO, KOKORO NI SHIKKURI KIMASU",
+          "romaji": "KONO IRO, KOKORO NI 《SHIKKURI》 KIMASU",
           "text": "這個顏色，讓心裡覺得<b>恰到好處</b>。",
           "note": "（試穿衣物或雜貨時的感受）",
           "ja": "この色、心に《しっくり》きます。",
@@ -784,7 +784,7 @@
         },
         {
           "number": "20",
-          "romaji": "SORE, WATASHI MO DAISUKI DESU. KOKORO GA <b>WAKUWAKU</b> SHIMASU YO NE",
+          "romaji": "SORE, WATASHI MO DAISUKI DESU. KOKORO GA 《WAKUWAKU》 SHIMASU YO NE",
           "text": "那個，我也很喜歡！心裡感到<b>興奮期待</b>呢！",
           "note": "（透過共鳴拉近距離的一句話）",
           "ja": "それ、私も大好きです！心が《ワクワク》しますよね。",
@@ -792,7 +792,7 @@
         },
         {
           "number": "21",
-          "romaji": "A, KORE... KOKORO NI GUTTO SHIMASHITA. NAYAMIMASU NE",
+          "romaji": "A, KORE... KOKORO NI 《GUTTO》 SHIMASHITA. NAYAMIMASU NE",
           "text": "啊，這個…心裡<b>深受感動</b>。真讓人猶豫呢〜！",
           "note": "（享受猶豫選擇的氛圍）",
           "ja": "あ、これ…心に《グッと》きました。悩みますね〜！",
@@ -824,7 +824,7 @@
         },
         {
           "number": "25",
-          "romaji": "KORE, KOKORO NI ZUTTO NOKORI SOUDESU",
+          "romaji": "KORE, KOKORO NI 《ZUTTO》 NOKORI SOUDESU",
           "text": "這個，似乎會<b>一直留在心中</b>。",
           "note": "（有種會成為回憶的預感）",
           "ja": "これ、心に《ずっと残り》そうです。",
@@ -848,7 +848,7 @@
         },
         {
           "number": "28",
-          "romaji": "KONO DEAI, KOKORO NI SHIKKARI KIZAMARE MASHITA",
+          "romaji": "KONO DEAI, KOKORO NI 《SHIKKARI》 KIZAMARE MASHITA",
           "text": "這次相遇，<b>深深刻在心裡</b>。",
           "note": "（把最後選中的一件物品放入心意）",
           "ja": "この出会い、心に《しっかり刻まれ》ました。",
@@ -856,7 +856,7 @@
         },
         {
           "number": "29",
-          "romaji": "KORE, OMIYAGE NI SHITARA, KITTO DAREKA NO KOKORO MO <b>HOKKORI</b> SHIMASU YO NE",
+          "romaji": "KORE, OMIYAGE NI SHITARA, KITTO DAREKA NO KOKORO MO 《HOKKORI》 SHIMASU YO NE",
           "text": "這個如果當作伴手禮，一定也會讓別人的心<b>暖呼呼</b>吧。",
           "note": "（想像贈送給別人時，心裡也溫暖起來）",
           "ja": "これ、お土産にしたら、きっと誰かの心も《ほっこり》しますよね。",
