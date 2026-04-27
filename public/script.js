@@ -14,11 +14,30 @@ function escape_for_javascript(text) {
     .replace(/\f/g, '\\f');    // フォームフィード
 }
 
+// 《…》囲みの部分だけ太字ノード化（XSS安全）
+function emphasizeOnomatopoeia(text) {
+  if (!text) return document.createDocumentFragment();
+
+  const parts = String(text).split(/(《[^》]+》)/);
+  const fragment = document.createDocumentFragment();
+
+  for (const part of parts) {
+    if (/^《[^》]+》$/.test(part)) {
+      const strong = document.createElement('strong');
+      strong.textContent = part;
+      fragment.appendChild(strong);
+    } else {
+      fragment.appendChild(document.createTextNode(part));
+    }
+  }
+  return fragment;
+}
+
 let currentLang = 'en';
 let currentScene = 'airport';
 let languageData = {};
 let speechSpeed = 1.0;
-let isPremiumUser = false; // プレミアム機能フラグ
+let isPremiumUser = true; // 全ユーザーに機能開放
 let stripe = null;
 let elements = null;
 let onomatopoeiaData = []; // オノマトペデータ
@@ -534,17 +553,9 @@ async function loadOnomatopoeiaData() {
 
 // プレミアム機能のチェック
 function checkPremiumStatus() {
-  const premiumStatus = localStorage.getItem('premiumActive');
-  isPremiumUser = premiumStatus === 'true';
-
-  // 開発環境でのテスト用（一時的にプレミアム状態を有効化）
-  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-    // テスト用：プレミアム状態を強制的に有効化（ローカル環境のみ）
-    isPremiumUser = true;
-    localStorage.setItem('premiumActive', 'true');
-    console.log('🧪 テスト環境: プレミアム機能を強制有効化');
-  }
-
+  // 無償公開: すべてのユーザーを有効扱いにする
+  isPremiumUser = true;
+  localStorage.setItem('premiumActive', 'true');
   updatePremiumUI();
 }
 
@@ -552,24 +563,16 @@ function checkPremiumStatus() {
 function updatePremiumUI() {
   const premiumBtn = document.getElementById('premium-btn');
   if (premiumBtn) {
-    if (isPremiumUser) {
-      premiumBtn.textContent = 'Premium Active';
-      premiumBtn.style.backgroundColor = '#4CAF50';
-      premiumBtn.disabled = false;
-      premiumBtn.onclick = () => window.location.href = 'premium-features.html'; // プレミアム機能選択画面に遷移
-    } else {
-      premiumBtn.textContent = 'Upgrade to Premium';
-      premiumBtn.style.backgroundColor = '#FF9800';
-      premiumBtn.disabled = false;
-      premiumBtn.onclick = showPremiumModal; // プレミアム機能モーダルを表示
-    }
+    premiumBtn.textContent = 'Open Dictionary';
+    premiumBtn.style.backgroundColor = '#4CAF50';
+    premiumBtn.disabled = false;
+    premiumBtn.onclick = () => window.location.href = 'premium-features.html';
   }
 }
 
 // プレミアム機能モーダルを表示
 function showPremiumModal() {
-  const modal = document.getElementById('premium-modal');
-  modal.style.display = 'block';
+  window.location.href = 'premium-features.html';
 }
 
 // プレミアム機能モーダルを閉じる
@@ -708,6 +711,7 @@ async function showOnomatopoeiaScene(scene) {
 // 決済モーダルを表示
 function showPaymentModal() {
   const modal = document.getElementById('payment-modal');
+  if (!modal) return;
   modal.style.display = 'block';
 
   // Stripe Elementsを初期化（重複作成を防ぐ）
@@ -759,12 +763,14 @@ function showPaymentModal() {
 // 決済モーダルを閉じる
 function closePaymentModal() {
   const modal = document.getElementById('payment-modal');
+  if (!modal) return;
   modal.style.display = 'none';
 }
 
 // 決済処理（Stripe Checkout 対応版）
 async function processPayment() {
   const payButton = document.getElementById('pay-button');
+  if (!payButton) return;
   payButton.disabled = true;
   payButton.textContent = 'Processing...';
 
@@ -978,12 +984,20 @@ function renderScene() {
         </div>
         <div class="message-content" style="display:inline-block;">
           <div class="message-text" style="font-weight:bold;margin-bottom:4px;">${msg.text || ''}</div>
-          <div class="romaji-text" style="font-size:0.9em;color:#666;margin-bottom:4px;">${msg.romaji || ''}</div>
+          <div class="romaji-text" style="font-size:0.9em;color:#666;margin-bottom:4px;" data-romaji="${msg.romaji || ''}"></div>
         </div>
         <div class="note-text" style="font-size:0.95em;color:#666;margin-top:2px;">${msg.note || ''}</div>
       `;
 
       messagesDiv.appendChild(card);
+
+      // romajiテキストの動的描画（《》ブラケットを太字に）
+      const romajiElement = card.querySelector('.romaji-text');
+      if (romajiElement && romajiElement.dataset.romaji) {
+        const romajiText = romajiElement.dataset.romaji;
+        const fragment = emphasizeOnomatopoeia(romajiText);
+        romajiElement.appendChild(fragment);
+      }
 
       // お気に入りボタンを動的に追加（機能フラグが有効な場合のみ）
       if (window.FEATURE_FAVORITES) {
@@ -1122,7 +1136,7 @@ function enablePremiumFeatures() {
 
 // プレミアムプロンプト表示
 function showPremiumPrompt() {
-  alert('✨ This feature is available for Premium users!\n\nUpgrade to Premium to unlock:\n• Dictionary integration\n• My Favorites');
+  window.location.href = 'premium-features.html';
 }
 
 // 高度な音声機能

@@ -102,14 +102,9 @@
       return iconMap[sceneName] || '📚'; // デフォルトは本のアイコン
     }
 
-    // プレミアム状態の確認
+    // 無償公開状態の初期化
     document.addEventListener('DOMContentLoaded', async function() {
-      const isPremium = localStorage.getItem('premiumActive') === 'true';
-      if (!isPremium) {
-        // プレミアムユーザーでない場合はトップページにリダイレクト
-        window.location.href = 'index.html';
-        return;
-      }
+      localStorage.setItem('premiumActive', 'true');
 
       // 翻訳APIの初期化
       translationAPI = new TranslationAPI();

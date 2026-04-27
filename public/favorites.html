@@ -35,17 +35,13 @@
     // オノマトペデータ（グローバル変数）
     let onomatopoeiaData = [];
 
-    // プレミアム状態の確認
+    // 無償公開状態の初期化
     document.addEventListener('DOMContentLoaded', function() {
-      const isPremium = localStorage.getItem('premiumActive') === 'true';
-      if (!isPremium) {
-        // プレミアムユーザーでない場合はトップページにリダイレクト
-        window.location.href = 'index.html';
-      } else {
-        // 翻訳APIの初期化
-        translationAPI = new TranslationAPI();
-        batchTranslationManager = window.batchTranslationManager;
-        translationCache = window.translationCache;
+      localStorage.setItem('premiumActive', 'true');
+      // 翻訳APIの初期化
+      translationAPI = new TranslationAPI();
+      batchTranslationManager = window.batchTranslationManager;
+      translationCache = window.translationCache;
 
         // 現在の言語設定を取得（複数ソースから確実に取得）
         const storedLang = localStorage.getItem('selectedLanguage') ||
@@ -56,9 +52,8 @@
         console.log('現在の言語設定:', currentLanguage);
         console.log('言語取得デバッグ: storedLang=' + storedLang + ', globalLang=' + globalLang + ', final=' + currentLanguage);
 
-        // プレミアムユーザーの場合はお気に入り一覧を読み込み
-        loadFavorites();
-      }
+      // お気に入り一覧を読み込み
+      loadFavorites();
     });
 
     // お気に入り一覧表示機能
